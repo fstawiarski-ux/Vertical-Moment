@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vertical Moment — Jammerwandl</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="wall-dashboard">
+      <section class="panel model-panel" aria-label="Jammerwandl textured 3D wall">
+        <header class="panel-header model-header">
+          <p class="eyebrow">Vertical Moment / Höllental</p>
+          <h1>Jammerwandl</h1>
+          <p>Textured RealityScan source model. Drag to rotate freely, scroll to zoom, right-drag to pan.</p>
+        </header>
+        <div id="viewer" class="viewer" aria-label="Interactive textured 3D model"></div>
+        <div class="viewer-actions">
+          <button id="reset-view" type="button">Reset view</button>
+          <span id="model-status" class="status-pill">Loading textured 3D wall…</span>
+        </div>
+      </section>
+
+      <section class="panel topo-panel" aria-label="Jammerwandl reference topo">
+        <header class="panel-header">
+          <p class="eyebrow">Curated reference topo</p>
+          <h2>Routes 1–37</h2>
+          <p>Full working view: numbered lines match the register below.</p>
+        </header>
+        <a class="topo-preview" href="../../areas/helenental/sectors/jammerwandl/topo/workbench/jammerwand-original-rope-topo-with-register-v1.png" target="_blank" rel="noreferrer" aria-label="Open the Jammerwandl reference topo full size">
+          <img src="../../areas/helenental/sectors/jammerwandl/topo/workbench/jammerwand-original-rope-topo-with-register-v1.png" alt="Curated Jammerwandl rope topo with routes 1 through 37 and route register" />
+          <span>Open curated topo full size ↗</span>
+        </a>
+      </section>
+
+      <section class="panel route-panel" aria-label="Jammerwandl route register">
+        <header class="panel-header route-header">
+          <p class="eyebrow">Route register</p>
+          <h2><span id="route-count">—</span> routes</h2>
+          <label class="search-label" for="route-search">Find a route</label>
+          <input id="route-search" type="search" placeholder="Search route or grade" autocomplete="off" />
+        </header>
+        <div class="route-columns" aria-live="polite">
+          <ol id="route-list-left" class="route-list"></ol>
+          <ol id="route-list-right" class="route-list" start="20"></ol>
+        </div>
+      </section>
+
+      <section class="panel resources-panel" aria-label="Jammerwandl resources">
+        <header class="panel-header">
+          <p class="eyebrow">More about the wall</p>
+          <h2>Resources</h2>
+          <p>Open a section when you need it; the working wall view stays clean.</p>
+        </header>
+        <nav class="resource-links" aria-label="Jammerwandl resource pages">
+          <a href="info.html"><strong>Wall information</strong><span>location, sources, OSM</span></a>
+          <a href="gallery.html"><strong>Photo gallery</strong><span>drone references</span></a>
+          <a href="history.html"><strong>History & people</strong><span>source-named developers</span></a>
+          <a href="guidebook.html"><strong>Guidebook chapter</strong><span>Keltenkalk pp. 90–91</span></a>
+        </nav>
+      </section>
+    </main>
+
+    <dialog id="route-dialog" class="route-dialog">
+      <button id="dialog-close" class="dialog-close" type="button" aria-label="Close">×</button>
+      <p class="eyebrow">Selected route</p>
+      <h2 id="dialog-name"></h2>
+      <p id="dialog-grade" class="grade"></p>
+      <dl id="dialog-details"></dl>
+      <p class="verification-note">3D route path: awaiting source alignment and field verification.</p>
+    </dialog>
+
+    <script type="importmap">
+      {"imports":{"three":"https://unpkg.com/three@0.163.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.163.0/examples/jsm/"}}
+    </script>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

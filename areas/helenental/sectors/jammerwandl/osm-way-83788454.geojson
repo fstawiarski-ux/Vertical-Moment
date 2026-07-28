@@ -1,0 +1,29 @@
+{
+  "type": "FeatureCollection",
+  "name": "OpenStreetMap way 83788454 - Jammerwandl",
+  "license": "ODbL-1.0",
+  "attribution": "© OpenStreetMap contributors",
+  "retrieved_at": "2026-07-28",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "way/83788454",
+      "properties": {
+        "name": "Jammerwandl",
+        "natural": "cliff",
+        "sport": "climbing",
+        "city": "Baden",
+        "source_url": "https://www.openstreetmap.org/way/83788454"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [16.1980742, 48.0157933],
+          [16.1981590, 48.0155042],
+          [16.1985054, 48.0150568],
+          [16.1986395, 48.0149775]
+        ]
+      }
+    }
+  ]
+}

@@ -1,1 +1,32 @@
-{"id":"hel-jammerwandl","name":"Jammerwandl","area_id":"helental","coordinates":{"latitude":48.015336,"longitude":16.198289,"status":"gpx-provisional"},"route_count_v1":37,"topo_status":"source-received-count-matches","guidebook_evidence":"../../guidebook/keltenkalk-img5971-5981.json#pages-90-91","model_status":"source-glb-ready-for-viewer-check","model_manifest":"../../../../models/source/helenental/jammerwandl/ASSET_MANIFEST.json","source_glb":"../../../../models/source/helenental/jammerwandl/realityscan/glb/jammerwandl-source-v1.glb","drone_reference":"media/drone/reference/","topo_workbench":"topo/workbench/","intake":"../../pilot/intake/jammerwandl/"}
+{
+  "id": "hel-jammerwandl",
+  "name": "Jammerwandl",
+  "area_id": "helental",
+  "coordinates": {
+    "latitude": 48.015336,
+    "longitude": 16.198289,
+    "status": "gpx-provisional"
+  },
+  "openstreetmap": {
+    "way_id": 83788454,
+    "url": "https://www.openstreetmap.org/way/83788454",
+    "source_license": "ODbL-1.0",
+    "retrieved_at": "2026-07-28",
+    "tags": {
+      "name": "Jammerwandl",
+      "natural": "cliff",
+      "sport": "climbing",
+      "city": "Baden"
+    },
+    "geometry_file": "osm-way-83788454.geojson"
+  },
+  "route_count_v1": 37,
+  "topo_status": "source-received-count-matches",
+  "guidebook_evidence": "../../guidebook/keltenkalk-img5971-5981.json#pages-90-91",
+  "model_status": "source-glb-ready-for-viewer-check",
+  "model_manifest": "../../../../models/source/helenental/jammerwandl/ASSET_MANIFEST.json",
+  "source_glb": "../../../../models/source/helenental/jammerwandl/realityscan/glb/jammerwandl-source-v1.glb",
+  "drone_reference": "media/drone/reference/",
+  "topo_workbench": "topo/workbench/",
+  "intake": "../../pilot/intake/jammerwandl/"
+}

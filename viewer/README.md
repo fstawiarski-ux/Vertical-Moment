@@ -1,3 +1,4 @@
 # Viewer
 
-Reserved for the web 3D viewer. Route overlays must reference stable route IDs rather than duplicate route metadata.
+Interactive viewer prototypes live here. They read canonical route data rather
+than duplicating it. See `jammerwandl/` for the first Höllental wall prototype.
