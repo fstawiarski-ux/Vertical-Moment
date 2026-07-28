@@ -1,0 +1,31 @@
+{
+  "id": "vm-source-helenental-keltenkalk-img5971-5981",
+  "status": "source-indexed-awaiting-reconciliation",
+  "source": {"title": "Keltenkalk", "edition": "unknown", "provided_by": "project owner", "rights_status": "reference-only-pending-confirmation"},
+  "files": [
+    {"file":"IMG_5971.JPG","path":"C:\\Users\\ineedbooze\\Pictures\\iCloud Photos\\Photos\\IMG_5971.JPG","sha256":"4e0efdf5d0b527343869ba607f746f726417b3a5c03a8ad265c3d8446ce23803","pages":"80-81","coverage":"Höllental overview map and area text"},
+    {"file":"IMG_5972.JPG","path":"C:\\Users\\ineedbooze\\Pictures\\iCloud Photos\\Photos\\IMG_5972.JPG","sha256":"bc35d46d6244edaeed9eff094051bde08570462c811e8aed76b51e23cac7319e","pages":"82","coverage":"Badener Turm introduction, access, season, sketch"},
+    {"file":"IMG_5973.JPG","path":"C:\\Users\\ineedbooze\\Pictures\\iCloud Photos\\Photos\\IMG_5973.JPG","sha256":"0f8f2973cd92af35522b51bb2b3d6a2b23ae50992f4f13a207550156a03b23cc","pages":"83","coverage":"Badener Turm access sketch"},
+    {"file":"IMG_5974.JPG","path":"C:\\Users\\ineedbooze\\Pictures\\iCloud Photos\\Photos\\IMG_5974.JPG","sha256":"9ee8cdb9f23103af000b0db2a9c531378fd15d92c3d7ef965d6382659f21b4b4","pages":"84-85","coverage":"Badener Turm Rückwand left/right topo and routes 1-19"},
+    {"file":"IMG_5975.JPG","path":"C:\\Users\\ineedbooze\\Pictures\\iCloud Photos\\Photos\\IMG_5975.JPG","sha256":"4f4e34efd2bad53e8c6cead35013a2037a96fa7c32df173eed1b95891c8453f3","pages":"86-87","coverage":"Badener Turm and Pfeiler topo, routes 20-44"},
+    {"file":"IMG_5976.JPG","path":"C:\\Users\\ineedbooze\\Pictures\\iCloud Photos\\Photos\\IMG_5976.JPG","sha256":"a6c533af490e35cee2dfd77d1cb5ea9f51b7b5a240bf75b0de120588340dd643","pages":"90-91","coverage":"Jammerwandl topo and route list 1-37"},
+    {"file":"IMG_5977.JPG","path":"C:\\Users\\ineedbooze\\Pictures\\iCloud Photos\\Photos\\IMG_5977.JPG","sha256":"de6b8dc37c4e81d5527b24800aca95c6a7cfce71e8707afb3b6a85b38d8014f6","pages":"92-93","coverage":"Engelstein access, season, topo, routes 1-17 and boulder A"},
+    {"file":"IMG_5978.JPG","path":"C:\\Users\\ineedbooze\\Pictures\\iCloud Photos\\Photos\\IMG_5978.JPG","sha256":"4990dd649fb5feddbc4853fc2ecfdb81bcf6c1e752e54e1ea954cde1baadabdd","pages":"94-95","coverage":"Rum, Dachswandl and Ospwandl descriptions, topos and lists"},
+    {"file":"IMG_5979.JPG","path":"C:\\Users\\ineedbooze\\Pictures\\iCloud Photos\\Photos\\IMG_5979.JPG","sha256":"c90fa678742a183765a7b50afb52af3e356edece62f8029afadced5672971cbd","pages":"96-97","coverage":"Vogelwandl access, season, topo and route list 1-26"},
+    {"file":"IMG_5980.JPG","path":"C:\\Users\\ineedbooze\\Pictures\\iCloud Photos\\Photos\\IMG_5980.JPG","sha256":"3e09422f8050b8c879cf62e39935ba15206f9e5e7df55d3e9600eda0a8a0ca45","pages":"98-99","coverage":"Zwergwandl access, season, topo and routes 1-13 plus boulders A-E"},
+    {"file":"IMG_5981.JPG","path":"C:\\Users\\ineedbooze\\Pictures\\iCloud Photos\\Photos\\IMG_5981.JPG","sha256":"07eda89da23761b4e08f2b3d30fe20013167389d92871f0b29c21cd4a3a9ad2f","pages":"102","coverage":"Helenentaler Blöcke topo and routes 1-37 plus boulders A-B"}
+  ],
+  "sector_evidence": [
+    {"sector_id":"hel-badener-turm","pages":"82-87","source_route_numbers":"1-44 plus boulders A-G","master_v1_route_count":27,"status":"needs-subsector-reconciliation"},
+    {"sector_id":"hel-jammerwandl","pages":"90-91","source_route_numbers":"1-37","master_v1_route_count":37,"status":"count-matches"},
+    {"sector_id":"hel-engelstein","pages":"92-93","source_route_numbers":"1-17 plus boulder A","master_v1_route_count":18,"status":"count-matches"},
+    {"sector_id":"hel-rum","pages":"94-95","source_route_numbers":"shared page; separate route mapping required","master_v1_route_count":3,"status":"needs-subsector-reconciliation"},
+    {"sector_id":"hel-dachswandl","pages":"94-95","source_route_numbers":"shared page; separate route mapping required","master_v1_route_count":7,"status":"needs-subsector-reconciliation"},
+    {"sector_id":"hel-ospwandl","pages":"94-95","source_route_numbers":"shared page; separate route mapping required","master_v1_route_count":6,"status":"needs-subsector-reconciliation"},
+    {"sector_id":"hel-vogelwandl","pages":"96-97","source_route_numbers":"1-26","master_v1_route_count":24,"status":"count-difference-review"},
+    {"sector_id":"hel-zwergwandl","pages":"98-99","source_route_numbers":"1-13 plus boulders A-E","master_v1_route_count":18,"status":"count-matches"},
+    {"sector_id":"hel-helenentaler-bloecke","pages":"102","source_route_numbers":"1-37 plus boulders A-B","master_v1_route_count":29,"status":"count-difference-review"}
+  ],
+  "next_required_pages": ["88-89", "100-101"],
+  "notes": ["Image rotation was corrected only for interpretation; original files are untouched.", "No Master V1 record was changed from this batch alone.", "Route, hardware and access facts remain source-verified only after route-by-route matching."]
+}
