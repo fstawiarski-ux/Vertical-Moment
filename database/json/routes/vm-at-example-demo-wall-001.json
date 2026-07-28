@@ -1,0 +1,11 @@
+{
+  "id": "vm-at-example-demo-wall-001",
+  "name": "Example Route — replace before publishing",
+  "discipline": "sport",
+  "area_id": "at-example",
+  "sector_id": "at-example-demo-wall",
+  "grade": "6",
+  "length_m": 20,
+  "verification_status": "provisional",
+  "sources": [{"type": "template", "reference": "Repository scaffold example only"}]
+}

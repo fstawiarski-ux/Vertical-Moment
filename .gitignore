@@ -1,0 +1,27 @@
+# System and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+
+# Local environments and secrets
+.env
+.env.*
+!.env.example
+node_modules/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Generated output and caches
+dist/
+build/
+coverage/
+.cache/
+*.log
+
+# Local source-media drops: catalog them before committing selected assets.
+_incoming/
+_exports/
