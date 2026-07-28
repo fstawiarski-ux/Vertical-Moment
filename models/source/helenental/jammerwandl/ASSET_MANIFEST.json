@@ -1,0 +1,34 @@
+{
+  "id": "vm-model-helenental-jammerwandl-realityscan-obj-v1",
+  "area_id": "helental",
+  "sector_id": "hel-jammerwandl",
+  "status": "source-ready-needs-optimization",
+  "source_application": "RealityScan 2.2.0.119430",
+  "coordinate_system": "local Euclidean; not georeferenced",
+  "obj_export": {
+    "path": "realityscan/obj-export/jammegooooood.obj",
+    "vertices": 622936,
+    "faces": 1245632,
+    "material": "realityscan/obj-export/jammegooooood.mtl",
+    "texture": "realityscan/obj-export/jammegooooood_u0_v0_diffuse.png",
+    "export_info": "realityscan/obj-export/jammegooooood.obj.rsInfo"
+  },
+  "glb_export": {
+    "path": "realityscan/glb/jammerwandl-source-v1.glb",
+    "bytes": 29879424,
+    "vertices": 622472,
+    "faces": 1244936,
+    "colour_mode": "embedded vertex colours",
+    "materials": 0,
+    "external_dependencies": false
+  },
+  "validation": {
+    "material_references_texture": true,
+    "texture_present": true,
+    "web_ready": false,
+    "required_next": ["inspect mesh in target viewer", "decimate only if performance requires it", "optionally export a textured web GLB", "align routes to verified topo"]
+  },
+  "rights": {"owner_confirmation": "project owner confirmed ownership on 2026-07-28", "publication_status": "approved for project use"},
+  "source_project": "../../../archive/incomplete-realityscan-projects/helenental/jammerwandl/goodjammer.rsproj",
+  "source_project_status": "archived-incomplete; its cache and original DNG set are external"
+}

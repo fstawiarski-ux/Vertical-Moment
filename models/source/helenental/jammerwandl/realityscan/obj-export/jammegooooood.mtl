@@ -1,0 +1,13 @@
+#
+# Wavefront material file
+# Created in RealityScan
+# Engine version v2.2.0.119430
+#
+
+newmtl jammegooooood
+Ka 1 1 1
+Kd 1 1 1
+d 1
+Ns 0
+illum 1
+map_Kd jammegooooood_u0_v0_diffuse.png
