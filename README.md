@@ -14,6 +14,7 @@ The source repository for Vertical Moment Collective: structured climbing data, 
 - `database/` — canonical structured records and export-ready schemas
 - `areas/` — area and sector context, source references and manifests
 - `models/` — 3D asset manifests and production conventions
+- `assets/brand/` — approved logo assets, editable sources and motion drafts
 - `viewer/`, `website/`, `app/` — product workspaces
 - `guidebook/`, `media/`, `ai/` — publishing and intelligence inputs
 - `docs/`, `infrastructure/`, `scripts/`, `tests/` — operating documentation and tooling
