@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Vertical Moment route record",
+  "type": "object",
+  "required": ["id", "name", "discipline", "area_id", "sector_id", "verification_status", "sources"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^vm-[a-z0-9-]+$"},
+    "name": {"type": "string", "minLength": 1},
+    "discipline": {"enum": ["sport", "trad", "boulder", "mixed", "aid", "project"]},
+    "area_id": {"type": "string"},
+    "sector_id": {"type": "string"},
+    "grade": {"type": "string"},
+    "length_m": {"type": "number", "minimum": 0},
+    "verification_status": {"enum": ["provisional", "source-verified", "field-verified", "retired"]},
+    "sources": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["type", "reference"], "properties": {"type": {"type": "string"}, "reference": {"type": "string"}}}}
+  },
+  "additionalProperties": true
+}
