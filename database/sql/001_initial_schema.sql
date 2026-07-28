@@ -1,0 +1,3 @@
+create table if not exists areas (id text primary key, name text not null, country_code text, verification_status text not null default 'provisional');
+create table if not exists sectors (id text primary key, area_id text references areas(id), name text not null, verification_status text not null default 'provisional');
+create table if not exists routes (id text primary key, area_id text references areas(id), sector_id text references sectors(id), name text not null, discipline text not null, grade text, length_m numeric, verification_status text not null default 'provisional', source_json jsonb not null default '[]');

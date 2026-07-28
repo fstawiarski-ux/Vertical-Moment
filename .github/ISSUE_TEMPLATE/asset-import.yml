@@ -1,0 +1,15 @@
+name: Asset import
+description: Track a 3D, photo, video, topo, or scan import.
+title: "asset: "
+labels: ["asset"]
+body:
+  - type: input
+    id: area
+    attributes: {label: Area or sector}
+  - type: textarea
+    id: assets
+    attributes: {label: Asset inventory and rights}
+    validations: {required: true}
+  - type: textarea
+    id: destination
+    attributes: {label: Proposed manifest destination}

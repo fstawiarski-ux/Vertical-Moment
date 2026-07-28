@@ -1,0 +1,2 @@
+id,name,discipline,area_id,sector_id,grade,length_m,verification_status,source_type,source_reference
+vm-at-example-demo-wall-001,Example Route - replace before publishing,sport,at-example,at-example-demo-wall,6,20,provisional,template,Repository scaffold example only
