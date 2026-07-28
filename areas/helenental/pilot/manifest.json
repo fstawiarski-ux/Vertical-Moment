@@ -1,0 +1,16 @@
+{
+  "id": "vm-at-helenental-four-wall-pilot",
+  "area": "Helenental",
+  "aliases": ["Höllental"],
+  "status": "collecting-inputs",
+  "canonical_route_source": "database/generated/routes_v1.json",
+  "derived_route_count": 92,
+  "area_catalogue_route_count_v1": 359,
+  "promotion_policy": "Review source evidence and field status before any canonical database update or pull request.",
+  "sectors": [
+    {"id": "hel-beethovenwand", "name": "Beethovenwand", "route_count_v1": 24, "location_status": "gpx-provisional", "model_status": "candidate-located"},
+    {"id": "hel-engelstein", "name": "Engelstein", "route_count_v1": 18, "location_status": "gpx-provisional", "model_status": "candidate-located"},
+    {"id": "hel-siegenfelder-steinbruch", "name": "Siegenfelder Steinbruch", "route_count_v1": 13, "location_status": "needs-exact-point", "model_status": "candidate-located"},
+    {"id": "hel-jammerwandl", "name": "Jammerwandl", "route_count_v1": 37, "location_status": "gpx-provisional", "model_status": "candidate-located"}
+  ]
+}
