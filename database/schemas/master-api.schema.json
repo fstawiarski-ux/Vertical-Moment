@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Vertical Moment Master v1 API export",
+  "type": "object",
+  "required": ["meta", "routes"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["generated", "count", "fields"],
+      "properties": {
+        "generated": {"type": "string"},
+        "count": {"type": "integer", "minimum": 0},
+        "fields": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "routes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["route", "grade", "grade_band", "discipline", "grade_system", "area", "wall", "source", "latitude", "longitude", "row_key", "notion_page_id", "status"],
+        "properties": {
+          "route": {"type": "string"},
+          "grade": {"type": "string"},
+          "grade_band": {"type": "string"},
+          "discipline": {"type": "string"},
+          "grade_system": {"type": "string"},
+          "area": {"type": "string"},
+          "wall": {"type": "string"},
+          "source": {"type": "string"},
+          "latitude": {"type": ["number", "null"]},
+          "longitude": {"type": ["number", "null"]},
+          "row_key": {"type": "string", "minLength": 1},
+          "notion_page_id": {"type": "string"},
+          "status": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
