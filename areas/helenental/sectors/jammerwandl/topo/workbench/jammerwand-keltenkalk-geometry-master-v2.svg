@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1490" height="910" viewBox="0 0 1490 910">
+  <title>Jammerwand Keltenkalk geometry master v2</title>
+  <desc>The Keltenkalk book topo is retained as the route-geometry master. Curves, shared terrain and the original 1–37 sequence are to be traced from this source rather than from a regular grid.</desc>
+  <image x="0" y="0" width="1490" height="910" xlink:href="jammerwand-keltenkalk-geometry-reference-v1.png"/>
+  <rect x="24" y="24" width="540" height="76" rx="12" fill="#123f36" opacity=".94"/>
+  <text x="48" y="58" fill="#fffdf5" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="1">JAMMERWAND · GEOMETRY MASTER</text>
+  <text x="48" y="84" fill="#dce9e3" font-family="Arial, sans-serif" font-size="15">Keltenkalk route curves and connections retained as source truth</text>
+  <rect x="780" y="832" width="676" height="52" rx="10" fill="#fff9ef" opacity=".95"/>
+  <text x="805" y="863" fill="#8a312f" font-family="Arial, sans-serif" font-size="15" font-weight="700">DO NOT USE AS SAFETY OR EQUIPMENT INFORMATION — FIELD CHECK REQUIRED</text>
+</svg>
