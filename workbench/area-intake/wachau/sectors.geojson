@@ -1,0 +1,651 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.523478,
+     48.399883,
+     363.214844
+    ]
+   },
+   "properties": {
+    "id": "WAC-1-04",
+    "name": "Turm der Schmächtigen",
+    "slug": "turm_der_schmaechtigen",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.523102,
+     48.399637,
+     334.317566
+    ]
+   },
+   "properties": {
+    "id": "WAC-1-15",
+    "name": "Turm der Mächtigen",
+    "slug": "turm_der_maechtigen",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.523311,
+     48.398319,
+     327.348083
+    ]
+   },
+   "properties": {
+    "id": "WAC-1-16",
+    "name": "Mittlerer Sägezahn",
+    "slug": "mittlerer_saegezahn",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.522518,
+     48.397678,
+     323.256622
+    ]
+   },
+   "properties": {
+    "id": "WAC-1-18",
+    "name": "Reibeisen",
+    "slug": "reibeisen",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.522738,
+     48.397746,
+     311.415619
+    ]
+   },
+   "properties": {
+    "id": "WAC-1-19",
+    "name": "Häuptling",
+    "slug": "haeuptling",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.523,
+     48.398433,
+     346.827026
+    ]
+   },
+   "properties": {
+    "id": "WAC-1-08",
+    "name": "Plattenspitz",
+    "slug": "plattenspitz",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.523231,
+     48.398544,
+     343.218781
+    ]
+   },
+   "properties": {
+    "id": "WAC-1-11",
+    "name": "Donauturm",
+    "slug": "donauturm",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.524057,
+     48.399872,
+     393.04425
+    ]
+   },
+   "properties": {
+    "id": "WAC-1-03",
+    "name": "Gotifels",
+    "slug": "gotifels",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.524234,
+     48.399612,
+     396.033966
+    ]
+   },
+   "properties": {
+    "id": "WAC-1-02",
+    "name": "Dreifingerspitze",
+    "slug": "dreifingerspitze",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.524229,
+     48.399431,
+     398.929626
+    ]
+   },
+   "properties": {
+    "id": "WAC-1-01",
+    "name": "Hahnenkamm",
+    "slug": "hahnenkamm",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.524014,
+     48.398832,
+     362.036255
+    ]
+   },
+   "properties": {
+    "id": "WAC-1-06",
+    "name": "Ruachlafelsen",
+    "slug": "ruachlafelsen",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.523971,
+     48.39844,
+     337.276825
+    ]
+   },
+   "properties": {
+    "id": "WAC-1-14",
+    "name": "Splitterturm",
+    "slug": "splitterturm",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.524079,
+     48.398708,
+     352.186584
+    ]
+   },
+   "properties": {
+    "id": "WAC-1-07",
+    "name": "WZ-Kind",
+    "slug": "wz_kind",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.524438,
+     48.398683,
+     344.19397
+    ]
+   },
+   "properties": {
+    "id": "WAC-1-10",
+    "name": "Steinbruch",
+    "slug": "steinbruch",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.523682,
+     48.398391,
+     338.230133
+    ]
+   },
+   "properties": {
+    "id": "WAC-1-13",
+    "name": "Dickkopf",
+    "slug": "dickkopf",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.523837,
+     48.398116,
+     310.045288
+    ]
+   },
+   "properties": {
+    "id": "WAC-1-20",
+    "name": "Däumling",
+    "slug": "daeumling",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.525017,
+     48.398063,
+     344.90094
+    ]
+   },
+   "properties": {
+    "id": "WAC-1-09",
+    "name": "Rawazzerfels",
+    "slug": "rawazzerfels",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.525243,
+     48.398323,
+     362.946472
+    ]
+   },
+   "properties": {
+    "id": "WAC-1-05",
+    "name": "Hörnliturm und Plattenwandl",
+    "slug": "hoernliturm_und_plattenwandl",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.52564,
+     48.398177,
+     339.563629
+    ]
+   },
+   "properties": {
+    "id": "WAC-1-12",
+    "name": "Geisterschiff",
+    "slug": "geisterschiff",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.524738,
+     48.397856,
+     325.523315
+    ]
+   },
+   "properties": {
+    "id": "WAC-1-17",
+    "name": "Pentagonfels",
+    "slug": "pentagonfels",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.52425,
+     48.397304,
+     290.4487
+    ]
+   },
+   "properties": {
+    "id": "WAC-1-24",
+    "name": "Sitting Bull",
+    "slug": "sitting_bull",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.524744,
+     48.397083,
+     306.383759
+    ]
+   },
+   "properties": {
+    "id": "WAC-1-21",
+    "name": "Fratzofels",
+    "slug": "fratzofels",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.524728,
+     48.396952,
+     300.013794
+    ]
+   },
+   "properties": {
+    "id": "WAC-1-22",
+    "name": "Omas Kegel und Fratzofels",
+    "slug": "omas_kegel_und_fratzofels",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.524679,
+     48.396798,
+     293.623505
+    ]
+   },
+   "properties": {
+    "id": "WAC-1-23",
+    "name": "Vergessener Turm",
+    "slug": "vergessener_turm",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.524567,
+     48.396706,
+     282.973633
+    ]
+   },
+   "properties": {
+    "id": "WAC-1-25",
+    "name": "Bettinaturm",
+    "slug": "bettinaturm",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.52432,
+     48.396688,
+     273.48938
+    ]
+   },
+   "properties": {
+    "id": "WAC-1-26",
+    "name": "Schwarzer Turm",
+    "slug": "schwarzer_turm",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.523987,
+     48.396756,
+     267.515533
+    ]
+   },
+   "properties": {
+    "id": "WAC-1-27",
+    "name": "Namenloser Turm",
+    "slug": "namenloser_turm",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.522099,
+     48.40332,
+     353.318909
+    ]
+   },
+   "properties": {
+    "id": "WAC-2-30",
+    "name": "Turm jenseits des Tales",
+    "slug": "turm_jenseits_des_tales",
+    "cluster": 2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.520881,
+     48.406952,
+     456.400055
+    ]
+   },
+   "properties": {
+    "id": "WAC-3-34",
+    "name": "Wachauergrat",
+    "slug": "wachauergrat",
+    "cluster": 3
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.521997,
+     48.406176,
+     422.045654
+    ]
+   },
+   "properties": {
+    "id": "WAC-3-36",
+    "name": "Don-Bosco-Grat",
+    "slug": "don_bosco_grat",
+    "cluster": 3
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.522174,
+     48.406653,
+     444.816284
+    ]
+   },
+   "properties": {
+    "id": "WAC-3-35",
+    "name": "Don-Bosco-Grat",
+    "slug": "don_bosco_grat",
+    "cluster": 3
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.521826,
+     48.406308,
+     412.694092
+    ]
+   },
+   "properties": {
+    "id": "WAC-3-37",
+    "name": "Donna Rossa",
+    "slug": "donna_rossa",
+    "cluster": 3
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.519943,
+     48.405613,
+     337.505707
+    ]
+   },
+   "properties": {
+    "id": "WAC-3-38",
+    "name": "Ruck-Zuck Wandl",
+    "slug": "ruck_zuck_wandl",
+    "cluster": 3
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.518205,
+     48.40223,
+     339.61261
+    ]
+   },
+   "properties": {
+    "id": "WAC-2-31",
+    "name": "Piratalwand",
+    "slug": "piratalwand",
+    "cluster": 2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.518467,
+     48.402714,
+     372.34259
+    ]
+   },
+   "properties": {
+    "id": "WAC-2-28",
+    "name": "Nasenwand",
+    "slug": "nasenwand",
+    "cluster": 2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.521386,
+     48.402312,
+     329.741638
+    ]
+   },
+   "properties": {
+    "id": "WAC-2-32",
+    "name": "Upper Sector",
+    "slug": "upper_sector",
+    "cluster": 2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.521804,
+     48.402298,
+     310.577881
+    ]
+   },
+   "properties": {
+    "id": "WAC-2-33",
+    "name": "Lower Sector",
+    "slug": "lower_sector",
+    "cluster": 2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.521633,
+     48.402621,
+     367.394836
+    ]
+   },
+   "properties": {
+    "id": "WAC-2-29",
+    "name": "Civetta",
+    "slug": "civetta",
+    "cluster": 2
+   }
+  }
+ ]
+}

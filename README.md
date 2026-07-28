@@ -17,5 +17,7 @@ The source repository for Vertical Moment Collective: structured climbing data, 
 - `viewer/`, `website/`, `app/` — product workspaces
 - `guidebook/`, `media/`, `ai/` — publishing and intelligence inputs
 - `docs/`, `infrastructure/`, `scripts/`, `tests/` — operating documentation and tooling
+- `workbench/` — small, versioned working sources that have not yet become canonical project data
+- `tools/` — reusable import and generation utilities
 
 This repository deliberately separates source evidence from interpreted data. Do not publish unverified route, safety, access or land-use information as final.
