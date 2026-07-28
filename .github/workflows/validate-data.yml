@@ -15,3 +15,5 @@ jobs:
           node-version: 22
       - name: Validate route records
         run: npx --yes ajv-cli@5 validate --spec=draft2020 -s database/schemas/route.schema.json -d 'database/json/routes/*.json'
+      - name: Validate Master v1 API export
+        run: npx --yes ajv-cli@5 validate --spec=draft2020 -s database/schemas/master-api.schema.json -d database/generated/routes_v1.json
