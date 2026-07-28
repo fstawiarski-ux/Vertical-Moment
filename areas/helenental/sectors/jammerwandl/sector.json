@@ -22,6 +22,8 @@
   },
   "route_count_v1": 37,
   "topo_status": "source-received-count-matches",
+  "route_overlay_status": "2d-selectors-ready-3d-traces-pending",
+  "route_overlay_manifest": "route-overlays/route-overlay-manifest-v1.json",
   "guidebook_evidence": "../../guidebook/keltenkalk-img5971-5981.json#pages-90-91",
   "model_status": "source-glb-ready-for-viewer-check",
   "model_manifest": "../../../../models/source/helenental/jammerwandl/ASSET_MANIFEST.json",

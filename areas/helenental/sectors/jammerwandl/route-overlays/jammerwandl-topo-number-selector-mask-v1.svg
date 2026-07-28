@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1524" viewBox="0 0 1536 1524">
+  <title>Jammerwandl route-number selector mask v1</title>
+  <desc>Lossless ID mask for the numbered entries in the curated rope topo. This is a selector mask, not route-line geometry.</desc>
+  <circle id="route-001" data-route-number="1" cx="68.0" cy="846.0" r="19.0" fill="#000001"/>
+  <circle id="route-002" data-route-number="2" cx="106.75" cy="846.0" r="19.0" fill="#000002"/>
+  <circle id="route-003" data-route-number="3" cx="145.5" cy="846.0" r="19.0" fill="#000003"/>
+  <circle id="route-004" data-route-number="4" cx="184.25" cy="846.0" r="19.0" fill="#000004"/>
+  <circle id="route-005" data-route-number="5" cx="223.0" cy="846.0" r="19.0" fill="#000005"/>
+  <circle id="route-006" data-route-number="6" cx="261.75" cy="846.0" r="19.0" fill="#000006"/>
+  <circle id="route-007" data-route-number="7" cx="300.5" cy="846.0" r="19.0" fill="#000007"/>
+  <circle id="route-008" data-route-number="8" cx="339.25" cy="846.0" r="19.0" fill="#000008"/>
+  <circle id="route-009" data-route-number="9" cx="378.0" cy="846.0" r="19.0" fill="#000009"/>
+  <circle id="route-010" data-route-number="10" cx="416.75" cy="846.0" r="19.0" fill="#00000a"/>
+  <circle id="route-011" data-route-number="11" cx="455.5" cy="846.0" r="19.0" fill="#00000b"/>
+  <circle id="route-012" data-route-number="12" cx="494.25" cy="846.0" r="19.0" fill="#00000c"/>
+  <circle id="route-013" data-route-number="13" cx="533.0" cy="846.0" r="19.0" fill="#00000d"/>
+  <circle id="route-014" data-route-number="14" cx="571.75" cy="846.0" r="19.0" fill="#00000e"/>
+  <circle id="route-015" data-route-number="15" cx="610.5" cy="846.0" r="19.0" fill="#00000f"/>
+  <circle id="route-016" data-route-number="16" cx="649.25" cy="846.0" r="19.0" fill="#000010"/>
+  <circle id="route-017" data-route-number="17" cx="688.0" cy="846.0" r="19.0" fill="#000011"/>
+  <circle id="route-018" data-route-number="18" cx="726.75" cy="846.0" r="19.0" fill="#000012"/>
+  <circle id="route-019" data-route-number="19" cx="765.5" cy="846.0" r="19.0" fill="#000013"/>
+  <circle id="route-020" data-route-number="20" cx="804.25" cy="846.0" r="19.0" fill="#000014"/>
+  <circle id="route-021" data-route-number="21" cx="843.0" cy="846.0" r="19.0" fill="#000015"/>
+  <circle id="route-022" data-route-number="22" cx="881.75" cy="846.0" r="19.0" fill="#000016"/>
+  <circle id="route-023" data-route-number="23" cx="920.5" cy="846.0" r="19.0" fill="#000017"/>
+  <circle id="route-024" data-route-number="24" cx="959.25" cy="846.0" r="19.0" fill="#000018"/>
+  <circle id="route-025" data-route-number="25" cx="998.0" cy="846.0" r="19.0" fill="#000019"/>
+  <circle id="route-026" data-route-number="26" cx="1036.75" cy="846.0" r="19.0" fill="#00001a"/>
+  <circle id="route-027" data-route-number="27" cx="1075.5" cy="846.0" r="19.0" fill="#00001b"/>
+  <circle id="route-028" data-route-number="28" cx="1114.25" cy="846.0" r="19.0" fill="#00001c"/>
+  <circle id="route-029" data-route-number="29" cx="1153.0" cy="846.0" r="19.0" fill="#00001d"/>
+  <circle id="route-030" data-route-number="30" cx="1191.75" cy="846.0" r="19.0" fill="#00001e"/>
+  <circle id="route-031" data-route-number="31" cx="1230.5" cy="846.0" r="19.0" fill="#00001f"/>
+  <circle id="route-032" data-route-number="32" cx="1269.25" cy="846.0" r="19.0" fill="#000020"/>
+  <circle id="route-033" data-route-number="33" cx="1308.0" cy="846.0" r="19.0" fill="#000021"/>
+  <circle id="route-034" data-route-number="34" cx="1346.75" cy="846.0" r="19.0" fill="#000022"/>
+  <circle id="route-035" data-route-number="35" cx="1385.5" cy="846.0" r="19.0" fill="#000023"/>
+  <circle id="route-036" data-route-number="36" cx="1424.25" cy="846.0" r="19.0" fill="#000024"/>
+  <circle id="route-037" data-route-number="37" cx="1463.0" cy="846.0" r="19.0" fill="#000025"/>
+</svg>

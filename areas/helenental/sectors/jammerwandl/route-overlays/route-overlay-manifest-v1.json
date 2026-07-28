@@ -1,0 +1,827 @@
+{
+  "id": "vm-hel-jammerwandl-route-overlays-v1",
+  "status": "provisional-2d-selectors-ready-3d-traces-pending",
+  "topo_source": "../topo/workbench/jammerwand-original-rope-topo-with-register-v1.png",
+  "topo_dimensions": {
+    "width": 1536,
+    "height": 1524
+  },
+  "id_mask_rule": "RGB #000001 through #000025 map to topo routes 1 through 37; #000000 means no route.",
+  "important": "2D selector anchors locate each numbered topo entry only. They are not route-line geometry and must not be rendered as 3D route paths.",
+  "routes": [
+    {
+      "route_id": "vm-hel-jammerwandl-001-laubfrosch",
+      "topo_number": 1,
+      "route_name": "Laubfrosch",
+      "source_grade": "6+",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#36d7e7",
+      "id_mask_colour": "#000001",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 68.0,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_001_laubfrosch",
+        "uv_mask_colour": "#000001",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-002-berta",
+      "topo_number": 2,
+      "route_name": "Berta",
+      "source_grade": "7-",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#ff6c58",
+      "id_mask_colour": "#000002",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 106.75,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_002_berta",
+        "uv_mask_colour": "#000002",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-003-bertl",
+      "topo_number": 3,
+      "route_name": "Bertl",
+      "source_grade": "6-",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#f6c451",
+      "id_mask_colour": "#000003",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 145.5,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_003_bertl",
+        "uv_mask_colour": "#000003",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-004-lueg-emol-es-bitzel",
+      "topo_number": 4,
+      "route_name": "Lueg Emol Es Bitzel",
+      "source_grade": "4+",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#36d7e7",
+      "id_mask_colour": "#000004",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 184.25,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_004_lueg-emol-es-bitzel",
+        "uv_mask_colour": "#000004",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-005-dacquis",
+      "topo_number": 5,
+      "route_name": "Dacquis",
+      "source_grade": "5+",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#ff6c58",
+      "id_mask_colour": "#000005",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 223.0,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_005_dacquis",
+        "uv_mask_colour": "#000005",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-006-das-grosse-aufwarmen",
+      "topo_number": 6,
+      "route_name": "Das Grosse Aufwärmen",
+      "source_grade": "7-",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#f6c451",
+      "id_mask_colour": "#000006",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 261.75,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_006_das-grosse-aufwarmen",
+        "uv_mask_colour": "#000006",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-007-das-kleine-aufwarmen",
+      "topo_number": 7,
+      "route_name": "Das Kleine Aufwärmen",
+      "source_grade": "5",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#36d7e7",
+      "id_mask_colour": "#000007",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 300.5,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_007_das-kleine-aufwarmen",
+        "uv_mask_colour": "#000007",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-008-bunte-kuh",
+      "topo_number": 8,
+      "route_name": "Bunte Kuh",
+      "source_grade": "7",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#ff6c58",
+      "id_mask_colour": "#000008",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 339.25,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_008_bunte-kuh",
+        "uv_mask_colour": "#000008",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-009-junge-romer",
+      "topo_number": 9,
+      "route_name": "Junge Römer",
+      "source_grade": "7+",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#f6c451",
+      "id_mask_colour": "#000009",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 378.0,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_009_junge-romer",
+        "uv_mask_colour": "#000009",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-010-das-comeback",
+      "topo_number": 10,
+      "route_name": "Das Comeback",
+      "source_grade": "7-",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#36d7e7",
+      "id_mask_colour": "#00000a",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 416.75,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_010_das-comeback",
+        "uv_mask_colour": "#00000a",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-011-golden-ambrosia",
+      "topo_number": 11,
+      "route_name": "Golden Ambrosia",
+      "source_grade": "7",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#ff6c58",
+      "id_mask_colour": "#00000b",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 455.5,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_011_golden-ambrosia",
+        "uv_mask_colour": "#00000b",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-012-jammer-peppi",
+      "topo_number": 12,
+      "route_name": "Jammer Peppi",
+      "source_grade": "6+",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#f6c451",
+      "id_mask_colour": "#00000c",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 494.25,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_012_jammer-peppi",
+        "uv_mask_colour": "#00000c",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-013-unschlussig",
+      "topo_number": 13,
+      "route_name": "Unschlüssig",
+      "source_grade": "8-",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#36d7e7",
+      "id_mask_colour": "#00000d",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 533.0,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_013_unschlussig",
+        "uv_mask_colour": "#00000d",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-014-direkter-einstieg",
+      "topo_number": 14,
+      "route_name": "Direkter Einstieg",
+      "source_grade": "5",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#ff6c58",
+      "id_mask_colour": "#00000e",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 571.75,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_014_direkter-einstieg",
+        "uv_mask_colour": "#00000e",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-015-mayflower-nr-1",
+      "topo_number": 15,
+      "route_name": "Mayflower Nr 1",
+      "source_grade": "5+",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#f6c451",
+      "id_mask_colour": "#00000f",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 610.5,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_015_mayflower-nr-1",
+        "uv_mask_colour": "#00000f",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-016-direkter-einstieg",
+      "topo_number": 16,
+      "route_name": "Direkter Einstieg",
+      "source_grade": "5+",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#36d7e7",
+      "id_mask_colour": "#000010",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 649.25,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_016_direkter-einstieg",
+        "uv_mask_colour": "#000010",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-017-plattenzauber",
+      "topo_number": 17,
+      "route_name": "Plattenzauber",
+      "source_grade": "6",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#ff6c58",
+      "id_mask_colour": "#000011",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 688.0,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_017_plattenzauber",
+        "uv_mask_colour": "#000011",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-018-topstar",
+      "topo_number": 18,
+      "route_name": "Topstar",
+      "source_grade": "7",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#f6c451",
+      "id_mask_colour": "#000012",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 726.75,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_018_topstar",
+        "uv_mask_colour": "#000012",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-019-kurze-kamine",
+      "topo_number": 19,
+      "route_name": "Kurze Kamine",
+      "source_grade": "5-",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#36d7e7",
+      "id_mask_colour": "#000013",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 765.5,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_019_kurze-kamine",
+        "uv_mask_colour": "#000013",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-020-variante",
+      "topo_number": 20,
+      "route_name": "Variante",
+      "source_grade": "6+/7-",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#ff6c58",
+      "id_mask_colour": "#000014",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 804.25,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_020_variante",
+        "uv_mask_colour": "#000014",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-021-san-ned-faad",
+      "topo_number": 21,
+      "route_name": "San Ned Faad",
+      "source_grade": "9-",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#f6c451",
+      "id_mask_colour": "#000015",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 843.0,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_021_san-ned-faad",
+        "uv_mask_colour": "#000015",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-022-faade-nocken",
+      "topo_number": 22,
+      "route_name": "Faade Nocken",
+      "source_grade": "6+",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#36d7e7",
+      "id_mask_colour": "#000016",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 881.75,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_022_faade-nocken",
+        "uv_mask_colour": "#000016",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-023-teststrecke",
+      "topo_number": 23,
+      "route_name": "Teststrecke",
+      "source_grade": "6",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#ff6c58",
+      "id_mask_colour": "#000017",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 920.5,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_023_teststrecke",
+        "uv_mask_colour": "#000017",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-024-ohne-baum",
+      "topo_number": 24,
+      "route_name": "Ohne Baum",
+      "source_grade": "6+",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#f6c451",
+      "id_mask_colour": "#000018",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 959.25,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_024_ohne-baum",
+        "uv_mask_colour": "#000018",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-025-schuppe-der-zweifel",
+      "topo_number": 25,
+      "route_name": "Schuppe der Zweifel",
+      "source_grade": "6",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#36d7e7",
+      "id_mask_colour": "#000019",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 998.0,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_025_schuppe-der-zweifel",
+        "uv_mask_colour": "#000019",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-026-schokopalatschinke",
+      "topo_number": 26,
+      "route_name": "Schokopalatschinke",
+      "source_grade": "6+",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#ff6c58",
+      "id_mask_colour": "#00001a",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 1036.75,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_026_schokopalatschinke",
+        "uv_mask_colour": "#00001a",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-027-hexalotte",
+      "topo_number": 27,
+      "route_name": "Hexalotte",
+      "source_grade": "7-",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#f6c451",
+      "id_mask_colour": "#00001b",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 1075.5,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_027_hexalotte",
+        "uv_mask_colour": "#00001b",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-028-wilder-schnittlauch",
+      "topo_number": 28,
+      "route_name": "Wilder Schnittlauch",
+      "source_grade": "5",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#36d7e7",
+      "id_mask_colour": "#00001c",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 1114.25,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_028_wilder-schnittlauch",
+        "uv_mask_colour": "#00001c",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-029-terassendiagonale",
+      "topo_number": 29,
+      "route_name": "Terassendiagonale",
+      "source_grade": "5+",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#ff6c58",
+      "id_mask_colour": "#00001d",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 1153.0,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_029_terassendiagonale",
+        "uv_mask_colour": "#00001d",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-030-ameisenbar",
+      "topo_number": 30,
+      "route_name": "Ameisenbär",
+      "source_grade": "6+",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#f6c451",
+      "id_mask_colour": "#00001e",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 1191.75,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_030_ameisenbar",
+        "uv_mask_colour": "#00001e",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-031-tante-emma",
+      "topo_number": 31,
+      "route_name": "Tante Emma",
+      "source_grade": "7+",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#36d7e7",
+      "id_mask_colour": "#00001f",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 1230.5,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_031_tante-emma",
+        "uv_mask_colour": "#00001f",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-032-putzteufel",
+      "topo_number": 32,
+      "route_name": "Putzteufel",
+      "source_grade": "5+",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#ff6c58",
+      "id_mask_colour": "#000020",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 1269.25,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_032_putzteufel",
+        "uv_mask_colour": "#000020",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-033-efeuteufel",
+      "topo_number": 33,
+      "route_name": "Efeuteufel",
+      "source_grade": "8+",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#f6c451",
+      "id_mask_colour": "#000021",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 1308.0,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_033_efeuteufel",
+        "uv_mask_colour": "#000021",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-034-efeuzorn",
+      "topo_number": 34,
+      "route_name": "Efeuzorn",
+      "source_grade": "7",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#36d7e7",
+      "id_mask_colour": "#000022",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 1346.75,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_034_efeuzorn",
+        "uv_mask_colour": "#000022",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-035-invasion-der-ameisen",
+      "topo_number": 35,
+      "route_name": "Invasion der Ameisen",
+      "source_grade": "7-",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#ff6c58",
+      "id_mask_colour": "#000023",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 1385.5,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_035_invasion-der-ameisen",
+        "uv_mask_colour": "#000023",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-036-ameisenmord",
+      "topo_number": 36,
+      "route_name": "Ameisenmord",
+      "source_grade": "7",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#f6c451",
+      "id_mask_colour": "#000024",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 1424.25,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_036_ameisenmord",
+        "uv_mask_colour": "#000024",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    },
+    {
+      "route_id": "vm-hel-jammerwandl-037-sonnenkante",
+      "topo_number": 37,
+      "route_name": "Sonnenkante",
+      "source_grade": "4+",
+      "canonical_match_status": "awaiting-master-v1-key-reconciliation",
+      "display_colour": "#36d7e7",
+      "id_mask_colour": "#000025",
+      "topo_selector": {
+        "type": "route-number-anchor",
+        "status": "provisional",
+        "x": 1463.0,
+        "y": 846.0,
+        "radius": 19.0
+      },
+      "model_overlay": {
+        "curve_object": "vm_route_037_sonnenkante",
+        "uv_mask_colour": "#000025",
+        "surface_trace_status": "untraced",
+        "field_verification_status": "unverified"
+      }
+    }
+  ]
+}
