@@ -1,0 +1,360 @@
+my_wall,route,my_grade,match,db_wall,db_grade,grade_differs,notion_page_id
+Badener Turm,Ariel Futur,6+,exists_in_db,Badener Turm,6+,,3a921413-5351-81d7-a716-cb14d893c116
+Badener Turm,Ausstiegsvariante,4,exists_in_db,Badener Turm,4-,YES,3a921413-5351-81ac-96b5-e064597b0011
+Badener Turm,B.E.-Kante,7-,exists_in_db,Badener Turm,7-,,3a921413-5351-81d4-ab17-c2d9dbba2709
+Badener Turm,Badener Waschl,7+,exists_in_db,Badener Turm,7+,,3a921413-5351-811f-bcd6-dbd8ad5d7104
+Badener Turm,Bäh-Platte,6+,exists_in_db,Badener Turm,6+,,3a921413-5351-8156-99aa-c65dff3c7c70
+Badener Turm,Bügelbrett,6+/7-,exists_in_db,Badener Turm,6+/7-,,3a921413-5351-8126-94f7-ed5b70433bd7
+Badener Turm,Direkte Ostwand,6+,exists_in_db,Badener Turm,6+,,3a921413-5351-81d9-8c5a-cbbe7bba5e04
+Badener Turm,Direkte Westwand,7+/8-,exists_in_db,Badener Turm,7+/8-,,3a921413-5351-8132-87df-d7eabe29b886
+Badener Turm,Grindula,6,exists_in_db,Badener Turm,6,,3a921413-5351-811d-90a5-ecfda485de8e
+Badener Turm,Is So,6+,exists_in_db,Badener Turm,6+,,3a921413-5351-81ef-b3e5-f8046c7fbf24
+Badener Turm,Linker Südriss,5,exists_in_db,Badener Turm,5,,3a921413-5351-8199-a9e3-ec331b6efc23
+Badener Turm,Luftbuderant,9-,exists_in_db,Badener Turm,9-,,3a921413-5351-8161-9d7c-dd5e8f419003
+Badener Turm,Nordostkante,6+,exists_in_db,Badener Turm,6+,,3a921413-5351-8127-b09b-c885b51fb24c
+Badener Turm,Nordostriss,6-,exists_in_db,Badener Turm,6-,,3a921413-5351-818a-8756-f2ee1b517273
+Badener Turm,Normalweg,4-,exists_in_db,Badener Turm,4-,,3a921413-5351-817b-bc5f-cb39cfd4ad9b
+Badener Turm,Ostriss,4,exists_in_db,Badener Turm,4-,YES,3a921413-5351-8102-a0bc-cd0e4ed3dbd7
+Badener Turm,Rechter Südriss,6,exists_in_db,Badener Turm,6-,YES,3a921413-5351-8199-89aa-d6d3694a7bdf
+Badener Turm,Sehr Super,7-,exists_in_db,Badener Turm,7-,,3a921413-5351-8149-ab18-d9e3a75f5cf7
+Badener Turm,Südostkantenriss,6,exists_in_db,Badener Turm,6,,3a921413-5351-811f-8d21-e6df9ee9d43e
+Badener Turm,Südostriss (Badener Turm),6,exists_in_db,Badener Turm,6-,YES,3a921413-5351-8148-821b-e024e6a5805c
+Badener Turm,Süka-Ori,7,exists_in_db,Badener Turm,7,,3a921413-5351-8190-b32b-f2c9ee2b9898
+Badener Turm,The Bell,6+,exists_in_db,Badener Turm,6+,,3a921413-5351-81da-bb77-e586aa31a0a3
+Badener Turm,The Stand,7-,exists_in_db,Badener Turm,7-,,3a921413-5351-81aa-a97d-eef5dc3c347d
+Badener Turm,Turmfalke,5-,exists_in_db,Badener Turm,5-,,3a921413-5351-8126-b3f1-dcf825a30d2e
+Badener Turm,Wildschwein,7,exists_in_db,Badener Turm,7,,3a921413-5351-8121-9508-cde2a2527337
+Badener Turm (Boulder),Gilbhart,5b,exists_in_db,Badener Turm,5b,,3a921413-5351-811b-9365-c6e64a8e7e32
+Badener Turm (Boulder),Pestanz,6a,new_not_in_db,,,,
+Beethovenwand,Aus Spass wird Ernst,6-,exists_in_db,Beethovenwand,6-,,3a921413-5351-81df-8640-f68bab53f218
+Beethovenwand,Bacdafucup,9+/10-,exists_in_db,Beethovenwand,9+/10-,,3a921413-5351-81ed-a731-d82e59063380
+Beethovenwand,Depression,8+,exists_in_db,Beethovenwand,8+,,3a921413-5351-8193-adda-eb65ab87560f
+Beethovenwand,Dont Fly in Extra Dry,9+,exists_in_db,Beethovenwand,9+,,3a921413-5351-812b-b0e1-ee2db7093881
+Beethovenwand,Dont Worry,8-,exists_in_db,Beethoven-Scharfeneck,8-,,3a921413-5351-8186-a3cd-e4b3c73c439a
+Beethovenwand,Ewing,9+/10-,exists_in_db,Beethoven-Scharfeneck,9+/10-,,3a921413-5351-81ff-aa6e-d7e6f46168a4
+Beethovenwand,Feistritzer,8+,exists_in_db,Beethovenwand,8+,,3a921413-5351-81f3-8964-fcf292841e28
+Beethovenwand,Fritzelacke,8,exists_in_db,Beethovenwand,8,,3a921413-5351-817f-bf65-e224ea40e033
+Beethovenwand,Give it Away,9,exists_in_db,Beethovenwand,9,,3a921413-5351-813f-bd64-f1237d79c507
+Beethovenwand,Happel,10-/10,exists_in_db,Beethoven-Scharfeneck,10-/10,,3a921413-5351-8193-a15d-c07c283d9892
+Beethovenwand,In Wie Schuppen von den Augen,8+,exists_in_db,Beethovenwand,8+,,3a921413-5351-81eb-9c71-f4470424c7c7
+Beethovenwand,It's Hard to Be a Man,8,exists_in_db,Beethovenwand,8,,3a921413-5351-8120-bfeb-e3e1a9f855cb
+Beethovenwand,Kvp,10,exists_in_db,Beethoven-Scharfeneck,10,,3a921413-5351-81d5-bdb0-d8ac96aa52a8
+Beethovenwand,LÜ,10+/11-,exists_in_db,Beethoven-Scharfeneck,10+/11-,,3a921413-5351-812f-af15-f2b457cb6c7b
+Beethovenwand,Pimplegionär,9,exists_in_db,Beethovenwand,9,,3a921413-5351-8124-87cc-eb2d6903d486
+Beethovenwand,Romans Kante,9+,exists_in_db,Beethoven-Scharfeneck,9+,,3a921413-5351-818c-8dfb-ea00d62c7a8d
+Beethovenwand,Rosegarden Funeral of Sores,9-,exists_in_db,Beethoven-Scharfeneck,9-,,3a921413-5351-8176-92e7-cccff516c6bf
+Beethovenwand,Schwere Ausstattung,10+,exists_in_db,Beethoven-Scharfeneck,10+,,3a921413-5351-8100-9632-db541219b012
+Beethovenwand,Siddharta,9,exists_in_db,Beethoven-Scharfeneck,9,,3a921413-5351-8104-b7c1-c55b93343dbb
+Beethovenwand,Steppenwolf,9-/9,exists_in_db,Beethovenwand,9-/9,,3a921413-5351-8151-8241-d0107e6f2267
+Beethovenwand,Sterben ist zu wenig,9+/10-,exists_in_db,Beethoven-Scharfeneck,9+/10-,,3a921413-5351-81d6-8154-cda315733ea0
+Beethovenwand,Surprise,10-,exists_in_db,Beethoven-Scharfeneck,10-,,3a921413-5351-81b4-8bf7-d1a3f7f33aeb
+Beethovenwand,Vergangenheitsbewältigung,8-,exists_in_db,Beethovenwand,8-,,3a921413-5351-815b-9e3c-e4db0d4d1825
+Beethovenwand,ÖKM Kante,9-/9,exists_in_db,Beethoven-Scharfeneck,9-/9,,3a921413-5351-817d-8fc0-dce7ef897d54
+Breite Wand,Adagio,5+,exists_in_db,Breite Wand,5+,,3a921413-5351-819d-a849-db357364d48b
+Breite Wand,Alte Führe,5,exists_in_db,Breite Wand,5,,3a921413-5351-81c9-b13e-fe940eebd5da
+Breite Wand,Alte Verschneidung,5+,exists_in_db,Breite Wand,5+,,3a921413-5351-81b3-8304-c880b2047eeb
+Breite Wand,Andante,5-,exists_in_db,Breite Wand,5-,,3a921413-5351-8122-a2af-ff81a75f2295
+Breite Wand,Beiszunge,7-,new_not_in_db,,,,
+Breite Wand,Black Out,8-,exists_in_db,Breite Wand,8-,,3a921413-5351-811d-95d5-dfe2758f2669
+Breite Wand,Cheyenne,7+/8-,exists_in_db,Breite Wand,7+/8-,,3a921413-5351-812e-a276-f91488671ad1
+Breite Wand,Dachrinne,5+,exists_in_db,Breite Wand,5-,YES,3a921413-5351-81c4-8c56-f117928c99ed
+Breite Wand,Direkter Efeusteig,6+,exists_in_db,Breite Wand,6+,,3a921413-5351-8155-bec9-cb460350aa17
+Breite Wand,Down Under Show,8/8+,exists_in_db,Breite Wand,8,YES,3a921413-5351-8164-9399-c0d1462dbea9
+Breite Wand,Einstiegsvariante,5+,exists_in_db,Breite Wand,5+,,3a921413-5351-81ec-b406-ef6f8d49c037
+Breite Wand,Excalibur,9-/9,exists_in_db,Breite Wand,9-/9,,3a921413-5351-8113-a70c-e0901b5bbb91
+Breite Wand,Fingerhut,7-,exists_in_db,Breite Wand,7-,,3a921413-5351-81da-85b5-f12d7b957c4c
+Breite Wand,Für Anfänger,4,exists_in_db,Breite Wand,4,,3a921413-5351-81a1-9437-ea17f0f31426
+Breite Wand,Für Grobla,2,exists_in_db,Breite Wand,2,,3a921413-5351-8177-924e-d59a15ef1a3c
+Breite Wand,Grrr,7,exists_in_db,Breite Wand,7,,3a921413-5351-8141-a7b0-d1fb9771ef76
+Breite Wand,Heilfroh,4,exists_in_db,Breite Wand,4+,YES,3a921413-5351-816d-ad8e-f4e375789ba5
+Breite Wand,Hundewetter,7,exists_in_db,Breite Wand,7,,3a921413-5351-814e-ae77-e4c6cb24da69
+Breite Wand,Kaffee mit Kuchen,8,exists_in_db,Breite Wand,8,,3a921413-5351-81f0-8364-f417651b640e
+Breite Wand,Kinderfest bei Pumuckl,8,exists_in_db,Breite Wand,8-,YES,3a921413-5351-816e-9108-f82b3c3cb822
+Breite Wand,Linker Einstieg (Breite Wand a),4,exists_in_db,Breite Wand,4,,3a921413-5351-8151-8cb7-e2b46e47d52b
+Breite Wand,Linker Einstieg (Breite Wand b),5,exists_in_db,Breite Wand,5,,3a921413-5351-81a9-b70a-fc29517f4103
+Breite Wand,Linker Einstieg (Breite Wand c),7,exists_in_db,Breite Wand,4,YES,3a921413-5351-8151-8cb7-e2b46e47d52b
+Breite Wand,Lulu,6,exists_in_db,Breite Wand,6,,3a921413-5351-8139-bf00-fe026448e031
+Breite Wand,Mixer,6,exists_in_db,Breite Wand,6,,3a921413-5351-81eb-be97-f4305164dc84
+Breite Wand,Mon Amour Physique,9+/10-,exists_in_db,Breite Wand,9+/10-,,3a921413-5351-815a-a3be-eabf4c346c40
+Breite Wand,Mord am dritten Finger,9,exists_in_db,Breite Wand,9-,YES,3a921413-5351-81a6-8590-dd24634324a9
+Breite Wand,Neue Blockrampe,5-,exists_in_db,Breite Wand,5-,,3a921413-5351-816e-a697-d6f312db913c
+Breite Wand,Neuer Diagonalriss,6+,exists_in_db,Breite Wand,6+,,3a921413-5351-8179-889f-d8858a5e70ac
+Breite Wand,Neuer Efeusteig,5+,exists_in_db,Breite Wand,5-,YES,3a921413-5351-814f-91c2-c6e1a2080795
+Breite Wand,Neuer R-Steig,5-,exists_in_db,Breite Wand,5-,,3a921413-5351-8161-875c-e74604830bf6
+Breite Wand,Pfarrer Assmann,6+,exists_in_db,Breite Wand,6+,,3a921413-5351-811a-99f7-f4f7213870e1
+Breite Wand,Pinkel Flink,7,exists_in_db,Breite Wand,7,,3a921413-5351-819f-b8a5-c97e5b4a2375
+Breite Wand,Poltergeist (Breite Wand),7-,exists_in_db,Breite Wand,7,YES,3a921413-5351-81c1-8512-cb693b704ca9
+Breite Wand,Prügelknabe,6,exists_in_db,Breite Wand,6,,3a921413-5351-8161-9ad1-cb15bd5a1ffe
+Breite Wand,Ratte,5+,exists_in_db,Breite Wand,5+,,3a921413-5351-81d3-b803-c113abccfb9a
+Breite Wand,Reinboltz,7-,exists_in_db,Breite Wand,7,YES,3a921413-5351-8127-8d60-e5534ceb0303
+Breite Wand,Schas im Wald,6+,exists_in_db,Breite Wand,6+,,3a921413-5351-8133-9250-d7a221b25998
+Breite Wand,Selbstmörderriss,5+,exists_in_db,Breite Wand,5+,,3a921413-5351-81d2-88de-c50a190f753c
+Breite Wand,Spezifisch Dynamisch,9,exists_in_db,Breite Wand,9,,3a921413-5351-8124-91a4-d1d17431e451
+Breite Wand,The Boxer,8-,exists_in_db,Breite Wand,8-,,3a921413-5351-8145-a128-d6495e9c3e0f
+Breite Wand,Toccata,7-,exists_in_db,Breite Wand,7-,,3a921413-5351-8125-bbcd-eac2a77ccd5c
+Breite Wand,Tolle Biene,8+,exists_in_db,Breite Wand,8+,,3a921413-5351-8130-a3b3-de6bfd18fdd2
+Breite Wand,Triplix,7-,exists_in_db,Breite Wand,7-,,3a921413-5351-810d-9a06-f85b9cb072de
+Breite Wand,Vivaldi,6+,exists_in_db,Breite Wand,6+,,3a921413-5351-8187-8023-ed3b4ae8b19d
+Breite Wand,Wasserfall,6+,exists_in_db,Breite Wand,6+,,3a921413-5351-8190-8fae-c737fac8f8f0
+Breite Wand,Wassermann,6+,exists_in_db,Breite Wand,6+,,3a921413-5351-8167-8e6f-cedb32d38c4d
+Breite Wand,Whiskey,6,exists_in_db,Breite Wand,6,,3a921413-5351-8146-9c0b-c5d54838c37a
+Breite Wand,Wilde Mexikanerin,5,exists_in_db,Breite Wand,5+,YES,3a921413-5351-8168-8e6f-fb5a1f7fe1b9
+Breite Wand,Zum Drüberhaun,6+,exists_in_db,Breite Wand,6+,,3a921413-5351-8185-90d1-c0bcaa2bdde1
+Breite Wand (Boulder),Alice im Muskelland,8b,exists_in_db,Breite Wand,8b+,YES,3a921413-5351-8183-861b-de3b59b5f232
+Dachswandl,Bissiger Dachs,7,new_not_in_db,,,,
+Dachswandl,Bröselriss,3+,new_not_in_db,,,,
+Dachswandl,Dachsbeute,5+,new_not_in_db,,,,
+Dachswandl,Dachsfalle,6+,new_not_in_db,,,,
+Dachswandl,Dachsfell,5+,new_not_in_db,,,,
+Dachswandl,Unterarmalarm,4+,new_not_in_db,,,,
+Dachswandl,Wilder Dachs,6+,new_not_in_db,,,,
+Efeufelsen,Artistensteig,4+,exists_in_db,Efeufelsen,4+,,3a921413-5351-81dd-b959-d01daeb495e9
+Efeufelsen,Direkter Ausstieg (Efeufelsen),6+,exists_in_db,Efeufelsen,6+,,3a921413-5351-8147-9ec8-fb2ca698680b
+Efeufelsen,Dont Fly,7,exists_in_db,Efeufelsen,7,,3a921413-5351-81e1-862b-caa9a6423b50
+Efeufelsen,Efeulaus,6,exists_in_db,Efeufelsen,6,,3a921413-5351-8144-9c40-cd4b28aae223
+Efeufelsen,Empty Garden,7,exists_in_db,Efeufelsen,7,,3a921413-5351-816d-b9da-e51d7e95041c
+Efeufelsen,Gelber Steig,6,exists_in_db,Efeufelsen,6,,3a921413-5351-8132-af83-c1f7dc5234e9
+Efeufelsen,Heavy Metal Pepi,7,exists_in_db,Efeufelsen,7,,3a921413-5351-8119-9227-d45c737431e1
+Efeufelsen,Im Schatten der Burenwurst,9,exists_in_db,Efeufelsen,9,,3a921413-5351-8120-bc41-c4aa992d011c
+Efeufelsen,Pensionistenfick,9-,exists_in_db,Efeufelsen,9-,,3a921413-5351-81ca-8e0d-ce2941ec1df6
+Efeufelsen,Rechter Einstieg,4,exists_in_db,Efeufelsen,4+,YES,3a921413-5351-8137-905e-c409481ca944
+Efeufelsen,Reichtvariante,8+,exists_in_db,Efeufelsen,8+,,3a921413-5351-81f6-96b5-e4b8e0fc7006
+Efeufelsen,Testpiloten Vortreten,9-/9,exists_in_db,Efeufelsen,9-/9,,3a921413-5351-81f1-a40b-d4c1f58d6de3
+Efeufelsen,Teufelspromenade,8-,exists_in_db,Efeufelsen,8-,,3a921413-5351-817d-b843-c3484146bb51
+Efeufelsen (Boulder),Long Drive,6b,exists_in_db,Efeufelsen,6b,,3a921413-5351-81e1-80ff-c5051685f4a5
+Engelstein,Adolfons,8,exists_in_db,Engelstein,8,,3a921413-5351-81e8-ab47-ed2dfb05025e
+Engelstein,Ameisenflipp,5+,exists_in_db,Engelstein,5+,,3a921413-5351-8121-b184-d741f86426e8
+Engelstein,Bissige Kreuzspinne,6+,exists_in_db,Engelstein,6+,,3a921413-5351-8135-9c55-cb3d715e1735
+Engelstein,Drum Dream,7,exists_in_db,Engelstein,7,,3a921413-5351-8166-8f13-e675fa347222
+Engelstein,Gichtfinger,9-,exists_in_db,Engelstein,9-,,3a921413-5351-81b2-af66-d6b1bda7d9e9
+Engelstein,Happy Day,8-,exists_in_db,Engelstein,8-,,3a921413-5351-8179-bd2a-f601e4bb78ce
+Engelstein,Heaven and Hell,7+,exists_in_db,Engelstein,7+,,3a921413-5351-813c-bfa3-f13d3eb32070
+Engelstein,Kabanossi,7+,exists_in_db,Engelstein,7+,,3a921413-5351-810a-9c87-ef374679340f
+Engelstein,Katzenjammer,8,exists_in_db,Engelstein,8,,3a921413-5351-812b-891f-d99b45771df8
+Engelstein,Kurzer Murx,6-,exists_in_db,Engelstein,6-,,3a921413-5351-8118-8b23-ffbd0952c314
+Engelstein,Onsight Adelheid,8,exists_in_db,Engelstein,8,,3a921413-5351-81b8-bc31-d0ed8f507e1b
+Engelstein,Ossikaba,7+,exists_in_db,Engelstein,7+,,3a921413-5351-81c5-a079-f73bc494c27f
+Engelstein,Schleudergefahr,8-,exists_in_db,Engelstein,8-,,3a921413-5351-81da-bea2-f96f3be7d7f6
+Engelstein,Schlichtweg,8,exists_in_db,Engelstein,8,,3a921413-5351-8141-a4ac-c80fa942d3d4
+Engelstein,Tollwut,7+,exists_in_db,Engelstein,7+,,3a921413-5351-8121-bb51-f1bc5c3ccb57
+Engelstein,Weg aus dem Fisch,8,exists_in_db,Engelstein,8,,3a921413-5351-8190-a940-eca24f5fae25
+Engelstein,Yellow Submarine,8-,exists_in_db,Engelstein,8-,,3a921413-5351-81d5-bce6-f96b3c612567
+Engelstein (Boulder),Helmatraverse,8a,exists_in_db,Engelstein,8a,,3a921413-5351-8129-a450-d8fa6874bca2
+Helenentaler Blöcke,Atlas,4+,new_not_in_db,,,,
+Helenentaler Blöcke,Beisszange,7,exists_in_db,Helenentaler Blöcke,7,,3a921413-5351-8136-b9b1-e3d44d1f7fd2
+Helenentaler Blöcke,Blauer Fritz,4+,new_not_in_db,,,,
+Helenentaler Blöcke,Bloc Infernal,9+,exists_in_db,Helenentaler Blöcke,9+,,3a921413-5351-81d1-b0d5-eb89151cfbef
+Helenentaler Blöcke,Die Last des Erbes,9,exists_in_db,Helenentaler Blöcke,9,,3a921413-5351-814a-a4bb-cc19308b5e2a
+Helenentaler Blöcke,Direkter Ausstieg (Helenentaler a),6+,exists_in_db,Efeufelsen,6+,,3a921413-5351-8147-9ec8-fb2ca698680b
+Helenentaler Blöcke,Direkter Ausstieg (Helenentaler b),5,exists_in_db,Efeufelsen,6+,YES,3a921413-5351-8147-9ec8-fb2ca698680b
+Helenentaler Blöcke,Fritzlpromenade,3,new_not_in_db,,,,
+Helenentaler Blöcke,Grosses Aufwärmen,7,exists_in_db,Helenentaler Blöcke,7,,3a921413-5351-816b-97fe-cc6a2fe5f5b6
+Helenentaler Blöcke,Grünmandl,5-,exists_in_db,Helenentaler Blöcke,5-,,3a921413-5351-81cb-ac03-d860a074b327
+Helenentaler Blöcke,Heimoverschneidung,5,exists_in_db,Helenentaler Blöcke,5,,3a921413-5351-819b-be5c-ee5a332745d7
+Helenentaler Blöcke,Heini,8,exists_in_db,Helenentaler Blöcke,8,,3a921413-5351-8114-a30c-c612cdd58062
+Helenentaler Blöcke,Helmut,9+,exists_in_db,Helenentaler Blöcke,9+,,3a921413-5351-81f8-aa74-d37325c3dd87
+Helenentaler Blöcke,Kasu,5-,exists_in_db,Helenentaler Blöcke,5-,,3a921413-5351-811e-b3b3-eb70cf7bb4f8
+Helenentaler Blöcke,Keine Wahl,5-,new_not_in_db,,,,
+Helenentaler Blöcke,Little Crack,7,new_not_in_db,,,,
+Helenentaler Blöcke,Mariannenkante,4,new_not_in_db,,,,
+Helenentaler Blöcke,Männerträume,8+,exists_in_db,Helenentaler Blöcke,8+,,3a921413-5351-81f3-b369-ee892461d2f4
+Helenentaler Blöcke,Non Plus Ultra Steig,5-,exists_in_db,Helenentaler Blöcke,5-,,3a921413-5351-8103-86f9-ce0665bb51ac
+Helenentaler Blöcke,Ohmeier,4+,new_not_in_db,,,,
+Helenentaler Blöcke,Riesengrosses Aufwärmen,8-,exists_in_db,Helenentaler Blöcke,8-,,3a921413-5351-8125-86cd-f394d76de7b9
+Helenentaler Blöcke,Ruck Zuck,5-,exists_in_db,Helenentaler Blöcke,5-,,3a921413-5351-817a-b79c-e9716209b0ce
+Helenentaler Blöcke,Stoja Steig,5,exists_in_db,Helenentaler Blöcke,5,,3a921413-5351-813f-b662-ecc489ceb4bc
+Helenentaler Blöcke,Sweet City Woman,10-,exists_in_db,Helenentaler Blöcke,10-,,3a921413-5351-81de-9b6b-f3a6261e6aa8
+Helenentaler Blöcke,White Edge,9-,exists_in_db,Helenentaler Blöcke,9-,,3a921413-5351-81dc-927d-ffddf2d5dea7
+Helenentaler Blöcke,Wilde Züge,8,exists_in_db,Helenentaler Blöcke,8,,3a921413-5351-8154-833d-d08d4ff77a64
+Helenentaler Blöcke,Zephir,4,exists_in_db,Helenentaler Blöcke,4,,3a921413-5351-81be-8ec3-e6e335ce0a95
+Helenentaler Blöcke (Boulder),Muttis Liebling,6c,new_not_in_db,,,,
+Helenentaler Blöcke (Boulder),Scheisszange,6a,new_not_in_db,,,,
+Herziges Türmchen,...und die Kleinen verrecken,7,new_not_in_db,,,,
+Herziges Türmchen,Dschungeldach,5+,new_not_in_db,,,,
+Herziges Türmchen,Herziges Türmchen,7-,new_not_in_db,,,,
+Jammerwandl,Ameisenbär,6+,new_not_in_db,,,,
+Jammerwandl,Ameisenmord,7,new_not_in_db,,,,
+Jammerwandl,Berta,7-,new_not_in_db,,,,
+Jammerwandl,Bertl,6-,new_not_in_db,,,,
+Jammerwandl,Bunte Kuh,7,new_not_in_db,,,,
+Jammerwandl,Dacquis,5+,new_not_in_db,,,,
+Jammerwandl,Das Comeback,7-,new_not_in_db,,,,
+Jammerwandl,Das grosse Aufwärmen,7-,new_not_in_db,,,,
+Jammerwandl,Das kleine Aufwärmen,5,new_not_in_db,,,,
+Jammerwandl,Direkter Einstieg (Jammerwandl a),5,exists_in_db,Ruachlerkamm,7-,YES,3a921413-5351-8123-9f01-fcc196fd52be
+Jammerwandl,Direkter Einstieg (Jammerwandl b),5+,exists_in_db,Ruachlerkamm,7-,YES,3a921413-5351-8123-9f01-fcc196fd52be
+Jammerwandl,Efeuteufel,8,new_not_in_db,,,,
+Jammerwandl,Efeuzorn,7,new_not_in_db,,,,
+Jammerwandl,Faade Nocken,6+,new_not_in_db,,,,
+Jammerwandl,Golden Ambrosia,7,new_not_in_db,,,,
+Jammerwandl,Hexalotte,7-,new_not_in_db,,,,
+Jammerwandl,Invasion der Ameisen,7-,new_not_in_db,,,,
+Jammerwandl,Jammer Pepi,6+,new_not_in_db,,,,
+Jammerwandl,Junge Römer,7+,new_not_in_db,,,,
+Jammerwandl,Kurze Kamine,5,new_not_in_db,,,,
+Jammerwandl,Laubfrosch,6+,new_not_in_db,,,,
+Jammerwandl,Lueg emol es bitzeli,4+,new_not_in_db,,,,
+Jammerwandl,Mayflower Nr 1,5+,new_not_in_db,,,,
+Jammerwandl,Ohne Baum,6+,new_not_in_db,,,,
+Jammerwandl,Plattenzauber,6,new_not_in_db,,,,
+Jammerwandl,Putzteufel,5+,new_not_in_db,,,,
+Jammerwandl,Sai ned faaad,9-,new_not_in_db,,,,
+Jammerwandl,Schokopalatschinke,6+,new_not_in_db,,,,
+Jammerwandl,Schuppe der Zweifel,6,new_not_in_db,,,,
+Jammerwandl,Sonnenkante,4+,new_not_in_db,,,,
+Jammerwandl,Tante Emma,7,new_not_in_db,,,,
+Jammerwandl,Terassendiagonale,5+,new_not_in_db,,,,
+Jammerwandl,Teststrecke,6,new_not_in_db,,,,
+Jammerwandl,Topstar,7,new_not_in_db,,,,
+Jammerwandl,Unschlüssig,8,new_not_in_db,,,,
+Jammerwandl,Variante (Jammerwandl),6+/7-,exists_in_db,Trenkerwand,6+,YES,3a921413-5351-816e-96e6-d7e49e83dad5
+Jammerwandl,Wilder Schnittlauch,5,new_not_in_db,,,,
+Ospwandl,Cooper,7+/8-,new_not_in_db,,,,
+Ospwandl,Cooper Hard,8-/8,new_not_in_db,,,,
+Ospwandl,Little OSP,9-,new_not_in_db,,,,
+Ospwandl,Poltergeist (Ospwandl),7+,exists_in_db,Breite Wand,7,YES,3a921413-5351-81c1-8512-cb693b704ca9
+Ospwandl,Primorka,8+/9-,new_not_in_db,,,,
+Ospwandl,Saft,8,new_not_in_db,,,,
+Rum (Boulder),Bier,6a,new_not_in_db,,,,
+Rum (Boulder),Pezi Bär,7a,new_not_in_db,,,,
+Rum (Boulder),Rum,6b,new_not_in_db,,,,
+Scharfeneck,A Lurch (Scharfeneck),7+,new_not_in_db,,,,
+Scharfeneck,Der Standard,7+,new_not_in_db,,,,
+Scharfeneck,Die Klassische,6,new_not_in_db,,,,
+Scharfeneck,Entbestialisierung,7,new_not_in_db,,,,
+Scharfeneck,Grundkurs,3,new_not_in_db,,,,
+Scharfeneck,Hekla,9,new_not_in_db,,,,
+Scharfeneck,Kudlmudl,6,new_not_in_db,,,,
+Scharfeneck,Kuschelecke Extrem,6,new_not_in_db,,,,
+Scharfeneck,Leben und Leben lassen,9+,new_not_in_db,,,,
+Scharfeneck,Milde Bestie,7-,new_not_in_db,,,,
+Scharfeneck,Nordwest,6-,new_not_in_db,,,,
+Scharfeneck,Schubumkehr,10-,new_not_in_db,,,,
+Scharfeneck,Schuppenriss,4+,new_not_in_db,,,,
+Scharfeneck,Stolperstein,6,new_not_in_db,,,,
+Scharfeneck,Toprope Verbot,7-,new_not_in_db,,,,
+Scharfeneck,Tumor,7,exists_in_db,Ruachlerkamm,9,YES,3a921413-5351-8189-93cb-f7ca90b16f90
+Scharfeneck,Unten Hui Oben Pfui,5-,new_not_in_db,,,,
+Scharfeneck,Verbindung,6+,new_not_in_db,,,,
+Scharfeneck,Waldgnom,6,new_not_in_db,,,,
+Scharfeneck,Wilde Bestie,8,new_not_in_db,,,,
+Scharfeneck,Zwerg Nase,8+,new_not_in_db,,,,
+Siegenfelder Steinbruch,Blaupunkt,5,exists_in_db,Siegenfelder Steinbruch,5-,YES,3a921413-5351-81c6-99b1-fdc72c96822e
+Siegenfelder Steinbruch,Kurz und Bündig,5,exists_in_db,Siegenfelder Steinbruch,5-,YES,3a921413-5351-8149-9ad2-e89f97c02ae0
+Siegenfelder Steinbruch,Numb,5,exists_in_db,Siegenfelder Steinbruch,5+,YES,3a921413-5351-81dc-be09-f9a2782640c0
+Siegenfelder Steinbruch,Plattiger Riss,3+,exists_in_db,Siegenfelder Steinbruch,3+,,3a921413-5351-8166-a10f-f2777128498d
+Siegenfelder Steinbruch,Prinz,4,exists_in_db,Siegenfelder Steinbruch,4+,YES,3a921413-5351-81da-ab62-cd6e31a608f9
+Siegenfelder Steinbruch,Rozario,5,exists_in_db,Siegenfelder Steinbruch,5-,YES,3a921413-5351-81fe-9853-f9b1e86f3d38
+Siegenfelder Steinbruch,Streitspur,4+,exists_in_db,Siegenfelder Steinbruch,4+,,3a921413-5351-810f-a7d0-fe0be595b4ab
+Siegenfelder Steinbruch,The Fox,5,exists_in_db,Siegenfelder Steinbruch,5-,YES,3a921413-5351-8121-80c7-d130ca390ad2
+Siegenfelder Steinbruch,Vergessener Grat,3+,exists_in_db,Siegenfelder Steinbruch,3+,,3a921413-5351-815e-b971-f2af1d3bf9e8
+Siegenfelder Steinbruch,Waiting,5,exists_in_db,Siegenfelder Steinbruch,5,,3a921413-5351-816f-b0ad-d42386608e14
+Siegenfelder Steinbruch,Weisser Pfeiler,4,exists_in_db,Siegenfelder Steinbruch,4-,YES,3a921413-5351-8124-971c-c9c68efb0f79
+Siegenfelder Steinbruch,Zooropa,8,exists_in_db,Siegenfelder Steinbruch,8-,YES,3a921413-5351-81e2-a007-f8e87647d40f
+Siegenfelder Steinbruch (Boulder),Little Foot,6a,exists_in_db,Siegenfelder Steinbruch,6a+,YES,3a921413-5351-8192-b410-cb6637dc7520
+Trenkerwand,Adrenalin,7,exists_in_db,Trenkerwand,7-,YES,3a921413-5351-81ef-9852-c9a04c10f09e
+Trenkerwand,Alfi,5+,exists_in_db,Trenkerwand,5+,,3a921413-5351-81a9-9bfd-caaa5d630537
+Trenkerwand,Alive in Wonderland,8,new_not_in_db,,,,
+Trenkerwand,Ballett Volta,8-,exists_in_db,Trenkerwand,8-,,3a921413-5351-81df-93ab-dd4db51a4528
+Trenkerwand,Baumkamin,4+,new_not_in_db,,,,
+Trenkerwand,Bügeleisen,8-,new_not_in_db,,,,
+Trenkerwand,Bügeleisen Direkt,8,new_not_in_db,,,,
+Trenkerwand,Cento,6+,new_not_in_db,,,,
+Trenkerwand,Die Widerspenstige Zähmung,8-,new_not_in_db,,,,
+Trenkerwand,Doctor and the Maniac,8,new_not_in_db,,,,
+Trenkerwand,Flickflack,5,new_not_in_db,,,,
+Trenkerwand,Frater Calidus,6,new_not_in_db,,,,
+Trenkerwand,Grosser Überhang,7-,new_not_in_db,,,,
+Trenkerwand,Hasi,4+,exists_in_db,Trenkerwand,4+,,3a921413-5351-8192-91d7-ebc452c412a6
+Trenkerwand,Hengst,7-,new_not_in_db,,,,
+Trenkerwand,Hildesteig,4,exists_in_db,Trenkerwand,4-,YES,3a921413-5351-810e-b7c8-fdd2d478b6cb
+Trenkerwand,Hoffmannsteig,5+,new_not_in_db,,,,
+Trenkerwand,Ingrid W. Verschneidung,6+,exists_in_db,Trenkerwand,6+,,3a921413-5351-81ee-ac8a-db15fa4aec44
+Trenkerwand,Kaminverschneidung,4,new_not_in_db,,,,
+Trenkerwand,Kottan,6,new_not_in_db,,,,
+Trenkerwand,LBH-Riss,7,new_not_in_db,,,,
+Trenkerwand,Linker Babykamin,4,new_not_in_db,,,,
+Trenkerwand,Luis Trenker Verschneidung,6+,exists_in_db,Trenkerwand,6+,,3a921413-5351-81b5-b6e1-d66906f338c1
+Trenkerwand,Marantana,8,new_not_in_db,,,,
+Trenkerwand,Mausi,4,exists_in_db,Trenkerwand,4,,3a921413-5351-815a-a7c0-e4db35360c0f
+Trenkerwand,Mordsvergnügen,8-,new_not_in_db,,,,
+Trenkerwand,Mus Musculus,8-,new_not_in_db,,,,
+Trenkerwand,Müsliman,6+,new_not_in_db,,,,
+Trenkerwand,Nachschulung,5+,new_not_in_db,,,,
+Trenkerwand,Neue Prommerlkante,7-,new_not_in_db,,,,
+Trenkerwand,Othello,5,new_not_in_db,,,,
+Trenkerwand,Palmkatzerl,6+,new_not_in_db,,,,
+Trenkerwand,Pilch,6-,new_not_in_db,,,,
+Trenkerwand,Prommerlkante,6,new_not_in_db,,,,
+Trenkerwand,Quattro,4+,new_not_in_db,,,,
+Trenkerwand,Ratti,5-,new_not_in_db,,,,
+Trenkerwand,Rechter Babykamin,4-,new_not_in_db,,,,
+Trenkerwand,Slip Slide Away,7-,exists_in_db,Trenkerwand,7-,,3a921413-5351-81d8-a780-f28308e74547
+Trenkerwand,Spreizer,6,new_not_in_db,,,,
+Trenkerwand,Steckenpferd,6,new_not_in_db,,,,
+Trenkerwand,Teutscher Teutone,7-,new_not_in_db,,,,
+Trenkerwand,Variante (Trenkerwand),6+,exists_in_db,Trenkerwand,6+,,3a921413-5351-816e-96e6-d7e49e83dad5
+Trenkerwand,Vinzenz,6,new_not_in_db,,,,
+Trenkerwand,Warrior,6,new_not_in_db,,,,
+Trenkerwand,Wolfsblut,7+,exists_in_db,Trenkerwand,7+,,3a921413-5351-8106-89f6-e1e192da4846
+Trenkerwand (Boulder),Detlef,5c,new_not_in_db,,,,
+Trenkerwand (Boulder),Kiltap Namor,7a+,new_not_in_db,,,,
+Trenkerwand (Boulder),La Glatt,6b+,new_not_in_db,,,,
+Trenkerwand (Boulder),Lurch (Trenkerwand),5c,new_not_in_db,,,,
+Trenkerwand (Boulder),Pick,6a+,new_not_in_db,,,,
+Trenkerwand (Boulder),Tick,6b+,new_not_in_db,,,,
+Trenkerwand (Boulder),Track,5b,new_not_in_db,,,,
+Trenkerwand (Boulder),Trick,5b,new_not_in_db,,,,
+Vogelwandl,Aasgeier,7+,new_not_in_db,,,,
+Vogelwandl,Bachstelze,6,exists_in_db,Vogelwandl,6,,3a921413-5351-814d-8ad2-fb99665af72d
+Vogelwandl,Buchfink,6+,exists_in_db,Vogelwandl,6+,,3a921413-5351-81fe-b8a8-db23f0a7864e
+Vogelwandl,Condor,7+,new_not_in_db,,,,
+Vogelwandl,Doppelte Arbeit,5+,new_not_in_db,,,,
+Vogelwandl,Flamingo Road,7+,new_not_in_db,,,,
+Vogelwandl,Geierwally,6,new_not_in_db,,,,
+Vogelwandl,Grünspecht,6+,exists_in_db,Vogelwandl,6+,,3a921413-5351-8169-8aa2-c0127f30bd75
+Vogelwandl,Kolibri,7-,exists_in_db,Vogelwandl,7-,,3a921413-5351-81d6-9694-d5f7e7c452b1
+Vogelwandl,Mauerläufer (Vogelwandl),7-,exists_in_db,Vogelwandl,7-,,3a921413-5351-8183-908f-d826bfe9c17d
+Vogelwandl,Nachtigall,7-,new_not_in_db,,,,
+Vogelwandl,Outside,6-,new_not_in_db,,,,
+Vogelwandl,Pfeilerriss,5-,new_not_in_db,,,,
+Vogelwandl,Sally,7-/7,new_not_in_db,,,,
+Vogelwandl,Schnapsdrossel,7+,new_not_in_db,,,,
+Vogelwandl,Schwanenhals,6,new_not_in_db,,,,
+Vogelwandl,Spatzenhirn,5+,exists_in_db,Vogelwandl,5+,,3a921413-5351-812c-9b13-ded89e25adc9
+Vogelwandl,Stieglitz,5-,exists_in_db,Vogelwandl,5-,,3a921413-5351-81a6-b2ac-c80aa0367975
+Vogelwandl,Variante (Vogelwandl),6/6+,exists_in_db,Vogelwandl,6/6+,,3a921413-5351-817c-af96-f1c3da52d701
+Vogelwandl,Vogel Roch,7-/7,new_not_in_db,,,,
+Vogelwandl,Vogelverschneidung,3+,new_not_in_db,,,,
+Vogelwandl,Vogerltanz Direkt,6,exists_in_db,Vogelwandl,6-,YES,3a921413-5351-81c1-8edd-e8753a8da4bb
+Vogelwandl,Vögeln erlaubt,6+,exists_in_db,Vogelwandl,6+,,3a921413-5351-8155-b64c-dc313c039d8c
+Vogelwandl,Wiedehopf,4+,new_not_in_db,,,,
+Zwergwandl,Aalglatt,8,exists_in_db,Zwergwandl,8,,3a921413-5351-8108-8703-f538ebdd3186
+Zwergwandl,Bumble Bee,6-,exists_in_db,Zwergwandl,6-,,3a921413-5351-8164-beeb-cd01cad418a9
+Zwergwandl,Easy Rider (Zwergwandl),6+,exists_in_db,Zwergwandl,6+,,3a921413-5351-8192-880c-df3a9d64b7cd
+Zwergwandl,Fallschnee,8-,exists_in_db,Zwergwandl,8-,,3a921413-5351-814a-bdec-c53b13069587
+Zwergwandl,Greenhorn,7-,exists_in_db,Zwergwandl,7-,,3a921413-5351-819c-afc0-f3d5d400329b
+Zwergwandl,Leutnant Webri,7+/8-,exists_in_db,Zwergwandl,7+/8-,,3a921413-5351-81d4-b938-df93e95369b5
+Zwergwandl,Moonlightning,6-,exists_in_db,Zwergwandl,6-,,3a921413-5351-817c-9ec5-f9d2516e371d
+Zwergwandl,Nichts für schwache Geister,8-,exists_in_db,Zwergwandl,8-,,3a921413-5351-81da-8c29-f7894fb8018d
+Zwergwandl,Schneewitwe,6,exists_in_db,Zwergwandl,6,,3a921413-5351-813d-becd-e78d5762226c
+Zwergwandl,Seven Pointed Ladybird,4+,exists_in_db,Zwergwandl,4+,,3a921413-5351-810b-815c-fd159ed7532b
+Zwergwandl,Stand up and Fight,7,exists_in_db,Zwergwandl,7,,3a921413-5351-8164-bcac-eb0174788c7e
+Zwergwandl,Verschneidung (Zwergwandl),4+,exists_in_db,Zwergwandl,4+,,3a921413-5351-81f0-ac0b-c48baa29322d
+Zwergwandl,Zwergenfalle,8,exists_in_db,Zwergwandl,8-,YES,3a921413-5351-817a-b826-d60474d79c34
+Zwergwandl (Boulder),Arschglatt,6b+,exists_in_db,Zwergwandl,6b+,,3a921413-5351-8112-bb63-d36d470b40e9
+Zwergwandl (Boulder),Fingerbeisser,6b+,exists_in_db,Zwergwandl,6b+,,3a921413-5351-8137-9c2c-e0ee4e9e815c
+Zwergwandl (Boulder),Glattarsch,5c,exists_in_db,Zwergwandl,5c,,3a921413-5351-81c5-bfa0-c2baedc3e81d
+Zwergwandl (Boulder),Mooszwerg,4a,exists_in_db,Zwergwandl,4a,,3a921413-5351-81a1-9930-f5c61a1ac670
+Zwergwandl (Boulder),Zwergdiagonale,5a,exists_in_db,Zwergwandl,5a,,3a921413-5351-8156-bbac-df6a429dda30
+Ötzi,Orange Crush,9+/10-,new_not_in_db,,,,
+Ötzi,Orange Crush Rechts,9+,new_not_in_db,,,,
+Ötzi,Saskari,7-,new_not_in_db,,,,
+Ötzi (Boulder),Auf's Loch Retour,7a,new_not_in_db,,,,
+Ötzi (Boulder),Aufwärmrunde,4b,new_not_in_db,,,,
+Ötzi (Boulder),Edzy,3,new_not_in_db,,,,
+Ötzi (Boulder),For Good Shoes,6c+,new_not_in_db,,,,
+Ötzi (Boulder),Langfinger,7b+,new_not_in_db,,,,
+Ötzi (Boulder),Mily,5a,new_not_in_db,,,,
+Ötzi (Boulder),Nervenkanal,6b+,new_not_in_db,,,,
+Ötzi (Boulder),Ötzi,7a,new_not_in_db,,,,
