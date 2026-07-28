@@ -14,4 +14,4 @@ jobs:
         with:
           node-version: 22
       - name: Validate route records
-        run: npx --yes ajv-cli@5 validate -s database/schemas/route.schema.json -d 'database/json/routes/*.json'
+        run: npx --yes ajv-cli@5 validate --spec=draft2020 -s database/schemas/route.schema.json -d 'database/json/routes/*.json'
