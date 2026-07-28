@@ -1,0 +1,141 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.122523,
+     47.827701,
+     0.0
+    ]
+   },
+   "properties": {
+    "id": "BAD-2-05",
+    "name": "Engelsberg",
+    "slug": "engelsberg",
+    "cluster": 2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.040588,
+     47.824057,
+     0.0
+    ]
+   },
+   "properties": {
+    "id": "BAD-1-01",
+    "name": "Hochkogeleck",
+    "slug": "hochkogeleck",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.183675,
+     48.004486,
+     0.0
+    ]
+   },
+   "properties": {
+    "id": "BAD-4-08",
+    "name": "Badener Turm",
+    "slug": "badener_turm",
+    "cluster": 4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.036267,
+     47.853407,
+     0.0
+    ]
+   },
+   "properties": {
+    "id": "BAD-1-02",
+    "name": "Schatzinsel",
+    "slug": "schatzinsel",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.040184,
+     47.851605,
+     0.0
+    ]
+   },
+   "properties": {
+    "id": "BAD-1-03",
+    "name": "Gamswandl",
+    "slug": "gamswandl",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.024642,
+     47.845008,
+     0.0
+    ]
+   },
+   "properties": {
+    "id": "BAD-1-04",
+    "name": "Hohe Stube",
+    "slug": "hohe_stube",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.168643,
+     47.870404,
+     0.0
+    ]
+   },
+   "properties": {
+    "id": "BAD-3-07",
+    "name": "Wöllersdorf Hart",
+    "slug": "woellersdorf_hart",
+    "cluster": 3
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.151882,
+     47.83855,
+     0.0
+    ]
+   },
+   "properties": {
+    "id": "BAD-2-06",
+    "name": "Bad Fischau Kinderklettergarten",
+    "slug": "bad_fischau_kinderklettergarten",
+    "cluster": 2
+   }
+  }
+ ]
+}

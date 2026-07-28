@@ -1,0 +1,39 @@
+order,sector,cluster,mode,leg_m,leg_min,cum_min,d_ele,bearing
+1,Turm der Schmächtigen,1,,0,0,0,0,
+2,Ruachlafelsen,1,walk,124,1.4,1.4,-1,SSE
+3,Rawazzerfels,1,walk,113,1.6,3.0,-17,SE
+4,Geisterschiff,1,walk,48,0.6,3.6,-5,ENE
+5,Pentagonfels,1,walk,76,1.2,4.8,-14,WSW
+6,Fratzofels,1,walk,86,1.6,6.4,-19,S
+7,Omas Kegel und Fratzofels,1,walk,15,0.6,7.0,-6,S
+8,Vergessener Turm,1,walk,18,0.5,7.5,-6,SSW
+9,Sitting Bull,1,walk,65,0.6,8.2,-3,NNW
+10,Bettinaturm,1,walk,71,0.9,9.0,-7,SSE
+11,Namenloser Turm,1,walk,43,1.3,10.3,-15,W
+12,Schwarzer Turm,1,walk,26,0.7,11.0,6,ESE
+13,Häuptling,1,walk,166,4.4,15.4,38,NW
+14,Däumling,1,walk,91,1.0,16.4,-1,ENE
+15,Reibeisen,1,walk,109,2.0,18.4,13,WSW
+16,Mittlerer Sägezahn,1,walk,92,1.3,19.7,4,NE
+17,Turm der Mächtigen,1,walk,148,2.1,21.7,7,N
+18,Plattenspitz,1,walk,134,2.2,24.0,13,S
+19,Donauturm,1,walk,21,0.3,24.3,-4,NE
+20,Dickkopf,1,walk,37,0.5,24.8,-5,ESE
+21,Splitterturm,1,walk,22,0.2,25.0,-1,ENE
+22,Steinbruch,1,walk,44,0.9,25.9,7,NE
+23,WZ-Kind,1,walk,27,0.9,26.8,8,W
+24,Hörnliturm und Plattenwandl,1,walk,96,1.7,28.5,11,ESE
+25,Hahnenkamm,1,walk,144,4.1,32.6,36,NNW
+26,Dreifingerspitze,1,walk,20,0.3,32.9,-3,N
+27,Gotifels,1,walk,32,0.4,33.3,-3,NNW
+28,Civetta,2,walk,355,3.8,37.1,-26,NNW
+29,Turm jenseits des Tales,2,walk,85,1.3,38.4,-14,NNE
+30,Upper Sector,2,walk,124,2.0,40.4,-24,SSW
+31,Lower Sector,2,walk,31,2.3,42.7,-19,E
+32,Piratalwand,2,walk,266,4.6,47.3,29,W
+33,Ruck-Zuck Wandl,3,walk,398,4.7,52.0,-2,NNE
+34,Nasenwand,2,walk,341,5.8,57.8,35,SSW
+35,Donna Rossa,3,walk,471,7.6,65.4,40,NNE
+36,Don-Bosco-Grat,3,walk,19,1.2,66.6,9,SE
+37,Don-Bosco-Grat,3,walk,55,2.8,69.4,23,NNE
+38,Wachauergrat,3,walk,101,1.8,71.2,12,WNW

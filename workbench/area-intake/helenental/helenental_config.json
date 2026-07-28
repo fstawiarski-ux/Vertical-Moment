@@ -1,0 +1,80 @@
+{
+  "access_warning": "Część skał wspinaczkowych i bulderowych w Helenental leży w strefie rdzeniowej (Kernzone) Biosphärenpark Wienerwald i jest traktowana jako zamknięta dla wspinaczki. Przed wyjazdem należy sprawdzić aktualny status każdego sektora – granice stref zmieniają się i nie pokrywają się z podziałem na sektory w tym rozdziale.",
+
+  "groups": {
+    "1": "Rdzeń doliny – od Badener Kletterschule po Jammerwandl",
+    "2": "Burgruine Rauhenstein",
+    "3": "Badener Turm",
+    "4": "Beethovengrat"
+  },
+  "group_notes": {
+    "1": "Czternaście sektorów w pasie ok. 1 km wzdłuż doliny, mediana odległości ok. 97 m. Realnie jeden rejon: między skałami chodzi się pieszo, samochód zostaje na dole.",
+    "2": "Punkt pojedynczy, ok. 590 m na wschód od Jammerwandl. Sama ruina jest zabytkiem – patrz rozdział historyczny.",
+    "3": "Punkt na uboczu, ok. 1,5 km na południe od rdzenia doliny. Ten sam punkt występuje również w pliku dla rejonu Bad Fischau – do rozstrzygnięcia, do którego rozdziału należy.",
+    "4": "Najdalej wysunięty na zachód, ok. 1,8 km od Badener Turm. Osobne podejście."
+  },
+
+  "history_title": "Historia doliny",
+  "history_intro": "Helenental jest rejonem wspinaczkowym z niezwykle gęstą warstwą historyczną – w promieniu kilometra od skał mieszczą się dwie średniowieczne ruiny, tunel wykuty na cześć cesarza, kaplica wotywna z czasów epidemii cholery i trasa spacerowa, po której chodził Beethoven. Poniższe podrozdziały mają służyć jako materiał do rozdziału wprowadzającego.",
+
+  "history": [
+    {
+      "title": "Od doliny roboczej do promenady",
+      "body": [
+        "Przez większość swojej historii Helenental nie było miejscem wypoczynku, tylko szlakiem transportowym. Od około lat 70. XVII wieku spławiano tędy drewno z Lasu Wiedeńskiego – fala wody znosiła pnie z rejonu Schöpfl w stronę Baden, a przy Urtelstein spiętrzano je klauzą (zaporą) i puszczano dalej. Spław powodował w mieście na tyle poważne szkody, że po uruchomieniu Kanału Wiener Neustädter w 1803 roku klauzę rozebrano w 1805 roku.",
+        "Zmiana przyszła wraz z Baden. W 1796 roku cesarz Franciszek I uczynił z uzdrowiska swoją letnią rezydencję, co uruchomiło gwałtowny rozwój ruchu turystycznego i „odkrycie” dzikiej doliny. Wzdłuż lewego brzegu Schwechat urządzono promenadę prowadzącą aż do Krainerhütte – tak powstało słynne „Wegerl im Helenental”, dziś znane także jako Badener Kulturweg albo Beethoven-Wanderweg.",
+        "W 1940 roku ścieżka doczekała się własnej piosenki („Ich kenn ein kleines Wegerl im Helenental”). Do doliny kursowała linia tramwaju z Baden do Rauhenstein – od 1898 do 1936 roku. W 2008 roku powstała droga rowerowa, dla której trzeba było zbudować dwa mosty przez Schwechat, żeby ominąć Urtelstein."
+      ],
+      "todo": "Sprawdzić, czy dawny nasyp tramwajowy jest dziś rozpoznawalny w terenie – potencjalny materiał na zdjęcie."
+    },
+    {
+      "title": "Urtelstein – skała sądu",
+      "body": [
+        "Nazwa to zniekształcone „Urtheilstein”, czyli kamień wyroku. Średniowieczne miasta ustawiały taki kamień przy głównych drogach wjazdowych: to tutaj sędziowie okolicznych wsi przekazywali schwytanych przestępców sędziemu miejskiemu, bo tylko on miał prawo miecza. Ludowa tradycja poszła dalej i umieściła w tym miejscu miejsce straceń, z którego skazańców zrzucano do wiru rzeki Schwechat – legenda przypisuje mu nawet egzekucje templariuszy. Historycznie to raczej opowieść niż fakt.",
+        "Praktyczny problem był inny. Przed 1826 rokiem droga musiała pokonywać strome skalne zbocze, a Schwechat tworzyła pod nim wir zwany „Strudel”. Zimą regularnie kończyło się to wypadkami – w wodzie lądowały wozy, konie, woźnice, a bywało że i sędziowie z więźniami.",
+        "W 1826 roku przebito skałę tunelem, zużywając według przekazów około 15 000 strzałów. Tunel dedykowano cesarzowi Franciszkowi I. Ślady obróbki widoczne dziś na ścianach Urtelsteinu pochodzą częściowo z czasów spławu drewna, a częściowo z prac drogowych – co nie przeszkodziło w narodzinach interpretacji mówiącej o jaskiniach druidów i czarownic."
+      ]
+    },
+    {
+      "title": "Beethoven w dolinie",
+      "body": [
+        "Ludwig van Beethoven spędził w Baden piętnaście sezonów letnich i to tutaj powstała jego IX Symfonia. Helenental było jego stałym celem spacerów; szczególnie cenił odcinek między Urtelsteinem a Cholerakapelle, wtedy jeszcze zupełnie dziki. Przy ścieżce do dziś stoi Beethovenstein.",
+        "Powtarzana lokalnie opowieść głosi, że to właśnie spacer po Helenental zainspirował „Odę do radości” – dzisiejszy hymn Europy. Jest to tradycja miejscowa i materiał promocyjny, a nie ustalenie muzykologiczne; w przewodniku warto podać ją jako anegdotę, nie jako fakt.",
+        "Dla wspinacza istotne jest to, że nazwy dwóch sektorów – Beethovenwand i Beethovengrat – nie są marketingiem współczesnych deweloperów dróg, tylko odbiciem tego, że kompozytor jest w tej dolinie obecny od dwustu lat."
+      ]
+    },
+    {
+      "title": "Rauhenstein i Rauheneck",
+      "body": [
+        "U wylotu doliny stoją dwie ruiny zamkowe po przeciwnych stronach Schwechat. Rauhenstein leży na północny wschód od rzeki, już w granicach Baden. Obie powstały prawdopodobnie w XII wieku i wiąże się je z rodem rycerskim Tursów. Zamki wielokrotnie niszczono i odbudowywano, a w tradycji funkcjonują jako siedziby rycerzy-rabusiów.",
+        "Rauhenstein figuruje w pliku GPX jako osobny punkt (grupa 2). Nie jest to sektor wspinaczkowy – w przewodniku powinien pojawić się jako punkt orientacyjny i cel spaceru, a nie jako skała. Ze względu na stan techniczny ruinę można oglądać wyłącznie z zewnątrz."
+      ],
+      "todo": "Potwierdzić datowanie XII w. i przypisanie rodowi Tursów w literaturze zamkoznawczej, nie tylko w źródłach turystycznych."
+    },
+    {
+      "title": "Cholerakapelle",
+      "body": [
+        "Powyżej drogi, ukryta w lesie, stoi niewielka kaplica pielgrzymkowa ufundowana przez wiedeńskie małżeństwo Carla i Elisabeth Boldrino (część źródeł podaje nazwisko Boldrini) w podzięce za ocalenie z epidemii cholery z lat 1830–1831. Kaplica jest dziś jednym z punktów orientacyjnych na Wegerl i użytecznym odniesieniem przy opisie podejść – w pobliżu znajduje się parking i gospoda."
+      ]
+    },
+    {
+      "title": "Historia wspinania",
+      "body": [
+        "Helenental należy do najstarszych rejonów wspinaczkowych w okolicach Wiednia. Pierwsze przejścia sięgają połowy XX wieku, a od połowy lat 80. rejon przeszedł przebudowę w kierunku nowoczesnego wspinania sportowego. Jammerwandl uchodzi za jedną z najstarszych ścian doliny i jeden z pierwszych „nowoczesnych” klettergartenów w regionie.",
+        "Badener Kletterschule to sześć formacji o różnej wysokości; w praktyce wspina się głównie na Efeufels, Breite Wand i Trenkerwand, a rejon był w nowszych czasach remontowany i doposażany w nowe drogi przez Christiana Hackera. Pobliska Siegenfelder Platte bywa polecana jako uzupełnienie.",
+        "Vogelwandl – ściana do ok. 20 m, wystawa południowo-zachodnia – przez lata pozostawała ukryta w gęstym podszycie i została odkryta dopiero w 1991 roku przez Romana Patlika, który udostępnił ją wspólnie z Christianem Hackerem.",
+        "Cena popularności jest widoczna gołym okiem: skała na najczęściej odwiedzanych ścianach jest wypolerowana, a asekuracja bywa nierówna – od dobrze obitych dróg po odcinki z dużymi odległościami między punktami. Miejscami występuje stary materiał."
+      ],
+      "todo": "Uzupełnić o nazwiska pierwszych wspinaczy z połowy XX w. i o daty kluczowych dróg – dane z lokalnych przewodników (m.in. serii Keltenkalk) i archiwum sekcji Alpenverein."
+    }
+  ],
+
+  "sources": [
+    "AustriaWiki / Austria-Forum: hasło „Helenental”",
+    "meinbezirk.at, Baden – seria „Damals & Heute” (Urtelstein, Helenental, gospody)",
+    "mystische-orte.at – hasło „Urtelstein”",
+    "bergsteigen.com – Badener Kletterschule, Vogelwandl",
+    "theCrag – Badener Kletterschule, Jammerwandl, Helenentaler Blöcke (w tym ostrzeżenie o strefie rdzeniowej Biosphärenpark Wienerwald)",
+    "Alpenverein Österreich – Mobilitätsguide Klettern (dojazd komunikacją publiczną)"
+  ]
+}

@@ -1,0 +1,9 @@
+id,name,slug,cluster,lat,lon,ele,elevation_source,x_m,y_m,aspect_deg,aspect,slope_deg,terrain_source,nn_m,nn_name,scan_status,routes_documented,notes
+BAD-2-05,Engelsberg,engelsberg,2,47.827701,16.122523,,missing,1977.04,-4085.56,,,,unavailable_no_elevation,2503,Bad Fischau Kinderklettergarten,not_started,,
+BAD-1-01,Hochkogeleck,hochkogeleck,1,47.824057,16.040588,,missing,-4142.1,-4491.21,,,,unavailable_no_elevation,2619,Hohe Stube,not_started,,
+BAD-4-08,Badener Turm,badener_turm,4,48.004486,16.183675,,missing,6544.05,15594.05,,,,unavailable_no_elevation,14968,Wöllersdorf Hart,not_started,,
+BAD-1-02,Schatzinsel,schatzinsel,1,47.853407,16.036267,,missing,-4464.8,-1223.99,,,,unavailable_no_elevation,355,Gamswandl,not_started,,
+BAD-1-03,Gamswandl,gamswandl,1,47.851605,16.040184,,missing,-4172.27,-1424.58,,,,unavailable_no_elevation,355,Schatzinsel,not_started,,
+BAD-1-04,Hohe Stube,hohe_stube,1,47.845008,16.024642,,missing,-5332.99,-2158.96,,,,unavailable_no_elevation,1276,Schatzinsel,not_started,,
+BAD-3-07,Wöllersdorf Hart,woellersdorf_hart,3,47.870404,16.168643,,missing,5421.41,668.11,,,,unavailable_no_elevation,3760,Bad Fischau Kinderklettergarten,not_started,,
+BAD-2-06,Bad Fischau Kinderklettergarten,bad_fischau_kinderklettergarten,2,47.83855,16.151882,,missing,4169.66,-2877.86,,,,unavailable_no_elevation,2503,Engelsberg,not_started,,
