@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1536" height="1024" viewBox="0 0 1536 1024">
+  <title>Jammerwand provisional route overlay v1</title>
+  <desc>Concept-only route overlay retaining the historic numbers 1 to 37. Route paths, equipment, lengths and French conversions require on-site verification.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="jammerwand-topo-base-concept-v1.png"/>
+  <style>
+    .route { fill:none; stroke:#bd4c56; stroke-width:3.5; stroke-dasharray:10 8; stroke-linecap:round; stroke-linejoin:round; opacity:.95 }
+    .route.shared { stroke:#d98547; }
+    .dot { fill:#123f36; stroke:#fffdf5; stroke-width:3 }
+    .n { fill:#fffdf5; font:700 16px Arial, sans-serif; text-anchor:middle; dominant-baseline:middle }
+    .panel { fill:#113b33; opacity:.94 }
+    .title { fill:#fffdf5; font:700 25px Arial, sans-serif; letter-spacing:1px }
+    .sub { fill:#dce9e3; font:15px Arial, sans-serif }
+    .warning { fill:#8a312f; font:700 14px Arial, sans-serif; letter-spacing:.4px }
+    .sector { fill:#fffdf5; stroke:#123f36; stroke-width:3 }
+    .sectorText { fill:#123f36; font:700 16px Arial, sans-serif; text-anchor:middle; dominant-baseline:middle }
+  </style>
+  <rect class="panel" x="30" y="28" width="500" height="88" rx="12"/>
+  <text class="title" x="54" y="62">JAMMERWAND</text>
+  <text class="sub" x="54" y="88">Provisional route overlay · original numbering retained</text>
+  <rect x="1055" y="30" width="450" height="47" rx="9" fill="#fff9ef" opacity=".96"/>
+  <text class="warning" x="1080" y="60">CONCEPT ONLY — VERIFY LINES, BOLTS &amp; GRADES ON SITE</text>
+
+  <!-- sector markers -->
+  <circle class="sector" cx="245" cy="430" r="19"/><text class="sectorText" x="245" y="430">A</text>
+  <circle class="sector" cx="715" cy="410" r="19"/><text class="sectorText" x="715" y="410">B</text>
+  <circle class="sector" cx="1170" cy="440" r="19"/><text class="sectorText" x="1170" y="440">C</text>
+
+  <!-- 1–11: left sector -->
+  <path class="route" d="M155 780 C150 685 157 580 170 465"/><path class="route" d="M185 785 C180 690 192 575 205 430"/>
+  <path class="route" d="M218 790 C220 690 225 590 232 425"/><path class="route" d="M250 795 C252 690 267 585 275 405"/>
+  <path class="route" d="M285 800 C290 700 300 600 320 420"/><path class="route" d="M323 804 C330 700 340 585 352 405"/>
+  <path class="route" d="M360 808 C365 710 372 615 382 435"/><path class="route" d="M398 810 C402 720 405 620 422 450"/>
+  <path class="route" d="M438 810 C440 700 452 598 470 430"/><path class="route" d="M478 814 C486 710 500 600 518 430"/>
+  <path class="route" d="M518 815 C525 720 542 620 553 470"/>
+
+  <!-- 12–22: central sector -->
+  <path class="route" d="M575 817 C580 725 585 610 600 430"/><path class="route" d="M615 817 C620 720 635 615 650 412"/>
+  <path class="route shared" d="M655 820 C660 730 675 630 690 452"/><path class="route" d="M700 818 C705 720 720 615 735 432"/>
+  <path class="route" d="M742 818 C750 725 765 620 780 430"/><path class="route" d="M785 820 C790 730 805 630 825 465"/>
+  <path class="route" d="M830 820 C838 725 845 620 855 455"/><path class="route" d="M872 820 C880 730 890 625 900 470"/>
+  <path class="route" d="M914 820 C920 730 935 625 945 470"/><path class="route" d="M955 820 C960 730 972 625 980 485"/>
+  <path class="route" d="M995 820 C1000 735 1010 640 1025 495"/>
+
+  <!-- 23–37: right sector -->
+  <path class="route" d="M1035 820 C1040 730 1055 635 1068 485"/><path class="route" d="M1075 820 C1085 730 1095 630 1110 465"/>
+  <path class="route" d="M1118 820 C1120 735 1138 640 1150 470"/><path class="route" d="M1160 820 C1170 730 1185 635 1200 470"/>
+  <path class="route" d="M1205 820 C1210 730 1230 635 1245 490"/><path class="route" d="M1248 820 C1250 730 1270 640 1288 490"/>
+  <path class="route" d="M1290 820 C1300 730 1315 650 1330 510"/><path class="route" d="M1330 820 C1340 735 1355 650 1370 520"/>
+  <path class="route" d="M1370 820 C1380 735 1395 650 1410 520"/><path class="route" d="M1410 820 C1420 740 1430 655 1440 530"/>
+  <path class="route" d="M1450 820 C1458 740 1465 655 1470 540"/>
+  <path class="route shared" d="M1370 865 C1380 760 1390 650 1400 545"/>
+  <path class="route" d="M1410 865 C1420 760 1430 660 1440 555"/>
+  <path class="route" d="M1450 865 C1460 760 1470 665 1480 565"/>
+  <path class="route" d="M1490 865 C1495 765 1500 670 1505 575"/>
+
+  <!-- number markers: starts -->
+  <g>
+    <circle class="dot" cx="155" cy="780" r="16"/><text class="n" x="155" y="780">1</text><circle class="dot" cx="185" cy="785" r="16"/><text class="n" x="185" y="785">2</text><circle class="dot" cx="218" cy="790" r="16"/><text class="n" x="218" y="790">3</text><circle class="dot" cx="250" cy="795" r="16"/><text class="n" x="250" y="795">4</text><circle class="dot" cx="285" cy="800" r="16"/><text class="n" x="285" y="800">5</text><circle class="dot" cx="323" cy="804" r="16"/><text class="n" x="323" y="804">6</text><circle class="dot" cx="360" cy="808" r="16"/><text class="n" x="360" y="808">7</text><circle class="dot" cx="398" cy="810" r="16"/><text class="n" x="398" y="810">8</text><circle class="dot" cx="438" cy="810" r="16"/><text class="n" x="438" y="810">9</text><circle class="dot" cx="478" cy="814" r="16"/><text class="n" x="478" y="814">10</text><circle class="dot" cx="518" cy="815" r="16"/><text class="n" x="518" y="815">11</text>
+    <circle class="dot" cx="575" cy="817" r="16"/><text class="n" x="575" y="817">12</text><circle class="dot" cx="615" cy="817" r="16"/><text class="n" x="615" y="817">13</text><circle class="dot" cx="655" cy="820" r="16"/><text class="n" x="655" y="820">14</text><circle class="dot" cx="700" cy="818" r="16"/><text class="n" x="700" y="818">15</text><circle class="dot" cx="742" cy="818" r="16"/><text class="n" x="742" y="818">16</text><circle class="dot" cx="785" cy="820" r="16"/><text class="n" x="785" y="820">17</text><circle class="dot" cx="830" cy="820" r="16"/><text class="n" x="830" y="820">18</text><circle class="dot" cx="872" cy="820" r="16"/><text class="n" x="872" y="820">19</text><circle class="dot" cx="914" cy="820" r="16"/><text class="n" x="914" y="820">20</text><circle class="dot" cx="955" cy="820" r="16"/><text class="n" x="955" y="820">21</text><circle class="dot" cx="995" cy="820" r="16"/><text class="n" x="995" y="820">22</text>
+    <circle class="dot" cx="1035" cy="820" r="16"/><text class="n" x="1035" y="820">23</text><circle class="dot" cx="1075" cy="820" r="16"/><text class="n" x="1075" y="820">24</text><circle class="dot" cx="1118" cy="820" r="16"/><text class="n" x="1118" y="820">25</text><circle class="dot" cx="1160" cy="820" r="16"/><text class="n" x="1160" y="820">26</text><circle class="dot" cx="1205" cy="820" r="16"/><text class="n" x="1205" y="820">27</text><circle class="dot" cx="1248" cy="820" r="16"/><text class="n" x="1248" y="820">28</text><circle class="dot" cx="1290" cy="820" r="16"/><text class="n" x="1290" y="820">29</text><circle class="dot" cx="1330" cy="820" r="16"/><text class="n" x="1330" y="820">30</text><circle class="dot" cx="1370" cy="820" r="16"/><text class="n" x="1370" y="820">31</text><circle class="dot" cx="1410" cy="820" r="16"/><text class="n" x="1410" y="820">32</text><circle class="dot" cx="1450" cy="820" r="16"/><text class="n" x="1450" y="820">33</text>
+  </g>
+  <!-- 34–37 are the continuation/right-edge routes, intentionally offset to avoid crowding -->
+  <g><circle class="dot" cx="1370" cy="865" r="16"/><text class="n" x="1370" y="865">34</text><circle class="dot" cx="1410" cy="865" r="16"/><text class="n" x="1410" y="865">35</text><circle class="dot" cx="1450" cy="865" r="16"/><text class="n" x="1450" y="865">36</text><circle class="dot" cx="1490" cy="865" r="16"/><text class="n" x="1490" y="865">37</text></g>
+  <rect x="30" y="930" width="1476" height="62" rx="10" fill="#fff9ef" opacity=".93"/>
+  <text class="sub" x="55" y="958" fill="#113b33">Linework is a visual draft derived from an historic topo and oblique drone imagery.</text>
+  <text class="sub" x="55" y="980" fill="#113b33">Use only after field verification; route identity, starts, finishes, bolts, lengths, anchors and grade conversions are not confirmed.</text>
+</svg>

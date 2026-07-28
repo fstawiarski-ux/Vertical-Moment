@@ -1,0 +1,83 @@
+<RealityScan version="2.2.0.119430" sceneRevision="13" sceneId="{90091A55-0D61-40D1-B4EA-D1144F580073}">
+    <certificates>
+    </certificates>
+    <coordinates>
+        <projectCoordinates index="-1"/>
+    </coordinates>
+    <source>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0373.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0374.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0375.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0376.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0377.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0378.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0379.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0380.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0381.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0382.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0383.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0384.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0385.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0386.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0387.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0388.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0389.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0390.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0391.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0392.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0393.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0394.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0395.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0396.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0397.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0398.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0399.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0400.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0401.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0402.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0403.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0404.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0405.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0406.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0407.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0408.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0409.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0410.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0411.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0412.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0413.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0414.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0415.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0416.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0417.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0418.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0419.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0420.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0421.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0422.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0423.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0424.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0425.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0426.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0427.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0428.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0429.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+        <input fileName="E:\website\3d\Video Ready to SCAN3D\Baden\DJI_0430.DNG" width="960" height="720" wicPixelFormat="6FDDC324-4E03-4BFE-B185-3D77768DC90C"/>
+    </source>
+    <reconstructions selectedComponentId="{88B5BC79-C282-42A2-AA8E-79F7CF886202}">
+        <component name="Component 0" id="{88B5BC79-C282-42A2-AA8E-79F7CF886202}" classId="{21845778-D8E3-435C-9493-2E39FEE10F29}" fileName="goodjammer\sfm0.dat" selectedModel="0" sfmVisible="0"> 
+            <colorNormalization name="colorNormalization" fileName="goodjammer\colorNormalization0.dat" />
+            <metadata fileName="goodjammer\metadata0.dat"/>
+            <model name="Model 1" fileName="goodjammer\model0.dat" unwrappedArea="2.0785214443796194e+03" unwrappLargeTriRemThr="400.000000" minimalTexelSize="1.2674256227910519e-02" texturesUtilization="5.7680606842041016e-01" texelSize="7.8767780214548111e-03" chartsGutterSize="2" averageEdgeLength="4.8237551595439881e-02" coloringStyle="2" texturingStyle="2" minimalAdaptiveTexelSize="0.0000000000000000e+00" maximalAdaptiveTexelSize="0.0000000000000000e+00" unwrappingStyle="0" unwrappingMethod ="0" unwrapModifiers ="1" unwrapName="54BD27AB-435A-492F-B766-CCCE91C66590c006c98facd3890074e3aa08c0b442c0" cleanMark="2" selectedTxLayerGuid="{FDAB17FF-89E8-49D0-A8CB-A3AC13E7B889}" depthMapsLibVersion="1"  >
+                <textures>
+                    <textureLayer texturingStyle="2" inputLayer="1" computationTime="16" id="{FDAB17FF-89E8-49D0-A8CB-A3AC13E7B889}" />
+                    <textureLayer id="{5EFD8874-6BCE-42B7-A1F0-37C9A20E95D2}" />
+                </textures>
+            </model>
+        </component>
+    </reconstructions>
+    <entities name="entities" fileName="goodjammer\entities0.dat"/>
+    <animation fileName="goodjammer\animation0.dat"/>
+    <controlpoints fileName="goodjammer\controlpoints0.dat"/>
+    <appConfig fileName="goodjammer\appConfig0.dat" />
+</RealityScan>
