@@ -1,0 +1,871 @@
+{
+ "area": "Wachau",
+ "source_gpx": "Wachau.gpx",
+ "area_type": "crag",
+ "extent_m": 1143,
+ "cluster_threshold_m": 250.0,
+ "has_elevation": true,
+ "generated": "2026-07-19",
+ "origin": {
+  "lat": 48.399953368421045,
+  "lon": 15.52316439473684
+ },
+ "dem": null,
+ "dropped_duplicates": [
+  "Reibeisen"
+ ],
+ "duplicates_to_review": [
+  {
+   "name": "Don-Bosco-Grat",
+   "distance_m": 55
+  }
+ ],
+ "median_nn_m": 26,
+ "route_summary": {
+  "mode": "auto",
+  "total_min": 71.2,
+  "walk_min": 71.2,
+  "drive_min": 0.0,
+  "ascent_m": 290,
+  "descent_m": -197,
+  "basis": "per-leg: Tobler on foot within a group, straight line x1.4 at 45 km/h between groups"
+ },
+ "sectors": [
+  {
+   "id": "WAC-1-04",
+   "name": "Turm der Schmächtigen",
+   "slug": "turm_der_schmaechtigen",
+   "cluster": 1,
+   "wgs84": [
+    48.399883,
+    15.523478
+   ],
+   "enu": [
+    23.18,
+    -7.83,
+    363.2
+   ],
+   "aspect_deg": 248.4,
+   "slope_deg": 40.1,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "turm_der_schmaechtigen.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-1-15",
+   "name": "Turm der Mächtigen",
+   "slug": "turm_der_maechtigen",
+   "cluster": 1,
+   "wgs84": [
+    48.399637,
+    15.523102
+   ],
+   "enu": [
+    -4.61,
+    -35.22,
+    334.3
+   ],
+   "aspect_deg": 260.3,
+   "slope_deg": 33.5,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "turm_der_maechtigen.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-1-16",
+   "name": "Mittlerer Sägezahn",
+   "slug": "mittlerer_saegezahn",
+   "cluster": 1,
+   "wgs84": [
+    48.398319,
+    15.523311
+   ],
+   "enu": [
+    10.84,
+    -181.94,
+    327.3
+   ],
+   "aspect_deg": 171.0,
+   "slope_deg": 33.6,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "mittlerer_saegezahn.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-1-18",
+   "name": "Reibeisen",
+   "slug": "reibeisen",
+   "cluster": 1,
+   "wgs84": [
+    48.397678,
+    15.522518
+   ],
+   "enu": [
+    -47.77,
+    -253.29,
+    323.3
+   ],
+   "aspect_deg": 148.5,
+   "slope_deg": 27.5,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "reibeisen.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-1-19",
+   "name": "Häuptling",
+   "slug": "haeuptling",
+   "cluster": 1,
+   "wgs84": [
+    48.397746,
+    15.522738
+   ],
+   "enu": [
+    -31.51,
+    -245.72,
+    311.4
+   ],
+   "aspect_deg": 148.5,
+   "slope_deg": 27.5,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "haeuptling.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-1-08",
+   "name": "Plattenspitz",
+   "slug": "plattenspitz",
+   "cluster": 1,
+   "wgs84": [
+    48.398433,
+    15.523
+   ],
+   "enu": [
+    -12.15,
+    -169.25,
+    346.8
+   ],
+   "aspect_deg": 161.6,
+   "slope_deg": 27.9,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "plattenspitz.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-1-11",
+   "name": "Donauturm",
+   "slug": "donauturm",
+   "cluster": 1,
+   "wgs84": [
+    48.398544,
+    15.523231
+   ],
+   "enu": [
+    4.92,
+    -156.89,
+    343.2
+   ],
+   "aspect_deg": 171.0,
+   "slope_deg": 33.6,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "donauturm.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-1-03",
+   "name": "Gotifels",
+   "slug": "gotifels",
+   "cluster": 1,
+   "wgs84": [
+    48.399872,
+    15.524057
+   ],
+   "enu": [
+    65.97,
+    -9.06,
+    393.0
+   ],
+   "aspect_deg": 248.4,
+   "slope_deg": 40.1,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "gotifels.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-1-02",
+   "name": "Dreifingerspitze",
+   "slug": "dreifingerspitze",
+   "cluster": 1,
+   "wgs84": [
+    48.399612,
+    15.524234
+   ],
+   "enu": [
+    79.05,
+    -38.0,
+    396.0
+   ],
+   "aspect_deg": 248.4,
+   "slope_deg": 40.1,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "dreifingerspitze.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-1-01",
+   "name": "Hahnenkamm",
+   "slug": "hahnenkamm",
+   "cluster": 1,
+   "wgs84": [
+    48.399431,
+    15.524229
+   ],
+   "enu": [
+    78.68,
+    -58.15,
+    398.9
+   ],
+   "aspect_deg": 237.5,
+   "slope_deg": 35.1,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "hahnenkamm.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-1-06",
+   "name": "Ruachlafelsen",
+   "slug": "ruachlafelsen",
+   "cluster": 1,
+   "wgs84": [
+    48.398832,
+    15.524014
+   ],
+   "enu": [
+    62.79,
+    -124.83,
+    362.0
+   ],
+   "aspect_deg": 171.7,
+   "slope_deg": 30.3,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "ruachlafelsen.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-1-14",
+   "name": "Splitterturm",
+   "slug": "splitterturm",
+   "cluster": 1,
+   "wgs84": [
+    48.39844,
+    15.523971
+   ],
+   "enu": [
+    59.61,
+    -168.47,
+    337.3
+   ],
+   "aspect_deg": 168.8,
+   "slope_deg": 33.7,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "splitterturm.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-1-07",
+   "name": "WZ-Kind",
+   "slug": "wz_kind",
+   "cluster": 1,
+   "wgs84": [
+    48.398708,
+    15.524079
+   ],
+   "enu": [
+    67.6,
+    -138.63,
+    352.2
+   ],
+   "aspect_deg": 170.9,
+   "slope_deg": 32.1,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "wz_kind.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-1-10",
+   "name": "Steinbruch",
+   "slug": "steinbruch",
+   "cluster": 1,
+   "wgs84": [
+    48.398683,
+    15.524438
+   ],
+   "enu": [
+    94.13,
+    -141.42,
+    344.2
+   ],
+   "aspect_deg": 211.7,
+   "slope_deg": 27.5,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "steinbruch.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-1-13",
+   "name": "Dickkopf",
+   "slug": "dickkopf",
+   "cluster": 1,
+   "wgs84": [
+    48.398391,
+    15.523682
+   ],
+   "enu": [
+    38.26,
+    -173.92,
+    338.2
+   ],
+   "aspect_deg": 171.0,
+   "slope_deg": 33.6,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "dickkopf.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-1-20",
+   "name": "Däumling",
+   "slug": "daeumling",
+   "cluster": 1,
+   "wgs84": [
+    48.398116,
+    15.523837
+   ],
+   "enu": [
+    49.71,
+    -204.53,
+    310.0
+   ],
+   "aspect_deg": 171.0,
+   "slope_deg": 33.6,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "daeumling.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-1-09",
+   "name": "Rawazzerfels",
+   "slug": "rawazzerfels",
+   "cluster": 1,
+   "wgs84": [
+    48.398063,
+    15.525017
+   ],
+   "enu": [
+    136.92,
+    -210.43,
+    344.9
+   ],
+   "aspect_deg": 217.4,
+   "slope_deg": 22.3,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "rawazzerfels.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-1-05",
+   "name": "Hörnliturm und Plattenwandl",
+   "slug": "hoernliturm_und_plattenwandl",
+   "cluster": 1,
+   "wgs84": [
+    48.398323,
+    15.525243
+   ],
+   "enu": [
+    153.63,
+    -181.49,
+    362.9
+   ],
+   "aspect_deg": 208.9,
+   "slope_deg": 18.2,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "hoernliturm_und_plattenwandl.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-1-12",
+   "name": "Geisterschiff",
+   "slug": "geisterschiff",
+   "cluster": 1,
+   "wgs84": [
+    48.398177,
+    15.52564
+   ],
+   "enu": [
+    182.97,
+    -197.74,
+    339.6
+   ],
+   "aspect_deg": 208.9,
+   "slope_deg": 18.2,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "geisterschiff.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-1-17",
+   "name": "Pentagonfels",
+   "slug": "pentagonfels",
+   "cluster": 1,
+   "wgs84": [
+    48.397856,
+    15.524738
+   ],
+   "enu": [
+    116.3,
+    -233.48,
+    325.5
+   ],
+   "aspect_deg": 226.2,
+   "slope_deg": 22.5,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "pentagonfels.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-1-24",
+   "name": "Sitting Bull",
+   "slug": "sitting_bull",
+   "cluster": 1,
+   "wgs84": [
+    48.397304,
+    15.52425
+   ],
+   "enu": [
+    80.23,
+    -294.93,
+    290.4
+   ],
+   "aspect_deg": 241.1,
+   "slope_deg": 30.8,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "sitting_bull.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-1-21",
+   "name": "Fratzofels",
+   "slug": "fratzofels",
+   "cluster": 1,
+   "wgs84": [
+    48.397083,
+    15.524744
+   ],
+   "enu": [
+    116.75,
+    -319.53,
+    306.4
+   ],
+   "aspect_deg": 241.1,
+   "slope_deg": 30.8,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "fratzofels.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-1-22",
+   "name": "Omas Kegel und Fratzofels",
+   "slug": "omas_kegel_und_fratzofels",
+   "cluster": 1,
+   "wgs84": [
+    48.396952,
+    15.524728
+   ],
+   "enu": [
+    115.56,
+    -334.11,
+    300.0
+   ],
+   "aspect_deg": 241.1,
+   "slope_deg": 30.8,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "omas_kegel_und_fratzofels.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-1-23",
+   "name": "Vergessener Turm",
+   "slug": "vergessener_turm",
+   "cluster": 1,
+   "wgs84": [
+    48.396798,
+    15.524679
+   ],
+   "enu": [
+    111.94,
+    -351.25,
+    293.6
+   ],
+   "aspect_deg": 241.1,
+   "slope_deg": 30.8,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "vergessener_turm.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-1-25",
+   "name": "Bettinaturm",
+   "slug": "bettinaturm",
+   "cluster": 1,
+   "wgs84": [
+    48.396706,
+    15.524567
+   ],
+   "enu": [
+    103.66,
+    -361.5,
+    283.0
+   ],
+   "aspect_deg": 241.1,
+   "slope_deg": 30.8,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "bettinaturm.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-1-26",
+   "name": "Schwarzer Turm",
+   "slug": "schwarzer_turm",
+   "cluster": 1,
+   "wgs84": [
+    48.396688,
+    15.52432
+   ],
+   "enu": [
+    85.41,
+    -363.5,
+    273.5
+   ],
+   "aspect_deg": 241.1,
+   "slope_deg": 30.8,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "schwarzer_turm.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-1-27",
+   "name": "Namenloser Turm",
+   "slug": "namenloser_turm",
+   "cluster": 1,
+   "wgs84": [
+    48.396756,
+    15.523987
+   ],
+   "enu": [
+    60.8,
+    -355.93,
+    267.5
+   ],
+   "aspect_deg": 241.1,
+   "slope_deg": 30.8,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "namenloser_turm.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-2-30",
+   "name": "Turm jenseits des Tales",
+   "slug": "turm_jenseits_des_tales",
+   "cluster": 2,
+   "wgs84": [
+    48.40332,
+    15.522099
+   ],
+   "enu": [
+    -78.74,
+    374.77,
+    353.3
+   ],
+   "aspect_deg": 121.9,
+   "slope_deg": 49.0,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "turm_jenseits_des_tales.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-3-34",
+   "name": "Wachauergrat",
+   "slug": "wachauergrat",
+   "cluster": 3,
+   "wgs84": [
+    48.406952,
+    15.520881
+   ],
+   "enu": [
+    -168.76,
+    779.08,
+    456.4
+   ],
+   "aspect_deg": 188.5,
+   "slope_deg": 28.8,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "wachauergrat.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-3-36",
+   "name": "Don-Bosco-Grat",
+   "slug": "don_bosco_grat",
+   "cluster": 3,
+   "wgs84": [
+    48.406176,
+    15.521997
+   ],
+   "enu": [
+    -86.28,
+    692.7,
+    422.0
+   ],
+   "aspect_deg": 188.5,
+   "slope_deg": 28.8,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "don_bosco_grat.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-3-35",
+   "name": "Don-Bosco-Grat",
+   "slug": "don_bosco_grat",
+   "cluster": 3,
+   "wgs84": [
+    48.406653,
+    15.522174
+   ],
+   "enu": [
+    -73.2,
+    745.8,
+    444.8
+   ],
+   "aspect_deg": 188.5,
+   "slope_deg": 28.8,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "don_bosco_grat.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-3-37",
+   "name": "Donna Rossa",
+   "slug": "donna_rossa",
+   "cluster": 3,
+   "wgs84": [
+    48.406308,
+    15.521826
+   ],
+   "enu": [
+    -98.92,
+    707.39,
+    412.7
+   ],
+   "aspect_deg": 188.5,
+   "slope_deg": 28.8,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "donna_rossa.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-3-38",
+   "name": "Ruck-Zuck Wandl",
+   "slug": "ruck_zuck_wandl",
+   "cluster": 3,
+   "wgs84": [
+    48.405613,
+    15.519943
+   ],
+   "enu": [
+    -238.09,
+    630.03,
+    337.5
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unreliable_sectors_too_far_apart",
+   "elevation_source": "gpx",
+   "mesh_file": "ruck_zuck_wandl.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-2-31",
+   "name": "Piratalwand",
+   "slug": "piratalwand",
+   "cluster": 2,
+   "wgs84": [
+    48.40223,
+    15.518205
+   ],
+   "enu": [
+    -366.54,
+    253.43,
+    339.6
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unreliable_sectors_too_far_apart",
+   "elevation_source": "gpx",
+   "mesh_file": "piratalwand.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-2-28",
+   "name": "Nasenwand",
+   "slug": "nasenwand",
+   "cluster": 2,
+   "wgs84": [
+    48.402714,
+    15.518467
+   ],
+   "enu": [
+    -347.18,
+    307.31,
+    372.3
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unreliable_sectors_too_far_apart",
+   "elevation_source": "gpx",
+   "mesh_file": "nasenwand.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-2-32",
+   "name": "Upper Sector",
+   "slug": "upper_sector",
+   "cluster": 2,
+   "wgs84": [
+    48.402312,
+    15.521386
+   ],
+   "enu": [
+    -131.44,
+    262.56,
+    329.7
+   ],
+   "aspect_deg": 121.9,
+   "slope_deg": 49.0,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "upper_sector.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-2-33",
+   "name": "Lower Sector",
+   "slug": "lower_sector",
+   "cluster": 2,
+   "wgs84": [
+    48.402298,
+    15.521804
+   ],
+   "enu": [
+    -100.54,
+    261.0,
+    310.6
+   ],
+   "aspect_deg": 121.9,
+   "slope_deg": 49.0,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "lower_sector.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "WAC-2-29",
+   "name": "Civetta",
+   "slug": "civetta",
+   "cluster": 2,
+   "wgs84": [
+    48.402621,
+    15.521633
+   ],
+   "enu": [
+    -113.18,
+    296.96,
+    367.4
+   ],
+   "aspect_deg": 121.9,
+   "slope_deg": 49.0,
+   "terrain_source": "estimated_from_waypoints",
+   "elevation_source": "gpx",
+   "mesh_file": "civetta.obj",
+   "scan_status": "not_started",
+   "routes": []
+  }
+ ]
+}

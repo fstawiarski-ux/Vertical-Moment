@@ -1,0 +1,9 @@
+id,name,aspect_deg,aspect,slope_deg,source,aspect_radius_m,dem_ele,gpx_ele,elevation_source,horizon_max
+BAD-2-05,Engelsberg,,,,unavailable_no_elevation,,,,missing,
+BAD-1-01,Hochkogeleck,,,,unavailable_no_elevation,,,,missing,
+BAD-4-08,Badener Turm,,,,unavailable_no_elevation,,,,missing,
+BAD-1-02,Schatzinsel,,,,unavailable_no_elevation,,,,missing,
+BAD-1-03,Gamswandl,,,,unavailable_no_elevation,,,,missing,
+BAD-1-04,Hohe Stube,,,,unavailable_no_elevation,,,,missing,
+BAD-3-07,Wöllersdorf Hart,,,,unavailable_no_elevation,,,,missing,
+BAD-2-06,Bad Fischau Kinderklettergarten,,,,unavailable_no_elevation,,,,missing,

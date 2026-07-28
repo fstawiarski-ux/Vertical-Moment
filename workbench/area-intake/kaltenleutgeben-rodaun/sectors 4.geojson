@@ -1,0 +1,311 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.217523,
+     48.125527,
+     361.218231
+    ]
+   },
+   "properties": {
+    "id": "PEI-1-10",
+    "name": "Abandoned quarry, mine",
+    "slug": "abandoned_quarry_mine",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.105752,
+     47.996053,
+     461.992828
+    ]
+   },
+   "properties": {
+    "id": "PEI-2-16",
+    "name": "Bum Bum Wandl",
+    "slug": "bum_bum_wandl",
+    "cluster": 2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.10009,
+     48.00254,
+     494.789612
+    ]
+   },
+   "properties": {
+    "id": "PEI-2-15",
+    "name": "Kuhhügel",
+    "slug": "kuhhuegel",
+    "cluster": 2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.105617,
+     48.008003,
+     596.626709
+    ]
+   },
+   "properties": {
+    "id": "PEI-2-14",
+    "name": "Scheitergraben",
+    "slug": "scheitergraben",
+    "cluster": 2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.119438,
+     48.018994,
+     585.945374
+    ]
+   },
+   "properties": {
+    "id": "PEI-3-17",
+    "name": "Arsch der Welt",
+    "slug": "arsch_der_welt",
+    "cluster": 3
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.184047,
+     48.096515,
+     630.108093
+    ]
+   },
+   "properties": {
+    "id": "PEI-4-18",
+    "name": "Höllensteine",
+    "slug": "hoellensteine",
+    "cluster": 4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.200473,
+     48.112115,
+     455.948029
+    ]
+   },
+   "properties": {
+    "id": "PEI-1-04",
+    "name": "Luckete Wand",
+    "slug": "luckete_wand",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.204405,
+     48.109702,
+     497.542877
+    ]
+   },
+   "properties": {
+    "id": "PEI-1-02",
+    "name": "Jungkunststein",
+    "slug": "jungkunststein",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.197626,
+     48.113728,
+     448.993103
+    ]
+   },
+   "properties": {
+    "id": "PEI-1-05",
+    "name": "Kirchengrat",
+    "slug": "kirchengrat",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.200401,
+     48.113194,
+     432.730377
+    ]
+   },
+   "properties": {
+    "id": "PEI-1-06",
+    "name": "Raab-Felsen (435 m)",
+    "slug": "raab_felsen_435_m",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.211473,
+     48.119135,
+     373.809784
+    ]
+   },
+   "properties": {
+    "id": "PEI-1-09",
+    "name": "Löwenkopf",
+    "slug": "loewenkopf",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.221751,
+     48.118374,
+     405.233246
+    ]
+   },
+   "properties": {
+    "id": "PEI-1-08",
+    "name": "Waldmühle Hauptwand",
+    "slug": "waldmuehle_hauptwand",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.223987,
+     48.117436,
+     500.322205
+    ]
+   },
+   "properties": {
+    "id": "PEI-1-01",
+    "name": "Meije",
+    "slug": "meije",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.215608,
+     48.11711,
+     480.825012
+    ]
+   },
+   "properties": {
+    "id": "PEI-1-03",
+    "name": "Streberwände",
+    "slug": "streberwaende",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.213972,
+     48.116353,
+     410.864441
+    ]
+   },
+   "properties": {
+    "id": "PEI-1-07",
+    "name": "Kaltenleutgebner Grat",
+    "slug": "kaltenleutgebner_grat",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.233619,
+     48.126432,
+     360.821564
+    ]
+   },
+   "properties": {
+    "id": "PEI-1-11",
+    "name": "Kammersteingraben",
+    "slug": "kammersteingraben",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.250156,
+     48.128969,
+     310.175415
+    ]
+   },
+   "properties": {
+    "id": "PEI-1-12",
+    "name": "Lutterwand",
+    "slug": "lutterwand",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.252346,
+     48.131243,
+     290.627228
+    ]
+   },
+   "properties": {
+    "id": "PEI-1-13",
+    "name": "Mizzi-Langer-Wand",
+    "slug": "mizzi_langer_wand",
+    "cluster": 1
+   }
+  }
+ ]
+}

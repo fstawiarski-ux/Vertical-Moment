@@ -1,0 +1,204 @@
+{
+ "area": "Bad Fischau",
+ "source_gpx": "bad_fishau.gpx",
+ "area_type": "region",
+ "extent_m": 20085,
+ "cluster_threshold_m": 3000.0,
+ "has_elevation": false,
+ "generated": "2026-07-19",
+ "origin": {
+  "lat": 47.86440225,
+  "lon": 16.0960505
+ },
+ "dem": null,
+ "dropped_duplicates": [],
+ "duplicates_to_review": [],
+ "median_nn_m": 2503,
+ "route_summary": {
+  "mode": "auto",
+  "total_min": 73.3,
+  "walk_min": 0.0,
+  "drive_min": 73.3,
+  "ascent_m": null,
+  "descent_m": null,
+  "basis": "per-leg: Tobler on foot within a group, straight line x1.4 at 45 km/h between groups"
+ },
+ "sectors": [
+  {
+   "id": "BAD-2-05",
+   "name": "Engelsberg",
+   "slug": "engelsberg",
+   "cluster": 2,
+   "wgs84": [
+    47.827701,
+    16.122523
+   ],
+   "enu": [
+    1977.04,
+    -4085.56,
+    null
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unavailable_no_elevation",
+   "elevation_source": "missing",
+   "mesh_file": "engelsberg.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "BAD-1-01",
+   "name": "Hochkogeleck",
+   "slug": "hochkogeleck",
+   "cluster": 1,
+   "wgs84": [
+    47.824057,
+    16.040588
+   ],
+   "enu": [
+    -4142.1,
+    -4491.21,
+    null
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unavailable_no_elevation",
+   "elevation_source": "missing",
+   "mesh_file": "hochkogeleck.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "BAD-4-08",
+   "name": "Badener Turm",
+   "slug": "badener_turm",
+   "cluster": 4,
+   "wgs84": [
+    48.004486,
+    16.183675
+   ],
+   "enu": [
+    6544.05,
+    15594.05,
+    null
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unavailable_no_elevation",
+   "elevation_source": "missing",
+   "mesh_file": "badener_turm.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "BAD-1-02",
+   "name": "Schatzinsel",
+   "slug": "schatzinsel",
+   "cluster": 1,
+   "wgs84": [
+    47.853407,
+    16.036267
+   ],
+   "enu": [
+    -4464.8,
+    -1223.99,
+    null
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unavailable_no_elevation",
+   "elevation_source": "missing",
+   "mesh_file": "schatzinsel.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "BAD-1-03",
+   "name": "Gamswandl",
+   "slug": "gamswandl",
+   "cluster": 1,
+   "wgs84": [
+    47.851605,
+    16.040184
+   ],
+   "enu": [
+    -4172.27,
+    -1424.58,
+    null
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unavailable_no_elevation",
+   "elevation_source": "missing",
+   "mesh_file": "gamswandl.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "BAD-1-04",
+   "name": "Hohe Stube",
+   "slug": "hohe_stube",
+   "cluster": 1,
+   "wgs84": [
+    47.845008,
+    16.024642
+   ],
+   "enu": [
+    -5332.99,
+    -2158.96,
+    null
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unavailable_no_elevation",
+   "elevation_source": "missing",
+   "mesh_file": "hohe_stube.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "BAD-3-07",
+   "name": "Wöllersdorf Hart",
+   "slug": "woellersdorf_hart",
+   "cluster": 3,
+   "wgs84": [
+    47.870404,
+    16.168643
+   ],
+   "enu": [
+    5421.41,
+    668.11,
+    null
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unavailable_no_elevation",
+   "elevation_source": "missing",
+   "mesh_file": "woellersdorf_hart.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "BAD-2-06",
+   "name": "Bad Fischau Kinderklettergarten",
+   "slug": "bad_fischau_kinderklettergarten",
+   "cluster": 2,
+   "wgs84": [
+    47.83855,
+    16.151882
+   ],
+   "enu": [
+    4169.66,
+    -2877.86,
+    null
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unavailable_no_elevation",
+   "elevation_source": "missing",
+   "mesh_file": "bad_fischau_kinderklettergarten.obj",
+   "scan_status": "not_started",
+   "routes": []
+  }
+ ]
+}
