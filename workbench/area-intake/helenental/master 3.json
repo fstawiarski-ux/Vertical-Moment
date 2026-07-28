@@ -1,0 +1,416 @@
+{
+ "area": "Helenental",
+ "source_gpx": "Helental.gpx",
+ "area_type": "crag",
+ "extent_m": 3223,
+ "cluster_threshold_m": 386.506485300622,
+ "has_elevation": false,
+ "generated": "2026-07-19",
+ "origin": {
+  "lat": 48.017033000000005,
+  "lon": 16.192045823529412
+ },
+ "dem": null,
+ "dropped_duplicates": [
+  "Scharfeneck",
+  "Beethovenwand",
+  "Siegenfelder Platte",
+  "Urtelstein, Engelstein"
+ ],
+ "duplicates_to_review": [
+  {
+   "name": "Kleines Verdon",
+   "distance_m": 246
+  },
+  {
+   "name": "Badener Kletterschule",
+   "distance_m": 85
+  }
+ ],
+ "median_nn_m": 97,
+ "route_summary": {
+  "mode": "auto",
+  "total_min": 33.3,
+  "walk_min": 17.1,
+  "drive_min": 16.1,
+  "ascent_m": null,
+  "descent_m": null,
+  "basis": "per-leg: Tobler on foot within a group, straight line x1.4 at 45 km/h between groups"
+ },
+ "sectors": [
+  {
+   "id": "HEL-4-17",
+   "name": "Beethovengrat",
+   "slug": "beethovengrat",
+   "cluster": 4,
+   "wgs84": [
+    48.010749,
+    16.161975
+   ],
+   "enu": [
+    -2239.15,
+    -699.53,
+    null
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unavailable_no_elevation",
+   "elevation_source": "missing",
+   "mesh_file": "beethovengrat.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "HEL-1-01",
+   "name": "Badener Kletterschule",
+   "slug": "badener_kletterschule",
+   "cluster": 1,
+   "wgs84": [
+    48.019512,
+    16.190224
+   ],
+   "enu": [
+    -135.66,
+    275.96,
+    null
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unavailable_no_elevation",
+   "elevation_source": "missing",
+   "mesh_file": "badener_kletterschule.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "HEL-1-02",
+   "name": "Beethovenwand",
+   "slug": "beethovenwand",
+   "cluster": 1,
+   "wgs84": [
+    48.015792,
+    16.195563
+   ],
+   "enu": [
+    261.9,
+    -138.15,
+    null
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unavailable_no_elevation",
+   "elevation_source": "missing",
+   "mesh_file": "beethovenwand.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "HEL-1-03",
+   "name": "Scharfeneck",
+   "slug": "scharfeneck",
+   "cluster": 1,
+   "wgs84": [
+    48.015771,
+    16.194458
+   ],
+   "enu": [
+    179.62,
+    -140.49,
+    null
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unavailable_no_elevation",
+   "elevation_source": "missing",
+   "mesh_file": "scharfeneck.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "HEL-1-04",
+   "name": "Zwergwandl",
+   "slug": "zwergwandl",
+   "cluster": 1,
+   "wgs84": [
+    48.017002,
+    16.19618
+   ],
+   "enu": [
+    307.84,
+    -3.45,
+    null
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unavailable_no_elevation",
+   "elevation_source": "missing",
+   "mesh_file": "zwergwandl.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "HEL-1-05",
+   "name": "Kleines Verdon",
+   "slug": "kleines_verdon",
+   "cluster": 1,
+   "wgs84": [
+    48.018401,
+    16.193624
+   ],
+   "enu": [
+    117.52,
+    152.29,
+    null
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unavailable_no_elevation",
+   "elevation_source": "missing",
+   "mesh_file": "kleines_verdon.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "HEL-1-06",
+   "name": "Block 7",
+   "slug": "block_7",
+   "cluster": 1,
+   "wgs84": [
+    48.019492,
+    16.194966
+   ],
+   "enu": [
+    217.44,
+    273.73,
+    null
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unavailable_no_elevation",
+   "elevation_source": "missing",
+   "mesh_file": "block_7.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "HEL-1-07",
+   "name": "Kleines Verdon",
+   "slug": "kleines_verdon",
+   "cluster": 1,
+   "wgs84": [
+    48.017609,
+    16.196708
+   ],
+   "enu": [
+    347.16,
+    64.12,
+    null
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unavailable_no_elevation",
+   "elevation_source": "missing",
+   "mesh_file": "kleines_verdon.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "HEL-1-08",
+   "name": "Ötziturm",
+   "slug": "otziturm",
+   "cluster": 1,
+   "wgs84": [
+    48.023447,
+    16.192351
+   ],
+   "enu": [
+    22.72,
+    714.0,
+    null
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unavailable_no_elevation",
+   "elevation_source": "missing",
+   "mesh_file": "otziturm.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "HEL-1-09",
+   "name": "Siegenfelder Platte",
+   "slug": "siegenfelder_platte",
+   "cluster": 1,
+   "wgs84": [
+    48.022607,
+    16.192024
+   ],
+   "enu": [
+    -1.63,
+    620.49,
+    null
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unavailable_no_elevation",
+   "elevation_source": "missing",
+   "mesh_file": "siegenfelder_platte.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "HEL-1-10",
+   "name": "Block 3: Fraaanz",
+   "slug": "block_3_fraaanz",
+   "cluster": 1,
+   "wgs84": [
+    48.02049,
+    16.193005
+   ],
+   "enu": [
+    71.42,
+    384.83,
+    null
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unavailable_no_elevation",
+   "elevation_source": "missing",
+   "mesh_file": "block_3_fraaanz.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "HEL-1-11",
+   "name": "Badener Kletterschule",
+   "slug": "badener_kletterschule",
+   "cluster": 1,
+   "wgs84": [
+    48.01945,
+    16.189089
+   ],
+   "enu": [
+    -220.17,
+    269.06,
+    null
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unavailable_no_elevation",
+   "elevation_source": "missing",
+   "mesh_file": "badener_kletterschule.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "HEL-1-12",
+   "name": "Tigerblock",
+   "slug": "tigerblock",
+   "cluster": 1,
+   "wgs84": [
+    48.020641,
+    16.190742
+   ],
+   "enu": [
+    -97.09,
+    401.64,
+    null
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unavailable_no_elevation",
+   "elevation_source": "missing",
+   "mesh_file": "tigerblock.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "HEL-1-13",
+   "name": "Urtelstein, Engelstein",
+   "slug": "urtelstein_engelstein",
+   "cluster": 1,
+   "wgs84": [
+    48.015914,
+    16.196654
+   ],
+   "enu": [
+    343.14,
+    -124.57,
+    null
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unavailable_no_elevation",
+   "elevation_source": "missing",
+   "mesh_file": "urtelstein_engelstein.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "HEL-2-15",
+   "name": "Burgruine Rauhenstein",
+   "slug": "burgruine_rauhenstein",
+   "cluster": 2,
+   "wgs84": [
+    48.012862,
+    16.205252
+   ],
+   "enu": [
+    983.37,
+    -464.31,
+    null
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unavailable_no_elevation",
+   "elevation_source": "missing",
+   "mesh_file": "burgruine_rauhenstein.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "HEL-1-14",
+   "name": "Jammerwandl",
+   "slug": "jammerwandl",
+   "cluster": 1,
+   "wgs84": [
+    48.015336,
+    16.198289
+   ],
+   "enu": [
+    464.88,
+    -188.91,
+    null
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unavailable_no_elevation",
+   "elevation_source": "missing",
+   "mesh_file": "jammerwandl.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "HEL-3-16",
+   "name": "Badener Turm",
+   "slug": "badener_turm",
+   "cluster": 3,
+   "wgs84": [
+    48.004486,
+    16.183675
+   ],
+   "enu": [
+    -623.31,
+    -1396.73,
+    null
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unavailable_no_elevation",
+   "elevation_source": "missing",
+   "mesh_file": "badener_turm.obj",
+   "scan_status": "not_started",
+   "routes": []
+  }
+ ]
+}

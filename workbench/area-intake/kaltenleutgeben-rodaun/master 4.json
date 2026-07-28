@@ -1,0 +1,430 @@
+{
+ "area": "Peilstein Rodaun",
+ "source_gpx": "Peilstein_Rodaun.gpx",
+ "area_type": "crag",
+ "extent_m": 15049,
+ "cluster_threshold_m": 1324.290104088143,
+ "has_elevation": true,
+ "generated": "2026-07-19",
+ "origin": {
+  "lat": 48.09285683333334,
+  "lon": 16.19212688888889
+ },
+ "dem": null,
+ "dropped_duplicates": [
+  "Bum Bum Wandl",
+  "Luckete Wand",
+  "Waldmühle Hauptwand",
+  "Streberwände",
+  "Kaltenleutgebner Grat"
+ ],
+ "duplicates_to_review": [],
+ "median_nn_m": 331,
+ "route_summary": {
+  "mode": "auto",
+  "total_min": 76.2,
+  "walk_min": 10.8,
+  "drive_min": 65.3,
+  "ascent_m": 20,
+  "descent_m": -60,
+  "basis": "per-leg: Tobler on foot within a group, straight line x1.4 at 45 km/h between groups"
+ },
+ "sectors": [
+  {
+   "id": "PEI-1-10",
+   "name": "Abandoned quarry, mine",
+   "slug": "abandoned_quarry_mine",
+   "cluster": 1,
+   "wgs84": [
+    48.125527,
+    16.217523
+   ],
+   "enu": [
+    1888.28,
+    3636.83,
+    361.2
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unreliable_sectors_too_far_apart",
+   "elevation_source": "gpx",
+   "mesh_file": "abandoned_quarry_mine.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "PEI-2-16",
+   "name": "Bum Bum Wandl",
+   "slug": "bum_bum_wandl",
+   "cluster": 2,
+   "wgs84": [
+    47.996053,
+    16.105752
+   ],
+   "enu": [
+    -6422.24,
+    -10776.15,
+    462.0
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unreliable_sectors_too_far_apart",
+   "elevation_source": "gpx",
+   "mesh_file": "bum_bum_wandl.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "PEI-2-15",
+   "name": "Kuhhügel",
+   "slug": "kuhhuegel",
+   "cluster": 2,
+   "wgs84": [
+    48.00254,
+    16.10009
+   ],
+   "enu": [
+    -6843.23,
+    -10054.02,
+    494.8
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unreliable_sectors_too_far_apart",
+   "elevation_source": "gpx",
+   "mesh_file": "kuhhuegel.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "PEI-2-14",
+   "name": "Scheitergraben",
+   "slug": "scheitergraben",
+   "cluster": 2,
+   "wgs84": [
+    48.008003,
+    16.105617
+   ],
+   "enu": [
+    -6432.28,
+    -9445.89,
+    596.6
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unreliable_sectors_too_far_apart",
+   "elevation_source": "gpx",
+   "mesh_file": "scheitergraben.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "PEI-3-17",
+   "name": "Arsch der Welt",
+   "slug": "arsch_der_welt",
+   "cluster": 3,
+   "wgs84": [
+    48.018994,
+    16.119438
+   ],
+   "enu": [
+    -5404.64,
+    -8222.37,
+    585.9
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unreliable_sectors_too_far_apart",
+   "elevation_source": "gpx",
+   "mesh_file": "arsch_der_welt.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "PEI-4-18",
+   "name": "Höllensteine",
+   "slug": "hoellensteine",
+   "cluster": 4,
+   "wgs84": [
+    48.096515,
+    16.184047
+   ],
+   "enu": [
+    -600.76,
+    407.23,
+    630.1
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unreliable_sectors_too_far_apart",
+   "elevation_source": "gpx",
+   "mesh_file": "hoellensteine.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "PEI-1-04",
+   "name": "Luckete Wand",
+   "slug": "luckete_wand",
+   "cluster": 1,
+   "wgs84": [
+    48.112115,
+    16.200473
+   ],
+   "enu": [
+    620.56,
+    2143.81,
+    455.9
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unreliable_sectors_too_far_apart",
+   "elevation_source": "gpx",
+   "mesh_file": "luckete_wand.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "PEI-1-02",
+   "name": "Jungkunststein",
+   "slug": "jungkunststein",
+   "cluster": 1,
+   "wgs84": [
+    48.109702,
+    16.204405
+   ],
+   "enu": [
+    912.92,
+    1875.2,
+    497.5
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unreliable_sectors_too_far_apart",
+   "elevation_source": "gpx",
+   "mesh_file": "jungkunststein.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "PEI-1-05",
+   "name": "Kirchengrat",
+   "slug": "kirchengrat",
+   "cluster": 1,
+   "wgs84": [
+    48.113728,
+    16.197626
+   ],
+   "enu": [
+    408.88,
+    2323.37,
+    449.0
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unreliable_sectors_too_far_apart",
+   "elevation_source": "gpx",
+   "mesh_file": "kirchengrat.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "PEI-1-06",
+   "name": "Raab-Felsen (435 m)",
+   "slug": "raab_felsen_435_m",
+   "cluster": 1,
+   "wgs84": [
+    48.113194,
+    16.200401
+   ],
+   "enu": [
+    615.21,
+    2263.92,
+    432.7
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unreliable_sectors_too_far_apart",
+   "elevation_source": "gpx",
+   "mesh_file": "raab_felsen_435_m.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "PEI-1-09",
+   "name": "Löwenkopf",
+   "slug": "loewenkopf",
+   "cluster": 1,
+   "wgs84": [
+    48.119135,
+    16.211473
+   ],
+   "enu": [
+    1438.44,
+    2925.27,
+    373.8
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unreliable_sectors_too_far_apart",
+   "elevation_source": "gpx",
+   "mesh_file": "loewenkopf.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "PEI-1-08",
+   "name": "Waldmühle Hauptwand",
+   "slug": "waldmuehle_hauptwand",
+   "cluster": 1,
+   "wgs84": [
+    48.118374,
+    16.221751
+   ],
+   "enu": [
+    2202.64,
+    2840.56,
+    405.2
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unreliable_sectors_too_far_apart",
+   "elevation_source": "gpx",
+   "mesh_file": "waldmuehle_hauptwand.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "PEI-1-01",
+   "name": "Meije",
+   "slug": "meije",
+   "cluster": 1,
+   "wgs84": [
+    48.117436,
+    16.223987
+   ],
+   "enu": [
+    2368.9,
+    2736.14,
+    500.3
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unreliable_sectors_too_far_apart",
+   "elevation_source": "gpx",
+   "mesh_file": "meije.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "PEI-1-03",
+   "name": "Streberwände",
+   "slug": "streberwaende",
+   "cluster": 1,
+   "wgs84": [
+    48.11711,
+    16.215608
+   ],
+   "enu": [
+    1745.89,
+    2699.85,
+    480.8
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unreliable_sectors_too_far_apart",
+   "elevation_source": "gpx",
+   "mesh_file": "streberwaende.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "PEI-1-07",
+   "name": "Kaltenleutgebner Grat",
+   "slug": "kaltenleutgebner_grat",
+   "cluster": 1,
+   "wgs84": [
+    48.116353,
+    16.213972
+   ],
+   "enu": [
+    1624.25,
+    2615.58,
+    410.9
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unreliable_sectors_too_far_apart",
+   "elevation_source": "gpx",
+   "mesh_file": "kaltenleutgebner_grat.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "PEI-1-11",
+   "name": "Kammersteingraben",
+   "slug": "kammersteingraben",
+   "cluster": 1,
+   "wgs84": [
+    48.126432,
+    16.233619
+   ],
+   "enu": [
+    3085.07,
+    3737.57,
+    360.8
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unreliable_sectors_too_far_apart",
+   "elevation_source": "gpx",
+   "mesh_file": "kammersteingraben.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "PEI-1-12",
+   "name": "Lutterwand",
+   "slug": "lutterwand",
+   "cluster": 1,
+   "wgs84": [
+    48.128969,
+    16.250156
+   ],
+   "enu": [
+    4314.64,
+    4019.99,
+    310.2
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unreliable_sectors_too_far_apart",
+   "elevation_source": "gpx",
+   "mesh_file": "lutterwand.obj",
+   "scan_status": "not_started",
+   "routes": []
+  },
+  {
+   "id": "PEI-1-13",
+   "name": "Mizzi-Langer-Wand",
+   "slug": "mizzi_langer_wand",
+   "cluster": 1,
+   "wgs84": [
+    48.131243,
+    16.252346
+   ],
+   "enu": [
+    4477.48,
+    4273.13,
+    290.6
+   ],
+   "aspect_deg": null,
+   "slope_deg": null,
+   "terrain_source": "unreliable_sectors_too_far_apart",
+   "elevation_source": "gpx",
+   "mesh_file": "mizzi_langer_wand.obj",
+   "scan_status": "not_started",
+   "routes": []
+  }
+ ]
+}

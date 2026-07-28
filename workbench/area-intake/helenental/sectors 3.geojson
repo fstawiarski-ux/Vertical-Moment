@@ -1,0 +1,294 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.161975,
+     48.010749,
+     0.0
+    ]
+   },
+   "properties": {
+    "id": "HEL-4-17",
+    "name": "Beethovengrat",
+    "slug": "beethovengrat",
+    "cluster": 4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.190224,
+     48.019512,
+     0.0
+    ]
+   },
+   "properties": {
+    "id": "HEL-1-01",
+    "name": "Badener Kletterschule",
+    "slug": "badener_kletterschule",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.195563,
+     48.015792,
+     0.0
+    ]
+   },
+   "properties": {
+    "id": "HEL-1-02",
+    "name": "Beethovenwand",
+    "slug": "beethovenwand",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.194458,
+     48.015771,
+     0.0
+    ]
+   },
+   "properties": {
+    "id": "HEL-1-03",
+    "name": "Scharfeneck",
+    "slug": "scharfeneck",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.19618,
+     48.017002,
+     0.0
+    ]
+   },
+   "properties": {
+    "id": "HEL-1-04",
+    "name": "Zwergwandl",
+    "slug": "zwergwandl",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.193624,
+     48.018401,
+     0.0
+    ]
+   },
+   "properties": {
+    "id": "HEL-1-05",
+    "name": "Kleines Verdon",
+    "slug": "kleines_verdon",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.194966,
+     48.019492,
+     0.0
+    ]
+   },
+   "properties": {
+    "id": "HEL-1-06",
+    "name": "Block 7",
+    "slug": "block_7",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.196708,
+     48.017609,
+     0.0
+    ]
+   },
+   "properties": {
+    "id": "HEL-1-07",
+    "name": "Kleines Verdon",
+    "slug": "kleines_verdon",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.192351,
+     48.023447,
+     0.0
+    ]
+   },
+   "properties": {
+    "id": "HEL-1-08",
+    "name": "Ötziturm",
+    "slug": "otziturm",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.192024,
+     48.022607,
+     0.0
+    ]
+   },
+   "properties": {
+    "id": "HEL-1-09",
+    "name": "Siegenfelder Platte",
+    "slug": "siegenfelder_platte",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.193005,
+     48.02049,
+     0.0
+    ]
+   },
+   "properties": {
+    "id": "HEL-1-10",
+    "name": "Block 3: Fraaanz",
+    "slug": "block_3_fraaanz",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.189089,
+     48.01945,
+     0.0
+    ]
+   },
+   "properties": {
+    "id": "HEL-1-11",
+    "name": "Badener Kletterschule",
+    "slug": "badener_kletterschule",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.190742,
+     48.020641,
+     0.0
+    ]
+   },
+   "properties": {
+    "id": "HEL-1-12",
+    "name": "Tigerblock",
+    "slug": "tigerblock",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.196654,
+     48.015914,
+     0.0
+    ]
+   },
+   "properties": {
+    "id": "HEL-1-13",
+    "name": "Urtelstein, Engelstein",
+    "slug": "urtelstein_engelstein",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.205252,
+     48.012862,
+     0.0
+    ]
+   },
+   "properties": {
+    "id": "HEL-2-15",
+    "name": "Burgruine Rauhenstein",
+    "slug": "burgruine_rauhenstein",
+    "cluster": 2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.198289,
+     48.015336,
+     0.0
+    ]
+   },
+   "properties": {
+    "id": "HEL-1-14",
+    "name": "Jammerwandl",
+    "slug": "jammerwandl",
+    "cluster": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.183675,
+     48.004486,
+     0.0
+    ]
+   },
+   "properties": {
+    "id": "HEL-3-16",
+    "name": "Badener Turm",
+    "slug": "badener_turm",
+    "cluster": 3
+   }
+  }
+ ]
+}

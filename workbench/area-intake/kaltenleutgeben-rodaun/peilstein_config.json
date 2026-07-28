@@ -1,0 +1,53 @@
+{
+  "access_warning": "Nazwa pliku źródłowego („Peilstein Rodaun”) nie odpowiada zawartości. Żaden z punktów nie leży na masywie Peilstein – ten jest kalkowym szczytem 716 m n.p.m. w gminach Altenmarkt i Weissenbach, na wschód od Nöstach, ze ścianami opadającymi na zachód. Punkty z tego pliku leżą w pasie 291–630 m n.p.m. między Sulz/Sparbach a Rodaun i Kaltenleutgeben. Przed włączeniem do przewodnika trzeba rozstrzygnąć, czy plik miał obejmować Peilstein, czy nazwa jest pomyłką.",
+
+  "groups": {
+    "1": "Pas Kaltenleutgeben – Waldmühle – Rodaun",
+    "2": "Grupa południowa (Sulz / Sparbach)",
+    "3": "Arsch der Welt",
+    "4": "Höllensteine"
+  },
+  "group_notes": {
+    "1": "Trzynaście sektorów rozciągniętych na ok. 4,5 km wzdłuż pasa od Kirchengrat po Mizzi-Langer-Wand. Wewnątrz grupy występują zarówno pary oddalone o 120–360 m (podejście pieszo), jak i odcinki 1,2–2,3 km, które realnie pokonuje się samochodem. Najniżej położona Mizzi-Langer-Wand (291 m) leży już w granicach Wiednia.",
+    "2": "Bum Bum Wandl, Kuhhügel i Scheitergraben – trzy punkty w promieniu ok. 1,5 km, oddalone o ponad 11 km od pasa północnego. Osobny wyjazd.",
+    "3": "Punkt pojedynczy, ok. 2,7 km na północny wschód od grupy południowej.",
+    "4": "Najwyżej położony punkt w pliku (630 m n.p.m.), ok. 3,2 km na południowy zachód od Löwenkopf."
+  },
+
+  "history_title": "Kontekst rejonu",
+  "history_intro": "Poniższe podrozdziały są materiałem roboczym. W przeciwieństwie do rozdziału o Helenental nie zostały jeszcze potwierdzone w literaturze wspinaczkowej – zawierają wyłącznie to, co da się wywieść z danych w pliku oraz z ogólnodostępnych źródeł o rejonie.",
+
+  "history": [
+    {
+      "title": "Co właściwie zawiera ten plik",
+      "body": [
+        "Plik nosi nazwę „Peilstein Rodaun”, ale po odrzuceniu duplikatów zostaje 18 punktów rozrzuconych na odcinku 15 km i rozpadających się na cztery wyraźne grupy. Trzynaście z nich tworzy pas biegnący od Kirchengrat i Luckete Wand przez Waldmühle i Kaltenleutgeben aż po Lutterwand i Mizzi-Langer-Wand. Pozostałe pięć leży osobno: trójka na południu, oraz pojedyncze Arsch der Welt i Höllensteine.",
+        "Peilstein w rozumieniu wspinaczkowym to jeden zwarty masyw – ponad 800 dróg na 25–30 sektorach, ściany do ok. 100 m, wystawa zachodnia i północno-zachodnia, słońce dopiero od południa. Taki obiekt w tym pliku nie występuje. Jeżeli Peilstein ma trafić do przewodnika, potrzebny jest osobny plik GPX z sektorami tego masywu.",
+        "Osobna pułapka: nazwa „Luckete Wand” figuruje w zestawieniach jako sektor Peilsteinu, a w tym pliku występuje w grupie północnej, powyżej Kaltenleutgeben. Albo są to dwie różne ściany o tej samej nazwie, albo punkt jest źle przypisany. Do rozstrzygnięcia przed drukiem."
+      ],
+      "todo": "Zdobyć osobny plik GPX dla masywu Peilstein i rozstrzygnąć sprawę „Luckete Wand”."
+    },
+    {
+      "title": "Mizzi-Langer-Wand – skała w granicach miasta",
+      "body": [
+        "Najniżej położony punkt pliku (291 m n.p.m.) leży w Rodaun, czyli w 23. dzielnicy Wiednia. To czyni go bliższym centrum miasta niż rejony w Mödling – argument istotny dla wspinacza bez samochodu i warty osobnego akapitu w rozdziale o dojazdach."
+      ],
+      "todo": "Sprawdzić aktualny status dostępu i ewentualne ograniczenia – ściana leży na terenie dawnego kamieniołomu."
+    },
+    {
+      "title": "Ślady przemysłu w krajobrazie",
+      "body": [
+        "W pliku figuruje punkt „Abandoned quarry, mine” (361 m n.p.m.), a nazwy takie jak Kammersteingraben, Waldmühle czy Steinbruch w sąsiednich rejonach wskazują, że skały w tym pasie są w części pochodzenia przemysłowego albo zostały odsłonięte przez wydobycie. Dla przewodnika ma to dwa skutki: inny charakter skały niż na ścianach naturalnych oraz odrębne kwestie własnościowe i bezpieczeństwa."
+      ],
+      "todo": "Ustalić, które sektory są ścianami kamieniołomowymi, a które naturalnymi – i kto jest właścicielem terenu."
+    }
+  ],
+
+  "sources": [
+    "de.wikipedia.org – Peilstein (Wienerwald): 716 m n.p.m., gminy Altenmarkt i Weissenbach, ściany opadające na zachód",
+    "niederoesterreich.at – Peilstein: geneza skały (Paratethys, eocen), Peilsteinhaus (1923)",
+    "bergsteigen.com – Peilstein Klettergarten: ok. 840 dróg na 25 sektorach, wapień, wystawa północno-zachodnia",
+    "bergwelten.com – Peilsteinhaus: zestawienia Ewalda Gaustera i Kurta Schalla",
+    "climbing.plus – lista sektorów Peilsteinu (w tym Luckete Wand)"
+  ]
+}
