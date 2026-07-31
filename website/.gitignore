@@ -1,0 +1,19 @@
+# dependencies
+node_modules/
+
+# next.js build output
+.next/
+out/
+
+# cloudflare pages build output
+.vercel/
+.wrangler/
+
+# env
+.env
+.env.*
+!.env.example
+
+# misc
+*.log
+.DS_Store

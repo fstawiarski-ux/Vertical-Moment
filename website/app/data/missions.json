@@ -1,0 +1,50 @@
+[
+  {
+    "id": "VM-MIS-001", "code": "VM-MIS-001", "typeLabel": "Sector documentation",
+    "title": "Waldmühle Hauptwand — document the sector", "location": "Kaltenleutgeben · Waldmühle", "priority": "high",
+    "objective": "Bring back one clean, review-ready package for the main wall: where it is, what it looks like, how you get there, and anything a climber should know before racking up.",
+    "needs": ["A GPS point at the central wall base", "A full frontal photo with both edges visible", "The approach from practical parking/transit", "Photos of any access or restriction signs", "Notes on anything that conflicts with the topo"],
+    "ctx": { "crag": "Waldmühle", "wall": "Waldmühle", "coord": "48.11837, 16.22175" },
+    "checklist": [
+      { "id": "gps", "title": "Confirm sector GPS position", "help": "Stand at the central wall base and capture a location point.", "required": true, "evidence": "gpx" },
+      { "id": "overview", "title": "Capture a full frontal wall overview", "help": "Keep both wall edges in frame; avoid steep perspective.", "required": true, "evidence": "photo" },
+      { "id": "approach", "title": "Record the approach track", "help": "Start where a climber actually parks or gets off transit.", "required": true, "evidence": "gpx" },
+      { "id": "signs", "title": "Photograph access & restriction signs", "help": "Include private-property and seasonal notices if present.", "required": true, "evidence": "photo" },
+      { "id": "order", "title": "Note route order left-to-right", "help": "Flag any conflict with the current topo. Observation, not judgement.", "required": false, "evidence": "note" }
+    ]
+  },
+  {
+    "id": "VM-MIS-002", "code": "VM-MIS-002", "typeLabel": "Access & parking",
+    "title": "Mizzi-Langer-Wand — access & parking check", "location": "Vienna · Rodaun", "priority": "urgent",
+    "objective": "Confirm how climbers reach and park at this crag right now, and capture any access notice. Quick in-and-out mission.",
+    "needs": ["A photo of the current parking situation", "A photo of any access / restriction sign", "A short note on the walk-in from parking"],
+    "ctx": { "crag": "Mizzi-Langer-Wand", "wall": "Rodaun" },
+    "checklist": [
+      { "id": "parking", "title": "Photograph the parking area", "help": "Show where a climber would actually leave a car.", "required": true, "evidence": "photo" },
+      { "id": "sign", "title": "Photograph access signs", "help": "Any restriction, seasonal closure, or private-property notice.", "required": true, "evidence": "photo" },
+      { "id": "walkin", "title": "Note the walk-in", "help": "Roughly how long from parking to the base, and the start point.", "required": true, "evidence": "note" }
+    ]
+  },
+  {
+    "id": "VM-MIS-003", "code": "VM-COV-003", "typeLabel": "Transcription",
+    "title": "Glocknergrat — transcribe guidebook routes", "location": "Helenental · Glocknergrat (Ost + West)", "priority": "medium",
+    "objective": "The guidebook spread for this sector is uploaded but not yet turned into route records. Transcribe the routes so they can be verified and published.",
+    "needs": ["Each route's name, grade, and route number", "The book page each route is on", "A confidence note on anything hard to read"],
+    "ctx": { "crag": "Glocknergrat", "wall": "Ost + West", "guidebook": "Keltenkalk", "pages": "52–53" },
+    "checklist": [
+      { "id": "transcribe", "title": "Transcribe the route list", "help": "Name, grade and number for each route on the spread.", "required": true, "evidence": "note" },
+      { "id": "spread", "title": "Attach the guidebook spread photo", "help": "So a reviewer can check your transcription against the source.", "required": true, "evidence": "photo" }
+    ]
+  },
+  {
+    "id": "VM-MIS-004", "code": "VM-MIS-004", "typeLabel": "Photography",
+    "title": "Peilstein — overview photography", "location": "Peilstein", "priority": "low",
+    "objective": "Collect clean overview photography of the main faces for the topo work. No route-level detail needed yet.",
+    "needs": ["Frontal overviews of the main faces", "A note on light conditions and time of day"],
+    "ctx": { "crag": "Peilstein", "wall": "Peilstein" },
+    "checklist": [
+      { "id": "faces", "title": "Photograph the main faces", "help": "One clean frontal frame per face, edges visible.", "required": true, "evidence": "photo" },
+      { "id": "light", "title": "Note light & time", "help": "When you shot and the light — helps the topo team.", "required": false, "evidence": "note" }
+    ]
+  }
+]
