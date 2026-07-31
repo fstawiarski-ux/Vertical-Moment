@@ -1,7 +1,7 @@
 [
   {
     "id": "VM-MIS-001", "code": "VM-MIS-001", "typeLabel": "Sector documentation",
-    "title": "Waldmühle Hauptwand — document the sector", "location": "Kaltenleutgeben · Waldmühle", "priority": "high",
+    "title": "Waldmühle Hauptwand — document the sector", "location": "Kaltenleutgeben · Waldmühle", "priority": "high", "mode": "field",
     "objective": "Bring back one clean, review-ready package for the main wall: where it is, what it looks like, how you get there, and anything a climber should know before racking up.",
     "needs": ["A GPS point at the central wall base", "A full frontal photo with both edges visible", "The approach from practical parking/transit", "Photos of any access or restriction signs", "Notes on anything that conflicts with the topo"],
     "ctx": { "crag": "Waldmühle", "wall": "Waldmühle", "coord": "48.11837, 16.22175" },
@@ -15,7 +15,7 @@
   },
   {
     "id": "VM-MIS-002", "code": "VM-MIS-002", "typeLabel": "Access & parking",
-    "title": "Mizzi-Langer-Wand — access & parking check", "location": "Vienna · Rodaun", "priority": "urgent",
+    "title": "Mizzi-Langer-Wand — access & parking check", "location": "Vienna · Rodaun", "priority": "urgent", "mode": "field",
     "objective": "Confirm how climbers reach and park at this crag right now, and capture any access notice. Quick in-and-out mission.",
     "needs": ["A photo of the current parking situation", "A photo of any access / restriction sign", "A short note on the walk-in from parking"],
     "ctx": { "crag": "Mizzi-Langer-Wand", "wall": "Rodaun" },
@@ -27,7 +27,7 @@
   },
   {
     "id": "VM-MIS-003", "code": "VM-COV-003", "typeLabel": "Transcription",
-    "title": "Glocknergrat — transcribe guidebook routes", "location": "Helenental · Glocknergrat (Ost + West)", "priority": "medium",
+    "title": "Glocknergrat — transcribe guidebook routes", "location": "Helenental · Glocknergrat (Ost + West)", "priority": "medium", "mode": "home",
     "objective": "The guidebook spread for this sector is uploaded but not yet turned into route records. Transcribe the routes so they can be verified and published.",
     "needs": ["Each route's name, grade, and route number", "The book page each route is on", "A confidence note on anything hard to read"],
     "ctx": { "crag": "Glocknergrat", "wall": "Ost + West", "guidebook": "Keltenkalk", "pages": "52–53" },
@@ -38,13 +38,46 @@
   },
   {
     "id": "VM-MIS-004", "code": "VM-MIS-004", "typeLabel": "Photography",
-    "title": "Peilstein — overview photography", "location": "Peilstein", "priority": "low",
+    "title": "Peilstein — overview photography", "location": "Peilstein", "priority": "low", "mode": "field",
     "objective": "Collect clean overview photography of the main faces for the topo work. No route-level detail needed yet.",
     "needs": ["Frontal overviews of the main faces", "A note on light conditions and time of day"],
     "ctx": { "crag": "Peilstein", "wall": "Peilstein" },
     "checklist": [
       { "id": "faces", "title": "Photograph the main faces", "help": "One clean frontal frame per face, edges visible.", "required": true, "evidence": "photo" },
       { "id": "light", "title": "Note light & time", "help": "When you shot and the light — helps the topo team.", "required": false, "evidence": "note" }
+    ]
+  },
+  {
+    "id": "VM-MIS-005", "code": "VM-MIS-005", "typeLabel": "3D capture",
+    "title": "Efeugrat — photo set for a 3D scan", "location": "Mödling · Efeugrat", "priority": "medium", "mode": "field",
+    "objective": "A structured, overlapping photo set is enough to build a rough 3D model of the wall — no drone or special gear required.",
+    "needs": ["20–40 overlapping photos circling the wall", "Consistent light (avoid deep shifting shadows mid-shoot)", "A few close-ups of distinctive rock features"],
+    "ctx": { "crag": "Efeugrat", "wall": "Efeugrat" },
+    "checklist": [
+      { "id": "circle", "title": "Shoot an overlapping circuit", "help": "Walk the base, photo every few steps, ~60-70% overlap between shots.", "required": true, "evidence": "photo" },
+      { "id": "features", "title": "Add a few close-up detail shots", "help": "Distinctive cracks or features help the reconstruction lock together.", "required": false, "evidence": "photo" }
+    ]
+  },
+  {
+    "id": "VM-MIS-006", "code": "VM-MIS-006", "typeLabel": "Drone / panorama",
+    "title": "Hohe Wand — overview from above", "location": "Hohe Wand", "priority": "low", "mode": "field",
+    "objective": "A drone overview or a hand-stitched panorama gives contributors and climbers a sense of scale a ground photo can't.",
+    "needs": ["A drone or panoramic overview of the wall", "GPS of where it was shot from"],
+    "ctx": { "crag": "Hohe Wand", "wall": "Hohe Wand" },
+    "checklist": [
+      { "id": "overview", "title": "Capture the overview", "help": "Drone shot or a panorama stitched from a few overlapping frames.", "required": true, "evidence": "photo" },
+      { "id": "shotgps", "title": "GPS of the shooting position", "help": "So we know the vantage point this was taken from.", "required": true, "evidence": "gpx" }
+    ]
+  },
+  {
+    "id": "VM-MIS-STANDING", "code": "VM-MIS-STANDING", "typeLabel": "Standing challenge",
+    "title": "Every session: one GPS pin, one photo", "location": "Anywhere you climb", "priority": "low", "mode": "field",
+    "objective": "No specific crag — just a habit. If every visit adds one GPS pin and one photo somewhere, the map fills in on its own over a season.",
+    "needs": ["A GPS pin from wherever you were", "One photo — route, wall, or approach"],
+    "ctx": {},
+    "checklist": [
+      { "id": "habitgps", "title": "Drop a GPS pin", "help": "Doesn't need to be exact — roughly where you climbed.", "required": false, "evidence": "gpx" },
+      { "id": "habitphoto", "title": "Add one photo", "help": "Whatever you already shot works fine.", "required": false, "evidence": "photo" }
     ]
   }
 ]

@@ -1,12 +1,13 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import Link from "next/link";
 import missionsData from "../data/missions.json";
 
 type Item = { id: string; title: string; help: string; required: boolean; evidence: string };
 type Mission = {
   id: string; code: string; typeLabel: string; title: string; location: string; priority: string;
-  objective: string; needs: string[]; ctx: Record<string, string>; checklist: Item[];
+  objective: string; needs: string[]; ctx: Record<string, string>; checklist: Item[]; mode?: "field" | "home";
 };
 type FileMeta = { id: string; name: string; size: number; kind: string; cap: string };
 type Draft = {
@@ -36,7 +37,8 @@ function progressOf(m: Mission): number {
 
 function Dashboard({ onOpen }: { onOpen: (id: string) => void }) {
   const order: Record<string, number> = { urgent: 0, high: 1, medium: 2, low: 3 };
-  const list = [...MISSIONS].sort((a, b) => order[a.priority] - order[b.priority]);
+  const [filter, setFilter] = useState<"all" | "field" | "home">("all");
+  const list = [...MISSIONS].filter(m => filter === "all" || (m.mode ?? "field") === filter).sort((a, b) => order[a.priority] - order[b.priority]);
   const [, force] = useState(0);
   useEffect(() => { force(x => x + 1); }, []); // recompute progress after mount (localStorage)
   return (
@@ -44,6 +46,15 @@ function Dashboard({ onOpen }: { onOpen: (id: string) => void }) {
       <div className="section-head">
         <div><div className="eyebrow">Your tasks</div><h1 style={{ fontSize: "clamp(28px,5vw,46px)" }}>What needs doing</h1></div>
         <span className="pill">{list.length} tasks</span>
+      </div>
+      <div className="card" style={{ padding: 16, margin: "0 0 20px", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
+        <span className="muted" style={{ fontSize: 13.5 }}>Not on this list? Send a quick GPS + photo report from any crag — no task required, no account needed.</span>
+        <Link href="/report" className="btn btn-ghost">Report from here</Link>
+      </div>
+      <div className="task-filters" aria-label="Filter tasks by where they can be done">
+        <button className={`chip ${filter === "all" ? "on" : ""}`} onClick={() => setFilter("all")}>All</button>
+        <button className={`chip ${filter === "field" ? "on" : ""}`} onClick={() => setFilter("field")}>Open field tasks</button>
+        <button className={`chip ${filter === "home" ? "on" : ""}`} onClick={() => setFilter("home")}>Home / phone tasks</button>
       </div>
       <div className="mgrid">
         {list.map(m => {
@@ -62,6 +73,19 @@ function Dashboard({ onOpen }: { onOpen: (id: string) => void }) {
             </article>
           );
         })}
+      </div>
+
+      <div className="card" style={{ padding: 18, marginTop: 28 }}>
+        <div className="eyebrow">Data transparency</div>
+        <h3 style={{ fontSize: 18, margin: "4px 0 6px" }}>See what we collect</h3>
+        <p className="muted" style={{ fontSize: 13.5, margin: "0 0 12px", maxWidth: 640 }}>
+          Reference copies of the underlying dataset — open to view, not for direct editing.
+          If something looks wrong, use &quot;Report from here&quot; instead of changing these files.
+        </p>
+        <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+          <a className="btn btn-ghost" href="/data/vertical-moment-master-data.xlsx" download>Master data (.xlsx)</a>
+          <a className="btn btn-ghost" href="/data/vertical-moment-gpx-tracks.zip" download>GPX tracks (.zip)</a>
+        </div>
       </div>
     </div>
   );
