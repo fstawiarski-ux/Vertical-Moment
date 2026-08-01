@@ -16,8 +16,9 @@ const km = (la: number, lo: number) => {
 };
 const cragFor = (r: Route) => CRAGS.find(c => c.n === r.cr || c.n === r.w) || null;
 
-export function ExploreBrowser() {
+export function ExploreBrowser({ compact = false }: { compact?: boolean }) {
   const [tab, setTab] = useState<"routes" | "crags">("routes");
+  if (compact) return <RouteSearch compact />;
   return (
     <>
       <div className="subtabs">
@@ -31,14 +32,14 @@ export function ExploreBrowser() {
 
 // Search-first: no flat table of 632 rows. Type a name, get a short list of
 // matches, and jump straight into the map's region -> crag -> route drill-down.
-function RouteSearch() {
+function RouteSearch({ compact = false }: { compact?: boolean }) {
   const [q, setQ] = useState("");
   const results = useMemo(() => {
     const s = q.trim().toLowerCase();
     if (!s) return [];
     return ROUTES.filter(r =>
       r.n.toLowerCase().includes(s) || (r.w || "").toLowerCase().includes(s) || (r.cr || "").toLowerCase().includes(s)
-    ).slice(0, 30);
+    ).slice(0, compact ? 6 : 30);
   }, [q]);
 
   return (
@@ -53,9 +54,9 @@ function RouteSearch() {
         />
       </div>
       {!q.trim() ? (
-        <div className="muted" style={{ padding: "18px 4px", maxWidth: 520 }}>
+          <div className="muted compact-search-help" style={{ padding: "18px 4px", maxWidth: 520 }}>
           Start typing to find a route — a match opens straight into the map&apos;s
-          drill-down. Browsing by area instead? Use the <Link href="/" style={{ color: "var(--terra)", fontWeight: 600 }}>map on the home page</Link>.
+          drill-down above. Browsing by area or scanning nearby instead? Use the map above.
         </div>
       ) : (
         <>
@@ -63,7 +64,7 @@ function RouteSearch() {
             {results.length} match{results.length === 1 ? "" : "es"}
             {results.length === 30 ? " — showing the first 30, refine your search" : ""}
           </div>
-          <div style={{ background: "var(--forest)", borderRadius: 16, padding: "6px 6px 2px" }}>
+          <div className="route-search-results" style={{ background: "var(--forest)", borderRadius: 16, padding: "6px 6px 2px" }}>
             {results.length === 0 && (
               <div className="muted" style={{ padding: "14px 10px", color: "var(--sage)" }}>No matches.</div>
             )}

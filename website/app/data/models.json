@@ -1,0 +1,11 @@
+[
+  {
+    "wall_id": "vm-model-helenental-jammerwandl-realityscan-obj-v1",
+    "crag": "Jammerwandl",
+    "sector_id": "hel-jammerwandl",
+    "glb": "/models/jammerwandl-web-v1.glb",
+    "status": "web-ready-demo",
+    "webReady": true,
+    "note": "Draco-compressed from the raw 29.9MB RealityScan export (830KB, ~36x smaller). Demo only — production will serve this from R2, not bundled with the app."
+  }
+]

@@ -1,0 +1,191 @@
+{
+  "created_at": "2026-08-01T00:00:00+02:00",
+  "scope": "Standalone review only; no connected systems changed",
+  "sources": {
+    "canonical_master": "C:/Users/ineedbooze/iCloudDrive/master4 2/vertical_moment_master_routes.xlsx",
+    "website_workbook": "D:/VERTICALMOMENT/GITHUB REPOS/Vertical-Moment/website/public/data/vertical-moment-master-data.xlsx",
+    "attachment_directory": "C:/Users/ineedbooze/.codex/attachments/31cf54aa-58f1-42ff-856f-4f5c5e764a37"
+  },
+  "counts": {
+    "preserved_coverage_entries": 15,
+    "new_coverage_entries": 28,
+    "total_coverage_entries": 43,
+    "attached_images_audited": 33,
+    "staged_route_rows": 188,
+    "exact_canonical_row_key_matches": 24,
+    "coverage_key_duplicates": 0,
+    "page_gap_intervals_44_457": 22
+  },
+  "resolved": [
+    "Page 453 is present in image-17.jpg and is photo-only",
+    "Page 457 is present in image-19.jpg and is photo-only"
+  ],
+  "blocking_review": [
+    "Pages 252–255 lack a visible area title",
+    "Pages 438–441 require subsector/numbering reconciliation",
+    "Website coverage taxonomy for pages 222–251 conflicts with guidebook headings/locator evidence",
+    "All staged route transcription requires human review before merge"
+  ],
+  "page_gap_intervals": [
+    {
+      "from": 46,
+      "to": 49,
+      "pages": "46–49",
+      "count": 4
+    },
+    {
+      "from": 51,
+      "to": 51,
+      "pages": "51",
+      "count": 1
+    },
+    {
+      "from": 54,
+      "to": 57,
+      "pages": "54–57",
+      "count": 4
+    },
+    {
+      "from": 60,
+      "to": 61,
+      "pages": "60–61",
+      "count": 2
+    },
+    {
+      "from": 74,
+      "to": 75,
+      "pages": "74–75",
+      "count": 2
+    },
+    {
+      "from": 82,
+      "to": 83,
+      "pages": "82–83",
+      "count": 2
+    },
+    {
+      "from": 86,
+      "to": 87,
+      "pages": "86–87",
+      "count": 2
+    },
+    {
+      "from": 90,
+      "to": 91,
+      "pages": "90–91",
+      "count": 2
+    },
+    {
+      "from": 96,
+      "to": 99,
+      "pages": "96–99",
+      "count": 4
+    },
+    {
+      "from": 102,
+      "to": 135,
+      "pages": "102–135",
+      "count": 34
+    },
+    {
+      "from": 142,
+      "to": 177,
+      "pages": "142–177",
+      "count": 36
+    },
+    {
+      "from": 248,
+      "to": 249,
+      "pages": "248–249",
+      "count": 2
+    },
+    {
+      "from": 257,
+      "to": 261,
+      "pages": "257–261",
+      "count": 5
+    },
+    {
+      "from": 281,
+      "to": 281,
+      "pages": "281",
+      "count": 1
+    },
+    {
+      "from": 289,
+      "to": 297,
+      "pages": "289–297",
+      "count": 9
+    },
+    {
+      "from": 312,
+      "to": 313,
+      "pages": "312–313",
+      "count": 2
+    },
+    {
+      "from": 326,
+      "to": 327,
+      "pages": "326–327",
+      "count": 2
+    },
+    {
+      "from": 330,
+      "to": 341,
+      "pages": "330–341",
+      "count": 12
+    },
+    {
+      "from": 344,
+      "to": 349,
+      "pages": "344–349",
+      "count": 6
+    },
+    {
+      "from": 352,
+      "to": 353,
+      "pages": "352–353",
+      "count": 2
+    },
+    {
+      "from": 360,
+      "to": 389,
+      "pages": "360–389",
+      "count": 30
+    },
+    {
+      "from": 399,
+      "to": 437,
+      "pages": "399–437",
+      "count": 39
+    }
+  ],
+  "outputs": {
+    "review_workbook": "C:\\Users\\ineedbooze\\Documents\\Codex\\2026-08-01\\prepared-the-standalone-review-workbook-the-2\\outputs\\Vertical_Moment_Guidebook_Review_2026-08-01.xlsx",
+    "workshop_workbook": "C:\\Users\\ineedbooze\\Documents\\Codex\\2026-08-01\\prepared-the-standalone-review-workbook-the-2\\outputs\\Vertical_Moment_Master_Extraction_Workshop_v1_2026-08-01.xlsx"
+  },
+  "preview_files": [
+    "C:\\Users\\ineedbooze\\Documents\\Codex\\2026-08-01\\prepared-the-standalone-review-workbook-the-2\\work\\previews\\review_Review_Summary.png",
+    "C:\\Users\\ineedbooze\\Documents\\Codex\\2026-08-01\\prepared-the-standalone-review-workbook-the-2\\work\\previews\\review_Coverage_Register.png",
+    "C:\\Users\\ineedbooze\\Documents\\Codex\\2026-08-01\\prepared-the-standalone-review-workbook-the-2\\work\\previews\\review_Source_Image_Audit.png",
+    "C:\\Users\\ineedbooze\\Documents\\Codex\\2026-08-01\\prepared-the-standalone-review-workbook-the-2\\work\\previews\\review_Page_Gap_Audit.png",
+    "C:\\Users\\ineedbooze\\Documents\\Codex\\2026-08-01\\prepared-the-standalone-review-workbook-the-2\\work\\previews\\review_Route_Staging.png",
+    "C:\\Users\\ineedbooze\\Documents\\Codex\\2026-08-01\\prepared-the-standalone-review-workbook-the-2\\work\\previews\\review_OCR_Review.png",
+    "C:\\Users\\ineedbooze\\Documents\\Codex\\2026-08-01\\prepared-the-standalone-review-workbook-the-2\\work\\previews\\review_Repository_Alignment.png",
+    "C:\\Users\\ineedbooze\\Documents\\Codex\\2026-08-01\\prepared-the-standalone-review-workbook-the-2\\work\\previews\\review_Source_Structure.png",
+    "C:\\Users\\ineedbooze\\Documents\\Codex\\2026-08-01\\prepared-the-standalone-review-workbook-the-2\\work\\previews\\workshop_Start_Here.png",
+    "C:\\Users\\ineedbooze\\Documents\\Codex\\2026-08-01\\prepared-the-standalone-review-workbook-the-2\\work\\previews\\workshop_Batch_Intake.png",
+    "C:\\Users\\ineedbooze\\Documents\\Codex\\2026-08-01\\prepared-the-standalone-review-workbook-the-2\\work\\previews\\workshop_Photo_Index.png",
+    "C:\\Users\\ineedbooze\\Documents\\Codex\\2026-08-01\\prepared-the-standalone-review-workbook-the-2\\work\\previews\\workshop_Coverage_Register.png",
+    "C:\\Users\\ineedbooze\\Documents\\Codex\\2026-08-01\\prepared-the-standalone-review-workbook-the-2\\work\\previews\\workshop_Route_Extraction.png",
+    "C:\\Users\\ineedbooze\\Documents\\Codex\\2026-08-01\\prepared-the-standalone-review-workbook-the-2\\work\\previews\\workshop_OCR_Review_Queue.png",
+    "C:\\Users\\ineedbooze\\Documents\\Codex\\2026-08-01\\prepared-the-standalone-review-workbook-the-2\\work\\previews\\workshop_Page_Gap_Audit.png",
+    "C:\\Users\\ineedbooze\\Documents\\Codex\\2026-08-01\\prepared-the-standalone-review-workbook-the-2\\work\\previews\\workshop_Field_Dictionary.png",
+    "C:\\Users\\ineedbooze\\Documents\\Codex\\2026-08-01\\prepared-the-standalone-review-workbook-the-2\\work\\previews\\workshop_Mappings.png",
+    "C:\\Users\\ineedbooze\\Documents\\Codex\\2026-08-01\\prepared-the-standalone-review-workbook-the-2\\work\\previews\\workshop_Canonical_Export.png"
+  ],
+  "formula_error_scans": {
+    "review": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}",
+    "workshop": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}"
+  }
+}

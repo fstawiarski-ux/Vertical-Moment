@@ -18,6 +18,9 @@ out/
 *.log
 .DS_Store
 
+# demo-only 3D assets — production models are served from R2, not bundled
+public/models/
+
 # OpenNext
 .open-next
 

@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://verticalmoment.com/schemas/guidebook-review-batch.schema.json",
+  "title": "Vertical Moment guidebook review batch",
+  "type": "object",
+  "required": [
+    "meta",
+    "routes"
+  ],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": [
+        "batchId",
+        "routeCount",
+        "publicationStatus"
+      ],
+      "properties": {
+        "batchId": {
+          "type": "string"
+        },
+        "routeCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "publicationStatus": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "routes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "batchRecordId",
+          "name",
+          "grade",
+          "rowKey",
+          "reconciliationStatus",
+          "publishReady"
+        ],
+        "properties": {
+          "batchRecordId": {
+            "type": "string",
+            "pattern": "^GBR-20260801-[0-9]{4}$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "grade": {
+            "type": "string",
+            "minLength": 1
+          },
+          "rowKey": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reconciliationStatus": {
+            "enum": [
+              "EXISTING_ALIGNED_NO_CHANGE",
+              "GRADE_CONFLICT_HOLD",
+              "OCR_HOLD",
+              "TAXONOMY_HOLD",
+              "NEW_CANDIDATE_APPROVED_FOR_REPO_REVIEW"
+            ]
+          },
+          "publishReady": {
+            "const": false
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -4,12 +4,22 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-export function SiteNav({ who }: { who: string | null }) {
+export function SiteNav({ who: _who }: { who?: string | null }) {
   const path = usePathname();
   const [dark, setDark] = useState(false);
+  const [railVisible, setRailVisible] = useState(true);
 
   useEffect(() => {
     setDark(document.documentElement.getAttribute("data-theme") === "dark");
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (y < lastY - 8 || y < 24) setRailVisible(true);
+      else if (y > lastY + 8) setRailVisible(false);
+      lastY = y;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   function toggle() {
@@ -24,24 +34,25 @@ export function SiteNav({ who }: { who: string | null }) {
 
   return (
     <header className="site-head">
-      <div className="wrap row">
+      <div className="wrap row desktop-nav">
         <Link href="/" className="brand">
-          <span className="vm">V<span style={{ color: "var(--terra)" }}>M</span></span>
-          <span>
-            <span className="serif" style={{ fontWeight: 600, fontSize: 15 }}>VERTICAL MOMENT</span>
-            <br />
-            <span className="sub">Kletterreviere · Wien &amp; NÖ</span>
-          </span>
+          <span className="brand-mark" aria-hidden="true" />
+          <span className="serif" style={{ fontWeight: 600, fontSize: 15 }}>VERTICAL MOMENT COLLECTIVE</span>
         </Link>
         <nav className="nav">
-          <Link href="/" className={is("/") ? "on" : ""}>Map</Link>
-          <Link href="/explore" className={is("/explore") ? "on" : ""}>Explore</Link>
+          <Link href="/" className={is("/") ? "on" : ""}>Home</Link>
           <Link href="/contribute" className={is("/contribute") ? "on" : ""}>Contribute</Link>
+          <Link href="/review-preview" className={is("/review-preview") ? "on" : ""}>Review data</Link>
         </nav>
         <div className="spacer" />
-        {who && <span className="who">{who}</span>}
         <button className="iconbtn" onClick={toggle} aria-label="Toggle theme">{dark ? "Light" : "Dark"}</button>
       </div>
+      <nav className={`mobile-rail ${railVisible ? "show" : ""}`} aria-label="Main navigation">
+        <Link href="/" className={is("/") ? "on rail-icon" : "rail-icon"} aria-label="Home">⌂</Link>
+        <Link href="/contribute" className={is("/contribute") ? "on rail-icon" : "rail-icon"} aria-label="Contribute">+</Link>
+        <Link href="/review-preview" className={is("/review-preview") ? "on rail-icon" : "rail-icon"} aria-label="Review data">R</Link>
+        <button className="rail-theme rail-icon" onClick={toggle} aria-label="Toggle theme">{dark ? "☀" : "☾"}</button>
+      </nav>
     </header>
   );
 }
