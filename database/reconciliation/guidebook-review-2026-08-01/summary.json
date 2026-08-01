@@ -1,0 +1,36 @@
+{
+  "title": "Vertical Moment guidebook reconciliation batch",
+  "batchId": "GUIDEBOOK-REVIEW-2026-08-01",
+  "generated": "2026-08-01",
+  "sourceApproval": "Approved by owner in Codex task",
+  "publicationStatus": "Draft PR review only — not merged, deployed, or written to canonical master",
+  "canonicalMasterRows": 2416,
+  "websiteSnapshotRows": 632,
+  "routeCount": 188,
+  "counts": {
+    "EXISTING_ALIGNED_NO_CHANGE": 21,
+    "GRADE_CONFLICT_HOLD": 3,
+    "NEW_CANDIDATE_APPROVED_FOR_REPO_REVIEW": 141,
+    "OCR_HOLD": 2,
+    "TAXONOMY_HOLD": 21
+  },
+  "coverageEntries": 43,
+  "missingPageIntervals": 22,
+  "gradeConflicts": [
+    {
+      "rowKey": "Helenental | Engelstein | SCHLEUDERGEFAHR",
+      "guidebookGrade": "8+",
+      "canonicalGrade": "8-"
+    },
+    {
+      "rowKey": "Helenental | Engelstein | DRUM DREAM",
+      "guidebookGrade": "7+",
+      "canonicalGrade": "7"
+    },
+    {
+      "rowKey": "Helenental | Engelstein | KATZENJAMMER",
+      "guidebookGrade": "8-",
+      "canonicalGrade": "8"
+    }
+  ]
+}
