@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+
 import { PhotographyGallery } from "./components/photography-gallery";
 import { PhotographyNav } from "./components/photography-nav";
 import styles from "./photography-home.module.css";
@@ -145,10 +145,7 @@ export default function Home() {
               <p>
                 Behind the portfolio is an experimental climbing platform using 3D scans, route data and field documentation. It stays a distinct product layer so the photography experience remains clear and focused.
               </p>
-              <div className={styles.labActions}>
-                <Link className={styles.primaryButton} href="/technology">See the technology</Link>
-                <Link className={styles.textLink} href="/explore">Open climbing explorer <span aria-hidden="true">↗</span></Link>
-              </div>
+          
             </div>
           </div>
         </section>
