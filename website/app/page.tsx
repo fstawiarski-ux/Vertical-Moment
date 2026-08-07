@@ -1,127 +1,183 @@
+import Image from "next/image";
 import Link from "next/link";
-import { SiteNav } from "./components/site-nav";
-import { SiteFooter } from "./components/site-footer";
-import { CragMap } from "./components/crag-map";
-import { Model3D } from "./components/model-3d";
-import { PhotoGallery } from "./components/photo-gallery";
-import { ExploreBrowser } from "./components/explore-browser";
-import { BrowseCrags } from "./components/browse-crags";
-import { WelcomeReveal } from "./components/welcome-reveal";
-import crags from "./data/crags.json";
-import routes from "./data/routes.json";
-import models from "./data/models.json";
+import { PhotographyGallery } from "./components/photography-gallery";
+import { PhotographyNav } from "./components/photography-nav";
+import styles from "./photography-home.module.css";
 
-export const dynamic = "force-dynamic";
+const selectedWork = [
+  {
+    src: "/retusz/bw-climber.jpg",
+    alt: "Climber photographed on the wall in a high-contrast black and white frame",
+    label: "Movement",
+    title: "On the wall",
+  },
+  {
+    src: "/retusz/bw-portrait.jpg",
+    alt: "Black and white outdoor climbing portrait",
+    label: "Portrait",
+    title: "Between attempts",
+  },
+  {
+    src: "/retusz/color-wall.jpg",
+    alt: "Colour climbing photograph showing the wall and surrounding environment",
+    label: "Environment",
+    title: "The place matters",
+  },
+];
 
-export default async function Home({
-  searchParams,
-}: {
-  searchParams: Promise<{ crag?: string }>;
-}) {
-  const sp = await searchParams;
-  const R = routes as { la: number | null }[];
-  const C = crags as { n: string; la: number; lo: number; r: string[]; osm?: string | null }[];
-  const M = models as { crag: string; glb: string; webReady: boolean; note?: string }[];
-  const gps = Math.round((R.filter(r => r.la != null).length / R.length) * 100);
-  const regions = new Set<string>();
-  C.forEach(c => c.r.forEach(x => regions.add(x)));
-  const flagship = M[0];
-  const flagshipCrag = C.find(c => c.n === flagship?.crag);
-  const mappedCrags = C.filter(c => Number.isFinite(c.la) && Number.isFinite(c.lo)).length;
-  const kmFromVienna = flagshipCrag ? Math.round(6371 * 2 * Math.asin(Math.sqrt(
-    Math.sin(((flagshipCrag.la - 48.2082) * Math.PI / 180) / 2) ** 2 +
-    Math.cos(48.2082 * Math.PI / 180) * Math.cos(flagshipCrag.la * Math.PI / 180) *
-    Math.sin(((flagshipCrag.lo - 16.3738) * Math.PI / 180) / 2) ** 2
-  ))) : null;
-
+export default function Home() {
   return (
     <>
-      <WelcomeReveal />
-      <SiteNav />
-      <main>
-        <section className="view">
-          <div className="wrap">
-            <div className="home-bar">
+      <PhotographyNav />
+      <main className={styles.home}>
+        <section className={styles.hero} id="top" aria-labelledby="home-title">
+          <Image
+            src="/retusz/bw-climber.jpg"
+            alt="Climbing photography by Vertical Moment"
+            fill
+            priority
+            sizes="100vw"
+            className={styles.heroImage}
+          />
+          <div className={styles.heroShade} />
+          <div className={styles.heroGrain} aria-hidden="true" />
+          <div className={styles.heroInner}>
+            <p className={styles.kicker}>Climbing photography · Vienna / Alps</p>
+            <h1 id="home-title">Photography from where the movement happens.</h1>
+            <p className={styles.heroCopy}>
+              Vertical Moment documents climbing from the wall, the rope and the landscape around it — with a visual language built for athletes, outdoor brands and climbing culture.
+            </p>
+            <div className={styles.heroActions}>
+              <a className={styles.primaryButton} href="#work">View selected work</a>
+              <a className={styles.secondaryButton} href="#contact">Start a project</a>
+            </div>
+          </div>
+          <a className={styles.scrollCue} href="#work" aria-label="Scroll to selected work">
+            <span>Selected work</span><i aria-hidden="true" />
+          </a>
+        </section>
+
+        <section className={styles.intro} aria-labelledby="intro-title">
+          <div className={styles.shell}>
+            <div className={styles.introGrid}>
+              <p className={styles.sectionIndex}>01 / Photography</p>
               <div>
-                <div className="eyebrow">Find your crag</div>
-              <p>See the wall in 3D, find what&apos;s near you, drill into a crag for its routes — then help fill the gaps from the field.</p>
-              <div className="statline">
-                <span><b>{regions.size}</b> regions</span>
-                <span><b>{C.length}</b> crags</span>
-                <span><b>{R.length}</b> routes</span>
-                <span><b>{gps}%</b> with GPS</span>
-                </div>
-              </div>
-              <Link href="/report" className="btn btn-terra home-report">Report</Link>
-            </div>
-
-            <div className="mvp-grid">
-              <div className="card flagship-3d mvp-model">
-                <div className="flagship-head"><span className="flagship-logo brand-mark" aria-hidden="true" /><h2>{flagship.crag}</h2></div>
-                <div className="wall-facts" aria-label="Jammerwandl quick facts">
-                  <div className="wall-fact"><span className="wall-fact-icon" aria-hidden="true">⌖</span><b>3 regions</b><small>Baden · Helenental · Lindkogel</small></div>
-                  <div className="wall-fact"><span className="wall-fact-icon" aria-hidden="true">⌗</span><b>{kmFromVienna ?? "—"} km</b><small>from Vienna</small></div>
-                  <div className="wall-fact"><span className="wall-fact-icon" aria-hidden="true">♧</span><b>2 min</b><small>walk from parking</small></div>
-                  <div className="wall-fact"><span className="wall-fact-icon" aria-hidden="true">☷</span><b>37 routes</b><small>topo register</small></div>
-                </div>
-
-                <p className="muted" style={{ fontSize: 13, margin: "0 0 12px" }}>
-                  The first wall we&apos;ve scanned — more are coming as contributors submit photos from the field.
+                <h2 id="intro-title">Climbing is more than the crux.</h2>
+                <p>
+                  The approach, preparation, texture of the rock, concentration before a move and the scale of the place all belong to the same story. The portfolio is built around those moments rather than generic outdoor imagery.
                 </p>
-                {flagship && (
-                  <Model3D glb={flagship.glb} alt={`3D scan of ${flagship.crag}`} webReady={flagship.webReady} height={250} orientation="90deg 0deg 0deg" cameraOrbit="0deg 70deg 4m" />
-                )}
-                <PhotoGallery
-                  photos={[
-                    { src: "/gallery/jammerwandl/drone-1.jpg", caption: "Drone overview, north face" },
-                    { src: "/gallery/jammerwandl/drone-2.jpg", caption: "Drone overview, upper wall" },
-                    { src: "/gallery/jammerwandl/drone-3.jpg", caption: "Drone detail, central sector" },
-                    { src: "/gallery/jammerwandl/drone-4.jpg", caption: "Drone detail, texture close-up" },
-                    { src: "/gallery/jammerwandl/topo-illustration.jpg", caption: "Illustrated topo — 37 routes across 3 sectors" },
-                    { src: "/gallery/jammerwandl/route-register.jpg", caption: "Route register — grades, no. 1–37" },
-                    { src: "/gallery/jammerwandl/guidebook-page.jpg", caption: "Original guidebook page, Jammerwandl" },
-                  ]}
-                />
               </div>
-              <div className="card gallery-card">
-                <div className="eyebrow">Photo &amp; topo gallery</div>
-                <h2>Photo &amp; topo gallery</h2>
-                <PhotoGallery showcase photos={[
-                  { src: "/gallery/jammerwandl/guidebook-page.jpg", caption: "Original guidebook page, Jammerwandl" },
-                  { src: "/gallery/jammerwandl/topo-illustration.jpg", caption: "Illustrated topo, 37 routes across 3 sectors" },
-                  { src: "/gallery/jammerwandl/drone-1.jpg", caption: "Drone overview, north face" },
-                  { src: "/gallery/jammerwandl/drone-2.jpg", caption: "Drone overview, upper wall" },
-                  { src: "/gallery/jammerwandl/drone-3.jpg", caption: "Drone detail, central sector" },
-                  { src: "/gallery/jammerwandl/drone-4.jpg", caption: "Drone detail, texture close-up" },
-                  { src: "/gallery/jammerwandl/route-register.jpg", caption: "Route register, routes 1 to 37" },
-                ]} />
-                <div className="gallery-links">
-                  {flagshipCrag && <a className="gallery-icon-link" href={`https://www.google.com/maps/search/?api=1&query=${flagshipCrag.la},${flagshipCrag.lo}`} target="_blank" rel="noopener" aria-label="Open Jammerwandl in Google Maps" title="Google Maps"><span aria-hidden="true">G</span></a>}
-                  <a className="gallery-icon-link" href="https://www.bergsteigen.com/?s=Jammerwandl" target="_blank" rel="noopener" aria-label="Search Jammerwandl on Bergsteigen" title="Bergsteigen"><span aria-hidden="true">B</span></a>
-                  {flagshipCrag?.osm && <a className="gallery-icon-link" href={`https://www.openstreetmap.org/${flagshipCrag.osm}`} target="_blank" rel="noopener" aria-label="Open Jammerwandl in OpenStreetMap" title="OpenStreetMap"><span aria-hidden="true">⌖</span></a>}
-                </div>
-              </div>
-              <CragMap initialCragName={sp.crag} showPanel={false} />
-
-            <div className="legend mvp-legend">
-              <span><i style={{ background: "#D89A34" }} />In guidebook</span>
-              <span><i style={{ background: "#93A382" }} />OSM extra — not catalogued yet</span>
-              <span style={{ marginLeft: "auto" }}>Crag data © OpenStreetMap contributors (ODbL 1.0)</span>
             </div>
+          </div>
+        </section>
 
-            <div className="discovery-grid mvp-discovery">
-              <div className="search-card">
-                <div className="eyebrow">Search</div>
-                <h2>Find a route or crag</h2>
-                <ExploreBrowser compact />
+        <section className={styles.work} id="work" aria-labelledby="work-title">
+          <div className={styles.shell}>
+            <div className={styles.sectionHead}>
+              <div>
+                <p className={styles.sectionIndex}>02 / Selected work</p>
+                <h2 id="work-title">A first edit.</h2>
               </div>
-              <BrowseCrags />
+              <p className={styles.sectionNote}>Launch selection — expandable without changing the page architecture.</p>
             </div>
+            <PhotographyGallery items={selectedWork} />
+          </div>
+        </section>
+
+        <section className={styles.services} id="services" aria-labelledby="services-title">
+          <div className={styles.shell}>
+            <div className={styles.sectionHead}>
+              <div>
+                <p className={styles.sectionIndex}>03 / Work together</p>
+                <h2 id="services-title">Built around climbing.</h2>
+              </div>
+            </div>
+            <div className={styles.serviceGrid}>
+              <article>
+                <span>01</span>
+                <h3>Climbers</h3>
+                <p>Outdoor sessions, movement, portraits and personal climbing stories captured without turning the day into a studio production.</p>
+              </article>
+              <article>
+                <span>02</span>
+                <h3>Brands & events</h3>
+                <p>Campaign-ready action, product context and event coverage with a visual system that can continue into web and social assets.</p>
+              </article>
+              <article>
+                <span>03</span>
+                <h3>Visual technology</h3>
+                <p>Drone imagery, photogrammetry and interactive 3D experiments that connect photography with the wider Vertical Moment platform.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.about} id="about" aria-labelledby="about-title">
+          <div className={styles.aboutImageWrap}>
+            <Image
+              src="/retusz/bw-portrait.jpg"
+              alt="Vertical Moment climbing portrait"
+              fill
+              sizes="(max-width: 840px) 100vw, 48vw"
+              className={styles.aboutImage}
+            />
+          </div>
+          <div className={styles.aboutCopy}>
+            <p className={styles.sectionIndex}>04 / Vertical Moment</p>
+            <h2 id="about-title">Close enough to understand the move.</h2>
+            <p>
+              Vertical Moment is a climbing photography and visual-technology project. The camera work and the digital climbing project share the same principle: understand the wall first, then decide how to show it.
+            </p>
+            <p>
+              The public site starts with photography. The mapping, 3D walls and contributor tools remain available as a developing lab behind it.
+            </p>
+          </div>
+        </section>
+
+        <section className={styles.lab} id="lab" aria-labelledby="lab-title">
+          <div className={styles.labBackdrop} aria-hidden="true">
+            <span className={styles.labMark} />
+          </div>
+          <div className={styles.shell}>
+            <div className={styles.labContent}>
+              <p className={styles.sectionIndex}>05 / 3D Lab</p>
+              <h2 id="lab-title">The wall becomes an interface.</h2>
+              <p>
+                Behind the portfolio is an experimental climbing platform using 3D scans, route data and field documentation. It stays a distinct product layer so the photography experience remains clear and focused.
+              </p>
+              <div className={styles.labActions}>
+                <Link className={styles.primaryButton} href="/technology">See the technology</Link>
+                <Link className={styles.textLink} href="/explore">Open climbing explorer <span aria-hidden="true">↗</span></Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.contact} id="contact" aria-labelledby="contact-title">
+          <div className={styles.shell}>
+            <p className={styles.sectionIndex}>06 / Contact</p>
+            <div className={styles.contactGrid}>
+              <h2 id="contact-title">Have a climbing day, campaign or visual project in mind?</h2>
+              <div>
+                <p>Photography sessions · outdoor brands · events · collaborations · 3D visual projects.</p>
+                <p className={styles.contactGate}>
+                  Contact email and social links are the final launch gate. They should be connected only after you confirm the exact public addresses.
+                </p>
+                <a className={styles.primaryButton} href="#top">Back to top</a>
+              </div>
             </div>
           </div>
         </section>
       </main>
-      <SiteFooter stats={{ regions: regions.size, crags: C.length, mappedCrags, routes: R.length, gps, scans: M.filter(m => m.webReady).length }} />
+      <footer className={styles.footer}>
+        <div className={styles.shell}>
+          <div className={styles.footerRow}>
+            <div className={styles.footerBrand}><span className={styles.footerMark} aria-hidden="true" />VERTICAL MOMENT</div>
+            <p>Climbing photography · visual technology</p>
+            <p>© {new Date().getFullYear()} Vertical Moment</p>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
