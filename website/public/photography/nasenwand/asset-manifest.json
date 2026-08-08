@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-08T15:12:57.120Z",
+  "prefix": "nasenwand",
+  "source": {
+    "photo": {
+      "filename": "DJI_0026.JPG",
+      "width": 4000,
+      "height": 3000,
+      "sha256": "18c908a83e70f553d2572c40e852180b27076e832c9b8056aa9b3e9ef82c2494"
+    },
+    "topo": {
+      "filename": "nasentopomask.png",
+      "width": 4000,
+      "height": 3000,
+      "sha256": "caf52be3bc9368654459ec14e753fe44a18ebb02901d0bbb8939a2abbdac454c"
+    }
+  },
+  "derivatives": [
+    "nasenwand-photo-1280.webp",
+    "nasenwand-spatial-1280.webp",
+    "nasenwand-topo-1280.webp",
+    "nasenwand-routes-1280.png",
+    "nasenwand-photo-2400.webp",
+    "nasenwand-spatial-2400.webp",
+    "nasenwand-topo-2400.webp",
+    "nasenwand-routes-2400.png"
+  ],
+  "status": "prototype-derived; route geometry requires human or field verification before publication"
+}

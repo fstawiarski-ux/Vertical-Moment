@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-08T00:00:00.000Z",
+  "experience": "nasenwand-flagship-media-desk",
+  "sourceBundle": "DJI_0012_MASTER_BUNDLE",
+  "sources": [
+    {
+      "filename": "07_scroll_scrub.rar",
+      "bytes": 66140969,
+      "sha256": "de9cd9b9945cfec28a8536f43d89db8a1d7ed8c5d14c9c28ce3546ef6b12787d",
+      "shipping": "source archive only; not public"
+    },
+    {
+      "filename": "hero_1080p.mp4",
+      "bytes": 59176114,
+      "sha256": "34ef641fffc87e2093a75c1b87791b133ae416f35a5a894e42c712861bc1ad46",
+      "shipping": "oversized master; replaced by WebM plus 720p MP4 fallback"
+    },
+    {
+      "filename": "hero_1080p.webm",
+      "bytes": 17816473,
+      "sha256": "1e8e006fb4f9996cdabce5b059ff9703a2f6140ed5f39500623953181da63726",
+      "shipping": "copied as hero-1080.webm"
+    },
+    {
+      "filename": "hero_720p.mp4",
+      "bytes": 11067127,
+      "sha256": "dd6514d43e3d940afe24edf0a7177f551a2dd9e73f735bd07b79c003c41eb879",
+      "shipping": "copied as hero-720.mp4"
+    },
+    {
+      "filename": "scrub_720p_allkey.mp4",
+      "bytes": 47017384,
+      "sha256": "f38b750a7b8f32323ee505ddde9eaa4e481824b1c78dfb8588c784c95689a18e",
+      "shipping": "optimized to scrub-540-allkey.mp4"
+    },
+    {
+      "filename": "loop_pingpong_12s.mp4",
+      "bytes": 16243079,
+      "sha256": "698d9ab5ac9bf8ee976b400ef1e10a81971e7beb7739cdb9191510ec729111b1",
+      "shipping": "copied as loop-pingpong-1080.mp4"
+    },
+    {
+      "filename": "loop_6s_story.mp4",
+      "bytes": 10989024,
+      "sha256": "f7d710a242c12c9ba2ce3c0f7609e9bf097f02b04f01274d8e7368483cf9112c",
+      "shipping": "copied as loop-story-1080x1920.mp4"
+    },
+    {
+      "filename": "loop_6s_480.gif",
+      "bytes": 4050267,
+      "sha256": "ff73dd036d2649f5505f97274ad965fda2fe10d8ffdc2b0bdfb40ce09932402b",
+      "shipping": "copied as loop-480.gif"
+    },
+    {
+      "filename": "loop_1080.webp",
+      "bytes": 33306952,
+      "sha256": "e2582bb436cc3d8c1abce07b50dcee0c759210a44caa971875450793e769b2ec",
+      "shipping": "optimized to loop-720.webp"
+    }
+  ],
+  "publicAssets": [
+    { "path": "depth/layer_fg.webp", "bytes": 40502, "sha256": "1a34e5fb3ea4215afcc8947b2f98e97497825ad34c2344079398c992dfb30824" },
+    { "path": "depth/layer_ridge.webp", "bytes": 175288, "sha256": "bcad31c23e906ddd74066aed80b58d27354bbdfa46c6ff64552712388e6a0e58" },
+    { "path": "depth/layer_rock.webp", "bytes": 136812, "sha256": "5e0207c4547e8b971a630ffa25aea36043f52443a6efa959c7daf81e2ba829ca" },
+    { "path": "depth/layer_sky.webp", "bytes": 278742, "sha256": "5bcf4770d6d5929210f56851d950d28b9e76f713b1ef3eda74a8343be7713b8b" },
+    { "path": "depth/layer_valley.webp", "bytes": 147486, "sha256": "7c557581cd9cb48faf65caf8dabf69542aee083ff83203769d43e09b64ff4051" },
+    { "path": "hero-1080.webm", "bytes": 17816473, "sha256": "1e8e006fb4f9996cdabce5b059ff9703a2f6140ed5f39500623953181da63726" },
+    { "path": "hero-720.mp4", "bytes": 11067127, "sha256": "dd6514d43e3d940afe24edf0a7177f551a2dd9e73f735bd07b79c003c41eb879" },
+    { "path": "loop-480.gif", "bytes": 4050267, "sha256": "ff73dd036d2649f5505f97274ad965fda2fe10d8ffdc2b0bdfb40ce09932402b" },
+    { "path": "loop-720.webp", "bytes": 12516376, "sha256": "0211527e97cffce584c90c420b72e6a7464c8a2cdaa2f798f27e3dd4835853f8" },
+    { "path": "loop-pingpong-1080.mp4", "bytes": 16243079, "sha256": "698d9ab5ac9bf8ee976b400ef1e10a81971e7beb7739cdb9191510ec729111b1" },
+    { "path": "loop-story-1080x1920.mp4", "bytes": 10989024, "sha256": "f7d710a242c12c9ba2ce3c0f7609e9bf097f02b04f01274d8e7368483cf9112c" },
+    { "path": "poster-1600.webp", "bytes": 289658, "sha256": "e3cdf4a530f271fc22ce8b7677a339c3407000f0070ce00b82338f091b30d96e" },
+    { "path": "scrub-540-allkey.mp4", "bytes": 17723280, "sha256": "0c6e403aa31e70a568da202ef18b13c55e402daf52e3802c82d01f2e7e734590" },
+    { "path": "topo-contours.svg", "bytes": 260824, "sha256": "7992c9f2ae745e55e8cfa5e242d7b1657b6990b04ea8aebcf8d0de6a80d9f600" }
+  ],
+  "excluded": [
+    "The RAR archive and all public files larger than 25 MiB are excluded from the Worker bundle.",
+    "topo_routes.svg is not published because its route labels are unverified synthetic placeholders."
+  ],
+  "status": "media approved for visual review; route and topo facts remain provisional"
+}

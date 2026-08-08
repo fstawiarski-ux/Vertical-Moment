@@ -472,8 +472,8 @@ export default function Page() {
               <li>Community reports and route corrections</li>
               <li>Open topo data for the crags around Vienna</li>
             </ul>
-            <a className={styles.ghost} href="/technology">
-              Enter the 3D Lab
+            <a className={styles.ghost} href="/nasenwand-concepts">
+              Explore the Nasenwand study
             </a>
           </div>
           <div className={styles.orb} aria-hidden="true">
