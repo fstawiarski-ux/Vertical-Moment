@@ -1,8 +1,8 @@
 # Vertical Moment Website
 
-- Version: `0.4.0-beta`
-- Release date: `2026-08-01`
+- Version: `0.6.0-beta`
+- Release date: `2026-08-08`
 - Owner: Vertical Moment / `fstawiarski-ux`
-- Scope: Jammerwandl flagship, mobile map and contributor flows, plus the approved 188-route guidebook reconciliation overlay
-- Data status: the existing 632-route website snapshot is unchanged; the reconciliation overlay is source-approved but held outside canonical master and production publication
-- 3D asset policy: the demo GLB remains local/ignored; production models are intended to be served from Cloudflare R2
+- Scope: photography homepage plus the Nasenwand seven-mode flagship media desk and Split Reveal, Geological Wipe, and Cinematic spatial study
+- Data status: the existing route database is unchanged; Nasenwand topo and route-reference geometry remain prototype and unverified
+- 3D asset policy: the lightweight route prototype is stored outside `website/public`; production wall models remain intended for versioned Cloudflare R2 delivery

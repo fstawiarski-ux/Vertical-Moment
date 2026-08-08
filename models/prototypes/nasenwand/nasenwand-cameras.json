@@ -1,0 +1,72 @@
+[
+  {
+    "name": "CAM_WEB_DEFAULT",
+    "locXYZ": [
+      0.0,
+      -180.0,
+      40.0
+    ],
+    "rot_euler_deg": [
+      64.7,
+      0.0,
+      0.0
+    ],
+    "lens": 50.0
+  },
+  {
+    "name": "CAM_SOURCE_DJI_ONLY_0046",
+    "locXYZ": [
+      110.0,
+      -70.0,
+      30.0
+    ],
+    "rot_euler_deg": [
+      -75.0,
+      0.0,
+      0.0
+    ],
+    "lens": 50.0
+  },
+  {
+    "name": "CAM_LEFT_OBLIQUE",
+    "locXYZ": [
+      -90.0,
+      -160.0,
+      -20.0
+    ],
+    "rot_euler_deg": [
+      -95.0,
+      0.0,
+      -20.0
+    ],
+    "lens": 50.0
+  },
+  {
+    "name": "CAM_RIGHT_OBLIQUE",
+    "locXYZ": [
+      80.0,
+      -140.0,
+      -20.0
+    ],
+    "rot_euler_deg": [
+      -90.0,
+      0.0,
+      20.0
+    ],
+    "lens": 50.0
+  },
+  {
+    "name": "CAM_SELECTED_ROUTE_CLOSEUP",
+    "locXYZ": [
+      -30.0,
+      -70.0,
+      30.0
+    ],
+    "rot_euler_deg": [
+      -70.0,
+      0.0,
+      0.0
+    ],
+    "lens": 50.0
+  }
+]

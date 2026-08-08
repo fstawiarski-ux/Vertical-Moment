@@ -1,7 +1,7 @@
 {
   "name": "vertical-moment-website",
   "private": true,
-  "version": "0.4.0-beta",
+  "version": "0.6.0-beta",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
@@ -27,6 +27,7 @@
     "wrangler": "^4.116.0"
   },
   "overrides": {
+    "nanoid": "^3.3.18",
     "postcss": "^8.5.25",
     "sharp": "^0.35.3"
   }
