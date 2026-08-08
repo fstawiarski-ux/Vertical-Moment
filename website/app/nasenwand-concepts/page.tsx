@@ -6,8 +6,9 @@ import NasenwandConceptGallery from '../components/nasenwand/nasenwand-concept-g
 import { NASENWAND_EXPERIENCE } from '../data/nasenwand-concepts';
 
 export const metadata: Metadata = {
-  title: 'Nasenwand spatial concepts',
-  description: 'Split Reveal, Geological Wipe and Cinematic spatial studies for the Vertical Moment photography website.',
+  title: 'Nasenwand flagship experience',
+  description:
+    'The Nasenwand flagship media gallery with film, scroll scrub, loops, depth layers, Split Reveal, Geological Wipe and Cinematic studies.',
   robots: {
     index: false,
     follow: false,

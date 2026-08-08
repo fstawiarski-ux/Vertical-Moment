@@ -1,5 +1,7 @@
 # Nasenwand asset-preparation pipeline
 
+The still-image and route-reference pipeline below remains authoritative for the three spatial concepts. For film, scrub, loop, poster, contour, and depth-layer preparation, use `MEDIA_ASSET_PIPELINE.md` and the checksum register in `website/public/photography/nasenwand/media/asset-manifest.json`.
+
 ## Source/master layer
 
 Keep these outside the website repository:

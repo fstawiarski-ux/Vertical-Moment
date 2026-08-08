@@ -1,64 +1,67 @@
-# Nasenwand design QA
+# Nasenwand flagship media design QA
 
 - Date: 2026-08-08
-- Source visual truth: `../docs/nasenwand-concepts/qa/source-approved-viewport-split.png`
-- Source mobile truth: `../docs/nasenwand-concepts/qa/source-approved-mobile-split.png`
-- Implementation capture: `../docs/nasenwand-concepts/qa/implementation-production-viewport-split.png`
-- Implementation mobile capture: `../docs/nasenwand-concepts/qa/implementation-production-mobile-390x844-split-top.png`
-- Full-view comparison: `../docs/nasenwand-concepts/qa/comparison-approved-left-production-right.png` (approved source left, production implementation right)
-- Focused implementation stage: `../docs/nasenwand-concepts/qa/implementation-production-stage-split.png`
 - Route: `/nasenwand-concepts`
-- State: 01 Split Reveal, Wide, interaction 48%, route draw 62%
+- Source capture: `../docs/nasenwand-concepts/qa/media-refresh/source-before-media-refresh.png`
+- Desktop implementation: `../docs/nasenwand-concepts/qa/media-refresh/implementation-desktop-viewport-film.png`
+- Mobile implementation: `../docs/nasenwand-concepts/qa/media-refresh/implementation-mobile-390x844-top.png`
+- Source/implementation comparison: `../docs/nasenwand-concepts/qa/media-refresh/comparison-before-left-after-right.png`
+- Preserved concept comparison: `../docs/nasenwand-concepts/qa/media-refresh/comparison-concept-before-left-after-right.png`
 
-## Capture normalization
+## Visual result
 
-- Desktop CSS viewport: 1440 × 1100, device scale factor 1.
-- Desktop source and implementation captures: 1425 × 1089 pixels after the in-app browser scrollbar/chrome crop.
-- Focused stage: 1377 × 774 pixels.
-- Mobile CSS viewport: 390 × 844, device scale factor 1.
-- Mobile source and implementation output: 375 × 812 pixels after the same browser crop.
-- Source and implementation were captured with the same route, concept, framing, progress, theme, assets, and density.
+The route now matches the photography site’s default day treatment: `#fbfaf7` paper, near-black ink, muted gray-green copy, amber accent, Times-based display/body typography, Arial control labels, restrained line borders, and the existing forest/gold monogram. The former full-page deep-green treatment is removed. Dark treatment remains only inside media and photographic stages where it protects image contrast.
 
-## Findings
+The new media desk is an editorial control rail rather than a grid of disconnected cards. Seven text buttons share one 16:9 stage, so the user can choose film, scroll scrub, landscape loop, portrait story loop, animated WebP, GIF, or depth stack without loading every asset at first paint.
 
-No actionable P0, P1, or P2 differences remain.
+## Desktop checks
 
-- Fonts and typography: the serif display/body treatment, sans-serif control labels, weights, wrapping, and hierarchy match the approved prototype. At 390 CSS pixels, the title remains within the 362-pixel content rail.
-- Spacing and layout rhythm: desktop header, intro, three-choice rail, slider, stage, and control deck align with the approved target. Mobile controls stack without horizontal overflow; document width equals the 390-pixel viewport.
-- Colors and tokens: deep green, warm white, muted copy, amber accent, borders, active states, and disabled states use the approved photography-theme tokens.
-- Image quality and asset fidelity: the approved Nasenwand photo, spatial derivative, topo reference, and transparent route overlay are unchanged. Responsive 1280/2400 candidates remain aligned and sharp.
-- Copy and content: only 01 Split Reveal, 02 Geological Wipe, and 06 Cinematic are present. The provisional route warning remains visible.
-- Icons: the existing Vertical Moment monogram is reused; no placeholder or replacement icon was introduced.
-- Accessibility: semantic buttons, `aria-pressed`, named range inputs, visible focus treatment, 44-pixel targets, reduced-motion handling, and ordinary-text status warnings remain intact.
+- CSS viewport: 1440 × 1100; browser content width: 1425 px.
+- Document width equals browser content width; no page-level horizontal overflow.
+- Hero title, section title, seven-mode rail, 16:9 media stage, and three-column control deck retain a clear hierarchy.
+- Hero film loads its 1920 × 1080 WebM and plays muted inline.
+- Ping-pong loads at 1920 × 1080; Story loads at 1080 × 1920 and uses contained portrait framing.
+- Animated WebP reports 720 × 405; GIF reports 480 × 270.
+- All five 1280 × 720 depth layers load successfully.
+- Scroll scrub remains paused and maps page movement from 26.8% to 58.6%, seeking from the corresponding source frame.
+- Direct stage dragging reached 67.2% and 27.3 seconds on the 40.6-second scrub derivative.
+- Film timeline clicking seeks the video and updates both numeric outputs.
 
-## Interaction verification
+## Mobile checks
 
-- Homepage 3D Lab call-to-action navigates to `/nasenwand-concepts`.
-- Concept buttons select Split, Geological, and Cinematic states.
-- The concept slider and concept state share the same index.
-- Pointer dragging moved interaction progress from 48% to 75%.
-- Detail crop and Monochrome buttons update `aria-pressed` correctly.
-- Route draw is disabled in 01/02 and enabled in 06.
-- Route draw input updated from 62% to 20%, and its visible output updated to `20%`.
-- Mobile Cinematic selection enables route draw without horizontal overflow.
-- Production and normal `127.0.0.1` development previews reported no console errors.
+- CSS viewport: 390 × 844; browser content width: 375 px.
+- Document width equals browser content width; no page-level horizontal overflow.
+- The media rail intentionally scrolls inside its own 347 px container and does not widen the page.
+- The media and concept stages resolve to 347 × 433.75 px in the 4:5 phone treatment.
+- The Nasenwand title fits the content rail without clipping.
+- Cinematic and Monochrome states remain selectable; Route draw becomes enabled only for Cinematic.
+- Control groups stack, maintain readable labels, and retain practical tap targets.
 
-## Comparison history
+## Accessibility and resilience
 
-### Pass 1
+- Media and concept choices use buttons with `aria-pressed`.
+- Play, First frame, Scroll link, media progress, concept progress, interaction progress, and route draw expose ordinary controls and labels.
+- Reduced-motion emulation returns a matching media query, pauses the hero video, changes the transport label to Play, and disables page-linked scrub motion.
+- Focus outlines use the shared amber token.
+- The route warning states route-reference status in text, not only color.
+- Browser console check after media and concept interaction reported no warnings or errors.
 
-- Earlier P0/P1/P2 findings: none.
-- Fixes made from visual comparison: none required; the implementation uses the approved component, scoped styles, and visual assets directly.
-- Post-fix evidence: not applicable. The 1:1 desktop comparison and mobile geometry checks passed on the first normalized production capture.
+## Asset and build checks
 
-## Residual manual gates
+- Production Next.js build and TypeScript: passed.
+- Static route generation for `/` and `/nasenwand-concepts`: passed.
+- Production dependency audit: 0 vulnerabilities.
+- Public media payload: 87.49 MiB across selectable derivatives; largest file: 16.99 MiB; files above 25 MiB: 0.
+- MP4, WebM, GIF, WebP, PNG, and JPG media use Git LFS rules.
+- Source and derivative hashes are recorded in `public/photography/nasenwand/media/asset-manifest.json`.
+- The RAR, 56.43 MiB hero MP4, 44.84 MiB scrub master, and 31.76 MiB animated WebP master are not in the public bundle.
+- The archive’s synthetic example route-grade SVG is intentionally excluded.
 
-- Photo and topo publication rights still require owner confirmation.
-- Route names, grades, lengths, geometry, and camera registration remain prototype/unverified.
-- Search indexing should remain disabled until those content gates are approved.
+## Residual owner gates
 
-## Follow-up polish
-
-No P3 visual changes are required for this review branch.
+- Confirm photo, video, topo, and archive publication rights before removing `robots.index: false`.
+- Keep route labels, grades, lengths, geometry, and camera registration provisional until reviewed.
+- Review the pushed branch before creating or merging a pull request.
+- Deploy and attach `verticalmoment.com` only after the merged Cloudflare preview passes the same media and phone checks.
 
 final result: passed

@@ -1,12 +1,14 @@
-# Vertical Moment — Nasenwand spatial concepts
+# Vertical Moment — Nasenwand flagship media and spatial concepts
 
-This review-ready bundle adds one isolated Next.js route containing only the three selected directions:
+This review-ready bundle adds one isolated Next.js route with a seven-mode flagship media desk: hero film, scroll scrub, ping-pong loop, portrait story loop, animated WebP, animated GIF, and a five-layer depth stack.
+
+The original interaction lab remains below it with only the three selected directions:
 
 1. **01 Split Reveal** — aligned photo/spatial comparison with direct dragging.
 2. **02 Geological Wipe** — an irregular rock-edge reveal driven by the same interaction state.
 3. **06 Cinematic** — photo → spatial relief → provisional topo/route sequence.
 
-The route preserves the concept selector, wide/detail/monochrome controls, interaction and route-draw sliders, pointer depth, touch/mouse dragging, responsive behavior, keyboard-friendly inputs, and reduced-motion handling.
+The route preserves the concept selector, wide/detail/monochrome controls, interaction and route-draw sliders, pointer depth, touch/mouse dragging, responsive behavior, keyboard-friendly inputs, and reduced-motion handling. The page now uses the photography site’s bright day palette and typography.
 
 The implementation is isolated on `agent/nasenwand-concepts`, based on the current remote `main`. The original dirty photography checkout remains untouched. No pull request, merge, Cloudflare deployment, or production cutover is included.
 
@@ -14,7 +16,7 @@ The implementation is isolated on `agent/nasenwand-concepts`, based on the curre
 
 - Repository: `fstawiarski-ux/Vertical-Moment`
 - Current website structure: `website/app`, Next.js 16 App Router
-- Website version: `0.5.0-beta`
+- Website version: `0.6.0-beta`
 - Added route: `/nasenwand-concepts`
 - Homepage integration: the existing 3D Lab call-to-action now opens the Nasenwand study
 - Runtime dependencies added: none
@@ -25,9 +27,11 @@ The implementation is isolated on `agent/nasenwand-concepts`, based on the curre
 - `website/app/components/nasenwand/` — reusable interaction component and scoped styles.
 - `website/app/data/nasenwand-concepts.ts` — the three concepts and asset configuration.
 - `website/public/photography/nasenwand/` — optimized responsive visual assets.
+- `website/public/photography/nasenwand/media/` — production-sized film, scrub, loop, poster, contour, and depth derivatives plus a checksum manifest.
 - `website/tools/nasenwand/` — reusable, non-destructive asset preparation.
 - `models/prototypes/nasenwand/` — lightweight route/camera reference kept out of the Worker bundle.
 - `docs/nasenwand-concepts/` — implementation, pipeline, optimization, testing, reuse, and GitHub guides.
+- `docs/nasenwand-concepts/MEDIA_ASSET_PIPELINE.md` — source-to-public media decisions and repeatable encoding recipe.
 
 ## Review path
 

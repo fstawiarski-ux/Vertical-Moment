@@ -77,3 +77,17 @@ Create `app/new-crag-concepts/page.tsx`, copy the Nasenwand page, and pass the n
 - Verify labels, ownership, source rights, route facts, and publication permission.
 - Test the three concepts at phone and desktop breakpoints.
 - Approve the route before linking it from the public homepage.
+
+## 6. Optional flagship media desk
+
+When the new crag has a full motion package, copy the seven-mode structure rather than the Nasenwand files:
+
+- landscape hero WebM plus MP4 fallback;
+- an all-keyframe scrub derivative below 20 MiB;
+- landscape ping-pong loop;
+- portrait story loop;
+- animated WebP and GIF fallbacks;
+- poster image;
+- optional reviewed depth layers and neutral contour overlay.
+
+Create a separate `public/photography/<new-crag>/media/asset-manifest.json`, record original and derivative hashes, keep every public file below 25 MiB, and add new media URLs in the crag config. Never copy Nasenwand topo, route, label, or status data into another crag.

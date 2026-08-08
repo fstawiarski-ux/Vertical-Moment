@@ -7,6 +7,9 @@ The bundle uses one config-driven client component rather than three separate de
 ```text
 page.tsx
   └─ NasenwandConceptGallery(config)
+       ├─ media selector: film / scrub / loops / depth
+       ├─ lazy active-media stage and transport controls
+       ├─ page-linked or direct-drag scrub playhead
        ├─ concept selector: 01 / 02 / 06
        ├─ shared image stage
        ├─ framing/filter controls
@@ -19,11 +22,23 @@ The data file owns concept labels and asset URLs. The component owns state and p
 ## Shared state model
 
 - `conceptIndex` selects Split Reveal, Geological Wipe, or Cinematic.
+- `mediaIndex` selects one of the seven media modes; inactive heavy assets are not mounted.
+- `mediaProgress` is shared by video playheads, manual scrubbing, page-linked scrubbing, and the depth reveal.
+- `mediaPlaying` controls only ordinary video modes; scrub video remains paused and seeks by playhead.
+- `scrollLinked` makes the all-keyframe derivative follow the sticky scrub runway.
 - `progress` is the common 0–100 interaction value. Range input and direct stage dragging both update it.
 - `routeProgress` controls how much of the route-reference layer is revealed from the bottom.
 - `frameMode` applies wide, detail, or monochrome treatment to every visual layer.
 - `pointer` provides restrained depth on fine-pointer devices.
 - `reducedMotion` removes pointer depth and collapses transitions when the user requests less motion.
+
+## Media mapping
+
+- Ordinary film and loop modes mount one `<video>` with metadata preloading, native codec fallback, muted inline playback, pause, and first-frame controls.
+- Scroll scrub mounts the optimized all-keyframe MP4, keeps it paused, and updates `currentTime` from page scroll, direct stage dragging, or the accessible range input.
+- Animated WebP and GIF modes mount only the selected image source.
+- Depth mode mounts five real image layers from the supplied archive and applies restrained pointer transforms; reduced-motion removes those transforms.
+- The portrait story cut uses `object-fit: contain` so the 9:16 frame is never cropped into a false landscape composition.
 
 ## Concept mapping
 

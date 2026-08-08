@@ -40,12 +40,14 @@ git diff main...agent/nasenwand-concepts -- website/app/nasenwand-concepts websi
 Use the comparison link above and select **Create pull request** only when ready. Suggested title:
 
 ```text
-Website: add Nasenwand Split, Geological, and Cinematic concepts
+Website: add Nasenwand flagship media and spatial gallery
 ```
 
 Suggested PR description points:
 
 - adds only 01 Split Reveal, 02 Geological Wipe, and 06 Cinematic;
+- adds seven selectable media modes from the supplied DJI production bundle;
+- replaces oversized public masters with checksum-recorded production derivatives below 25 MiB;
 - preserves shared framing, filter, progress, route-draw, pointer, and drag controls;
 - adds a standalone no-index route and connects the homepage 3D Lab CTA;
 - uses optimized derivatives from real Nasenwand sources;

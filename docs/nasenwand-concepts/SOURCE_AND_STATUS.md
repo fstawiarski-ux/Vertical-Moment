@@ -5,6 +5,7 @@
 - The source drone photograph is a real 4000 × 3000 Nasenwand image.
 - The source topo/reference image is a real supplied 4000 × 3000 asset.
 - Source file hashes and dimensions are recorded in `website/public/photography/nasenwand/asset-manifest.json`.
+- The supplied `DJI_0012_MASTER_BUNDLE` film, scrub, loop, GIF, animated WebP, poster, contour, and depth-layer files are recorded in `website/public/photography/nasenwand/media/asset-manifest.json`.
 - The website structure, package version, tokens, and App Router conventions were read from the current local repository checkout.
 
 ## Provisional
@@ -23,6 +24,8 @@
 - RealityScan/RealityCapture projects.
 - Blender working files and backups.
 - Proprietary `.af` project data.
+- The 63.08 MiB RAR source archive, the 56.43 MiB hero MP4 master, the 44.84 MiB all-key scrub master, and the 31.76 MiB animated WebP master. Production derivatives replace them in the public bundle.
+- `topo_routes.svg` from the archive. Its example grades are synthetic and unverified, so it must not be presented as Nasenwand route data.
 - Unrelated route databases and master workbooks.
 
 ## Publication gate

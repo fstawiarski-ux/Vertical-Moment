@@ -12,6 +12,18 @@
 
 The owner-only content/provenance and merge/deployment checks below remain intentionally unchecked.
 
+## Flagship media behaviors
+
+- [ ] Film autoplays muted and exposes Pause and First frame controls.
+- [ ] Scroll scrub remains paused and follows page scroll while Scroll link is on.
+- [ ] Scroll link can be turned off; direct image dragging and the named timeline remain usable.
+- [ ] Ping-pong and Story modes use the correct landscape and portrait sources.
+- [ ] Animated WebP and GIF modes display without adding document overflow.
+- [ ] Depth mode loads all five supplied layers and responds to the pointer.
+- [ ] Reduced-motion disables autoplay, page-linked scrub, and pointer depth.
+- [ ] Switching modes mounts only the selected heavy source.
+- [ ] Every public media file is below Cloudflare’s 25 MiB single-asset limit.
+
 ## Build and static checks
 
 - [ ] `npm.cmd ci` completes from `website/`.
