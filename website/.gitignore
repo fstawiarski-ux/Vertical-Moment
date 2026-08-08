@@ -18,8 +18,12 @@ out/
 *.log
 .DS_Store
 
-# demo-only 3D assets — production models are served from R2, not bundled
-public/models/
+# 3D crag models.
+#
+# Temporarily bundled: at four walls and ~2.7 MB, LFS handles them fine and it
+# gets the 3D Lab live. The R2 move stays the plan — do it as one clean change
+# once the library grows past a handful of models, then restore this ignore.
+# public/models/
 
 # OpenNext
 .open-next

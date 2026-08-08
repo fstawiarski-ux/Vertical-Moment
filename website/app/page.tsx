@@ -11,6 +11,7 @@ import PhotographyReveal from './components/photography-reveal';
 import PhotographyTheme from './components/photography-theme';
 import PhotographyLayered from './components/photography-layered';
 import { spareScene } from './data/layered-photos';
+import PhotographyModels from './components/photography-models';
 
 export const metadata: Metadata = {
   title: 'Vertical Moment — Climbing photography, Vienna',
@@ -295,19 +296,34 @@ export default function Page() {
 
             <div className={styles.founder}>
               <img
-                src="/photography/gallery/vm-6242-portrait-after-the-send.webp"
-                alt="Portrait of the founder of Vertical Moment"
-                width={900}
-                height={1218}
+                src="/photography/about/founder-portrait.webp"
+                alt="Filip Stawiarski, founder of Vertical Moment"
+                width={720}
+                height={720}
                 loading="lazy"
               />
               <div>
-                <p className={styles.eyebrow}>Founder</p>
-                <h3>F. Stawiarski</h3>
+                <p className={styles.eyebrow}>Founder · Vienna</p>
+                <h3>Filip Stawiarski</h3>
                 <p>
-                  Photographer, climber and the person behind the Collective database. Six years on the limestone around
-                  Vienna, and every crag in this archive walked, climbed and mapped in person.
+                  Alpinist and photographer, and the person behind the Collective database. Every crag in this archive
+                  has been walked, climbed and mapped in person.
                 </p>
+                <p className={styles.founderNote}>
+                  Before the camera: ten years of precision work — CNC machining for surgical instruments, then leading
+                  an eight-person aerospace assembly team at Bombardier, then five years running customer care teams in
+                  Vienna. It shows up in the way a shoot runs: rigging done properly, tolerances respected, safety not
+                  improvised, and clients who always know what happens next. Sessions in Polish, English or German.
+                </p>
+                <div className={styles.founderLinks}>
+                  <a href="mailto:f.stawiarski@gmail.com">f.stawiarski@gmail.com</a>
+                  <a href="https://www.youtube.com/@RoadToSomewhereWithYou" target="_blank" rel="noreferrer noopener">
+                    YouTube
+                  </a>
+                  <a href="https://www.twitch.tv/ineedbooz" target="_blank" rel="noreferrer noopener">
+                    Twitch
+                  </a>
+                </div>
               </div>
             </div>
           </PhotographyReveal>
@@ -463,32 +479,20 @@ export default function Page() {
             <p className={`${styles.eyebrow} ${styles.onDeep}`}>Vertical Moment Collective</p>
             <h2>3D Lab — the wall, rebuilt.</h2>
             <p>
-              Photogrammetry, route lines and topo geometry from the same days on the crag. The climbing data platform
-              sits underneath the photography.
+              Walls rebuilt from photo sets and put on the page as geometry you can turn in your hands. Pick a sector,
+              drag to orbit, scroll to come in close — the same crags the photographs above were shot on.
             </p>
             <ul>
-              <li>Rotatable crag models built from photo sets</li>
-              <li>Route lines, grades and bolt counts on the geometry</li>
-              <li>Community reports and route corrections</li>
+              <li>Crag models in GLB, straight in the browser — nothing to install</li>
+              <li>Route lines, grades and bolt counts landing on the geometry next</li>
+              <li>Built from the same photo sets as the portfolio</li>
               <li>Open topo data for the crags around Vienna</li>
             </ul>
             <a className={styles.ghost} href="/nasenwand-concepts">
               Explore the Nasenwand study
             </a>
           </div>
-          <div className={styles.orb} aria-hidden="true">
-            <span className={styles.ring} />
-            <span className={`${styles.ring} ${styles.ringInner}`} />
-            <img
-              className={styles.orbMark}
-              src="/brand/icons/05_rotated_3d_view.webp"
-              alt=""
-              width={160}
-              height={160}
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
+          <PhotographyModels />
         </div>
       </section>
 
@@ -552,15 +556,15 @@ export default function Page() {
         <div className={styles.contactIn}>
           <p className={`${styles.eyebrow} ${styles.onDeep}`}>Contact</p>
           <h2>Tell me about the route.</h2>
-          <a className={styles.mail} href="mailto:hello@verticalmoment.com">
-            hello@verticalmoment.com
+          <a className={styles.mail} href="mailto:f.stawiarski@gmail.com">
+            f.stawiarski@gmail.com
           </a>
           <div className={styles.socials}>
-            <a href="https://instagram.com" rel="noreferrer noopener" target="_blank">
-              Instagram
+            <a href="https://www.youtube.com/@RoadToSomewhereWithYou" rel="noreferrer noopener" target="_blank">
+              YouTube
             </a>
-            <a href="https://behance.net" rel="noreferrer noopener" target="_blank">
-              Behance
+            <a href="https://www.twitch.tv/ineedbooz" rel="noreferrer noopener" target="_blank">
+              Twitch
             </a>
             <a href="/explore">Explore climbing</a>
             <span>Vienna, AT</span>
@@ -705,6 +709,24 @@ export default function Page() {
               </ul>
             </div>
             <div>
+              <h4>Elsewhere</h4>
+              <ul>
+                <li>
+                  <a href="https://www.youtube.com/@RoadToSomewhereWithYou" rel="noreferrer noopener" target="_blank">
+                    YouTube — Road To Somewhere With You
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.twitch.tv/ineedbooz" rel="noreferrer noopener" target="_blank">
+                    Twitch
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:f.stawiarski@gmail.com">f.stawiarski@gmail.com</a>
+                </li>
+              </ul>
+            </div>
+            <div>
               <h4>Collective</h4>
               <ul>
                 <li>
@@ -724,7 +746,7 @@ export default function Page() {
           </div>
           <div className={styles.footBar}>
             <span>© 2026 Vertical Moment · Vienna, AT</span>
-            <span>Photography · Collective · 3D Lab</span>
+            <span>Filip Stawiarski · Photography · Collective · 3D Lab</span>
           </div>
         </div>
       </footer>
