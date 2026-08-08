@@ -1,61 +1,76 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import styles from "../photography-home.module.css";
+import { useEffect, useState } from 'react';
+import styles from '../photography-home.module.css';
 
-export function PhotographyNav() {
-  const [open, setOpen] = useState(false);
+const LINKS: { href: string; label: string }[] = [
+  { href: '#work', label: 'Work' },
+  { href: '#approach', label: 'Approach' },
+  { href: '#services', label: 'Services' },
+  { href: '#about', label: 'About' },
+  { href: '#lab', label: '3D Lab' },
+  { href: '#contact', label: 'Contact' },
+];
+
+export default function PhotographyNav() {
   const [solid, setSolid] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setSolid(window.scrollY > 36);
+    const onScroll = () => setSolid(window.scrollY > window.innerHeight * 0.8);
     onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
-  }, [open]);
-
-  const close = () => setOpen(false);
+    if (!menuOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setMenuOpen(false);
+    };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [menuOpen]);
 
   return (
-    <header className={`${styles.photoNav} ${solid || open ? styles.photoNavSolid : ""}`}>
-      <a className={styles.photoBrand} href="#top" onClick={close} aria-label="Vertical Moment home">
-        <span className={styles.photoBrandMark} aria-hidden="true" />
-        <span>Vertical Moment</span>
-      </a>
-      <nav className={styles.desktopPhotoLinks} aria-label="Photography navigation">
-        <a href="#work">Work</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#lab">3D Lab</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <Link className={styles.explorePill} href="/explore">Explore climbing</Link>
-      <button
-        className={`${styles.menuButton} ${open ? styles.menuButtonOpen : ""}`}
-        type="button"
-        onClick={() => setOpen(v => !v)}
-        aria-expanded={open}
-        aria-controls="photo-menu"
-        aria-label={open ? "Close navigation" : "Open navigation"}
-      >
-        <span /><span />
-      </button>
-      <div id="photo-menu" className={`${styles.mobileMenu} ${open ? styles.mobileMenuOpen : ""}`}>
-        <nav aria-label="Mobile photography navigation">
-          <a href="#work" onClick={close}>Work</a>
-          <a href="#services" onClick={close}>Services</a>
-          <a href="#about" onClick={close}>About</a>
-          <a href="#lab" onClick={close}>3D Lab</a>
-          <a href="#contact" onClick={close}>Contact</a>
-          <Link href="/explore" onClick={close}>Explore climbing ↗</Link>
-        </nav>
-      </div>
-    </header>
+    <>
+      <header className={`${styles.nav} ${solid ? styles.navSolid : ''}`}>
+        <div className={styles.wrap}>
+          <a className={styles.brand} href="#top">
+            <span className={styles.mk} aria-hidden="true" />
+            <span className={styles.bt}>VERTICAL MOMENT</span>
+          </a>
+          {LINKS.map((l) => (
+            <a key={l.href} className={styles.lnk} href={l.href}>
+              {l.label}
+            </a>
+          ))}
+          <a className={styles.pill} href="/explore">
+            Explore climbing
+          </a>
+          <button type="button" className={styles.burger} onClick={() => setMenuOpen(true)}>
+            Menu
+          </button>
+        </div>
+      </header>
+
+      {menuOpen && (
+        <div className={styles.sheet}>
+          <button type="button" className={styles.sheetClose} onClick={() => setMenuOpen(false)}>
+            Close
+          </button>
+          <nav>
+            {LINKS.map((l) => (
+              <a key={l.href} href={l.href} onClick={() => setMenuOpen(false)}>
+                {l.label}
+              </a>
+            ))}
+            <a href="/explore" onClick={() => setMenuOpen(false)}>
+              Explore climbing
+            </a>
+          </nav>
+        </div>
+      )}
+    </>
   );
 }
