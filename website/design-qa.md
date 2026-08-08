@@ -1,67 +1,56 @@
-# Nasenwand flagship media design QA
+# Wall Reveal website design QA
 
 - Date: 2026-08-08
-- Route: `/nasenwand-concepts`
-- Source capture: `../docs/nasenwand-concepts/qa/media-refresh/source-before-media-refresh.png`
-- Desktop implementation: `../docs/nasenwand-concepts/qa/media-refresh/implementation-desktop-viewport-film.png`
-- Mobile implementation: `../docs/nasenwand-concepts/qa/media-refresh/implementation-mobile-390x844-top.png`
-- Source/implementation comparison: `../docs/nasenwand-concepts/qa/media-refresh/comparison-before-left-after-right.png`
-- Preserved concept comparison: `../docs/nasenwand-concepts/qa/media-refresh/comparison-concept-before-left-after-right.png`
+- Route: `/vision/wall-reveal`
+- Source visual truth: `../../../outputs/wall-reveal-interactive/wall-reveal-final.png`
+- Browser-rendered production screenshot: `../../round4-audit/15-wall-reveal-production.png`
+- Normalized mobile implementation: `../../round4-audit/21-wall-reveal-mobile-final-393x852.png`
+- Mobile source/implementation comparison: `../../round4-audit/22-mobile-source-vs-website-final.png`
+- Focused interaction evidence: `../../round4-audit/03-wall-reveal-scrub.png`, `04-wall-reveal-topo.png`, `05-wall-reveal-3d.png`, `13-wall-reveal-gallery.png`
 
-## Visual result
+## Capture normalization
 
-The route now matches the photography site’s default day treatment: `#fbfaf7` paper, near-black ink, muted gray-green copy, amber accent, Times-based display/body typography, Arial control labels, restrained line borders, and the existing forest/gold monogram. The former full-page deep-green treatment is removed. Dark treatment remains only inside media and photographic stages where it protects image contrast.
+- Source: 393 × 852 pixels, representing a 393 × 852 CSS-pixel phone screen at density 1.
+- Implementation phone viewport: an actual 393 × 852 iframe viewport, rendered at 0.82 scale inside the in-app browser's 1280 × 720 viewport, then cropped and normalized back to 393 × 852 with bicubic resampling.
+- Desktop implementation viewport: 1280 × 720 CSS pixels. The in-app screenshot file is a 725 × 720 crop of that viewport, so desktop judgment used the visible content region plus DOM geometry.
+- State: `Place`, default dark visual treatment. Additional captures cover `Scrub`, `Topo`, `3D`, media budget, and gallery.
 
-The new media desk is an editorial control rail rather than a grid of disconnected cards. Seven text buttons share one 16:9 stage, so the user can choose film, scroll scrub, landscape loop, portrait story loop, animated WebP, GIF, or depth stack without loading every asset at first paint.
+## Findings
 
-## Desktop checks
+No actionable P0, P1, or P2 difference remains.
 
-- CSS viewport: 1440 × 1100; browser content width: 1425 px.
-- Document width equals browser content width; no page-level horizontal overflow.
-- Hero title, section title, seven-mode rail, 16:9 media stage, and three-column control deck retain a clear hierarchy.
-- Hero film loads its 1920 × 1080 WebM and plays muted inline.
-- Ping-pong loads at 1920 × 1080; Story loads at 1080 × 1920 and uses contained portrait framing.
-- Animated WebP reports 720 × 405; GIF reports 480 × 270.
-- All five 1280 × 720 depth layers load successfully.
-- Scroll scrub remains paused and maps page movement from 26.8% to 58.6%, seeking from the corresponding source frame.
-- Direct stage dragging reached 67.2% and 27.3 seconds on the 40.6-second scrub derivative.
-- Film timeline clicking seeks the video and updates both numeric outputs.
+- Fonts and typography: the website intentionally replaces the prototype's condensed app label with the photography site's Georgia display treatment and system sans-serif UI. Hierarchy, wrapping, weights, and small-label tracking remain clear at phone and desktop sizes.
+- Spacing and layout rhythm: the four-stage rail, primary action, status line, and story block retain the source hierarchy. The website removes phone bezel/status chrome and uses that space for real navigation and sharing controls.
+- Colors and visual tokens: cyan remains the interaction/status accent while the dark rock treatment and restrained white typography connect the page to the existing photography site.
+- Image quality and asset fidelity: the implementation uses the real 1280 px Nasenwand panorama, registered topo/spatial derivatives, existing gallery WebPs, the real website monogram, and the optimized Nasenwand GLB. No placeholder illustration, CSS drawing, or substitute wall is present.
+- Copy and content: the four states explain what is loaded and what remains provisional. The 3D state correctly identifies the real Nasenwand model rather than the earlier Jammerwandl stand-in.
+- Interaction and accessibility: stage buttons, video playback/scrub, topo blend, 3D orbit, gallery, menu, budget panel, Escape handling, focus rings, labels, and reduced-motion behavior are present. The active 3D model is not hidden from assistive technology.
 
-## Mobile checks
+## Comparison history
 
-- CSS viewport: 390 × 844; browser content width: 375 px.
-- Document width equals browser content width; no page-level horizontal overflow.
-- The media rail intentionally scrolls inside its own 347 px container and does not widen the page.
-- The media and concept stages resolve to 347 × 433.75 px in the 4:5 phone treatment.
-- The Nasenwand title fits the content rail without clipping.
-- Cinematic and Monochrome states remain selectable; Route draw becomes enabled only for Cinematic.
-- Control groups stack, maintain readable labels, and retain practical tap targets.
+1. P2: mobile header and secondary controls began at 38 px, and stage controls had no guaranteed mobile target height.
+   - Fix: raised header, gallery, and stage controls to at least 44 px.
+   - Evidence: `20-wall-reveal-mobile-final.png` and normalized comparison `22-mobile-source-vs-website-final.png`.
+2. P2: the media container initially used `aria-hidden` even when the interactive model was active.
+   - Fix: `aria-hidden` now applies only to decorative photo/video/topo states.
+   - Evidence: production DOM exposes the model state while decorative imagery remains silent.
+3. P2: the first header mark was a text/CSS approximation.
+   - Fix: replaced it with the existing `03_silver_vector.png` brand asset.
+   - Evidence: `20-wall-reveal-mobile-final.png`.
 
-## Accessibility and resilience
+## Primary interactions and technical checks
 
-- Media and concept choices use buttons with `aria-pressed`.
-- Play, First frame, Scroll link, media progress, concept progress, interaction progress, and route draw expose ordinary controls and labels.
-- Reduced-motion emulation returns a matching media query, pauses the hero video, changes the transport label to Play, and disables page-linked scrub motion.
-- Focus outlines use the shared amber token.
-- The route warning states route-reference status in text, not only color.
-- Browser console check after media and concept interaction reported no warnings or errors.
-
-## Asset and build checks
-
-- Production Next.js build and TypeScript: passed.
-- Static route generation for `/` and `/nasenwand-concepts`: passed.
+- All four stages opened from the stage rail and primary actions.
+- The scrub derivative loaded with duration 40.607 seconds, remained manually controllable, and exposed play/pause plus an accessible range input.
+- The topo blend range updated between spatial and registered images.
+- The real Nasenwand model rendered with orbit interaction from `/models/nasenwand-topo.glb`.
+- Menu, six-image gallery, and media-budget panel opened and closed correctly.
+- Production Next.js build and TypeScript passed; route was statically generated.
 - Production dependency audit: 0 vulnerabilities.
-- Public media payload: 87.49 MiB across selectable derivatives; largest file: 16.99 MiB; files above 25 MiB: 0.
-- MP4, WebM, GIF, WebP, PNG, and JPG media use Git LFS rules.
-- Source and derivative hashes are recorded in `public/photography/nasenwand/media/asset-manifest.json`.
-- The RAR, 56.43 MiB hero MP4, 44.84 MiB scrub master, and 31.76 MiB animated WebP master are not in the public bundle.
-- The archive’s synthetic example route-grade SVG is intentionally excluded.
+- Production browser console after page load: no entries.
 
-## Residual owner gates
+## Residual test gap
 
-- Confirm photo, video, topo, and archive publication rights before removing `robots.index: false`.
-- Keep route labels, grades, lengths, geometry, and camera registration provisional until reviewed.
-- Review the pushed branch before creating or merging a pull request.
-- Deploy and attach `verticalmoment.com` only after the merged Cloudflare preview passes the same media and phone checks.
+- The operating-system share sheet was not opened during automated QA. The button uses the Web Share API where available and clipboard fallback elsewhere.
 
 final result: passed

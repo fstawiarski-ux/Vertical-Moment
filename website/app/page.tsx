@@ -17,7 +17,17 @@ export const metadata: Metadata = {
   title: 'Vertical Moment — Climbing photography, Vienna',
   description:
     'Climbing and outdoor photography from Vienna. Crag sessions, team days and commercial work, with the Vertical Moment Collective topo data underneath.',
+  alternates: { canonical: '/' },
   openGraph: {
+    title: 'Vertical Moment — Climbing photography, Vienna',
+    description: 'Climbing and outdoor photography from Vienna.',
+    url: '/',
+    type: 'website',
+    siteName: 'Vertical Moment',
+    images: ['/photography/banners/og-1200x630-sample.webp'],
+  },
+  twitter: {
+    card: 'summary_large_image',
     title: 'Vertical Moment — Climbing photography, Vienna',
     description: 'Climbing and outdoor photography from Vienna.',
     images: ['/photography/banners/og-1200x630-sample.webp'],
@@ -204,7 +214,7 @@ export default function Page() {
                   <li>Web and print exports</li>
                   <li>Personal usage included</li>
                 </ul>
-                <p className={styles.price}>From €320</p>
+                <p className={`${styles.price} ${styles.priceSoon}`}>Coming soon</p>
               </div>
             </PhotographyReveal>
 
@@ -228,7 +238,7 @@ export default function Page() {
                   <li>Sector overviews for topos</li>
                   <li>Shared gallery for the group</li>
                 </ul>
-                <p className={styles.price}>From €640</p>
+                <p className={`${styles.price} ${styles.priceSoon}`}>Coming soon</p>
               </div>
             </PhotographyReveal>
 
@@ -252,10 +262,14 @@ export default function Page() {
                   <li>Banner, social and OG crops</li>
                   <li>Optional 3D topo assets</li>
                 </ul>
-                <p className={styles.price}>On request</p>
+                <p className={`${styles.price} ${styles.priceSoon}`}>Coming soon</p>
               </div>
             </PhotographyReveal>
           </div>
+          <p className={styles.priceNote}>
+            Full price list and package details go live shortly — write to me in the meantime and I&rsquo;ll quote your
+            session directly. <a href="#contact">Send an enquiry →</a>
+          </p>
         </div>
       </section>
 
@@ -568,112 +582,6 @@ export default function Page() {
             </a>
             <a href="/explore">Explore climbing</a>
             <span>Vienna, AT</span>
-          </div>
-        </div>
-      </section>
-
-      {/* ------------------------------------------------------ asset map */}
-      <section className={styles.formats}>
-        <div className={styles.wrap}>
-          <div className={styles.sechead}>
-            <div>
-              <p className={styles.eyebrow}>Asset map</p>
-              <h2>Where each export lands</h2>
-            </div>
-            <div className={styles.side}>Same frames, five delivery sizes</div>
-          </div>
-          <div className={styles.fgrid}>
-            <PhotographyReveal className={`${styles.fcard} ${styles.fcardWide}`}>
-              <div className={styles.fmeta}>
-                <b>1920 × 400 — section banner / page break</b>
-                <span>wide1920x400_*.jpg</span>
-              </div>
-              <img
-                src="/photography/banners/wide-1920x400-sample.webp"
-                alt="Wide banner crop of a climbing wall"
-                width={1568}
-                height={336}
-                loading="lazy"
-              />
-            </PhotographyReveal>
-
-            <PhotographyReveal className={styles.fcard}>
-              <div className={styles.fmeta}>
-                <b>1200 × 630 — link &amp; share card</b>
-                <span>og1200x630_*.jpg</span>
-              </div>
-              <div className={styles.share}>
-                <img
-                  src="/photography/banners/og-1200x630-sample.webp"
-                  alt="Share card crop of a crag seen from the approach"
-                  width={1204}
-                  height={632}
-                  loading="lazy"
-                />
-                <div className={styles.shareMeta}>
-                  <b>Vertical Moment — Climbing photography, Vienna</b>
-                  <span>verticalmoment.com</span>
-                </div>
-              </div>
-            </PhotographyReveal>
-
-            <PhotographyReveal className={styles.fcard}>
-              <div className={styles.fmeta}>
-                <b>728 × 90 — leaderboard placement</b>
-                <span>leader728x90_*.jpg</span>
-              </div>
-              <div className={styles.artmock} aria-hidden="true">
-                <div className={styles.fake} />
-                <div className={styles.fake} />
-                <div className={`${styles.fake} ${styles.fakeShort}`} />
-                <div className={styles.artBanner}>
-                  <img
-                    src="/photography/banners/leader-728x90-sample.webp"
-                    alt=""
-                    width={728}
-                    height={90}
-                    loading="lazy"
-                  />
-                </div>
-                <div className={styles.fake} />
-                <div className={`${styles.fake} ${styles.fakeShort}`} />
-              </div>
-            </PhotographyReveal>
-
-            <PhotographyReveal className={styles.fcard}>
-              <div className={styles.fmeta}>
-                <b>1:1 — social tiles &amp; grid</b>
-                <span>532 px square crops</span>
-              </div>
-              <div className={styles.tiles}>
-                <img src="/photography/formats/tile-1.webp" alt="Square social crop" width={560} height={560} loading="lazy" />
-                <img src="/photography/formats/tile-2.webp" alt="Square social crop" width={560} height={560} loading="lazy" />
-                <img src="/photography/formats/tile-3.webp" alt="Square social crop" width={560} height={560} loading="lazy" />
-              </div>
-            </PhotographyReveal>
-
-            <PhotographyReveal className={styles.fcard}>
-              <div className={styles.fmeta}>
-                <b>Vertical — mobile hero</b>
-                <span>2:3 originals</span>
-              </div>
-              <div className={styles.phone}>
-                <div className={styles.phoneScreen}>
-                  <img
-                    src="/photography/formats/mobile-hero.webp"
-                    alt="Vertical crop used as the mobile hero"
-                    width={760}
-                    height={1140}
-                    loading="lazy"
-                  />
-                  <div className={styles.phoneVeil} />
-                  <div className={styles.phoneCap}>
-                    <p className={`${styles.eyebrow} ${styles.onDeep}`}>Vertical Moment</p>
-                    <h4>The second before the move.</h4>
-                  </div>
-                </div>
-              </div>
-            </PhotographyReveal>
           </div>
         </div>
       </section>
