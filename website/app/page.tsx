@@ -9,6 +9,8 @@ import PhotographyGallery from './components/photography-gallery';
 import PhotographyRail from './components/photography-rail';
 import PhotographyReveal from './components/photography-reveal';
 import PhotographyTheme from './components/photography-theme';
+import PhotographyLayered from './components/photography-layered';
+import { spareScene } from './data/layered-photos';
 
 export const metadata: Metadata = {
   title: 'Vertical Moment — Climbing photography, Vienna',
@@ -20,21 +22,6 @@ export const metadata: Metadata = {
     images: ['/photography/banners/og-1200x630-sample.webp'],
   },
 };
-
-const CRAGS = [
-  'Peilstein',
-  'Helenental',
-  'Glocknergrat Ost',
-  'Glocknergrat West',
-  'Hohe Wand',
-  'Mödlinger Klause',
-  'Türkenloch',
-  'Dürre Wand',
-  'Wachau',
-  'Rax',
-  'Schneeberg',
-  'Kaisergebirge',
-];
 
 const TICKER = [
   'Peilstein',
@@ -86,6 +73,9 @@ export default function Page() {
           <PhotographyReveal>
             <figure className={styles.stack}>
               <div className={styles.stackTall}>
+                <PhotographyLayered scene={spareScene} variant="background" />
+              </div>
+              <div className={styles.stackInset}>
                 <img
                   src="/photography/statement/statement-tall.webp"
                   alt="Black and white frame of a climber on a steep limestone line"
@@ -94,16 +84,7 @@ export default function Page() {
                   loading="lazy"
                 />
               </div>
-              <div className={styles.stackInset}>
-                <img
-                  src="/photography/statement/statement-inset.webp"
-                  alt="Detail of a hand finding a hold on wet rock"
-                  width={640}
-                  height={640}
-                  loading="lazy"
-                />
-              </div>
-              <figcaption>Helenental · Ost face · 2025</figcaption>
+              <figcaption>Helenental · Ost face · 2025 — three depth planes, move the pointer</figcaption>
             </figure>
           </PhotographyReveal>
         </div>
@@ -277,28 +258,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ---------------------------------------------------------- crags */}
-      <section className={styles.crags}>
-        <div className={styles.wrap}>
-          <div className={styles.sechead}>
-            <div>
-              <p className={styles.eyebrow}>Where I shoot</p>
-              <h2>The crags in this archive</h2>
-            </div>
-            <div className={styles.side}>Mostly within 90 minutes of Vienna</div>
-          </div>
-          <div className={styles.cragline}>
-            {CRAGS.map((c) => (
-              <span key={c}>{c}</span>
-            ))}
-          </div>
-          <p className={styles.cragnote}>
-            Most of these faces are in the Vertical Moment Collective database too — crag, wall, route and grade. If you
-            are shooting a first ascent or a rebolt, the frames can be filed straight into the route record.
-          </p>
-        </div>
-      </section>
-
       {/* ---------------------------------------------------------- about */}
       <section className={styles.about} id="about">
         <div className={`${styles.wrap} ${styles.aboutGrid}`}>
@@ -333,7 +292,79 @@ export default function Page() {
               <span>24 / 35 / 85</span>
               <span>Photogrammetry</span>
             </div>
+
+            <div className={styles.founder}>
+              <img
+                src="/photography/gallery/vm-6242-portrait-after-the-send.webp"
+                alt="Portrait of the founder of Vertical Moment"
+                width={900}
+                height={1218}
+                loading="lazy"
+              />
+              <div>
+                <p className={styles.eyebrow}>Founder</p>
+                <h3>F. Stawiarski</h3>
+                <p>
+                  Photographer, climber and the person behind the Collective database. Six years on the limestone around
+                  Vienna, and every crag in this archive walked, climbed and mapped in person.
+                </p>
+              </div>
+            </div>
           </PhotographyReveal>
+        </div>
+      </section>
+
+      <section className={styles.notes} style={{ paddingTop: 0 }}>
+        <div className={styles.wrap}>
+          <div className={styles.sechead}>
+            <div>
+              <p className={styles.eyebrow}>From the archive</p>
+              <h2>Six years, one limestone belt</h2>
+            </div>
+            <div className={styles.side}>Earlier frames · 2020 — 2023</div>
+          </div>
+          <div className={styles.archive}>
+            <figure>
+              <img
+                src="/photography/gallery/vm-6537-two-on-the-wall.webp"
+                alt="Two climbers on a wall, early archive frame"
+                width={1100}
+                height={734}
+                loading="lazy"
+              />
+              <figcaption>First season on rope</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="/photography/gallery/vm-6424-face-from-the-approach.webp"
+                alt="A crag seen from the approach path"
+                width={1500}
+                height={643}
+                loading="lazy"
+              />
+              <figcaption>Mapping the approach</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="/photography/gallery/vm-6768-gear-on-the-ledge.webp"
+                alt="Climbing gear laid out on a ledge"
+                width={1100}
+                height={635}
+                loading="lazy"
+              />
+              <figcaption>The kit, back then</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="/photography/gallery/vm-6522-the-crack.webp"
+                alt="A crack line in black and white"
+                width={800}
+                height={1198}
+                loading="lazy"
+              />
+              <figcaption>The line that started it</figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 
@@ -448,7 +479,15 @@ export default function Page() {
           <div className={styles.orb} aria-hidden="true">
             <span className={styles.ring} />
             <span className={`${styles.ring} ${styles.ringInner}`} />
-            <span className={styles.orbMark} />
+            <img
+              className={styles.orbMark}
+              src="/brand/icons/05_rotated_3d_view.webp"
+              alt=""
+              width={160}
+              height={160}
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
       </section>
