@@ -4,17 +4,24 @@
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import styles from '../photography-home.module.css';
-import { photographFilters, photographs, type PhotographTag } from '../data/photographs';
+import { crags, photographFilters, photographs, type Crag, type PhotographTag } from '../data/photographs';
+import PhotographyLayered from './photography-layered';
+import { featuredScene } from '../data/layered-photos';
 
 type FilterId = 'all' | PhotographTag;
+type CragId = 'all' | Crag;
 
 export default function PhotographyGallery() {
   const [filter, setFilter] = useState<FilterId>('all');
+  const [crag, setCrag] = useState<CragId>('all');
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const visible = useMemo(
-    () => (filter === 'all' ? photographs : photographs.filter((p) => p.tags.includes(filter))),
-    [filter],
+    () =>
+      photographs.filter(
+        (p) => (filter === 'all' || p.tags.includes(filter)) && (crag === 'all' || p.crag === crag),
+      ),
+    [filter, crag],
   );
 
   const step = useCallback(
@@ -41,6 +48,18 @@ export default function PhotographyGallery() {
 
   const active = openIndex === null ? null : visible[openIndex];
 
+  // Small pointer-driven tilt on each tile — the reason to keep moving the mouse.
+  const tilt = (e: React.PointerEvent<HTMLElement>) => {
+    const el = e.currentTarget;
+    const r = el.getBoundingClientRect();
+    el.style.setProperty('--tx', String((e.clientX - r.left) / r.width - 0.5));
+    el.style.setProperty('--ty', String((e.clientY - r.top) / r.height - 0.5));
+  };
+  const untilt = (e: React.PointerEvent<HTMLElement>) => {
+    e.currentTarget.style.setProperty('--tx', '0');
+    e.currentTarget.style.setProperty('--ty', '0');
+  };
+
   return (
     <section className={styles.work} id="work">
       <div className={styles.wrap}>
@@ -49,7 +68,9 @@ export default function PhotographyGallery() {
             <p className={styles.eyebrow}>Portfolio</p>
             <h2>Selected work</h2>
           </div>
-          <div className={styles.side}>{visible.length} frames · 2024 — 2026</div>
+          <div className={styles.side}>
+            {visible.length} frames · {crag === 'all' ? '6 crags' : crag}
+          </div>
         </div>
 
         <div className={styles.chips} role="group" aria-label="Filter photographs">
@@ -69,19 +90,62 @@ export default function PhotographyGallery() {
           ))}
         </div>
 
+        <div className={styles.filterRow} role="group" aria-label="Filter by crag">
+          <span className={styles.filterLabel}>Crag</span>
+          <button
+            type="button"
+            className={styles.chipSm}
+            aria-pressed={crag === 'all'}
+            onClick={() => {
+              setCrag('all');
+              setOpenIndex(null);
+            }}
+          >
+            Everywhere
+          </button>
+          {crags.map((c) => (
+            <button
+              key={c}
+              type="button"
+              className={styles.chipSm}
+              aria-pressed={crag === c}
+              onClick={() => {
+                setCrag(c);
+                setOpenIndex(null);
+              }}
+            >
+              {c}
+            </button>
+          ))}
+        </div>
+
+        <p className={styles.galNote}>
+          Every frame is filed against the crag it was shot at — the same crag, wall and route records that sit in the
+          Collective database. Filter by location to see what a sector actually looks like before booking a session there.
+        </p>
+
         <div className={styles.gal}>
+          {crag === 'all' && (filter === 'all' || filter === 'detail' || filter === 'people') && (
+            <figure className={styles.featured}>
+              <div className={styles.featuredFrame}>
+                <PhotographyLayered scene={featuredScene} variant="tile" />
+              </div>
+              <figcaption>Three depth planes from one frame — move the pointer, then click.</figcaption>
+            </figure>
+          )}
           {visible.map((p, i) => (
             <button
               key={p.id}
               type="button"
               className={styles.shot}
               onClick={() => setOpenIndex(i)}
+              onPointerMove={tilt}
+              onPointerLeave={untilt}
               aria-label={`Open ${p.title}`}
             >
               <img src={p.src} alt={p.alt} width={p.width} height={p.height} loading="lazy" decoding="async" />
               <span className={styles.sheen} aria-hidden="true" />
-              <span className={styles.tick} aria-hidden="true" />
-              <span className={styles.tickV} aria-hidden="true" />
+              <span className={styles.frame} aria-hidden="true" />
               <span className={styles.shotCap}>
                 <b>{p.title}</b>
                 <em>{p.meta}</em>
@@ -89,6 +153,10 @@ export default function PhotographyGallery() {
             </button>
           ))}
         </div>
+
+        {visible.length === 0 && (
+          <p className={styles.galEmpty}>Nothing in the archive matches that combination yet.</p>
+        )}
 
         <div className={styles.more}>
           <a className={styles.cta} href="#contact">

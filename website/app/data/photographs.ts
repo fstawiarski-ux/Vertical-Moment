@@ -1,6 +1,6 @@
 // Generated for the photography homepage. Order defines the masonry sequence.
 
-export type PhotographTag = 'wall' | 'people' | 'detail' | 'bw';
+export type PhotographTag = 'wall' | 'people' | 'detail' | 'bw' | 'location';
 
 export interface Photograph {
   id: string;
@@ -11,7 +11,21 @@ export interface Photograph {
   meta: string;
   alt: string;
   tags: PhotographTag[];
+  /** Crag the frame was shot at — drives the second filter row. */
+  crag: Crag;
 }
+
+/** Crags represented in the archive. Order defines the filter row. */
+export const crags = [
+  'Peilstein',
+  'Helenental',
+  'Glocknergrat',
+  'Türkenloch',
+  'Hohe Wand',
+  'Wachau',
+] as const;
+
+export type Crag = (typeof crags)[number];
 
 export const photographs: Photograph[] = [
   {
@@ -22,7 +36,8 @@ export const photographs: Photograph[] = [
     title: 'Peilstein · main face',
     meta: '6b+',
     alt: 'Peilstein · main face — 6b+, Vertical Moment climbing photography',
-    tags: ['wall'],
+    tags: ['wall', 'location'],
+    crag: 'Peilstein',
   },
   {
     id: 'vm-6242',
@@ -33,6 +48,7 @@ export const photographs: Photograph[] = [
     meta: 'Helenental',
     alt: 'Portrait · after the send — Helenental, Vertical Moment climbing photography',
     tags: ['people', 'bw'],
+    crag: 'Helenental',
   },
   {
     id: 'vm-6965',
@@ -43,6 +59,7 @@ export const photographs: Photograph[] = [
     meta: '7a',
     alt: 'Topping out — 7a, Vertical Moment climbing photography',
     tags: ['people', 'wall'],
+    crag: 'Peilstein',
   },
   {
     id: 'vm-6913',
@@ -53,6 +70,7 @@ export const photographs: Photograph[] = [
     meta: 'Glocknergrat',
     alt: 'Traverse · morning light — Glocknergrat, Vertical Moment climbing photography',
     tags: ['wall'],
+    crag: 'Glocknergrat',
   },
   {
     id: 'vm-6437',
@@ -63,6 +81,7 @@ export const photographs: Photograph[] = [
     meta: 'Detail',
     alt: 'The hold that matters — Detail, Vertical Moment climbing photography',
     tags: ['detail', 'bw'],
+    crag: 'Helenental',
   },
   {
     id: 'vm-7202',
@@ -73,6 +92,7 @@ export const photographs: Photograph[] = [
     meta: 'Detail',
     alt: 'Chalk and water — Detail, Vertical Moment climbing photography',
     tags: ['detail'],
+    crag: 'Helenental',
   },
   {
     id: 'vm-6619',
@@ -83,6 +103,7 @@ export const photographs: Photograph[] = [
     meta: 'Türkenloch',
     alt: 'Second on the rope — Türkenloch, Vertical Moment climbing photography',
     tags: ['wall', 'people'],
+    crag: 'Türkenloch',
   },
   {
     id: 'vm-7010',
@@ -92,7 +113,8 @@ export const photographs: Photograph[] = [
     title: 'The pit · afternoon',
     meta: 'Peilstein',
     alt: 'The pit · afternoon — Peilstein, Vertical Moment climbing photography',
-    tags: ['wall'],
+    tags: ['wall', 'location'],
+    crag: 'Peilstein',
   },
   {
     id: 'vm-7073',
@@ -103,6 +125,7 @@ export const photographs: Photograph[] = [
     meta: '6c',
     alt: 'Steep ground — 6c, Vertical Moment climbing photography',
     tags: ['wall'],
+    crag: 'Hohe Wand',
   },
   {
     id: 'vm-6578',
@@ -113,6 +136,7 @@ export const photographs: Photograph[] = [
     meta: 'Helenental',
     alt: 'Ost face · rain the day before — Helenental, Vertical Moment climbing photography',
     tags: ['wall', 'bw'],
+    crag: 'Helenental',
   },
   {
     id: 'vm-6867',
@@ -122,7 +146,8 @@ export const photographs: Photograph[] = [
     title: 'Slab sequence',
     meta: '6a',
     alt: 'Slab sequence — 6a, Vertical Moment climbing photography',
-    tags: ['wall'],
+    tags: ['wall', 'location'],
+    crag: 'Peilstein',
   },
   {
     id: 'vm-6707',
@@ -133,6 +158,7 @@ export const photographs: Photograph[] = [
     meta: 'Portrait',
     alt: 'Reading the next move — Portrait, Vertical Moment climbing photography',
     tags: ['people'],
+    crag: 'Wachau',
   },
   {
     id: 'vm-7303',
@@ -143,6 +169,7 @@ export const photographs: Photograph[] = [
     meta: 'Peilstein',
     alt: 'Belay talk — Peilstein, Vertical Moment climbing photography',
     tags: ['people'],
+    crag: 'Peilstein',
   },
   {
     id: 'vm-6522',
@@ -153,6 +180,7 @@ export const photographs: Photograph[] = [
     meta: 'B&W',
     alt: 'The crack — B&W, Vertical Moment climbing photography',
     tags: ['wall', 'bw', 'detail'],
+    crag: 'Glocknergrat',
   },
   {
     id: 'vm-7201',
@@ -163,6 +191,7 @@ export const photographs: Photograph[] = [
     meta: 'Detail',
     alt: 'Hands, water, limestone — Detail, Vertical Moment climbing photography',
     tags: ['detail'],
+    crag: 'Helenental',
   },
   {
     id: 'vm-6624',
@@ -173,6 +202,7 @@ export const photographs: Photograph[] = [
     meta: 'Portrait',
     alt: 'Waiting for the light — Portrait, Vertical Moment climbing photography',
     tags: ['people'],
+    crag: 'Wachau',
   },
   {
     id: 'vm-6424',
@@ -182,7 +212,8 @@ export const photographs: Photograph[] = [
     title: 'The face from the approach',
     meta: 'Glocknergrat',
     alt: 'The face from the approach — Glocknergrat, Vertical Moment climbing photography',
-    tags: ['wall', 'bw'],
+    tags: ['wall', 'bw', 'location'],
+    crag: 'Glocknergrat',
   },
   {
     id: 'vm-6888',
@@ -193,6 +224,7 @@ export const photographs: Photograph[] = [
     meta: '6c',
     alt: 'Crux · four frames in — 6c, Vertical Moment climbing photography',
     tags: ['wall', 'people'],
+    crag: 'Peilstein',
   },
   {
     id: 'vm-6693',
@@ -203,6 +235,7 @@ export const photographs: Photograph[] = [
     meta: 'Peilstein',
     alt: 'High on the pillar — Peilstein, Vertical Moment climbing photography',
     tags: ['wall'],
+    crag: 'Peilstein',
   },
   {
     id: 'vm-7152',
@@ -212,7 +245,8 @@ export const photographs: Photograph[] = [
     title: 'Late light on the arête',
     meta: '6b',
     alt: 'Late light on the arête — 6b, Vertical Moment climbing photography',
-    tags: ['wall'],
+    tags: ['wall', 'location'],
+    crag: 'Hohe Wand',
   },
   {
     id: 'vm-6537',
@@ -222,7 +256,8 @@ export const photographs: Photograph[] = [
     title: 'Two on the wall',
     meta: 'B&W',
     alt: 'Two on the wall — B&W, Vertical Moment climbing photography',
-    tags: ['wall', 'bw'],
+    tags: ['wall', 'bw', 'location'],
+    crag: 'Helenental',
   },
   {
     id: 'vm-6958',
@@ -233,6 +268,7 @@ export const photographs: Photograph[] = [
     meta: 'Portrait',
     alt: 'Clipping — Portrait, Vertical Moment climbing photography',
     tags: ['people'],
+    crag: 'Wachau',
   },
   {
     id: 'vm-7029',
@@ -242,7 +278,8 @@ export const photographs: Photograph[] = [
     title: 'The cave sector',
     meta: 'Türkenloch',
     alt: 'The cave sector — Türkenloch, Vertical Moment climbing photography',
-    tags: ['wall', 'people'],
+    tags: ['wall', 'people', 'location'],
+    crag: 'Türkenloch',
   },
   {
     id: 'vm-6530',
@@ -253,6 +290,7 @@ export const photographs: Photograph[] = [
     meta: 'Detail',
     alt: 'Feet on small edges — Detail, Vertical Moment climbing photography',
     tags: ['detail', 'wall'],
+    crag: 'Hohe Wand',
   },
   {
     id: 'vm-6907',
@@ -263,6 +301,7 @@ export const photographs: Photograph[] = [
     meta: '6b+',
     alt: 'Over the lip — 6b+, Vertical Moment climbing photography',
     tags: ['wall', 'people'],
+    crag: 'Peilstein',
   },
   {
     id: 'vm-7138',
@@ -272,7 +311,8 @@ export const photographs: Photograph[] = [
     title: 'Dark rock, thin line',
     meta: '7a',
     alt: 'Dark rock, thin line — 7a, Vertical Moment climbing photography',
-    tags: ['wall'],
+    tags: ['wall', 'location'],
+    crag: 'Glocknergrat',
   },
   {
     id: 'vm-6768',
@@ -282,7 +322,8 @@ export const photographs: Photograph[] = [
     title: 'Gear on the ledge',
     meta: 'Detail',
     alt: 'Gear on the ledge — Detail, Vertical Moment climbing photography',
-    tags: ['detail'],
+    tags: ['detail', 'location'],
+    crag: 'Peilstein',
   },
   {
     id: 'vm-6683',
@@ -292,7 +333,8 @@ export const photographs: Photograph[] = [
     title: 'Green corner',
     meta: 'Helenental',
     alt: 'Green corner — Helenental, Vertical Moment climbing photography',
-    tags: ['wall'],
+    tags: ['wall', 'location'],
+    crag: 'Helenental',
   },
   {
     id: 'vm-6918',
@@ -303,6 +345,7 @@ export const photographs: Photograph[] = [
     meta: '6c',
     alt: 'Full extension — 6c, Vertical Moment climbing photography',
     tags: ['wall', 'people'],
+    crag: 'Peilstein',
   },
   {
     id: 'vm-7198',
@@ -312,7 +355,8 @@ export const photographs: Photograph[] = [
     title: 'Limestone, close',
     meta: 'Texture',
     alt: 'Limestone, close — Texture, Vertical Moment climbing photography',
-    tags: ['detail'],
+    tags: ['detail', 'location'],
+    crag: 'Hohe Wand',
   },
   {
     id: 'vm-6706',
@@ -323,6 +367,7 @@ export const photographs: Photograph[] = [
     meta: 'Portrait',
     alt: 'Before the start — Portrait, Vertical Moment climbing photography',
     tags: ['people'],
+    crag: 'Wachau',
   },
   {
     id: 'vm-7217',
@@ -333,6 +378,7 @@ export const photographs: Photograph[] = [
     meta: '6a+',
     alt: 'Reaching left — 6a+, Vertical Moment climbing photography',
     tags: ['wall', 'detail'],
+    crag: 'Türkenloch',
   },
   {
     id: 'vm-6936',
@@ -343,6 +389,7 @@ export const photographs: Photograph[] = [
     meta: 'Peilstein',
     alt: 'Mantel — Peilstein, Vertical Moment climbing photography',
     tags: ['wall', 'people'],
+    crag: 'Peilstein',
   },
 ];
 
@@ -351,5 +398,6 @@ export const photographFilters: { id: 'all' | PhotographTag; label: string }[] =
   { id: 'wall', label: 'On the wall' },
   { id: 'people', label: 'People' },
   { id: 'detail', label: 'Details' },
+  { id: 'location', label: 'Locations' },
   { id: 'bw', label: 'Black & white' },
 ];

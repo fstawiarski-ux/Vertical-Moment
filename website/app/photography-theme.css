@@ -25,7 +25,8 @@ html[data-vm-theme='day'] {
   --vm-veil-3: rgba(10, 14, 12, 0.92);
   --vm-photo: grayscale(0.16) contrast(1.02);
   --vm-photo-hi: grayscale(0) contrast(1.04);
-  --vm-mono: url('/brand/monogram/vm-mono-forest-gold.webp');
+  --vm-mono: url('/brand/icons/02_forest_green.png'); /* Forest green + gold */
+  --vm-mono-anim: url('/brand/icons/02_forest_green.webp');
   --vm-tint: transparent;
 }
 
@@ -46,7 +47,8 @@ html[data-vm-theme='night'] {
   --vm-veil-3: rgba(4, 7, 5, 0.94);
   --vm-photo: brightness(0.9) saturate(0.92);
   --vm-photo-hi: brightness(1.02) saturate(1.05);
-  --vm-mono: url('/brand/monogram/vm-mono-deep-teal-gold.webp');
+  --vm-mono: url('/brand/icons/05_rotated_3d_view.png'); /* Rotated 3D, teal + gold */
+  --vm-mono-anim: url('/brand/icons/05_rotated_3d_view.webp');
   --vm-tint: transparent;
 }
 
@@ -67,7 +69,8 @@ html[data-vm-theme='dark'] {
   --vm-veil-3: rgba(0, 0, 0, 0.96);
   --vm-photo: grayscale(0.72) contrast(1.14) brightness(0.86);
   --vm-photo-hi: grayscale(0.08) contrast(1.1) brightness(0.98);
-  --vm-mono: url('/brand/monogram/vm-mono-bright-silver.webp');
+  --vm-mono: url('/brand/icons/04_gray_outline.png'); /* Gray outline */
+  --vm-mono-anim: url('/brand/icons/04_gray_outline.webp');
   --vm-tint: transparent;
 }
 
@@ -88,7 +91,8 @@ html[data-vm-theme='sunny'] {
   --vm-veil-3: rgba(48, 26, 3, 0.86);
   --vm-photo: saturate(1.24) brightness(1.07) contrast(1.02);
   --vm-photo-hi: saturate(1.4) brightness(1.12);
-  --vm-mono: url('/brand/monogram/vm-mono-gold-c-frame.webp');
+  --vm-mono: url('/brand/icons/07_cvm_lockup.png'); /* CVM lockup, gold */
+  --vm-mono-anim: url('/brand/icons/07_cvm_lockup.webp');
   --vm-tint: linear-gradient(180deg, rgba(255, 183, 77, 0.16), rgba(255, 120, 0, 0.1));
 }
 
@@ -109,7 +113,8 @@ html[data-vm-theme='colorful'] {
   --vm-veil-3: rgba(12, 5, 24, 0.92);
   --vm-photo: saturate(1.55) contrast(1.08);
   --vm-photo-hi: saturate(1.85) contrast(1.1) hue-rotate(-6deg);
-  --vm-mono: url('/brand/monogram/vm-mono-iridescent.webp');
+  --vm-mono: url('/brand/icons/06_dynamic_shift.png'); /* Dynamic shift */
+  --vm-mono-anim: url('/brand/icons/06_dynamic_shift.webp');
   --vm-tint: linear-gradient(140deg, rgba(255, 61, 154, 0.3), rgba(64, 180, 255, 0.22) 55%, rgba(160, 60, 255, 0.3));
 }
 

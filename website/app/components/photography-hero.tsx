@@ -1,9 +1,9 @@
 'use client';
 
-/* eslint-disable @next/next/no-img-element */
-
 import { useEffect, useRef } from 'react';
 import styles from '../photography-home.module.css';
+import PhotographyLayered from './photography-layered';
+import { heroScene } from '../data/layered-photos';
 
 export default function PhotographyHero() {
   const layerRef = useRef<HTMLDivElement>(null);
@@ -13,6 +13,7 @@ export default function PhotographyHero() {
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
+    // Scroll parallax moves the whole stack; the planes inside handle the pointer.
     const onScroll = () => {
       const y = window.scrollY;
       const vh = window.innerHeight;
@@ -52,13 +53,7 @@ export default function PhotographyHero() {
   return (
     <section className={styles.hero} id="top" ref={heroRef}>
       <div className={styles.heroLayer} ref={layerRef}>
-        <img
-          src="/photography/hero/hero-main.webp"
-          alt="Climber high on a limestone wall in the last light of the day"
-          width={2000}
-          height={1153}
-          fetchPriority="high"
-        />
+        <PhotographyLayered scene={heroScene} variant="background" priority />
       </div>
       <div className={styles.heroVeil} />
       <div className={styles.heroTint} />
@@ -66,24 +61,26 @@ export default function PhotographyHero() {
       <div className={styles.heroGrain} aria-hidden="true" />
 
       <div className={`${styles.heroIn} ${styles.wrap}`}>
-        <p className={`${styles.eyebrow} ${styles.onDeep}`}>
-          Vertical Moment — climbing &amp; outdoor photography · Vienna
-        </p>
-        <h1>
-          The second <em>before</em> the move.
-        </h1>
-        <p className={styles.heroSub}>
-          Limestone, low light, and the people who read it. Shot on the crags around Vienna, in the Wachau and across the
-          Eastern Alps.
-        </p>
-        <div className={styles.heroFoot}>
-          <a className={styles.cta} href="#work">
-            See selected work <span aria-hidden="true">&rarr;</span>
-          </a>
-          <div className={styles.heroMeta}>
-            <span>Est. 2020</span>
-            <span>Crag · Expedition · Commercial</span>
-            <span>Booking 2026</span>
+        <div className={styles.heroCopy}>
+          <p className={`${styles.eyebrow} ${styles.onDeep}`}>
+            Vertical Moment — climbing &amp; outdoor photography · Vienna
+          </p>
+          <h1>
+            The second <em>before</em> the move.
+          </h1>
+          <p className={styles.heroSub}>
+            Limestone, low light, and the people who read it. Shot on the crags around Vienna, in the Wachau and across
+            the Eastern Alps.
+          </p>
+          <div className={styles.heroFoot}>
+            <a className={styles.cta} href="#work">
+              See selected work <span aria-hidden="true">&rarr;</span>
+            </a>
+            <div className={styles.heroMeta}>
+              <span>Est. 2020</span>
+              <span>Crag · Expedition · Commercial</span>
+              <span>Booking 2026</span>
+            </div>
           </div>
         </div>
       </div>

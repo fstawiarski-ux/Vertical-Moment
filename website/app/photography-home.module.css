@@ -103,8 +103,8 @@
 .nav .wrap {
   display: flex;
   align-items: center;
-  gap: 30px;
-  height: 78px;
+  gap: 26px;
+  height: 88px;
 }
 .navSolid {
   background: color-mix(in srgb, var(--vm-bg) 88%, transparent);
@@ -118,9 +118,9 @@
   margin-right: auto;
 }
 .mk {
-  width: 34px;
-  height: 34px;
-  background-image: url('/brand/monogram/vm-mono-bright-silver.webp');
+  width: 52px;
+  height: 52px;
+  background-image: var(--vm-mono-bright, url('/brand/icons/03_silver_vector.png'));
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -129,9 +129,16 @@
 .navSolid .mk {
   background-image: var(--vm-mono);
 }
+/* The animated variant is only fetched when a pointer actually arrives. */
+.brand:hover .mk {
+  background-image: var(--vm-mono-bright-anim, url('/brand/icons/03_silver_vector.webp'));
+}
+.navSolid .brand:hover .mk {
+  background-image: var(--vm-mono-anim);
+}
 .bt {
   font-family: var(--vm-disp);
-  font-size: 19px;
+  font-size: 21px;
   letter-spacing: 0.18em;
   color: var(--vm-deep-ink);
 }
@@ -139,8 +146,8 @@
   color: var(--vm-ink);
 }
 .lnk {
-  font-size: 13px;
-  letter-spacing: 0.2em;
+  font-size: 15px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--vm-deep-muted);
   transition: color 0.3s;
@@ -148,15 +155,34 @@
 .navSolid .lnk {
   color: var(--vm-muted);
 }
+.lnk {
+  position: relative;
+  padding-bottom: 4px;
+}
+.lnk::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--vm-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--vm-ease);
+}
+.lnk:hover::after {
+  transform: scaleX(1);
+}
 .lnk:hover {
   color: var(--vm-accent);
 }
 .pill {
   border: 1px solid var(--vm-deep-line);
   border-radius: 999px;
-  padding: 9px 17px;
-  font-size: 11.5px;
-  letter-spacing: 0.2em;
+  padding: 11px 20px;
+  font-size: 13px;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--vm-deep-ink);
 }
@@ -236,14 +262,18 @@
   pointer-events: auto;
 }
 .railIcon {
-  width: 44px;
-  height: 44px;
+  width: 60px;
+  height: 60px;
   background-image: var(--vm-mono);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.92;
   animation: vmBob 7s ease-in-out infinite;
+}
+.rail:hover .railIcon {
+  background-image: var(--vm-mono-anim);
+  opacity: 1;
 }
 @keyframes vmBob {
   0%,
@@ -298,14 +328,15 @@
 /* --------------------------------------------------------- theme switch */
 .themes {
   position: fixed;
-  left: 50%;
-  bottom: 20px;
-  transform: translateX(-50%);
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 940;
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 6px;
-  padding: 8px;
+  padding: 10px 8px;
   border-radius: 999px;
   background: color-mix(in srgb, var(--vm-bg) 84%, transparent);
   backdrop-filter: blur(18px);
@@ -313,11 +344,11 @@
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
 }
 .themesLabel {
-  font-size: 10px;
-  letter-spacing: 0.22em;
+  font-size: 9.5px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--vm-muted);
-  padding: 0 10px 0 8px;
+  padding: 2px 0 6px;
 }
 .sw {
   width: 46px;
@@ -356,12 +387,13 @@
   background: conic-gradient(from 210deg, #ff3d9a, #8c3cff, #40b4ff, #ff3d9a);
 }
 .themeName {
-  font-size: 11px;
+  writing-mode: vertical-rl;
+  font-size: 10px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  padding: 0 14px 0 8px;
+  padding: 6px 0 2px;
   color: var(--vm-ink);
-  min-width: 118px;
+  max-height: 130px;
 }
 
 /* ----------------------------------------------------------------- hero */
@@ -369,7 +401,7 @@
   position: relative;
   min-height: 100svh;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   overflow: hidden;
   background: var(--vm-deep);
 }
@@ -388,6 +420,7 @@
 .heroVeil {
   position: absolute;
   inset: 0;
+  pointer-events: none;
   background: linear-gradient(
     180deg,
     var(--vm-veil-1) 0%,
@@ -399,6 +432,7 @@
 .heroTint {
   position: absolute;
   inset: 0;
+  pointer-events: none;
   background: var(--vm-tint);
   mix-blend-mode: overlay;
   opacity: 0.85;
@@ -406,27 +440,35 @@
 .heroGrain {
   position: absolute;
   inset: 0;
+  pointer-events: none;
   background-image: url('/photography/grain.webp');
   background-size: 170px;
   opacity: 0.4;
   mix-blend-mode: overlay;
 }
 .heroMark {
+  pointer-events: none;
   position: absolute;
-  right: -3%;
-  top: 9%;
-  width: min(46vw, 540px);
+  left: 4%;
+  bottom: 9%;
+  width: min(18vw, 190px);
   aspect-ratio: 1;
-  background-image: url('/brand/monogram/vm-mono-outline.webp');
+  background-image: url('/brand/icons/01_line_art.png');
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.14;
+  opacity: 0.2;
 }
 .heroIn {
   position: relative;
   z-index: 4;
   width: 100%;
-  padding: 0 30px 112px;
+  padding: 0 30px;
+}
+/* Copy sits right of centre so it clears the climber silhouette on the left. */
+.heroCopy {
+  margin-left: auto;
+  width: min(620px, 100%);
+  margin-bottom: 6vh;
 }
 .hero h1 {
   color: var(--vm-deep-ink);
@@ -635,8 +677,12 @@
   column-gap: 14px;
 }
 .shot {
+  --tx: 0;
+  --ty: 0;
   position: relative;
   margin: 0 0 14px;
+  transform: perspective(1100px) rotateX(calc(var(--ty) * -3deg)) rotateY(calc(var(--tx) * 3deg));
+  transition: transform 0.4s var(--vm-ease);
   overflow: hidden;
   background: var(--vm-deep);
   cursor: zoom-in;
@@ -660,25 +706,18 @@
   opacity: 0.45;
   transition: opacity 0.5s;
 }
-.tick {
+/* The gold corner frame from the watermark bundle, faded in on hover. */
+.frame {
   position: absolute;
-  left: 14px;
-  top: 14px;
-  width: 0;
-  height: 1px;
-  background: var(--vm-accent);
-  transition: width 0.55s var(--vm-ease) 0.05s;
+  inset: 10px;
   z-index: 3;
-}
-.tickV {
-  position: absolute;
-  left: 14px;
-  top: 14px;
-  height: 0;
-  width: 1px;
-  background: var(--vm-accent);
-  transition: height 0.55s var(--vm-ease) 0.05s;
-  z-index: 3;
+  pointer-events: none;
+  background-image: url('/brand/frames/frame-square-gold.svg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity 0.45s var(--vm-ease), transform 0.45s var(--vm-ease);
 }
 .shotCap {
   position: absolute;
@@ -711,11 +750,10 @@
 .shot:hover .sheen {
   opacity: 0.9;
 }
-.shot:hover .tick {
-  width: 34px;
-}
-.shot:hover .tickV {
-  height: 34px;
+.shot:hover .frame,
+.shot:focus-visible .frame {
+  opacity: 0.85;
+  transform: none;
 }
 .shot:hover .shotCap,
 .shot:focus-visible .shotCap {
@@ -1145,29 +1183,28 @@
   place-items: center;
   position: relative;
   min-height: 340px;
+  padding: 30px;
+  overflow: visible;
 }
 .ring {
   position: absolute;
-  width: min(420px, 86%);
+  width: min(360px, 78%);
   aspect-ratio: 1;
   border: 1px solid var(--vm-deep-line);
   border-radius: 50%;
   animation: vmSpin 34s linear infinite;
 }
 .ringInner {
-  width: min(320px, 66%);
+  width: min(270px, 58%);
   animation-duration: 24s;
   animation-direction: reverse;
   border-style: dashed;
 }
 .orbMark {
   position: relative;
-  width: min(290px, 62%);
-  aspect-ratio: 1;
-  background-image: var(--vm-mono);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  width: min(230px, 52%);
+  height: auto;
+  object-fit: contain;
   filter: drop-shadow(0 26px 40px rgba(0, 0, 0, 0.55));
   animation: vmBob 8s ease-in-out infinite;
 }
@@ -1396,16 +1433,19 @@
 }
 .footGrid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
+  grid-template-columns: 1.3fr 1fr 1.2fr 1fr;
   gap: 34px;
 }
 .footMark {
   display: block;
-  width: 44px;
-  height: 44px;
+  width: 64px;
+  height: 64px;
   background-image: var(--vm-mono);
   background-size: contain;
   background-repeat: no-repeat;
+}
+.footMark:hover {
+  background-image: var(--vm-mono-anim);
 }
 .foot h4 {
   color: var(--vm-deep-ink);
@@ -1440,6 +1480,14 @@
 }
 
 /* ----------------------------------------------------------- responsive */
+/* Between these widths the left-hand mode switcher would sit on top of the
+   content column, so the column gets out of its way. */
+@media (min-width: 1081px) and (max-width: 1580px) {
+  .wrap {
+    padding-left: 108px;
+  }
+}
+
 @media (max-width: 1080px) {
   .rail {
     display: none;
@@ -1482,8 +1530,9 @@
     height: 66px;
   }
   .bt {
-    font-size: 15px;
-    letter-spacing: 0.1em;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
   }
   .gal {
     columns: 2;
@@ -1510,15 +1559,32 @@
     padding: 74px 0;
   }
   .themes {
+    left: 12px;
+    right: 12px;
+    top: auto;
     bottom: 14px;
+    transform: none;
+    flex-direction: row;
     gap: 4px;
     padding: 7px;
-    width: calc(100% - 24px);
+    width: auto;
     justify-content: center;
   }
   .themeName,
   .themesLabel {
     display: none;
+  }
+  .heroCopy {
+    margin-left: 0;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .heroMark {
+    display: none;
+  }
+  .mk {
+    width: 42px;
+    height: 42px;
   }
   .sw {
     width: 52px;
@@ -1544,4 +1610,438 @@
     opacity: 1;
     transform: none;
   }
+}
+
+/* ================================================================ 2.5D scenes
+   Layered photo modules from Vertical_Moment_Layered_Photos_v1_2. Only
+   transform and opacity are animated, per the bundle's implementation notes. */
+.scene {
+  --mx: 0;
+  --my: 0;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.sceneBg {
+  width: 100%;
+  height: 100%;
+}
+.sceneTile {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 2px;
+  background: var(--vm-deep);
+}
+.planes,
+.shards {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.plane {
+  position: absolute;
+  inset: -2%;
+  width: 104%;
+  height: 104%;
+  object-fit: cover;
+  filter: var(--vm-photo);
+  transform: translate(calc(var(--mx) * var(--motion)), calc(var(--my) * var(--motion)))
+    scale(var(--plane-scale, 1));
+  transition: transform 140ms ease-out, filter 0.6s var(--vm-ease);
+  will-change: transform;
+}
+.sceneTile:hover .plane {
+  filter: var(--vm-photo-hi);
+}
+.shine {
+  position: absolute;
+  inset: -25%;
+  z-index: 9;
+  pointer-events: none;
+  background: linear-gradient(12deg, transparent 40%, rgba(255, 255, 255, 0.1) 50%, transparent 60%);
+  mix-blend-mode: screen;
+  animation: vmShine 8s ease-in-out infinite;
+}
+@keyframes vmShine {
+  0%,
+  70% {
+    transform: translateX(-80%);
+  }
+  90%,
+  100% {
+    transform: translateX(80%);
+  }
+}
+.shards {
+  opacity: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+.shards img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sceneBreaking .planes {
+  opacity: 0;
+}
+.sceneBreaking .shards {
+  opacity: 1;
+}
+.sceneCap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 11;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 14px;
+  color: var(--vm-deep-ink);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, transparent, var(--vm-veil-3));
+}
+.sceneCap em {
+  font-style: normal;
+  color: var(--vm-accent);
+}
+
+/* Featured tile: the one gallery box that carries a real gold frame. */
+.featured {
+  position: relative;
+  margin: 0 0 14px;
+  break-inside: avoid;
+  display: block;
+}
+.featuredFrame {
+  position: relative;
+}
+.featuredFrame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 12;
+  pointer-events: none;
+  background-image: url('/brand/frames/frame-portrait-gold.svg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: 0.55;
+  transition: opacity 0.45s var(--vm-ease);
+}
+.featured:hover .featuredFrame::after {
+  opacity: 1;
+}
+.featured figcaption {
+  margin-top: 10px;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--vm-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .plane {
+    transform: none !important;
+  }
+  .shine,
+  .shards {
+    display: none;
+  }
+  .shot {
+    transform: none !important;
+  }
+}
+
+
+/* ------------------------------------------------- crag / location filters */
+.filterRow {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 0 14px;
+}
+.filterRow .filterLabel {
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--vm-muted);
+  margin-right: 6px;
+}
+.chipSm {
+  border: 1px solid var(--vm-line);
+  background: transparent;
+  color: var(--vm-muted);
+  border-radius: 999px;
+  padding: 7px 15px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+.chipSm:hover {
+  border-color: var(--vm-accent);
+  color: var(--vm-ink);
+}
+.chipSm[aria-pressed='true'] {
+  background: var(--vm-accent);
+  border-color: var(--vm-accent);
+  color: var(--vm-accent-ink);
+}
+.galNote {
+  color: var(--vm-muted);
+  font-size: 14.5px;
+  max-width: 66ch;
+  margin: 0 0 26px;
+}
+.galEmpty {
+  color: var(--vm-muted);
+  padding: 40px 0;
+}
+
+/* ------------------------------------------------------- about: archive row */
+.archive {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 30px;
+}
+.archive figure {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+.archive img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  filter: var(--vm-photo);
+  transition: transform 0.9s var(--vm-ease), filter 0.6s;
+}
+.archive figure:hover img {
+  transform: scale(1.08);
+  filter: var(--vm-photo-hi);
+}
+.archive figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--vm-deep-ink);
+  background: linear-gradient(180deg, transparent, var(--vm-veil-3));
+  opacity: 0;
+  transition: opacity 0.4s var(--vm-ease);
+}
+.archive figure:hover figcaption {
+  opacity: 1;
+}
+
+/* ------------------------------------------------------------ founder card */
+.founder {
+  display: grid;
+  grid-template-columns: 128px 1fr;
+  gap: 22px;
+  align-items: center;
+  margin-top: 34px;
+  padding-top: 28px;
+  border-top: 1px solid var(--vm-line);
+}
+.founder img {
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: var(--vm-photo);
+}
+.founder h3 {
+  font-size: 24px;
+  margin: 6px 0 4px;
+}
+.founder p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--vm-muted);
+  max-width: 48ch;
+}
+@media (max-width: 820px) {
+  .archive {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .founder {
+    grid-template-columns: 96px 1fr;
+    gap: 16px;
+  }
+  .founder img {
+    width: 96px;
+    height: 96px;
+  }
+}
+
+/* ============================================================== 3D Lab models */
+.models {
+  position: relative;
+  display: grid;
+  gap: 16px;
+}
+.viewer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid var(--vm-deep-line);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent 60%);
+}
+.viewerFallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+.viewerFallback img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: var(--vm-photo) brightness(0.7);
+}
+.viewerNote {
+  position: relative;
+  z-index: 2;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--vm-deep-ink);
+}
+.viewerHint {
+  position: absolute;
+  left: 14px;
+  bottom: 12px;
+  z-index: 3;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--vm-deep-muted);
+  pointer-events: none;
+}
+.modelPicker {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.modelChip {
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  text-align: left;
+  background: transparent;
+  border: 1px solid var(--vm-deep-line);
+  color: var(--vm-deep-muted);
+  transition: 0.3s var(--vm-ease);
+}
+.modelChip img {
+  width: 54px;
+  height: 40px;
+  object-fit: cover;
+  filter: var(--vm-photo);
+}
+.modelChip b {
+  display: block;
+  font-weight: 400;
+  padding-right: 34px;
+  font-size: 12.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--vm-deep-ink);
+}
+.modelChip em {
+  font-style: normal;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.modelChip:hover {
+  border-color: var(--vm-accent);
+}
+.modelChip[aria-pressed='true'] {
+  border-color: var(--vm-accent);
+  background: color-mix(in srgb, var(--vm-accent) 14%, transparent);
+}
+.modelMeta {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: 0;
+  font-size: 14px;
+  color: var(--vm-deep-muted);
+}
+.modelStats {
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--vm-accent);
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------- founder / socials */
+.founderLinks {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+.founderLinks a {
+  font-size: 11.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--vm-accent);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 3px;
+  transition: border-color 0.3s;
+}
+.founderLinks a:hover {
+  border-bottom-color: var(--vm-accent);
+}
+.founderNote {
+  margin-top: 14px !important;
+  font-size: 14px;
+}
+
+@media (max-width: 820px) {
+  .modelPicker {
+    grid-template-columns: 1fr;
+  }
+  .viewer {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+.scanBadge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 2;
+  font-style: normal;
+  font-size: 8.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 3px 6px;
+  color: var(--vm-accent-ink);
+  background: var(--vm-accent);
+}
+.modelChip {
+  position: relative;
 }
