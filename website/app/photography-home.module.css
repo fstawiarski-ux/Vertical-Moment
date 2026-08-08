@@ -965,6 +965,27 @@
   color: var(--vm-accent);
 }
 
+/* Temporary honest state while the final price list is being approved. */
+.priceSoon {
+  color: var(--vm-muted);
+}
+
+.priceNote {
+  max-width: 62ch;
+  margin: 32px auto 0;
+  color: var(--vm-muted);
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.priceNote a {
+  border-bottom: 1px solid currentColor;
+  color: var(--vm-accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
 /* ---------------------------------------------------------------- crags */
 .crags {
   padding: 96px 0;
