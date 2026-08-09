@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-08T21:59:29.906Z",
+  "generatedAt": "2026-08-09T10:31:50.768Z",
   "policy": "web-derivatives-only",
   "items": [
     {
@@ -39,9 +39,9 @@
       },
       "preview": {
         "file": "wachau-09-preview.webp",
-        "width": 3200,
-        "height": 388,
-        "bytes": 375536
+        "width": 5200,
+        "height": 631,
+        "bytes": 844658
       },
       "thumbnail": {
         "file": "wachau-09-thumb.webp",

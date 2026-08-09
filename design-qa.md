@@ -1,90 +1,68 @@
-# Panorama product design QA
+# Nasenwand panorama experience design QA
 
-## Comparison target and evidence
+## Source and implementation
 
-- Source visual truth:
-  - `D:\VERTICALMOMENT\Panoramas\Wachau\7.png`, `9.png` through `16.png`
-  - `C:\Users\ineedbooze\Documents\Codex\2026-08-08\referenced-chatgpt-conversation-this-is-an-2\work\panorama-audit\before-gallery.png`
-  - `C:\Users\ineedbooze\Documents\Codex\2026-08-08\referenced-chatgpt-conversation-this-is-an-2\work\panorama-audit\before-topo.png`
-- Rendered implementation:
-  - `http://localhost:3017/prints/panoramas`
-  - `http://localhost:3017/#work` with the `Panoramas` filter active
-  - `http://localhost:3017/vision/wall-reveal` with Topo and panorama-panel states
-- Implementation screenshots:
-  - `C:\Users\ineedbooze\Documents\Codex\2026-08-08\referenced-chatgpt-conversation-this-is-an-2\work\panorama-audit\after-panorama-page.png`
-  - `C:\Users\ineedbooze\Documents\Codex\2026-08-08\referenced-chatgpt-conversation-this-is-an-2\work\panorama-audit\after-gallery.png`
-  - `C:\Users\ineedbooze\Documents\Codex\2026-08-08\referenced-chatgpt-conversation-this-is-an-2\work\panorama-audit\after-topo.png`
-  - `C:\Users\ineedbooze\Documents\Codex\2026-08-08\referenced-chatgpt-conversation-this-is-an-2\work\panorama-audit\after-wall-panel.png`
-- Side-by-side comparison inputs:
-  - `C:\Users\ineedbooze\Documents\Codex\2026-08-08\referenced-chatgpt-conversation-this-is-an-2\work\panorama-audit\compare-gallery.png`
-  - `C:\Users\ineedbooze\Documents\Codex\2026-08-08\referenced-chatgpt-conversation-this-is-an-2\work\panorama-audit\compare-topo.png`
-  - `C:\Users\ineedbooze\Documents\Codex\2026-08-08\referenced-chatgpt-conversation-this-is-an-2\work\panorama-audit\compare-brand-to-panorama.png`
-- Browser CSS viewport: 1280 × 720, device pixel ratio 1.
-- In-app Browser focused capture: 717 × 712 for homepage/panorama comparisons and 725 × 720 for Wall Reveal. The browser panel clips the right side of the 1280 px CSS viewport; comparisons were normalized to equal focused-capture dimensions before judging.
-- State: production-like local development build, light homepage theme, Wall Reveal Topo state, and panorama collection default state.
+- Approved visual source: `C:\Users\ineedbooze\.codex\state\plugins\product-design\assets\vertical-moment-guided-passage-desktop-approved.png`
+- Final desktop Region capture: `work/panorama-qa/nasenwand-region-desktop-final.png`
+- Final mobile Region capture: `work/panorama-qa/nasenwand-region-mobile-final.png`
+- Final mobile Sector capture: `work/panorama-qa/nasenwand-sector-mobile-final.png`
+- Desktop 360 capture: `work/panorama-qa/nasenwand-360-desktop-pass1.png`
+- Desktop 3D capture: `work/panorama-qa/nasenwand-sector-3d-desktop-pass1.png`
+- Desktop and mobile test viewports: 1148 x 720 and 390 x 720 CSS px at DPR 1
+- Tested route: Wachau / Nasenwand / Panorama
 
 ## Full-view comparison evidence
 
-The panorama collection retains the current site's editorial serif hierarchy, uppercase utility copy, warm paper, deep forest surfaces, restrained gold accent and real brand mark. The gallery filter changes the data and copy without changing the existing section hierarchy. Wall Reveal keeps its established cyan spatial-data language while adding a single secondary action rather than altering the four-stage flow.
+The approved source and both final Region captures were inspected together in one comparison input. The implementation keeps the established Vertical Moment language: forest-black framing, cream editorial serif typography, gold emphasis, cyan interaction cues, fine outlines, a cinematic photographic stage, and the numbered Region -> Crag -> Sector journey. The requested 360 and Videos chapters extend that same system instead of creating a separate visual style.
 
-The panorama hero uses the supplied `9.png` derivative without fake or generated imagery. Its dark overlay preserves readable white type while retaining terrain detail. The page clearly separates photography, provisional regional-reference status and print enquiry.
+The left desktop rail, compact mobile header, focus frame, chapter controls, panorama overview, and full-range controls preserve the approved hierarchy while using real Nasenwand and Wachau media. The mobile composition reduces chrome without changing the brand or navigation model.
 
-## Focused comparison evidence
+## Fidelity surfaces
 
-- Gallery: `compare-gallery.png` confirms identical header, section title, filter-chip design, crag row and gallery rhythm. The panorama state adds a factual archive note and wide photographic cards with a persistent print label.
-- Wall Reveal: `compare-topo.png` confirms the same background, copy hierarchy, blend control, four-stage timeline and primary action. The only material addition is `Open regional panoramas`, positioned between the blend control and stage timeline.
-- Brand transfer: `compare-brand-to-panorama.png` confirms the dedicated page uses the same real mark, serif display voice, restrained gold accent and editorial photography-led composition.
+1. Brand and navigation retain the Vertical Moment wordmark treatment, cream text, gold active states, cyan feedback, and dark forest background.
+2. Hero typography keeps the approved editorial scale and gold italic emphasis while protecting the wall focus area.
+3. The photographic stage uses the supplied Wachau panorama and Nasenwand derivatives rather than fabricated assets.
+4. Region, Crag, Sector, 360, and Videos share one numbered chapter system on desktop and mobile.
+5. External references, media tabs, 3D controls, and video choices reuse the existing outlined-button and fine-line vocabulary.
 
-## Required fidelity surfaces
+## Responsive and interaction checks
 
-- Fonts and typography: Georgia and the existing system-sans stack are retained. Display/body contrast, uppercase tracking and line-height match the current website and Wall Reveal. No actionable wrapping or truncation was found in the captured states.
-- Spacing and layout rhythm: the homepage and Wall Reveal base layouts remain intact. New controls keep 44 px or larger targets; panorama grids collapse to one column under 860 px. No document-level horizontal overflow was found at the 1280 px browser viewport.
-- Colors and visual tokens: the page reuses the existing warm paper, deep forest, gold and Wall Reveal cyan roles. Provisional status uses cyan consistently with the data-layer experience.
-- Image quality and asset fidelity: all nine supplied panoramas are represented. Visible stitch-canvas borders were trimmed only in web derivatives for files 9, 10, 12, 13, 15 and 16; the original PNGs remain untouched. Previews are 2,400–3,200 px wide and thumbnails are 1,000 px wide.
-- Copy and content: print dimensions are derived from native pixels at explicit 300 ppi and 240 ppi reference densities. The product avoids unverified price, edition and route claims. Route/reference copy is consistently provisional.
-- Icons/assets: the real Vertical Moment brand asset is used. No custom SVG, CSS illustration, emoji or placeholder product art was introduced.
-- States and interactions: filter selection, previous/next, fit/detail, full-screen open/close, panorama lightbox, deep links and Wall Reveal panorama panel were exercised in the in-app Browser.
-- Accessibility: semantic buttons/links, pressed states, labelled groups, dialog roles, alt text, visible focus styles, Escape support, arrow-key navigation and reduced-motion rules are present.
+- No horizontal page overflow at 1148 x 720 or 390 x 720.
+- Mobile chapter targets measure 72 x 62 px. Sector media controls now measure 64 x 44 px.
+- Region overview is 358 x 43 px on mobile, matching the uploaded ultra-wide panorama ratio.
+- Crag and Sector overview is 69 x 52 px on mobile, matching the supplied 4:3 media ratio and remaining aligned 16 px from the right edge.
+- The overview uses intrinsic media dimensions and `object-fit: cover`; switching chapters changes the box ratio without stretching the source.
+- Region supports the full-range slider, finger or mouse drag, mouse wheel, Arrow Left / Right, Home, End, click-to-jump, and a live cyan viewport marker.
+- Sector switches between Photo, Spatial, Topo, Routes, and the real `nasenwand-topo.glb` model.
+- The Bergsteigen topo, theCrag map, and Google 360 reference links are available from the Nasenwand experience.
+- Chapter 4 opens the supplied public Google Maps 360 sphere inside the page and retains an external-open action.
+- Chapter 5 defaults to a 290 KB still; Film, Scroll scrub, Ping-pong loop, and Portrait story load only after selection.
+- Scroll scrub selection loads `scrub-540-allkey.mp4`, exposes a time slider, follows wheel input, and aligns the supplied contour overlay.
+- Initial Region load contains no `video`, `iframe`, or `model-viewer` elements. Its resource timing list contains no scrub movie, hero movie, GLB, or Google Maps embed.
+- Browser inspection returned no application warnings or errors during the final interaction pass.
 
-## Findings
+## Performance and storage check
 
-No actionable P0, P1 or P2 visual findings remain.
+- The 88,065,748-byte source RAR was inventoried without extracting another duplicate copy.
+- The original archive includes a 58,205,699-byte all-keyframe scrub file plus source plates, layer PNGs, masks, and standalone HTML.
+- The website uses prepared derivatives and does not ship those masks or source plates in the initial page.
+- Initial Nasenwand card media is `nasenwand-photo-1280.webp` at 182,900 bytes.
+- Sector previews are selected on demand: spatial 297,216 bytes, topo 547,172 bytes, and route overlay 144,746 bytes at 1280 resolution.
+- The real GLB is 1,745,504 bytes and is requested only after selecting 3D wall.
+- The default video chapter still is 289,658 bytes. Larger film, scrub, loop, and portrait files are absent from the initial document and requested only after explicit selection.
+- No source archive or print master was copied into a second public bundle.
+- Chrome performance-trace tooling was unavailable in this session, so this pass records verified DOM/resource timing behavior and file delivery sizes rather than estimated Core Web Vitals.
 
-## Comparison history
+## Findings and fixes
 
-### Iteration 1
+1. Crag and Sector overview boxes forced the Region panorama shape. Replaced the fixed shape with each selected asset's natural aspect ratio and top-right alignment.
+2. The 360 chapter was only a placeholder. Added the supplied Google Maps sphere as a lazy iframe with a separate external link.
+3. Topo references had no dedicated destination. Added Bergsteigen and theCrag actions to the desktop rail and compact Sector resource dock.
+4. Sector media was flattened into one image. Added Photo, Spatial, Topo, Routes, and a lazy-loaded real 3D wall.
+5. Video was a generic future state. Added a poster-first desk with film, scroll scrub, loop, and portrait options that load only when chosen.
+6. The source RAR risked duplicated storage. Kept it as the master bundle, inventoried it in place, and reused the already optimized public derivatives.
+7. Mobile Sector controls were 42 px high. Raised the minimum to 44 px and rechecked all five controls.
 
-- [P2] Locale-dependent pixel formatting caused a server/client hydration mismatch on the panorama detail record and surfaced the development issues overlay.
-  - Fix: replaced implicit `toLocaleString()` calls with an explicit `Intl.NumberFormat('en-US')` formatter.
-- [P2] An obsolete root-layout inline theme script produced a React development warning and targeted a theme attribute that the active theme component does not use.
-  - Fix: removed the unused script; the active `PhotographyTheme` component remains the canonical theme controller.
+## Final result
 
-### Iteration 2
-
-- Post-fix browser DOM opened without the issues overlay.
-- Production build completed successfully.
-- Re-captured `after-panorama-page.png` and regenerated `compare-brand-to-panorama.png` without the development-error badge.
-- No new P0/P1/P2 findings were found.
-
-## Open questions
-
-- Exact crag/sector association for each panorama still needs owner or field confirmation before any image is promoted from regional reference to registered wall reference.
-- Paper, printer profile, pricing and edition model are intentionally not defined in this build.
-- A native narrow-device capture remains a useful follow-up; responsive behavior is implemented and code-inspected, while the available in-app Browser supplied a fixed 1280 × 720 CSS viewport.
-
-## Implementation checklist
-
-- [x] Preserve all supplied master PNGs outside the public website.
-- [x] Generate deterministic thumbnail and proof derivatives with a checksum manifest.
-- [x] Add a reusable panorama catalogue with print and verification metadata.
-- [x] Add the main-gallery panorama filter and print-detail lightbox action.
-- [x] Add the dedicated panorama viewer and enquiry path.
-- [x] Add the Wall Reveal regional-reference panel.
-- [x] Verify build, browser interactions and clean client rendering.
-
-## Follow-up polish
-
-- [P3] After a print supplier is chosen, add paper swatches and a photographed framed-print scale reference.
-- [P3] After field registration, selected wall studies can receive optional verified sector hotspots without changing the panorama source record.
-
-final result: passed
+passed

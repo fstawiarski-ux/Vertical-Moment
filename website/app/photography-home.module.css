@@ -1248,6 +1248,14 @@
   border-color: var(--vm-accent);
   color: var(--vm-accent-ink);
 }
+.labActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.labActions .ghost {
+  margin-top: 30px;
+}
 .orb {
   display: grid;
   place-items: center;
@@ -2069,6 +2077,25 @@
   text-transform: uppercase;
   color: var(--vm-accent);
   white-space: nowrap;
+}
+.modelMetaActions {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.modelPanoramaLink {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  border: 1px solid var(--vm-accent);
+  border-radius: 999px;
+  padding: 0 13px;
+  color: var(--vm-accent);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 /* --------------------------------------------------------- founder / socials */

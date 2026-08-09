@@ -14,7 +14,10 @@ if (!sourceDirectory) {
 // supplied PNG masters are never modified or copied into the public website.
 const sources = [
   { id: 'wachau-07', file: '7.png', previewWidth: 2400 },
-  { id: 'wachau-09', file: '9.png', trim: { bottom: 40 } },
+  // The primary regional experience displays this unusually wide frame at
+  // full viewport height. A 5200px derivative keeps its details legible while
+  // remaining far smaller than the private PNG master.
+  { id: 'wachau-09', file: '9.png', previewWidth: 5200, trim: { bottom: 40 } },
   { id: 'wachau-10', file: '10.png', trim: { top: 76, bottom: 56 } },
   { id: 'wachau-11', file: '11.png', previewWidth: 2600 },
   { id: 'wachau-12', file: '12.png', trim: { bottom: 35 } },
