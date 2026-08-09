@@ -141,11 +141,17 @@
 
 /* ------------------------------------------------------------------ nav */
 .nav {
+  --nav-fg: #fff;
+  --nav-muted: rgba(255, 255, 255, 0.9);
+  --nav-line: rgba(255, 255, 255, 0.48);
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 900;
-  border-bottom: 1px solid transparent;
-  transition: background-color 0.4s, border-color 0.4s;
+  background: rgba(4, 8, 5, 0.78);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--nav-line);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.16);
+  transition: background 0.4s, border-color 0.4s, box-shadow 0.4s;
 }
 .nav .wrap {
   display: flex;
@@ -154,9 +160,12 @@
   height: 88px;
 }
 .navSolid {
-  background: color-mix(in srgb, var(--vm-bg) 88%, transparent);
+  --nav-fg: var(--vm-ink);
+  --nav-muted: var(--vm-ink);
+  --nav-line: var(--vm-line);
+  background: color-mix(in srgb, var(--vm-bg) 96%, transparent);
   backdrop-filter: blur(16px);
-  border-bottom-color: var(--vm-line);
+  box-shadow: 0 8px 28px color-mix(in srgb, var(--vm-ink) 10%, transparent);
 }
 .brand {
   display: flex;
@@ -178,11 +187,12 @@
   font-family: var(--vm-disp);
   font-size: 21px;
   letter-spacing: 0.18em;
-  color: var(--vm-deep-ink);
+  color: var(--nav-fg);
   white-space: nowrap;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.34);
 }
 .navSolid .bt {
-  color: var(--vm-ink);
+  text-shadow: none;
 }
 /* One flex group so the whole set of text links hides together at the
    tablet breakpoint, instead of wrapping or squeezing individually. */
@@ -193,18 +203,19 @@
   flex-shrink: 1;
   min-width: 0;
 }
-.lnk {
+.nav .lnk {
   font-size: 15px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--vm-deep-muted);
+  color: var(--nav-muted);
   transition: color 0.3s;
   white-space: nowrap;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.34);
 }
 .navSolid .lnk {
-  color: var(--vm-muted);
+  text-shadow: none;
 }
-.lnk {
+.nav .lnk {
   position: relative;
   padding-bottom: 4px;
 }
@@ -220,28 +231,24 @@
   transform-origin: left;
   transition: transform 0.4s var(--vm-ease);
 }
-.lnk:hover::after {
+.nav .lnk:hover::after {
   transform: scaleX(1);
 }
-.lnk:hover {
-  color: var(--vm-accent);
-}
-.pill {
-  border: 1px solid var(--vm-deep-line);
+.nav .pill {
+  border: 1px solid var(--nav-line);
   border-radius: 999px;
   padding: 11px 20px;
   font-size: 13px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--vm-deep-ink);
+  color: var(--nav-fg);
   flex-shrink: 0;
   white-space: nowrap;
 }
 .navSolid .pill {
-  border-color: var(--vm-line);
-  color: var(--vm-ink);
+  text-shadow: none;
 }
-.pill:hover {
+.nav .pill:hover {
   background: var(--vm-accent);
   border-color: var(--vm-accent);
   color: var(--vm-accent-ink);
@@ -250,8 +257,8 @@
   display: none;
   flex-shrink: 0;
   background: none;
-  border: 1px solid var(--vm-deep-line);
-  color: var(--vm-deep-ink);
+  border: 1px solid var(--nav-line);
+  color: var(--nav-fg);
   border-radius: 999px;
   padding: 9px 15px;
   font-size: 11.5px;
@@ -259,32 +266,47 @@
   text-transform: uppercase;
 }
 .navSolid .burger {
-  border-color: var(--vm-line);
-  color: var(--vm-ink);
+  text-shadow: none;
 }
-/* Icon-only, deliberately not styled like a .lnk — it shouldn't read as
-   an eighth nav item competing for the same horizontal space. */
+/* The current theme is named explicitly; the compact L/D marker remains on
+   narrow screens where the full label would crowd the brand. */
 .themeToggle {
   flex-shrink: 0;
-  display: grid;
-  place-items: center;
-  width: 38px;
-  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 13px 0 8px;
   background: none;
-  border: 1px solid var(--vm-deep-line);
+  border: 1px solid var(--nav-line);
   border-radius: 999px;
-  color: var(--vm-deep-ink);
-  font-size: 15px;
+  color: var(--nav-fg);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   line-height: 1;
+  text-transform: uppercase;
   transition: border-color 0.3s, color 0.3s;
 }
-.navSolid .themeToggle {
-  border-color: var(--vm-line);
-  color: var(--vm-ink);
+.themeGlyph {
+  display: grid;
+  place-items: center;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background: var(--nav-fg);
+  color: #162018;
+  font-size: 10px;
+  text-shadow: none;
+}
+.navSolid .themeGlyph {
+  background: var(--vm-ink);
+  color: var(--vm-bg);
 }
 .themeToggle:hover {
   border-color: var(--vm-accent);
-  color: var(--vm-accent);
 }
 .sheet {
   position: fixed;
@@ -316,6 +338,28 @@
   font-size: 11.5px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
+}
+.sheetTheme {
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid var(--vm-deep-line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--vm-deep-ink);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.brand:focus-visible,
+.lnk:focus-visible,
+.pill:focus-visible,
+.themeToggle:focus-visible,
+.burger:focus-visible,
+.sheet a:focus-visible,
+.sheet button:focus-visible {
+  outline: 3px solid var(--vm-accent);
+  outline-offset: 3px;
 }
 
 /* ------------------------------------------------------------- icon rail */
@@ -1589,13 +1633,11 @@
   }
 }
 
-/* Tablet: the five text links and the theme toggle come off the bar (both
-   still reachable from the menu sheet) but the Climbers Lounge pill — the
-   one thing worth a dedicated click — stays. This is its own deliberate
+/* Tablet: the five text links come off the bar but the current theme and the
+   Climbers Lounge pill — the two controls worth a dedicated click — stay. This is its own deliberate
    state, not a shrunk-down desktop nav or a stretched-out phone nav. */
 @media (max-width: 1099px) {
-  .navLinks,
-  .themeToggle {
+  .navLinks {
     display: none;
   }
   .burger {
@@ -1665,8 +1707,23 @@
   }
 }
 
-/* Mobile: the pill folds into the burger menu too, and the bar itself
-   shrinks — this is the only tier that gets this compact. */
+@media (max-width: 760px) {
+  .themeToggle {
+    width: 44px;
+    padding: 0;
+  }
+  .themeLabel {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .pill {
+    display: none;
+  }
+}
+
+/* Mobile: the bar itself shrinks and the wordmark yields to the monogram. */
 @media (max-width: 640px) {
   .hero {
     display: block;
@@ -1711,8 +1768,7 @@
     height: 66px;
   }
   .bt {
-    font-size: 14px;
-    letter-spacing: 0.08em;
+    display: none;
   }
   .mk {
     width: 42px;

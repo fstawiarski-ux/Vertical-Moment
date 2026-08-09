@@ -70,11 +70,14 @@ export default function PhotographyNav() {
             type="button"
             className={styles.themeToggle}
             onClick={toggleTheme}
-            aria-label="Toggle light/dark mode"
+            aria-label={`Current theme: ${dark ? 'dark' : 'light'}. Switch to ${dark ? 'light' : 'dark'} mode`}
             aria-pressed={dark}
-            title={dark ? 'Switch to light' : 'Switch to dark'}
+            title={dark ? 'Switch to light mode' : 'Switch to dark mode'}
           >
-            {dark ? '☀' : '☾'}
+            <span className={styles.themeGlyph} aria-hidden="true">
+              {dark ? 'D' : 'L'}
+            </span>
+            <span className={styles.themeLabel}>{dark ? 'Dark' : 'Light'}</span>
           </button>
           <button type="button" className={styles.burger} onClick={() => setMenuOpen(true)}>
             Menu
@@ -98,12 +101,13 @@ export default function PhotographyNav() {
             </a>
             <button
               type="button"
+              className={styles.sheetTheme}
               onClick={() => {
                 toggleTheme();
                 setMenuOpen(false);
               }}
             >
-              {dark ? 'Switch to light' : 'Switch to dark'}
+              Theme: {dark ? 'Dark' : 'Light'} · Switch to {dark ? 'light' : 'dark'}
             </button>
           </nav>
         </div>

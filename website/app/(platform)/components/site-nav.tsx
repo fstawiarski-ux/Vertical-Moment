@@ -45,13 +45,30 @@ export function SiteNav({ who: _who }: { who?: string | null }) {
           <Link href="/review-preview" className={is("/review-preview") ? "on" : ""}>Review data</Link>
         </nav>
         <div className="spacer" />
-        <button className="iconbtn" onClick={toggle} aria-label="Toggle theme">{dark ? "Light" : "Dark"}</button>
+        <button
+          className="iconbtn theme-mode"
+          onClick={toggle}
+          aria-label={`Current theme: ${dark ? "dark" : "light"}. Switch to ${dark ? "light" : "dark"} mode`}
+          aria-pressed={dark}
+          title={dark ? "Switch to light mode" : "Switch to dark mode"}
+        >
+          <span className="theme-state" aria-hidden="true">{dark ? "D" : "L"}</span>
+          {dark ? "Dark" : "Light"}
+        </button>
       </div>
       <nav className={`mobile-rail ${railVisible ? "show" : ""}`} aria-label="Main navigation">
         <Link href="/" className={is("/") ? "on rail-icon" : "rail-icon"} aria-label="Home">⌂</Link>
         <Link href="/contribute" className={is("/contribute") ? "on rail-icon" : "rail-icon"} aria-label="Contribute">+</Link>
         <Link href="/review-preview" className={is("/review-preview") ? "on rail-icon" : "rail-icon"} aria-label="Review data">R</Link>
-        <button className="rail-theme rail-icon" onClick={toggle} aria-label="Toggle theme">{dark ? "☀" : "☾"}</button>
+        <button
+          className="rail-theme rail-icon"
+          onClick={toggle}
+          aria-label={`Current theme: ${dark ? "dark" : "light"}. Switch to ${dark ? "light" : "dark"} mode`}
+          aria-pressed={dark}
+          title={dark ? "Dark theme; switch to light" : "Light theme; switch to dark"}
+        >
+          {dark ? "D" : "L"}
+        </button>
       </nav>
     </header>
   );
