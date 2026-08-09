@@ -502,9 +502,14 @@ export default function Page() {
               <li>Built from the same photo sets as the portfolio</li>
               <li>Open topo data for the crags around Vienna</li>
             </ul>
-            <a className={styles.ghost} href="/nasenwand-concepts">
-              Explore the Nasenwand study
-            </a>
+            <div className={styles.labActions}>
+              <a className={styles.ghost} href="/nasenwand-concepts">
+                Explore the Nasenwand study
+              </a>
+              <a className={styles.ghost} href="/explore/wachau/panoramas">
+                Explore Wachau panoramas
+              </a>
+            </div>
           </div>
           <PhotographyModels />
         </div>
@@ -610,6 +615,9 @@ export default function Page() {
                 </li>
                 <li>
                   <a href="#lab">3D Lab</a>
+                </li>
+                <li>
+                  <a href="/prints/panoramas">Panorama editions</a>
                 </li>
                 <li>
                   <a href="#contact">Contact</a>

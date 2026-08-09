@@ -1,0 +1,222 @@
+{
+  "generatedAt": "2026-08-09T10:31:50.768Z",
+  "policy": "web-derivatives-only",
+  "items": [
+    {
+      "id": "wachau-07",
+      "sourceFile": "7.png",
+      "sourceSha256": "6e775cf64d56f4950794e27804f043079006453d9c326287f5015cee412cb7a0",
+      "sourcePixels": "3025x2315",
+      "webCrop": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "preview": {
+        "file": "wachau-07-preview.webp",
+        "width": 2400,
+        "height": 1837,
+        "bytes": 1502034
+      },
+      "thumbnail": {
+        "file": "wachau-07-thumb.webp",
+        "width": 1000,
+        "height": 765,
+        "bytes": 241078
+      }
+    },
+    {
+      "id": "wachau-09",
+      "sourceFile": "9.png",
+      "sourceSha256": "ba21016fa61683cf1b1077e79881deaf457b487a1d18e670d1fbf7a9afb8f181",
+      "sourcePixels": "6075x777",
+      "webCrop": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 40
+      },
+      "preview": {
+        "file": "wachau-09-preview.webp",
+        "width": 5200,
+        "height": 631,
+        "bytes": 844658
+      },
+      "thumbnail": {
+        "file": "wachau-09-thumb.webp",
+        "width": 1000,
+        "height": 121,
+        "bytes": 26988
+      }
+    },
+    {
+      "id": "wachau-10",
+      "sourceFile": "10.png",
+      "sourceSha256": "e36a728b0d5d20682b0a2cb51aa940d0e5421710c13487feff430372070754f9",
+      "sourcePixels": "5887x1374",
+      "webCrop": {
+        "left": 0,
+        "top": 76,
+        "right": 0,
+        "bottom": 56
+      },
+      "preview": {
+        "file": "wachau-10-preview.webp",
+        "width": 3200,
+        "height": 675,
+        "bytes": 697300
+      },
+      "thumbnail": {
+        "file": "wachau-10-thumb.webp",
+        "width": 1000,
+        "height": 211,
+        "bytes": 53840
+      }
+    },
+    {
+      "id": "wachau-11",
+      "sourceFile": "11.png",
+      "sourceSha256": "807e225b51b409e87a4a4a79c017bd666ccbda147ef3aa11b0b76be5fb77d68c",
+      "sourcePixels": "3042x1454",
+      "webCrop": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "preview": {
+        "file": "wachau-11-preview.webp",
+        "width": 2600,
+        "height": 1243,
+        "bytes": 1118142
+      },
+      "thumbnail": {
+        "file": "wachau-11-thumb.webp",
+        "width": 1000,
+        "height": 478,
+        "bytes": 157438
+      }
+    },
+    {
+      "id": "wachau-12",
+      "sourceFile": "12.png",
+      "sourceSha256": "abf1a1615b855bf1f070ae1cda415ba80d0302a9681358aef2217409be02942e",
+      "sourcePixels": "4569x1015",
+      "webCrop": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 35
+      },
+      "preview": {
+        "file": "wachau-12-preview.webp",
+        "width": 3200,
+        "height": 686,
+        "bytes": 782520
+      },
+      "thumbnail": {
+        "file": "wachau-12-thumb.webp",
+        "width": 1000,
+        "height": 214,
+        "bytes": 63120
+      }
+    },
+    {
+      "id": "wachau-13",
+      "sourceFile": "13.png",
+      "sourceSha256": "a290a64616c866cdd1c4436b5bced8665c28024eb1c2aa9ca4056dea6ee8cb19",
+      "sourcePixels": "3845x1794",
+      "webCrop": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 28
+      },
+      "preview": {
+        "file": "wachau-13-preview.webp",
+        "width": 2800,
+        "height": 1286,
+        "bytes": 1259838
+      },
+      "thumbnail": {
+        "file": "wachau-13-thumb.webp",
+        "width": 1000,
+        "height": 459,
+        "bytes": 141916
+      }
+    },
+    {
+      "id": "wachau-14",
+      "sourceFile": "14.png",
+      "sourceSha256": "53209ff006f72361648f83df48a1a6691baa9cf85c61d19787c87d119457935e",
+      "sourcePixels": "3812x1341",
+      "webCrop": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "preview": {
+        "file": "wachau-14-preview.webp",
+        "width": 3000,
+        "height": 1055,
+        "bytes": 1089514
+      },
+      "thumbnail": {
+        "file": "wachau-14-thumb.webp",
+        "width": 1000,
+        "height": 352,
+        "bytes": 109090
+      }
+    },
+    {
+      "id": "wachau-15",
+      "sourceFile": "15.png",
+      "sourceSha256": "b1d4d2a1459f2bfc83a954cc9fce07ed678ddb239bc94ca47958332f714e3c70",
+      "sourcePixels": "3020x2394",
+      "webCrop": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 112
+      },
+      "preview": {
+        "file": "wachau-15-preview.webp",
+        "width": 2400,
+        "height": 1814,
+        "bytes": 1589108
+      },
+      "thumbnail": {
+        "file": "wachau-15-thumb.webp",
+        "width": 1000,
+        "height": 756,
+        "bytes": 257980
+      }
+    },
+    {
+      "id": "wachau-16",
+      "sourceFile": "16.png",
+      "sourceSha256": "dbde866d9973b943c357a6257ff2f67f91758e41ba4c7577b0322dd7251d891f",
+      "sourcePixels": "3605x1070",
+      "webCrop": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 30
+      },
+      "preview": {
+        "file": "wachau-16-preview.webp",
+        "width": 3200,
+        "height": 923,
+        "bytes": 799934
+      },
+      "thumbnail": {
+        "file": "wachau-16-thumb.webp",
+        "width": 1000,
+        "height": 288,
+        "bytes": 71510
+      }
+    }
+  ]
+}

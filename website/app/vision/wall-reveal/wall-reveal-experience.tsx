@@ -3,10 +3,11 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { createElement, useEffect, useMemo, useRef, useState } from 'react';
+import { panoramas } from '../../data/panoramas';
 import styles from './wall-reveal.module.css';
 
 type StageId = 'place' | 'scrub' | 'topo' | 'model';
-type PanelId = 'menu' | 'gallery' | 'budget' | null;
+type PanelId = 'menu' | 'gallery' | 'panoramas' | 'budget' | null;
 
 type Stage = {
   id: StageId;
@@ -180,7 +181,13 @@ export default function WallRevealExperience() {
     window.setTimeout(() => setShareState('Share'), 2200);
   };
 
-  const panelTitle = panel === 'gallery' ? 'Selected photography' : panel === 'budget' ? 'Media delivery plan' : 'Wall Reveal';
+  const panelTitle = panel === 'gallery'
+    ? 'Selected photography'
+    : panel === 'panoramas'
+      ? 'Wachau panorama references'
+      : panel === 'budget'
+        ? 'Media delivery plan'
+        : 'Wall Reveal';
 
   return (
     <main
@@ -286,11 +293,14 @@ export default function WallRevealExperience() {
         )}
 
         {active === 'topo' && (
-          <label className={styles.mixControl}>
-            <span>Spatial</span>
-            <input aria-label="Blend spatial relief and registered topo" type="range" min="0" max="100" value={topoMix} onChange={(event) => setTopoMix(Number(event.target.value))} />
-            <span>Topo</span>
-          </label>
+          <>
+            <label className={styles.mixControl}>
+              <span>Spatial</span>
+              <input aria-label="Blend spatial relief and registered topo" type="range" min="0" max="100" value={topoMix} onChange={(event) => setTopoMix(Number(event.target.value))} />
+              <span>Topo</span>
+            </label>
+            <button className={styles.secondaryAction} type="button" onClick={() => setPanel('panoramas')}>Open regional panoramas <span>9 studies</span></button>
+          </>
         )}
 
         <nav className={styles.stageNav} aria-label="Wall Reveal stages">
@@ -328,6 +338,26 @@ export default function WallRevealExperience() {
               </div>
             )}
 
+            {panel === 'panoramas' && (
+              <div className={styles.panoramaPanel}>
+                <div className={styles.panoramaIntro}>
+                  <span>Regional reference · provisional</span>
+                  <p>These images orient the wider Wachau landscape. They do not become route records until wall, sector and access geometry are separately registered and checked in the field.</p>
+                </div>
+                <div className={styles.panoramaShelf}>
+                  {panoramas.map((panorama, index) => (
+                    <a key={panorama.id} href={`/prints/panoramas#${panorama.id}`}>
+                      <span>{String(index + 1).padStart(2, '0')}</span>
+                      <img src={panorama.thumbnail} alt={panorama.alt} loading={index < 2 ? 'eager' : 'lazy'} />
+                      <strong>{panorama.title}</strong>
+                      <small>{panorama.category.replace('-', ' ')} · print study</small>
+                    </a>
+                  ))}
+                </div>
+                <a className={styles.panoramaProductLink} href="/prints/panoramas">Open the panorama viewer and print details</a>
+              </div>
+            )}
+
             {panel === 'budget' && (
               <div className={styles.budget}>
                 <div><span>First view</span><strong>183 KB panorama</strong></div>
@@ -335,7 +365,8 @@ export default function WallRevealExperience() {
                 <div><span>Topo requested</span><strong>547 KB registered layer</strong></div>
                 <div><span>3D requested</span><strong>1.66 MB optimized Nasenwand</strong></div>
                 <div><span>Photo preview</span><strong>590 KB · 6 of 33</strong></div>
-                <p>Masters, duplicate exports and source scans stay out of the page. Existing website derivatives are reused, so this vision route adds no duplicate media files.</p>
+                <div><span>Panorama shelf</span><strong>1.1 MB thumbnails · proofs on demand</strong></div>
+                <p>Print masters, duplicate exports and source scans stay out of the page. The nine panorama masters total 122 MB; the full web set is under 10 MB and only the requested proof is opened.</p>
               </div>
             )}
 
@@ -343,7 +374,9 @@ export default function WallRevealExperience() {
               <div className={styles.menu}>
                 {stages.map((item) => <button key={item.id} type="button" onClick={() => selectStage(item.id)}><span>{item.index} · {item.label}</span><small>{item.status}</small></button>)}
                 <button type="button" onClick={() => setPanel('gallery')}><span>Selected photography</span><small>Six optimized preview frames</small></button>
+                <button type="button" onClick={() => setPanel('panoramas')}><span>Wachau panoramas</span><small>Nine regional references and print studies</small></button>
                 <button type="button" onClick={() => setPanel('budget')}><span>Media delivery plan</span><small>What loads, when, and why</small></button>
+                <a href="/prints/panoramas"><span>Panorama editions</span><small>Full viewer, print limits and inquiry</small></a>
                 <a href="/nasenwand-concepts"><span>Nasenwand concept lab</span><small>Compare the wider motion studies</small></a>
                 <a href="/"><span>Photography home</span><small>Return to verticalmoment.com</small></a>
               </div>

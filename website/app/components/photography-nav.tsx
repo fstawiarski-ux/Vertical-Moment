@@ -10,6 +10,7 @@ const LINKS: { href: string; label: string }[] = [
   { href: '#about', label: 'About' },
   { href: '#lab', label: '3D Lab' },
   { href: '/vision/wall-reveal', label: 'Vision' },
+  { href: '/prints/panoramas', label: 'Panoramas' },
   { href: '#contact', label: 'Contact' },
 ];
 
