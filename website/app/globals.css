@@ -41,9 +41,8 @@ button{cursor:pointer}
   background:color-mix(in srgb,var(--paper) 82%,transparent);backdrop-filter:blur(16px)}
 .site-head .row{display:flex;align-items:center;gap:16px;min-height:64px}
 .brand{display:flex;align-items:center;gap:11px}
-.brand-mark{width:32px;height:23px;flex:none;background-color:var(--ink);
-  mask:url(/brand/vm-monogram.svg) center/contain no-repeat;-webkit-mask:url(/brand/vm-monogram.svg) center/contain no-repeat}
-[data-theme="dark"] .brand-mark{background-color:var(--chalk)}
+.brand-mark{width:32px;height:32px;flex:none;background:url('/brand/icons/02_forest_green.png') center/contain no-repeat}
+[data-theme="dark"] .brand-mark{filter:brightness(0) drop-shadow(0 0 1px rgba(245,245,243,.96)) drop-shadow(0 0 4px rgba(245,245,243,.56))}
 .nav{display:flex;gap:4px;margin-left:6px}
 .nav a{color:var(--muted);font-weight:600;padding:8px 13px;border-radius:999px;font-size:14px}
 .nav a.on{background:var(--forest);color:var(--chalk)}
@@ -418,7 +417,7 @@ footer .wrap{display:flex;gap:14px;flex-wrap:wrap;justify-content:space-between}
   .mobile-rail button{display:grid;place-items:center;min-width:44px;min-height:44px;padding:5px 7px;border-radius:12px;background:color-mix(in srgb,var(--surface) 88%,transparent);border:1px solid var(--line);box-shadow:0 4px 14px rgba(18,32,22,.12);color:var(--muted);font-size:10px;font-weight:800;backdrop-filter:blur(10px)}
   .mobile-rail a.on{background:var(--forest);border-color:var(--forest);color:var(--chalk)}
   .mobile-rail .rail-icon{font-size:22px;line-height:1;padding:0}
-  .mobile-rail .rail-logo{padding:7px}.mobile-rail .brand-mark{width:27px;height:22px}
+  .mobile-rail .rail-logo{padding:7px}.mobile-rail .brand-mark{width:27px;height:27px}
   .home-bar{padding-bottom:10px}
   .mvp-grid{display:flex;flex-direction:column;gap:12px}
   .mvp-model,.gallery-card,.mvp-grid>.map-only,.mvp-discovery{grid-column:auto;grid-row:auto;width:100%}

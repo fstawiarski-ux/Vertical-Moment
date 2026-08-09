@@ -34,7 +34,8 @@ html[data-theme='light'] {
   --vm-photo: grayscale(0.16) contrast(1.02);
   --vm-photo-hi: grayscale(0) contrast(1.04);
   --vm-mono: url('/brand/icons/02_forest_green.png');
-  --vm-mono-anim: url('/brand/icons/02_forest_green.webp');
+  --vm-mono-alt: url('/brand/icons/06_dynamic_shift.png');
+  --vm-lockup-alt: url('/brand/icons/07_cvm_lockup.png');
   --vm-tint: transparent;
 }
 
@@ -55,8 +56,11 @@ html[data-theme='dark'] {
   --vm-veil-3: rgba(0, 0, 0, 0.96);
   --vm-photo: grayscale(0.72) contrast(1.14) brightness(0.86);
   --vm-photo-hi: grayscale(0.08) contrast(1.1) brightness(0.98);
-  --vm-mono: url('/brand/icons/04_gray_outline.png');
-  --vm-mono-anim: url('/brand/icons/04_gray_outline.webp');
+  /* The same approved VM artwork is rendered black by the component so its
+     proportions and transparent edge stay identical across both themes. */
+  --vm-mono: url('/brand/icons/02_forest_green.png');
+  --vm-mono-alt: url('/brand/icons/06_dynamic_shift.png');
+  --vm-lockup-alt: url('/brand/icons/07_cvm_lockup.png');
   --vm-tint: transparent;
 }
 

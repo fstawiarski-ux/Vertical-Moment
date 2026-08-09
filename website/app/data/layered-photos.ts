@@ -4,6 +4,9 @@
 
 export interface SceneLayer {
   src: string;
+  /** Responsive alternatives for full-bleed scenes. */
+  srcSet?: string;
+  sizes?: string;
   /** Pointer travel in px for this plane. */
   motion: number;
   /** Slight upscale so the plane never exposes an edge while it moves. */
@@ -40,21 +43,27 @@ const shardsFor = (id: string): SceneShard[] => [
   { src: `/photography/layered/${id}/shards/shard_07.webp`, dx: -52.1, dy: -108.1, rot: 38 },
 ];
 
-/** Hero background — landscape, three planes: wall, canopy, climber. */
+/** Hero background — the approved smiling climber, kept central and unobstructed. */
 export const heroScene: LayeredScene = {
-  id: '9B3B6537',
-  title: 'Low-angle climber',
-  meta: 'Helenental · B&W',
-  orientation: 'landscape',
-  width: 1600,
-  height: 1068,
-  alt: 'Climber low on a limestone wall seen from the ground, framed by forest canopy',
+  id: '9B3B7069',
+  title: 'Smiling on the edge',
+  meta: 'Wachau · Vertical Moment',
+  orientation: 'portrait',
+  width: 1920,
+  height: 2876,
+  alt: 'Smiling climber holding the edge of a steep rock face, photographed from above in the forest',
   layers: [
-    { src: '/photography/layered/9B3B6537/background.webp', motion: 2, scale: 1.025, alt: 'Limestone wall' },
-    { src: '/photography/layered/9B3B6537/canopy.webp', motion: 4, scale: 1.0047 },
-    { src: '/photography/layered/9B3B6537/climber.webp', motion: 13, scale: 1.0153 },
+    {
+      src: '/photography/hero/9B3B7069-smiling-climber-1280.webp',
+      srcSet:
+        '/photography/hero/9B3B7069-smiling-climber-768.webp 768w, /photography/hero/9B3B7069-smiling-climber-1280.webp 1280w, /photography/hero/9B3B7069-smiling-climber-1920.webp 1920w',
+      sizes: '100vw',
+      motion: 3,
+      scale: 1.025,
+      alt: 'Smiling climber on the edge',
+    },
   ],
-  shards: shardsFor('9B3B6537'),
+  shards: [],
 };
 
 /** Featured gallery tile — portrait, three planes: wall, person, hands. */

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from '../photography-home.module.css';
 import PhotographyLayered from './photography-layered';
 import { heroScene } from '../data/layered-photos';
@@ -9,6 +9,7 @@ export default function PhotographyHero() {
   const layerRef = useRef<HTMLDivElement>(null);
   const markRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLElement>(null);
+  const [detailOpen, setDetailOpen] = useState(false);
 
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -51,7 +52,11 @@ export default function PhotographyHero() {
   }, []);
 
   return (
-    <section className={styles.hero} id="top" ref={heroRef}>
+    <section
+      className={[styles.hero, detailOpen ? styles.heroDetailOpen : ''].filter(Boolean).join(' ')}
+      id="top"
+      ref={heroRef}
+    >
       <div className={styles.heroLayer} ref={layerRef}>
         <PhotographyLayered scene={heroScene} variant="background" priority />
       </div>
@@ -59,6 +64,20 @@ export default function PhotographyHero() {
       <div className={styles.heroTint} />
       <div className={styles.heroMark} ref={markRef} aria-hidden="true" />
       <div className={styles.heroGrain} aria-hidden="true" />
+
+      <button
+        type="button"
+        className={styles.detailFocus}
+        aria-pressed={detailOpen}
+        aria-label={detailOpen ? 'Return to the full hero photograph' : 'Look closer at the climber\u2019s face and fingers'}
+        onClick={() => setDetailOpen((open) => !open)}
+      >
+        <span className={styles.detailLabel}>{detailOpen ? 'Return to full frame' : 'Look closer'}</span>
+        <span className={styles.detailArrow} aria-hidden="true">
+          {detailOpen ? '\u2196' : '\u2198'}
+        </span>
+        <span className={styles.detailFrame} aria-hidden="true" />
+      </button>
 
       <div className={`${styles.heroIn} ${styles.wrap}`}>
         <div className={styles.heroCopy}>

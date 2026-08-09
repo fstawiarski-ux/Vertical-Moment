@@ -142,6 +142,8 @@ export default function PhotographyLayered({ scene, variant = 'tile', priority =
             key={layer.src}
             className={styles.plane}
             src={layer.src}
+            srcSet={layer.srcSet}
+            sizes={layer.sizes}
             alt={i === 0 ? scene.alt : ''}
             width={scene.width}
             height={scene.height}
