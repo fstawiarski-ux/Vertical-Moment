@@ -16,6 +16,7 @@
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
     "drizzle-orm": "^0.45.2",
     "next": "^16.2.0",
     "react": "^18.3.1",
