@@ -62,7 +62,7 @@ export default function PanoramaEditions() {
     <main className={styles.page}>
       <header className={styles.header}>
         <a className={styles.brand} href="/" aria-label="Vertical Moment home">
-          <img src="/brand/icons/03_silver_vector.png" alt="" />
+          <span className={`vm-static-logo ${styles.brandLogo}`} aria-hidden="true" />
           <span>Vertical Moment</span>
         </a>
         <nav aria-label="Panorama navigation">

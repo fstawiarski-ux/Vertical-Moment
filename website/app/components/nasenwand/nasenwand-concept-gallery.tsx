@@ -238,7 +238,7 @@ export default function NasenwandConceptGallery({ config }: { config: SpatialExp
     <main className={styles.page}>
       <header className={styles.header}>
         <a className={styles.brand} href="/" aria-label="Vertical Moment home">
-          <img src="/brand/monogram/vm-mono-forest-gold.webp" alt="" width="38" height="38" />
+          <span className={`vm-static-logo ${styles.brandLogo}`} aria-hidden="true" />
           <span>Vertical Moment</span>
         </a>
         <a className={styles.returnLink} href="/">
