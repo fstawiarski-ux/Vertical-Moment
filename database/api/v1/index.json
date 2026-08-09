@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T13:29:28+00:00",
+ "generated": "2026-08-09T13:37:10+00:00",
  "name": "Vertical Moment climbing data",
  "license": "route data CC-BY-SA; crag geometry © OpenStreetMap contributors (ODbL)",
  "id_recipe": "uuid5(NAMESPACE_URL, \"vertical-moment:\" + row_key)",
@@ -1452,6 +1452,10 @@
   {
    "file": "routes.json",
    "bytes": 1971910
+  },
+  {
+   "file": "search-index.json",
+   "bytes": 746317
   },
   {
    "file": "stats.json",

@@ -360,6 +360,17 @@ def main() -> int:
     endpoints["crags.json"] = write_json(out / "crags.json", {**meta, "count": len(crags), "crags": crags})
     endpoints["regions.json"] = write_json(out / "regions.json", {**meta, "count": len(regions), "regions": regions})
 
+    # Lightweight projection for client-side route-name search. routes.json
+    # (~2MB) must never ship to the browser; this is name/grade/location
+    # only, no QA notes or provenance, safe to fetch up front.
+    search_index = [{
+        "id": r["id"], "name": r["name"], "grade": r.get("grade"),
+        "region": r["region"], "region_slug": r["region_slug"],
+        "crag": r["crag"], "crag_slug": r["crag_slug"], "path": r["path"],
+    } for r in routes]
+    endpoints["search-index.json"] = write_json(
+        out / "search-index.json", {**meta, "count": len(search_index), "routes": search_index})
+
     for reg in regions:
         rs = [r for r in routes if r["region_slug"] == reg["slug"]]
         cs = [c for c in crags if c["region_slug"] == reg["slug"]]
