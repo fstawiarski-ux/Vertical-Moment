@@ -8,12 +8,17 @@
   --vm-max: 1320px;
   --vm-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
   position: relative;
-  background: var(--vm-bg);
+  /* Transparent on purpose: .bgCollage sits fixed behind everything, and
+     sections without their own background (.statement, .approach, .notes,
+     .faq) reveal it directly. Sections that do set a background use a
+     translucent tint of the same --vm-bg instead of an opaque fill, so the
+     collage reads as one continuous layer, not patches. */
+  background: transparent;
   color: var(--vm-ink);
   font-family: var(--vm-disp);
   font-size: 17px;
   line-height: 1.6;
-  transition: background-color 0.55s var(--vm-ease), color 0.55s var(--vm-ease);
+  transition: color 0.55s var(--vm-ease);
 }
 .page img {
   display: block;
@@ -39,6 +44,37 @@
 .page :focus-visible {
   outline: 2px solid var(--vm-accent);
   outline-offset: 3px;
+}
+
+/* Fixed behind every section; see the .page background comment above for
+   how sections reveal it. --collage-x/-y are set from JS on pointer move
+   (desktop with a fine pointer only); collageDrift gives it a slow ambient
+   life even when nobody's moving the mouse. Both respect
+   prefers-reduced-motion — the component skips the listener, and the
+   animation is killed in the existing reduced-motion block below. */
+.bgCollage {
+  position: fixed;
+  inset: -4%;
+  /* Negative, not 0: most sections below are position:static, which paint
+     ahead of a positioned z-index:0 layer per the stacking-order rules —
+     that would put the collage ON TOP of that content instead of behind
+     it. Negative z-index is the one value guaranteed to sit behind
+     static in-flow boxes regardless of what any given section sets. */
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--vm-bg) 84%, transparent), color-mix(in srgb, var(--vm-bg) 84%, transparent)),
+    url('/photography/explore/explore-page-background-collage.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translate3d(var(--collage-x, 0), var(--collage-y, 0), 0);
+  transition: transform 0.7s var(--vm-ease), background-image 0.55s var(--vm-ease);
+  animation: collageDrift 70s ease-in-out infinite;
+}
+@keyframes collageDrift {
+  0%, 100% { background-position: 50% 50%; }
+  50% { background-position: 54% 46%; }
 }
 
 .wrap {
@@ -116,10 +152,12 @@
   align-items: center;
   gap: 12px;
   margin-right: auto;
+  flex-shrink: 0;
 }
 .mk {
   width: 52px;
   height: 52px;
+  flex-shrink: 0;
   background-image: var(--vm-mono-bright, url('/brand/icons/03_silver_vector.png'));
   background-size: contain;
   background-repeat: no-repeat;
@@ -141,9 +179,19 @@
   font-size: 21px;
   letter-spacing: 0.18em;
   color: var(--vm-deep-ink);
+  white-space: nowrap;
 }
 .navSolid .bt {
   color: var(--vm-ink);
+}
+/* One flex group so the whole set of text links hides together at the
+   tablet breakpoint, instead of wrapping or squeezing individually. */
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  flex-shrink: 1;
+  min-width: 0;
 }
 .lnk {
   font-size: 15px;
@@ -151,6 +199,7 @@
   text-transform: uppercase;
   color: var(--vm-deep-muted);
   transition: color 0.3s;
+  white-space: nowrap;
 }
 .navSolid .lnk {
   color: var(--vm-muted);
@@ -185,6 +234,8 @@
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--vm-deep-ink);
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 .navSolid .pill {
   border-color: var(--vm-line);
@@ -197,6 +248,7 @@
 }
 .burger {
   display: none;
+  flex-shrink: 0;
   background: none;
   border: 1px solid var(--vm-deep-line);
   color: var(--vm-deep-ink);
@@ -209,6 +261,30 @@
 .navSolid .burger {
   border-color: var(--vm-line);
   color: var(--vm-ink);
+}
+/* Icon-only, deliberately not styled like a .lnk — it shouldn't read as
+   an eighth nav item competing for the same horizontal space. */
+.themeToggle {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  background: none;
+  border: 1px solid var(--vm-deep-line);
+  border-radius: 999px;
+  color: var(--vm-deep-ink);
+  font-size: 15px;
+  line-height: 1;
+  transition: border-color 0.3s, color 0.3s;
+}
+.navSolid .themeToggle {
+  border-color: var(--vm-line);
+  color: var(--vm-ink);
+}
+.themeToggle:hover {
+  border-color: var(--vm-accent);
+  color: var(--vm-accent);
 }
 .sheet {
   position: fixed;
@@ -323,77 +399,6 @@
   background: var(--vm-accent);
   border-color: var(--vm-accent);
   transform: scale(1.35);
-}
-
-/* --------------------------------------------------------- theme switch */
-.themes {
-  position: fixed;
-  left: 18px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 940;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  padding: 10px 8px;
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--vm-bg) 84%, transparent);
-  backdrop-filter: blur(18px);
-  border: 1px solid var(--vm-line);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
-}
-.themesLabel {
-  font-size: 9.5px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--vm-muted);
-  padding: 2px 0 6px;
-}
-.sw {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  border: 2px solid transparent;
-  padding: 0;
-  position: relative;
-  background: none;
-  transition: transform 0.3s var(--vm-ease), border-color 0.3s;
-}
-.sw span {
-  position: absolute;
-  inset: 4px;
-  border-radius: 50%;
-}
-.sw:hover {
-  transform: translateY(-3px) scale(1.06);
-}
-.sw[aria-pressed='true'] {
-  border-color: var(--vm-accent);
-}
-.swDay span {
-  background: linear-gradient(150deg, #fbfaf7, #e4decd);
-}
-.swNight span {
-  background: linear-gradient(150deg, #1d2a22, #080b09);
-}
-.swDark span {
-  background: linear-gradient(150deg, #2a2c2e, #000);
-}
-.swSunny span {
-  background: linear-gradient(150deg, #ffd37a, #e0700c);
-}
-.swColorful span {
-  background: conic-gradient(from 210deg, #ff3d9a, #8c3cff, #40b4ff, #ff3d9a);
-}
-.themeName {
-  writing-mode: vertical-rl;
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  padding: 6px 0 2px;
-  color: var(--vm-ink);
-  max-height: 130px;
 }
 
 /* ----------------------------------------------------------------- hero */
@@ -940,7 +945,9 @@
 /* ------------------------------------------------------------- services */
 .services {
   padding: 100px 0;
-  background: var(--vm-bg-alt);
+  /* Translucent, not the flat --vm-bg-alt fill it used to be — an opaque
+     section here would cut a visible hole in the fixed collage behind it. */
+  background: color-mix(in srgb, var(--vm-bg-alt) 88%, transparent);
   border-top: 1px solid var(--vm-line);
   border-bottom: 1px solid var(--vm-line);
 }
@@ -1068,7 +1075,7 @@
 /* ---------------------------------------------------------------- about */
 .about {
   padding: 100px 0;
-  background: var(--vm-bg-alt);
+  background: color-mix(in srgb, var(--vm-bg-alt) 88%, transparent);
   border-top: 1px solid var(--vm-line);
 }
 .aboutGrid {
@@ -1558,14 +1565,6 @@
 }
 
 /* ----------------------------------------------------------- responsive */
-/* Between these widths the left-hand mode switcher would sit on top of the
-   content column, so the column gets out of its way. */
-@media (min-width: 1081px) and (max-width: 1580px) {
-  .wrap {
-    padding-left: 108px;
-  }
-}
-
 @media (max-width: 1080px) {
   .rail {
     display: none;
@@ -1593,24 +1592,23 @@
   }
 }
 
-@media (max-width: 820px) {
-  .page {
-    font-size: 16px;
-  }
-  .lnk,
-  .pill {
+/* Tablet: the five text links and the theme toggle come off the bar (both
+   still reachable from the menu sheet) but the Climbers Lounge pill — the
+   one thing worth a dedicated click — stays. This is its own deliberate
+   state, not a shrunk-down desktop nav or a stretched-out phone nav. */
+@media (max-width: 1099px) {
+  .navLinks,
+  .themeToggle {
     display: none;
   }
   .burger {
     display: block;
   }
-  .nav .wrap {
-    height: 66px;
-  }
-  .bt {
-    font-size: 14px;
-    letter-spacing: 0.08em;
-    white-space: nowrap;
+}
+
+@media (max-width: 820px) {
+  .page {
+    font-size: 16px;
   }
   .gal {
     columns: 2;
@@ -1641,22 +1639,6 @@
   .lab {
     padding: 74px 0;
   }
-  .themes {
-    left: 12px;
-    right: 12px;
-    top: auto;
-    bottom: 14px;
-    transform: none;
-    flex-direction: row;
-    gap: 4px;
-    padding: 7px;
-    width: auto;
-    justify-content: center;
-  }
-  .themeName,
-  .themesLabel {
-    display: none;
-  }
   .heroCopy {
     margin-left: 0;
     width: 100%;
@@ -1664,14 +1646,6 @@
   }
   .heroMark {
     display: none;
-  }
-  .mk {
-    width: 42px;
-    height: 42px;
-  }
-  .sw {
-    width: 52px;
-    height: 52px;
   }
   .foot {
     padding-bottom: 130px;
@@ -1682,10 +1656,28 @@
   }
 }
 
+/* Mobile: the pill folds into the burger menu too, and the bar itself
+   shrinks — this is the only tier that gets this compact. */
+@media (max-width: 640px) {
+  .pill {
+    display: none;
+  }
+  .nav .wrap {
+    height: 66px;
+  }
+  .bt {
+    font-size: 14px;
+    letter-spacing: 0.08em;
+  }
+  .mk {
+    width: 42px;
+    height: 42px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .page *,
-  .rail,
-  .themes {
+  .rail {
     animation: none !important;
     transition-duration: 0.01ms !important;
   }

@@ -9,6 +9,7 @@ import PhotographyGallery from './components/photography-gallery';
 import PhotographyRail from './components/photography-rail';
 import PhotographyReveal from './components/photography-reveal';
 import PhotographyLayered from './components/photography-layered';
+import PhotographyBackgroundCollage from './components/photography-background-collage';
 import { spareScene } from './data/layered-photos';
 
 export const metadata: Metadata = {
@@ -46,6 +47,7 @@ const TICKER = [
 export default function Page() {
   return (
     <main className={styles.page}>
+      <PhotographyBackgroundCollage />
       <PhotographyNav />
       <PhotographyRail />
       <PhotographyHero />
@@ -403,7 +405,7 @@ export default function Page() {
               <p className={styles.eyebrow}>Field notes</p>
               <h2>From the last season</h2>
             </div>
-            <div className={styles.side}>Three of twelve entries</div>
+            <div className={styles.side}>From the field</div>
           </div>
           <div className={styles.ngrid}>
             <PhotographyReveal className={styles.note}>
@@ -423,7 +425,6 @@ export default function Page() {
                   North-facing limestone stays green and cold until midday. How to hold detail in the rock without
                   lifting the shadows into mush.
                 </p>
-                <span className={styles.readOn}>Read the note &rarr;</span>
               </div>
             </PhotographyReveal>
 
@@ -444,7 +445,6 @@ export default function Page() {
                   The face shows effort, but the hands show the grade. A short argument for more detail frames and fewer
                   wide summit shots.
                 </p>
-                <span className={styles.readOn}>Read the note &rarr;</span>
               </div>
             </PhotographyReveal>
 
@@ -465,7 +465,6 @@ export default function Page() {
                   Forty frames of one face, run through photogrammetry, become a topo you can rotate. The first test from
                   the 3D Lab.
                 </p>
-                <span className={styles.readOn}>Read the note &rarr;</span>
               </div>
             </PhotographyReveal>
           </div>

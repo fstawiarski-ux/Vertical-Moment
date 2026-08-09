@@ -56,22 +56,25 @@ export default function PhotographyNav() {
             <span className={styles.mk} aria-hidden="true" />
             <span className={styles.bt}>VERTICAL MOMENT</span>
           </a>
-          {LINKS.map((l) => (
-            <a key={l.href} className={styles.lnk} href={l.href}>
-              {l.label}
-            </a>
-          ))}
+          <div className={styles.navLinks}>
+            {LINKS.map((l) => (
+              <a key={l.href} className={styles.lnk} href={l.href}>
+                {l.label}
+              </a>
+            ))}
+          </div>
           <a className={styles.pill} href="/explore">
             Climbers Lounge
           </a>
           <button
             type="button"
-            className={styles.lnk}
+            className={styles.themeToggle}
             onClick={toggleTheme}
             aria-label="Toggle light/dark mode"
             aria-pressed={dark}
+            title={dark ? 'Switch to light' : 'Switch to dark'}
           >
-            {dark ? 'Light' : 'Dark'}
+            {dark ? '☀' : '☾'}
           </button>
           <button type="button" className={styles.burger} onClick={() => setMenuOpen(true)}>
             Menu
