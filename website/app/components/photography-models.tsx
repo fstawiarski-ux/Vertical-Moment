@@ -119,8 +119,13 @@ export default function PhotographyModels() {
 
       <p className={styles.modelMeta}>
         <span>{model.summary}</span>
-        <span className={styles.modelStats}>
+        <span className={styles.modelMetaActions}>
+          <span className={styles.modelStats}>
           {model.routes} · {model.captured}
+          </span>
+          <a className={styles.modelPanoramaLink} href={model.panoramaHref}>
+            Open panorama
+          </a>
         </span>
       </p>
     </div>

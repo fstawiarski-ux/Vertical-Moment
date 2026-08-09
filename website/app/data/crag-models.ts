@@ -21,6 +21,8 @@ export interface CragModel {
   captured: string;
   /** Set false while a model is still a placeholder. */
   scanned: boolean;
+  /** Shared panorama viewer for this crag. The route exists before imagery is uploaded. */
+  panoramaHref: string;
   /**
    * Opening camera angle. A scanned wall is an open sheet, so the default
    * head-on orbit can land edge-on and show a sliver — each model gets the
@@ -41,6 +43,7 @@ export const cragModels: CragModel[] = [
     routes: 'Topo in progress',
     captured: 'RealityScan · 2K texture',
     scanned: true,
+    panoramaHref: '/explore/wachau/nasenwand/panorama',
     orbit: '118deg 78deg 105%',
   },
   {
@@ -53,6 +56,7 @@ export const cragModels: CragModel[] = [
     routes: '14 routes · 4 to 7a',
     captured: 'Placeholder geometry',
     scanned: false,
+    panoramaHref: '/explore/peilstein/peilstein/panorama',
   },
   {
     id: 'helenental-ost',
@@ -64,5 +68,6 @@ export const cragModels: CragModel[] = [
     routes: '9 routes · 5+ to 6c',
     captured: 'Placeholder geometry',
     scanned: false,
+    panoramaHref: '/explore/helenental/helenental/panorama',
   },
 ];

@@ -37,8 +37,11 @@ export default function ExplorePage() {
           <li>
             <Link href="/vision/wall-reveal" className="btn btn-terra">Vision — Wall Reveal</Link>
           </li>
-          <li className="muted" style={{ fontSize: 13, padding: "6px 0" }}>
-            Panoramas — coming soon
+          <li>
+            <Link href="/explore/wachau/panoramas" className="btn btn-terra">Panoramas — Wachau</Link>
+          </li>
+          <li>
+            <Link href="/prints/panoramas" className="btn btn-terra">Panorama editions (prints)</Link>
           </li>
         </ul>
       </div>
