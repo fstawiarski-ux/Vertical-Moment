@@ -4,32 +4,24 @@
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import styles from '../photography-home.module.css';
-import { crags, photographFilters, photographs, type Crag, type PhotographTag } from '../data/photographs';
+import { photographs } from '../data/photographs';
 import PhotographyLayered from './photography-layered';
 import { featuredScene } from '../data/layered-photos';
 
-type FilterId = 'all' | PhotographTag;
-type CragId = 'all' | Crag;
+// A tight, curated set for the homepage rather than the full archive —
+// the standard (non-panorama) shots lead the data file, so this is the
+// first five: wall/location, portrait, action, action, detail.
+const FEATURED_COUNT = 5;
 
 export default function PhotographyGallery() {
-  const [filter, setFilter] = useState<FilterId>('all');
-  const [crag, setCrag] = useState<CragId>('all');
+  const visible = useMemo(() => photographs.slice(0, FEATURED_COUNT), []);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const visible = useMemo(
-    () =>
-      photographs.filter(
-        (p) => (filter === 'all' || p.tags.includes(filter)) && (crag === 'all' || p.crag === crag),
-      ),
-    [filter, crag],
-  );
 
   const step = useCallback(
     (delta: number) => {
       setOpenIndex((prev) => {
         if (prev === null) return prev;
-        const next = (prev + delta + visible.length) % visible.length;
-        return next;
+        return (prev + delta + visible.length) % visible.length;
       });
     },
     [visible.length],
@@ -47,8 +39,6 @@ export default function PhotographyGallery() {
   }, [openIndex, step]);
 
   const active = openIndex === null ? null : visible[openIndex];
-  const activeImage = active?.previewSrc ?? active?.src;
-  const isPanoramaView = filter === 'panorama';
 
   // Small pointer-driven tilt on each tile — the reason to keep moving the mouse.
   const tilt = (e: React.PointerEvent<HTMLElement>) => {
@@ -70,77 +60,26 @@ export default function PhotographyGallery() {
             <p className={styles.eyebrow}>Portfolio</p>
             <h2>Selected work</h2>
           </div>
-          <div className={styles.side}>
-            {visible.length} {isPanoramaView ? 'panoramas' : 'frames'} · {crag === 'all' ? '6 crags' : crag}
-          </div>
-        </div>
-
-        <div className={styles.chips} role="group" aria-label="Filter photographs">
-          {photographFilters.map((f) => (
-            <button
-              key={f.id}
-              type="button"
-              className={styles.chip}
-              aria-pressed={filter === f.id}
-              onClick={() => {
-                setFilter(f.id);
-                setOpenIndex(null);
-              }}
-            >
-              {f.label}
-            </button>
-          ))}
-        </div>
-
-        <div className={styles.filterRow} role="group" aria-label="Filter by crag">
-          <span className={styles.filterLabel}>Crag</span>
-          <button
-            type="button"
-            className={styles.chipSm}
-            aria-pressed={crag === 'all'}
-            onClick={() => {
-              setCrag('all');
-              setOpenIndex(null);
-            }}
-          >
-            Everywhere
-          </button>
-          {crags.map((c) => (
-            <button
-              key={c}
-              type="button"
-              className={styles.chipSm}
-              aria-pressed={crag === c}
-              onClick={() => {
-                setCrag(c);
-                setOpenIndex(null);
-              }}
-            >
-              {c}
-            </button>
-          ))}
+          <div className={styles.side}>{visible.length} frames</div>
         </div>
 
         <p className={styles.galNote}>
-          {isPanoramaView
-            ? 'High-resolution masters stay offline. These lightweight previews are regional references and print studies; route geometry remains provisional until it is registered and checked at the wall.'
-            : 'Every frame is filed against the crag it was shot at — the same crag, wall and route records that sit in the Collective database. Filter by location to see what a sector actually looks like before booking a session there.'}
+          Every frame is filed against the crag it was shot at — the same crag, wall and route records that sit in
+          the Collective database.
         </p>
 
-        <div className={`${styles.gal} ${isPanoramaView ? styles.panoramaGrid : ''}`}>
-          {crag === 'all' && (filter === 'all' || filter === 'detail' || filter === 'people') && (
-            <figure className={styles.featured}>
-              <div className={styles.featuredFrame}>
-                <PhotographyLayered scene={featuredScene} variant="tile" />
-              </div>
-              <figcaption>Three depth planes from one frame — move the pointer, then click.</figcaption>
-            </figure>
-          )}
+        <div className={styles.gal}>
+          <figure className={styles.featured}>
+            <div className={styles.featuredFrame}>
+              <PhotographyLayered scene={featuredScene} variant="tile" />
+            </div>
+            <figcaption>Three depth planes from one frame — move the pointer, then click.</figcaption>
+          </figure>
           {visible.map((p, i) => (
             <button
               key={p.id}
               type="button"
-              className={`${styles.shot} ${p.kind === 'panorama' ? styles.panoramaShot : ''}`}
+              className={styles.shot}
               onClick={() => setOpenIndex(i)}
               onPointerMove={tilt}
               onPointerLeave={untilt}
@@ -149,7 +88,6 @@ export default function PhotographyGallery() {
               <img src={p.src} alt={p.alt} width={p.width} height={p.height} loading="lazy" decoding="async" />
               <span className={styles.sheen} aria-hidden="true" />
               <span className={styles.frame} aria-hidden="true" />
-              {p.kind === 'panorama' && <span className={styles.productBadge}>Print panorama</span>}
               <span className={styles.shotCap}>
                 <b>{p.title}</b>
                 <em>{p.meta}</em>
@@ -157,10 +95,6 @@ export default function PhotographyGallery() {
             </button>
           ))}
         </div>
-
-        {visible.length === 0 && (
-          <p className={styles.galEmpty}>Nothing in the archive matches that combination yet.</p>
-        )}
 
         <div className={styles.more}>
           <a className={styles.cta} href="#contact">
@@ -188,16 +122,11 @@ export default function PhotographyGallery() {
           <button type="button" className={styles.lbNext} aria-label="Next photograph" onClick={() => step(1)}>
             &#8250;
           </button>
-          <img
-            className={active.kind === 'panorama' ? styles.lbPanorama : undefined}
-            src={activeImage}
-            alt={active.alt}
-            width={active.width}
-            height={active.height}
-          />
+          <img src={active.src} alt={active.alt} width={active.width} height={active.height} />
           <div className={styles.lbCap}>
-            <span>{active.title} &nbsp;·&nbsp; <em>{active.meta}</em></span>
-            {active.productHref && <a href={active.productHref}>View print and reference details</a>}
+            <span>
+              {active.title} &nbsp;·&nbsp; <em>{active.meta}</em>
+            </span>
           </div>
         </div>
       )}
