@@ -1,14 +1,22 @@
 /* Vertical Moment — photography theme variables.
 
-   Global on purpose: the five colour modes are attached to <html data-vm-theme="…">,
-   which app/components/photography-theme.tsx sets on mount and removes on unmount,
-   so no other route is ever affected. Every custom property is namespaced --vm-*
-   so it cannot collide with the Collective tokens in globals.css. */
+   Keyed off the SAME html[data-theme] attribute and "vm-theme" localStorage
+   key the rest of the site (site-nav.tsx) already uses — light/dark only.
 
-/* Day is also the no-JS / first-paint default, so the page is fully
-   styled before photography-theme.tsx mounts. */
-html:not([data-vm-theme]),
-html[data-vm-theme='day'] {
+   Previously this ran its own five-state system on html[data-vm-theme],
+   sharing the "vm-theme" localStorage key with the site-wide light/dark
+   toggle but not its vocabulary ("day"/"night"/"sunny"/"colorful" vs
+   "light"/"dark"). Root layout's theme-init script wrote whatever string
+   was stored straight onto data-theme with no validation, so a value like
+   "night" or "sunny" satisfied neither this file's day/night/dark/sunny
+   /colorful blocks in the right places nor globals.css's light/dark rules
+   — text stayed at one theme's default colour while backgrounds/photo
+   filters picked up another's, which is what "fonts and pictures go white
+   on white or black on black" actually was. One attribute, one key, two
+   states, fixes it structurally rather than patching a colour at a time. */
+
+:root,
+html[data-theme='light'] {
   --vm-bg: #fbfaf7;
   --vm-bg-alt: #efebe1;
   --vm-ink: #0f1311;
@@ -25,34 +33,12 @@ html[data-vm-theme='day'] {
   --vm-veil-3: rgba(10, 14, 12, 0.92);
   --vm-photo: grayscale(0.16) contrast(1.02);
   --vm-photo-hi: grayscale(0) contrast(1.04);
-  --vm-mono: url('/brand/icons/02_forest_green.png'); /* Forest green + gold */
+  --vm-mono: url('/brand/icons/02_forest_green.png');
   --vm-mono-anim: url('/brand/icons/02_forest_green.webp');
   --vm-tint: transparent;
 }
 
-html[data-vm-theme='night'] {
-  --vm-bg: #111713;
-  --vm-bg-alt: #0a0e0c;
-  --vm-ink: #efece3;
-  --vm-muted: rgba(239, 236, 227, 0.66);
-  --vm-line: rgba(239, 236, 227, 0.16);
-  --vm-accent: #d9a445;
-  --vm-accent-ink: #171104;
-  --vm-deep: #070a08;
-  --vm-deep-ink: #efece3;
-  --vm-deep-muted: rgba(239, 236, 227, 0.68);
-  --vm-deep-line: rgba(239, 236, 227, 0.16);
-  --vm-veil-1: rgba(4, 7, 5, 0.62);
-  --vm-veil-2: rgba(4, 7, 5, 0.24);
-  --vm-veil-3: rgba(4, 7, 5, 0.94);
-  --vm-photo: brightness(0.9) saturate(0.92);
-  --vm-photo-hi: brightness(1.02) saturate(1.05);
-  --vm-mono: url('/brand/icons/05_rotated_3d_view.png'); /* Rotated 3D, teal + gold */
-  --vm-mono-anim: url('/brand/icons/05_rotated_3d_view.webp');
-  --vm-tint: transparent;
-}
-
-html[data-vm-theme='dark'] {
+html[data-theme='dark'] {
   --vm-bg: #050606;
   --vm-bg-alt: #0c0d0d;
   --vm-ink: #f5f5f3;
@@ -69,58 +55,11 @@ html[data-vm-theme='dark'] {
   --vm-veil-3: rgba(0, 0, 0, 0.96);
   --vm-photo: grayscale(0.72) contrast(1.14) brightness(0.86);
   --vm-photo-hi: grayscale(0.08) contrast(1.1) brightness(0.98);
-  --vm-mono: url('/brand/icons/04_gray_outline.png'); /* Gray outline */
+  --vm-mono: url('/brand/icons/04_gray_outline.png');
   --vm-mono-anim: url('/brand/icons/04_gray_outline.webp');
   --vm-tint: transparent;
 }
 
-html[data-vm-theme='sunny'] {
-  --vm-bg: #fff7e6;
-  --vm-bg-alt: #fce9c4;
-  --vm-ink: #2a1b06;
-  --vm-muted: rgba(42, 27, 6, 0.66);
-  --vm-line: rgba(42, 27, 6, 0.17);
-  --vm-accent: #e0700c;
-  --vm-accent-ink: #ffffff;
-  --vm-deep: #3a2205;
-  --vm-deep-ink: #fff3dc;
-  --vm-deep-muted: rgba(255, 243, 220, 0.76);
-  --vm-deep-line: rgba(255, 243, 220, 0.24);
-  --vm-veil-1: rgba(58, 34, 5, 0.56);
-  --vm-veil-2: rgba(255, 196, 92, 0.18);
-  --vm-veil-3: rgba(48, 26, 3, 0.86);
-  --vm-photo: saturate(1.24) brightness(1.07) contrast(1.02);
-  --vm-photo-hi: saturate(1.4) brightness(1.12);
-  --vm-mono: url('/brand/icons/07_cvm_lockup.png'); /* CVM lockup, gold */
-  --vm-mono-anim: url('/brand/icons/07_cvm_lockup.webp');
-  --vm-tint: linear-gradient(180deg, rgba(255, 183, 77, 0.16), rgba(255, 120, 0, 0.1));
-}
-
-html[data-vm-theme='colorful'] {
-  --vm-bg: #140a28;
-  --vm-bg-alt: #1e0f3d;
-  --vm-ink: #f8f3ff;
-  --vm-muted: rgba(248, 243, 255, 0.7);
-  --vm-line: rgba(248, 243, 255, 0.2);
-  --vm-accent: #ff3d9a;
-  --vm-accent-ink: #12002a;
-  --vm-deep: #0c0518;
-  --vm-deep-ink: #f8f3ff;
-  --vm-deep-muted: rgba(248, 243, 255, 0.72);
-  --vm-deep-line: rgba(248, 243, 255, 0.2);
-  --vm-veil-1: rgba(12, 5, 24, 0.6);
-  --vm-veil-2: rgba(120, 20, 180, 0.24);
-  --vm-veil-3: rgba(12, 5, 24, 0.92);
-  --vm-photo: saturate(1.55) contrast(1.08);
-  --vm-photo-hi: saturate(1.85) contrast(1.1) hue-rotate(-6deg);
-  --vm-mono: url('/brand/icons/06_dynamic_shift.png'); /* Dynamic shift */
-  --vm-mono-anim: url('/brand/icons/06_dynamic_shift.webp');
-  --vm-tint: linear-gradient(140deg, rgba(255, 61, 154, 0.3), rgba(64, 180, 255, 0.22) 55%, rgba(160, 60, 255, 0.3));
-}
-
-html[data-vm-theme],
-html[data-vm-theme] body,
-html:not([data-vm-theme]) body {
+html body {
   background-color: var(--vm-bg);
 }
-

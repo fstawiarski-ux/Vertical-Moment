@@ -1,0 +1,89 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:37:10+00:00",
+ "crag": {
+  "id": "b9cdd507-7649-509f-a484-e30cbbe95e51",
+  "name": "Oberer Nordgrat (Boulder)",
+  "slug": "oberer-nordgrat-boulder",
+  "region": "Hocheck",
+  "region_slug": "hocheck",
+  "route_count": 1,
+  "is_stub": false,
+  "latitude": null,
+  "longitude": null,
+  "coord_source": null,
+  "grades": [
+   "6c"
+  ],
+  "disciplines": [
+   "boulder"
+  ],
+  "path": "/crags/hocheck/oberer-nordgrat-boulder",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Oberer+Nordgrat+%28Boulder%29+Hocheck"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Oberer+Nordgrat+%28Boulder%29+Hocheck"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Oberer+Nordgrat+%28Boulder%29"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Oberer+Nordgrat+%28Boulder%29+Hocheck"
+   }
+  ],
+  "has_exact_links": false
+ },
+ "routes": [
+  {
+   "row_key": "Hocheck | Oberer Nordgrat (Boulder) | Shorty",
+   "name": "Shorty",
+   "grade": "6c",
+   "grade_band": "Boulder",
+   "grade_system": "Font",
+   "discipline": "boulder",
+   "region": "Hocheck",
+   "area": "Hocheck",
+   "crag": "Oberer Nordgrat (Boulder)",
+   "wall": "Oberer Nordgrat (Boulder)",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "coord_source": null,
+   "notion_page_id": null,
+   "workflow_status": "to create",
+   "verification_status": "imported-unverified",
+   "provenance": [
+    "canonical"
+   ],
+   "id": "8737269b-87ac-5d4a-b3bc-64bc7f706349",
+   "region_slug": "hocheck",
+   "crag_slug": "oberer-nordgrat-boulder",
+   "slug": "shorty",
+   "path": "/crags/hocheck/oberer-nordgrat-boulder#8737269b-87ac-5d4a-b3bc-64bc7f706349",
+   "has_coords": false
+  }
+ ]
+}

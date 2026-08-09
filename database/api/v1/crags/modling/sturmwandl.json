@@ -1,0 +1,217 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:37:10+00:00",
+ "crag": {
+  "id": "5336c04c-fa0b-541f-a38d-710e7db5a3e4",
+  "name": "Sturmwandl",
+  "slug": "sturmwandl",
+  "region": "Mödling",
+  "region_slug": "modling",
+  "route_count": 5,
+  "is_stub": false,
+  "latitude": 48.079306,
+  "longitude": 16.271175,
+  "coord_source": "routes",
+  "grades": [
+   "6+",
+   "6-",
+   "7-"
+  ],
+  "disciplines": [
+   "sport"
+  ],
+  "path": "/crags/modling/sturmwandl",
+  "osm": "relation/18217206",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18217206",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=48.079306&mlon=16.271175#map=16/48.079306/16.271175",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Sturmwandl+M%C3%B6dling"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Sturmwandl+M%C3%B6dling"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Sturmwandl"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Sturmwandl+M%C3%B6dling"
+   }
+  ],
+  "has_exact_links": false
+ },
+ "routes": [
+  {
+   "row_key": "Mödling | Sturmwandl | Die Lange Entscheidung",
+   "name": "Die Lange Entscheidung",
+   "grade": "6-",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Mödling",
+   "area": "Mödling",
+   "crag": "Sturmwandl",
+   "wall": "Sturmwandl",
+   "source": "Keltenkalk",
+   "latitude": 48.079306,
+   "longitude": 16.271175,
+   "coord_source": "crag",
+   "notion_page_id": null,
+   "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
+   "provenance": [
+    "canonical"
+   ],
+   "id": "40958358-eb58-5ecc-8c5b-64a704a7564b",
+   "region_slug": "modling",
+   "crag_slug": "sturmwandl",
+   "slug": "die-lange-entscheidung",
+   "path": "/crags/modling/sturmwandl#40958358-eb58-5ecc-8c5b-64a704a7564b",
+   "has_coords": true
+  },
+  {
+   "row_key": "Mödling | Sturmwandl | Frühjahrsputz",
+   "name": "Frühjahrsputz",
+   "grade": "6-",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Mödling",
+   "area": "Mödling",
+   "crag": "Sturmwandl",
+   "wall": "Sturmwandl",
+   "source": "Keltenkalk",
+   "latitude": 48.079306,
+   "longitude": 16.271175,
+   "coord_source": "crag",
+   "notion_page_id": null,
+   "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
+   "provenance": [
+    "canonical"
+   ],
+   "id": "0befb6f5-70e6-5c1a-bc76-658f4a9e348f",
+   "region_slug": "modling",
+   "crag_slug": "sturmwandl",
+   "slug": "fruhjahrsputz",
+   "path": "/crags/modling/sturmwandl#0befb6f5-70e6-5c1a-bc76-658f4a9e348f",
+   "has_coords": true
+  },
+  {
+   "row_key": "Mödling | Sturmwandl | Orkan",
+   "name": "Orkan",
+   "grade": "7-",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Mödling",
+   "area": "Mödling",
+   "crag": "Sturmwandl",
+   "wall": "Sturmwandl",
+   "source": "Keltenkalk",
+   "latitude": 48.079306,
+   "longitude": 16.271175,
+   "coord_source": "crag",
+   "notion_page_id": null,
+   "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
+   "provenance": [
+    "canonical"
+   ],
+   "id": "ba614466-d0e8-5d3a-af46-15e48aa91833",
+   "region_slug": "modling",
+   "crag_slug": "sturmwandl",
+   "slug": "orkan",
+   "path": "/crags/modling/sturmwandl#ba614466-d0e8-5d3a-af46-15e48aa91833",
+   "has_coords": true
+  },
+  {
+   "row_key": "Mödling | Sturmwandl | Roger Rabbit",
+   "name": "Roger Rabbit",
+   "grade": "6+",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Mödling",
+   "area": "Mödling",
+   "crag": "Sturmwandl",
+   "wall": "Sturmwandl",
+   "source": "Keltenkalk",
+   "latitude": 48.079306,
+   "longitude": 16.271175,
+   "coord_source": "crag",
+   "notion_page_id": null,
+   "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
+   "provenance": [
+    "canonical"
+   ],
+   "id": "30e6684b-80d5-5848-a35a-ae0415f16232",
+   "region_slug": "modling",
+   "crag_slug": "sturmwandl",
+   "slug": "roger-rabbit",
+   "path": "/crags/modling/sturmwandl#30e6684b-80d5-5848-a35a-ae0415f16232",
+   "has_coords": true
+  },
+  {
+   "row_key": "Mödling | Sturmwandl | Seitenwind",
+   "name": "Seitenwind",
+   "grade": "6-",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Mödling",
+   "area": "Mödling",
+   "crag": "Sturmwandl",
+   "wall": "Sturmwandl",
+   "source": "Keltenkalk",
+   "latitude": 48.079306,
+   "longitude": 16.271175,
+   "coord_source": "crag",
+   "notion_page_id": null,
+   "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
+   "provenance": [
+    "canonical"
+   ],
+   "id": "5b3c970d-0e51-5ac3-9627-4781684769e6",
+   "region_slug": "modling",
+   "crag_slug": "sturmwandl",
+   "slug": "seitenwind",
+   "path": "/crags/modling/sturmwandl#5b3c970d-0e51-5ac3-9627-4781684769e6",
+   "has_coords": true
+  }
+ ]
+}

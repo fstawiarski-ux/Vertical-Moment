@@ -1,0 +1,146 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:37:10+00:00",
+ "crag": {
+  "id": "8509c026-d19f-5e62-9250-8b513a013b4e",
+  "name": "Kurze Liebe",
+  "slug": "kurze-liebe",
+  "region": "Arnstein",
+  "region_slug": "arnstein",
+  "route_count": 3,
+  "is_stub": false,
+  "latitude": null,
+  "longitude": null,
+  "coord_source": null,
+  "grades": [
+   "4+",
+   "6"
+  ],
+  "disciplines": [
+   "sport"
+  ],
+  "path": "/crags/arnstein/kurze-liebe",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Kurze+Liebe+Arnstein"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Kurze+Liebe+Arnstein"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Kurze+Liebe"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Kurze+Liebe+Arnstein"
+   }
+  ],
+  "has_exact_links": false
+ },
+ "routes": [
+  {
+   "row_key": "Arnstein | Kurze Liebe | Heisse Nächte",
+   "name": "Heisse Nächte",
+   "grade": "4+",
+   "grade_band": "1-4",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Arnstein",
+   "area": "Arnstein",
+   "crag": "Kurze Liebe",
+   "wall": "Kurze Liebe",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "coord_source": null,
+   "notion_page_id": null,
+   "workflow_status": "to create",
+   "verification_status": "imported-unverified",
+   "provenance": [
+    "canonical"
+   ],
+   "id": "33403839-ece0-53e0-ba5c-73d897f56c2e",
+   "region_slug": "arnstein",
+   "crag_slug": "kurze-liebe",
+   "slug": "heisse-nachte",
+   "path": "/crags/arnstein/kurze-liebe#33403839-ece0-53e0-ba5c-73d897f56c2e",
+   "has_coords": false
+  },
+  {
+   "row_key": "Arnstein | Kurze Liebe | Kurze Liebe",
+   "name": "Kurze Liebe",
+   "grade": "6",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Arnstein",
+   "area": "Arnstein",
+   "crag": "Kurze Liebe",
+   "wall": "Kurze Liebe",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "coord_source": null,
+   "notion_page_id": null,
+   "workflow_status": "to create",
+   "verification_status": "imported-unverified",
+   "provenance": [
+    "canonical"
+   ],
+   "id": "35917dab-bb87-5979-ba7e-6267cc0ffede",
+   "region_slug": "arnstein",
+   "crag_slug": "kurze-liebe",
+   "slug": "kurze-liebe",
+   "path": "/crags/arnstein/kurze-liebe#35917dab-bb87-5979-ba7e-6267cc0ffede",
+   "has_coords": false
+  },
+  {
+   "row_key": "Arnstein | Kurze Liebe | Morgenfrust",
+   "name": "Morgenfrust",
+   "grade": "4+",
+   "grade_band": "1-4",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Arnstein",
+   "area": "Arnstein",
+   "crag": "Kurze Liebe",
+   "wall": "Kurze Liebe",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "coord_source": null,
+   "notion_page_id": null,
+   "workflow_status": "to create",
+   "verification_status": "imported-unverified",
+   "provenance": [
+    "canonical"
+   ],
+   "id": "777f5353-a289-5cc8-8184-e693ae897c64",
+   "region_slug": "arnstein",
+   "crag_slug": "kurze-liebe",
+   "slug": "morgenfrust",
+   "path": "/crags/arnstein/kurze-liebe#777f5353-a289-5cc8-8184-e693ae897c64",
+   "has_coords": false
+  }
+ ]
+}

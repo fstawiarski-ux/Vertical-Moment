@@ -1,0 +1,70 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:37:10+00:00",
+ "crag": {
+  "id": "a0481e81-4853-598e-b9e6-9ce1ed5a494a",
+  "name": "Wöllersdorf Hart",
+  "slug": "wollersdorf-hart",
+  "region": "Fischauer Vorberge",
+  "region_slug": "fischauer-vorberge",
+  "route_count": 0,
+  "is_stub": true,
+  "latitude": 47.870638,
+  "longitude": 16.168517,
+  "coord_source": "osm",
+  "grades": [],
+  "disciplines": [],
+  "path": "/crags/fischauer-vorberge/wollersdorf-hart",
+  "osm": "relation/18218789",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18218789",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=47.870638&mlon=16.168517#map=16/47.870638/16.168517",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+W%C3%B6llersdorf+Hart+Fischauer+Vorberge"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+W%C3%B6llersdorf+Hart+Fischauer+Vorberge"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+W%C3%B6llersdorf+Hart"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+W%C3%B6llersdorf+Hart+Fischauer+Vorberge"
+   }
+  ],
+  "has_exact_links": false
+ },
+ "routes": []
+}

@@ -1,0 +1,89 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:37:10+00:00",
+ "crag": {
+  "id": "cf37c4a6-1ce9-59d1-a95d-1d22995dd07a",
+  "name": "Siegenfelder Steinbruch (Boulder)",
+  "slug": "siegenfelder-steinbruch-boulder",
+  "region": "Helenental",
+  "region_slug": "helenental",
+  "route_count": 1,
+  "is_stub": false,
+  "latitude": null,
+  "longitude": null,
+  "coord_source": null,
+  "grades": [
+   "6a"
+  ],
+  "disciplines": [
+   "boulder"
+  ],
+  "path": "/crags/helenental/siegenfelder-steinbruch-boulder",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Siegenfelder+Steinbruch+%28Boulder%29+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Siegenfelder+Steinbruch+%28Boulder%29+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Siegenfelder+Steinbruch+%28Boulder%29"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Siegenfelder+Steinbruch+%28Boulder%29+Helenental"
+   }
+  ],
+  "has_exact_links": false
+ },
+ "routes": [
+  {
+   "row_key": "Helenental | Siegenfelder Steinbruch (Boulder) | Little Foot",
+   "name": "Little Foot",
+   "grade": "6a",
+   "grade_band": "Boulder",
+   "grade_system": "Font",
+   "discipline": "boulder",
+   "region": "Helenental",
+   "area": "Helenental",
+   "crag": "Siegenfelder Steinbruch (Boulder)",
+   "wall": "Siegenfelder Steinbruch (Boulder)",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "coord_source": null,
+   "notion_page_id": "3a921413-5351-8192-b410-cb6637dc7520",
+   "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
+   "provenance": [
+    "canonical"
+   ],
+   "id": "875e0726-d214-5a8d-a9df-71e371acfb65",
+   "region_slug": "helenental",
+   "crag_slug": "siegenfelder-steinbruch-boulder",
+   "slug": "little-foot",
+   "path": "/crags/helenental/siegenfelder-steinbruch-boulder#875e0726-d214-5a8d-a9df-71e371acfb65",
+   "has_coords": false
+  }
+ ]
+}

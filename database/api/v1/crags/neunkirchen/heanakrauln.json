@@ -1,0 +1,77 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:37:10+00:00",
+ "crag": {
+  "id": "12c6e914-64b4-5f3e-a32a-ef9ae49b80be",
+  "name": "Heanakräuln",
+  "slug": "heanakrauln",
+  "region": "Neunkirchen",
+  "region_slug": "neunkirchen",
+  "route_count": 0,
+  "is_stub": true,
+  "latitude": 47.737026,
+  "longitude": 16.008857,
+  "coord_source": "osm",
+  "grades": [],
+  "disciplines": [],
+  "path": "/crags/neunkirchen/heanakrauln",
+  "osm": "node/1473066073",
+  "rock": null,
+  "website": "https://www.bergsteigen.com/touren/klettergarten/hintenburg-ternitz/",
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/node/1473066073",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Crag website",
+    "domain": "",
+    "url": "https://www.bergsteigen.com/touren/klettergarten/hintenburg-ternitz/",
+    "note": "Official or community page, tagged in OSM."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=47.737026&mlon=16.008857#map=16/47.737026/16.008857",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Heanakr%C3%A4uln+Neunkirchen"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Heanakr%C3%A4uln+Neunkirchen"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Heanakr%C3%A4uln"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Heanakr%C3%A4uln+Neunkirchen"
+   }
+  ],
+  "has_exact_links": true
+ },
+ "routes": []
+}

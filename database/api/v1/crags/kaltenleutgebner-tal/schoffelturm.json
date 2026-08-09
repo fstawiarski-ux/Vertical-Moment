@@ -1,0 +1,176 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:37:10+00:00",
+ "crag": {
+  "id": "a9db4133-3d57-599f-885c-0b52f38aee8c",
+  "name": "Schöffelturm",
+  "slug": "schoffelturm",
+  "region": "Kaltenleutgebner Tal",
+  "region_slug": "kaltenleutgebner-tal",
+  "route_count": 4,
+  "is_stub": false,
+  "latitude": null,
+  "longitude": null,
+  "coord_source": null,
+  "grades": [
+   "5",
+   "5-",
+   "7+",
+   "7-"
+  ],
+  "disciplines": [
+   "sport"
+  ],
+  "path": "/crags/kaltenleutgebner-tal/schoffelturm",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Sch%C3%B6ffelturm+Kaltenleutgebner+Tal"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Sch%C3%B6ffelturm+Kaltenleutgebner+Tal"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Sch%C3%B6ffelturm"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Sch%C3%B6ffelturm+Kaltenleutgebner+Tal"
+   }
+  ],
+  "has_exact_links": false
+ },
+ "routes": [
+  {
+   "row_key": "Kaltenleutgebner Tal | Schöffelturm | Eiserner Besen",
+   "name": "Eiserner Besen",
+   "grade": "7-",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Kaltenleutgebner Tal",
+   "area": "Kaltenleutgebner Tal",
+   "crag": "Schöffelturm",
+   "wall": "Schöffelturm",
+   "source": "Keltenkalk",
+   "latitude": null,
+   "longitude": null,
+   "coord_source": null,
+   "notion_page_id": null,
+   "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
+   "provenance": [
+    "canonical"
+   ],
+   "id": "6d61f21d-7e00-5949-adfe-cf53a473ce0b",
+   "region_slug": "kaltenleutgebner-tal",
+   "crag_slug": "schoffelturm",
+   "slug": "eiserner-besen",
+   "path": "/crags/kaltenleutgebner-tal/schoffelturm#6d61f21d-7e00-5949-adfe-cf53a473ce0b",
+   "has_coords": false
+  },
+  {
+   "row_key": "Kaltenleutgebner Tal | Schöffelturm | Eiserner Pfad",
+   "name": "Eiserner Pfad",
+   "grade": "7+",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Kaltenleutgebner Tal",
+   "area": "Kaltenleutgebner Tal",
+   "crag": "Schöffelturm",
+   "wall": "Schöffelturm",
+   "source": "Keltenkalk",
+   "latitude": null,
+   "longitude": null,
+   "coord_source": null,
+   "notion_page_id": null,
+   "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
+   "provenance": [
+    "canonical"
+   ],
+   "id": "d638e1c2-20c9-577c-9033-7c0902286ecb",
+   "region_slug": "kaltenleutgebner-tal",
+   "crag_slug": "schoffelturm",
+   "slug": "eiserner-pfad",
+   "path": "/crags/kaltenleutgebner-tal/schoffelturm#d638e1c2-20c9-577c-9033-7c0902286ecb",
+   "has_coords": false
+  },
+  {
+   "row_key": "Kaltenleutgebner Tal | Schöffelturm | Schöffel Sei Dank!",
+   "name": "Schöffel Sei Dank!",
+   "grade": "5-",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Kaltenleutgebner Tal",
+   "area": "Kaltenleutgebner Tal",
+   "crag": "Schöffelturm",
+   "wall": "Schöffelturm",
+   "source": "Keltenkalk",
+   "latitude": null,
+   "longitude": null,
+   "coord_source": null,
+   "notion_page_id": null,
+   "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
+   "provenance": [
+    "canonical"
+   ],
+   "id": "6b75e688-c598-58a9-8af3-ae8bdae312ad",
+   "region_slug": "kaltenleutgebner-tal",
+   "crag_slug": "schoffelturm",
+   "slug": "schoffel-sei-dank",
+   "path": "/crags/kaltenleutgebner-tal/schoffelturm#6b75e688-c598-58a9-8af3-ae8bdae312ad",
+   "has_coords": false
+  },
+  {
+   "row_key": "Kaltenleutgebner Tal | Schöffelturm | Turmkraft",
+   "name": "Turmkraft",
+   "grade": "5",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Kaltenleutgebner Tal",
+   "area": "Kaltenleutgebner Tal",
+   "crag": "Schöffelturm",
+   "wall": "Schöffelturm",
+   "source": "Keltenkalk",
+   "latitude": null,
+   "longitude": null,
+   "coord_source": null,
+   "notion_page_id": null,
+   "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
+   "provenance": [
+    "canonical"
+   ],
+   "id": "d9056f67-05ba-53fd-8ba8-baba9ff1905b",
+   "region_slug": "kaltenleutgebner-tal",
+   "crag_slug": "schoffelturm",
+   "slug": "turmkraft",
+   "path": "/crags/kaltenleutgebner-tal/schoffelturm#d9056f67-05ba-53fd-8ba8-baba9ff1905b",
+   "has_coords": false
+  }
+ ]
+}

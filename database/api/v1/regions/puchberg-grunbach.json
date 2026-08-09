@@ -1,0 +1,457 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:37:10+00:00",
+ "region": {
+  "id": "d6c2d98a-0c0a-5c9f-8997-1da90c1637cd",
+  "name": "Puchberg Grünbach",
+  "slug": "puchberg-grunbach",
+  "crag_count": 6,
+  "route_count": 0,
+  "path": "/crags/puchberg-grunbach",
+  "links": [
+   {
+    "kind": "exact",
+    "label": "theCrag — Vienna area overview",
+    "domain": "thecrag.com",
+    "url": "https://www.thecrag.com/en/climbing/austria/wien-vienna-area",
+    "note": "Community index of the whole Vienna region, with its own source list."
+   },
+   {
+    "kind": "exact",
+    "label": "Keltenkalk",
+    "domain": "keltenkalk.at",
+    "url": "http://www.keltenkalk.at/",
+    "note": "The main printed guidebook for the Vienna limestone — roughly 4,000 climbs and boulders."
+   },
+   {
+    "kind": "exact",
+    "label": "bergsteigen.com — Klettergarten index",
+    "domain": "bergsteigen.com",
+    "url": "https://www.bergsteigen.com/touren/klettergarten/",
+    "note": "Filterable crag database with descriptions, approach notes and many downloadable topos."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Puchberg+Gr%C3%BCnbach+Klettergarten"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Puchberg+Gr%C3%BCnbach+Austria"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Puchberg+Gr%C3%BCnbach"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Puchberg+Gr%C3%BCnbach+Klettern"
+   }
+  ],
+  "more_info_note": "Vertical Moment does not publish topos yet. These are the places that do — follow them for the drawn lines, and verify anything safety-relevant on site."
+ },
+ "crags": [
+  {
+   "id": "28c42f07-474b-5bdc-bf97-7bcde248af55",
+   "name": "CragX",
+   "slug": "cragx",
+   "region": "Puchberg Grünbach",
+   "region_slug": "puchberg-grunbach",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.771084,
+   "longitude": 15.932173,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/puchberg-grunbach/cragx",
+   "osm": "relation/18218459",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218459",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.771084&mlon=15.932173#map=16/47.771084/15.932173",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+CragX+Puchberg+Gr%C3%BCnbach"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+CragX+Puchberg+Gr%C3%BCnbach"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+CragX"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+CragX+Puchberg+Gr%C3%BCnbach"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "318360b4-42f6-57a0-836f-7d83f6538ea4",
+   "name": "Köhlerstein",
+   "slug": "kohlerstein",
+   "region": "Puchberg Grünbach",
+   "region_slug": "puchberg-grunbach",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.795678,
+   "longitude": 15.862872,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/puchberg-grunbach/kohlerstein",
+   "osm": "node/12736902663",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/node/12736902663",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.795678&mlon=15.862872#map=16/47.795678/15.862872",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+K%C3%B6hlerstein+Puchberg+Gr%C3%BCnbach"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+K%C3%B6hlerstein+Puchberg+Gr%C3%BCnbach"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+K%C3%B6hlerstein"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+K%C3%B6hlerstein+Puchberg+Gr%C3%BCnbach"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "4e4ec844-4e80-57ab-9628-86fa0c753fae",
+   "name": "N/A",
+   "slug": "n-a",
+   "region": "Puchberg Grünbach",
+   "region_slug": "puchberg-grunbach",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.795678,
+   "longitude": 15.862872,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/puchberg-grunbach/n-a",
+   "osm": "relation/21003542",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/21003542",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.795678&mlon=15.862872#map=16/47.795678/15.862872",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+N%2FA+Puchberg+Gr%C3%BCnbach"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+N%2FA+Puchberg+Gr%C3%BCnbach"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+N%2FA"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+N%2FA+Puchberg+Gr%C3%BCnbach"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "8993ca2c-2e1e-551d-92f6-010a3f95b148",
+   "name": "Verbrecherkogel",
+   "slug": "verbrecherkogel",
+   "region": "Puchberg Grünbach",
+   "region_slug": "puchberg-grunbach",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.8152,
+   "longitude": 15.874551,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/puchberg-grunbach/verbrecherkogel",
+   "osm": "relation/18217992",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18217992",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.8152&mlon=15.874551#map=16/47.8152/15.874551",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Verbrecherkogel+Puchberg+Gr%C3%BCnbach"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Verbrecherkogel+Puchberg+Gr%C3%BCnbach"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Verbrecherkogel"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Verbrecherkogel+Puchberg+Gr%C3%BCnbach"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "280cdb7a-6bed-5d82-bc0d-7f2182d56cd5",
+   "name": "Wasserfall Klettergarten Losenheim",
+   "slug": "wasserfall-klettergarten-losenheim",
+   "region": "Puchberg Grünbach",
+   "region_slug": "puchberg-grunbach",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.795223,
+   "longitude": 15.85628,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/puchberg-grunbach/wasserfall-klettergarten-losenheim",
+   "osm": "relation/21003543",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/21003543",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.795223&mlon=15.85628#map=16/47.795223/15.85628",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Wasserfall+Klettergarten+Losenheim+Puchberg+Gr%C3%BCnbach"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Wasserfall+Klettergarten+Losenheim+Puchberg+Gr%C3%BCnbach"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Wasserfall+Klettergarten+Losenheim"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Wasserfall+Klettergarten+Losenheim+Puchberg+Gr%C3%BCnbach"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "519188f0-873e-5f76-bbaf-91ab70645804",
+   "name": "Wasserfallwirt Wandl",
+   "slug": "wasserfallwirt-wandl",
+   "region": "Puchberg Grünbach",
+   "region_slug": "puchberg-grunbach",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.793308,
+   "longitude": 15.857871,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/puchberg-grunbach/wasserfallwirt-wandl",
+   "osm": "node/13974232317",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/node/13974232317",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.793308&mlon=15.857871#map=16/47.793308/15.857871",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Wasserfallwirt+Wandl+Puchberg+Gr%C3%BCnbach"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Wasserfallwirt+Wandl+Puchberg+Gr%C3%BCnbach"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Wasserfallwirt+Wandl"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Wasserfallwirt+Wandl+Puchberg+Gr%C3%BCnbach"
+    }
+   ],
+   "has_exact_links": false
+  }
+ ],
+ "routes": []
+}

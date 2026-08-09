@@ -1,0 +1,70 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:37:10+00:00",
+ "crag": {
+  "id": "2319b8e1-4b2c-5b3b-9290-b062eb34fb8f",
+  "name": "Lärchkogelgrat",
+  "slug": "larchkogelgrat",
+  "region": "Höllental-Rax",
+  "region_slug": "hollental-rax",
+  "route_count": 0,
+  "is_stub": true,
+  "latitude": 47.749543,
+  "longitude": 15.777241,
+  "coord_source": "osm",
+  "grades": [],
+  "disciplines": [],
+  "path": "/crags/hollental-rax/larchkogelgrat",
+  "osm": "relation/18220686",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18220686",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=47.749543&mlon=15.777241#map=16/47.749543/15.777241",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+L%C3%A4rchkogelgrat+H%C3%B6llental-Rax"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+L%C3%A4rchkogelgrat+H%C3%B6llental-Rax"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+L%C3%A4rchkogelgrat"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+L%C3%A4rchkogelgrat+H%C3%B6llental-Rax"
+   }
+  ],
+  "has_exact_links": false
+ },
+ "routes": []
+}

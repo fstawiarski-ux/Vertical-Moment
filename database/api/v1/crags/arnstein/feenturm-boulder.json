@@ -1,0 +1,89 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:37:10+00:00",
+ "crag": {
+  "id": "69a257ac-44f0-53e0-8731-678783d63602",
+  "name": "Feenturm (Boulder)",
+  "slug": "feenturm-boulder",
+  "region": "Arnstein",
+  "region_slug": "arnstein",
+  "route_count": 1,
+  "is_stub": false,
+  "latitude": null,
+  "longitude": null,
+  "coord_source": null,
+  "grades": [
+   "5b"
+  ],
+  "disciplines": [
+   "boulder"
+  ],
+  "path": "/crags/arnstein/feenturm-boulder",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Feenturm+%28Boulder%29+Arnstein"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Feenturm+%28Boulder%29+Arnstein"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Feenturm+%28Boulder%29"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Feenturm+%28Boulder%29+Arnstein"
+   }
+  ],
+  "has_exact_links": false
+ },
+ "routes": [
+  {
+   "row_key": "Arnstein | Feenturm (Boulder) | Feentraverse",
+   "name": "Feentraverse",
+   "grade": "5b",
+   "grade_band": "Boulder",
+   "grade_system": "Font",
+   "discipline": "boulder",
+   "region": "Arnstein",
+   "area": "Arnstein",
+   "crag": "Feenturm (Boulder)",
+   "wall": "Feenturm (Boulder)",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "coord_source": null,
+   "notion_page_id": null,
+   "workflow_status": "to create",
+   "verification_status": "imported-unverified",
+   "provenance": [
+    "canonical"
+   ],
+   "id": "9012dfdf-cd77-5b89-a3d3-fcadc082475e",
+   "region_slug": "arnstein",
+   "crag_slug": "feenturm-boulder",
+   "slug": "feentraverse",
+   "path": "/crags/arnstein/feenturm-boulder#9012dfdf-cd77-5b89-a3d3-fcadc082475e",
+   "has_coords": false
+  }
+ ]
+}

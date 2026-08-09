@@ -1,0 +1,118 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:37:10+00:00",
+ "crag": {
+  "id": "68ef1862-2448-5d28-9460-bf2fa1016db5",
+  "name": "Arnstein Hauptwand (Boulder)",
+  "slug": "arnstein-hauptwand-boulder",
+  "region": "Arnstein",
+  "region_slug": "arnstein",
+  "route_count": 2,
+  "is_stub": false,
+  "latitude": null,
+  "longitude": null,
+  "coord_source": null,
+  "grades": [
+   "5a",
+   "6a"
+  ],
+  "disciplines": [
+   "boulder"
+  ],
+  "path": "/crags/arnstein/arnstein-hauptwand-boulder",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Arnstein+Hauptwand+%28Boulder%29+Arnstein"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Arnstein+Hauptwand+%28Boulder%29+Arnstein"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Arnstein+Hauptwand+%28Boulder%29"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Arnstein+Hauptwand+%28Boulder%29+Arnstein"
+   }
+  ],
+  "has_exact_links": false
+ },
+ "routes": [
+  {
+   "row_key": "Arnstein | Arnstein Hauptwand (Boulder) | Omo",
+   "name": "Omo",
+   "grade": "5a",
+   "grade_band": "Boulder",
+   "grade_system": "Font",
+   "discipline": "boulder",
+   "region": "Arnstein",
+   "area": "Arnstein",
+   "crag": "Arnstein Hauptwand (Boulder)",
+   "wall": "Arnstein Hauptwand (Boulder)",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "coord_source": null,
+   "notion_page_id": null,
+   "workflow_status": "to create",
+   "verification_status": "imported-unverified",
+   "provenance": [
+    "canonical"
+   ],
+   "id": "0f1a6701-a6a4-5f6f-abb8-76faffbc59dd",
+   "region_slug": "arnstein",
+   "crag_slug": "arnstein-hauptwand-boulder",
+   "slug": "omo",
+   "path": "/crags/arnstein/arnstein-hauptwand-boulder#0f1a6701-a6a4-5f6f-abb8-76faffbc59dd",
+   "has_coords": false
+  },
+  {
+   "row_key": "Arnstein | Arnstein Hauptwand (Boulder) | Zgonc",
+   "name": "Zgonc",
+   "grade": "6a",
+   "grade_band": "Boulder",
+   "grade_system": "Font",
+   "discipline": "boulder",
+   "region": "Arnstein",
+   "area": "Arnstein",
+   "crag": "Arnstein Hauptwand (Boulder)",
+   "wall": "Arnstein Hauptwand (Boulder)",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "coord_source": null,
+   "notion_page_id": null,
+   "workflow_status": "to create",
+   "verification_status": "imported-unverified",
+   "provenance": [
+    "canonical"
+   ],
+   "id": "d753f81b-800b-5c38-9088-91f2691c1234",
+   "region_slug": "arnstein",
+   "crag_slug": "arnstein-hauptwand-boulder",
+   "slug": "zgonc",
+   "path": "/crags/arnstein/arnstein-hauptwand-boulder#d753f81b-800b-5c38-9088-91f2691c1234",
+   "has_coords": false
+  }
+ ]
+}

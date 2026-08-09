@@ -1,0 +1,34 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:37:10+00:00",
+ "routes": 2402,
+ "crags": 330,
+ "regions": 20,
+ "with_coords": 1504,
+ "by_provenance": {
+  "master": 0,
+  "notion": 0
+ },
+ "by_region": {
+  "Adlitzgraben": 0,
+  "Alland": 0,
+  "Arnstein": 143,
+  "Baden": 0,
+  "Bucklige Welt": 100,
+  "Fischauer Vorberge": 145,
+  "Helenental": 359,
+  "Hirschwände": 119,
+  "Hocheck": 384,
+  "Hohe Wand": 388,
+  "Höllental-Rax": 0,
+  "Kaltenleutgebner Tal": 261,
+  "Lindkogel": 83,
+  "Mödling": 188,
+  "Neunkirchen": 0,
+  "Peilstein": 0,
+  "Pernitz": 179,
+  "Piestingtal": 0,
+  "Puchberg Grünbach": 0,
+  "Wöllersdorf Hart": 53
+ }
+}

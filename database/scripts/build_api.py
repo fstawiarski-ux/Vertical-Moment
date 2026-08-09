@@ -1,0 +1,420 @@
+#!/usr/bin/env python3
+"""
+Vertical Moment — API dataset builder (v1)
+
+Merges every route source into one canonical, versioned, API-shaped tree.
+
+  INPUTS  (database/)
+    master/vertical_moment_master_routes_v1.xlsx   sheet "Routes"   (required)
+    sources/notion-export.csv                      Notion CSV export (optional)
+    sources/crags.geojson                          OSM crag features (optional)
+
+  OUTPUT  (database/api/v1/)
+    index.json            manifest: version, counts, every endpoint
+    routes.json           every route, full records
+    regions.json          region index
+    crags.json            crag index
+    regions/<slug>.json   one region: its crags + routes
+    crags/<slug>.json     one crag: its routes
+    stats.json  facets.json
+
+  IDs are deterministic:
+      route_id = uuid5(NAMESPACE_URL, "vertical-moment:" + row_key)
+      row_key  = "Area | Wall | Route"
+  Re-running always yields the same IDs. Never assign one by hand.
+
+  Adding a source later: write a load_*() that returns records with a
+  row_key, append it to SOURCES, re-run. Merge is by row_key, last
+  source wins per field, and nothing else changes.
+
+  usage:  python build_api.py [--out DIR]
+"""
+from __future__ import annotations
+
+import argparse
+import csv
+import json
+import re
+import sys
+import unicodedata
+import uuid
+from collections import defaultdict
+from datetime import datetime, timezone
+from pathlib import Path
+
+SCHEMA_VERSION = "1.0.0"
+ID_NAMESPACE = "vertical-moment:"
+HERE = Path(__file__).resolve().parent.parent
+
+
+def slugify(text: str) -> str:
+    if text is None:
+        return ""
+    s = unicodedata.normalize("NFKD", str(text))
+    s = s.replace("ß", "ss")
+    s = "".join(c for c in s if not unicodedata.combining(c))
+    s = re.sub(r"[^a-zA-Z0-9]+", "-", s).strip("-").lower()
+    return re.sub(r"-{2,}", "-", s)
+
+
+def route_id(row_key: str) -> str:
+    return str(uuid.uuid5(uuid.NAMESPACE_URL, ID_NAMESPACE + row_key))
+
+
+def make_row_key(area: str, wall: str, route: str) -> str:
+    return f"{area} | {wall} | {route}"
+
+
+def clean(v):
+    if v is None:
+        return None
+    s = str(v).strip()
+    return s or None
+
+
+def as_float(v):
+    try:
+        f = float(v)
+        return f if f == f else None
+    except (TypeError, ValueError):
+        return None
+
+
+def load_master(path: Path) -> list[dict]:
+    """Master workbook, sheet 'Routes'. The authoritative transcription."""
+    import openpyxl
+
+    wb = openpyxl.load_workbook(path, read_only=True, data_only=True)
+    ws = wb["Routes"]
+    rows = ws.iter_rows(values_only=True)
+    hdr = [str(h).strip() if h else "" for h in next(rows)]
+    idx = {h: i for i, h in enumerate(hdr)}
+
+    def cell(r, name):
+        i = idx.get(name)
+        return clean(r[i]) if i is not None and i < len(r) else None
+
+    out = []
+    for r in rows:
+        name = cell(r, "Route")
+        if not name:
+            continue
+        area = cell(r, "Area") or "Unknown"
+        wall = cell(r, "Wall") or area
+        out.append({
+            "row_key": cell(r, "Row Key") or make_row_key(area, wall, name),
+            "name": name,
+            "grade": cell(r, "Grade"),
+            "grade_band": cell(r, "Grade band"),
+            "grade_system": cell(r, "Grade system"),
+            "discipline": (cell(r, "Discipline") or "sport").lower(),
+            "region": area,
+            "area": area,
+            "crag": wall,
+            "wall": wall,
+            "source": cell(r, "Source"),
+            "latitude": as_float(r[idx["Latitude"]]) if "Latitude" in idx else None,
+            "longitude": as_float(r[idx["Longitude"]]) if "Longitude" in idx else None,
+            "notion_page_id": cell(r, "Notion Page ID"),
+            "workflow_status": cell(r, "Status"),
+            "provenance": ["master"],
+        })
+    wb.close()
+    return out
+
+
+NOTION_ALIASES = {
+    "route": "name", "name": "name", "grade": "grade",
+    "grade band": "grade_band", "grade system": "grade_system",
+    "discipline": "discipline", "area": "area", "wall": "wall",
+    "source": "source", "row key": "row_key", "id": "notion_page_id",
+    "notion page id": "notion_page_id",
+}
+
+
+def load_notion_csv(path: Path) -> list[dict]:
+    """Native Notion CSV export of the Guidebook Routes DB.
+
+    Re-export and re-run to resync; nothing is transcribed by hand.
+    Routes absent from the master are ADDED, not dropped.
+    """
+    if not path.exists():
+        return []
+    out = []
+    with path.open(encoding="utf-8-sig", newline="") as fh:
+        for raw in csv.DictReader(fh):
+            rec = {}
+            for k, v in raw.items():
+                key = NOTION_ALIASES.get((k or "").strip().lower())
+                if key:
+                    rec[key] = clean(v)
+            name = rec.get("name")
+            if not name:
+                continue
+            area = rec.get("area") or "Unknown"
+            wall = rec.get("wall") or area
+            rec.update({
+                "row_key": rec.get("row_key") or make_row_key(area, wall, name),
+                "region": area, "area": area, "crag": wall, "wall": wall,
+                "discipline": (rec.get("discipline") or "sport").lower(),
+                "provenance": ["notion"],
+            })
+            out.append(rec)
+    return out
+
+
+def load_canonical(path: Path) -> list[dict]:
+    """THE source of truth: database/master/vertical-moment-canonical.json.
+
+    One file. Routes, crags and regions already resolved, IDs already minted,
+    crag coordinates already joined from OSM. If it is present nothing else
+    is read. Everything downstream is generated from this.
+    """
+    if not path.exists():
+        return []
+    doc = json.loads(path.read_text(encoding="utf-8"))
+    out = []
+    for r in doc.get("routes", []):
+        out.append({
+            "row_key": r["row_key"], "name": r["name"], "grade": r.get("grade"),
+            "grade_band": r.get("grade_band"), "grade_system": r.get("grade_system"),
+            "discipline": r.get("discipline") or "sport",
+            "region": r["region"], "area": r["region"],
+            "crag": r["crag"], "wall": r["crag"],
+            "source": r.get("source"),
+            "latitude": r.get("lat"), "longitude": r.get("lon"),
+            "coord_source": r.get("coord_source"),
+            "notion_page_id": r.get("notion_page_id"),
+            "workflow_status": r.get("workflow_status"),
+            "verification_status": r.get("verification_status", "imported-unverified"),
+            "provenance": ["canonical"],
+        })
+    return out
+
+
+def load_canonical_structural(path: Path) -> tuple[dict, dict]:
+    """The canonical file's OWN crags[] and regions[] arrays, keyed for lookup.
+
+    These carry OSM-only stub crags (0 routes) and zero-route regions, plus
+    the links[] blocks — none of which can be reconstructed from routes
+    alone. build_crags()/build_regions() overlay route-derived stats on top
+    of this, so every crag/region the canonical file knows about still gets
+    a page, not just the ones with transcribed routes.
+    """
+    if not path.exists():
+        return {}, {}
+    doc = json.loads(path.read_text(encoding="utf-8"))
+    crags = {(c["region"], c["name"]): c for c in doc.get("crags", [])}
+    regions = {r["name"]: r for r in doc.get("regions", [])}
+    return crags, regions
+
+
+SOURCES = [
+    ("canonical", lambda d: load_canonical(d / "master" / "vertical-moment-canonical.json")),
+    ("notion", lambda d: load_notion_csv(d / "sources" / "notion-export.csv")),
+]
+
+
+def merge(batches: list[tuple[str, list[dict]]]) -> list[dict]:
+    """Merge every source by row_key. Later sources fill gaps and override
+    non-null fields; provenance records which sources touched each record."""
+    merged: dict[str, dict] = {}
+    for label, records in batches:
+        for rec in records:
+            key = rec["row_key"]
+            if key not in merged:
+                merged[key] = dict(rec)
+                continue
+            tgt = merged[key]
+            for k, v in rec.items():
+                if k == "provenance":
+                    continue
+                if v is not None:
+                    tgt[k] = v
+            if label not in tgt["provenance"]:
+                tgt["provenance"].append(label)
+
+    out = []
+    for key, rec in merged.items():
+        rec["id"] = route_id(key)
+        rec["region_slug"] = slugify(rec["region"])
+        rec["crag_slug"] = slugify(rec["crag"])
+        rec["slug"] = slugify(rec["name"])
+        rec["path"] = f"/crags/{rec['region_slug']}/{rec['crag_slug']}#{rec['id']}"
+        rec["has_coords"] = rec.get("latitude") is not None
+        rec.setdefault("verification_status", "imported-unverified")
+        out.append(rec)
+    out.sort(key=lambda r: (r["region"], r["crag"], r["name"]))
+    return out
+
+
+def write_json(path: Path, payload) -> int:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    text = json.dumps(payload, ensure_ascii=False, indent=1, sort_keys=False)
+    path.write_text(text, encoding="utf-8")
+    return len(text.encode("utf-8"))
+
+
+def build_crags(routes: list[dict], canon_crags: dict | None = None) -> list[dict]:
+    canon_crags = canon_crags or {}
+    byc: dict[tuple, list] = defaultdict(list)
+    for r in routes:
+        byc[(r["region"], r["crag"])].append(r)
+
+    # Union of every crag with routes AND every crag the canonical file
+    # knows about (OSM-only stubs included) — a stub must still get a page.
+    all_keys = set(byc.keys()) | set(canon_crags.keys())
+
+    crags = []
+    for region, crag in sorted(all_keys):
+        rs = byc.get((region, crag), [])
+        src = canon_crags.get((region, crag))
+
+        lats = [r["latitude"] for r in rs if r.get("latitude") is not None]
+        lons = [r["longitude"] for r in rs if r.get("longitude") is not None]
+        if lats:
+            lat = round(sum(lats) / len(lats), 6)
+            lon = round(sum(lons) / len(lons), 6)
+            coord_source = "routes"
+        elif src and src.get("latitude") is not None:
+            lat, lon = src["latitude"], src["longitude"]
+            coord_source = src.get("coord_source") or "osm"
+        else:
+            lat = lon = coord_source = None
+
+        crags.append({
+            "id": str(uuid.uuid5(uuid.NAMESPACE_URL, ID_NAMESPACE + f"crag:{region} | {crag}")),
+            "name": crag,
+            "slug": slugify(crag),
+            "region": region,
+            "region_slug": slugify(region),
+            "route_count": len(rs),
+            "is_stub": len(rs) == 0,
+            "latitude": lat,
+            "longitude": lon,
+            "coord_source": coord_source,
+            "grades": sorted({r["grade"] for r in rs if r.get("grade")}),
+            "disciplines": sorted({r["discipline"] for r in rs if r.get("discipline")}),
+            "path": f"/crags/{slugify(region)}/{slugify(crag)}",
+            "osm": (src or {}).get("osm"),
+            "rock": (src or {}).get("rock"),
+            "website": (src or {}).get("website"),
+            "topo": (src or {}).get("topo"),
+            "wikimedia": (src or {}).get("wikimedia"),
+            "links": (src or {}).get("links", []),
+            "has_exact_links": (src or {}).get("has_exact_links", False),
+        })
+    return crags
+
+
+def build_regions(routes: list[dict], crags: list[dict], canon_regions: dict | None = None) -> list[dict]:
+    canon_regions = canon_regions or {}
+    # Union of every region with routes/crags AND every region the
+    # canonical file knows about (zero-route regions included).
+    names = {r["region"] for r in routes} | {c["region"] for c in crags} | set(canon_regions.keys())
+
+    regions = []
+    for name in sorted(names):
+        rs = [r for r in routes if r["region"] == name]
+        cs = [c for c in crags if c["region"] == name]
+        src = canon_regions.get(name)
+        regions.append({
+            "id": str(uuid.uuid5(uuid.NAMESPACE_URL, ID_NAMESPACE + f"region:{name}")),
+            "name": name,
+            "slug": slugify(name),
+            "crag_count": len(cs),
+            "route_count": len(rs),
+            "path": f"/crags/{slugify(name)}",
+            "links": (src or {}).get("links", []),
+            "more_info_note": (src or {}).get("more_info_note"),
+        })
+    return regions
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--out", default=str(HERE / "api" / "v1"))
+    args = ap.parse_args()
+    out = Path(args.out)
+
+    batches = []
+    for label, loader in SOURCES:
+        try:
+            recs = loader(HERE)
+        except FileNotFoundError:
+            recs = []
+        print(f"  source {label:8s} {len(recs):5d} records")
+        batches.append((label, recs))
+
+    canon_crags, canon_regions = load_canonical_structural(HERE / "master" / "vertical-moment-canonical.json")
+
+    routes = merge(batches)
+    crags = build_crags(routes, canon_crags)
+    regions = build_regions(routes, crags, canon_regions)
+
+    generated = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    meta = {"schema_version": SCHEMA_VERSION, "generated": generated}
+    endpoints = {}
+
+    endpoints["routes.json"] = write_json(out / "routes.json", {**meta, "count": len(routes), "routes": routes})
+    endpoints["crags.json"] = write_json(out / "crags.json", {**meta, "count": len(crags), "crags": crags})
+    endpoints["regions.json"] = write_json(out / "regions.json", {**meta, "count": len(regions), "regions": regions})
+
+    # Lightweight projection for client-side route-name search. routes.json
+    # (~2MB) must never ship to the browser; this is name/grade/location
+    # only, no QA notes or provenance, safe to fetch up front.
+    search_index = [{
+        "id": r["id"], "name": r["name"], "grade": r.get("grade"),
+        "region": r["region"], "region_slug": r["region_slug"],
+        "crag": r["crag"], "crag_slug": r["crag_slug"], "path": r["path"],
+    } for r in routes]
+    endpoints["search-index.json"] = write_json(
+        out / "search-index.json", {**meta, "count": len(search_index), "routes": search_index})
+
+    for reg in regions:
+        rs = [r for r in routes if r["region_slug"] == reg["slug"]]
+        cs = [c for c in crags if c["region_slug"] == reg["slug"]]
+        endpoints[f"regions/{reg['slug']}.json"] = write_json(
+            out / "regions" / f"{reg['slug']}.json",
+            {**meta, "region": reg, "crags": cs, "routes": rs})
+
+    for c in crags:
+        rs = [r for r in routes if r["region_slug"] == c["region_slug"]
+              and r["crag_slug"] == c["slug"]]
+        endpoints[f"crags/{c['region_slug']}/{c['slug']}.json"] = write_json(
+            out / "crags" / c["region_slug"] / f"{c['slug']}.json",
+            {**meta, "crag": c, "routes": rs})
+
+    facets = {
+        "regions": sorted({r["region"] for r in routes}),
+        "disciplines": sorted({r["discipline"] for r in routes if r.get("discipline")}),
+        "grade_bands": sorted({r["grade_band"] for r in routes if r.get("grade_band")}),
+        "sources": sorted({r["source"] for r in routes if r.get("source")}),
+    }
+    endpoints["facets.json"] = write_json(out / "facets.json", {**meta, **facets})
+
+    stats = {
+        "routes": len(routes), "crags": len(crags), "regions": len(regions),
+        "with_coords": sum(1 for r in routes if r["has_coords"]),
+        "by_provenance": {k: sum(1 for r in routes if k in r["provenance"])
+                          for k in ("master", "notion")},
+        "by_region": {r["name"]: r["route_count"] for r in regions},
+    }
+    endpoints["stats.json"] = write_json(out / "stats.json", {**meta, **stats})
+
+    write_json(out / "index.json", {
+        **meta,
+        "name": "Vertical Moment climbing data",
+        "license": "route data CC-BY-SA; crag geometry © OpenStreetMap contributors (ODbL)",
+        "id_recipe": 'uuid5(NAMESPACE_URL, "vertical-moment:" + row_key)',
+        "stats": stats,
+        "endpoints": [{"file": k, "bytes": v} for k, v in sorted(endpoints.items())],
+    })
+
+    print(f"\n  {len(routes)} routes / {len(crags)} crags / {len(regions)} regions")
+    print(f"  {len(endpoints) + 1} files -> {out}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

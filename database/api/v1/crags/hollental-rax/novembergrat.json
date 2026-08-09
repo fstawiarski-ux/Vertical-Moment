@@ -1,0 +1,77 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:37:10+00:00",
+ "crag": {
+  "id": "f6f53cee-c091-5759-ab18-9c7453bcb732",
+  "name": "Novembergrat",
+  "slug": "novembergrat",
+  "region": "Höllental-Rax",
+  "region_slug": "hollental-rax",
+  "route_count": 0,
+  "is_stub": true,
+  "latitude": 47.771012,
+  "longitude": 15.830653,
+  "coord_source": "osm",
+  "grades": [],
+  "disciplines": [],
+  "path": "/crags/hollental-rax/novembergrat",
+  "osm": "relation/18664185",
+  "rock": null,
+  "website": "https://www.bergsteigen.com/touren/klettern/novembergrat/",
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18664185",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Crag website",
+    "domain": "",
+    "url": "https://www.bergsteigen.com/touren/klettern/novembergrat/",
+    "note": "Official or community page, tagged in OSM."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=47.771012&mlon=15.830653#map=16/47.771012/15.830653",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Novembergrat+H%C3%B6llental-Rax"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Novembergrat+H%C3%B6llental-Rax"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Novembergrat"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Novembergrat+H%C3%B6llental-Rax"
+   }
+  ],
+  "has_exact_links": true
+ },
+ "routes": []
+}

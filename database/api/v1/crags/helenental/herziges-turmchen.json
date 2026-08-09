@@ -1,0 +1,147 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:37:10+00:00",
+ "crag": {
+  "id": "4c8249ba-ccb6-560b-b9e8-0a84b6081093",
+  "name": "Herziges Türmchen",
+  "slug": "herziges-turmchen",
+  "region": "Helenental",
+  "region_slug": "helenental",
+  "route_count": 3,
+  "is_stub": false,
+  "latitude": null,
+  "longitude": null,
+  "coord_source": null,
+  "grades": [
+   "5+",
+   "7",
+   "7-"
+  ],
+  "disciplines": [
+   "sport"
+  ],
+  "path": "/crags/helenental/herziges-turmchen",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Herziges+T%C3%BCrmchen+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Herziges+T%C3%BCrmchen+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Herziges+T%C3%BCrmchen"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Herziges+T%C3%BCrmchen+Helenental"
+   }
+  ],
+  "has_exact_links": false
+ },
+ "routes": [
+  {
+   "row_key": "Helenental | Herziges Türmchen | ...und die Kleinen verrecken",
+   "name": "...und die Kleinen verrecken",
+   "grade": "7",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Helenental",
+   "area": "Helenental",
+   "crag": "Herziges Türmchen",
+   "wall": "Herziges Türmchen",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "coord_source": null,
+   "notion_page_id": null,
+   "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
+   "provenance": [
+    "canonical"
+   ],
+   "id": "62c89317-06ae-54a4-b533-c3bc8666ef02",
+   "region_slug": "helenental",
+   "crag_slug": "herziges-turmchen",
+   "slug": "und-die-kleinen-verrecken",
+   "path": "/crags/helenental/herziges-turmchen#62c89317-06ae-54a4-b533-c3bc8666ef02",
+   "has_coords": false
+  },
+  {
+   "row_key": "Helenental | Herziges Türmchen | Dschungeldach",
+   "name": "Dschungeldach",
+   "grade": "5+",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Helenental",
+   "area": "Helenental",
+   "crag": "Herziges Türmchen",
+   "wall": "Herziges Türmchen",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "coord_source": null,
+   "notion_page_id": null,
+   "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
+   "provenance": [
+    "canonical"
+   ],
+   "id": "eba7377e-3afa-5363-af5f-d08f9c079cd2",
+   "region_slug": "helenental",
+   "crag_slug": "herziges-turmchen",
+   "slug": "dschungeldach",
+   "path": "/crags/helenental/herziges-turmchen#eba7377e-3afa-5363-af5f-d08f9c079cd2",
+   "has_coords": false
+  },
+  {
+   "row_key": "Helenental | Herziges Türmchen | Herziges Türmchen",
+   "name": "Herziges Türmchen",
+   "grade": "7-",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Helenental",
+   "area": "Helenental",
+   "crag": "Herziges Türmchen",
+   "wall": "Herziges Türmchen",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "coord_source": null,
+   "notion_page_id": null,
+   "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
+   "provenance": [
+    "canonical"
+   ],
+   "id": "13629d51-9741-5cd0-83e7-c18198526841",
+   "region_slug": "helenental",
+   "crag_slug": "herziges-turmchen",
+   "slug": "herziges-turmchen",
+   "path": "/crags/helenental/herziges-turmchen#13629d51-9741-5cd0-83e7-c18198526841",
+   "has_coords": false
+  }
+ ]
+}

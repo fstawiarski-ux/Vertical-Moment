@@ -1,0 +1,2746 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:37:10+00:00",
+ "region": {
+  "id": "67b8b7a2-4b35-5faf-91c5-d19299ae30d4",
+  "name": "Höllental-Rax",
+  "slug": "hollental-rax",
+  "crag_count": 41,
+  "route_count": 0,
+  "path": "/crags/hollental-rax",
+  "links": [
+   {
+    "kind": "exact",
+    "label": "theCrag — Vienna area overview",
+    "domain": "thecrag.com",
+    "url": "https://www.thecrag.com/en/climbing/austria/wien-vienna-area",
+    "note": "Community index of the whole Vienna region, with its own source list."
+   },
+   {
+    "kind": "exact",
+    "label": "Keltenkalk",
+    "domain": "keltenkalk.at",
+    "url": "http://www.keltenkalk.at/",
+    "note": "The main printed guidebook for the Vienna limestone — roughly 4,000 climbs and boulders."
+   },
+   {
+    "kind": "exact",
+    "label": "bergsteigen.com — Klettergarten index",
+    "domain": "bergsteigen.com",
+    "url": "https://www.bergsteigen.com/touren/klettergarten/",
+    "note": "Filterable crag database with descriptions, approach notes and many downloadable topos."
+   },
+   {
+    "kind": "exact",
+    "label": "Thomas Behm — Höllental topos",
+    "domain": "thomasbehm.at",
+    "url": "http://www.thomasbehm.at/hoellenthal.htm",
+    "note": "Around 2,000 routes across the Höllental, Rax and Schneeberg."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+H%C3%B6llental-Rax+Klettergarten"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+H%C3%B6llental-Rax+Austria"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+H%C3%B6llental-Rax"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+H%C3%B6llental-Rax+Klettern"
+   }
+  ],
+  "more_info_note": "Vertical Moment does not publish topos yet. These are the places that do — follow them for the drawn lines, and verify anything safety-relevant on site."
+ },
+ "crags": [
+  {
+   "id": "5185490e-2cfc-515d-a42d-53ecfbdc1073",
+   "name": "Atlantis",
+   "slug": "atlantis",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.75343,
+   "longitude": 15.761864,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/atlantis",
+   "osm": "relation/18166298",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18166298",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.75343&mlon=15.761864#map=16/47.75343/15.761864",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Atlantis+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Atlantis+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Atlantis"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Atlantis+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "bf771f09-0954-5560-aa2b-33c5f572c353",
+   "name": "Blechmauernkante",
+   "slug": "blechmauernkante",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.746321,
+   "longitude": 15.761283,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/blechmauernkante",
+   "osm": "relation/19281124",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/19281124",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.746321&mlon=15.761283#map=16/47.746321/15.761283",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Blechmauernkante+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Blechmauernkante+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Blechmauernkante"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Blechmauernkante+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "ecc5cdae-d02a-51ce-97f6-a2a77c8cf324",
+   "name": "Blechmauernpfeiler",
+   "slug": "blechmauernpfeiler",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.74583,
+   "longitude": 15.761532,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/blechmauernpfeiler",
+   "osm": "relation/21068522",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/21068522",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.74583&mlon=15.761532#map=16/47.74583/15.761532",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Blechmauernpfeiler+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Blechmauernpfeiler+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Blechmauernpfeiler"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Blechmauernpfeiler+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "bdcd830c-e25c-5b35-896f-f54a2f03b96b",
+   "name": "Bürklesteig",
+   "slug": "burklesteig",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.77183,
+   "longitude": 15.819594,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/burklesteig",
+   "osm": "relation/18166121",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18166121",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.77183&mlon=15.819594#map=16/47.77183/15.819594",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+B%C3%BCrklesteig+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+B%C3%BCrklesteig+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+B%C3%BCrklesteig"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+B%C3%BCrklesteig+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "461fbcb1-5321-511a-97a7-ff10808f265f",
+   "name": "Detektivbüro",
+   "slug": "detektivburo",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.745141,
+   "longitude": 15.753192,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/detektivburo",
+   "osm": "relation/18166036",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18166036",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.745141&mlon=15.753192#map=16/47.745141/15.753192",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Detektivb%C3%BCro+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Detektivb%C3%BCro+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Detektivb%C3%BCro"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Detektivb%C3%BCro+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "188e9b63-e1a7-5b36-8608-f796c83996a7",
+   "name": "Die fünf Elemente",
+   "slug": "die-funf-elemente",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.723377,
+   "longitude": 15.80549,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/die-funf-elemente",
+   "osm": "relation/18218582",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218582",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.723377&mlon=15.80549#map=16/47.723377/15.80549",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Die+f%C3%BCnf+Elemente+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Die+f%C3%BCnf+Elemente+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Die+f%C3%BCnf+Elemente"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Die+f%C3%BCnf+Elemente+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "ac8231b8-95c7-5403-bed1-48f4b24b7f92",
+   "name": "Feiertagsststein",
+   "slug": "feiertagsststein",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.743486,
+   "longitude": 15.781981,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/feiertagsststein",
+   "osm": "relation/18166320",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18166320",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.743486&mlon=15.781981#map=16/47.743486/15.781981",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Feiertagsststein+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Feiertagsststein+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Feiertagsststein"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Feiertagsststein+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "7284c720-7c43-56af-8ebd-8a56076ac38e",
+   "name": "Fuchslochgraben",
+   "slug": "fuchslochgraben",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.722003,
+   "longitude": 15.81023,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/fuchslochgraben",
+   "osm": "relation/18218572",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218572",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.722003&mlon=15.81023#map=16/47.722003/15.81023",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Fuchslochgraben+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Fuchslochgraben+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Fuchslochgraben"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Fuchslochgraben+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "d9225f1f-ad68-542a-8690-1febf8557153",
+   "name": "Gamsgartlgrat",
+   "slug": "gamsgartlgrat",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.769951,
+   "longitude": 15.826209,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/gamsgartlgrat",
+   "osm": "relation/18166120",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18166120",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.769951&mlon=15.826209#map=16/47.769951/15.826209",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Gamsgartlgrat+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Gamsgartlgrat+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Gamsgartlgrat"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Gamsgartlgrat+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "6741700d-9712-5a11-8f41-bcb6dd80d988",
+   "name": "Garmelsteig",
+   "slug": "garmelsteig",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.78608,
+   "longitude": 15.809236,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/garmelsteig",
+   "osm": "relation/18166125",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18166125",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.78608&mlon=15.809236#map=16/47.78608/15.809236",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Garmelsteig+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Garmelsteig+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Garmelsteig"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Garmelsteig+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "9ab44cdd-4251-51fb-9223-5224916ad1ce",
+   "name": "Grossofen",
+   "slug": "grossofen",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.725119,
+   "longitude": 15.809585,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/grossofen",
+   "osm": "relation/18147245",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18147245",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.725119&mlon=15.809585#map=16/47.725119/15.809585",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Grossofen+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Grossofen+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Grossofen"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Grossofen+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "16733cc3-2852-5982-bfce-1925fb3d7dee",
+   "name": "Hochgang-Westwand",
+   "slug": "hochgang-westwand",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.741901,
+   "longitude": 15.785865,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/hochgang-westwand",
+   "osm": "relation/18166319",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18166319",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.741901&mlon=15.785865#map=16/47.741901/15.785865",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Hochgang-Westwand+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Hochgang-Westwand+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Hochgang-Westwand"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Hochgang-Westwand+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "abdc188f-742c-53fd-867e-6a4bb5b9122f",
+   "name": "Kaiserbrunner Turmstein",
+   "slug": "kaiserbrunner-turmstein",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.733812,
+   "longitude": 15.798976,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/kaiserbrunner-turmstein",
+   "osm": "relation/19281003",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/19281003",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.733812&mlon=15.798976#map=16/47.733812/15.798976",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Kaiserbrunner+Turmstein+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Kaiserbrunner+Turmstein+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Kaiserbrunner+Turmstein"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Kaiserbrunner+Turmstein+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "57229dba-b815-58a2-81d9-123c16e3369d",
+   "name": "Kesselgraben",
+   "slug": "kesselgraben",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.750258,
+   "longitude": 15.741832,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/kesselgraben",
+   "osm": "relation/18219113",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18219113",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.750258&mlon=15.741832#map=16/47.750258/15.741832",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Kesselgraben+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Kesselgraben+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Kesselgraben"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Kesselgraben+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "af03532d-3fd7-5740-be2b-0a3acaf3a22b",
+   "name": "Klettergarten Seehütte",
+   "slug": "klettergarten-seehutte",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.702716,
+   "longitude": 15.732259,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/klettergarten-seehutte",
+   "osm": "relation/18218591",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218591",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.702716&mlon=15.732259#map=16/47.702716/15.732259",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Klettergarten+Seeh%C3%BCtte+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Klettergarten+Seeh%C3%BCtte+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Klettergarten+Seeh%C3%BCtte"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Klettergarten+Seeh%C3%BCtte+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "a4afc69a-7656-54f3-af4e-edca97775f20",
+   "name": "Klobenwand",
+   "slug": "klobenwand",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.739131,
+   "longitude": 15.754489,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/klobenwand",
+   "osm": "relation/18219115",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18219115",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.739131&mlon=15.754489#map=16/47.739131/15.754489",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Klobenwand+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Klobenwand+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Klobenwand"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Klobenwand+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "d6c37427-7dc7-550b-ae6b-34b928428827",
+   "name": "Krieg und Frieden",
+   "slug": "krieg-und-frieden",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.719935,
+   "longitude": 15.812164,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/krieg-und-frieden",
+   "osm": "relation/18166225",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18166225",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.719935&mlon=15.812164#map=16/47.719935/15.812164",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Krieg+und+Frieden+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Krieg+und+Frieden+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Krieg+und+Frieden"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Krieg+und+Frieden+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "71b6e23d-737c-5f58-b12b-d5dc41f2b252",
+   "name": "Krottenseemauern",
+   "slug": "krottenseemauern",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.762441,
+   "longitude": 15.78628,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/krottenseemauern",
+   "osm": "relation/19280914",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/19280914",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.762441&mlon=15.78628#map=16/47.762441/15.78628",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Krottenseemauern+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Krottenseemauern+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Krottenseemauern"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Krottenseemauern+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "9c011547-f413-526a-83e2-7063bdb1ec17",
+   "name": "Lechnermauern",
+   "slug": "lechnermauern",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.72032,
+   "longitude": 15.732004,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/lechnermauern",
+   "osm": "relation/18166075",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18166075",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.72032&mlon=15.732004#map=16/47.72032/15.732004",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Lechnermauern+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Lechnermauern+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Lechnermauern"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Lechnermauern+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "2319b8e1-4b2c-5b3b-9290-b062eb34fb8f",
+   "name": "Lärchkogelgrat",
+   "slug": "larchkogelgrat",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.749543,
+   "longitude": 15.777241,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/larchkogelgrat",
+   "osm": "relation/18220686",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18220686",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.749543&mlon=15.777241#map=16/47.749543/15.777241",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+L%C3%A4rchkogelgrat+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+L%C3%A4rchkogelgrat+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+L%C3%A4rchkogelgrat"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+L%C3%A4rchkogelgrat+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "f50f1b8f-c3c2-5bc6-b22c-775cc7fd2a1f",
+   "name": "Magie des Bösen",
+   "slug": "magie-des-bosen",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.719027,
+   "longitude": 15.812938,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/magie-des-bosen",
+   "osm": "relation/18166226",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18166226",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.719027&mlon=15.812938#map=16/47.719027/15.812938",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Magie+des+B%C3%B6sen+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Magie+des+B%C3%B6sen+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Magie+des+B%C3%B6sen"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Magie+des+B%C3%B6sen+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "493891fd-29e5-5e41-9173-ace86007c7d3",
+   "name": "Mittagstein",
+   "slug": "mittagstein",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.718291,
+   "longitude": 15.809674,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/mittagstein",
+   "osm": "relation/18161921",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18161921",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.718291&mlon=15.809674#map=16/47.718291/15.809674",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Mittagstein+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Mittagstein+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Mittagstein"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Mittagstein+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "d54416f2-e5db-5267-8ddd-8acbac2f7556",
+   "name": "Nandlgrat",
+   "slug": "nandlgrat",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.780001,
+   "longitude": 15.817775,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/nandlgrat",
+   "osm": "relation/18166135",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18166135",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.780001&mlon=15.817775#map=16/47.780001/15.817775",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Nandlgrat+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Nandlgrat+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Nandlgrat"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Nandlgrat+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "f8e8478f-9f82-58d4-8cbe-854915421f7a",
+   "name": "Niemandsland",
+   "slug": "niemandsland",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.756545,
+   "longitude": 15.744375,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/niemandsland",
+   "osm": "relation/18219112",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18219112",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.756545&mlon=15.744375#map=16/47.756545/15.744375",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Niemandsland+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Niemandsland+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Niemandsland"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Niemandsland+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "f6f53cee-c091-5759-ab18-9c7453bcb732",
+   "name": "Novembergrat",
+   "slug": "novembergrat",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.771012,
+   "longitude": 15.830653,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/novembergrat",
+   "osm": "relation/18664185",
+   "rock": null,
+   "website": "https://www.bergsteigen.com/touren/klettern/novembergrat/",
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18664185",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Crag website",
+     "domain": "",
+     "url": "https://www.bergsteigen.com/touren/klettern/novembergrat/",
+     "note": "Official or community page, tagged in OSM."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.771012&mlon=15.830653#map=16/47.771012/15.830653",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Novembergrat+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Novembergrat+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Novembergrat"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Novembergrat+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": true
+  },
+  {
+   "id": "3344f23a-803c-51da-9580-bcbe9fe2b198",
+   "name": "Oberer Herminensteig",
+   "slug": "oberer-herminensteig",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.765557,
+   "longitude": 15.836321,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/oberer-herminensteig",
+   "osm": "relation/18166124",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18166124",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.765557&mlon=15.836321#map=16/47.765557/15.836321",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Oberer+Herminensteig+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Oberer+Herminensteig+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Oberer+Herminensteig"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Oberer+Herminensteig+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "abc1a74b-c215-5729-ac6d-19288b29d6c5",
+   "name": "Ochsenwand",
+   "slug": "ochsenwand",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.73173,
+   "longitude": 15.807197,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/ochsenwand",
+   "osm": "relation/18218728",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218728",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.73173&mlon=15.807197#map=16/47.73173/15.807197",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Ochsenwand+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Ochsenwand+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Ochsenwand"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Ochsenwand+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "963a7ef5-2b7e-5f71-83e0-712bbf30f60b",
+   "name": "Paganiniplatte",
+   "slug": "paganiniplatte",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.737217,
+   "longitude": 15.757356,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/paganiniplatte",
+   "osm": "relation/18885116",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18885116",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.737217&mlon=15.757356#map=16/47.737217/15.757356",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Paganiniplatte+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Paganiniplatte+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Paganiniplatte"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Paganiniplatte+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "8ba955ee-d572-50f4-890c-d04aba7a5b58",
+   "name": "Preinerwandplatte",
+   "slug": "preinerwandplatte",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.701458,
+   "longitude": 15.733118,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/preinerwandplatte",
+   "osm": "relation/19019967",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/19019967",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.701458&mlon=15.733118#map=16/47.701458/15.733118",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Preinerwandplatte+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Preinerwandplatte+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Preinerwandplatte"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Preinerwandplatte+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "3a1c948c-a25c-5f5a-b79c-6ca21139f24b",
+   "name": "Rechenmauer",
+   "slug": "rechenmauer",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.722319,
+   "longitude": 15.806736,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/rechenmauer",
+   "osm": "relation/18218570",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218570",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.722319&mlon=15.806736#map=16/47.722319/15.806736",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Rechenmauer+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Rechenmauer+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Rechenmauer"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Rechenmauer+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "68377b21-7180-553f-bd71-4385dc55a546",
+   "name": "Schattenreich",
+   "slug": "schattenreich",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.733659,
+   "longitude": 15.798017,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/schattenreich",
+   "osm": "relation/18218578",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218578",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.733659&mlon=15.798017#map=16/47.733659/15.798017",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Schattenreich+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Schattenreich+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Schattenreich"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Schattenreich+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "0d362181-efc2-52ff-87b6-b64e8a2c11ab",
+   "name": "Stadelwand",
+   "slug": "stadelwand",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.748667,
+   "longitude": 15.790454,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/stadelwand",
+   "osm": "relation/18160436",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18160436",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.748667&mlon=15.790454#map=16/47.748667/15.790454",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Stadelwand+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Stadelwand+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Stadelwand"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Stadelwand+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "8a734b24-9e43-5064-97cd-24df02e10312",
+   "name": "Südliche Lechnermauern",
+   "slug": "sudliche-lechnermauern",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.709056,
+   "longitude": 15.723709,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/sudliche-lechnermauern",
+   "osm": "relation/19019943",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/19019943",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.709056&mlon=15.723709#map=16/47.709056/15.723709",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+S%C3%BCdliche+Lechnermauern+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+S%C3%BCdliche+Lechnermauern+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+S%C3%BCdliche+Lechnermauern"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+S%C3%BCdliche+Lechnermauern+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "8a857a58-7816-55fe-ac91-ec4dbb6f1285",
+   "name": "Turmstein",
+   "slug": "turmstein",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.769696,
+   "longitude": 15.782282,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/turmstein",
+   "osm": "relation/19281077",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/19281077",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.769696&mlon=15.782282#map=16/47.769696/15.782282",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Turmstein+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Turmstein+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Turmstein"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Turmstein+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "ff31baca-46c2-52c2-b51c-f0ba7e180654",
+   "name": "Verlorenen Turm",
+   "slug": "verlorenen-turm",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.753318,
+   "longitude": 15.767698,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/verlorenen-turm",
+   "osm": "relation/18166297",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18166297",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.753318&mlon=15.767698#map=16/47.753318/15.767698",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Verlorenen+Turm+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Verlorenen+Turm+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Verlorenen+Turm"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Verlorenen+Turm+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "5f8be16f-8c01-5bc7-846f-d080205d756d",
+   "name": "Vordere Klobenwand",
+   "slug": "vordere-klobenwand",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.74548,
+   "longitude": 15.756598,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/vordere-klobenwand",
+   "osm": "relation/18219118",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18219118",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.74548&mlon=15.756598#map=16/47.74548/15.756598",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Vordere+Klobenwand+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Vordere+Klobenwand+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Vordere+Klobenwand"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Vordere+Klobenwand+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "7484d63a-d47c-5771-a520-37726ce6db53",
+   "name": "Vordere Stadelwand",
+   "slug": "vordere-stadelwand",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.74666,
+   "longitude": 15.783993,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/vordere-stadelwand",
+   "osm": "relation/18160443",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18160443",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.74666&mlon=15.783993#map=16/47.74666/15.783993",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Vordere+Stadelwand+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Vordere+Stadelwand+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Vordere+Stadelwand"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Vordere+Stadelwand+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "371de9a1-d114-5d15-bc1e-066237c9dcad",
+   "name": "Wachthüttelturm",
+   "slug": "wachthuttelturm",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.745271,
+   "longitude": 15.764964,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/wachthuttelturm",
+   "osm": "relation/19280987",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/19280987",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.745271&mlon=15.764964#map=16/47.745271/15.764964",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Wachth%C3%BCttelturm+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Wachth%C3%BCttelturm+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Wachth%C3%BCttelturm"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Wachth%C3%BCttelturm+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "b7ee6cc0-4519-515f-b6b0-e3d3f95a68dd",
+   "name": "Weichtalhaus Klettergarten",
+   "slug": "weichtalhaus-klettergarten",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.748397,
+   "longitude": 15.768218,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/weichtalhaus-klettergarten",
+   "osm": "relation/18147181",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18147181",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.748397&mlon=15.768218#map=16/47.748397/15.768218",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Weichtalhaus+Klettergarten+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Weichtalhaus+Klettergarten+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Weichtalhaus+Klettergarten"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Weichtalhaus+Klettergarten+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "5f3ffb49-4d1c-5e32-8820-b37e239e4bb8",
+   "name": "Weichtalklamm",
+   "slug": "weichtalklamm",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.752368,
+   "longitude": 15.770175,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/weichtalklamm",
+   "osm": "relation/18166299",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18166299",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.752368&mlon=15.770175#map=16/47.752368/15.770175",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Weichtalklamm+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Weichtalklamm+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Weichtalklamm"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Weichtalklamm+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "cb0c0b18-b53f-5c0e-b721-635afdcebff8",
+   "name": "Weisse Wand",
+   "slug": "weisse-wand",
+   "region": "Höllental-Rax",
+   "region_slug": "hollental-rax",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.743539,
+   "longitude": 15.760167,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/hollental-rax/weisse-wand",
+   "osm": "relation/18218624",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218624",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.743539&mlon=15.760167#map=16/47.743539/15.760167",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Weisse+Wand+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Weisse+Wand+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Weisse+Wand"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Weisse+Wand+H%C3%B6llental-Rax"
+    }
+   ],
+   "has_exact_links": false
+  }
+ ],
+ "routes": []
+}

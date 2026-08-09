@@ -133,6 +133,24 @@ section.view{padding:24px 0 90px}
 .leaflet-tooltip.distance-ring-label,.leaflet-tooltip.measure-label{background:rgba(255,255,255,.9);border:0;box-shadow:none;color:#314233;font-weight:800;font-size:11px;padding:3px 6px}
 .leaflet-tooltip.distance-ring-label::before,.leaflet-tooltip.measure-label::before{display:none}
 
+/* only the selected crag pin gets a label — that's the whole point */
+.leaflet-tooltip.selected-crag-label{background:var(--forest);border:1px solid var(--gold);color:var(--chalk);font-weight:700;font-size:12px;padding:3px 8px;border-radius:6px}
+.leaflet-tooltip.selected-crag-label::before{border-top-color:var(--gold)}
+
+.map-attribution-note{position:absolute;left:8px;bottom:6px;z-index:400;font-size:9.5px;color:rgba(255,255,255,.75);text-shadow:0 1px 2px rgba(0,0,0,.6);pointer-events:none}
+
+.search-group-label{padding:8px 8px 2px;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--sage)}
+
+.unverified-badge{font-size:9.5px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:#2b2b28;background:var(--gold);border-radius:5px;padding:1px 5px;margin-left:6px;white-space:nowrap}
+
+.explore-page{max-width:1180px;margin:0 auto;padding:24px 16px 60px}
+.explore-head{max-width:640px;margin:0 auto 18px;text-align:center}
+.explore-head h1{font-size:clamp(24px,3vw,32px);margin:0 0 6px}
+.explore-page .eyebrow{font-size:12px;color:var(--muted);margin-bottom:6px}
+.explore-page .eyebrow a{color:var(--muted);text-decoration:underline}
+.crag-page h2{margin-top:22px}
+.more-info a{word-break:break-word}
+
 /* leaflet controls — keep legible in dark mode instead of staying stark white */
 [data-theme="dark"] .leaflet-bar a{background:var(--forest);color:var(--chalk);border-color:rgba(255,255,255,.14)}
 [data-theme="dark"] .leaflet-bar a:hover{background:color-mix(in srgb,var(--forest) 80%,#fff 12%)}
@@ -426,7 +444,8 @@ footer .wrap{display:flex;gap:14px;flex-wrap:wrap;justify-content:space-between}
   .flagship-grid{grid-template-columns:1fr}
   .flagship-grid > .mapgrid{display:grid}
   .mapgrid{grid-template-columns:1fr}
-  .mapcol{order:2}#map{height:280px}.panel{max-height:none;height:auto;order:1}
+  .mapcol{order:1}#map{height:40vh;min-height:260px}.panel{max-height:none;height:auto;order:2}
+  .explore-page .mapgrid{display:grid}
   .cgrid,.mgrid{grid-template-columns:1fr}
   .location-grid{grid-template-columns:1fr}
   .report-layout{grid-template-columns:1fr}.cheat-sheet{position:static;order:-1}

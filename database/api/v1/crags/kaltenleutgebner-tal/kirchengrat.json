@@ -1,0 +1,218 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:37:10+00:00",
+ "crag": {
+  "id": "54bf1448-ab80-5f5f-bfa9-2c475f0fae61",
+  "name": "Kirchengrat",
+  "slug": "kirchengrat",
+  "region": "Kaltenleutgebner Tal",
+  "region_slug": "kaltenleutgebner-tal",
+  "route_count": 5,
+  "is_stub": false,
+  "latitude": 48.113728,
+  "longitude": 16.197626,
+  "coord_source": "routes",
+  "grades": [
+   "5-",
+   "6+",
+   "6-",
+   "7/7+"
+  ],
+  "disciplines": [
+   "sport"
+  ],
+  "path": "/crags/kaltenleutgebner-tal/kirchengrat",
+  "osm": "relation/18166735",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18166735",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=48.113724&mlon=16.197633#map=16/48.113724/16.197633",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Kirchengrat+Kaltenleutgebner+Tal"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Kirchengrat+Kaltenleutgebner+Tal"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Kirchengrat"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Kirchengrat+Kaltenleutgebner+Tal"
+   }
+  ],
+  "has_exact_links": false
+ },
+ "routes": [
+  {
+   "row_key": "Kaltenleutgebner Tal | Kirchengrat | Alter Fuchs",
+   "name": "Alter Fuchs",
+   "grade": "5-",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Kaltenleutgebner Tal",
+   "area": "Kaltenleutgebner Tal",
+   "crag": "Kirchengrat",
+   "wall": "Kirchengrat",
+   "source": "Keltenkalk",
+   "latitude": 48.113728,
+   "longitude": 16.197626,
+   "coord_source": "route",
+   "notion_page_id": null,
+   "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
+   "provenance": [
+    "canonical"
+   ],
+   "id": "81366e18-5b74-5292-af56-dda2429602ea",
+   "region_slug": "kaltenleutgebner-tal",
+   "crag_slug": "kirchengrat",
+   "slug": "alter-fuchs",
+   "path": "/crags/kaltenleutgebner-tal/kirchengrat#81366e18-5b74-5292-af56-dda2429602ea",
+   "has_coords": true
+  },
+  {
+   "row_key": "Kaltenleutgebner Tal | Kirchengrat | Buntspecht",
+   "name": "Buntspecht",
+   "grade": "7/7+",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Kaltenleutgebner Tal",
+   "area": "Kaltenleutgebner Tal",
+   "crag": "Kirchengrat",
+   "wall": "Kirchengrat",
+   "source": "Keltenkalk",
+   "latitude": 48.113728,
+   "longitude": 16.197626,
+   "coord_source": "route",
+   "notion_page_id": null,
+   "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
+   "provenance": [
+    "canonical"
+   ],
+   "id": "b64ddcf0-57fb-5079-9c4d-1c5aa3eaadd5",
+   "region_slug": "kaltenleutgebner-tal",
+   "crag_slug": "kirchengrat",
+   "slug": "buntspecht",
+   "path": "/crags/kaltenleutgebner-tal/kirchengrat#b64ddcf0-57fb-5079-9c4d-1c5aa3eaadd5",
+   "has_coords": true
+  },
+  {
+   "row_key": "Kaltenleutgebner Tal | Kirchengrat | Kleiner Fuchs",
+   "name": "Kleiner Fuchs",
+   "grade": "6-",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Kaltenleutgebner Tal",
+   "area": "Kaltenleutgebner Tal",
+   "crag": "Kirchengrat",
+   "wall": "Kirchengrat",
+   "source": "Keltenkalk",
+   "latitude": 48.113728,
+   "longitude": 16.197626,
+   "coord_source": "route",
+   "notion_page_id": null,
+   "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
+   "provenance": [
+    "canonical"
+   ],
+   "id": "1c311422-7c35-5322-beb0-369597d2c550",
+   "region_slug": "kaltenleutgebner-tal",
+   "crag_slug": "kirchengrat",
+   "slug": "kleiner-fuchs",
+   "path": "/crags/kaltenleutgebner-tal/kirchengrat#1c311422-7c35-5322-beb0-369597d2c550",
+   "has_coords": true
+  },
+  {
+   "row_key": "Kaltenleutgebner Tal | Kirchengrat | Ruf des Kolkraben",
+   "name": "Ruf des Kolkraben",
+   "grade": "6-",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Kaltenleutgebner Tal",
+   "area": "Kaltenleutgebner Tal",
+   "crag": "Kirchengrat",
+   "wall": "Kirchengrat",
+   "source": "Keltenkalk",
+   "latitude": 48.113728,
+   "longitude": 16.197626,
+   "coord_source": "route",
+   "notion_page_id": null,
+   "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
+   "provenance": [
+    "canonical"
+   ],
+   "id": "03824736-d56f-5042-b2b8-00b25c9a180f",
+   "region_slug": "kaltenleutgebner-tal",
+   "crag_slug": "kirchengrat",
+   "slug": "ruf-des-kolkraben",
+   "path": "/crags/kaltenleutgebner-tal/kirchengrat#03824736-d56f-5042-b2b8-00b25c9a180f",
+   "has_coords": true
+  },
+  {
+   "row_key": "Kaltenleutgebner Tal | Kirchengrat | Waldmaus",
+   "name": "Waldmaus",
+   "grade": "6+",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Kaltenleutgebner Tal",
+   "area": "Kaltenleutgebner Tal",
+   "crag": "Kirchengrat",
+   "wall": "Kirchengrat",
+   "source": "Keltenkalk",
+   "latitude": 48.113728,
+   "longitude": 16.197626,
+   "coord_source": "route",
+   "notion_page_id": null,
+   "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
+   "provenance": [
+    "canonical"
+   ],
+   "id": "51f66c3f-b83c-504d-a324-a767629c2b8a",
+   "region_slug": "kaltenleutgebner-tal",
+   "crag_slug": "kirchengrat",
+   "slug": "waldmaus",
+   "path": "/crags/kaltenleutgebner-tal/kirchengrat#51f66c3f-b83c-504d-a324-a767629c2b8a",
+   "has_coords": true
+  }
+ ]
+}
