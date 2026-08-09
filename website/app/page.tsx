@@ -131,13 +131,12 @@ export default function Page() {
           src="/photography/banners/band-crag-1920x400.webp"
           alt=""
           width={1568}
-          height={336}
+          height={392}
           loading="lazy"
           aria-hidden="true"
         />
         <div className={styles.bandVeil} />
         <div className={styles.bandText}>
-          <p className={`${styles.eyebrow} ${styles.onDeep}`}>Full-bleed banner · 1920 × 400</p>
           <p className={styles.bandQuote}>
             Every crag has one hour when the rock gives the light back. I plan the day around it.
           </p>

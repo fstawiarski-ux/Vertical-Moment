@@ -145,7 +145,7 @@ export default function PhotographyLayered({ scene, variant = 'tile', priority =
             alt={i === 0 ? scene.alt : ''}
             width={scene.width}
             height={scene.height}
-            loading={priority && i === 0 ? 'eager' : 'lazy'}
+            loading={priority ? 'eager' : 'lazy'}
             decoding="async"
             style={
               {
