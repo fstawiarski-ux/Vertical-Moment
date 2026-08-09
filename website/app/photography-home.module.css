@@ -169,14 +169,10 @@
   width: 52px;
   height: 52px;
   flex-shrink: 0;
-  background-image: var(--vm-mono, url('/brand/icons/02_forest_green.png'));
+  background-image: var(--vm-mono, url('/brand/monogram/vm-mono-forest-gold.webp'));
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-.brand:hover .mk {
-  transform: translateY(-1px) scale(1.03);
 }
 .bt {
   font-family: var(--vm-disp);
@@ -348,10 +344,6 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.92;
-  animation: vmBob 7s ease-in-out infinite;
-}
-.rail:hover .railIcon {
   opacity: 1;
 }
 @keyframes vmBob {
@@ -406,15 +398,8 @@
 
 /* ----------------------------------------------------------------- hero */
 .hero {
-  --detail-left: 36%;
-  --detail-top: 31%;
-  --detail-width: 22%;
-  --detail-height: 35%;
-  --detail-origin-x: 47%;
-  --detail-origin-y: 49%;
-  --detail-scale: 2.15;
   position: relative;
-  min-height: 100svh;
+  min-height: min(100svh, 66.77vw);
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -422,23 +407,21 @@
 }
 .heroLayer {
   position: absolute;
-  inset: -6% -2%;
-  will-change: transform;
+  inset: 0;
 }
 .heroLayer img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   filter: var(--vm-photo);
   transition: filter 0.6s;
 }
-.hero .sceneBg {
-  transform-origin: var(--detail-origin-x) var(--detail-origin-y);
-  transition: transform 900ms var(--vm-ease);
-  will-change: transform;
-}
-.heroDetailOpen .sceneBg {
-  transform: scale(var(--detail-scale));
+.hero .plane {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: none;
 }
 .heroVeil {
   position: absolute;
@@ -472,96 +455,11 @@
   bottom: 9%;
   width: min(18vw, 190px);
   aspect-ratio: 1;
-  background-image: url('/brand/icons/01_line_art.png');
+  background-image: var(--vm-mono);
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
   opacity: 0.2;
-}
-.detailFocus {
-  position: absolute;
-  z-index: 5;
-  left: var(--detail-left);
-  top: var(--detail-top);
-  width: var(--detail-width);
-  height: var(--detail-height);
-  margin: 0;
-  padding: 0;
-  border: 0;
-  color: var(--vm-deep-ink);
-  background: transparent;
-  cursor: zoom-in;
-}
-.detailFocus[aria-pressed='true'] {
-  cursor: zoom-out;
-}
-.detailFrame {
-  position: absolute;
-  inset: 0;
-  border: 1px solid var(--vm-accent);
-  border-radius: 2px;
-  box-shadow:
-    0 0 0 1px rgba(5, 6, 6, 0.34),
-    0 10px 34px rgba(5, 6, 6, 0.2),
-    inset 0 0 24px rgba(176, 126, 34, 0.08);
-  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s var(--vm-ease);
-}
-.detailFrame::before,
-.detailFrame::after {
-  position: absolute;
-  width: 26px;
-  height: 26px;
-  content: '';
-  pointer-events: none;
-}
-.detailFrame::before {
-  top: -2px;
-  left: -2px;
-  border-top: 3px solid var(--vm-accent);
-  border-left: 3px solid var(--vm-accent);
-}
-.detailFrame::after {
-  right: -2px;
-  bottom: -2px;
-  border-right: 3px solid var(--vm-accent);
-  border-bottom: 3px solid var(--vm-accent);
-}
-.detailLabel {
-  position: absolute;
-  left: 0;
-  bottom: calc(100% + 13px);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  line-height: 1;
-  text-transform: uppercase;
-  white-space: nowrap;
-  text-shadow: 0 1px 8px rgba(5, 6, 6, 0.95);
-}
-.detailArrow {
-  position: absolute;
-  left: 0;
-  top: calc(100% + 10px);
-  color: var(--vm-accent);
-  font-size: 20px;
-  line-height: 1;
-  text-shadow: 0 1px 8px rgba(5, 6, 6, 0.95);
-  transition: transform 0.3s var(--vm-ease);
-}
-.detailFocus:hover .detailFrame,
-.detailFocus:focus-visible .detailFrame,
-.detailFocus[aria-pressed='true'] .detailFrame {
-  box-shadow:
-    0 0 0 1px rgba(5, 6, 6, 0.46),
-    0 0 28px color-mix(in srgb, var(--vm-accent) 34%, transparent),
-    inset 0 0 34px color-mix(in srgb, var(--vm-accent) 12%, transparent);
-  transform: scale(1.015);
-}
-.detailFocus:hover .detailArrow,
-.detailFocus:focus-visible .detailArrow {
-  transform: translate(3px, 3px);
-}
-.detailFocus[aria-pressed='true'] .detailArrow {
-  transform: translate(-3px, -3px);
 }
 .heroIn {
   position: relative;
@@ -1629,22 +1527,7 @@
   background-image: var(--vm-mono);
   background-size: contain;
   background-repeat: no-repeat;
-}
-.footMark:hover {
-  transform: translateY(-1px) scale(1.03);
-}
-
-/* The approved dark-theme mark is the plain black VM monogram. A narrow
-   light halo belongs to the UI treatment, not the artwork, and keeps the
-   black silhouette legible on the dark navigation and footer surfaces. */
-:global(html[data-theme='dark']) .mk,
-:global(html[data-theme='dark']) .railIcon,
-:global(html[data-theme='dark']) .footMark {
-  background-image: var(--vm-mono);
-  filter:
-    brightness(0)
-    drop-shadow(0 0 1px rgba(245, 245, 243, 0.96))
-    drop-shadow(0 0 5px rgba(245, 245, 243, 0.58));
+  background-position: center;
 }
 .foot h4 {
   color: var(--vm-deep-ink);
@@ -1711,15 +1594,6 @@
    one thing worth a dedicated click — stays. This is its own deliberate
    state, not a shrunk-down desktop nav or a stretched-out phone nav. */
 @media (max-width: 1099px) {
-  .hero {
-    --detail-left: 30%;
-    --detail-top: 38%;
-    --detail-width: 27%;
-    --detail-height: 24%;
-    --detail-origin-x: 43.5%;
-    --detail-origin-y: 50%;
-    --detail-scale: 2.2;
-  }
   .navLinks,
   .themeToggle {
     display: none;
@@ -1795,13 +1669,6 @@
    shrinks — this is the only tier that gets this compact. */
 @media (max-width: 640px) {
   .hero {
-    --detail-left: 27%;
-    --detail-top: clamp(220px, 30svh, 292px);
-    --detail-width: 32%;
-    --detail-height: clamp(130px, 18svh, 174px);
-    --detail-origin-x: 43%;
-    --detail-origin-y: 50%;
-    --detail-scale: 2.25;
     display: block;
     min-height: 0;
   }
@@ -1809,24 +1676,16 @@
     position: relative;
     inset: auto;
     width: 100%;
-    height: clamp(520px, 70svh, 680px);
-    transform: none !important;
+    height: 66.77vw;
   }
   .heroVeil,
   .heroTint,
   .heroGrain {
     inset: 0 0 auto;
-    height: clamp(520px, 70svh, 680px);
+    height: 66.77vw;
   }
   .heroVeil {
     background: linear-gradient(180deg, rgba(5, 6, 6, 0.3) 0%, transparent 48%, rgba(5, 6, 6, 0.92) 100%);
-  }
-  .detailLabel {
-    bottom: calc(100% + 10px);
-    font-size: 10px;
-  }
-  .detailArrow {
-    top: calc(100% + 8px);
   }
   .heroIn {
     padding: 34px 22px 76px;

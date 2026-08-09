@@ -158,7 +158,7 @@ export default function PhotographyLayered({ scene, variant = 'tile', priority =
             }
           />
         ))}
-        <span className={styles.shine} aria-hidden="true" />
+        {interactive && <span className={styles.shine} aria-hidden="true" />}
       </span>
 
       {interactive && armed && (

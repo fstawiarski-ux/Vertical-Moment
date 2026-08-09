@@ -32,7 +32,7 @@
 }
 
 .brand { display: inline-flex; align-items: center; gap: 12px; color: inherit; text-decoration: none; }
-.brand img { width: 38px; height: 38px; object-fit: contain; }
+.brandLogo { width: 38px; height: 38px; }
 .brand span { font-family: Georgia, "Times New Roman", serif; font-size: 14px; letter-spacing: .18em; text-transform: uppercase; }
 .header nav { display: flex; align-items: center; gap: clamp(14px, 2.4vw, 34px); }
 .header nav a { color: rgba(255, 255, 255, .78); font-size: 10px; font-weight: 700; letter-spacing: .13em; text-decoration: none; text-transform: uppercase; }

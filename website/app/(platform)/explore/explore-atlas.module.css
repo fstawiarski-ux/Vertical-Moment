@@ -35,10 +35,10 @@
   text-transform: uppercase;
 }
 
-.brand img,
-.footer img {
+.brandLogo {
   display: block;
-  filter: invert(91%) sepia(10%) saturate(346%) hue-rotate(355deg) brightness(105%);
+  width: 34px;
+  height: 28px;
 }
 
 .nav {

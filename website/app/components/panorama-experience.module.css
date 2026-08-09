@@ -48,10 +48,9 @@
   text-transform: uppercase;
 }
 
-.brand img {
+.brandLogo {
   width: 34px;
   height: 46px;
-  object-fit: contain;
 }
 
 .contextEyebrow,
@@ -1266,7 +1265,7 @@
     font-size: 16px;
   }
 
-  .brand img {
+  .brandLogo {
     width: 27px;
     height: 36px;
   }
@@ -1373,7 +1372,7 @@
     font-size: 13px;
   }
 
-  .brand img {
+  .brandLogo {
     width: 24px;
     height: 32px;
   }

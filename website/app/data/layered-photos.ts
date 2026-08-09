@@ -43,24 +43,24 @@ const shardsFor = (id: string): SceneShard[] => [
   { src: `/photography/layered/${id}/shards/shard_07.webp`, dx: -52.1, dy: -108.1, rot: 38 },
 ];
 
-/** Hero background — the approved smiling climber, kept central and unobstructed. */
+/** Hero background — the approved wide climbing frame, shown without motion or digital zoom. */
 export const heroScene: LayeredScene = {
-  id: '9B3B7069',
-  title: 'Smiling on the edge',
+  id: '9B3B7068',
+  title: 'Holding the edge',
   meta: 'Wachau · Vertical Moment',
-  orientation: 'portrait',
+  orientation: 'landscape',
   width: 1920,
-  height: 2876,
-  alt: 'Smiling climber holding the edge of a steep rock face, photographed from above in the forest',
+  height: 1282,
+  alt: 'Climber holding the edge of a steep rock face, surrounded by the forest and the full climbing environment',
   layers: [
     {
-      src: '/photography/hero/9B3B7069-smiling-climber-1280.webp',
+      src: '/photography/hero/9B3B7068-wide-climber-1280.webp',
       srcSet:
-        '/photography/hero/9B3B7069-smiling-climber-768.webp 768w, /photography/hero/9B3B7069-smiling-climber-1280.webp 1280w, /photography/hero/9B3B7069-smiling-climber-1920.webp 1920w',
+        '/photography/hero/9B3B7068-wide-climber-768.webp 768w, /photography/hero/9B3B7068-wide-climber-1280.webp 1280w, /photography/hero/9B3B7068-wide-climber-1920.webp 1920w',
       sizes: '100vw',
-      motion: 3,
-      scale: 1.025,
-      alt: 'Smiling climber on the edge',
+      motion: 0,
+      scale: 1,
+      alt: 'Climber holding the edge in a wide forest scene',
     },
   ],
   shards: [],

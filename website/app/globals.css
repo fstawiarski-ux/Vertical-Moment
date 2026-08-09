@@ -8,12 +8,14 @@
   --shadow:0 22px 60px rgba(20,32,24,.10);
   --disp:"Fraunces","Iowan Old Style",Georgia,serif;
   --body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --vm-site-logo:url('/brand/monogram/vm-mono-forest-gold.webp');
 }
 [data-theme="dark"]{
   --paper:#141A12; --surface:rgba(32,44,33,.82); --surface-strong:#1B251E;
   --ink:#EDF2E7; --forest:#1B251E; --muted:#A8B3AA; --line:rgba(255,255,255,.12);
   --terra:#D98A63; --gold:#E4B45A; --sage:#A8B3AA; --chalk:#F2ECE0;
   --shadow:0 24px 64px rgba(0,0,0,.30);
+  --vm-site-logo:url('/brand/monogram/vm-mono-bright-silver.webp');
 }
 *{box-sizing:border-box}
 html,body{padding:0;margin:0}
@@ -41,8 +43,8 @@ button{cursor:pointer}
   background:color-mix(in srgb,var(--paper) 82%,transparent);backdrop-filter:blur(16px)}
 .site-head .row{display:flex;align-items:center;gap:16px;min-height:64px}
 .brand{display:flex;align-items:center;gap:11px}
-.brand-mark{width:32px;height:32px;flex:none;background:url('/brand/icons/02_forest_green.png') center/contain no-repeat}
-[data-theme="dark"] .brand-mark{filter:brightness(0) drop-shadow(0 0 1px rgba(245,245,243,.96)) drop-shadow(0 0 4px rgba(245,245,243,.56))}
+.brand-mark,.vm-static-logo{display:inline-block;flex:none;background:var(--vm-site-logo) center/contain no-repeat;animation:none!important;filter:none!important;transform:none!important;transition:none!important}
+.brand-mark{width:32px;height:32px}
 .nav{display:flex;gap:4px;margin-left:6px}
 .nav a{color:var(--muted);font-weight:600;padding:8px 13px;border-radius:999px;font-size:14px}
 .nav a.on{background:var(--forest);color:var(--chalk)}
