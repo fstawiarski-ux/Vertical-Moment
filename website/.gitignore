@@ -25,6 +25,10 @@ out/
 # once the library grows past a handful of models, then restore this ignore.
 # public/models/
 
+# Synced verbatim from database/api/v1 by scripts/sync-data.mjs at
+# predev/prebuild — the generated tree, not a second copy of the dataset.
+public/data/v1/
+
 # OpenNext
 .open-next
 

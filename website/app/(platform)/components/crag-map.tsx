@@ -2,19 +2,11 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import cragsData from "../data/crags.json";
-import modelsData from "../data/models.json";
 import { Model3D } from "./model-3d";
+import type { CragDetail, CragSummary, RegionSummary, RouteCard, RouteSearchEntry } from "../lib/climbing-types";
+import { fetchAllCrags, fetchCragDetail, fetchRegionDetail, fetchRegions, fetchSearchIndex } from "../lib/climbing-client";
+import { find3DModel } from "../lib/media";
 
-type Route = { n: string; g: string; gb: string; d: string; gp: string };
-type Crag = {
-  n: string; la: number; lo: number; r: string[]; db: boolean; rc: number;
-  osm?: string | null; web?: string | null; topo?: string | null; wiki?: string | null;
-  gbr: number; routes: Route[];
-};
-const CRAGS = cragsData as Crag[];
-type WallModel = { wall_id: string; crag: string; glb: string; webReady: boolean; note?: string };
-const MODELS = modelsData as WallModel[];
 const VIENNA: [number, number] = [48.2082, 16.3738];
 const STEPHANSPLATZ: [number, number] = [48.2085, 16.3731];
 const JAMMERWANDL: [number, number] = [48.015385, 16.198357];
@@ -22,13 +14,11 @@ const LEAFLET_CSS = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leafle
 const LEAFLET_JS = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js";
 const GOLD = "#D89A34", SAGE = "#93A382", TERRA = "#BF6B4F";
 
-function regionColor(index: number, total: number) {
+function regionHue(index: number, total: number) {
   const hue = Math.round((index * 360) / Math.max(total, 1));
   return `hsl(${hue}, 60%, 46%)`;
 }
 
-// simple 2D convex hull (monotone chain) — treats lat/lon as a flat plane,
-// which is a fine approximation at this regional scale
 function convexHull(points: [number, number][]): [number, number][] {
   if (points.length < 3) return points;
   const pts = [...points].sort((a, b) => a[0] - b[0] || a[1] - b[1]);
@@ -54,9 +44,19 @@ function distanceKm(la1: number, lo1: number, la2: number, lo2: number) {
   return 2 * R * Math.asin(Math.sqrt(
     Math.sin(dLa / 2) ** 2 + Math.cos(la1 * r) * Math.cos(la2 * r) * Math.sin(dLo / 2) ** 2));
 }
-function km(la: number, lo: number) {
-  return Math.round(distanceKm(VIENNA[0], VIENNA[1], la, lo));
+
+/** Pin radius encodes route count — sqrt scale so 800-route Hohe Wand
+ * doesn't dwarf everything, clamped so a stub is still clickable. */
+function pinRadius(routeCount: number) {
+  if (routeCount <= 0) return 4;
+  return Math.max(5, Math.min(16, 4 + Math.sqrt(routeCount) * 1.1));
 }
+/** Pin colour is the entire legend: gold = has transcribed routes, sage =
+ * OSM-only stub. Nothing else (not region) drives pin colour. */
+function pinColor(c: { routeCount: number; isStub: boolean }) {
+  return c.isStub || c.routeCount === 0 ? SAGE : GOLD;
+}
+
 function loadLeaflet(): Promise<any> {
   return new Promise((resolve, reject) => {
     const w = window as any;
@@ -66,14 +66,35 @@ function loadLeaflet(): Promise<any> {
       css.rel = "stylesheet"; css.href = LEAFLET_CSS; document.head.appendChild(css);
     }
     const js = document.createElement("script");
-    js.src = LEAFLET_JS; js.async = true;
+    js.src = LEAFLET_JS; js.async = true; js.crossOrigin = "anonymous";
     js.onload = () => resolve((window as any).L);
     js.onerror = () => reject(new Error("Leaflet failed to load — check your connection."));
     document.head.appendChild(js);
   });
 }
 
-export function CragMap({ initialCragName, showPanel = true }: { initialCragName?: string; showPanel?: boolean } = {}) {
+/** Builds a one-waypoint GPX file from the crag's own verified coordinate —
+ * generated from data already in hand, never a fetched/fabricated URL. */
+function cragGpx(c: CragSummary): string {
+  const lat = c.latitude, lon = c.longitude;
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Vertical Moment" xmlns="http://www.topografix.com/GPX/1/1">
+  <wpt lat="${lat}" lon="${lon}">
+    <name>${c.name}</name>
+    <desc>${c.regionName} — ${c.routeCount} routes. Coordinate source: ${c.coordSource ?? "unknown"}. © OpenStreetMap contributors.</desc>
+  </wpt>
+</gpx>`;
+}
+function downloadGpx(c: CragSummary) {
+  const blob = new Blob([cragGpx(c)], { type: "application/gpx+xml" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = `${c.slug}.gpx`;
+  document.body.appendChild(a); a.click(); a.remove();
+  URL.revokeObjectURL(url);
+}
+
+export function CragMap({ initialRegionSlug, initialCragSlug, showPanel = true }: { initialRegionSlug?: string; initialCragSlug?: string; showPanel?: boolean } = {}) {
   const mapEl = useRef<HTMLDivElement>(null);
   const map = useRef<any>(null);
   const layer = useRef<any>(null);
@@ -83,11 +104,16 @@ export function CragMap({ initialCragName, showPanel = true }: { initialCragName
   const approachLayer = useRef<any>(null);
   const approachTimer = useRef<number | null>(null);
   const regionLayer = useRef<any>(null);
+  const markerBySlug = useRef<Map<string, any>>(new Map());
   const L = useRef<any>(null);
   const [ready, setReady] = useState(false);
   const [err, setErr] = useState<string | null>(null);
-  const [region, setRegion] = useState<string | null>(null);
-  const [crag, setCrag] = useState<Crag | null>(null);
+
+  const [regions, setRegions] = useState<RegionSummary[]>([]);
+  const [allCrags, setAllCrags] = useState<CragSummary[]>([]);
+  const [region, setRegion] = useState<string | null>(initialRegionSlug ?? null); // region SLUG
+  const [regionCrags, setRegionCrags] = useState<CragSummary[] | null>(null);
+  const [crag, setCrag] = useState<CragDetail | CragSummary | null>(null);
   const deepLinkApplied = useRef(false);
 
   const [userPos, setUserPos] = useState<{ lat: number; lon: number } | null>(null);
@@ -99,6 +125,10 @@ export function CragMap({ initialCragName, showPanel = true }: { initialCragName
   const [measurePoints, setMeasurePoints] = useState<{ lat: number; lon: number }[]>([]);
   const [approachStatus, setApproachStatus] = useState<"idle" | "loading" | "playing" | "ready" | "overview">("idle");
 
+  // route-name + crag-name search, top level only
+  const [query, setQuery] = useState("");
+  const [searchIndex, setSearchIndex] = useState<RouteSearchEntry[] | null>(null);
+
   const geoMessages: Record<string, string> = {
     denied: "Location permission was denied. Check your browser's site settings (and your phone's location services) and try again.",
     timeout: "Took too long to get a fix — weak GPS signal or a slow first request. Try again, ideally outdoors.",
@@ -106,32 +136,46 @@ export function CragMap({ initialCragName, showPanel = true }: { initialCragName
     unsupported: "This browser doesn't support location. Browse by region instead.",
   };
 
-  const regions = useMemo(() => {
-    const m = new Map<string, number>();
-    CRAGS.forEach(c => c.r.forEach(rg => m.set(rg, (m.get(rg) || 0) + 1)));
-    return [...m.entries()].sort((a, b) => b[1] - a[1]).map(([name, count]) => ({ name, count }));
+  // initial data: region index + full crag index (small; per-region/per-crag detail loads on demand)
+  useEffect(() => {
+    fetchRegions().then(setRegions).catch(e => setErr(e.message));
+    fetchAllCrags().then(setAllCrags).catch(e => setErr(e.message));
   }, []);
 
-  const regionColorMap = useMemo(() => {
-    const map = new Map<string, string>();
-    regions.forEach((r, i) => map.set(r.name, regionColor(i, regions.length)));
-    return map;
-  }, [regions]);
+  useEffect(() => {
+    if (query.trim() && !searchIndex) {
+      fetchSearchIndex().then(setSearchIndex).catch(() => {});
+    }
+  }, [query, searchIndex]);
 
-  const cragColor = (c: Crag) => regionColorMap.get(c.r[0]) || SAGE;
+  const regionColorMap = useMemo(() => {
+    const m = new Map<string, string>();
+    regions.forEach((r, i) => m.set(r.slug, regionHue(i, regions.length)));
+    return m;
+  }, [regions]);
 
   const nearby = useMemo(() => {
     if (!nearbyMode || !userPos) return [];
-    return CRAGS
-      .map(c => ({ ...c, dist: distanceKm(userPos.lat, userPos.lon, c.la, c.lo) }))
+    return allCrags
+      .filter(c => c.latitude != null && c.longitude != null)
+      .map(c => ({ ...c, dist: distanceKm(userPos.lat, userPos.lon, c.latitude as number, c.longitude as number) }))
       .filter(c => c.dist <= radiusKm)
       .sort((a, b) => a.dist - b.dist);
-  }, [nearbyMode, userPos, radiusKm]);
+  }, [nearbyMode, userPos, radiusKm, allCrags]);
 
   const visible = useMemo(() => {
     if (nearbyMode && userPos) return nearby;
-    return region ? CRAGS.filter(c => c.r.includes(region)) : CRAGS;
-  }, [region, nearbyMode, userPos, nearby]);
+    if (region && regionCrags) return regionCrags;
+    return allCrags;
+  }, [region, regionCrags, nearbyMode, userPos, nearby, allCrags]);
+
+  const searchResults = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return { crags: [] as CragSummary[], routes: [] as RouteSearchEntry[] };
+    const crags = allCrags.filter(c => c.name.toLowerCase().includes(q)).slice(0, 10);
+    const routes = (searchIndex ?? []).filter(r => r.name.toLowerCase().includes(q)).slice(0, 10);
+    return { crags, routes };
+  }, [query, allCrags, searchIndex]);
 
   function useMyLocation() {
     if (!("geolocation" in navigator)) { setGeoStatus("unsupported"); return; }
@@ -141,8 +185,7 @@ export function CragMap({ initialCragName, showPanel = true }: { initialCragName
         setUserPos({ lat: pos.coords.latitude, lon: pos.coords.longitude });
         setGeoStatus("idle");
         setNearbyMode(true);
-        setRegion(null);
-        setCrag(null);
+        setRegion(null); setRegionCrags(null); setCrag(null);
       },
       (e) => {
         if (e.code === e.PERMISSION_DENIED) setGeoStatus("denied");
@@ -151,6 +194,20 @@ export function CragMap({ initialCragName, showPanel = true }: { initialCragName
       },
       { enableHighAccuracy: true, timeout: 20000, maximumAge: 60000 }
     );
+  }
+
+  function openRegion(slug: string) {
+    setNearbyMode(false); setUserPos(null); setCrag(null);
+    setRegion(slug);
+    setRegionCrags(null);
+    fetchRegionDetail(slug).then(d => setRegionCrags(d.crags)).catch(e => setErr(e.message));
+  }
+
+  function openCrag(c: CragSummary) {
+    setCrag(c); // show summary immediately, upgrade to full detail (routes) below
+    if (!region && !nearbyMode) openRegion(c.regionSlug);
+    map.current?.setView([c.latitude ?? VIENNA[0], c.longitude ?? VIENNA[1]], c.latitude != null ? 13 : 9);
+    fetchCragDetail(c.regionSlug, c.slug).then(setCrag).catch(e => setErr(e.message));
   }
 
   // init map once
@@ -164,13 +221,13 @@ export function CragMap({ initialCragName, showPanel = true }: { initialCragName
 
       const light = Lib.layerGroup([
         Lib.tileLayer("https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png",
-          { maxZoom: 19, subdomains: "abcd", attribution: "&copy; OpenStreetMap &copy; CARTO" }),
+          { maxZoom: 19, subdomains: "abcd", attribution: "&copy; OpenStreetMap contributors &copy; CARTO" }),
         Lib.tileLayer("https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png",
           { maxZoom: 19, subdomains: "abcd", opacity: 0.85 }),
       ]);
       const terrain = Lib.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", {
         maxZoom: 17, subdomains: "abc",
-        attribution: "&copy; OpenStreetMap &copy; OpenTopoMap (CC-BY-SA)",
+        attribution: "&copy; OpenStreetMap contributors &copy; OpenTopoMap (CC-BY-SA)",
       }).addTo(m);
       const satellite = Lib.tileLayer(
         "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
@@ -180,7 +237,7 @@ export function CragMap({ initialCragName, showPanel = true }: { initialCragName
         maxZoom: 19, attribution: "&copy; OpenStreetMap contributors",
       });
       const explorer = Lib.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
-        maxZoom: 19, subdomains: "abcd", attribution: "&copy; OpenStreetMap &copy; CARTO",
+        maxZoom: 19, subdomains: "abcd", attribution: "&copy; OpenStreetMap contributors &copy; CARTO",
       });
       Lib.control.layers(
         { "Light": light, "OpenStreetMap": streets, "Explorer": explorer, "Terrain": terrain, "Satellite": satellite },
@@ -211,8 +268,7 @@ export function CragMap({ initialCragName, showPanel = true }: { initialCragName
     return () => { cancelled = true; if (approachTimer.current) window.clearInterval(approachTimer.current); };
   }, []);
 
-  // Permanent distance reference from Vienna: this stays visible even before
-  // a visitor shares location, so the map explains its regional scale.
+  // Permanent distance reference from Vienna.
   useEffect(() => {
     if (!ready || !L.current || !viennaRings.current) return;
     const Lib = L.current;
@@ -227,9 +283,7 @@ export function CragMap({ initialCragName, showPanel = true }: { initialCragName
     });
   }, [ready]);
 
-  useEffect(() => {
-    measuringRef.current = measuring;
-  }, [measuring]);
+  useEffect(() => { measuringRef.current = measuring; }, [measuring]);
 
   useEffect(() => {
     if (!ready || !L.current || !measureLayer.current) return;
@@ -246,37 +300,40 @@ export function CragMap({ initialCragName, showPanel = true }: { initialCragName
     }
   }, [ready, measurePoints]);
 
-  // deep-link: open a specific crag on load (e.g. from Explore's search results)
+  // deep-link: open a specific region/crag on load
   useEffect(() => {
-    if (!ready || deepLinkApplied.current || !initialCragName) return;
+    if (!ready || deepLinkApplied.current) return;
+    if (!initialRegionSlug) return;
     deepLinkApplied.current = true;
-    const c = CRAGS.find(x => x.n === initialCragName);
-    if (!c) return;
-    if (c.r[0]) setRegion(c.r[0]);
-    setCrag(c);
-    map.current?.setView([c.la, c.lo], 13);
-  }, [ready, initialCragName]);
+    openRegion(initialRegionSlug);
+    if (initialCragSlug) {
+      fetchCragDetail(initialRegionSlug, initialCragSlug).then(c => {
+        setCrag(c);
+        if (c.latitude != null) map.current?.setView([c.latitude, c.longitude as number], 13);
+      }).catch(e => setErr(e.message));
+    }
+  }, [ready, initialRegionSlug, initialCragSlug]);
 
-  // draw region boundary shapes once (approximate — convex hull of each
-  // region's crags, not an authoritative administrative boundary)
+  // region overview shapes — cleared once drilled into a region/crag/nearby
   useEffect(() => {
     if (!ready || !L.current || !regionLayer.current) return;
     const Lib = L.current;
     regionLayer.current.clearLayers();
-    if (region || nearbyMode || crag) return; // declutter once drilled in
+    if (region || nearbyMode || crag || !allCrags.length) return;
     regions.forEach(r => {
-      const pts = CRAGS.filter(c => c.r[0] === r.name).map(c => [c.la, c.lo] as [number, number]);
+      const pts = allCrags.filter(c => c.regionSlug === r.slug && c.latitude != null)
+        .map(c => [c.latitude as number, c.longitude as number] as [number, number]);
       if (pts.length < 3) return;
       const hull = convexHull(pts);
-      const color = regionColorMap.get(r.name) || SAGE;
+      const color = regionColorMap.get(r.slug) || SAGE;
       const poly = Lib.polygon(hull, { color, weight: 1.5, opacity: 0.55, fillColor: color, fillOpacity: 0.09 });
       poly.bindTooltip(r.name, { permanent: true, direction: "center", className: "region-label", opacity: 0.85 });
-      poly.on("click", (e: any) => { e.originalEvent?.stopPropagation?.(); setNearbyMode(false); setUserPos(null); setCrag(null); setRegion(r.name); });
+      poly.on("click", (e: any) => { e.originalEvent?.stopPropagation?.(); openRegion(r.slug); });
       poly.addTo(regionLayer.current);
     });
-  }, [ready, regions, regionColorMap, region, nearbyMode, crag]);
+  }, [ready, regions, regionColorMap, region, nearbyMode, crag, allCrags]);
 
-  // draw / update the "you are here" marker + radius circle
+  // "you are here"
   useEffect(() => {
     if (!ready || !L.current || !geoLayer.current) return;
     const Lib = L.current;
@@ -293,45 +350,51 @@ export function CragMap({ initialCragName, showPanel = true }: { initialCragName
     }
   }, [ready, userPos, radiusKm, nearbyMode]);
 
-  // redraw markers when the visible set changes
+  // redraw markers when the visible set changes. Size = route count, colour
+  // = catalogue state (gold/sage) — the entire legend. Only the selected
+  // crag's marker gets a persistent label.
   useEffect(() => {
     if (!ready || !L.current || !layer.current) return;
     const Lib = L.current, lg = layer.current;
     lg.clearLayers();
+    markerBySlug.current.clear();
     const pts: [number, number][] = [];
     visible.forEach(c => {
-      pts.push([c.la, c.lo]);
-      const mk = Lib.circleMarker([c.la, c.lo], {
-        radius: c.db ? 6 : 5, weight: c.db ? 1.5 : 1, color: "#F2ECE0",
-        fillColor: cragColor(c), fillOpacity: c.db ? 0.95 : 0.6,
+      if (c.latitude == null || c.longitude == null) return;
+      pts.push([c.latitude, c.longitude]);
+      const mk = Lib.circleMarker([c.latitude, c.longitude], {
+        radius: pinRadius(c.routeCount), weight: c.isStub ? 1 : 1.5, color: "#F2ECE0",
+        fillColor: pinColor(c), fillOpacity: c.isStub ? 0.65 : 0.95,
       });
-      mk.on("click", (e: any) => {
-        e.originalEvent?.stopPropagation?.();
-        if (!region && !nearbyMode && c.r[0]) setRegion(c.r[0]);
-        setCrag(c);
-        mk.bindPopup(popupHtml(c)).openPopup();
-      });
+      mk.on("click", (e: any) => { e.originalEvent?.stopPropagation?.(); openCrag(c); });
       mk.addTo(lg);
+      markerBySlug.current.set(`${c.regionSlug}/${c.slug}`, mk);
     });
-    // don't refit bounds once a deep link or a "near me" search has already framed the view
-    if (pts.length && !nearbyMode && !(initialCragName && crag?.n === initialCragName)) {
+    if (pts.length && !nearbyMode && !crag) {
       const b = Lib.latLngBounds(pts.concat([VIENNA]));
       map.current.fitBounds(b, { padding: [30, 30], maxZoom: 12 });
     }
-  }, [ready, visible, region, nearbyMode]);
+  }, [ready, visible, nearbyMode]);
 
-  function popupHtml(c: Crag) {
-    const links: string[] = [];
-    if (c.web) links.push(`<a href="${c.web}" target="_blank" rel="noopener">Website</a>`);
-    if (c.topo) links.push(`<a href="${c.topo}" target="_blank" rel="noopener">Topo</a>`);
-    if (c.osm) links.push(`<a href="https://www.openstreetmap.org/${c.osm}" target="_blank" rel="noopener">OSM</a>`);
-    const rc = c.gbr || c.rc || 0;
-    return `<strong>${c.n}</strong><br>${km(c.la, c.lo)} km from Wien · ${rc} routes<br>
-      ${c.db ? "In guidebook" : "OSM extra"}<br>${links.join(" · ")}`;
-  }
+  // label ONLY the selected pin
+  useEffect(() => {
+    if (!ready || !L.current) return;
+    // unbindTooltip() is a safe no-op on a marker that never had one bound.
+    // isTooltipOpen() is NOT safe to call first: Leaflet 1.9.4 reads
+    // this._tooltip.isOpen() without null-checking _tooltip, so calling it
+    // on any marker that's never had a tooltip throws and (in practice)
+    // took the whole tab down with it.
+    markerBySlug.current.forEach(mk => mk.unbindTooltip());
+    if (!crag) return;
+    const mk = markerBySlug.current.get(`${crag.regionSlug}/${crag.slug}`);
+    if (mk) {
+      mk.bindTooltip(crag.name, { permanent: true, direction: "top", offset: [0, -6], className: "selected-crag-label" });
+      mk.openTooltip();
+    }
+  }, [ready, crag]);
 
   function backFromRegionOrNearby() {
-    if (nearbyMode) { setNearbyMode(false); setUserPos(null); } else { setRegion(null); }
+    if (nearbyMode) { setNearbyMode(false); setUserPos(null); } else { setRegion(null); setRegionCrags(null); }
   }
 
   async function replayStephansplatzApproach() {
@@ -375,14 +438,15 @@ export function CragMap({ initialCragName, showPanel = true }: { initialCragName
     }, 40);
   }
 
-  // panel
+  // panel: one panel, three depths (regions -> crags -> one crag), back + breadcrumb always present
   let title = "REGIONS", back: (() => void) | null = null, count = "";
   if (crag) {
-    title = crag.n.toUpperCase(); back = () => setCrag(null); count = `${crag.gbr || crag.rc} routes`;
+    title = crag.name.toUpperCase(); back = () => setCrag(null); count = `${crag.routeCount} routes`;
   } else if (nearbyMode) {
     title = "NEAR YOU"; back = backFromRegionOrNearby; count = `${nearby.length} within ${radiusKm}km`;
   } else if (region) {
-    title = region.toUpperCase(); back = () => setRegion(null); count = `${visible.length} crags`;
+    const r = regions.find(x => x.slug === region);
+    title = (r?.name ?? region).toUpperCase(); back = backFromRegionOrNearby; count = `${(regionCrags ?? []).length} crags`;
   } else {
     count = `${regions.length} regions`;
   }
@@ -406,7 +470,6 @@ export function CragMap({ initialCragName, showPanel = true }: { initialCragName
             <input id="radius-km" type="range" min="5" max="150" step="5" value={radiusKm} onChange={e => { setRadiusKm(Number(e.target.value)); if (userPos) setNearbyMode(true); }} />
             <div className="radius-scale"><span>5 km</span><span>50 km</span><span>100 km</span><span>150 km</span></div>
           </div>
-          <Link href="/explore" className="map-search-link">Search routes &amp; crags</Link>
           {geoMessages[geoStatus] && (
             <div className="geo-error">
               {geoMessages[geoStatus]}
@@ -423,9 +486,9 @@ export function CragMap({ initialCragName, showPanel = true }: { initialCragName
           </button>
           {measurePoints.length > 0 && <button className="map-tool" type="button" onClick={() => setMeasurePoints([])}>Clear</button>}
           <a className="map-tool" href="https://www.google.com/maps" target="_blank" rel="noopener">Open Google Maps</a>
-          <a className="map-tool" href="https://mapy.com/" target="_blank" rel="noopener">Open Mapy.com</a>
         </div>
         {(approachStatus === "ready" || approachStatus === "overview") && <div className="approach-status">{approachStatus === "overview" ? "Beta overview from coordinates" : "Beta road replay ends at Jammerwandl"}</div>}
+        <div className="map-attribution-note">© OpenStreetMap contributors</div>
         </div>
       </div>
       {showPanel && <aside className="panel">
@@ -434,34 +497,46 @@ export function CragMap({ initialCragName, showPanel = true }: { initialCragName
           <h2>{title}</h2>
           <span className="pcount">{count}</span>
         </div>
+        {!crag && !nearbyMode && (
+          <div style={{ padding: "0 8px 8px" }}>
+            <input
+              className="search" style={{ width: "100%" }}
+              placeholder="Search a crag or route name…"
+              value={query} onChange={e => setQuery(e.target.value)}
+              aria-label="Search crags and routes"
+            />
+          </div>
+        )}
         <div className="plist">
-          {crag ? (
-            <CragRoutes crag={crag} />
+          {query.trim() && !crag && !nearbyMode ? (
+            <SearchResults query={query} results={searchResults} onPickCrag={c => { setQuery(""); openCrag(c); }} />
+          ) : crag ? (
+            "routes" in crag ? <CragDetailPanel crag={crag as CragDetail} /> : <div className="muted" style={{ padding: 14 }}>Loading…</div>
           ) : nearbyMode ? (
             nearby.length === 0 ? (
               <div className="muted" style={{ padding: "14px 10px", color: "var(--sage)" }}>Nothing that close — try a wider radius.</div>
             ) : (
               nearby.map(c => (
-                <button key={c.n} className="prow" onClick={() => { setCrag(c); map.current?.setView([c.la, c.lo], 13); }}>
-                  <span className={`rdot ${c.db ? "g-dot" : "s-dot"}`} />
-                  <span className="rname">{c.n}</span>
+                <button key={`${c.regionSlug}/${c.slug}`} className="prow" onClick={() => openCrag(c)}>
+                  <span className={`rdot ${c.isStub ? "s-dot" : "g-dot"}`} />
+                  <span className="rname">{c.name}</span>
                   <span className="rmeta">{c.dist.toFixed(1)} km</span>
                 </button>
               ))
             )
           ) : region ? (
-            visible.slice().sort((a, b) => (b.db ? 1 : 0) - (a.db ? 1 : 0) || a.n.localeCompare(b.n)).map(c => (
-              <button key={c.n} className="prow" onClick={() => { setCrag(c); map.current?.setView([c.la, c.lo], 13); }}>
-                <span className={`rdot ${c.db ? "g-dot" : "s-dot"}`} />
-                <span className="rname">{c.n}</span>
-                <span className="rmeta">{(c.gbr || c.rc) ? `${c.gbr || c.rc} rt` : "—"}</span>
+            (regionCrags ?? []).map(c => (
+              <button key={c.slug} className="prow" onClick={() => openCrag(c)}>
+                <span className={`rdot ${c.isStub ? "s-dot" : "g-dot"}`} />
+                <span className="rname">{c.name}</span>
+                <span className="rmeta">{c.routeCount ? `${c.routeCount} rt` : "—"}</span>
               </button>
             ))
           ) : (
             regions.map(r => (
-              <button key={r.name} className="prow" onClick={() => setRegion(r.name)}>
+              <button key={r.slug} className="prow" onClick={() => openRegion(r.slug)}>
                 <span className="rname">{r.name}</span>
-                <span className="rmeta">{r.count} crags</span>
+                <span className="rmeta">{r.cragCount} crags · {r.routeCount} rt</span>
               </button>
             ))
           )}
@@ -471,56 +546,122 @@ export function CragMap({ initialCragName, showPanel = true }: { initialCragName
   );
 }
 
-function CragRoutes({ crag }: { crag: Crag }) {
-  const links: React.ReactNode[] = [];
-  if (crag.web) links.push(<a key="w" href={crag.web} target="_blank" rel="noopener" style={{ color: "var(--gold)" }}>Website</a>);
-  if (crag.topo) links.push(<a key="t" href={crag.topo} target="_blank" rel="noopener" style={{ color: "var(--gold)" }}>Topo</a>);
-  if (crag.osm) links.push(<a key="o" href={`https://www.openstreetmap.org/${crag.osm}`} target="_blank" rel="noopener" style={{ color: "var(--gold)" }}>OSM</a>);
-  links.push(
-    <a key="gm" href={`https://www.google.com/maps/search/?api=1&query=${crag.la},${crag.lo}`} target="_blank" rel="noopener" style={{ color: "var(--gold)" }}>
-      Google Maps
-    </a>
+function SearchResults({ results, onPickCrag }: { query: string; results: { crags: CragSummary[]; routes: RouteSearchEntry[] }; onPickCrag: (c: CragSummary) => void }) {
+  if (!results.crags.length && !results.routes.length) {
+    return <div className="muted" style={{ padding: "14px 10px", color: "var(--sage)" }}>No matches.</div>;
+  }
+  return (
+    <>
+      {results.crags.length > 0 && (
+        <>
+          <div className="search-group-label">Crags</div>
+          {results.crags.map(c => (
+            <button key={`c-${c.regionSlug}/${c.slug}`} className="prow" onClick={() => onPickCrag(c)}>
+              <span className={`rdot ${c.isStub ? "s-dot" : "g-dot"}`} />
+              <span className="rname">{c.name}</span>
+              <span className="rmeta">{c.regionName}</span>
+            </button>
+          ))}
+        </>
+      )}
+      {results.routes.length > 0 && (
+        <>
+          <div className="search-group-label">Routes</div>
+          {results.routes.map(r => (
+            <Link key={`r-${r.id}`} href={r.path} className="prow">
+              <span className="rdot" style={{ background: "var(--gold)" }} />
+              <span className="rname">{r.name}</span>
+              <span className="rmeta">{r.grade ?? ""} · {r.cragName}</span>
+            </Link>
+          ))}
+        </>
+      )}
+    </>
   );
-  links.push(
-    <a key="bs" href={`https://www.bergsteigen.com/?s=${encodeURIComponent(crag.n)}`} target="_blank" rel="noopener" style={{ color: "var(--gold)" }}>
-      bergsteigen.com
-    </a>
-  );
-  const model = MODELS.find(m => m.crag === crag.n);
-  const regionLabel = crag.r[0] ?? "the region";
+}
+
+function CragDetailPanel({ crag }: { crag: CragDetail }) {
+  const ROUTE_PREVIEW = 8;
+  const [showAll, setShowAll] = useState(false);
+  const model = find3DModel(crag.name);
+  const shown = showAll ? crag.routes : crag.routes.slice(0, ROUTE_PREVIEW);
+  const remaining = crag.routes.length - shown.length;
+
   return (
     <>
       <div style={{ padding: "2px 8px 10px", fontSize: 12.5, color: "var(--sage)" }}>
-        {km(crag.la, crag.lo)} km from Wien · {crag.db ? "In guidebook" : "OSM extra"}
-        <div style={{ marginTop: 6 }}>
-          One of the crags in {regionLabel}. {crag.osm ? "Location sourced from OpenStreetMap." : ""}
-        </div>
-        {links.length > 0 && <div style={{ marginTop: 8, display: "flex", gap: 12, flexWrap: "wrap" }}>{links}</div>}
+        {crag.distanceFromViennaKm != null ? `${crag.distanceFromViennaKm} km from Wien · ` : ""}
+        {crag.routeCount} route{crag.routeCount === 1 ? "" : "s"}
+        {crag.gradeSpan && ` · ${crag.gradeSpan.min}–${crag.gradeSpan.max}`}
+        {crag.isStub && <div style={{ marginTop: 6 }}>Not catalogued yet. This crag came from OpenStreetMap — a contributor mission can transcribe its routes.</div>}
       </div>
-      <div style={{ padding: "0 8px" }}>
-        <Link href={`/report?crag=${encodeURIComponent(crag.n)}`} className="btn btn-terra" style={{ width: "100%", marginBottom: 10 }}>
-          Report from here
-        </Link>
+
+      <div className="crag-actions" style={{ display: "flex", gap: 8, padding: "0 8px 10px", flexWrap: "wrap" }}>
+        {crag.latitude != null && (
+          <a className="btn btn-terra" href={`https://www.google.com/maps/search/?api=1&query=${crag.latitude},${crag.longitude}`} target="_blank" rel="noopener">Maps</a>
+        )}
+        {crag.latitude != null && (
+          <button className="btn btn-terra" type="button" onClick={() => downloadGpx(crag)}>GPX</button>
+        )}
+        <button className="btn btn-terra" type="button" disabled={!crag.media.photos} title={crag.media.photos ? undefined : "No photos catalogued for this crag yet"}>
+          Photos
+        </button>
       </div>
+
       {model && (
-        <div style={{ padding: "0 8px" }}>
-          <Model3D glb={model.glb} alt={`3D scan of ${crag.n}`} webReady={model.webReady} note={model.note} />
+        <div style={{ padding: "0 8px 10px" }}>
+          <Model3D glb={model.glb} alt={`3D scan of ${crag.name}`} webReady={model.webReady} note={model.note} />
         </div>
       )}
+
       {crag.routes.length ? (
-        crag.routes.map((r, i) => (
-          <a key={i} className="prow route route-weather" href={`https://www.windy.com/${crag.la}/${crag.lo}`} target="_blank" rel="noopener" title={`Open weather forecast for ${crag.n}`}>
-            <span className={`rdot`} style={{ background: "var(--gold)" }} title={r.gp} />
-            <span className="rname">{r.n}</span>
-            <span className="rmeta g" style={{ color: "var(--chalk)" }}>{r.g}</span>
-            <span className="weather-mark">Weather</span>
-          </a>
-        ))
+        <>
+          {shown.map(r => (
+            <a key={r.id} id={r.id} className="prow route" href={r.path}>
+              <span className="rdot" style={{ background: "var(--gold)" }} />
+              <span className="rname">{r.name}</span>
+              <span className="rmeta g" style={{ color: "var(--chalk)" }}>{r.grade ?? "—"}</span>
+              {r.verificationStatus === "imported-unverified" && <span className="unverified-badge" title="Imported, not yet verified on site">unverified</span>}
+            </a>
+          ))}
+          {!showAll && remaining > 0 && (
+            <button className="prow" style={{ justifyContent: "center", color: "var(--gold)" }} onClick={() => setShowAll(true)}>
+              + {remaining} more
+            </button>
+          )}
+          {crag.routes.some(r => r.verificationStatus === "imported-unverified") && (
+            <div className="verify-disclaimer" style={{ padding: "8px 10px", fontSize: 11.5, color: "var(--sage)" }}>
+              Imported from source data, not yet independently verified. Grades, names and positions may be wrong — check on site before you commit to anything.
+            </div>
+          )}
+        </>
       ) : (
         <div style={{ padding: 10, fontSize: 13, color: "var(--sage)" }}>
-          No catalogued routes yet. This crag came from OpenStreetMap — a contributor mission can transcribe its routes.
+          No catalogued routes yet.
         </div>
       )}
+
+      <MoreInformation crag={crag} />
     </>
+  );
+}
+
+function MoreInformation({ crag }: { crag: CragDetail }) {
+  if (!crag.links.length) return null;
+  const exact = crag.links.filter(l => l.kind === "exact");
+  const search = crag.links.filter(l => l.kind === "search");
+  return (
+    <div className="more-info" style={{ padding: "10px 8px", borderTop: "1px solid var(--line-2, #38493D)", marginTop: 8 }}>
+      <div style={{ fontSize: 12, fontWeight: 600, color: "var(--chalk)", marginBottom: 6 }}>More information</div>
+      {[...exact, ...search].map((l, i) => (
+        <a key={i} href={l.url} target="_blank" rel="noopener" style={{ display: "block", fontSize: 12.5, color: "var(--gold)", marginBottom: 4 }} title={l.note ?? undefined}>
+          {l.label}{l.kind === "search" ? " (search)" : ""}
+        </a>
+      ))}
+      <p style={{ fontSize: 11.5, color: "var(--sage)", marginTop: 8 }}>
+        No topos here yet — these sites have them. Verify bolts on site.
+      </p>
+      <p style={{ fontSize: 11, color: "var(--sage)", marginTop: 4 }}>© OpenStreetMap contributors</p>
+    </div>
   );
 }
