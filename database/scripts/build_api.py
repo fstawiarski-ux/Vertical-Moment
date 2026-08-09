@@ -163,8 +163,37 @@ def load_notion_csv(path: Path) -> list[dict]:
     return out
 
 
+def load_canonical(path: Path) -> list[dict]:
+    """THE source of truth: database/master/vertical-moment-canonical.json.
+
+    One file. Routes, crags and regions already resolved, IDs already minted,
+    crag coordinates already joined from OSM. If it is present nothing else
+    is read. Everything downstream is generated from this.
+    """
+    if not path.exists():
+        return []
+    doc = json.loads(path.read_text(encoding="utf-8"))
+    out = []
+    for r in doc.get("routes", []):
+        out.append({
+            "row_key": r["row_key"], "name": r["name"], "grade": r.get("grade"),
+            "grade_band": r.get("grade_band"), "grade_system": r.get("grade_system"),
+            "discipline": r.get("discipline") or "sport",
+            "region": r["region"], "area": r["region"],
+            "crag": r["crag"], "wall": r["crag"],
+            "source": r.get("source"),
+            "latitude": r.get("lat"), "longitude": r.get("lon"),
+            "coord_source": r.get("coord_source"),
+            "notion_page_id": r.get("notion_page_id"),
+            "workflow_status": r.get("workflow_status"),
+            "verification_status": r.get("verification_status", "imported-unverified"),
+            "provenance": ["canonical"],
+        })
+    return out
+
+
 SOURCES = [
-    ("master", lambda d: load_master(d / "master" / "vertical_moment_master_routes_v1.xlsx")),
+    ("canonical", lambda d: load_canonical(d / "master" / "vertical-moment-canonical.json")),
     ("notion", lambda d: load_notion_csv(d / "sources" / "notion-export.csv")),
 ]
 
