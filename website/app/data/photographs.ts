@@ -1,6 +1,8 @@
 // Generated for the photography homepage. Order defines the masonry sequence.
 
-export type PhotographTag = 'wall' | 'people' | 'detail' | 'bw' | 'location';
+import { panoramas } from './panoramas';
+
+export type PhotographTag = 'wall' | 'people' | 'detail' | 'bw' | 'location' | 'panorama';
 
 export interface Photograph {
   id: string;
@@ -13,6 +15,9 @@ export interface Photograph {
   tags: PhotographTag[];
   /** Crag the frame was shot at — drives the second filter row. */
   crag: Crag;
+  kind?: 'photograph' | 'panorama';
+  previewSrc?: string;
+  productHref?: string;
 }
 
 /** Crags represented in the archive. Order defines the filter row. */
@@ -27,7 +32,7 @@ export const crags = [
 
 export type Crag = (typeof crags)[number];
 
-export const photographs: Photograph[] = [
+const standardPhotographs: Photograph[] = [
   {
     id: 'vm-6890',
     src: '/photography/gallery/vm-6890-peilstein-main-face.webp',
@@ -393,11 +398,30 @@ export const photographs: Photograph[] = [
   },
 ];
 
+export const photographs: Photograph[] = [
+  ...standardPhotographs,
+  ...panoramas.map((panorama) => ({
+    id: panorama.id,
+    src: panorama.thumbnail,
+    previewSrc: panorama.src,
+    width: panorama.displayWidth,
+    height: panorama.displayHeight,
+    title: panorama.title,
+    meta: `${panorama.location} · print panorama`,
+    alt: panorama.alt,
+    tags: ['panorama', 'location'] as PhotographTag[],
+    crag: panorama.location,
+    kind: 'panorama' as const,
+    productHref: `/prints/panoramas#${panorama.id}`,
+  })),
+];
+
 export const photographFilters: { id: 'all' | PhotographTag; label: string }[] = [
   { id: 'all', label: 'All frames' },
   { id: 'wall', label: 'On the wall' },
   { id: 'people', label: 'People' },
   { id: 'detail', label: 'Details' },
   { id: 'location', label: 'Locations' },
+  { id: 'panorama', label: 'Panoramas' },
   { id: 'bw', label: 'Black & white' },
 ];

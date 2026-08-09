@@ -612,6 +612,9 @@ export default function Page() {
                   <a href="#lab">3D Lab</a>
                 </li>
                 <li>
+                  <a href="/prints/panoramas">Panorama editions</a>
+                </li>
+                <li>
                   <a href="#contact">Contact</a>
                 </li>
               </ul>
