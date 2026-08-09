@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "b2b1de49-d14a-5a09-bf27-42abe740f856",
   "name": "Engelstein (Boulder)",
@@ -8,15 +8,53 @@
   "region": "Helenental",
   "region_slug": "helenental",
   "route_count": 1,
+  "is_stub": false,
   "latitude": null,
   "longitude": null,
+  "coord_source": null,
   "grades": [
    "8a"
   ],
   "disciplines": [
    "boulder"
   ],
-  "path": "/crags/helenental/engelstein-boulder"
+  "path": "/crags/helenental/engelstein-boulder",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Engelstein+%28Boulder%29+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Engelstein+%28Boulder%29+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Engelstein+%28Boulder%29"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Engelstein+%28Boulder%29+Helenental"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -33,18 +71,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": "3a921413-5351-8129-a450-d8fa6874bca2",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "95f4ed93-26d6-5ced-aa2b-93fa2c589da8",
    "region_slug": "helenental",
    "crag_slug": "engelstein-boulder",
    "slug": "helmatraverse",
    "path": "/crags/helenental/engelstein-boulder#95f4ed93-26d6-5ced-aa2b-93fa2c589da8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }

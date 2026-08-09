@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "79e4659a-a8dd-59ed-8e7f-20055b03d11a",
   "name": "Helenentaler Blöcke",
@@ -8,8 +8,10 @@
   "region": "Helenental",
   "region_slug": "helenental",
   "route_count": 27,
-  "latitude": null,
-  "longitude": null,
+  "is_stub": false,
+  "latitude": 48.017796,
+  "longitude": 16.193996,
+  "coord_source": "routes",
   "grades": [
    "10-",
    "3",
@@ -29,7 +31,57 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/helenental/helenentaler-blocke"
+  "path": "/crags/helenental/helenentaler-blocke",
+  "osm": "relation/18181427",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18181427",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=48.017796&mlon=16.193996#map=16/48.017796/16.193996",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Helenentaler+Bl%C3%B6cke+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Helenentaler+Bl%C3%B6cke+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Helenentaler+Bl%C3%B6cke"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Helenentaler+Bl%C3%B6cke+Helenental"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -44,20 +96,21 @@
    "crag": "Helenentaler Blöcke",
    "wall": "Helenentaler Blöcke",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017796,
+   "longitude": 16.193996,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a2e44d8e-5d32-5c1e-ab77-f9aa95f52cd3",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke",
    "slug": "atlas",
    "path": "/crags/helenental/helenentaler-blocke#a2e44d8e-5d32-5c1e-ab77-f9aa95f52cd3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Helenentaler Blöcke | Beisszange",
@@ -71,20 +124,21 @@
    "crag": "Helenentaler Blöcke",
    "wall": "Helenentaler Blöcke",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017796,
+   "longitude": 16.193996,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-8136-b9b1-e3d44d1f7fd2",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6ab632aa-1128-5099-ad39-7f57c7914e35",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke",
    "slug": "beisszange",
    "path": "/crags/helenental/helenentaler-blocke#6ab632aa-1128-5099-ad39-7f57c7914e35",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Helenentaler Blöcke | Blauer Fritz",
@@ -98,20 +152,21 @@
    "crag": "Helenentaler Blöcke",
    "wall": "Helenentaler Blöcke",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017796,
+   "longitude": 16.193996,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e6f68baf-7dbc-5679-bab4-2f6afa2e1f99",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke",
    "slug": "blauer-fritz",
    "path": "/crags/helenental/helenentaler-blocke#e6f68baf-7dbc-5679-bab4-2f6afa2e1f99",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Helenentaler Blöcke | Bloc Infernal",
@@ -125,20 +180,21 @@
    "crag": "Helenentaler Blöcke",
    "wall": "Helenentaler Blöcke",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017796,
+   "longitude": 16.193996,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-81d1-b0d5-eb89151cfbef",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e86bfb85-a3ef-5bbb-9d76-7bb414766aa3",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke",
    "slug": "bloc-infernal",
    "path": "/crags/helenental/helenentaler-blocke#e86bfb85-a3ef-5bbb-9d76-7bb414766aa3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Helenentaler Blöcke | Die Last des Erbes",
@@ -152,20 +208,21 @@
    "crag": "Helenentaler Blöcke",
    "wall": "Helenentaler Blöcke",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017796,
+   "longitude": 16.193996,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-814a-a4bb-cc19308b5e2a",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ce85f1b8-ebf6-5f41-8201-93ffd0b42925",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke",
    "slug": "die-last-des-erbes",
    "path": "/crags/helenental/helenentaler-blocke#ce85f1b8-ebf6-5f41-8201-93ffd0b42925",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Helenentaler Blöcke | Direkter Ausstieg (Helenentaler a)",
@@ -179,20 +236,21 @@
    "crag": "Helenentaler Blöcke",
    "wall": "Helenentaler Blöcke",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017796,
+   "longitude": 16.193996,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-8147-9ec8-fb2ca698680b",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a3cb7649-e2fb-51ca-9896-1502e82173bc",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke",
    "slug": "direkter-ausstieg-helenentaler-a",
    "path": "/crags/helenental/helenentaler-blocke#a3cb7649-e2fb-51ca-9896-1502e82173bc",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Helenentaler Blöcke | Direkter Ausstieg (Helenentaler b)",
@@ -206,20 +264,21 @@
    "crag": "Helenentaler Blöcke",
    "wall": "Helenentaler Blöcke",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017796,
+   "longitude": 16.193996,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-8147-9ec8-fb2ca698680b",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5a97b677-ca2d-56a6-9e54-ae795621d0a2",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke",
    "slug": "direkter-ausstieg-helenentaler-b",
    "path": "/crags/helenental/helenentaler-blocke#5a97b677-ca2d-56a6-9e54-ae795621d0a2",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Helenentaler Blöcke | Fritzlpromenade",
@@ -233,20 +292,21 @@
    "crag": "Helenentaler Blöcke",
    "wall": "Helenentaler Blöcke",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017796,
+   "longitude": 16.193996,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "54b4b6ec-0f1a-5e88-b59f-34ccd33372fa",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke",
    "slug": "fritzlpromenade",
    "path": "/crags/helenental/helenentaler-blocke#54b4b6ec-0f1a-5e88-b59f-34ccd33372fa",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Helenentaler Blöcke | Grosses Aufwärmen",
@@ -260,20 +320,21 @@
    "crag": "Helenentaler Blöcke",
    "wall": "Helenentaler Blöcke",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017796,
+   "longitude": 16.193996,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-816b-97fe-cc6a2fe5f5b6",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a800aeb2-62a2-5d5a-9bc4-7aa5d645a8d0",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke",
    "slug": "grosses-aufwarmen",
    "path": "/crags/helenental/helenentaler-blocke#a800aeb2-62a2-5d5a-9bc4-7aa5d645a8d0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Helenentaler Blöcke | Grünmandl",
@@ -287,20 +348,21 @@
    "crag": "Helenentaler Blöcke",
    "wall": "Helenentaler Blöcke",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017796,
+   "longitude": 16.193996,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-81cb-ac03-d860a074b327",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e5a2b011-df4d-5102-b679-ae6667762ec8",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke",
    "slug": "grunmandl",
    "path": "/crags/helenental/helenentaler-blocke#e5a2b011-df4d-5102-b679-ae6667762ec8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Helenentaler Blöcke | Heimoverschneidung",
@@ -314,20 +376,21 @@
    "crag": "Helenentaler Blöcke",
    "wall": "Helenentaler Blöcke",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017796,
+   "longitude": 16.193996,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-819b-be5c-ee5a332745d7",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f2cd2218-e5be-5268-a94e-09758f506d2f",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke",
    "slug": "heimoverschneidung",
    "path": "/crags/helenental/helenentaler-blocke#f2cd2218-e5be-5268-a94e-09758f506d2f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Helenentaler Blöcke | Heini",
@@ -341,20 +404,21 @@
    "crag": "Helenentaler Blöcke",
    "wall": "Helenentaler Blöcke",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017796,
+   "longitude": 16.193996,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-8114-a30c-c612cdd58062",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b4bfc883-23f0-5f4a-9ba1-9cb1a5f3306f",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke",
    "slug": "heini",
    "path": "/crags/helenental/helenentaler-blocke#b4bfc883-23f0-5f4a-9ba1-9cb1a5f3306f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Helenentaler Blöcke | Helmut",
@@ -368,20 +432,21 @@
    "crag": "Helenentaler Blöcke",
    "wall": "Helenentaler Blöcke",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017796,
+   "longitude": 16.193996,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-81f8-aa74-d37325c3dd87",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e3e51d32-0569-54bb-b5da-534859b4c985",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke",
    "slug": "helmut",
    "path": "/crags/helenental/helenentaler-blocke#e3e51d32-0569-54bb-b5da-534859b4c985",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Helenentaler Blöcke | Kasu",
@@ -395,20 +460,21 @@
    "crag": "Helenentaler Blöcke",
    "wall": "Helenentaler Blöcke",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017796,
+   "longitude": 16.193996,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-811e-b3b3-eb70cf7bb4f8",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e22d749e-f39c-524e-a632-6fcf9c208eb0",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke",
    "slug": "kasu",
    "path": "/crags/helenental/helenentaler-blocke#e22d749e-f39c-524e-a632-6fcf9c208eb0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Helenentaler Blöcke | Keine Wahl",
@@ -422,20 +488,21 @@
    "crag": "Helenentaler Blöcke",
    "wall": "Helenentaler Blöcke",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017796,
+   "longitude": 16.193996,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d0579580-3ab1-54c7-887e-fe85fa55a0b7",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke",
    "slug": "keine-wahl",
    "path": "/crags/helenental/helenentaler-blocke#d0579580-3ab1-54c7-887e-fe85fa55a0b7",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Helenentaler Blöcke | Little Crack",
@@ -449,20 +516,21 @@
    "crag": "Helenentaler Blöcke",
    "wall": "Helenentaler Blöcke",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017796,
+   "longitude": 16.193996,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "bfbff81e-35ce-5651-bb19-922ccc71b4eb",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke",
    "slug": "little-crack",
    "path": "/crags/helenental/helenentaler-blocke#bfbff81e-35ce-5651-bb19-922ccc71b4eb",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Helenentaler Blöcke | Mariannenkante",
@@ -476,20 +544,21 @@
    "crag": "Helenentaler Blöcke",
    "wall": "Helenentaler Blöcke",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017796,
+   "longitude": 16.193996,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4e3927d7-4034-5160-9337-ba1095055f44",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke",
    "slug": "mariannenkante",
    "path": "/crags/helenental/helenentaler-blocke#4e3927d7-4034-5160-9337-ba1095055f44",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Helenentaler Blöcke | Männerträume",
@@ -503,20 +572,21 @@
    "crag": "Helenentaler Blöcke",
    "wall": "Helenentaler Blöcke",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017796,
+   "longitude": 16.193996,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-81f3-b369-ee892461d2f4",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "bc667047-abb5-5fdd-94a4-642a66d9f268",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke",
    "slug": "mannertraume",
    "path": "/crags/helenental/helenentaler-blocke#bc667047-abb5-5fdd-94a4-642a66d9f268",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Helenentaler Blöcke | Non Plus Ultra Steig",
@@ -530,20 +600,21 @@
    "crag": "Helenentaler Blöcke",
    "wall": "Helenentaler Blöcke",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017796,
+   "longitude": 16.193996,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-8103-86f9-ce0665bb51ac",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c3b0d519-a387-55fb-a41c-d500e416e120",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke",
    "slug": "non-plus-ultra-steig",
    "path": "/crags/helenental/helenentaler-blocke#c3b0d519-a387-55fb-a41c-d500e416e120",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Helenentaler Blöcke | Ohmeier",
@@ -557,20 +628,21 @@
    "crag": "Helenentaler Blöcke",
    "wall": "Helenentaler Blöcke",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017796,
+   "longitude": 16.193996,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "611afde4-dfb6-52f2-a942-905ccab0fad0",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke",
    "slug": "ohmeier",
    "path": "/crags/helenental/helenentaler-blocke#611afde4-dfb6-52f2-a942-905ccab0fad0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Helenentaler Blöcke | Riesengrosses Aufwärmen",
@@ -584,20 +656,21 @@
    "crag": "Helenentaler Blöcke",
    "wall": "Helenentaler Blöcke",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017796,
+   "longitude": 16.193996,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-8125-86cd-f394d76de7b9",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4be89575-de7d-5f69-b787-4e7c56d15faa",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke",
    "slug": "riesengrosses-aufwarmen",
    "path": "/crags/helenental/helenentaler-blocke#4be89575-de7d-5f69-b787-4e7c56d15faa",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Helenentaler Blöcke | Ruck Zuck",
@@ -611,20 +684,21 @@
    "crag": "Helenentaler Blöcke",
    "wall": "Helenentaler Blöcke",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017796,
+   "longitude": 16.193996,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-817a-b79c-e9716209b0ce",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1ac7173c-adef-5a5f-9466-b90bae1f7abb",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke",
    "slug": "ruck-zuck",
    "path": "/crags/helenental/helenentaler-blocke#1ac7173c-adef-5a5f-9466-b90bae1f7abb",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Helenentaler Blöcke | Stoja Steig",
@@ -638,20 +712,21 @@
    "crag": "Helenentaler Blöcke",
    "wall": "Helenentaler Blöcke",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017796,
+   "longitude": 16.193996,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-813f-b662-ecc489ceb4bc",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "68cf3566-c121-5ad9-8bf1-d3ee7478102d",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke",
    "slug": "stoja-steig",
    "path": "/crags/helenental/helenentaler-blocke#68cf3566-c121-5ad9-8bf1-d3ee7478102d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Helenentaler Blöcke | Sweet City Woman",
@@ -665,20 +740,21 @@
    "crag": "Helenentaler Blöcke",
    "wall": "Helenentaler Blöcke",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017796,
+   "longitude": 16.193996,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-81de-9b6b-f3a6261e6aa8",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b5e8a8a4-a7ef-5fa7-82b4-89a25ae58354",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke",
    "slug": "sweet-city-woman",
    "path": "/crags/helenental/helenentaler-blocke#b5e8a8a4-a7ef-5fa7-82b4-89a25ae58354",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Helenentaler Blöcke | White Edge",
@@ -692,20 +768,21 @@
    "crag": "Helenentaler Blöcke",
    "wall": "Helenentaler Blöcke",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017796,
+   "longitude": 16.193996,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-81dc-927d-ffddf2d5dea7",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3f8a3163-97b8-54dc-b45b-48de85367db7",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke",
    "slug": "white-edge",
    "path": "/crags/helenental/helenentaler-blocke#3f8a3163-97b8-54dc-b45b-48de85367db7",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Helenentaler Blöcke | Wilde Züge",
@@ -719,20 +796,21 @@
    "crag": "Helenentaler Blöcke",
    "wall": "Helenentaler Blöcke",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017796,
+   "longitude": 16.193996,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-8154-833d-d08d4ff77a64",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0afc805f-b458-504c-ac4f-9be7e2b7fb79",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke",
    "slug": "wilde-zuge",
    "path": "/crags/helenental/helenentaler-blocke#0afc805f-b458-504c-ac4f-9be7e2b7fb79",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Helenentaler Blöcke | Zephir",
@@ -746,20 +824,21 @@
    "crag": "Helenentaler Blöcke",
    "wall": "Helenentaler Blöcke",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017796,
+   "longitude": 16.193996,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-81be-8ec3-e6e335ce0a95",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "06dbaeb4-0f9e-553b-9fc3-ea026ff4f0f0",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke",
    "slug": "zephir",
    "path": "/crags/helenental/helenentaler-blocke#06dbaeb4-0f9e-553b-9fc3-ea026ff4f0f0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

@@ -1,0 +1,70 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:29:28+00:00",
+ "crag": {
+  "id": "fbaa664d-252e-5be1-abc8-adbb8f0a679b",
+  "name": "Block 3: Fraaanz",
+  "slug": "block-3-fraaanz",
+  "region": "Baden",
+  "region_slug": "baden",
+  "route_count": 0,
+  "is_stub": true,
+  "latitude": 48.02051,
+  "longitude": 16.193022,
+  "coord_source": "osm",
+  "grades": [],
+  "disciplines": [],
+  "path": "/crags/baden/block-3-fraaanz",
+  "osm": "way/204576115",
+  "rock": "limestone",
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/way/204576115",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=48.02051&mlon=16.193022#map=16/48.02051/16.193022",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Block+3%3A+Fraaanz+Baden"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Block+3%3A+Fraaanz+Baden"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Block+3%3A+Fraaanz"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Block+3%3A+Fraaanz+Baden"
+   }
+  ],
+  "has_exact_links": false
+ },
+ "routes": []
+}

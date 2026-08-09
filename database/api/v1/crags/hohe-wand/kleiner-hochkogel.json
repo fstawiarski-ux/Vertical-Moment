@@ -1,0 +1,70 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:29:28+00:00",
+ "crag": {
+  "id": "69a055cf-1162-5914-a4e5-ee12dc142e91",
+  "name": "Kleiner Hochkogel",
+  "slug": "kleiner-hochkogel",
+  "region": "Hohe Wand",
+  "region_slug": "hohe-wand",
+  "route_count": 0,
+  "is_stub": true,
+  "latitude": 47.819642,
+  "longitude": 16.033178,
+  "coord_source": "osm",
+  "grades": [],
+  "disciplines": [],
+  "path": "/crags/hohe-wand/kleiner-hochkogel",
+  "osm": "relation/18200376",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18200376",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=47.819642&mlon=16.033178#map=16/47.819642/16.033178",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Kleiner+Hochkogel+Hohe+Wand"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Kleiner+Hochkogel+Hohe+Wand"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Kleiner+Hochkogel"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Kleiner+Hochkogel+Hohe+Wand"
+   }
+  ],
+  "has_exact_links": false
+ },
+ "routes": []
+}

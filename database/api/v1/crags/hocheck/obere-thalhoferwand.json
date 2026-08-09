@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "57b50831-8060-5099-b4df-5a3dee74d69f",
   "name": "Obere Thalhoferwand",
@@ -8,8 +8,10 @@
   "region": "Hocheck",
   "region_slug": "hocheck",
   "route_count": 25,
-  "latitude": null,
-  "longitude": null,
+  "is_stub": false,
+  "latitude": 48.007764,
+  "longitude": 16.036865,
+  "coord_source": "routes",
   "grades": [
    "5",
    "5+",
@@ -27,7 +29,57 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/hocheck/obere-thalhoferwand"
+  "path": "/crags/hocheck/obere-thalhoferwand",
+  "osm": "relation/18166484",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18166484",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=48.007764&mlon=16.036865#map=16/48.007764/16.036865",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Obere+Thalhoferwand+Hocheck"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Obere+Thalhoferwand+Hocheck"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Obere+Thalhoferwand"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Obere+Thalhoferwand+Hocheck"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -42,20 +94,21 @@
    "crag": "Obere Thalhoferwand",
    "wall": "Obere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007764,
+   "longitude": 16.036865,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3e2041ce-8493-5102-bb55-778c328b1d8a",
    "region_slug": "hocheck",
    "crag_slug": "obere-thalhoferwand",
    "slug": "abel",
    "path": "/crags/hocheck/obere-thalhoferwand#3e2041ce-8493-5102-bb55-778c328b1d8a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Thalhoferwand | Abendstern",
@@ -69,20 +122,21 @@
    "crag": "Obere Thalhoferwand",
    "wall": "Obere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007764,
+   "longitude": 16.036865,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "234c75f3-8dda-515b-8f51-0929d1691576",
    "region_slug": "hocheck",
    "crag_slug": "obere-thalhoferwand",
    "slug": "abendstern",
    "path": "/crags/hocheck/obere-thalhoferwand#234c75f3-8dda-515b-8f51-0929d1691576",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Thalhoferwand | Alpin Aktuell",
@@ -96,20 +150,21 @@
    "crag": "Obere Thalhoferwand",
    "wall": "Obere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007764,
+   "longitude": 16.036865,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "635ddc16-d7f5-5010-a0a4-5f02c1765eeb",
    "region_slug": "hocheck",
    "crag_slug": "obere-thalhoferwand",
    "slug": "alpin-aktuell",
    "path": "/crags/hocheck/obere-thalhoferwand#635ddc16-d7f5-5010-a0a4-5f02c1765eeb",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Thalhoferwand | Damokles",
@@ -123,20 +178,21 @@
    "crag": "Obere Thalhoferwand",
    "wall": "Obere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007764,
+   "longitude": 16.036865,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8a476900-2392-5b65-ae20-3032d951dc11",
    "region_slug": "hocheck",
    "crag_slug": "obere-thalhoferwand",
    "slug": "damokles",
    "path": "/crags/hocheck/obere-thalhoferwand#8a476900-2392-5b65-ae20-3032d951dc11",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Thalhoferwand | Das Mädchen aus 1001 Nacht",
@@ -150,20 +206,21 @@
    "crag": "Obere Thalhoferwand",
    "wall": "Obere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007764,
+   "longitude": 16.036865,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b112dd9d-a692-5d81-b97e-6722f3b662dc",
    "region_slug": "hocheck",
    "crag_slug": "obere-thalhoferwand",
    "slug": "das-madchen-aus-1001-nacht",
    "path": "/crags/hocheck/obere-thalhoferwand#b112dd9d-a692-5d81-b97e-6722f3b662dc",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Thalhoferwand | Ende gut alles gut",
@@ -177,20 +234,21 @@
    "crag": "Obere Thalhoferwand",
    "wall": "Obere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007764,
+   "longitude": 16.036865,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4b55580e-cb2d-5099-ab03-5cf9825d551d",
    "region_slug": "hocheck",
    "crag_slug": "obere-thalhoferwand",
    "slug": "ende-gut-alles-gut",
    "path": "/crags/hocheck/obere-thalhoferwand#4b55580e-cb2d-5099-ab03-5cf9825d551d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Thalhoferwand | Frühjahrsmüdigkeit",
@@ -204,20 +262,21 @@
    "crag": "Obere Thalhoferwand",
    "wall": "Obere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007764,
+   "longitude": 16.036865,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5a7b4500-d238-5479-83b1-5bd208268053",
    "region_slug": "hocheck",
    "crag_slug": "obere-thalhoferwand",
    "slug": "fruhjahrsmudigkeit",
    "path": "/crags/hocheck/obere-thalhoferwand#5a7b4500-d238-5479-83b1-5bd208268053",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Thalhoferwand | Für dich Klausi",
@@ -231,20 +290,21 @@
    "crag": "Obere Thalhoferwand",
    "wall": "Obere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007764,
+   "longitude": 16.036865,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "06e5da8f-f29f-5ef1-bfb1-d2ffc66cc203",
    "region_slug": "hocheck",
    "crag_slug": "obere-thalhoferwand",
    "slug": "fur-dich-klausi",
    "path": "/crags/hocheck/obere-thalhoferwand#06e5da8f-f29f-5ef1-bfb1-d2ffc66cc203",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Thalhoferwand | Für kleine Mädchen",
@@ -258,20 +318,21 @@
    "crag": "Obere Thalhoferwand",
    "wall": "Obere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007764,
+   "longitude": 16.036865,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f9d97ad0-bbe1-5938-a3e0-af6d065cfaf5",
    "region_slug": "hocheck",
    "crag_slug": "obere-thalhoferwand",
    "slug": "fur-kleine-madchen",
    "path": "/crags/hocheck/obere-thalhoferwand#f9d97ad0-bbe1-5938-a3e0-af6d065cfaf5",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Thalhoferwand | Hackerling",
@@ -285,20 +346,21 @@
    "crag": "Obere Thalhoferwand",
    "wall": "Obere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007764,
+   "longitude": 16.036865,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "73575d33-943e-508c-9aaf-0c9387b44750",
    "region_slug": "hocheck",
    "crag_slug": "obere-thalhoferwand",
    "slug": "hackerling",
    "path": "/crags/hocheck/obere-thalhoferwand#73575d33-943e-508c-9aaf-0c9387b44750",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Thalhoferwand | Henkel Trocken",
@@ -312,20 +374,21 @@
    "crag": "Obere Thalhoferwand",
    "wall": "Obere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007764,
+   "longitude": 16.036865,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a862dcd9-f515-5184-af8b-2dbf4f21f3d8",
    "region_slug": "hocheck",
    "crag_slug": "obere-thalhoferwand",
    "slug": "henkel-trocken",
    "path": "/crags/hocheck/obere-thalhoferwand#a862dcd9-f515-5184-af8b-2dbf4f21f3d8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Thalhoferwand | Im Winter verblödet",
@@ -339,20 +402,21 @@
    "crag": "Obere Thalhoferwand",
    "wall": "Obere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007764,
+   "longitude": 16.036865,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "83873ab5-e4e9-592a-bcd0-a904471e9c9b",
    "region_slug": "hocheck",
    "crag_slug": "obere-thalhoferwand",
    "slug": "im-winter-verblodet",
    "path": "/crags/hocheck/obere-thalhoferwand#83873ab5-e4e9-592a-bcd0-a904471e9c9b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Thalhoferwand | Jupiter",
@@ -366,20 +430,21 @@
    "crag": "Obere Thalhoferwand",
    "wall": "Obere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007764,
+   "longitude": 16.036865,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "581d9f2a-9f31-5c87-828b-6b2e0dda1c60",
    "region_slug": "hocheck",
    "crag_slug": "obere-thalhoferwand",
    "slug": "jupiter",
    "path": "/crags/hocheck/obere-thalhoferwand#581d9f2a-9f31-5c87-828b-6b2e0dda1c60",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Thalhoferwand | Klettern Light",
@@ -393,20 +458,21 @@
    "crag": "Obere Thalhoferwand",
    "wall": "Obere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007764,
+   "longitude": 16.036865,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e7faa617-384b-5343-9c29-acc5cc837500",
    "region_slug": "hocheck",
    "crag_slug": "obere-thalhoferwand",
    "slug": "klettern-light",
    "path": "/crags/hocheck/obere-thalhoferwand#e7faa617-384b-5343-9c29-acc5cc837500",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Thalhoferwand | Krampfhaft",
@@ -420,20 +486,21 @@
    "crag": "Obere Thalhoferwand",
    "wall": "Obere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007764,
+   "longitude": 16.036865,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "99988869-0655-5b66-91d8-d25a2d554a9d",
    "region_slug": "hocheck",
    "crag_slug": "obere-thalhoferwand",
    "slug": "krampfhaft",
    "path": "/crags/hocheck/obere-thalhoferwand#99988869-0655-5b66-91d8-d25a2d554a9d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Thalhoferwand | Morgenstern",
@@ -447,20 +514,21 @@
    "crag": "Obere Thalhoferwand",
    "wall": "Obere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007764,
+   "longitude": 16.036865,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5c915dcb-97cd-5c4e-90ce-4fa83f1fb784",
    "region_slug": "hocheck",
    "crag_slug": "obere-thalhoferwand",
    "slug": "morgenstern",
    "path": "/crags/hocheck/obere-thalhoferwand#5c915dcb-97cd-5c4e-90ce-4fa83f1fb784",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Thalhoferwand | Nix",
@@ -474,20 +542,21 @@
    "crag": "Obere Thalhoferwand",
    "wall": "Obere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007764,
+   "longitude": 16.036865,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c639fb22-0236-5dec-be12-850e318d7622",
    "region_slug": "hocheck",
    "crag_slug": "obere-thalhoferwand",
    "slug": "nix",
    "path": "/crags/hocheck/obere-thalhoferwand#c639fb22-0236-5dec-be12-850e318d7622",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Thalhoferwand | Ohnmacht in mir",
@@ -501,20 +570,21 @@
    "crag": "Obere Thalhoferwand",
    "wall": "Obere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007764,
+   "longitude": 16.036865,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2706117c-1c9c-5ada-be87-ff3b2d19f3b7",
    "region_slug": "hocheck",
    "crag_slug": "obere-thalhoferwand",
    "slug": "ohnmacht-in-mir",
    "path": "/crags/hocheck/obere-thalhoferwand#2706117c-1c9c-5ada-be87-ff3b2d19f3b7",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Thalhoferwand | Pacem",
@@ -528,20 +598,21 @@
    "crag": "Obere Thalhoferwand",
    "wall": "Obere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007764,
+   "longitude": 16.036865,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "99ade591-a7c7-59a3-a146-c33ae49085a4",
    "region_slug": "hocheck",
    "crag_slug": "obere-thalhoferwand",
    "slug": "pacem",
    "path": "/crags/hocheck/obere-thalhoferwand#99ade591-a7c7-59a3-a146-c33ae49085a4",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Thalhoferwand | Platzangst im Hendlstall",
@@ -555,20 +626,21 @@
    "crag": "Obere Thalhoferwand",
    "wall": "Obere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007764,
+   "longitude": 16.036865,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b3edd5e6-a7fd-5403-9025-b98a1e90af49",
    "region_slug": "hocheck",
    "crag_slug": "obere-thalhoferwand",
    "slug": "platzangst-im-hendlstall",
    "path": "/crags/hocheck/obere-thalhoferwand#b3edd5e6-a7fd-5403-9025-b98a1e90af49",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Thalhoferwand | Superfeucht",
@@ -582,20 +654,21 @@
    "crag": "Obere Thalhoferwand",
    "wall": "Obere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007764,
+   "longitude": 16.036865,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "97e0afcf-7472-5183-a2a8-07fef4cbbcf3",
    "region_slug": "hocheck",
    "crag_slug": "obere-thalhoferwand",
    "slug": "superfeucht",
    "path": "/crags/hocheck/obere-thalhoferwand#97e0afcf-7472-5183-a2a8-07fef4cbbcf3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Thalhoferwand | The Five Finger Exercise",
@@ -609,20 +682,21 @@
    "crag": "Obere Thalhoferwand",
    "wall": "Obere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007764,
+   "longitude": 16.036865,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c78bedf0-8374-5aac-8c6f-7434f76fb4f1",
    "region_slug": "hocheck",
    "crag_slug": "obere-thalhoferwand",
    "slug": "the-five-finger-exercise",
    "path": "/crags/hocheck/obere-thalhoferwand#c78bedf0-8374-5aac-8c6f-7434f76fb4f1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Thalhoferwand | Venus",
@@ -636,20 +710,21 @@
    "crag": "Obere Thalhoferwand",
    "wall": "Obere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007764,
+   "longitude": 16.036865,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ab8a5fbd-9ab7-5d93-b854-af02ebab5c09",
    "region_slug": "hocheck",
    "crag_slug": "obere-thalhoferwand",
    "slug": "venus",
    "path": "/crags/hocheck/obere-thalhoferwand#ab8a5fbd-9ab7-5d93-b854-af02ebab5c09",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Thalhoferwand | Vom Sturm verweht",
@@ -663,20 +738,21 @@
    "crag": "Obere Thalhoferwand",
    "wall": "Obere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007764,
+   "longitude": 16.036865,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ddfdb965-f6e4-5be3-813b-148240f59fe5",
    "region_slug": "hocheck",
    "crag_slug": "obere-thalhoferwand",
    "slug": "vom-sturm-verweht",
    "path": "/crags/hocheck/obere-thalhoferwand#ddfdb965-f6e4-5be3-813b-148240f59fe5",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Thalhoferwand | Wanderbare Heimat",
@@ -690,20 +766,21 @@
    "crag": "Obere Thalhoferwand",
    "wall": "Obere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007764,
+   "longitude": 16.036865,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a6ab4b81-cc01-5701-99df-61af15e30f85",
    "region_slug": "hocheck",
    "crag_slug": "obere-thalhoferwand",
    "slug": "wanderbare-heimat",
    "path": "/crags/hocheck/obere-thalhoferwand#a6ab4b81-cc01-5701-99df-61af15e30f85",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

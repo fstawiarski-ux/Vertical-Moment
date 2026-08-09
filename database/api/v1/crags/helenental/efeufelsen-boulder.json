@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "1b1119f1-ee35-558f-a6f0-f06524e78e6b",
   "name": "Efeufelsen (Boulder)",
@@ -8,15 +8,53 @@
   "region": "Helenental",
   "region_slug": "helenental",
   "route_count": 1,
+  "is_stub": false,
   "latitude": null,
   "longitude": null,
+  "coord_source": null,
   "grades": [
    "6b"
   ],
   "disciplines": [
    "boulder"
   ],
-  "path": "/crags/helenental/efeufelsen-boulder"
+  "path": "/crags/helenental/efeufelsen-boulder",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Efeufelsen+%28Boulder%29+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Efeufelsen+%28Boulder%29+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Efeufelsen+%28Boulder%29"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Efeufelsen+%28Boulder%29+Helenental"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -33,18 +71,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": "3a921413-5351-81e1-80ff-c5051685f4a5",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "43d7171d-b6be-5e04-9396-92fca3925ff3",
    "region_slug": "helenental",
    "crag_slug": "efeufelsen-boulder",
    "slug": "long-drive",
    "path": "/crags/helenental/efeufelsen-boulder#43d7171d-b6be-5e04-9396-92fca3925ff3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }

@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "d01209f5-19b2-5f9e-b6f4-7800b31a29af",
   "name": "Obere Ostwand",
@@ -8,8 +8,10 @@
   "region": "Hocheck",
   "region_slug": "hocheck",
   "route_count": 26,
-  "latitude": null,
-  "longitude": null,
+  "is_stub": false,
+  "latitude": 48.007192,
+  "longitude": 16.03693,
+  "coord_source": "routes",
   "grades": [
    "10+",
    "11-",
@@ -27,7 +29,57 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/hocheck/obere-ostwand"
+  "path": "/crags/hocheck/obere-ostwand",
+  "osm": "relation/18166481",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18166481",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=48.007192&mlon=16.03693#map=16/48.007192/16.03693",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Obere+Ostwand+Hocheck"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Obere+Ostwand+Hocheck"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Obere+Ostwand"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Obere+Ostwand+Hocheck"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -42,20 +94,21 @@
    "crag": "Obere Ostwand",
    "wall": "Obere Ostwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007192,
+   "longitude": 16.03693,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b4d6f7cc-4c60-545a-8f01-84510ca2eb9d",
    "region_slug": "hocheck",
    "crag_slug": "obere-ostwand",
    "slug": "a-rechte-verzweiflung",
    "path": "/crags/hocheck/obere-ostwand#b4d6f7cc-4c60-545a-8f01-84510ca2eb9d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Ostwand | Abyss",
@@ -69,20 +122,21 @@
    "crag": "Obere Ostwand",
    "wall": "Obere Ostwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007192,
+   "longitude": 16.03693,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cc4b8b0c-1b38-5c71-86a0-83031ff58c66",
    "region_slug": "hocheck",
    "crag_slug": "obere-ostwand",
    "slug": "abyss",
    "path": "/crags/hocheck/obere-ostwand#cc4b8b0c-1b38-5c71-86a0-83031ff58c66",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Ostwand | Die Perle des Ostens",
@@ -96,20 +150,21 @@
    "crag": "Obere Ostwand",
    "wall": "Obere Ostwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007192,
+   "longitude": 16.03693,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6736cd8a-cc24-563d-aee1-bf002cfb3d5f",
    "region_slug": "hocheck",
    "crag_slug": "obere-ostwand",
    "slug": "die-perle-des-ostens",
    "path": "/crags/hocheck/obere-ostwand#6736cd8a-cc24-563d-aee1-bf002cfb3d5f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Ostwand | Ein Wixer in der Arktis",
@@ -123,20 +178,21 @@
    "crag": "Obere Ostwand",
    "wall": "Obere Ostwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007192,
+   "longitude": 16.03693,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1abbcbca-c09d-5903-854a-09a142193aa6",
    "region_slug": "hocheck",
    "crag_slug": "obere-ostwand",
    "slug": "ein-wixer-in-der-arktis",
    "path": "/crags/hocheck/obere-ostwand#1abbcbca-c09d-5903-854a-09a142193aa6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Ostwand | Fels-Sturz",
@@ -150,20 +206,21 @@
    "crag": "Obere Ostwand",
    "wall": "Obere Ostwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007192,
+   "longitude": 16.03693,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "949f4c7d-9bd6-5506-bd00-62dc990f9e53",
    "region_slug": "hocheck",
    "crag_slug": "obere-ostwand",
    "slug": "fels-sturz",
    "path": "/crags/hocheck/obere-ostwand#949f4c7d-9bd6-5506-bd00-62dc990f9e53",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Ostwand | Gastarbeiter",
@@ -177,20 +234,21 @@
    "crag": "Obere Ostwand",
    "wall": "Obere Ostwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007192,
+   "longitude": 16.03693,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4c8e328c-aa45-5073-97ff-1eb715313fb1",
    "region_slug": "hocheck",
    "crag_slug": "obere-ostwand",
    "slug": "gastarbeiter",
    "path": "/crags/hocheck/obere-ostwand#4c8e328c-aa45-5073-97ff-1eb715313fb1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Ostwand | Grottenmolch",
@@ -204,20 +262,21 @@
    "crag": "Obere Ostwand",
    "wall": "Obere Ostwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007192,
+   "longitude": 16.03693,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "aeb63f83-7da8-55e7-9888-33cd2a380bdf",
    "region_slug": "hocheck",
    "crag_slug": "obere-ostwand",
    "slug": "grottenmolch",
    "path": "/crags/hocheck/obere-ostwand#aeb63f83-7da8-55e7-9888-33cd2a380bdf",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Ostwand | Grottenolm",
@@ -231,20 +290,21 @@
    "crag": "Obere Ostwand",
    "wall": "Obere Ostwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007192,
+   "longitude": 16.03693,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6e79247c-b60d-5980-9528-087bfe892340",
    "region_slug": "hocheck",
    "crag_slug": "obere-ostwand",
    "slug": "grottenolm",
    "path": "/crags/hocheck/obere-ostwand#6e79247c-b60d-5980-9528-087bfe892340",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Ostwand | Gruselkabinett",
@@ -258,20 +318,21 @@
    "crag": "Obere Ostwand",
    "wall": "Obere Ostwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007192,
+   "longitude": 16.03693,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ee48347f-2aa5-5810-8849-9e76f7a8f790",
    "region_slug": "hocheck",
    "crag_slug": "obere-ostwand",
    "slug": "gruselkabinett",
    "path": "/crags/hocheck/obere-ostwand#ee48347f-2aa5-5810-8849-9e76f7a8f790",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Ostwand | Gänsehaut",
@@ -285,20 +346,21 @@
    "crag": "Obere Ostwand",
    "wall": "Obere Ostwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007192,
+   "longitude": 16.03693,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "24e70273-aca0-5eef-a631-dae343b9d7a5",
    "region_slug": "hocheck",
    "crag_slug": "obere-ostwand",
    "slug": "gansehaut",
    "path": "/crags/hocheck/obere-ostwand#24e70273-aca0-5eef-a631-dae343b9d7a5",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Ostwand | Hobby Extra",
@@ -312,20 +374,21 @@
    "crag": "Obere Ostwand",
    "wall": "Obere Ostwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007192,
+   "longitude": 16.03693,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "022a6393-e773-5040-8b32-6a83d4cbc5c5",
    "region_slug": "hocheck",
    "crag_slug": "obere-ostwand",
    "slug": "hobby-extra",
    "path": "/crags/hocheck/obere-ostwand#022a6393-e773-5040-8b32-6a83d4cbc5c5",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Ostwand | Leisten-Bruch",
@@ -339,20 +402,21 @@
    "crag": "Obere Ostwand",
    "wall": "Obere Ostwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007192,
+   "longitude": 16.03693,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f5bdb427-fd70-5997-8d3d-b31c75131495",
    "region_slug": "hocheck",
    "crag_slug": "obere-ostwand",
    "slug": "leisten-bruch",
    "path": "/crags/hocheck/obere-ostwand#f5bdb427-fd70-5997-8d3d-b31c75131495",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Ostwand | Nichtraucherzone",
@@ -366,20 +430,21 @@
    "crag": "Obere Ostwand",
    "wall": "Obere Ostwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007192,
+   "longitude": 16.03693,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "bb7a4286-c006-5d1d-b1ba-43d51f282b49",
    "region_slug": "hocheck",
    "crag_slug": "obere-ostwand",
    "slug": "nichtraucherzone",
    "path": "/crags/hocheck/obere-ostwand#bb7a4286-c006-5d1d-b1ba-43d51f282b49",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Ostwand | Notnagel",
@@ -393,20 +458,21 @@
    "crag": "Obere Ostwand",
    "wall": "Obere Ostwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007192,
+   "longitude": 16.03693,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "975e0221-b734-5479-a9bc-6132641c4516",
    "region_slug": "hocheck",
    "crag_slug": "obere-ostwand",
    "slug": "notnagel",
    "path": "/crags/hocheck/obere-ostwand#975e0221-b734-5479-a9bc-6132641c4516",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Ostwand | Osterbraten",
@@ -420,20 +486,21 @@
    "crag": "Obere Ostwand",
    "wall": "Obere Ostwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007192,
+   "longitude": 16.03693,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8b839f0c-28f9-5efe-9a96-dcd8bea1b0ae",
    "region_slug": "hocheck",
    "crag_slug": "obere-ostwand",
    "slug": "osterbraten",
    "path": "/crags/hocheck/obere-ostwand#8b839f0c-28f9-5efe-9a96-dcd8bea1b0ae",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Ostwand | Osterei",
@@ -447,20 +514,21 @@
    "crag": "Obere Ostwand",
    "wall": "Obere Ostwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007192,
+   "longitude": 16.03693,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "86febdb6-d795-5bf1-b54d-5f35050c9714",
    "region_slug": "hocheck",
    "crag_slug": "obere-ostwand",
    "slug": "osterei",
    "path": "/crags/hocheck/obere-ostwand#86febdb6-d795-5bf1-b54d-5f35050c9714",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Ostwand | Osterhasi",
@@ -474,20 +542,21 @@
    "crag": "Obere Ostwand",
    "wall": "Obere Ostwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007192,
+   "longitude": 16.03693,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3060e352-80c9-5eb1-a7d0-2abbf9d9ff4c",
    "region_slug": "hocheck",
    "crag_slug": "obere-ostwand",
    "slug": "osterhasi",
    "path": "/crags/hocheck/obere-ostwand#3060e352-80c9-5eb1-a7d0-2abbf9d9ff4c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Ostwand | Ostwandschocker",
@@ -501,20 +570,21 @@
    "crag": "Obere Ostwand",
    "wall": "Obere Ostwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007192,
+   "longitude": 16.03693,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d7dfc978-1886-5dc5-b2ee-3ccf7f55e48f",
    "region_slug": "hocheck",
    "crag_slug": "obere-ostwand",
    "slug": "ostwandschocker",
    "path": "/crags/hocheck/obere-ostwand#d7dfc978-1886-5dc5-b2ee-3ccf7f55e48f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Ostwand | Palmwedel",
@@ -528,20 +598,21 @@
    "crag": "Obere Ostwand",
    "wall": "Obere Ostwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007192,
+   "longitude": 16.03693,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8694bdf5-751c-5a72-9021-94396f296688",
    "region_slug": "hocheck",
    "crag_slug": "obere-ostwand",
    "slug": "palmwedel",
    "path": "/crags/hocheck/obere-ostwand#8694bdf5-751c-5a72-9021-94396f296688",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Ostwand | Sargnagel",
@@ -555,20 +626,21 @@
    "crag": "Obere Ostwand",
    "wall": "Obere Ostwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007192,
+   "longitude": 16.03693,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "aaad56bd-5baa-5d4f-9e05-42a3b4277be8",
    "region_slug": "hocheck",
    "crag_slug": "obere-ostwand",
    "slug": "sargnagel",
    "path": "/crags/hocheck/obere-ostwand#aaad56bd-5baa-5d4f-9e05-42a3b4277be8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Ostwand | Skantele",
@@ -582,20 +654,21 @@
    "crag": "Obere Ostwand",
    "wall": "Obere Ostwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007192,
+   "longitude": 16.03693,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c7429da8-a758-596b-9bb9-3648d42af88e",
    "region_slug": "hocheck",
    "crag_slug": "obere-ostwand",
    "slug": "skantele",
    "path": "/crags/hocheck/obere-ostwand#c7429da8-a758-596b-9bb9-3648d42af88e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Ostwand | Sphere",
@@ -609,20 +682,21 @@
    "crag": "Obere Ostwand",
    "wall": "Obere Ostwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007192,
+   "longitude": 16.03693,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "458cb35f-32fb-592b-bc9c-5ac364abaa26",
    "region_slug": "hocheck",
    "crag_slug": "obere-ostwand",
    "slug": "sphere",
    "path": "/crags/hocheck/obere-ostwand#458cb35f-32fb-592b-bc9c-5ac364abaa26",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Ostwand | Staubwedel",
@@ -636,20 +710,21 @@
    "crag": "Obere Ostwand",
    "wall": "Obere Ostwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007192,
+   "longitude": 16.03693,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "792d9dba-6d37-575e-b9c1-2e8bc71c7ccf",
    "region_slug": "hocheck",
    "crag_slug": "obere-ostwand",
    "slug": "staubwedel",
    "path": "/crags/hocheck/obere-ostwand#792d9dba-6d37-575e-b9c1-2e8bc71c7ccf",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Ostwand | Teamarbeit",
@@ -663,20 +738,21 @@
    "crag": "Obere Ostwand",
    "wall": "Obere Ostwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007192,
+   "longitude": 16.03693,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2cb719b5-188e-56e6-957f-ecaaeb044f9d",
    "region_slug": "hocheck",
    "crag_slug": "obere-ostwand",
    "slug": "teamarbeit",
    "path": "/crags/hocheck/obere-ostwand#2cb719b5-188e-56e6-957f-ecaaeb044f9d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Ostwand | Turmlos",
@@ -690,20 +766,21 @@
    "crag": "Obere Ostwand",
    "wall": "Obere Ostwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007192,
+   "longitude": 16.03693,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e13639d1-e34f-5b23-b6bb-b939bc655aa1",
    "region_slug": "hocheck",
    "crag_slug": "obere-ostwand",
    "slug": "turmlos",
    "path": "/crags/hocheck/obere-ostwand#e13639d1-e34f-5b23-b6bb-b939bc655aa1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Obere Ostwand | Turmsteigverschneidung",
@@ -717,20 +794,21 @@
    "crag": "Obere Ostwand",
    "wall": "Obere Ostwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007192,
+   "longitude": 16.03693,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "864b4367-42c0-5fcb-9355-19a030145c46",
    "region_slug": "hocheck",
    "crag_slug": "obere-ostwand",
    "slug": "turmsteigverschneidung",
    "path": "/crags/hocheck/obere-ostwand#864b4367-42c0-5fcb-9355-19a030145c46",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "4e5ac247-1d62-5abc-8b3b-1c2270af676f",
   "name": "Löwenkopf",
@@ -8,8 +8,10 @@
   "region": "Kaltenleutgebner Tal",
   "region_slug": "kaltenleutgebner-tal",
   "route_count": 7,
+  "is_stub": false,
   "latitude": 48.119135,
   "longitude": 16.211473,
+  "coord_source": "routes",
   "grades": [
    "3+",
    "5+",
@@ -21,7 +23,57 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/kaltenleutgebner-tal/lowenkopf"
+  "path": "/crags/kaltenleutgebner-tal/lowenkopf",
+  "osm": "relation/18199895",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18199895",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=48.119135&mlon=16.211473#map=16/48.119135/16.211473",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+L%C3%B6wenkopf+Kaltenleutgebner+Tal"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+L%C3%B6wenkopf+Kaltenleutgebner+Tal"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+L%C3%B6wenkopf"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+L%C3%B6wenkopf+Kaltenleutgebner+Tal"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -38,18 +90,19 @@
    "source": "Keltenkalk",
    "latitude": 48.119135,
    "longitude": 16.211473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6b7b49b1-8cbb-531b-bafb-f8ed5a182cf9",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "lowenkopf",
    "slug": "donarit",
    "path": "/crags/kaltenleutgebner-tal/lowenkopf#6b7b49b1-8cbb-531b-bafb-f8ed5a182cf9",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Löwenkopf | Hyänenkiller",
@@ -65,18 +118,19 @@
    "source": "Keltenkalk",
    "latitude": 48.119135,
    "longitude": 16.211473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "aaaaf62d-241e-524e-be13-ed9b45c12867",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "lowenkopf",
    "slug": "hyanenkiller",
    "path": "/crags/kaltenleutgebner-tal/lowenkopf#aaaaf62d-241e-524e-be13-ed9b45c12867",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Löwenkopf | Junglöwe",
@@ -92,18 +146,19 @@
    "source": "Keltenkalk",
    "latitude": 48.119135,
    "longitude": 16.211473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3735a6cd-d569-5163-94ca-659eff6ac5da",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "lowenkopf",
    "slug": "junglowe",
    "path": "/crags/kaltenleutgebner-tal/lowenkopf#3735a6cd-d569-5163-94ca-659eff6ac5da",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Löwenkopf | Käptn Dynamit",
@@ -119,18 +174,19 @@
    "source": "Keltenkalk",
    "latitude": 48.119135,
    "longitude": 16.211473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "15dc5ed5-84c9-540a-8bc3-4c76e4d8697b",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "lowenkopf",
    "slug": "kaptn-dynamit",
    "path": "/crags/kaltenleutgebner-tal/lowenkopf#15dc5ed5-84c9-540a-8bc3-4c76e4d8697b",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Löwenkopf | König der Löwen",
@@ -146,18 +202,19 @@
    "source": "Keltenkalk",
    "latitude": 48.119135,
    "longitude": 16.211473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0fa1ceee-04e5-5357-b27f-1749c7b6b40d",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "lowenkopf",
    "slug": "konig-der-lowen",
    "path": "/crags/kaltenleutgebner-tal/lowenkopf#0fa1ceee-04e5-5357-b27f-1749c7b6b40d",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Löwenkopf | Königsetappe",
@@ -173,18 +230,19 @@
    "source": "Keltenkalk",
    "latitude": 48.119135,
    "longitude": 16.211473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7df69026-cd88-5a38-88dc-0246cfc14805",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "lowenkopf",
    "slug": "konigsetappe",
    "path": "/crags/kaltenleutgebner-tal/lowenkopf#7df69026-cd88-5a38-88dc-0246cfc14805",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Löwenkopf | Löwenbart",
@@ -200,18 +258,19 @@
    "source": "Keltenkalk",
    "latitude": 48.119135,
    "longitude": 16.211473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1d62534b-1b9f-54ae-83a2-80530324e6a0",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "lowenkopf",
    "slug": "lowenbart",
    "path": "/crags/kaltenleutgebner-tal/lowenkopf#1d62534b-1b9f-54ae-83a2-80530324e6a0",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

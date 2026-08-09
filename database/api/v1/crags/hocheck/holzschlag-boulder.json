@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "e71b22d8-c526-5cf1-b454-502662389002",
   "name": "Holzschlag (Boulder)",
@@ -8,8 +8,10 @@
   "region": "Hocheck",
   "region_slug": "hocheck",
   "route_count": 5,
+  "is_stub": false,
   "latitude": null,
   "longitude": null,
+  "coord_source": null,
   "grades": [
    "4a",
    "5b",
@@ -20,7 +22,43 @@
   "disciplines": [
    "boulder"
   ],
-  "path": "/crags/hocheck/holzschlag-boulder"
+  "path": "/crags/hocheck/holzschlag-boulder",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Holzschlag+%28Boulder%29+Hocheck"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Holzschlag+%28Boulder%29+Hocheck"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Holzschlag+%28Boulder%29"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Holzschlag+%28Boulder%29+Hocheck"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -37,18 +75,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c8488acc-f0c2-5c45-b810-a249a2636e61",
    "region_slug": "hocheck",
    "crag_slug": "holzschlag-boulder",
    "slug": "brosel",
    "path": "/crags/hocheck/holzschlag-boulder#c8488acc-f0c2-5c45-b810-a249a2636e61",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Holzschlag (Boulder) | Hinkelstein",
@@ -64,18 +103,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fd98fe7f-5f0a-54d0-9f4f-e919c5f646ea",
    "region_slug": "hocheck",
    "crag_slug": "holzschlag-boulder",
    "slug": "hinkelstein",
    "path": "/crags/hocheck/holzschlag-boulder#fd98fe7f-5f0a-54d0-9f4f-e919c5f646ea",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Holzschlag (Boulder) | Moonlight",
@@ -91,18 +131,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "67bf8c75-b513-53b3-8654-0c0d0287d147",
    "region_slug": "hocheck",
    "crag_slug": "holzschlag-boulder",
    "slug": "moonlight",
    "path": "/crags/hocheck/holzschlag-boulder#67bf8c75-b513-53b3-8654-0c0d0287d147",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Holzschlag (Boulder) | Slimy",
@@ -118,18 +159,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b9e9f5ae-bd0a-57d2-9779-c9fab4f0e4b3",
    "region_slug": "hocheck",
    "crag_slug": "holzschlag-boulder",
    "slug": "slimy",
    "path": "/crags/hocheck/holzschlag-boulder#b9e9f5ae-bd0a-57d2-9779-c9fab4f0e4b3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Holzschlag (Boulder) | Starke Susi",
@@ -145,18 +187,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5df99fb0-4856-5d39-93ee-d35afcf3a0ed",
    "region_slug": "hocheck",
    "crag_slug": "holzschlag-boulder",
    "slug": "starke-susi",
    "path": "/crags/hocheck/holzschlag-boulder#5df99fb0-4856-5d39-93ee-d35afcf3a0ed",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }

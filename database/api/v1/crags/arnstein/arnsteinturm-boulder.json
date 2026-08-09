@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "339ef39b-5cb5-5f1e-88bd-17e195e6b0c9",
   "name": "Arnsteinturm (Boulder)",
@@ -8,8 +8,10 @@
   "region": "Arnstein",
   "region_slug": "arnstein",
   "route_count": 7,
+  "is_stub": false,
   "latitude": null,
   "longitude": null,
+  "coord_source": null,
   "grades": [
    "6a",
    "6b",
@@ -20,7 +22,43 @@
   "disciplines": [
    "boulder"
   ],
-  "path": "/crags/arnstein/arnsteinturm-boulder"
+  "path": "/crags/arnstein/arnsteinturm-boulder",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Arnsteinturm+%28Boulder%29+Arnstein"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Arnsteinturm+%28Boulder%29+Arnstein"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Arnsteinturm+%28Boulder%29"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Arnsteinturm+%28Boulder%29+Arnstein"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -37,18 +75,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fc934232-3620-5653-997d-820cf3af3544",
    "region_slug": "arnstein",
    "crag_slug": "arnsteinturm-boulder",
    "slug": "cause-i-m-a-sexmachine",
    "path": "/crags/arnstein/arnsteinturm-boulder#fc934232-3620-5653-997d-820cf3af3544",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Arnsteinturm (Boulder) | Fly wie Paul Preuss",
@@ -64,18 +103,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "86cabcab-6fa4-572d-98a6-616fa039a7f2",
    "region_slug": "arnstein",
    "crag_slug": "arnsteinturm-boulder",
    "slug": "fly-wie-paul-preuss",
    "path": "/crags/arnstein/arnsteinturm-boulder#86cabcab-6fa4-572d-98a6-616fa039a7f2",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Arnsteinturm (Boulder) | Griffls",
@@ -91,18 +131,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a87eeb0e-868b-5a6b-872e-2500a6c58bd3",
    "region_slug": "arnstein",
    "crag_slug": "arnsteinturm-boulder",
    "slug": "griffls",
    "path": "/crags/arnstein/arnsteinturm-boulder#a87eeb0e-868b-5a6b-872e-2500a6c58bd3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Arnsteinturm (Boulder) | In Love with Robert Carpa",
@@ -118,18 +159,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "585998df-2fcb-5782-ac74-7bbd7c0699bb",
    "region_slug": "arnstein",
    "crag_slug": "arnsteinturm-boulder",
    "slug": "in-love-with-robert-carpa",
    "path": "/crags/arnstein/arnsteinturm-boulder#585998df-2fcb-5782-ac74-7bbd7c0699bb",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Arnsteinturm (Boulder) | Liebe ist für alle da",
@@ -145,18 +187,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "06a9b217-312e-5f0d-9c7a-3333b62cf725",
    "region_slug": "arnstein",
    "crag_slug": "arnsteinturm-boulder",
    "slug": "liebe-ist-fur-alle-da",
    "path": "/crags/arnstein/arnsteinturm-boulder#06a9b217-312e-5f0d-9c7a-3333b62cf725",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Arnsteinturm (Boulder) | Links 2 3 4",
@@ -172,18 +215,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d12f6b4c-558c-516e-b863-061d80156663",
    "region_slug": "arnstein",
    "crag_slug": "arnsteinturm-boulder",
    "slug": "links-2-3-4",
    "path": "/crags/arnstein/arnsteinturm-boulder#d12f6b4c-558c-516e-b863-061d80156663",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Arnsteinturm (Boulder) | Route 55",
@@ -199,18 +243,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "47b86603-582c-504d-a362-29937219a63e",
    "region_slug": "arnstein",
    "crag_slug": "arnsteinturm-boulder",
    "slug": "route-55",
    "path": "/crags/arnstein/arnsteinturm-boulder#47b86603-582c-504d-a362-29937219a63e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }

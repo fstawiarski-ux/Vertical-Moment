@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "e277fe12-699f-5d0e-80d0-538a641e1dfa",
   "name": "Ötzi (Boulder)",
@@ -8,8 +8,10 @@
   "region": "Helenental",
   "region_slug": "helenental",
   "route_count": 8,
+  "is_stub": false,
   "latitude": null,
   "longitude": null,
+  "coord_source": null,
   "grades": [
    "3",
    "4b",
@@ -22,7 +24,43 @@
   "disciplines": [
    "boulder"
   ],
-  "path": "/crags/helenental/otzi-boulder"
+  "path": "/crags/helenental/otzi-boulder",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+%C3%96tzi+%28Boulder%29+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+%C3%96tzi+%28Boulder%29+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+%C3%96tzi+%28Boulder%29"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+%C3%96tzi+%28Boulder%29+Helenental"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -39,18 +77,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "412aae15-1794-56a4-9d65-6898a954eced",
    "region_slug": "helenental",
    "crag_slug": "otzi-boulder",
    "slug": "auf-s-loch-retour",
    "path": "/crags/helenental/otzi-boulder#412aae15-1794-56a4-9d65-6898a954eced",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Helenental | Ötzi (Boulder) | Aufwärmrunde",
@@ -66,18 +105,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1ebab61c-0a58-5efa-93e0-2087b7f0af3c",
    "region_slug": "helenental",
    "crag_slug": "otzi-boulder",
    "slug": "aufwarmrunde",
    "path": "/crags/helenental/otzi-boulder#1ebab61c-0a58-5efa-93e0-2087b7f0af3c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Helenental | Ötzi (Boulder) | Edzy",
@@ -93,18 +133,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6b57bc41-8f3a-56d1-8030-f1e320348683",
    "region_slug": "helenental",
    "crag_slug": "otzi-boulder",
    "slug": "edzy",
    "path": "/crags/helenental/otzi-boulder#6b57bc41-8f3a-56d1-8030-f1e320348683",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Helenental | Ötzi (Boulder) | For Good Shoes",
@@ -120,18 +161,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fe060444-ef6a-5da5-923e-00eecab05d3e",
    "region_slug": "helenental",
    "crag_slug": "otzi-boulder",
    "slug": "for-good-shoes",
    "path": "/crags/helenental/otzi-boulder#fe060444-ef6a-5da5-923e-00eecab05d3e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Helenental | Ötzi (Boulder) | Langfinger",
@@ -147,18 +189,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "67b5e1e6-8fe4-5017-8dae-6d317015de32",
    "region_slug": "helenental",
    "crag_slug": "otzi-boulder",
    "slug": "langfinger",
    "path": "/crags/helenental/otzi-boulder#67b5e1e6-8fe4-5017-8dae-6d317015de32",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Helenental | Ötzi (Boulder) | Mily",
@@ -174,18 +217,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "455e9196-55ac-56aa-bf5b-031625a3c731",
    "region_slug": "helenental",
    "crag_slug": "otzi-boulder",
    "slug": "mily",
    "path": "/crags/helenental/otzi-boulder#455e9196-55ac-56aa-bf5b-031625a3c731",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Helenental | Ötzi (Boulder) | Nervenkanal",
@@ -201,18 +245,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8805d755-8286-5ed7-ac9b-fb5cc68d5609",
    "region_slug": "helenental",
    "crag_slug": "otzi-boulder",
    "slug": "nervenkanal",
    "path": "/crags/helenental/otzi-boulder#8805d755-8286-5ed7-ac9b-fb5cc68d5609",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Helenental | Ötzi (Boulder) | Ötzi",
@@ -228,18 +273,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1e11fe9f-7288-502e-bce2-0595c7e0d089",
    "region_slug": "helenental",
    "crag_slug": "otzi-boulder",
    "slug": "otzi",
    "path": "/crags/helenental/otzi-boulder#1e11fe9f-7288-502e-bce2-0595c7e0d089",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }

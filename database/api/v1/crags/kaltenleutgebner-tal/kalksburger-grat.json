@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "1a1783d7-7381-5e07-b8c9-5a53e7d8bc61",
   "name": "Kalksburger Grat",
@@ -8,8 +8,10 @@
   "region": "Kaltenleutgebner Tal",
   "region_slug": "kaltenleutgebner-tal",
   "route_count": 6,
-  "latitude": null,
-  "longitude": null,
+  "is_stub": false,
+  "latitude": 48.140476,
+  "longitude": 16.243628,
+  "coord_source": "routes",
   "grades": [
    "2",
    "2+",
@@ -21,7 +23,57 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/kaltenleutgebner-tal/kalksburger-grat"
+  "path": "/crags/kaltenleutgebner-tal/kalksburger-grat",
+  "osm": "relation/18166572",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18166572",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=48.140476&mlon=16.243628#map=16/48.140476/16.243628",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Kalksburger+Grat+Kaltenleutgebner+Tal"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Kalksburger+Grat+Kaltenleutgebner+Tal"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Kalksburger+Grat"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Kalksburger+Grat+Kaltenleutgebner+Tal"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -36,20 +88,21 @@
    "crag": "Kalksburger Grat",
    "wall": "Kalksburger Grat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.140476,
+   "longitude": 16.243628,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "774322ea-561e-5680-9b24-fa68ff43b12f",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "kalksburger-grat",
    "slug": "hohlenbar",
    "path": "/crags/kaltenleutgebner-tal/kalksburger-grat#774322ea-561e-5680-9b24-fa68ff43b12f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Kalksburger Grat | Kante",
@@ -63,20 +116,21 @@
    "crag": "Kalksburger Grat",
    "wall": "Kalksburger Grat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.140476,
+   "longitude": 16.243628,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0894091a-7de2-577a-a262-7c9a18794c5c",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "kalksburger-grat",
    "slug": "kante",
    "path": "/crags/kaltenleutgebner-tal/kalksburger-grat#0894091a-7de2-577a-a262-7c9a18794c5c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Kalksburger Grat | Pfeiler",
@@ -90,20 +144,21 @@
    "crag": "Kalksburger Grat",
    "wall": "Kalksburger Grat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.140476,
+   "longitude": 16.243628,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1560fc69-6f9c-50db-918d-05e26ea5571b",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "kalksburger-grat",
    "slug": "pfeiler",
    "path": "/crags/kaltenleutgebner-tal/kalksburger-grat#1560fc69-6f9c-50db-918d-05e26ea5571b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Kalksburger Grat | Rechte Flanke",
@@ -117,20 +172,21 @@
    "crag": "Kalksburger Grat",
    "wall": "Kalksburger Grat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.140476,
+   "longitude": 16.243628,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "86ee3137-290d-5d98-91a8-ff98adf2a076",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "kalksburger-grat",
    "slug": "rechte-flanke",
    "path": "/crags/kaltenleutgebner-tal/kalksburger-grat#86ee3137-290d-5d98-91a8-ff98adf2a076",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Kalksburger Grat | Riss",
@@ -144,20 +200,21 @@
    "crag": "Kalksburger Grat",
    "wall": "Kalksburger Grat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.140476,
+   "longitude": 16.243628,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6559d9b0-e781-5ac8-b575-9ae17374be47",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "kalksburger-grat",
    "slug": "riss",
    "path": "/crags/kaltenleutgebner-tal/kalksburger-grat#6559d9b0-e781-5ac8-b575-9ae17374be47",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Kalksburger Grat | Verschneidung",
@@ -171,20 +228,21 @@
    "crag": "Kalksburger Grat",
    "wall": "Kalksburger Grat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.140476,
+   "longitude": 16.243628,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "bb48eb29-24e4-5e0e-b5df-a020d3d14fc8",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "kalksburger-grat",
    "slug": "verschneidung",
    "path": "/crags/kaltenleutgebner-tal/kalksburger-grat#bb48eb29-24e4-5e0e-b5df-a020d3d14fc8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

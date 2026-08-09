@@ -1,0 +1,70 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:29:28+00:00",
+ "crag": {
+  "id": "b1ad8e30-2ca5-5a30-b100-5e81e2021dc0",
+  "name": "Cimone",
+  "slug": "cimone",
+  "region": "Lindkogel",
+  "region_slug": "lindkogel",
+  "route_count": 0,
+  "is_stub": true,
+  "latitude": 48.014396,
+  "longitude": 16.048621,
+  "coord_source": "osm",
+  "grades": [],
+  "disciplines": [],
+  "path": "/crags/lindkogel/cimone",
+  "osm": "relation/19171456",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/19171456",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=48.014396&mlon=16.048621#map=16/48.014396/16.048621",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Cimone+Lindkogel"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Cimone+Lindkogel"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Cimone"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Cimone+Lindkogel"
+   }
+  ],
+  "has_exact_links": false
+ },
+ "routes": []
+}

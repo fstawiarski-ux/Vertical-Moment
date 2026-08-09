@@ -1,0 +1,77 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:29:28+00:00",
+ "crag": {
+  "id": "85cb7477-53f4-5fc1-a5dc-0d2765efc759",
+  "name": "Arnsteinhöhle",
+  "slug": "arnsteinhohle",
+  "region": "Alland",
+  "region_slug": "alland",
+  "route_count": 0,
+  "is_stub": true,
+  "latitude": 48.029795,
+  "longitude": 16.066202,
+  "coord_source": "osm",
+  "grades": [],
+  "disciplines": [],
+  "path": "/crags/alland/arnsteinhohle",
+  "osm": "relation/18217440",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": "File:Dji fly 20260705 121758 131 1783268371728 pano optimized.jpg",
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18217440",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Wikimedia Commons",
+    "domain": "commons.wikimedia.org",
+    "url": "https://commons.wikimedia.org/wiki/File%3ADji+fly+20260705+121758+131+1783268371728+pano+optimized.jpg",
+    "note": "Photograph of the crag."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=48.029795&mlon=16.066202#map=16/48.029795/16.066202",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Arnsteinh%C3%B6hle+Alland"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Arnsteinh%C3%B6hle+Alland"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Arnsteinh%C3%B6hle"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Arnsteinh%C3%B6hle+Alland"
+   }
+  ],
+  "has_exact_links": true
+ },
+ "routes": []
+}

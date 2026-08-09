@@ -1,0 +1,399 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:29:28+00:00",
+ "region": {
+  "id": "6eafa243-d1d4-53ee-becc-3d100d97bf64",
+  "name": "Alland",
+  "slug": "alland",
+  "crag_count": 5,
+  "route_count": 0,
+  "path": "/crags/alland",
+  "links": [
+   {
+    "kind": "exact",
+    "label": "theCrag — Vienna area overview",
+    "domain": "thecrag.com",
+    "url": "https://www.thecrag.com/en/climbing/austria/wien-vienna-area",
+    "note": "Community index of the whole Vienna region, with its own source list."
+   },
+   {
+    "kind": "exact",
+    "label": "Keltenkalk",
+    "domain": "keltenkalk.at",
+    "url": "http://www.keltenkalk.at/",
+    "note": "The main printed guidebook for the Vienna limestone — roughly 4,000 climbs and boulders."
+   },
+   {
+    "kind": "exact",
+    "label": "bergsteigen.com — Klettergarten index",
+    "domain": "bergsteigen.com",
+    "url": "https://www.bergsteigen.com/touren/klettergarten/",
+    "note": "Filterable crag database with descriptions, approach notes and many downloadable topos."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Alland+Klettergarten"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Alland+Austria"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Alland"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Alland+Klettern"
+   }
+  ],
+  "more_info_note": "Vertical Moment does not publish topos yet. These are the places that do — follow them for the drawn lines, and verify anything safety-relevant on site."
+ },
+ "crags": [
+  {
+   "id": "85cb7477-53f4-5fc1-a5dc-0d2765efc759",
+   "name": "Arnsteinhöhle",
+   "slug": "arnsteinhohle",
+   "region": "Alland",
+   "region_slug": "alland",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 48.029795,
+   "longitude": 16.066202,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/alland/arnsteinhohle",
+   "osm": "relation/18217440",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": "File:Dji fly 20260705 121758 131 1783268371728 pano optimized.jpg",
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18217440",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Wikimedia Commons",
+     "domain": "commons.wikimedia.org",
+     "url": "https://commons.wikimedia.org/wiki/File%3ADji+fly+20260705+121758+131+1783268371728+pano+optimized.jpg",
+     "note": "Photograph of the crag."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.029795&mlon=16.066202#map=16/48.029795/16.066202",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Arnsteinh%C3%B6hle+Alland"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Arnsteinh%C3%B6hle+Alland"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Arnsteinh%C3%B6hle"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Arnsteinh%C3%B6hle+Alland"
+    }
+   ],
+   "has_exact_links": true
+  },
+  {
+   "id": "d23adbea-4b9c-54db-922a-1a65bf6a3ada",
+   "name": "Arnsteinkamm",
+   "slug": "arnsteinkamm",
+   "region": "Alland",
+   "region_slug": "alland",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 48.02827,
+   "longitude": 16.064691,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/alland/arnsteinkamm",
+   "osm": "relation/18217445",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18217445",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.02827&mlon=16.064691#map=16/48.02827/16.064691",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Arnsteinkamm+Alland"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Arnsteinkamm+Alland"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Arnsteinkamm"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Arnsteinkamm+Alland"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "47a59a82-e476-5dad-902e-34d0e0774279",
+   "name": "Böses Blut",
+   "slug": "boses-blut",
+   "region": "Alland",
+   "region_slug": "alland",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 48.02546,
+   "longitude": 16.120215,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/alland/boses-blut",
+   "osm": "relation/18217431",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18217431",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.02546&mlon=16.120215#map=16/48.02546/16.120215",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+B%C3%B6ses+Blut+Alland"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+B%C3%B6ses+Blut+Alland"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+B%C3%B6ses+Blut"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+B%C3%B6ses+Blut+Alland"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "4c9c6fc9-6da3-5840-ae2e-c6a6119d7ae8",
+   "name": "Highway Star",
+   "slug": "highway-star",
+   "region": "Alland",
+   "region_slug": "alland",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 48.031737,
+   "longitude": 16.126862,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/alland/highway-star",
+   "osm": "relation/18181445",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18181445",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.031737&mlon=16.126862#map=16/48.031737/16.126862",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Highway+Star+Alland"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Highway+Star+Alland"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Highway+Star"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Highway+Star+Alland"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "d5eb45e3-e3df-5b4b-a206-e43e829c7c5b",
+   "name": "Mafiabloecke",
+   "slug": "mafiabloecke",
+   "region": "Alland",
+   "region_slug": "alland",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 48.030503,
+   "longitude": 16.085223,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/alland/mafiabloecke",
+   "osm": "relation/18217436",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18217436",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.030503&mlon=16.085223#map=16/48.030503/16.085223",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Mafiabloecke+Alland"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Mafiabloecke+Alland"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Mafiabloecke"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Mafiabloecke+Alland"
+    }
+   ],
+   "has_exact_links": false
+  }
+ ],
+ "routes": []
+}

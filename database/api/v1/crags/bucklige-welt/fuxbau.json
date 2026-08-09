@@ -1,0 +1,70 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:29:28+00:00",
+ "crag": {
+  "id": "48f081e8-e2eb-5afc-84c9-7271ce97ffb7",
+  "name": "Fuxbau",
+  "slug": "fuxbau",
+  "region": "Bucklige Welt",
+  "region_slug": "bucklige-welt",
+  "route_count": 0,
+  "is_stub": true,
+  "latitude": 47.656367,
+  "longitude": 16.153302,
+  "coord_source": "osm",
+  "grades": [],
+  "disciplines": [],
+  "path": "/crags/bucklige-welt/fuxbau",
+  "osm": "relation/18218842",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18218842",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=47.656367&mlon=16.153302#map=16/47.656367/16.153302",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Fuxbau+Bucklige+Welt"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Fuxbau+Bucklige+Welt"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Fuxbau"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Fuxbau+Bucklige+Welt"
+   }
+  ],
+  "has_exact_links": false
+ },
+ "routes": []
+}

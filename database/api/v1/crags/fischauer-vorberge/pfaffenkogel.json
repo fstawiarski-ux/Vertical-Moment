@@ -1,0 +1,70 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:29:28+00:00",
+ "crag": {
+  "id": "f9bcbff2-ae92-5448-966e-7498751c228d",
+  "name": "Pfaffenkogel",
+  "slug": "pfaffenkogel",
+  "region": "Fischauer Vorberge",
+  "region_slug": "fischauer-vorberge",
+  "route_count": 0,
+  "is_stub": true,
+  "latitude": 47.851885,
+  "longitude": 16.137318,
+  "coord_source": "osm",
+  "grades": [],
+  "disciplines": [],
+  "path": "/crags/fischauer-vorberge/pfaffenkogel",
+  "osm": "relation/18233182",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18233182",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=47.851885&mlon=16.137318#map=16/47.851885/16.137318",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Pfaffenkogel+Fischauer+Vorberge"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Pfaffenkogel+Fischauer+Vorberge"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Pfaffenkogel"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Pfaffenkogel+Fischauer+Vorberge"
+   }
+  ],
+  "has_exact_links": false
+ },
+ "routes": []
+}

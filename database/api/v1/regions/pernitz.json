@@ -1,13 +1,65 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "region": {
   "id": "c0dcb40a-4d8b-53a7-911b-aee36e799794",
   "name": "Pernitz",
   "slug": "pernitz",
   "crag_count": 10,
   "route_count": 179,
-  "path": "/crags/pernitz"
+  "path": "/crags/pernitz",
+  "links": [
+   {
+    "kind": "exact",
+    "label": "theCrag — Vienna area overview",
+    "domain": "thecrag.com",
+    "url": "https://www.thecrag.com/en/climbing/austria/wien-vienna-area",
+    "note": "Community index of the whole Vienna region, with its own source list."
+   },
+   {
+    "kind": "exact",
+    "label": "Keltenkalk",
+    "domain": "keltenkalk.at",
+    "url": "http://www.keltenkalk.at/",
+    "note": "The main printed guidebook for the Vienna limestone — roughly 4,000 climbs and boulders."
+   },
+   {
+    "kind": "exact",
+    "label": "bergsteigen.com — Klettergarten index",
+    "domain": "bergsteigen.com",
+    "url": "https://www.bergsteigen.com/touren/klettergarten/",
+    "note": "Filterable crag database with descriptions, approach notes and many downloadable topos."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Pernitz+Klettergarten"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Pernitz+Austria"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Pernitz"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Pernitz+Klettern"
+   }
+  ],
+  "more_info_note": "Vertical Moment does not publish topos yet. These are the places that do — follow them for the drawn lines, and verify anything safety-relevant on site."
  },
  "crags": [
   {
@@ -17,8 +69,10 @@
    "region": "Pernitz",
    "region_slug": "pernitz",
    "route_count": 21,
-   "latitude": null,
-   "longitude": null,
+   "is_stub": false,
+   "latitude": 48.004486,
+   "longitude": 16.183675,
+   "coord_source": "routes",
    "grades": [
     "7",
     "7+",
@@ -33,7 +87,57 @@
    "disciplines": [
     "sport"
    ],
-   "path": "/crags/pernitz/badener-turm"
+   "path": "/crags/pernitz/badener-turm",
+   "osm": "relation/18166836",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18166836",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.004486&mlon=16.183675#map=16/48.004486/16.183675",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Badener+Turm+Pernitz"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Badener+Turm+Pernitz"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Badener+Turm"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Badener+Turm+Pernitz"
+    }
+   ],
+   "has_exact_links": false
   },
   {
    "id": "f480c654-e571-5d47-856c-f3187c4ae23c",
@@ -42,8 +146,10 @@
    "region": "Pernitz",
    "region_slug": "pernitz",
    "route_count": 20,
+   "is_stub": false,
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "grades": [
     "6",
     "6+",
@@ -60,7 +166,43 @@
    "disciplines": [
     "sport"
    ],
-   "path": "/crags/pernitz/gamswand"
+   "path": "/crags/pernitz/gamswand",
+   "osm": null,
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Gamswand+Pernitz"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Gamswand+Pernitz"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Gamswand"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Gamswand+Pernitz"
+    }
+   ],
+   "has_exact_links": false
   },
   {
    "id": "b3cd86e8-3c54-52ca-bf7b-7349c1f702f0",
@@ -69,8 +211,10 @@
    "region": "Pernitz",
    "region_slug": "pernitz",
    "route_count": 16,
-   "latitude": null,
-   "longitude": null,
+   "is_stub": false,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "routes",
    "grades": [
     "10/10+",
     "7",
@@ -87,7 +231,57 @@
    "disciplines": [
     "sport"
    ],
-   "path": "/crags/pernitz/gamswandl"
+   "path": "/crags/pernitz/gamswandl",
+   "osm": "relation/18218733",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218733",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.851605&mlon=16.040184#map=16/47.851605/16.040184",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Gamswandl+Pernitz"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Gamswandl+Pernitz"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Gamswandl"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Gamswandl+Pernitz"
+    }
+   ],
+   "has_exact_links": false
   },
   {
    "id": "dbb86e45-2b45-52bb-abf6-f83243f791f0",
@@ -96,8 +290,10 @@
    "region": "Pernitz",
    "region_slug": "pernitz",
    "route_count": 31,
+   "is_stub": false,
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "grades": [
     "1+",
     "2",
@@ -120,7 +316,43 @@
    "disciplines": [
     "sport"
    ],
-   "path": "/crags/pernitz/kalkofenwand"
+   "path": "/crags/pernitz/kalkofenwand",
+   "osm": null,
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Kalkofenwand+Pernitz"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Kalkofenwand+Pernitz"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Kalkofenwand"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Kalkofenwand+Pernitz"
+    }
+   ],
+   "has_exact_links": false
   },
   {
    "id": "3a46b32a-027a-5b73-a2f4-6d85bab465ff",
@@ -129,8 +361,10 @@
    "region": "Pernitz",
    "region_slug": "pernitz",
    "route_count": 18,
-   "latitude": null,
-   "longitude": null,
+   "is_stub": false,
+   "latitude": 47.843401,
+   "longitude": 16.024654,
+   "coord_source": "routes",
    "grades": [
     "6",
     "6+",
@@ -145,7 +379,57 @@
    "disciplines": [
     "sport"
    ],
-   "path": "/crags/pernitz/kleine-klause"
+   "path": "/crags/pernitz/kleine-klause",
+   "osm": "relation/18218779",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218779",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.843401&mlon=16.024654#map=16/47.843401/16.024654",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Kleine+Klause+Pernitz"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Kleine+Klause+Pernitz"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Kleine+Klause"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Kleine+Klause+Pernitz"
+    }
+   ],
+   "has_exact_links": false
   },
   {
    "id": "d3c6fb6e-2a00-58a0-aaba-2dc6814d205f",
@@ -154,8 +438,10 @@
    "region": "Pernitz",
    "region_slug": "pernitz",
    "route_count": 13,
+   "is_stub": false,
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "grades": [
     "6+",
     "6b trav",
@@ -171,7 +457,43 @@
    "disciplines": [
     "sport"
    ],
-   "path": "/crags/pernitz/kraftwandl"
+   "path": "/crags/pernitz/kraftwandl",
+   "osm": null,
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Kraftwandl+Pernitz"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Kraftwandl+Pernitz"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Kraftwandl"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Kraftwandl+Pernitz"
+    }
+   ],
+   "has_exact_links": false
   },
   {
    "id": "e3b89e29-507a-5c2d-9688-a9c8f5b84f0c",
@@ -180,8 +502,10 @@
    "region": "Pernitz",
    "region_slug": "pernitz",
    "route_count": 24,
-   "latitude": null,
-   "longitude": null,
+   "is_stub": false,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "routes",
    "grades": [
     "10-",
     "5+",
@@ -202,7 +526,57 @@
    "disciplines": [
     "sport"
    ],
-   "path": "/crags/pernitz/schatzinsel"
+   "path": "/crags/pernitz/schatzinsel",
+   "osm": "relation/18218734",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218734",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.853404&mlon=16.036292#map=16/47.853404/16.036292",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Schatzinsel+Pernitz"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Schatzinsel+Pernitz"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Schatzinsel"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Schatzinsel+Pernitz"
+    }
+   ],
+   "has_exact_links": false
   },
   {
    "id": "3d9f5906-7464-5237-9627-99f79ffe06fa",
@@ -211,8 +585,10 @@
    "region": "Pernitz",
    "region_slug": "pernitz",
    "route_count": 16,
+   "is_stub": false,
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "grades": [
     "6a",
     "6b",
@@ -226,7 +602,43 @@
    "disciplines": [
     "boulder"
    ],
-   "path": "/crags/pernitz/schatzinsel-boulder"
+   "path": "/crags/pernitz/schatzinsel-boulder",
+   "osm": null,
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Schatzinsel+%28Boulder%29+Pernitz"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Schatzinsel+%28Boulder%29+Pernitz"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Schatzinsel+%28Boulder%29"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Schatzinsel+%28Boulder%29+Pernitz"
+    }
+   ],
+   "has_exact_links": false
   },
   {
    "id": "c63789da-ed28-5dc2-9041-79c16f2eb742",
@@ -235,8 +647,10 @@
    "region": "Pernitz",
    "region_slug": "pernitz",
    "route_count": 7,
+   "is_stub": false,
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "grades": [
     "6+/7-",
     "7+",
@@ -248,7 +662,43 @@
    "disciplines": [
     "sport"
    ],
-   "path": "/crags/pernitz/shadow-wall"
+   "path": "/crags/pernitz/shadow-wall",
+   "osm": null,
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Shadow+Wall+Pernitz"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Shadow+Wall+Pernitz"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Shadow+Wall"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Shadow+Wall+Pernitz"
+    }
+   ],
+   "has_exact_links": false
   },
   {
    "id": "17707729-3f37-5a04-a6d5-9933f597b783",
@@ -257,8 +707,10 @@
    "region": "Pernitz",
    "region_slug": "pernitz",
    "route_count": 13,
+   "is_stub": false,
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "grades": [
     "7",
     "7+",
@@ -273,7 +725,43 @@
    "disciplines": [
     "sport"
    ],
-   "path": "/crags/pernitz/steinwandklamm"
+   "path": "/crags/pernitz/steinwandklamm",
+   "osm": null,
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Steinwandklamm+Pernitz"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Steinwandklamm+Pernitz"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Steinwandklamm"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Steinwandklamm+Pernitz"
+    }
+   ],
+   "has_exact_links": false
   }
  ],
  "routes": [
@@ -289,20 +777,21 @@
    "crag": "Badener Turm",
    "wall": "Badener Turm",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.004486,
+   "longitude": 16.183675,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "379f3548-7d86-5842-b120-3a12639d1ce8",
    "region_slug": "pernitz",
    "crag_slug": "badener-turm",
    "slug": "broselmonster",
    "path": "/crags/pernitz/badener-turm#379f3548-7d86-5842-b120-3a12639d1ce8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Badener Turm | Ende gut alles gut",
@@ -316,20 +805,21 @@
    "crag": "Badener Turm",
    "wall": "Badener Turm",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.004486,
+   "longitude": 16.183675,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "59b61092-cd17-5c1b-a5c8-f5cefd30afc7",
    "region_slug": "pernitz",
    "crag_slug": "badener-turm",
    "slug": "ende-gut-alles-gut",
    "path": "/crags/pernitz/badener-turm#59b61092-cd17-5c1b-a5c8-f5cefd30afc7",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Badener Turm | Galaktobureko",
@@ -343,20 +833,21 @@
    "crag": "Badener Turm",
    "wall": "Badener Turm",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.004486,
+   "longitude": 16.183675,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8b7f380c-c2a7-59ab-94b9-91975b5f2982",
    "region_slug": "pernitz",
    "crag_slug": "badener-turm",
    "slug": "galaktobureko",
    "path": "/crags/pernitz/badener-turm#8b7f380c-c2a7-59ab-94b9-91975b5f2982",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Badener Turm | Glückslos",
@@ -370,20 +861,21 @@
    "crag": "Badener Turm",
    "wall": "Badener Turm",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.004486,
+   "longitude": 16.183675,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f1142562-6f18-54fe-859a-8e6376674941",
    "region_slug": "pernitz",
    "crag_slug": "badener-turm",
    "slug": "gluckslos",
    "path": "/crags/pernitz/badener-turm#f1142562-6f18-54fe-859a-8e6376674941",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Badener Turm | Grosser schwarzer Vogel",
@@ -397,20 +889,21 @@
    "crag": "Badener Turm",
    "wall": "Badener Turm",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.004486,
+   "longitude": 16.183675,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7876736c-f0c5-5014-98fd-1a35b6f7ae93",
    "region_slug": "pernitz",
    "crag_slug": "badener-turm",
    "slug": "grosser-schwarzer-vogel",
    "path": "/crags/pernitz/badener-turm#7876736c-f0c5-5014-98fd-1a35b6f7ae93",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Badener Turm | Helmheimvorteil",
@@ -424,20 +917,21 @@
    "crag": "Badener Turm",
    "wall": "Badener Turm",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.004486,
+   "longitude": 16.183675,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d95b86f2-57e3-57ac-9f4c-2c69be3c357e",
    "region_slug": "pernitz",
    "crag_slug": "badener-turm",
    "slug": "helmheimvorteil",
    "path": "/crags/pernitz/badener-turm#d95b86f2-57e3-57ac-9f4c-2c69be3c357e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Badener Turm | Hoch mit Gefühl",
@@ -451,20 +945,21 @@
    "crag": "Badener Turm",
    "wall": "Badener Turm",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.004486,
+   "longitude": 16.183675,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "dc238fd5-b772-52d8-802f-3d5b39e3e4ef",
    "region_slug": "pernitz",
    "crag_slug": "badener-turm",
    "slug": "hoch-mit-gefuhl",
    "path": "/crags/pernitz/badener-turm#dc238fd5-b772-52d8-802f-3d5b39e3e4ef",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Badener Turm | Im Sog der Tiefe",
@@ -478,20 +973,21 @@
    "crag": "Badener Turm",
    "wall": "Badener Turm",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.004486,
+   "longitude": 16.183675,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cfc2a2b9-dd8e-542b-b2a7-4642711cfa96",
    "region_slug": "pernitz",
    "crag_slug": "badener-turm",
    "slug": "im-sog-der-tiefe",
    "path": "/crags/pernitz/badener-turm#cfc2a2b9-dd8e-542b-b2a7-4642711cfa96",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Badener Turm | Kleine Männer Variante",
@@ -505,20 +1001,21 @@
    "crag": "Badener Turm",
    "wall": "Badener Turm",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.004486,
+   "longitude": 16.183675,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7e871619-41ab-5d53-b155-8ee157f3c225",
    "region_slug": "pernitz",
    "crag_slug": "badener-turm",
    "slug": "kleine-manner-variante",
    "path": "/crags/pernitz/badener-turm#7e871619-41ab-5d53-b155-8ee157f3c225",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Badener Turm | Kleiner Ausreisser",
@@ -532,20 +1029,21 @@
    "crag": "Badener Turm",
    "wall": "Badener Turm",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.004486,
+   "longitude": 16.183675,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3a2803b3-4954-5cfe-9657-5238709e780f",
    "region_slug": "pernitz",
    "crag_slug": "badener-turm",
    "slug": "kleiner-ausreisser",
    "path": "/crags/pernitz/badener-turm#3a2803b3-4954-5cfe-9657-5238709e780f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Badener Turm | Klettern auf eigene Gefahr",
@@ -559,20 +1057,21 @@
    "crag": "Badener Turm",
    "wall": "Badener Turm",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.004486,
+   "longitude": 16.183675,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6e5814b6-3947-5596-b991-915c4572f10d",
    "region_slug": "pernitz",
    "crag_slug": "badener-turm",
    "slug": "klettern-auf-eigene-gefahr",
    "path": "/crags/pernitz/badener-turm#6e5814b6-3947-5596-b991-915c4572f10d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Badener Turm | Morbider Höhenrausch",
@@ -586,20 +1085,21 @@
    "crag": "Badener Turm",
    "wall": "Badener Turm",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.004486,
+   "longitude": 16.183675,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "18b11b51-3061-534c-b0d7-6695b260db7b",
    "region_slug": "pernitz",
    "crag_slug": "badener-turm",
    "slug": "morbider-hohenrausch",
    "path": "/crags/pernitz/badener-turm#18b11b51-3061-534c-b0d7-6695b260db7b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Badener Turm | Paul Watson",
@@ -613,20 +1113,21 @@
    "crag": "Badener Turm",
    "wall": "Badener Turm",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.004486,
+   "longitude": 16.183675,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c836e16b-8ae0-5a86-acbd-887708e58d2f",
    "region_slug": "pernitz",
    "crag_slug": "badener-turm",
    "slug": "paul-watson",
    "path": "/crags/pernitz/badener-turm#c836e16b-8ae0-5a86-acbd-887708e58d2f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Badener Turm | Plag dich hoch",
@@ -640,20 +1141,21 @@
    "crag": "Badener Turm",
    "wall": "Badener Turm",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.004486,
+   "longitude": 16.183675,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "07da7e03-ea87-5106-b788-9b38b5674a4d",
    "region_slug": "pernitz",
    "crag_slug": "badener-turm",
    "slug": "plag-dich-hoch",
    "path": "/crags/pernitz/badener-turm#07da7e03-ea87-5106-b788-9b38b5674a4d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Badener Turm | Schlimmer Anfang-Böses Ende",
@@ -667,20 +1169,21 @@
    "crag": "Badener Turm",
    "wall": "Badener Turm",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.004486,
+   "longitude": 16.183675,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "781b0712-c21b-522f-a945-56be7c9ce68d",
    "region_slug": "pernitz",
    "crag_slug": "badener-turm",
    "slug": "schlimmer-anfang-boses-ende",
    "path": "/crags/pernitz/badener-turm#781b0712-c21b-522f-a945-56be7c9ce68d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Badener Turm | Schräges Monster",
@@ -694,20 +1197,21 @@
    "crag": "Badener Turm",
    "wall": "Badener Turm",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.004486,
+   "longitude": 16.183675,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5d966a3d-d817-5b17-af28-4bc6187a4200",
    "region_slug": "pernitz",
    "crag_slug": "badener-turm",
    "slug": "schrages-monster",
    "path": "/crags/pernitz/badener-turm#5d966a3d-d817-5b17-af28-4bc6187a4200",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Badener Turm | Schwere Jungs",
@@ -721,20 +1225,21 @@
    "crag": "Badener Turm",
    "wall": "Badener Turm",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.004486,
+   "longitude": 16.183675,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "96a65240-2aec-55ed-904f-f11fb2ec068f",
    "region_slug": "pernitz",
    "crag_slug": "badener-turm",
    "slug": "schwere-jungs",
    "path": "/crags/pernitz/badener-turm#96a65240-2aec-55ed-904f-f11fb2ec068f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Badener Turm | Vertrau dich hoch",
@@ -748,20 +1253,21 @@
    "crag": "Badener Turm",
    "wall": "Badener Turm",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.004486,
+   "longitude": 16.183675,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fddd0386-7927-5498-9738-0e8214dba62d",
    "region_slug": "pernitz",
    "crag_slug": "badener-turm",
    "slug": "vertrau-dich-hoch",
    "path": "/crags/pernitz/badener-turm#fddd0386-7927-5498-9738-0e8214dba62d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Badener Turm | Vogelfrei",
@@ -775,20 +1281,21 @@
    "crag": "Badener Turm",
    "wall": "Badener Turm",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.004486,
+   "longitude": 16.183675,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "364f992b-d57d-5f96-a597-d2edd13666ae",
    "region_slug": "pernitz",
    "crag_slug": "badener-turm",
    "slug": "vogelfrei",
    "path": "/crags/pernitz/badener-turm#364f992b-d57d-5f96-a597-d2edd13666ae",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Badener Turm | Was ist los",
@@ -802,20 +1309,21 @@
    "crag": "Badener Turm",
    "wall": "Badener Turm",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.004486,
+   "longitude": 16.183675,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b7d11a20-f165-5c5d-a464-380716c4d016",
    "region_slug": "pernitz",
    "crag_slug": "badener-turm",
    "slug": "was-ist-los",
    "path": "/crags/pernitz/badener-turm#b7d11a20-f165-5c5d-a464-380716c4d016",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Badener Turm | Watson Direkt",
@@ -829,20 +1337,21 @@
    "crag": "Badener Turm",
    "wall": "Badener Turm",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.004486,
+   "longitude": 16.183675,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "80f22f27-a79d-562d-8791-f74dc7d3302e",
    "region_slug": "pernitz",
    "crag_slug": "badener-turm",
    "slug": "watson-direkt",
    "path": "/crags/pernitz/badener-turm#80f22f27-a79d-562d-8791-f74dc7d3302e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswand | Abtritt",
@@ -858,18 +1367,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8335efc5-5406-58b1-9f0d-fed2b15a33ec",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "abtritt",
    "path": "/crags/pernitz/gamswand#8335efc5-5406-58b1-9f0d-fed2b15a33ec",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Das schwarze Schaf",
@@ -885,18 +1395,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "85266d2a-166e-5125-9db6-9dbdd98b80b5",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "das-schwarze-schaf",
    "path": "/crags/pernitz/gamswand#85266d2a-166e-5125-9db6-9dbdd98b80b5",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Deutsch Nepal",
@@ -912,18 +1423,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e190acd7-a32f-5e6c-918f-4ea0f2c85524",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "deutsch-nepal",
    "path": "/crags/pernitz/gamswand#e190acd7-a32f-5e6c-918f-4ea0f2c85524",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Die hohe Stube",
@@ -939,18 +1451,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ca81d844-1d1d-5e97-a9de-e67a3f987723",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "die-hohe-stube",
    "path": "/crags/pernitz/gamswand#ca81d844-1d1d-5e97-a9de-e67a3f987723",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Doppelwitz",
@@ -966,18 +1479,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ccce89e5-ffcb-5511-a989-dbf92ac8875b",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "doppelwitz",
    "path": "/crags/pernitz/gamswand#ccce89e5-ffcb-5511-a989-dbf92ac8875b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Einheitsfrass",
@@ -993,18 +1507,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0cec9ca3-2325-5eed-8e17-9f5770286d3e",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "einheitsfrass",
    "path": "/crags/pernitz/gamswand#0cec9ca3-2325-5eed-8e17-9f5770286d3e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Gottlos",
@@ -1020,18 +1535,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8327beea-7126-5572-9926-cb3c9a6ff07e",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "gottlos",
    "path": "/crags/pernitz/gamswand#8327beea-7126-5572-9926-cb3c9a6ff07e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | MC Dreck",
@@ -1047,18 +1563,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f8122e56-0cc1-5794-94fd-dd70491f2fe9",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "mc-dreck",
    "path": "/crags/pernitz/gamswand#f8122e56-0cc1-5794-94fd-dd70491f2fe9",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Marsch der Wampelreiter",
@@ -1074,18 +1591,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "088072ea-40fb-5570-bf29-be85b494460a",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "marsch-der-wampelreiter",
    "path": "/crags/pernitz/gamswand#088072ea-40fb-5570-bf29-be85b494460a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Namenlos (Gamswand)",
@@ -1101,18 +1619,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "73b0bb13-f87f-53d7-b8a7-cd0a7fb8e57e",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "namenlos-gamswand",
    "path": "/crags/pernitz/gamswand#73b0bb13-f87f-53d7-b8a7-cd0a7fb8e57e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Nemesis",
@@ -1128,18 +1647,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b7571ff6-d3d0-5694-8233-a6b8efcdf08b",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "nemesis",
    "path": "/crags/pernitz/gamswand#b7571ff6-d3d0-5694-8233-a6b8efcdf08b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Paolo Pinkel",
@@ -1155,18 +1675,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d5a71365-efa1-5969-9c21-e526c3865bd2",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "paolo-pinkel",
    "path": "/crags/pernitz/gamswand#d5a71365-efa1-5969-9c21-e526c3865bd2",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Rabenkampf",
@@ -1182,18 +1703,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ebe6d5c9-e3fc-526d-ac1c-eda7bb1e99e1",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "rabenkampf",
    "path": "/crags/pernitz/gamswand#ebe6d5c9-e3fc-526d-ac1c-eda7bb1e99e1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Revier und Stubenreinigung",
@@ -1209,18 +1731,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "96fa3713-bcb9-559a-993f-2c7d79669f85",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "revier-und-stubenreinigung",
    "path": "/crags/pernitz/gamswand#96fa3713-bcb9-559a-993f-2c7d79669f85",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Spreu und Weizen",
@@ -1236,18 +1759,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3bb554a8-2151-5140-82b0-6cc7518b0be1",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "spreu-und-weizen",
    "path": "/crags/pernitz/gamswand#3bb554a8-2151-5140-82b0-6cc7518b0be1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Stubenrein",
@@ -1263,18 +1787,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2e5bcd6d-9334-5df5-8ce4-28cfa3e101bc",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "stubenrein",
    "path": "/crags/pernitz/gamswand#2e5bcd6d-9334-5df5-8ce4-28cfa3e101bc",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Sturmpercht",
@@ -1290,18 +1815,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c5cb2153-9cd8-5542-b318-4e4d9afd70a8",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "sturmpercht",
    "path": "/crags/pernitz/gamswand#c5cb2153-9cd8-5542-b318-4e4d9afd70a8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Vogelfrei (Gamswand)",
@@ -1317,18 +1843,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c26016cc-2eaf-5ac5-973b-98d011d549bb",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "vogelfrei-gamswand",
    "path": "/crags/pernitz/gamswand#c26016cc-2eaf-5ac5-973b-98d011d549bb",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Waldteufel",
@@ -1344,18 +1871,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "89e22ef4-66fe-5c43-bb73-e2fddf477dcf",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "waldteufel",
    "path": "/crags/pernitz/gamswand#89e22ef4-66fe-5c43-bb73-e2fddf477dcf",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Ästhetische Mobilmachung",
@@ -1371,18 +1899,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "76d4ce86-21f7-52fa-bc53-e98123d7f8da",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "asthetische-mobilmachung",
    "path": "/crags/pernitz/gamswand#76d4ce86-21f7-52fa-bc53-e98123d7f8da",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswandl | Brezlgriff",
@@ -1396,20 +1925,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "539287cf-de5f-5ebc-9ae2-268cf1c2b273",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "brezlgriff",
    "path": "/crags/pernitz/gamswandl#539287cf-de5f-5ebc-9ae2-268cf1c2b273",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | Edelpuff",
@@ -1423,20 +1953,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "dd445b83-a725-51e0-baa3-0e7d22b0ff02",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "edelpuff",
    "path": "/crags/pernitz/gamswandl#dd445b83-a725-51e0-baa3-0e7d22b0ff02",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | Eiertanz",
@@ -1450,20 +1981,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cfe1518b-5529-58cf-bead-5265477d9b06",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "eiertanz",
    "path": "/crags/pernitz/gamswandl#cfe1518b-5529-58cf-bead-5265477d9b06",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | Glory Hole",
@@ -1477,20 +2009,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b537592b-ce50-56c0-8884-112ca7053134",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "glory-hole",
    "path": "/crags/pernitz/gamswandl#b537592b-ce50-56c0-8884-112ca7053134",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | Hoppala",
@@ -1504,20 +2037,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6c9c0c35-d9aa-5108-81a3-c12846ff4542",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "hoppala",
    "path": "/crags/pernitz/gamswandl#6c9c0c35-d9aa-5108-81a3-c12846ff4542",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | Kane Händ Kane Keks",
@@ -1531,20 +2065,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "466ccdaa-2334-5bd3-abb1-d4edea6f764a",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "kane-hand-kane-keks",
    "path": "/crags/pernitz/gamswandl#466ccdaa-2334-5bd3-abb1-d4edea6f764a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | Langer Weg zum schlechten Witz",
@@ -1558,20 +2093,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b579587a-b2e5-53fd-8a0c-f57e4765f35c",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "langer-weg-zum-schlechten-witz",
    "path": "/crags/pernitz/gamswandl#b579587a-b2e5-53fd-8a0c-f57e4765f35c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | Lochstreifen",
@@ -1585,20 +2121,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f46b5428-69e7-5113-ad4e-700bd1afc6ab",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "lochstreifen",
    "path": "/crags/pernitz/gamswandl#f46b5428-69e7-5113-ad4e-700bd1afc6ab",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | Michls Projekt",
@@ -1612,20 +2149,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "14165eeb-fd46-5341-8802-1c5f3e36c75f",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "michls-projekt",
    "path": "/crags/pernitz/gamswandl#14165eeb-fd46-5341-8802-1c5f3e36c75f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | Mini Phillip Flamm",
@@ -1639,20 +2177,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a2701ec6-72b0-54f8-b8ae-89f1ea3682bf",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "mini-phillip-flamm",
    "path": "/crags/pernitz/gamswandl#a2701ec6-72b0-54f8-b8ae-89f1ea3682bf",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | Namenlos (Gamswandl)",
@@ -1666,20 +2205,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6a433df0-35e4-506b-bafe-eb3c5fada3bf",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "namenlos-gamswandl",
    "path": "/crags/pernitz/gamswandl#6a433df0-35e4-506b-bafe-eb3c5fada3bf",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | Nix is Fix",
@@ -1693,20 +2233,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7f41e346-8c45-5254-b7ee-a59f162afb5f",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "nix-is-fix",
    "path": "/crags/pernitz/gamswandl#7f41e346-8c45-5254-b7ee-a59f162afb5f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | Nonstop",
@@ -1720,20 +2261,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "658ffb64-aded-59d3-8f89-e5bd95a6c4ba",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "nonstop",
    "path": "/crags/pernitz/gamswandl#658ffb64-aded-59d3-8f89-e5bd95a6c4ba",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | Reiwalata",
@@ -1747,20 +2289,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "edfc3097-6f00-5c14-a65f-05dcf6ae463e",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "reiwalata",
    "path": "/crags/pernitz/gamswandl#edfc3097-6f00-5c14-a65f-05dcf6ae463e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | Strassenstrich",
@@ -1774,20 +2317,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "772ade90-8a3a-5c87-b0e3-7908117277ab",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "strassenstrich",
    "path": "/crags/pernitz/gamswandl#772ade90-8a3a-5c87-b0e3-7908117277ab",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | United States of Nothing",
@@ -1801,20 +2345,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "273f4521-3815-5922-a9e3-59efc51c8838",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "united-states-of-nothing",
    "path": "/crags/pernitz/gamswandl#273f4521-3815-5922-a9e3-59efc51c8838",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Ausweiche",
@@ -1830,18 +2375,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8adf3b96-0a4f-5d6d-b7cb-38e95c3898d0",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "ausweiche",
    "path": "/crags/pernitz/kalkofenwand#8adf3b96-0a4f-5d6d-b7cb-38e95c3898d0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Bluff",
@@ -1857,18 +2403,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "055c4248-e85d-5088-a931-e25464d278ec",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "bluff",
    "path": "/crags/pernitz/kalkofenwand#055c4248-e85d-5088-a931-e25464d278ec",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Chalking Heads",
@@ -1884,18 +2431,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2095b2ef-6888-5b81-9254-894c5c6fa07a",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "chalking-heads",
    "path": "/crags/pernitz/kalkofenwand#2095b2ef-6888-5b81-9254-894c5c6fa07a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Detailschulung",
@@ -1911,18 +2459,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e9b0c4d6-0665-5038-ae44-4f4f5669ab9e",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "detailschulung",
    "path": "/crags/pernitz/kalkofenwand#e9b0c4d6-0665-5038-ae44-4f4f5669ab9e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Erste Schritte",
@@ -1938,18 +2487,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1486fa34-6489-5b3e-9b9a-cd09758bae85",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "erste-schritte",
    "path": "/crags/pernitz/kalkofenwand#1486fa34-6489-5b3e-9b9a-cd09758bae85",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Erstes Training",
@@ -1965,18 +2515,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1a69c766-e088-5381-9de1-c48f55d7ef8a",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "erstes-training",
    "path": "/crags/pernitz/kalkofenwand#1a69c766-e088-5381-9de1-c48f55d7ef8a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Früh übt sich",
@@ -1992,18 +2543,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d15b9d51-9a39-516f-a964-b90fc1f2d676",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "fruh-ubt-sich",
    "path": "/crags/pernitz/kalkofenwand#d15b9d51-9a39-516f-a964-b90fc1f2d676",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Frühfoerderung",
@@ -2019,18 +2571,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ec80dfbd-be68-5f33-8237-76b4405a9e79",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "fruhfoerderung",
    "path": "/crags/pernitz/kalkofenwand#ec80dfbd-be68-5f33-8237-76b4405a9e79",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Gehschule",
@@ -2046,18 +2599,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b457a88a-2f1b-5a98-8413-c1ae1c728775",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "gehschule",
    "path": "/crags/pernitz/kalkofenwand#b457a88a-2f1b-5a98-8413-c1ae1c728775",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Kalkbrand",
@@ -2073,18 +2627,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "986d1efa-b7f5-5863-93af-d2385304d557",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "kalkbrand",
    "path": "/crags/pernitz/kalkofenwand#986d1efa-b7f5-5863-93af-d2385304d557",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Kamin-Einschulung",
@@ -2100,18 +2655,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "44374cca-d2f9-5c55-995d-0db5dfa7f925",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "kamin-einschulung",
    "path": "/crags/pernitz/kalkofenwand#44374cca-d2f9-5c55-995d-0db5dfa7f925",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Kindergarten",
@@ -2127,18 +2683,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f9673a2b-970a-5f88-8bc5-3f50cb79aa30",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "kindergarten",
    "path": "/crags/pernitz/kalkofenwand#f9673a2b-970a-5f88-8bc5-3f50cb79aa30",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Krabbelstube",
@@ -2154,18 +2711,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "98c71f4a-fb19-5324-b89b-8ca9b5c4a8ba",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "krabbelstube",
    "path": "/crags/pernitz/kalkofenwand#98c71f4a-fb19-5324-b89b-8ca9b5c4a8ba",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Krabblplatte",
@@ -2181,18 +2739,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cc8fb986-3730-5b14-93a0-9cc8e264db35",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "krabblplatte",
    "path": "/crags/pernitz/kalkofenwand#cc8fb986-3730-5b14-93a0-9cc8e264db35",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Leider Geil",
@@ -2208,18 +2767,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6d99660a-3e04-50e6-b082-ba0348a5326f",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "leider-geil",
    "path": "/crags/pernitz/kalkofenwand#6d99660a-3e04-50e6-b082-ba0348a5326f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Maxi",
@@ -2235,18 +2795,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f5338dd2-badd-52a2-853f-ee9a09186e89",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "maxi",
    "path": "/crags/pernitz/kalkofenwand#f5338dd2-badd-52a2-853f-ee9a09186e89",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Morizi",
@@ -2262,18 +2823,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d892bf5b-1a29-5000-9bf4-1c9915a9b583",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "morizi",
    "path": "/crags/pernitz/kalkofenwand#d892bf5b-1a29-5000-9bf4-1c9915a9b583",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Nichts für Kinder",
@@ -2289,18 +2851,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fe1a1406-a3b0-550f-8f74-4dbc24858ab3",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "nichts-fur-kinder",
    "path": "/crags/pernitz/kalkofenwand#fe1a1406-a3b0-550f-8f74-4dbc24858ab3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Nötsch",
@@ -2316,18 +2879,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "18ead700-dff6-5d4d-9267-3b9fd45bda54",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "notsch",
    "path": "/crags/pernitz/kalkofenwand#18ead700-dff6-5d4d-9267-3b9fd45bda54",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Ofenkante",
@@ -2343,18 +2907,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "21e87961-3ff6-5639-83eb-ebe8502606c0",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "ofenkante",
    "path": "/crags/pernitz/kalkofenwand#21e87961-3ff6-5639-83eb-ebe8502606c0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Ofenverschneidung",
@@ -2370,18 +2935,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ed57bce1-9fa0-5bc7-8158-0e496ae1587e",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "ofenverschneidung",
    "path": "/crags/pernitz/kalkofenwand#ed57bce1-9fa0-5bc7-8158-0e496ae1587e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Riss mit Biss",
@@ -2397,18 +2963,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cc3b7186-d9ac-55dc-88a2-14f497065c68",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "riss-mit-biss",
    "path": "/crags/pernitz/kalkofenwand#cc3b7186-d9ac-55dc-88a2-14f497065c68",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Schattengrat",
@@ -2424,18 +2991,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ec74972c-004f-5450-8b96-c51f636082a0",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "schattengrat",
    "path": "/crags/pernitz/kalkofenwand#ec74972c-004f-5450-8b96-c51f636082a0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Schnifix",
@@ -2451,18 +3019,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5e9920f7-b22a-5b7a-9a23-50081323492e",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "schnifix",
    "path": "/crags/pernitz/kalkofenwand#5e9920f7-b22a-5b7a-9a23-50081323492e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Schulreife",
@@ -2478,18 +3047,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cdd992e1-6aac-5131-9a18-55e6d709aac0",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "schulreife",
    "path": "/crags/pernitz/kalkofenwand#cdd992e1-6aac-5131-9a18-55e6d709aac0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Schweinernes mit Krenn",
@@ -2505,18 +3075,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e2790724-3899-5cc2-b134-40725170255d",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "schweinernes-mit-krenn",
    "path": "/crags/pernitz/kalkofenwand#e2790724-3899-5cc2-b134-40725170255d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Sintal",
@@ -2532,18 +3103,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ff0a3216-10db-5fce-8d35-bedeb00791ac",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "sintal",
    "path": "/crags/pernitz/kalkofenwand#ff0a3216-10db-5fce-8d35-bedeb00791ac",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Todesverschneidung",
@@ -2559,18 +3131,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "44821de5-a60f-546d-906f-51a5dd4edd9f",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "todesverschneidung",
    "path": "/crags/pernitz/kalkofenwand#44821de5-a60f-546d-906f-51a5dd4edd9f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Verbale Benotung",
@@ -2586,18 +3159,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "de5cd58b-d1bc-54a4-8162-9406d13185c1",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "verbale-benotung",
    "path": "/crags/pernitz/kalkofenwand#de5cd58b-d1bc-54a4-8162-9406d13185c1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Volksschule",
@@ -2613,18 +3187,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "71f4b0bd-1721-5297-82b4-582ac9d3a2c6",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "volksschule",
    "path": "/crags/pernitz/kalkofenwand#71f4b0bd-1721-5297-82b4-582ac9d3a2c6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Übungskante",
@@ -2640,18 +3215,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3d6bed1e-a638-5892-a0cc-3224b5b7eb21",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "ubungskante",
    "path": "/crags/pernitz/kalkofenwand#3d6bed1e-a638-5892-a0cc-3224b5b7eb21",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kleine Klause | Ausdruckstanz",
@@ -2665,20 +3241,21 @@
    "crag": "Kleine Klause",
    "wall": "Kleine Klause",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.843401,
+   "longitude": 16.024654,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3c51568c-3c8a-5fb3-9739-5f53bd55f28a",
    "region_slug": "pernitz",
    "crag_slug": "kleine-klause",
    "slug": "ausdruckstanz",
    "path": "/crags/pernitz/kleine-klause#3c51568c-3c8a-5fb3-9739-5f53bd55f28a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Kleine Klause | Der Felsinator",
@@ -2692,20 +3269,21 @@
    "crag": "Kleine Klause",
    "wall": "Kleine Klause",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.843401,
+   "longitude": 16.024654,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "37f48e3c-ca56-5694-ae60-f8b7fa520da9",
    "region_slug": "pernitz",
    "crag_slug": "kleine-klause",
    "slug": "der-felsinator",
    "path": "/crags/pernitz/kleine-klause#37f48e3c-ca56-5694-ae60-f8b7fa520da9",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Kleine Klause | Dirty Dancing",
@@ -2719,20 +3297,21 @@
    "crag": "Kleine Klause",
    "wall": "Kleine Klause",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.843401,
+   "longitude": 16.024654,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "48db5a6c-cfdb-58ef-b03f-8ff2c43e5f95",
    "region_slug": "pernitz",
    "crag_slug": "kleine-klause",
    "slug": "dirty-dancing",
    "path": "/crags/pernitz/kleine-klause#48db5a6c-cfdb-58ef-b03f-8ff2c43e5f95",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Kleine Klause | Disco Team",
@@ -2746,20 +3325,21 @@
    "crag": "Kleine Klause",
    "wall": "Kleine Klause",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.843401,
+   "longitude": 16.024654,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "504453e9-fdfb-5be7-b972-f4efac03e6c1",
    "region_slug": "pernitz",
    "crag_slug": "kleine-klause",
    "slug": "disco-team",
    "path": "/crags/pernitz/kleine-klause#504453e9-fdfb-5be7-b972-f4efac03e6c1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Kleine Klause | Henkeldisco",
@@ -2773,20 +3353,21 @@
    "crag": "Kleine Klause",
    "wall": "Kleine Klause",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.843401,
+   "longitude": 16.024654,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "226780bd-c329-5c6a-86c3-327b29575dce",
    "region_slug": "pernitz",
    "crag_slug": "kleine-klause",
    "slug": "henkeldisco",
    "path": "/crags/pernitz/kleine-klause#226780bd-c329-5c6a-86c3-327b29575dce",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Kleine Klause | Hintenrum",
@@ -2800,20 +3381,21 @@
    "crag": "Kleine Klause",
    "wall": "Kleine Klause",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.843401,
+   "longitude": 16.024654,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1ef74494-59f5-5348-85b6-5bb9774bc30e",
    "region_slug": "pernitz",
    "crag_slug": "kleine-klause",
    "slug": "hintenrum",
    "path": "/crags/pernitz/kleine-klause#1ef74494-59f5-5348-85b6-5bb9774bc30e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Kleine Klause | Ich Roque",
@@ -2827,20 +3409,21 @@
    "crag": "Kleine Klause",
    "wall": "Kleine Klause",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.843401,
+   "longitude": 16.024654,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f2ec51a2-cdbc-50b1-85c7-02473a0f3709",
    "region_slug": "pernitz",
    "crag_slug": "kleine-klause",
    "slug": "ich-roque",
    "path": "/crags/pernitz/kleine-klause#f2ec51a2-cdbc-50b1-85c7-02473a0f3709",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Kleine Klause | Jos Projekt",
@@ -2854,20 +3437,21 @@
    "crag": "Kleine Klause",
    "wall": "Kleine Klause",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.843401,
+   "longitude": 16.024654,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4b7cfbb7-7e08-50d4-84c4-40bd13eb1546",
    "region_slug": "pernitz",
    "crag_slug": "kleine-klause",
    "slug": "jos-projekt",
    "path": "/crags/pernitz/kleine-klause#4b7cfbb7-7e08-50d4-84c4-40bd13eb1546",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Kleine Klause | Jägerslust",
@@ -2881,20 +3465,21 @@
    "crag": "Kleine Klause",
    "wall": "Kleine Klause",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.843401,
+   "longitude": 16.024654,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "53ed77e4-e628-5033-8d19-a7090949a6a7",
    "region_slug": "pernitz",
    "crag_slug": "kleine-klause",
    "slug": "jagerslust",
    "path": "/crags/pernitz/kleine-klause#53ed77e4-e628-5033-8d19-a7090949a6a7",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Kleine Klause | Klausenperle",
@@ -2908,20 +3493,21 @@
    "crag": "Kleine Klause",
    "wall": "Kleine Klause",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.843401,
+   "longitude": 16.024654,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3b53502d-9eb4-53f5-be80-44bf5b0bdb47",
    "region_slug": "pernitz",
    "crag_slug": "kleine-klause",
    "slug": "klausenperle",
    "path": "/crags/pernitz/kleine-klause#3b53502d-9eb4-53f5-be80-44bf5b0bdb47",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Kleine Klause | Martialische Kunst",
@@ -2935,20 +3521,21 @@
    "crag": "Kleine Klause",
    "wall": "Kleine Klause",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.843401,
+   "longitude": 16.024654,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "deb1996a-6c88-507d-8667-74f70954d8eb",
    "region_slug": "pernitz",
    "crag_slug": "kleine-klause",
    "slug": "martialische-kunst",
    "path": "/crags/pernitz/kleine-klause#deb1996a-6c88-507d-8667-74f70954d8eb",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Kleine Klause | Memorandum",
@@ -2962,20 +3549,21 @@
    "crag": "Kleine Klause",
    "wall": "Kleine Klause",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.843401,
+   "longitude": 16.024654,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "53ae70b2-961e-5888-807b-7693a40781b3",
    "region_slug": "pernitz",
    "crag_slug": "kleine-klause",
    "slug": "memorandum",
    "path": "/crags/pernitz/kleine-klause#53ae70b2-961e-5888-807b-7693a40781b3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Kleine Klause | Mordstrum",
@@ -2989,20 +3577,21 @@
    "crag": "Kleine Klause",
    "wall": "Kleine Klause",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.843401,
+   "longitude": 16.024654,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "07c3192d-d59d-5cce-bbe8-b6d4b75507ba",
    "region_slug": "pernitz",
    "crag_slug": "kleine-klause",
    "slug": "mordstrum",
    "path": "/crags/pernitz/kleine-klause#07c3192d-d59d-5cce-bbe8-b6d4b75507ba",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Kleine Klause | Seisdrum",
@@ -3016,20 +3605,21 @@
    "crag": "Kleine Klause",
    "wall": "Kleine Klause",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.843401,
+   "longitude": 16.024654,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fc24fcd5-cb20-5399-ab7f-b86624ee94d6",
    "region_slug": "pernitz",
    "crag_slug": "kleine-klause",
    "slug": "seisdrum",
    "path": "/crags/pernitz/kleine-klause#fc24fcd5-cb20-5399-ab7f-b86624ee94d6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Kleine Klause | Steinerweg",
@@ -3043,20 +3633,21 @@
    "crag": "Kleine Klause",
    "wall": "Kleine Klause",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.843401,
+   "longitude": 16.024654,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "059e9bb1-6dc3-5272-b5f7-512836e2c24e",
    "region_slug": "pernitz",
    "crag_slug": "kleine-klause",
    "slug": "steinerweg",
    "path": "/crags/pernitz/kleine-klause#059e9bb1-6dc3-5272-b5f7-512836e2c24e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Kleine Klause | Tee mit Rum",
@@ -3070,20 +3661,21 @@
    "crag": "Kleine Klause",
    "wall": "Kleine Klause",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.843401,
+   "longitude": 16.024654,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5032e8d2-3aa0-57a5-973b-cc9011ee81fc",
    "region_slug": "pernitz",
    "crag_slug": "kleine-klause",
    "slug": "tee-mit-rum",
    "path": "/crags/pernitz/kleine-klause#5032e8d2-3aa0-57a5-973b-cc9011ee81fc",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Kleine Klause | Twittertäufer",
@@ -3097,20 +3689,21 @@
    "crag": "Kleine Klause",
    "wall": "Kleine Klause",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.843401,
+   "longitude": 16.024654,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c1c55177-f44f-581f-ae2b-d411bbf30a28",
    "region_slug": "pernitz",
    "crag_slug": "kleine-klause",
    "slug": "twittertaufer",
    "path": "/crags/pernitz/kleine-klause#c1c55177-f44f-581f-ae2b-d411bbf30a28",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Kleine Klause | Wopfinger Topfinger",
@@ -3124,20 +3717,21 @@
    "crag": "Kleine Klause",
    "wall": "Kleine Klause",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.843401,
+   "longitude": 16.024654,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7c22f252-f9f8-5467-94da-641af2bfc9b8",
    "region_slug": "pernitz",
    "crag_slug": "kleine-klause",
    "slug": "wopfinger-topfinger",
    "path": "/crags/pernitz/kleine-klause#7c22f252-f9f8-5467-94da-641af2bfc9b8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Kraftwandl | A Riss der Kana is",
@@ -3153,18 +3747,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "74165ed8-f961-5c3b-a271-67d4487dba3f",
    "region_slug": "pernitz",
    "crag_slug": "kraftwandl",
    "slug": "a-riss-der-kana-is",
    "path": "/crags/pernitz/kraftwandl#74165ed8-f961-5c3b-a271-67d4487dba3f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kraftwandl | Ach wie gut dass niemand weiss",
@@ -3180,18 +3775,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "06d34385-3f4c-5d32-8042-ba7899a4e2aa",
    "region_slug": "pernitz",
    "crag_slug": "kraftwandl",
    "slug": "ach-wie-gut-dass-niemand-weiss",
    "path": "/crags/pernitz/kraftwandl#06d34385-3f4c-5d32-8042-ba7899a4e2aa",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kraftwandl | Armarock",
@@ -3207,18 +3803,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "17b110e0-6c9f-5b3f-aafe-4dca2a690f20",
    "region_slug": "pernitz",
    "crag_slug": "kraftwandl",
    "slug": "armarock",
    "path": "/crags/pernitz/kraftwandl#17b110e0-6c9f-5b3f-aafe-4dca2a690f20",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kraftwandl | Geile Sau",
@@ -3234,18 +3831,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "897a8fd4-8fd8-52ff-bfa1-526e5f4dff61",
    "region_slug": "pernitz",
    "crag_slug": "kraftwandl",
    "slug": "geile-sau",
    "path": "/crags/pernitz/kraftwandl#897a8fd4-8fd8-52ff-bfa1-526e5f4dff61",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kraftwandl | Helmi",
@@ -3261,18 +3859,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "29e057c9-1993-52fb-bdff-fdbef6c2a987",
    "region_slug": "pernitz",
    "crag_slug": "kraftwandl",
    "slug": "helmi",
    "path": "/crags/pernitz/kraftwandl#29e057c9-1993-52fb-bdff-fdbef6c2a987",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kraftwandl | Meerschweine",
@@ -3288,18 +3887,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6ff9f506-0a37-53a3-a305-614566e1c948",
    "region_slug": "pernitz",
    "crag_slug": "kraftwandl",
    "slug": "meerschweine",
    "path": "/crags/pernitz/kraftwandl#6ff9f506-0a37-53a3-a305-614566e1c948",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kraftwandl | Muggendance",
@@ -3315,18 +3915,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d02c36db-c4c1-568e-9980-f7cc3572c7ec",
    "region_slug": "pernitz",
    "crag_slug": "kraftwandl",
    "slug": "muggendance",
    "path": "/crags/pernitz/kraftwandl#d02c36db-c4c1-568e-9980-f7cc3572c7ec",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kraftwandl | Nicht verzagen",
@@ -3342,18 +3943,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "936c8ab0-0bc5-554d-9805-b9c19e110c80",
    "region_slug": "pernitz",
    "crag_slug": "kraftwandl",
    "slug": "nicht-verzagen",
    "path": "/crags/pernitz/kraftwandl#936c8ab0-0bc5-554d-9805-b9c19e110c80",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kraftwandl | Nicht warum fragen",
@@ -3369,18 +3971,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "bd3fcd04-38b3-5467-bcbf-dc73b8b14861",
    "region_slug": "pernitz",
    "crag_slug": "kraftwandl",
    "slug": "nicht-warum-fragen",
    "path": "/crags/pernitz/kraftwandl#bd3fcd04-38b3-5467-bcbf-dc73b8b14861",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kraftwandl | No Pain No Game",
@@ -3396,18 +3999,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "323632d8-a3db-5d7d-826c-bef5bd1ce99f",
    "region_slug": "pernitz",
    "crag_slug": "kraftwandl",
    "slug": "no-pain-no-game",
    "path": "/crags/pernitz/kraftwandl#323632d8-a3db-5d7d-826c-bef5bd1ce99f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kraftwandl | Pe Jing Express",
@@ -3423,18 +4027,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "dae9cb92-1b65-55ce-9e1b-f906df14a37e",
    "region_slug": "pernitz",
    "crag_slug": "kraftwandl",
    "slug": "pe-jing-express",
    "path": "/crags/pernitz/kraftwandl#dae9cb92-1b65-55ce-9e1b-f906df14a37e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kraftwandl | Power Control",
@@ -3450,18 +4055,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "17dffc9c-30fb-5b31-9012-52c88f78638b",
    "region_slug": "pernitz",
    "crag_slug": "kraftwandl",
    "slug": "power-control",
    "path": "/crags/pernitz/kraftwandl#17dffc9c-30fb-5b31-9012-52c88f78638b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kraftwandl | Proteinminister",
@@ -3477,18 +4083,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b64c43ed-b079-5450-89d7-81e446e86bc6",
    "region_slug": "pernitz",
    "crag_slug": "kraftwandl",
    "slug": "proteinminister",
    "path": "/crags/pernitz/kraftwandl#b64c43ed-b079-5450-89d7-81e446e86bc6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel | Batida de Coco",
@@ -3502,20 +4109,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fc0e6f1d-faf3-56ce-a6b1-0aa56db5a084",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "batida-de-coco",
    "path": "/crags/pernitz/schatzinsel#fc0e6f1d-faf3-56ce-a6b1-0aa56db5a084",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Boandlkramer",
@@ -3529,20 +4137,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "51d76225-9449-5901-a043-793294318b2d",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "boandlkramer",
    "path": "/crags/pernitz/schatzinsel#51d76225-9449-5901-a043-793294318b2d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Dei Thai",
@@ -3556,20 +4165,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4b10ddac-bafd-56f0-839a-d58706fbef89",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "dei-thai",
    "path": "/crags/pernitz/schatzinsel#4b10ddac-bafd-56f0-839a-d58706fbef89",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Eng aber Sexy",
@@ -3583,20 +4193,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b9093cf8-1f9e-522c-928f-d563b9726f21",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "eng-aber-sexy",
    "path": "/crags/pernitz/schatzinsel#b9093cf8-1f9e-522c-928f-d563b9726f21",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Esperanza Clandestina",
@@ -3610,20 +4221,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1dbe1111-5d65-5994-9344-3f6f9bb3ca54",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "esperanza-clandestina",
    "path": "/crags/pernitz/schatzinsel#1dbe1111-5d65-5994-9344-3f6f9bb3ca54",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Fluch der schwulen Piraten",
@@ -3637,20 +4249,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "50c2a424-e34c-5fb8-813a-409c68959543",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "fluch-der-schwulen-piraten",
    "path": "/crags/pernitz/schatzinsel#50c2a424-e34c-5fb8-813a-409c68959543",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Hände falten Goschn halten",
@@ -3664,20 +4277,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2def6484-b717-5ccd-9c35-14c9bf531053",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "hande-falten-goschn-halten",
    "path": "/crags/pernitz/schatzinsel#2def6484-b717-5ccd-9c35-14c9bf531053",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Jumping Around",
@@ -3691,20 +4305,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "09e3ec85-ae90-5e30-96f2-fafb050ec377",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "jumping-around",
    "path": "/crags/pernitz/schatzinsel#09e3ec85-ae90-5e30-96f2-fafb050ec377",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Käptn Iglo",
@@ -3718,20 +4333,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a362f6b0-992e-5b2b-9470-8ac7781c0d6a",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "kaptn-iglo",
    "path": "/crags/pernitz/schatzinsel#a362f6b0-992e-5b2b-9470-8ac7781c0d6a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | La Grande Fin",
@@ -3745,20 +4361,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "dd96c8ee-bbe0-5350-8a69-458e70149fdc",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "la-grande-fin",
    "path": "/crags/pernitz/schatzinsel#dd96c8ee-bbe0-5350-8a69-458e70149fdc",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | La Vie en Rose",
@@ -3772,20 +4389,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c6ef68d2-1030-5500-aa52-e6b8d1b8a77f",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "la-vie-en-rose",
    "path": "/crags/pernitz/schatzinsel#c6ef68d2-1030-5500-aa52-e6b8d1b8a77f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Mei Thai",
@@ -3799,20 +4417,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "84ef6a41-266b-5567-9aa6-77dbfd7e79ec",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "mei-thai",
    "path": "/crags/pernitz/schatzinsel#84ef6a41-266b-5567-9aa6-77dbfd7e79ec",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Mozzies Live",
@@ -3826,20 +4445,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "227804de-a5f0-59b8-b31e-54ccdb86913a",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "mozzies-live",
    "path": "/crags/pernitz/schatzinsel#227804de-a5f0-59b8-b31e-54ccdb86913a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Namenlos (Schatzinsel)",
@@ -3853,20 +4473,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e1b6bbd8-543c-5ec6-91f1-5c4b473fd87d",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "namenlos-schatzinsel",
    "path": "/crags/pernitz/schatzinsel#e1b6bbd8-543c-5ec6-91f1-5c4b473fd87d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Phönix aus der Asche",
@@ -3880,20 +4501,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "325207c3-f450-5b6a-b4f6-a06ac8ca73e4",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "phonix-aus-der-asche",
    "path": "/crags/pernitz/schatzinsel#325207c3-f450-5b6a-b4f6-a06ac8ca73e4",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Rollin on Chrome",
@@ -3907,20 +4529,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6f9261e7-e050-5981-85da-0d54f23362f5",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "rollin-on-chrome",
    "path": "/crags/pernitz/schatzinsel#6f9261e7-e050-5981-85da-0d54f23362f5",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Skywalker",
@@ -3934,20 +4557,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e6696221-63c1-538c-85d5-f58d5b66516e",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "skywalker",
    "path": "/crags/pernitz/schatzinsel#e6696221-63c1-538c-85d5-f58d5b66516e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Tanz der Schatten",
@@ -3961,20 +4585,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f1a16576-2ce4-58f5-8058-961a8c98012a",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "tanz-der-schatten",
    "path": "/crags/pernitz/schatzinsel#f1a16576-2ce4-58f5-8058-961a8c98012a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Tat Twam Asi",
@@ -3988,20 +4613,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f296d209-a874-5aa9-bbb9-4a56e0c0adb7",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "tat-twam-asi",
    "path": "/crags/pernitz/schatzinsel#f296d209-a874-5aa9-bbb9-4a56e0c0adb7",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | The Lost World",
@@ -4015,20 +4641,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ebe6fcb7-c11f-5d71-a1bd-eca2b98b194a",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "the-lost-world",
    "path": "/crags/pernitz/schatzinsel#ebe6fcb7-c11f-5d71-a1bd-eca2b98b194a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Totentanz",
@@ -4042,20 +4669,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3e3471f2-a610-50cc-9da7-eb5e2dc036cb",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "totentanz",
    "path": "/crags/pernitz/schatzinsel#3e3471f2-a610-50cc-9da7-eb5e2dc036cb",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Via Maria",
@@ -4069,20 +4697,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b3d4504b-1ff9-5234-b9a2-9089df97c58f",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "via-maria",
    "path": "/crags/pernitz/schatzinsel#b3d4504b-1ff9-5234-b9a2-9089df97c58f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Wie die Geier",
@@ -4096,20 +4725,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fd748d74-ac58-5ca4-9179-56df52033d83",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "wie-die-geier",
    "path": "/crags/pernitz/schatzinsel#fd748d74-ac58-5ca4-9179-56df52033d83",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Zwischen Pest und Cholera",
@@ -4123,20 +4753,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f0da944a-d0e7-58db-9019-5c15c91c1081",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "zwischen-pest-und-cholera",
    "path": "/crags/pernitz/schatzinsel#f0da944a-d0e7-58db-9019-5c15c91c1081",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | Calisto",
@@ -4152,18 +4783,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c476d986-2534-5397-b0d5-4c3f6d4a7602",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "calisto",
    "path": "/crags/pernitz/schatzinsel-boulder#c476d986-2534-5397-b0d5-4c3f6d4a7602",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | Fantasma de Luxe",
@@ -4179,18 +4811,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5996f650-a0ab-5817-8cbc-20b85ca4d9a1",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "fantasma-de-luxe",
    "path": "/crags/pernitz/schatzinsel-boulder#5996f650-a0ab-5817-8cbc-20b85ca4d9a1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | Gleichgewichtsstörung",
@@ -4206,18 +4839,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b169a362-f890-5b1f-891a-c1d2c1d00a40",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "gleichgewichtsstorung",
    "path": "/crags/pernitz/schatzinsel-boulder#b169a362-f890-5b1f-891a-c1d2c1d00a40",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | Justice",
@@ -4233,18 +4867,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7fe7d414-9003-55e9-9a73-e4cbd78f42fd",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "justice",
    "path": "/crags/pernitz/schatzinsel-boulder#7fe7d414-9003-55e9-9a73-e4cbd78f42fd",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | Like an Egyptian",
@@ -4260,18 +4895,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4b9c7780-34b2-5a86-aa4c-e6ba88f07218",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "like-an-egyptian",
    "path": "/crags/pernitz/schatzinsel-boulder#4b9c7780-34b2-5a86-aa4c-e6ba88f07218",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | Mülhalde",
@@ -4287,18 +4923,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "90ce1420-8ead-519b-bf51-31ac59c915bc",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "mulhalde",
    "path": "/crags/pernitz/schatzinsel-boulder#90ce1420-8ead-519b-bf51-31ac59c915bc",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | No Justice",
@@ -4314,18 +4951,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a24c20ff-3356-52f6-8906-eafbf5a12b38",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "no-justice",
    "path": "/crags/pernitz/schatzinsel-boulder#a24c20ff-3356-52f6-8906-eafbf5a12b38",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | Romantisch Sterben",
@@ -4341,18 +4979,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "aa78e324-e6c0-5f8e-a13c-9dfab2a4b543",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "romantisch-sterben",
    "path": "/crags/pernitz/schatzinsel-boulder#aa78e324-e6c0-5f8e-a13c-9dfab2a4b543",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | Sacred Spirit",
@@ -4368,18 +5007,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ea961fa4-1e45-591f-b54c-764bd4bd3ca5",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "sacred-spirit",
    "path": "/crags/pernitz/schatzinsel-boulder#ea961fa4-1e45-591f-b54c-764bd4bd3ca5",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | Sauer",
@@ -4395,18 +5035,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "72149d27-50b8-5474-9a27-1f410d0b6529",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "sauer",
    "path": "/crags/pernitz/schatzinsel-boulder#72149d27-50b8-5474-9a27-1f410d0b6529",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | Squeezing My Ibanez",
@@ -4422,18 +5063,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c0f5a60a-e26a-5ee2-8a04-5df819d05b5f",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "squeezing-my-ibanez",
    "path": "/crags/pernitz/schatzinsel-boulder#c0f5a60a-e26a-5ee2-8a04-5df819d05b5f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | Things I've Seen",
@@ -4449,18 +5091,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2f2773be-272b-5421-9294-6afe431bf7c6",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "things-i-ve-seen",
    "path": "/crags/pernitz/schatzinsel-boulder#2f2773be-272b-5421-9294-6afe431bf7c6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | Traverse (Schatzinsel)",
@@ -4476,18 +5119,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b2decd63-5e27-5a36-b240-956d910c044b",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "traverse-schatzinsel",
    "path": "/crags/pernitz/schatzinsel-boulder#b2decd63-5e27-5a36-b240-956d910c044b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | You Feel Good",
@@ -4503,18 +5147,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "76889f72-6957-597f-9fa5-c5c20f15d983",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "you-feel-good",
    "path": "/crags/pernitz/schatzinsel-boulder#76889f72-6957-597f-9fa5-c5c20f15d983",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | Zeck Muss Weg",
@@ -4530,18 +5175,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fe2ebdb3-783d-5c15-91e2-9fa62f7f3021",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "zeck-muss-weg",
    "path": "/crags/pernitz/schatzinsel-boulder#fe2ebdb3-783d-5c15-91e2-9fa62f7f3021",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | Zeckenattacke",
@@ -4557,18 +5203,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "eb38f16c-1e34-5fb2-b4f7-1842b15a49c7",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "zeckenattacke",
    "path": "/crags/pernitz/schatzinsel-boulder#eb38f16c-1e34-5fb2-b4f7-1842b15a49c7",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Shadow Wall | Balance of Power",
@@ -4584,18 +5231,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "dc2f4e23-bd67-53ed-93e6-1e383782ac37",
    "region_slug": "pernitz",
    "crag_slug": "shadow-wall",
    "slug": "balance-of-power",
    "path": "/crags/pernitz/shadow-wall#dc2f4e23-bd67-53ed-93e6-1e383782ac37",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Shadow Wall | Nachtschattengewächs",
@@ -4611,18 +5259,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fe5bdffd-285e-515e-8d97-e36d036be829",
    "region_slug": "pernitz",
    "crag_slug": "shadow-wall",
    "slug": "nachtschattengewachs",
    "path": "/crags/pernitz/shadow-wall#fe5bdffd-285e-515e-8d97-e36d036be829",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Shadow Wall | Schattendasein",
@@ -4638,18 +5287,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "43183086-d01b-5bf2-9127-a0ff0d876c3a",
    "region_slug": "pernitz",
    "crag_slug": "shadow-wall",
    "slug": "schattendasein",
    "path": "/crags/pernitz/shadow-wall#43183086-d01b-5bf2-9127-a0ff0d876c3a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Shadow Wall | Schattenspender",
@@ -4665,18 +5315,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1b114178-9a1c-5bfd-adb5-9d3379bd72af",
    "region_slug": "pernitz",
    "crag_slug": "shadow-wall",
    "slug": "schattenspender",
    "path": "/crags/pernitz/shadow-wall#1b114178-9a1c-5bfd-adb5-9d3379bd72af",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Shadow Wall | Schattenspiele",
@@ -4692,18 +5343,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "253b85ff-581e-581c-be13-3e96931cfa09",
    "region_slug": "pernitz",
    "crag_slug": "shadow-wall",
    "slug": "schattenspiele",
    "path": "/crags/pernitz/shadow-wall#253b85ff-581e-581c-be13-3e96931cfa09",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Shadow Wall | Shadow on the Wall",
@@ -4719,18 +5371,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1c29e27b-8ab8-58e0-b720-5c66dc7f6659",
    "region_slug": "pernitz",
    "crag_slug": "shadow-wall",
    "slug": "shadow-on-the-wall",
    "path": "/crags/pernitz/shadow-wall#1c29e27b-8ab8-58e0-b720-5c66dc7f6659",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Shadow Wall | Waldquelle",
@@ -4746,18 +5399,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3e886126-4fa8-5427-876f-a7809a383d62",
    "region_slug": "pernitz",
    "crag_slug": "shadow-wall",
    "slug": "waldquelle",
    "path": "/crags/pernitz/shadow-wall#3e886126-4fa8-5427-876f-a7809a383d62",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Steinwandklamm | All Girls Are 18",
@@ -4773,18 +5427,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3898b6a9-3cd6-5193-8801-bb53e8c87cbf",
    "region_slug": "pernitz",
    "crag_slug": "steinwandklamm",
    "slug": "all-girls-are-18",
    "path": "/crags/pernitz/steinwandklamm#3898b6a9-3cd6-5193-8801-bb53e8c87cbf",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Steinwandklamm | Anassazi",
@@ -4800,18 +5455,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "dfde150a-a3e1-51e3-998f-af9c1b5168bb",
    "region_slug": "pernitz",
    "crag_slug": "steinwandklamm",
    "slug": "anassazi",
    "path": "/crags/pernitz/steinwandklamm#dfde150a-a3e1-51e3-998f-af9c1b5168bb",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Steinwandklamm | Die Welle",
@@ -4827,18 +5483,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f7fe5868-3093-5ea4-8242-b071e6ce7b82",
    "region_slug": "pernitz",
    "crag_slug": "steinwandklamm",
    "slug": "die-welle",
    "path": "/crags/pernitz/steinwandklamm#f7fe5868-3093-5ea4-8242-b071e6ce7b82",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Steinwandklamm | Dirty Sanchez",
@@ -4854,18 +5511,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f6584b1f-c065-5ef7-8a8f-51f6682429e3",
    "region_slug": "pernitz",
    "crag_slug": "steinwandklamm",
    "slug": "dirty-sanchez",
    "path": "/crags/pernitz/steinwandklamm#f6584b1f-c065-5ef7-8a8f-51f6682429e3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Steinwandklamm | Dreckspatz",
@@ -4881,18 +5539,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "646fc799-aa48-541f-b96b-1ef35e17a598",
    "region_slug": "pernitz",
    "crag_slug": "steinwandklamm",
    "slug": "dreckspatz",
    "path": "/crags/pernitz/steinwandklamm#646fc799-aa48-541f-b96b-1ef35e17a598",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Steinwandklamm | Not-Aus",
@@ -4908,18 +5567,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "030a4e94-0965-58a6-adaf-819f0e63831e",
    "region_slug": "pernitz",
    "crag_slug": "steinwandklamm",
    "slug": "not-aus",
    "path": "/crags/pernitz/steinwandklamm#030a4e94-0965-58a6-adaf-819f0e63831e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Steinwandklamm | Not-Geil",
@@ -4935,18 +5595,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e4083a55-5dc5-5f5e-824a-fb85abd046b4",
    "region_slug": "pernitz",
    "crag_slug": "steinwandklamm",
    "slug": "not-geil",
    "path": "/crags/pernitz/steinwandklamm#e4083a55-5dc5-5f5e-824a-fb85abd046b4",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Steinwandklamm | Push Me Into a Cage",
@@ -4962,18 +5623,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c0c12801-657c-58f7-ada1-09a14e75832e",
    "region_slug": "pernitz",
    "crag_slug": "steinwandklamm",
    "slug": "push-me-into-a-cage",
    "path": "/crags/pernitz/steinwandklamm#c0c12801-657c-58f7-ada1-09a14e75832e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Steinwandklamm | Ready for SM",
@@ -4989,18 +5651,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c788109d-02f8-5874-8532-eaeece91c3c6",
    "region_slug": "pernitz",
    "crag_slug": "steinwandklamm",
    "slug": "ready-for-sm",
    "path": "/crags/pernitz/steinwandklamm#c788109d-02f8-5874-8532-eaeece91c3c6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Steinwandklamm | Ready or Not",
@@ -5016,18 +5679,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "650c146c-f121-5d00-9869-420f22439fd5",
    "region_slug": "pernitz",
    "crag_slug": "steinwandklamm",
    "slug": "ready-or-not",
    "path": "/crags/pernitz/steinwandklamm#650c146c-f121-5d00-9869-420f22439fd5",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Steinwandklamm | Sadomaso",
@@ -5043,18 +5707,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "19b83396-36e0-582a-9577-e49afc0f484d",
    "region_slug": "pernitz",
    "crag_slug": "steinwandklamm",
    "slug": "sadomaso",
    "path": "/crags/pernitz/steinwandklamm#19b83396-36e0-582a-9577-e49afc0f484d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Steinwandklamm | Speichelfäden in der Buttermilch",
@@ -5070,18 +5735,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a89bd50a-833a-5e44-ba45-ec2df94b8d01",
    "region_slug": "pernitz",
    "crag_slug": "steinwandklamm",
    "slug": "speichelfaden-in-der-buttermilch",
    "path": "/crags/pernitz/steinwandklamm#a89bd50a-833a-5e44-ba45-ec2df94b8d01",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Steinwandklamm | Verlängerung (Steinwandklamm)",
@@ -5097,18 +5763,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4c32c2b0-64b3-5681-839d-8fd53959d737",
    "region_slug": "pernitz",
    "crag_slug": "steinwandklamm",
    "slug": "verlangerung-steinwandklamm",
    "path": "/crags/pernitz/steinwandklamm#4c32c2b0-64b3-5681-839d-8fd53959d737",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }

@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "f3f86f3e-4c81-5f4b-921e-4ce11ca00a80",
   "name": "Marmorsteinbruch",
@@ -8,8 +8,10 @@
   "region": "Fischauer Vorberge",
   "region_slug": "fischauer-vorberge",
   "route_count": 13,
+  "is_stub": false,
   "latitude": null,
   "longitude": null,
+  "coord_source": null,
   "grades": [
    "4+",
    "4-",
@@ -23,7 +25,43 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/fischauer-vorberge/marmorsteinbruch"
+  "path": "/crags/fischauer-vorberge/marmorsteinbruch",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Marmorsteinbruch+Fischauer+Vorberge"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Marmorsteinbruch+Fischauer+Vorberge"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Marmorsteinbruch"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Marmorsteinbruch+Fischauer+Vorberge"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -40,18 +78,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4a2247ac-ba27-5c45-a150-6953c91563c5",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "marmorsteinbruch",
    "slug": "gedenkweg",
    "path": "/crags/fischauer-vorberge/marmorsteinbruch#4a2247ac-ba27-5c45-a150-6953c91563c5",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Marmorsteinbruch | Glückliche Raben",
@@ -67,18 +106,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "43393522-16a2-569d-ac37-35387c771b34",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "marmorsteinbruch",
    "slug": "gluckliche-raben",
    "path": "/crags/fischauer-vorberge/marmorsteinbruch#43393522-16a2-569d-ac37-35387c771b34",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Marmorsteinbruch | Grummkiwi",
@@ -94,18 +134,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "204dbd74-637c-592b-8f83-96219e8dc672",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "marmorsteinbruch",
    "slug": "grummkiwi",
    "path": "/crags/fischauer-vorberge/marmorsteinbruch#204dbd74-637c-592b-8f83-96219e8dc672",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Marmorsteinbruch | Grünkiwi",
@@ -121,18 +162,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "bc5df6d9-9787-593a-a02b-e0b63072fe3a",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "marmorsteinbruch",
    "slug": "grunkiwi",
    "path": "/crags/fischauer-vorberge/marmorsteinbruch#bc5df6d9-9787-593a-a02b-e0b63072fe3a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Marmorsteinbruch | Namenlos (Marmor a)",
@@ -148,18 +190,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "47fa8004-7e71-56db-b3a0-90484a4a144b",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "marmorsteinbruch",
    "slug": "namenlos-marmor-a",
    "path": "/crags/fischauer-vorberge/marmorsteinbruch#47fa8004-7e71-56db-b3a0-90484a4a144b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Marmorsteinbruch | Naturfreundeverschneidung",
@@ -175,18 +218,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7c38710f-fd5a-5649-a85c-4b909d61a8b2",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "marmorsteinbruch",
    "slug": "naturfreundeverschneidung",
    "path": "/crags/fischauer-vorberge/marmorsteinbruch#7c38710f-fd5a-5649-a85c-4b909d61a8b2",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Marmorsteinbruch | Rutschpartie",
@@ -202,18 +246,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "041ac627-4726-599a-8fda-81d6795d03b2",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "marmorsteinbruch",
    "slug": "rutschpartie",
    "path": "/crags/fischauer-vorberge/marmorsteinbruch#041ac627-4726-599a-8fda-81d6795d03b2",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Marmorsteinbruch | Scrat",
@@ -229,18 +274,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c4927ea2-bb49-5ba0-89fd-0b24240fd6b9",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "marmorsteinbruch",
    "slug": "scrat",
    "path": "/crags/fischauer-vorberge/marmorsteinbruch#c4927ea2-bb49-5ba0-89fd-0b24240fd6b9",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Marmorsteinbruch | Scrat Junior",
@@ -256,18 +302,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "31195438-a6d1-56d9-8902-060a14030796",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "marmorsteinbruch",
    "slug": "scrat-junior",
    "path": "/crags/fischauer-vorberge/marmorsteinbruch#31195438-a6d1-56d9-8902-060a14030796",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Marmorsteinbruch | Sid",
@@ -283,18 +330,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4f825312-d3e8-5241-9096-ef040588f3fa",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "marmorsteinbruch",
    "slug": "sid",
    "path": "/crags/fischauer-vorberge/marmorsteinbruch#4f825312-d3e8-5241-9096-ef040588f3fa",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Marmorsteinbruch | Snake",
@@ -310,18 +358,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b1828b9f-1178-532c-89b8-66b987279db0",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "marmorsteinbruch",
    "slug": "snake",
    "path": "/crags/fischauer-vorberge/marmorsteinbruch#b1828b9f-1178-532c-89b8-66b987279db0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Marmorsteinbruch | Strafplanet",
@@ -337,18 +386,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "eb688157-dae3-5cf0-ab61-151fe6b229d9",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "marmorsteinbruch",
    "slug": "strafplanet",
    "path": "/crags/fischauer-vorberge/marmorsteinbruch#eb688157-dae3-5cf0-ab61-151fe6b229d9",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Marmorsteinbruch | Trollnase",
@@ -364,18 +414,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d967334e-2113-59bf-9922-c74e1a72007a",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "marmorsteinbruch",
    "slug": "trollnase",
    "path": "/crags/fischauer-vorberge/marmorsteinbruch#d967334e-2113-59bf-9922-c74e1a72007a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }

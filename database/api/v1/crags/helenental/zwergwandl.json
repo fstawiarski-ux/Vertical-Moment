@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "23952d9a-3882-56d0-8018-aa0e90cbccf5",
   "name": "Zwergwandl",
@@ -8,8 +8,10 @@
   "region": "Helenental",
   "region_slug": "helenental",
   "route_count": 13,
-  "latitude": null,
-  "longitude": null,
+  "is_stub": false,
+  "latitude": 48.017002,
+  "longitude": 16.19618,
+  "coord_source": "routes",
   "grades": [
    "4+",
    "6",
@@ -24,7 +26,57 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/helenental/zwergwandl"
+  "path": "/crags/helenental/zwergwandl",
+  "osm": "relation/18216602",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18216602",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=48.017002&mlon=16.19618#map=16/48.017002/16.19618",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Zwergwandl+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Zwergwandl+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Zwergwandl"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Zwergwandl+Helenental"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -39,20 +91,21 @@
    "crag": "Zwergwandl",
    "wall": "Zwergwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017002,
+   "longitude": 16.19618,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-8108-8703-f538ebdd3186",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0c970e8e-ef01-54d2-9d3f-60a19e7fd067",
    "region_slug": "helenental",
    "crag_slug": "zwergwandl",
    "slug": "aalglatt",
    "path": "/crags/helenental/zwergwandl#0c970e8e-ef01-54d2-9d3f-60a19e7fd067",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Zwergwandl | Bumble Bee",
@@ -66,20 +119,21 @@
    "crag": "Zwergwandl",
    "wall": "Zwergwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017002,
+   "longitude": 16.19618,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-8164-beeb-cd01cad418a9",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d622aa25-151e-5b3b-901f-de01c2ddda75",
    "region_slug": "helenental",
    "crag_slug": "zwergwandl",
    "slug": "bumble-bee",
    "path": "/crags/helenental/zwergwandl#d622aa25-151e-5b3b-901f-de01c2ddda75",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Zwergwandl | Easy Rider (Zwergwandl)",
@@ -93,20 +147,21 @@
    "crag": "Zwergwandl",
    "wall": "Zwergwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017002,
+   "longitude": 16.19618,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-8192-880c-df3a9d64b7cd",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3b75396a-27c4-52b2-943c-798b28c5cd32",
    "region_slug": "helenental",
    "crag_slug": "zwergwandl",
    "slug": "easy-rider-zwergwandl",
    "path": "/crags/helenental/zwergwandl#3b75396a-27c4-52b2-943c-798b28c5cd32",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Zwergwandl | Fallschnee",
@@ -120,20 +175,21 @@
    "crag": "Zwergwandl",
    "wall": "Zwergwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017002,
+   "longitude": 16.19618,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-814a-bdec-c53b13069587",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "682a311b-2ec9-5e6c-98e5-616789134f3b",
    "region_slug": "helenental",
    "crag_slug": "zwergwandl",
    "slug": "fallschnee",
    "path": "/crags/helenental/zwergwandl#682a311b-2ec9-5e6c-98e5-616789134f3b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Zwergwandl | Greenhorn",
@@ -147,20 +203,21 @@
    "crag": "Zwergwandl",
    "wall": "Zwergwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017002,
+   "longitude": 16.19618,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-819c-afc0-f3d5d400329b",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9b714937-e025-5ca0-bb2e-3eebf71a9075",
    "region_slug": "helenental",
    "crag_slug": "zwergwandl",
    "slug": "greenhorn",
    "path": "/crags/helenental/zwergwandl#9b714937-e025-5ca0-bb2e-3eebf71a9075",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Zwergwandl | Leutnant Webri",
@@ -174,20 +231,21 @@
    "crag": "Zwergwandl",
    "wall": "Zwergwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017002,
+   "longitude": 16.19618,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-81d4-b938-df93e95369b5",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a642accb-bc33-5873-9cee-a390049e3f7e",
    "region_slug": "helenental",
    "crag_slug": "zwergwandl",
    "slug": "leutnant-webri",
    "path": "/crags/helenental/zwergwandl#a642accb-bc33-5873-9cee-a390049e3f7e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Zwergwandl | Moonlightning",
@@ -201,20 +259,21 @@
    "crag": "Zwergwandl",
    "wall": "Zwergwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017002,
+   "longitude": 16.19618,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-817c-9ec5-f9d2516e371d",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0f12252d-f881-51db-a0d3-4ec084149c53",
    "region_slug": "helenental",
    "crag_slug": "zwergwandl",
    "slug": "moonlightning",
    "path": "/crags/helenental/zwergwandl#0f12252d-f881-51db-a0d3-4ec084149c53",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Zwergwandl | Nichts für schwache Geister",
@@ -228,20 +287,21 @@
    "crag": "Zwergwandl",
    "wall": "Zwergwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017002,
+   "longitude": 16.19618,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-81da-8c29-f7894fb8018d",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "19b3f0ef-d283-504f-97c9-0aa56d181170",
    "region_slug": "helenental",
    "crag_slug": "zwergwandl",
    "slug": "nichts-fur-schwache-geister",
    "path": "/crags/helenental/zwergwandl#19b3f0ef-d283-504f-97c9-0aa56d181170",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Zwergwandl | Schneewitwe",
@@ -255,20 +315,21 @@
    "crag": "Zwergwandl",
    "wall": "Zwergwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017002,
+   "longitude": 16.19618,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-813d-becd-e78d5762226c",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4e2e5062-8505-543b-9c0e-30cd0d0c3e0d",
    "region_slug": "helenental",
    "crag_slug": "zwergwandl",
    "slug": "schneewitwe",
    "path": "/crags/helenental/zwergwandl#4e2e5062-8505-543b-9c0e-30cd0d0c3e0d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Zwergwandl | Seven Pointed Ladybird",
@@ -282,20 +343,21 @@
    "crag": "Zwergwandl",
    "wall": "Zwergwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017002,
+   "longitude": 16.19618,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-810b-815c-fd159ed7532b",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1156e993-268c-5a41-87f6-266ced67b408",
    "region_slug": "helenental",
    "crag_slug": "zwergwandl",
    "slug": "seven-pointed-ladybird",
    "path": "/crags/helenental/zwergwandl#1156e993-268c-5a41-87f6-266ced67b408",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Zwergwandl | Stand up and Fight",
@@ -309,20 +371,21 @@
    "crag": "Zwergwandl",
    "wall": "Zwergwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017002,
+   "longitude": 16.19618,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-8164-bcac-eb0174788c7e",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4bc0be48-e80e-5d8f-bf77-38e67414e977",
    "region_slug": "helenental",
    "crag_slug": "zwergwandl",
    "slug": "stand-up-and-fight",
    "path": "/crags/helenental/zwergwandl#4bc0be48-e80e-5d8f-bf77-38e67414e977",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Zwergwandl | Verschneidung (Zwergwandl)",
@@ -336,20 +399,21 @@
    "crag": "Zwergwandl",
    "wall": "Zwergwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017002,
+   "longitude": 16.19618,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-81f0-ac0b-c48baa29322d",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e9800608-f9fa-597e-895d-56672bf4691b",
    "region_slug": "helenental",
    "crag_slug": "zwergwandl",
    "slug": "verschneidung-zwergwandl",
    "path": "/crags/helenental/zwergwandl#e9800608-f9fa-597e-895d-56672bf4691b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Zwergwandl | Zwergenfalle",
@@ -363,20 +427,21 @@
    "crag": "Zwergwandl",
    "wall": "Zwergwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.017002,
+   "longitude": 16.19618,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-817a-b826-d60474d79c34",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "034c4e66-3e4b-532e-96a1-014b2e88b9c3",
    "region_slug": "helenental",
    "crag_slug": "zwergwandl",
    "slug": "zwergenfalle",
    "path": "/crags/helenental/zwergwandl#034c4e66-3e4b-532e-96a1-014b2e88b9c3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

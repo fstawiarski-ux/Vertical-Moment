@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "dbb86e45-2b45-52bb-abf6-f83243f791f0",
   "name": "Kalkofenwand",
@@ -8,8 +8,10 @@
   "region": "Pernitz",
   "region_slug": "pernitz",
   "route_count": 31,
+  "is_stub": false,
   "latitude": null,
   "longitude": null,
+  "coord_source": null,
   "grades": [
    "1+",
    "2",
@@ -32,7 +34,43 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/pernitz/kalkofenwand"
+  "path": "/crags/pernitz/kalkofenwand",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Kalkofenwand+Pernitz"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Kalkofenwand+Pernitz"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Kalkofenwand"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Kalkofenwand+Pernitz"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -49,18 +87,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8adf3b96-0a4f-5d6d-b7cb-38e95c3898d0",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "ausweiche",
    "path": "/crags/pernitz/kalkofenwand#8adf3b96-0a4f-5d6d-b7cb-38e95c3898d0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Bluff",
@@ -76,18 +115,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "055c4248-e85d-5088-a931-e25464d278ec",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "bluff",
    "path": "/crags/pernitz/kalkofenwand#055c4248-e85d-5088-a931-e25464d278ec",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Chalking Heads",
@@ -103,18 +143,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2095b2ef-6888-5b81-9254-894c5c6fa07a",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "chalking-heads",
    "path": "/crags/pernitz/kalkofenwand#2095b2ef-6888-5b81-9254-894c5c6fa07a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Detailschulung",
@@ -130,18 +171,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e9b0c4d6-0665-5038-ae44-4f4f5669ab9e",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "detailschulung",
    "path": "/crags/pernitz/kalkofenwand#e9b0c4d6-0665-5038-ae44-4f4f5669ab9e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Erste Schritte",
@@ -157,18 +199,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1486fa34-6489-5b3e-9b9a-cd09758bae85",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "erste-schritte",
    "path": "/crags/pernitz/kalkofenwand#1486fa34-6489-5b3e-9b9a-cd09758bae85",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Erstes Training",
@@ -184,18 +227,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1a69c766-e088-5381-9de1-c48f55d7ef8a",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "erstes-training",
    "path": "/crags/pernitz/kalkofenwand#1a69c766-e088-5381-9de1-c48f55d7ef8a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Früh übt sich",
@@ -211,18 +255,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d15b9d51-9a39-516f-a964-b90fc1f2d676",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "fruh-ubt-sich",
    "path": "/crags/pernitz/kalkofenwand#d15b9d51-9a39-516f-a964-b90fc1f2d676",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Frühfoerderung",
@@ -238,18 +283,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ec80dfbd-be68-5f33-8237-76b4405a9e79",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "fruhfoerderung",
    "path": "/crags/pernitz/kalkofenwand#ec80dfbd-be68-5f33-8237-76b4405a9e79",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Gehschule",
@@ -265,18 +311,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b457a88a-2f1b-5a98-8413-c1ae1c728775",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "gehschule",
    "path": "/crags/pernitz/kalkofenwand#b457a88a-2f1b-5a98-8413-c1ae1c728775",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Kalkbrand",
@@ -292,18 +339,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "986d1efa-b7f5-5863-93af-d2385304d557",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "kalkbrand",
    "path": "/crags/pernitz/kalkofenwand#986d1efa-b7f5-5863-93af-d2385304d557",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Kamin-Einschulung",
@@ -319,18 +367,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "44374cca-d2f9-5c55-995d-0db5dfa7f925",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "kamin-einschulung",
    "path": "/crags/pernitz/kalkofenwand#44374cca-d2f9-5c55-995d-0db5dfa7f925",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Kindergarten",
@@ -346,18 +395,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f9673a2b-970a-5f88-8bc5-3f50cb79aa30",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "kindergarten",
    "path": "/crags/pernitz/kalkofenwand#f9673a2b-970a-5f88-8bc5-3f50cb79aa30",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Krabbelstube",
@@ -373,18 +423,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "98c71f4a-fb19-5324-b89b-8ca9b5c4a8ba",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "krabbelstube",
    "path": "/crags/pernitz/kalkofenwand#98c71f4a-fb19-5324-b89b-8ca9b5c4a8ba",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Krabblplatte",
@@ -400,18 +451,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cc8fb986-3730-5b14-93a0-9cc8e264db35",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "krabblplatte",
    "path": "/crags/pernitz/kalkofenwand#cc8fb986-3730-5b14-93a0-9cc8e264db35",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Leider Geil",
@@ -427,18 +479,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6d99660a-3e04-50e6-b082-ba0348a5326f",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "leider-geil",
    "path": "/crags/pernitz/kalkofenwand#6d99660a-3e04-50e6-b082-ba0348a5326f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Maxi",
@@ -454,18 +507,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f5338dd2-badd-52a2-853f-ee9a09186e89",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "maxi",
    "path": "/crags/pernitz/kalkofenwand#f5338dd2-badd-52a2-853f-ee9a09186e89",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Morizi",
@@ -481,18 +535,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d892bf5b-1a29-5000-9bf4-1c9915a9b583",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "morizi",
    "path": "/crags/pernitz/kalkofenwand#d892bf5b-1a29-5000-9bf4-1c9915a9b583",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Nichts für Kinder",
@@ -508,18 +563,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fe1a1406-a3b0-550f-8f74-4dbc24858ab3",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "nichts-fur-kinder",
    "path": "/crags/pernitz/kalkofenwand#fe1a1406-a3b0-550f-8f74-4dbc24858ab3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Nötsch",
@@ -535,18 +591,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "18ead700-dff6-5d4d-9267-3b9fd45bda54",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "notsch",
    "path": "/crags/pernitz/kalkofenwand#18ead700-dff6-5d4d-9267-3b9fd45bda54",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Ofenkante",
@@ -562,18 +619,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "21e87961-3ff6-5639-83eb-ebe8502606c0",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "ofenkante",
    "path": "/crags/pernitz/kalkofenwand#21e87961-3ff6-5639-83eb-ebe8502606c0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Ofenverschneidung",
@@ -589,18 +647,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ed57bce1-9fa0-5bc7-8158-0e496ae1587e",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "ofenverschneidung",
    "path": "/crags/pernitz/kalkofenwand#ed57bce1-9fa0-5bc7-8158-0e496ae1587e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Riss mit Biss",
@@ -616,18 +675,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cc3b7186-d9ac-55dc-88a2-14f497065c68",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "riss-mit-biss",
    "path": "/crags/pernitz/kalkofenwand#cc3b7186-d9ac-55dc-88a2-14f497065c68",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Schattengrat",
@@ -643,18 +703,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ec74972c-004f-5450-8b96-c51f636082a0",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "schattengrat",
    "path": "/crags/pernitz/kalkofenwand#ec74972c-004f-5450-8b96-c51f636082a0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Schnifix",
@@ -670,18 +731,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5e9920f7-b22a-5b7a-9a23-50081323492e",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "schnifix",
    "path": "/crags/pernitz/kalkofenwand#5e9920f7-b22a-5b7a-9a23-50081323492e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Schulreife",
@@ -697,18 +759,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cdd992e1-6aac-5131-9a18-55e6d709aac0",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "schulreife",
    "path": "/crags/pernitz/kalkofenwand#cdd992e1-6aac-5131-9a18-55e6d709aac0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Schweinernes mit Krenn",
@@ -724,18 +787,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e2790724-3899-5cc2-b134-40725170255d",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "schweinernes-mit-krenn",
    "path": "/crags/pernitz/kalkofenwand#e2790724-3899-5cc2-b134-40725170255d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Sintal",
@@ -751,18 +815,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ff0a3216-10db-5fce-8d35-bedeb00791ac",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "sintal",
    "path": "/crags/pernitz/kalkofenwand#ff0a3216-10db-5fce-8d35-bedeb00791ac",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Todesverschneidung",
@@ -778,18 +843,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "44821de5-a60f-546d-906f-51a5dd4edd9f",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "todesverschneidung",
    "path": "/crags/pernitz/kalkofenwand#44821de5-a60f-546d-906f-51a5dd4edd9f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Verbale Benotung",
@@ -805,18 +871,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "de5cd58b-d1bc-54a4-8162-9406d13185c1",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "verbale-benotung",
    "path": "/crags/pernitz/kalkofenwand#de5cd58b-d1bc-54a4-8162-9406d13185c1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Volksschule",
@@ -832,18 +899,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "71f4b0bd-1721-5297-82b4-582ac9d3a2c6",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "volksschule",
    "path": "/crags/pernitz/kalkofenwand#71f4b0bd-1721-5297-82b4-582ac9d3a2c6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kalkofenwand | Übungskante",
@@ -859,18 +927,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3d6bed1e-a638-5892-a0cc-3224b5b7eb21",
    "region_slug": "pernitz",
    "crag_slug": "kalkofenwand",
    "slug": "ubungskante",
    "path": "/crags/pernitz/kalkofenwand#3d6bed1e-a638-5892-a0cc-3224b5b7eb21",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }

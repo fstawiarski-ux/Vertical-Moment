@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "bb97ed89-41d3-5990-970a-4a3f8c088c6f",
   "name": "Alpinwandl",
@@ -8,8 +8,10 @@
   "region": "Arnstein",
   "region_slug": "arnstein",
   "route_count": 8,
+  "is_stub": false,
   "latitude": null,
   "longitude": null,
+  "coord_source": null,
   "grades": [
    "5",
    "5+",
@@ -21,7 +23,43 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/arnstein/alpinwandl"
+  "path": "/crags/arnstein/alpinwandl",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Alpinwandl+Arnstein"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Alpinwandl+Arnstein"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Alpinwandl"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Alpinwandl+Arnstein"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -38,18 +76,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7f6b763d-3c57-51d1-a113-7f5cb3ab8488",
    "region_slug": "arnstein",
    "crag_slug": "alpinwandl",
    "slug": "alpine-aufnahmeprufung",
    "path": "/crags/arnstein/alpinwandl#7f6b763d-3c57-51d1-a113-7f5cb3ab8488",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Alpinwandl | Alpine Meisterprüfung",
@@ -65,18 +104,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4263623b-f2ce-51fc-b73e-d9d1ffc36932",
    "region_slug": "arnstein",
    "crag_slug": "alpinwandl",
    "slug": "alpine-meisterprufung",
    "path": "/crags/arnstein/alpinwandl#4263623b-f2ce-51fc-b73e-d9d1ffc36932",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Alpinwandl | Aussenseiterzwerg",
@@ -92,18 +132,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1ef99747-5846-5a98-8a51-e4f5eb2ba511",
    "region_slug": "arnstein",
    "crag_slug": "alpinwandl",
    "slug": "aussenseiterzwerg",
    "path": "/crags/arnstein/alpinwandl#1ef99747-5846-5a98-8a51-e4f5eb2ba511",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Alpinwandl | Der 7-Zwerg von links/rechts",
@@ -119,18 +160,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0b25c166-5fdc-5e67-8d35-e5a09007c303",
    "region_slug": "arnstein",
    "crag_slug": "alpinwandl",
    "slug": "der-7-zwerg-von-links-rechts",
    "path": "/crags/arnstein/alpinwandl#0b25c166-5fdc-5e67-8d35-e5a09007c303",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Alpinwandl | Giftzwerg",
@@ -146,18 +188,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5ed96a47-49ae-53ce-978c-7f9bbdc022c2",
    "region_slug": "arnstein",
    "crag_slug": "alpinwandl",
    "slug": "giftzwerg",
    "path": "/crags/arnstein/alpinwandl#5ed96a47-49ae-53ce-978c-7f9bbdc022c2",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Alpinwandl | Zwergenaufstand",
@@ -173,18 +216,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a928c5b0-1a5a-5120-ad9e-60e0a9ddfb6a",
    "region_slug": "arnstein",
    "crag_slug": "alpinwandl",
    "slug": "zwergenaufstand",
    "path": "/crags/arnstein/alpinwandl#a928c5b0-1a5a-5120-ad9e-60e0a9ddfb6a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Alpinwandl | Zwergenk(r)ampf",
@@ -200,18 +244,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7d975c4e-b784-54a8-a85e-919c2cb15d8e",
    "region_slug": "arnstein",
    "crag_slug": "alpinwandl",
    "slug": "zwergenk-r-ampf",
    "path": "/crags/arnstein/alpinwandl#7d975c4e-b784-54a8-a85e-919c2cb15d8e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Alpinwandl | Zwergenmarathon",
@@ -227,18 +272,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ea08fc4b-a737-5a61-bd7e-c48eceab89b6",
    "region_slug": "arnstein",
    "crag_slug": "alpinwandl",
    "slug": "zwergenmarathon",
    "path": "/crags/arnstein/alpinwandl#ea08fc4b-a737-5a61-bd7e-c48eceab89b6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }

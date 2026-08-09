@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "f480c654-e571-5d47-856c-f3187c4ae23c",
   "name": "Gamswand",
@@ -8,8 +8,10 @@
   "region": "Pernitz",
   "region_slug": "pernitz",
   "route_count": 20,
+  "is_stub": false,
   "latitude": null,
   "longitude": null,
+  "coord_source": null,
   "grades": [
    "6",
    "6+",
@@ -26,7 +28,43 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/pernitz/gamswand"
+  "path": "/crags/pernitz/gamswand",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Gamswand+Pernitz"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Gamswand+Pernitz"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Gamswand"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Gamswand+Pernitz"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -43,18 +81,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8335efc5-5406-58b1-9f0d-fed2b15a33ec",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "abtritt",
    "path": "/crags/pernitz/gamswand#8335efc5-5406-58b1-9f0d-fed2b15a33ec",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Das schwarze Schaf",
@@ -70,18 +109,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "85266d2a-166e-5125-9db6-9dbdd98b80b5",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "das-schwarze-schaf",
    "path": "/crags/pernitz/gamswand#85266d2a-166e-5125-9db6-9dbdd98b80b5",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Deutsch Nepal",
@@ -97,18 +137,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e190acd7-a32f-5e6c-918f-4ea0f2c85524",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "deutsch-nepal",
    "path": "/crags/pernitz/gamswand#e190acd7-a32f-5e6c-918f-4ea0f2c85524",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Die hohe Stube",
@@ -124,18 +165,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ca81d844-1d1d-5e97-a9de-e67a3f987723",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "die-hohe-stube",
    "path": "/crags/pernitz/gamswand#ca81d844-1d1d-5e97-a9de-e67a3f987723",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Doppelwitz",
@@ -151,18 +193,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ccce89e5-ffcb-5511-a989-dbf92ac8875b",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "doppelwitz",
    "path": "/crags/pernitz/gamswand#ccce89e5-ffcb-5511-a989-dbf92ac8875b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Einheitsfrass",
@@ -178,18 +221,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0cec9ca3-2325-5eed-8e17-9f5770286d3e",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "einheitsfrass",
    "path": "/crags/pernitz/gamswand#0cec9ca3-2325-5eed-8e17-9f5770286d3e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Gottlos",
@@ -205,18 +249,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8327beea-7126-5572-9926-cb3c9a6ff07e",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "gottlos",
    "path": "/crags/pernitz/gamswand#8327beea-7126-5572-9926-cb3c9a6ff07e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | MC Dreck",
@@ -232,18 +277,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f8122e56-0cc1-5794-94fd-dd70491f2fe9",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "mc-dreck",
    "path": "/crags/pernitz/gamswand#f8122e56-0cc1-5794-94fd-dd70491f2fe9",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Marsch der Wampelreiter",
@@ -259,18 +305,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "088072ea-40fb-5570-bf29-be85b494460a",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "marsch-der-wampelreiter",
    "path": "/crags/pernitz/gamswand#088072ea-40fb-5570-bf29-be85b494460a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Namenlos (Gamswand)",
@@ -286,18 +333,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "73b0bb13-f87f-53d7-b8a7-cd0a7fb8e57e",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "namenlos-gamswand",
    "path": "/crags/pernitz/gamswand#73b0bb13-f87f-53d7-b8a7-cd0a7fb8e57e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Nemesis",
@@ -313,18 +361,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b7571ff6-d3d0-5694-8233-a6b8efcdf08b",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "nemesis",
    "path": "/crags/pernitz/gamswand#b7571ff6-d3d0-5694-8233-a6b8efcdf08b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Paolo Pinkel",
@@ -340,18 +389,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d5a71365-efa1-5969-9c21-e526c3865bd2",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "paolo-pinkel",
    "path": "/crags/pernitz/gamswand#d5a71365-efa1-5969-9c21-e526c3865bd2",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Rabenkampf",
@@ -367,18 +417,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ebe6d5c9-e3fc-526d-ac1c-eda7bb1e99e1",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "rabenkampf",
    "path": "/crags/pernitz/gamswand#ebe6d5c9-e3fc-526d-ac1c-eda7bb1e99e1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Revier und Stubenreinigung",
@@ -394,18 +445,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "96fa3713-bcb9-559a-993f-2c7d79669f85",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "revier-und-stubenreinigung",
    "path": "/crags/pernitz/gamswand#96fa3713-bcb9-559a-993f-2c7d79669f85",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Spreu und Weizen",
@@ -421,18 +473,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3bb554a8-2151-5140-82b0-6cc7518b0be1",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "spreu-und-weizen",
    "path": "/crags/pernitz/gamswand#3bb554a8-2151-5140-82b0-6cc7518b0be1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Stubenrein",
@@ -448,18 +501,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2e5bcd6d-9334-5df5-8ce4-28cfa3e101bc",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "stubenrein",
    "path": "/crags/pernitz/gamswand#2e5bcd6d-9334-5df5-8ce4-28cfa3e101bc",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Sturmpercht",
@@ -475,18 +529,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c5cb2153-9cd8-5542-b318-4e4d9afd70a8",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "sturmpercht",
    "path": "/crags/pernitz/gamswand#c5cb2153-9cd8-5542-b318-4e4d9afd70a8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Vogelfrei (Gamswand)",
@@ -502,18 +557,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c26016cc-2eaf-5ac5-973b-98d011d549bb",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "vogelfrei-gamswand",
    "path": "/crags/pernitz/gamswand#c26016cc-2eaf-5ac5-973b-98d011d549bb",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Waldteufel",
@@ -529,18 +585,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "89e22ef4-66fe-5c43-bb73-e2fddf477dcf",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "waldteufel",
    "path": "/crags/pernitz/gamswand#89e22ef4-66fe-5c43-bb73-e2fddf477dcf",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Gamswand | Ästhetische Mobilmachung",
@@ -556,18 +613,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "76d4ce86-21f7-52fa-bc53-e98123d7f8da",
    "region_slug": "pernitz",
    "crag_slug": "gamswand",
    "slug": "asthetische-mobilmachung",
    "path": "/crags/pernitz/gamswand#76d4ce86-21f7-52fa-bc53-e98123d7f8da",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }

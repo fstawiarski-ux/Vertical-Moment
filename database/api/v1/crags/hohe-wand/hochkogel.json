@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "5ed3126e-58df-5de7-8a75-164311a33544",
   "name": "Hochkogel",
@@ -8,8 +8,10 @@
   "region": "Hohe Wand",
   "region_slug": "hohe-wand",
   "route_count": 38,
-  "latitude": null,
-  "longitude": null,
+  "is_stub": false,
+  "latitude": 47.819642,
+  "longitude": 16.033178,
+  "coord_source": "routes",
   "grades": [
    "10",
    "10+",
@@ -33,7 +35,57 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/hohe-wand/hochkogel"
+  "path": "/crags/hohe-wand/hochkogel",
+  "osm": "relation/18200376",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18200376",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=47.819642&mlon=16.033178#map=16/47.819642/16.033178",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Hochkogel+Hohe+Wand"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Hochkogel+Hohe+Wand"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Hochkogel"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Hochkogel+Hohe+Wand"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -48,20 +100,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "89cff322-e943-5d8d-8639-9b2de1af2777",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "1000-liter-feuerwasser",
    "path": "/crags/hohe-wand/hochkogel#89cff322-e943-5d8d-8639-9b2de1af2777",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Back to the Roots",
@@ -75,20 +128,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2f48688f-2a60-5c8e-8da2-cedcb29f8a76",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "back-to-the-roots",
    "path": "/crags/hohe-wand/hochkogel#2f48688f-2a60-5c8e-8da2-cedcb29f8a76",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Ballisto Vertikal",
@@ -102,20 +156,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "40e908f9-6d59-51a2-91bf-c13fa3c54186",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "ballisto-vertikal",
    "path": "/crags/hohe-wand/hochkogel#40e908f9-6d59-51a2-91bf-c13fa3c54186",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Cold Turkey",
@@ -129,20 +184,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6b902ec8-8611-5ed0-a68a-f159c3dd7858",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "cold-turkey",
    "path": "/crags/hohe-wand/hochkogel#6b902ec8-8611-5ed0-a68a-f159c3dd7858",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Condor",
@@ -156,20 +212,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a1524ef6-c5e6-5e6f-a829-98b575a1e1a1",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "condor",
    "path": "/crags/hohe-wand/hochkogel#a1524ef6-c5e6-5e6f-a829-98b575a1e1a1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Die Philosophie ist wie ein Gurkerl im Knie",
@@ -183,20 +240,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "62e80562-303b-51ad-b7f6-dd9d551bd1c3",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "die-philosophie-ist-wie-ein-gurkerl-im-knie",
    "path": "/crags/hohe-wand/hochkogel#62e80562-303b-51ad-b7f6-dd9d551bd1c3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Esparanza",
@@ -210,20 +268,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e3b48e41-d02d-520e-a78c-19f42dad9dc8",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "esparanza",
    "path": "/crags/hohe-wand/hochkogel#e3b48e41-d02d-520e-a78c-19f42dad9dc8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Finstertour",
@@ -237,20 +296,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d884a5e2-97d2-5727-83a8-e691bbadbcee",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "finstertour",
    "path": "/crags/hohe-wand/hochkogel#d884a5e2-97d2-5727-83a8-e691bbadbcee",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Geilspecht",
@@ -264,20 +324,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0b59e96d-9806-56cd-a036-d2375f3939bb",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "geilspecht",
    "path": "/crags/hohe-wand/hochkogel#0b59e96d-9806-56cd-a036-d2375f3939bb",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Hakoah",
@@ -291,20 +352,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "375390db-2d12-52c9-a533-905d532f1e57",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "hakoah",
    "path": "/crags/hohe-wand/hochkogel#375390db-2d12-52c9-a533-905d532f1e57",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Honeymoon",
@@ -318,20 +380,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fb8033f8-65b2-5be3-be6a-376750500dac",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "honeymoon",
    "path": "/crags/hohe-wand/hochkogel#fb8033f8-65b2-5be3-be6a-376750500dac",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Im Reich des silbernen Löwen",
@@ -345,20 +408,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7ed7176b-8b3f-5dcb-8a0b-13e8ba75b54e",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "im-reich-des-silbernen-lowen",
    "path": "/crags/hohe-wand/hochkogel#7ed7176b-8b3f-5dcb-8a0b-13e8ba75b54e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Impoposant",
@@ -372,20 +436,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e1b0d539-e86a-5e8c-b5e7-3c9870dfcb09",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "impoposant",
    "path": "/crags/hohe-wand/hochkogel#e1b0d539-e86a-5e8c-b5e7-3c9870dfcb09",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Iszeit",
@@ -399,20 +464,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "82489fd5-e032-5a2a-8898-9b6f8447dd03",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "iszeit",
    "path": "/crags/hohe-wand/hochkogel#82489fd5-e032-5a2a-8898-9b6f8447dd03",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Kraftlicht",
@@ -426,20 +492,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5b6ec593-e82a-5963-989c-5b9027cf380e",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "kraftlicht",
    "path": "/crags/hohe-wand/hochkogel#5b6ec593-e82a-5963-989c-5b9027cf380e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | König Uhu und die Gier",
@@ -453,20 +520,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6625c33a-fd49-595b-a21e-1b29dcab7818",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "konig-uhu-und-die-gier",
    "path": "/crags/hohe-wand/hochkogel#6625c33a-fd49-595b-a21e-1b29dcab7818",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Lederstrumpf",
@@ -480,20 +548,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f560ae09-273d-5add-82f6-1e86daa68f92",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "lederstrumpf",
    "path": "/crags/hohe-wand/hochkogel#f560ae09-273d-5add-82f6-1e86daa68f92",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Lucy in the Sky",
@@ -507,20 +576,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "bbb4cb31-474b-5139-9e97-6e295bf466bb",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "lucy-in-the-sky",
    "path": "/crags/hohe-wand/hochkogel#bbb4cb31-474b-5139-9e97-6e295bf466bb",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Manitou",
@@ -534,20 +604,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c9c11634-a103-5191-bd1a-e1099cea47d5",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "manitou",
    "path": "/crags/hohe-wand/hochkogel#c9c11634-a103-5191-bd1a-e1099cea47d5",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Milchstau",
@@ -561,20 +632,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "95736acc-44ce-5670-bd08-41cc21bc72d5",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "milchstau",
    "path": "/crags/hohe-wand/hochkogel#95736acc-44ce-5670-bd08-41cc21bc72d5",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Missing Link",
@@ -588,20 +660,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "43ed2a8b-8061-52fe-a914-b783765128be",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "missing-link",
    "path": "/crags/hohe-wand/hochkogel#43ed2a8b-8061-52fe-a914-b783765128be",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Nirvana",
@@ -615,20 +688,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ea57599b-403e-55bd-8713-9cbcbf9a34f8",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "nirvana",
    "path": "/crags/hohe-wand/hochkogel#ea57599b-403e-55bd-8713-9cbcbf9a34f8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Nobodi",
@@ -642,20 +716,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0e28dac5-bc3a-525e-b5fd-18de42585400",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "nobodi",
    "path": "/crags/hohe-wand/hochkogel#0e28dac5-bc3a-525e-b5fd-18de42585400",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Pokerface",
@@ -669,20 +744,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "160fd4d2-8cd2-5d88-b067-99cf6c85797a",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "pokerface",
    "path": "/crags/hohe-wand/hochkogel#160fd4d2-8cd2-5d88-b067-99cf6c85797a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Red Bull",
@@ -696,20 +772,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "60470aba-78a3-558d-93c9-692ecec66d9e",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "red-bull",
    "path": "/crags/hohe-wand/hochkogel#60470aba-78a3-558d-93c9-692ecec66d9e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Rex the Runt",
@@ -723,20 +800,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3ac9b851-531d-53f5-8dd7-f1a72a8ea485",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "rex-the-runt",
    "path": "/crags/hohe-wand/hochkogel#3ac9b851-531d-53f5-8dd7-f1a72a8ea485",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Stilldemenz",
@@ -750,20 +828,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f00edfc3-c591-51fe-b406-e2a6a301d8f5",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "stilldemenz",
    "path": "/crags/hohe-wand/hochkogel#f00edfc3-c591-51fe-b406-e2a6a301d8f5",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Supermartinachtzeh",
@@ -777,20 +856,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "383cfb37-0163-5fcd-b7b7-8dd38df8c956",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "supermartinachtzeh",
    "path": "/crags/hohe-wand/hochkogel#383cfb37-0163-5fcd-b7b7-8dd38df8c956",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Tscho Tschi",
@@ -804,20 +884,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c197b578-dd0e-5133-ba59-28c8b5008a4b",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "tscho-tschi",
    "path": "/crags/hohe-wand/hochkogel#c197b578-dd0e-5133-ba59-28c8b5008a4b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Uovopeccare",
@@ -831,20 +912,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6cf5e7ae-d547-57c7-bb19-7463e7e3f9db",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "uovopeccare",
    "path": "/crags/hohe-wand/hochkogel#6cf5e7ae-d547-57c7-bb19-7463e7e3f9db",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Urquell",
@@ -858,20 +940,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ea21fd20-7772-5e70-8c15-e467fa418f6e",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "urquell",
    "path": "/crags/hohe-wand/hochkogel#ea21fd20-7772-5e70-8c15-e467fa418f6e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Verliebter Leichnam",
@@ -885,20 +968,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "bf8c5434-6fe8-597a-b66a-b7460b92a37a",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "verliebter-leichnam",
    "path": "/crags/hohe-wand/hochkogel#bf8c5434-6fe8-597a-b66a-b7460b92a37a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Wildhoney",
@@ -912,20 +996,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ca2b3daa-ec8e-5df0-8122-a8c308d9164f",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "wildhoney",
    "path": "/crags/hohe-wand/hochkogel#ca2b3daa-ec8e-5df0-8122-a8c308d9164f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Windkraft",
@@ -939,20 +1024,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "eaa20ab7-f804-53a9-b2d2-7c3ec1220814",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "windkraft",
    "path": "/crags/hohe-wand/hochkogel#eaa20ab7-f804-53a9-b2d2-7c3ec1220814",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Winnitou",
@@ -966,20 +1052,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "745d362b-b8e9-55db-ba22-53ebc5183aac",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "winnitou",
    "path": "/crags/hohe-wand/hochkogel#745d362b-b8e9-55db-ba22-53ebc5183aac",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Zauberflöte",
@@ -993,20 +1080,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2459b3bb-06a3-5e62-9cd6-c55db4ba9e26",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "zauberflote",
    "path": "/crags/hohe-wand/hochkogel#2459b3bb-06a3-5e62-9cd6-c55db4ba9e26",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Zauberlehrling",
@@ -1020,20 +1108,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e472b7c2-0996-5cd6-b679-d386903486c0",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "zauberlehrling",
    "path": "/crags/hohe-wand/hochkogel#e472b7c2-0996-5cd6-b679-d386903486c0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogel | Zeitreise",
@@ -1047,20 +1136,21 @@
    "crag": "Hochkogel",
    "wall": "Hochkogel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.819642,
+   "longitude": 16.033178,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "66cb86d5-86f4-582f-9156-5ad277ef45e0",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogel",
    "slug": "zeitreise",
    "path": "/crags/hohe-wand/hochkogel#66cb86d5-86f4-582f-9156-5ad277ef45e0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

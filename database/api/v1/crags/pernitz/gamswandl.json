@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "b3cd86e8-3c54-52ca-bf7b-7349c1f702f0",
   "name": "Gamswandl",
@@ -8,8 +8,10 @@
   "region": "Pernitz",
   "region_slug": "pernitz",
   "route_count": 16,
-  "latitude": null,
-  "longitude": null,
+  "is_stub": false,
+  "latitude": 47.851605,
+  "longitude": 16.040184,
+  "coord_source": "routes",
   "grades": [
    "10/10+",
    "7",
@@ -26,7 +28,57 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/pernitz/gamswandl"
+  "path": "/crags/pernitz/gamswandl",
+  "osm": "relation/18218733",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18218733",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=47.851605&mlon=16.040184#map=16/47.851605/16.040184",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Gamswandl+Pernitz"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Gamswandl+Pernitz"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Gamswandl"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Gamswandl+Pernitz"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -41,20 +93,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "539287cf-de5f-5ebc-9ae2-268cf1c2b273",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "brezlgriff",
    "path": "/crags/pernitz/gamswandl#539287cf-de5f-5ebc-9ae2-268cf1c2b273",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | Edelpuff",
@@ -68,20 +121,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "dd445b83-a725-51e0-baa3-0e7d22b0ff02",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "edelpuff",
    "path": "/crags/pernitz/gamswandl#dd445b83-a725-51e0-baa3-0e7d22b0ff02",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | Eiertanz",
@@ -95,20 +149,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cfe1518b-5529-58cf-bead-5265477d9b06",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "eiertanz",
    "path": "/crags/pernitz/gamswandl#cfe1518b-5529-58cf-bead-5265477d9b06",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | Glory Hole",
@@ -122,20 +177,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b537592b-ce50-56c0-8884-112ca7053134",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "glory-hole",
    "path": "/crags/pernitz/gamswandl#b537592b-ce50-56c0-8884-112ca7053134",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | Hoppala",
@@ -149,20 +205,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6c9c0c35-d9aa-5108-81a3-c12846ff4542",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "hoppala",
    "path": "/crags/pernitz/gamswandl#6c9c0c35-d9aa-5108-81a3-c12846ff4542",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | Kane Händ Kane Keks",
@@ -176,20 +233,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "466ccdaa-2334-5bd3-abb1-d4edea6f764a",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "kane-hand-kane-keks",
    "path": "/crags/pernitz/gamswandl#466ccdaa-2334-5bd3-abb1-d4edea6f764a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | Langer Weg zum schlechten Witz",
@@ -203,20 +261,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b579587a-b2e5-53fd-8a0c-f57e4765f35c",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "langer-weg-zum-schlechten-witz",
    "path": "/crags/pernitz/gamswandl#b579587a-b2e5-53fd-8a0c-f57e4765f35c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | Lochstreifen",
@@ -230,20 +289,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f46b5428-69e7-5113-ad4e-700bd1afc6ab",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "lochstreifen",
    "path": "/crags/pernitz/gamswandl#f46b5428-69e7-5113-ad4e-700bd1afc6ab",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | Michls Projekt",
@@ -257,20 +317,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "14165eeb-fd46-5341-8802-1c5f3e36c75f",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "michls-projekt",
    "path": "/crags/pernitz/gamswandl#14165eeb-fd46-5341-8802-1c5f3e36c75f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | Mini Phillip Flamm",
@@ -284,20 +345,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a2701ec6-72b0-54f8-b8ae-89f1ea3682bf",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "mini-phillip-flamm",
    "path": "/crags/pernitz/gamswandl#a2701ec6-72b0-54f8-b8ae-89f1ea3682bf",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | Namenlos (Gamswandl)",
@@ -311,20 +373,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6a433df0-35e4-506b-bafe-eb3c5fada3bf",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "namenlos-gamswandl",
    "path": "/crags/pernitz/gamswandl#6a433df0-35e4-506b-bafe-eb3c5fada3bf",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | Nix is Fix",
@@ -338,20 +401,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7f41e346-8c45-5254-b7ee-a59f162afb5f",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "nix-is-fix",
    "path": "/crags/pernitz/gamswandl#7f41e346-8c45-5254-b7ee-a59f162afb5f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | Nonstop",
@@ -365,20 +429,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "658ffb64-aded-59d3-8f89-e5bd95a6c4ba",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "nonstop",
    "path": "/crags/pernitz/gamswandl#658ffb64-aded-59d3-8f89-e5bd95a6c4ba",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | Reiwalata",
@@ -392,20 +457,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "edfc3097-6f00-5c14-a65f-05dcf6ae463e",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "reiwalata",
    "path": "/crags/pernitz/gamswandl#edfc3097-6f00-5c14-a65f-05dcf6ae463e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | Strassenstrich",
@@ -419,20 +485,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "772ade90-8a3a-5c87-b0e3-7908117277ab",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "strassenstrich",
    "path": "/crags/pernitz/gamswandl#772ade90-8a3a-5c87-b0e3-7908117277ab",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Gamswandl | United States of Nothing",
@@ -446,20 +513,21 @@
    "crag": "Gamswandl",
    "wall": "Gamswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.851605,
+   "longitude": 16.040184,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "273f4521-3815-5922-a9e3-59efc51c8838",
    "region_slug": "pernitz",
    "crag_slug": "gamswandl",
    "slug": "united-states-of-nothing",
    "path": "/crags/pernitz/gamswandl#273f4521-3815-5922-a9e3-59efc51c8838",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

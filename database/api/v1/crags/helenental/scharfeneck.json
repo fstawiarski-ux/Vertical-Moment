@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "f3e3c3e8-150e-5480-9096-fcf25af30d89",
   "name": "Scharfeneck",
@@ -8,8 +8,10 @@
   "region": "Helenental",
   "region_slug": "helenental",
   "route_count": 21,
-  "latitude": null,
-  "longitude": null,
+  "is_stub": false,
+  "latitude": 48.015771,
+  "longitude": 16.194458,
+  "coord_source": "routes",
   "grades": [
    "10-",
    "3",
@@ -29,7 +31,57 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/helenental/scharfeneck"
+  "path": "/crags/helenental/scharfeneck",
+  "osm": "relation/18181439",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18181439",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=48.015771&mlon=16.194458#map=16/48.015771/16.194458",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Scharfeneck+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Scharfeneck+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Scharfeneck"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Scharfeneck+Helenental"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -44,20 +96,21 @@
    "crag": "Scharfeneck",
    "wall": "Scharfeneck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015771,
+   "longitude": 16.194458,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "83b8d88d-a697-5bdf-b4a4-429ae84ddb8c",
    "region_slug": "helenental",
    "crag_slug": "scharfeneck",
    "slug": "a-lurch-scharfeneck",
    "path": "/crags/helenental/scharfeneck#83b8d88d-a697-5bdf-b4a4-429ae84ddb8c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Scharfeneck | Der Standard",
@@ -71,20 +124,21 @@
    "crag": "Scharfeneck",
    "wall": "Scharfeneck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015771,
+   "longitude": 16.194458,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9ff15c5c-e1e7-51e7-95e9-450fe6c50083",
    "region_slug": "helenental",
    "crag_slug": "scharfeneck",
    "slug": "der-standard",
    "path": "/crags/helenental/scharfeneck#9ff15c5c-e1e7-51e7-95e9-450fe6c50083",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Scharfeneck | Die Klassische",
@@ -98,20 +152,21 @@
    "crag": "Scharfeneck",
    "wall": "Scharfeneck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015771,
+   "longitude": 16.194458,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3fa3f68b-e72e-56c5-8363-9650e3f96c0f",
    "region_slug": "helenental",
    "crag_slug": "scharfeneck",
    "slug": "die-klassische",
    "path": "/crags/helenental/scharfeneck#3fa3f68b-e72e-56c5-8363-9650e3f96c0f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Scharfeneck | Entbestialisierung",
@@ -125,20 +180,21 @@
    "crag": "Scharfeneck",
    "wall": "Scharfeneck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015771,
+   "longitude": 16.194458,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "347c05dd-e3a7-5c71-9d91-4bf9040841d1",
    "region_slug": "helenental",
    "crag_slug": "scharfeneck",
    "slug": "entbestialisierung",
    "path": "/crags/helenental/scharfeneck#347c05dd-e3a7-5c71-9d91-4bf9040841d1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Scharfeneck | Grundkurs",
@@ -152,20 +208,21 @@
    "crag": "Scharfeneck",
    "wall": "Scharfeneck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015771,
+   "longitude": 16.194458,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f1e07007-fc13-5bc2-8ec6-215f894e85b5",
    "region_slug": "helenental",
    "crag_slug": "scharfeneck",
    "slug": "grundkurs",
    "path": "/crags/helenental/scharfeneck#f1e07007-fc13-5bc2-8ec6-215f894e85b5",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Scharfeneck | Hekla",
@@ -179,20 +236,21 @@
    "crag": "Scharfeneck",
    "wall": "Scharfeneck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015771,
+   "longitude": 16.194458,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c45b1f0b-55f8-5ed8-8fd8-994b576bb2d4",
    "region_slug": "helenental",
    "crag_slug": "scharfeneck",
    "slug": "hekla",
    "path": "/crags/helenental/scharfeneck#c45b1f0b-55f8-5ed8-8fd8-994b576bb2d4",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Scharfeneck | Kudlmudl",
@@ -206,20 +264,21 @@
    "crag": "Scharfeneck",
    "wall": "Scharfeneck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015771,
+   "longitude": 16.194458,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2e8f4f1c-4cf9-5ed4-8dad-312a259642a7",
    "region_slug": "helenental",
    "crag_slug": "scharfeneck",
    "slug": "kudlmudl",
    "path": "/crags/helenental/scharfeneck#2e8f4f1c-4cf9-5ed4-8dad-312a259642a7",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Scharfeneck | Kuschelecke Extrem",
@@ -233,20 +292,21 @@
    "crag": "Scharfeneck",
    "wall": "Scharfeneck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015771,
+   "longitude": 16.194458,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c6275682-471b-5dca-a968-ddb6bbc8c4a3",
    "region_slug": "helenental",
    "crag_slug": "scharfeneck",
    "slug": "kuschelecke-extrem",
    "path": "/crags/helenental/scharfeneck#c6275682-471b-5dca-a968-ddb6bbc8c4a3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Scharfeneck | Leben und Leben lassen",
@@ -260,20 +320,21 @@
    "crag": "Scharfeneck",
    "wall": "Scharfeneck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015771,
+   "longitude": 16.194458,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fe58c241-b885-5a66-97b6-b1e784f163b6",
    "region_slug": "helenental",
    "crag_slug": "scharfeneck",
    "slug": "leben-und-leben-lassen",
    "path": "/crags/helenental/scharfeneck#fe58c241-b885-5a66-97b6-b1e784f163b6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Scharfeneck | Milde Bestie",
@@ -287,20 +348,21 @@
    "crag": "Scharfeneck",
    "wall": "Scharfeneck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015771,
+   "longitude": 16.194458,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "16137b4a-7053-5f94-9b95-9faf9294f05d",
    "region_slug": "helenental",
    "crag_slug": "scharfeneck",
    "slug": "milde-bestie",
    "path": "/crags/helenental/scharfeneck#16137b4a-7053-5f94-9b95-9faf9294f05d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Scharfeneck | Nordwest",
@@ -314,20 +376,21 @@
    "crag": "Scharfeneck",
    "wall": "Scharfeneck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015771,
+   "longitude": 16.194458,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b2cb95ee-4646-55b5-8096-2fc66568b702",
    "region_slug": "helenental",
    "crag_slug": "scharfeneck",
    "slug": "nordwest",
    "path": "/crags/helenental/scharfeneck#b2cb95ee-4646-55b5-8096-2fc66568b702",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Scharfeneck | Schubumkehr",
@@ -341,20 +404,21 @@
    "crag": "Scharfeneck",
    "wall": "Scharfeneck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015771,
+   "longitude": 16.194458,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b79e6dbf-eba7-52a3-b90e-220126645154",
    "region_slug": "helenental",
    "crag_slug": "scharfeneck",
    "slug": "schubumkehr",
    "path": "/crags/helenental/scharfeneck#b79e6dbf-eba7-52a3-b90e-220126645154",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Scharfeneck | Schuppenriss",
@@ -368,20 +432,21 @@
    "crag": "Scharfeneck",
    "wall": "Scharfeneck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015771,
+   "longitude": 16.194458,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "74a08cbb-d5c4-56f0-850a-0b237aa146b7",
    "region_slug": "helenental",
    "crag_slug": "scharfeneck",
    "slug": "schuppenriss",
    "path": "/crags/helenental/scharfeneck#74a08cbb-d5c4-56f0-850a-0b237aa146b7",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Scharfeneck | Stolperstein",
@@ -395,20 +460,21 @@
    "crag": "Scharfeneck",
    "wall": "Scharfeneck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015771,
+   "longitude": 16.194458,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8c63c74e-33c7-5430-8dc8-cdc40f2de23e",
    "region_slug": "helenental",
    "crag_slug": "scharfeneck",
    "slug": "stolperstein",
    "path": "/crags/helenental/scharfeneck#8c63c74e-33c7-5430-8dc8-cdc40f2de23e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Scharfeneck | Toprope Verbot",
@@ -422,20 +488,21 @@
    "crag": "Scharfeneck",
    "wall": "Scharfeneck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015771,
+   "longitude": 16.194458,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ba21d06f-afe8-54d8-a712-516231b3f1c2",
    "region_slug": "helenental",
    "crag_slug": "scharfeneck",
    "slug": "toprope-verbot",
    "path": "/crags/helenental/scharfeneck#ba21d06f-afe8-54d8-a712-516231b3f1c2",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Scharfeneck | Tumor",
@@ -449,20 +516,21 @@
    "crag": "Scharfeneck",
    "wall": "Scharfeneck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015771,
+   "longitude": 16.194458,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-8189-93cb-f7ca90b16f90",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7e0d8506-44ce-5f2d-b87a-2225b78b507b",
    "region_slug": "helenental",
    "crag_slug": "scharfeneck",
    "slug": "tumor",
    "path": "/crags/helenental/scharfeneck#7e0d8506-44ce-5f2d-b87a-2225b78b507b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Scharfeneck | Unten Hui Oben Pfui",
@@ -476,20 +544,21 @@
    "crag": "Scharfeneck",
    "wall": "Scharfeneck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015771,
+   "longitude": 16.194458,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "45770c72-c2d0-5eb0-80da-29d84607aac8",
    "region_slug": "helenental",
    "crag_slug": "scharfeneck",
    "slug": "unten-hui-oben-pfui",
    "path": "/crags/helenental/scharfeneck#45770c72-c2d0-5eb0-80da-29d84607aac8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Scharfeneck | Verbindung",
@@ -503,20 +572,21 @@
    "crag": "Scharfeneck",
    "wall": "Scharfeneck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015771,
+   "longitude": 16.194458,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0ac6ca42-dbf4-5bc8-ab85-eaf7eb3a227e",
    "region_slug": "helenental",
    "crag_slug": "scharfeneck",
    "slug": "verbindung",
    "path": "/crags/helenental/scharfeneck#0ac6ca42-dbf4-5bc8-ab85-eaf7eb3a227e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Scharfeneck | Waldgnom",
@@ -530,20 +600,21 @@
    "crag": "Scharfeneck",
    "wall": "Scharfeneck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015771,
+   "longitude": 16.194458,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d3ef4934-f44d-5b36-af99-2a5c98381518",
    "region_slug": "helenental",
    "crag_slug": "scharfeneck",
    "slug": "waldgnom",
    "path": "/crags/helenental/scharfeneck#d3ef4934-f44d-5b36-af99-2a5c98381518",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Scharfeneck | Wilde Bestie",
@@ -557,20 +628,21 @@
    "crag": "Scharfeneck",
    "wall": "Scharfeneck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015771,
+   "longitude": 16.194458,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "93c34e28-60e6-5e21-9549-31b35ae5b951",
    "region_slug": "helenental",
    "crag_slug": "scharfeneck",
    "slug": "wilde-bestie",
    "path": "/crags/helenental/scharfeneck#93c34e28-60e6-5e21-9549-31b35ae5b951",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Scharfeneck | Zwerg Nase",
@@ -584,20 +656,21 @@
    "crag": "Scharfeneck",
    "wall": "Scharfeneck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015771,
+   "longitude": 16.194458,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6213a666-9157-5aba-b7c9-e61ba95727be",
    "region_slug": "helenental",
    "crag_slug": "scharfeneck",
    "slug": "zwerg-nase",
    "path": "/crags/helenental/scharfeneck#6213a666-9157-5aba-b7c9-e61ba95727be",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "933227d6-49a5-5178-9934-50385379789a",
   "name": "Kaltenleutgebner Grat",
@@ -8,8 +8,10 @@
   "region": "Kaltenleutgebner Tal",
   "region_slug": "kaltenleutgebner-tal",
   "route_count": 18,
+  "is_stub": false,
   "latitude": 48.116353,
   "longitude": 16.213972,
+  "coord_source": "routes",
   "grades": [
    "2",
    "3+",
@@ -23,7 +25,50 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/kaltenleutgebner-tal/kaltenleutgebner-grat"
+  "path": "/crags/kaltenleutgebner-tal/kaltenleutgebner-grat",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=48.116353&mlon=16.213972#map=16/48.116353/16.213972",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Kaltenleutgebner+Grat+Kaltenleutgebner+Tal"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Kaltenleutgebner+Grat+Kaltenleutgebner+Tal"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Kaltenleutgebner+Grat"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Kaltenleutgebner+Grat+Kaltenleutgebner+Tal"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -40,18 +85,19 @@
    "source": "Keltenkalk",
    "latitude": 48.116353,
    "longitude": 16.213972,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e1a5b3bc-adbf-591d-8132-7b5200259a9e",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "kaltenleutgebner-grat",
    "slug": "aller-anfang-ist-schwer",
    "path": "/crags/kaltenleutgebner-tal/kaltenleutgebner-grat#e1a5b3bc-adbf-591d-8132-7b5200259a9e",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Kaltenleutgebner Grat | Annyplatte",
@@ -67,18 +113,19 @@
    "source": "Keltenkalk",
    "latitude": 48.116353,
    "longitude": 16.213972,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3fc9ec00-ee0e-553a-8c48-3f05c5c9badd",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "kaltenleutgebner-grat",
    "slug": "annyplatte",
    "path": "/crags/kaltenleutgebner-tal/kaltenleutgebner-grat#3fc9ec00-ee0e-553a-8c48-3f05c5c9badd",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Kaltenleutgebner Grat | Der Untergriff",
@@ -94,18 +141,19 @@
    "source": "Keltenkalk",
    "latitude": 48.116353,
    "longitude": 16.213972,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8e151000-a3aa-5679-9258-7df4ca814423",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "kaltenleutgebner-grat",
    "slug": "der-untergriff",
    "path": "/crags/kaltenleutgebner-tal/kaltenleutgebner-grat#8e151000-a3aa-5679-9258-7df4ca814423",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Kaltenleutgebner Grat | Direkter Sombrero",
@@ -121,18 +169,19 @@
    "source": "Keltenkalk",
    "latitude": 48.116353,
    "longitude": 16.213972,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "294be0a2-d2c0-51f7-a19f-641943173a3b",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "kaltenleutgebner-grat",
    "slug": "direkter-sombrero",
    "path": "/crags/kaltenleutgebner-tal/kaltenleutgebner-grat#294be0a2-d2c0-51f7-a19f-641943173a3b",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Kaltenleutgebner Grat | Ecuador",
@@ -148,18 +197,19 @@
    "source": "Keltenkalk",
    "latitude": 48.116353,
    "longitude": 16.213972,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "42c1de93-5ef9-588e-a1c2-666b853d4257",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "kaltenleutgebner-grat",
    "slug": "ecuador",
    "path": "/crags/kaltenleutgebner-tal/kaltenleutgebner-grat#42c1de93-5ef9-588e-a1c2-666b853d4257",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Kaltenleutgebner Grat | Gipfelstürmer",
@@ -175,18 +225,19 @@
    "source": "Keltenkalk",
    "latitude": 48.116353,
    "longitude": 16.213972,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ee280bf2-4195-50d2-9f9a-5dfe1ee6fc7e",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "kaltenleutgebner-grat",
    "slug": "gipfelsturmer",
    "path": "/crags/kaltenleutgebner-tal/kaltenleutgebner-grat#ee280bf2-4195-50d2-9f9a-5dfe1ee6fc7e",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Kaltenleutgebner Grat | Gratüberschreitung",
@@ -202,18 +253,19 @@
    "source": "Keltenkalk",
    "latitude": 48.116353,
    "longitude": 16.213972,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5cd14c2d-518f-5a1f-95a2-47cabf87260c",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "kaltenleutgebner-grat",
    "slug": "gratuberschreitung",
    "path": "/crags/kaltenleutgebner-tal/kaltenleutgebner-grat#5cd14c2d-518f-5a1f-95a2-47cabf87260c",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Kaltenleutgebner Grat | Hess Riss",
@@ -229,18 +281,19 @@
    "source": "Keltenkalk",
    "latitude": 48.116353,
    "longitude": 16.213972,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "124449b8-ace5-515c-ac2b-de26b9a34e14",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "kaltenleutgebner-grat",
    "slug": "hess-riss",
    "path": "/crags/kaltenleutgebner-tal/kaltenleutgebner-grat#124449b8-ace5-515c-ac2b-de26b9a34e14",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Kaltenleutgebner Grat | Kuhschelle",
@@ -256,18 +309,19 @@
    "source": "Keltenkalk",
    "latitude": 48.116353,
    "longitude": 16.213972,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "014cc120-14e4-54bd-be27-f720a4defbf5",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "kaltenleutgebner-grat",
    "slug": "kuhschelle",
    "path": "/crags/kaltenleutgebner-tal/kaltenleutgebner-grat#014cc120-14e4-54bd-be27-f720a4defbf5",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Kaltenleutgebner Grat | Norbertsteig",
@@ -283,18 +337,19 @@
    "source": "Keltenkalk",
    "latitude": 48.116353,
    "longitude": 16.213972,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b70313a0-8139-56bc-a2d0-58230eb1d04b",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "kaltenleutgebner-grat",
    "slug": "norbertsteig",
    "path": "/crags/kaltenleutgebner-tal/kaltenleutgebner-grat#b70313a0-8139-56bc-a2d0-58230eb1d04b",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Kaltenleutgebner Grat | Potz Blitz",
@@ -310,18 +365,19 @@
    "source": "Keltenkalk",
    "latitude": 48.116353,
    "longitude": 16.213972,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8d5bf651-7ec1-5823-90f2-8857c6c7eeb0",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "kaltenleutgebner-grat",
    "slug": "potz-blitz",
    "path": "/crags/kaltenleutgebner-tal/kaltenleutgebner-grat#8d5bf651-7ec1-5823-90f2-8857c6c7eeb0",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Kaltenleutgebner Grat | Rampe",
@@ -337,18 +393,19 @@
    "source": "Keltenkalk",
    "latitude": 48.116353,
    "longitude": 16.213972,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "47e8cb41-7b50-51dd-94be-5a7062b58abc",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "kaltenleutgebner-grat",
    "slug": "rampe",
    "path": "/crags/kaltenleutgebner-tal/kaltenleutgebner-grat#47e8cb41-7b50-51dd-94be-5a7062b58abc",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Kaltenleutgebner Grat | Salome",
@@ -364,18 +421,19 @@
    "source": "Keltenkalk",
    "latitude": 48.116353,
    "longitude": 16.213972,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7dffe3be-2e8b-5104-898f-870ac127f227",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "kaltenleutgebner-grat",
    "slug": "salome",
    "path": "/crags/kaltenleutgebner-tal/kaltenleutgebner-grat#7dffe3be-2e8b-5104-898f-870ac127f227",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Kaltenleutgebner Grat | Salvadore",
@@ -391,18 +449,19 @@
    "source": "Keltenkalk",
    "latitude": 48.116353,
    "longitude": 16.213972,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7e47d336-e441-582d-9b11-f4b72ede337c",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "kaltenleutgebner-grat",
    "slug": "salvadore",
    "path": "/crags/kaltenleutgebner-tal/kaltenleutgebner-grat#7e47d336-e441-582d-9b11-f4b72ede337c",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Kaltenleutgebner Grat | Sepperl Überhang",
@@ -418,18 +477,19 @@
    "source": "Keltenkalk",
    "latitude": 48.116353,
    "longitude": 16.213972,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6d7b4c1f-0f5a-51f0-9a47-73b0d44a08e9",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "kaltenleutgebner-grat",
    "slug": "sepperl-uberhang",
    "path": "/crags/kaltenleutgebner-tal/kaltenleutgebner-grat#6d7b4c1f-0f5a-51f0-9a47-73b0d44a08e9",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Kaltenleutgebner Grat | Skottysteig",
@@ -445,18 +505,19 @@
    "source": "Keltenkalk",
    "latitude": 48.116353,
    "longitude": 16.213972,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a3ff5538-1bff-5134-b9a4-afc108f9058b",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "kaltenleutgebner-grat",
    "slug": "skottysteig",
    "path": "/crags/kaltenleutgebner-tal/kaltenleutgebner-grat#a3ff5538-1bff-5134-b9a4-afc108f9058b",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Kaltenleutgebner Grat | Steinnelke",
@@ -472,18 +533,19 @@
    "source": "Keltenkalk",
    "latitude": 48.116353,
    "longitude": 16.213972,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6282775b-4fd4-558d-a72c-0c7d1a79b815",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "kaltenleutgebner-grat",
    "slug": "steinnelke",
    "path": "/crags/kaltenleutgebner-tal/kaltenleutgebner-grat#6282775b-4fd4-558d-a72c-0c7d1a79b815",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Kaltenleutgebner Grat | Zeck",
@@ -499,18 +561,19 @@
    "source": "Keltenkalk",
    "latitude": 48.116353,
    "longitude": 16.213972,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ff44fabb-ff64-5e41-86c4-22445b383b18",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "kaltenleutgebner-grat",
    "slug": "zeck",
    "path": "/crags/kaltenleutgebner-tal/kaltenleutgebner-grat#ff44fabb-ff64-5e41-86c4-22445b383b18",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

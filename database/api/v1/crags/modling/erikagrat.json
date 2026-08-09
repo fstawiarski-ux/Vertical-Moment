@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "723c56a6-9814-55dc-bcbe-ad0fad3d6b81",
   "name": "Erikagrat",
@@ -8,8 +8,10 @@
   "region": "Mödling",
   "region_slug": "modling",
   "route_count": 20,
-  "latitude": null,
-  "longitude": null,
+  "is_stub": false,
+  "latitude": 48.081424,
+  "longitude": 16.275497,
+  "coord_source": "routes",
   "grades": [
    "2+",
    "3",
@@ -27,7 +29,57 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/modling/erikagrat"
+  "path": "/crags/modling/erikagrat",
+  "osm": "relation/18216626",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18216626",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=48.081424&mlon=16.275497#map=16/48.081424/16.275497",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Erikagrat+M%C3%B6dling"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Erikagrat+M%C3%B6dling"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Erikagrat"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Erikagrat+M%C3%B6dling"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -42,20 +94,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "658c74e2-cb3c-529d-afa0-39a2688809f0",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "die-helden-sind-mude",
    "path": "/crags/modling/erikagrat#658c74e2-cb3c-529d-afa0-39a2688809f0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Erika Aktuell",
@@ -69,20 +122,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6ef9809e-c656-5f20-9c25-4b2f28183caa",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "erika-aktuell",
    "path": "/crags/modling/erikagrat#6ef9809e-c656-5f20-9c25-4b2f28183caa",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Erika Verschneidung",
@@ -96,20 +150,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a8bb24d3-0455-5e3f-8506-34da319de2d6",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "erika-verschneidung",
    "path": "/crags/modling/erikagrat#a8bb24d3-0455-5e3f-8506-34da319de2d6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Gratüberschreitung",
@@ -123,20 +178,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "512b6182-4138-5d13-b4c7-eed8bfdbb568",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "gratuberschreitung",
    "path": "/crags/modling/erikagrat#512b6182-4138-5d13-b4c7-eed8bfdbb568",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Hausmeisterehepaar I.R.",
@@ -150,20 +206,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1e565ee3-a3fc-5e9c-a476-7ddeae1f677b",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "hausmeisterehepaar-i-r",
    "path": "/crags/modling/erikagrat#1e565ee3-a3fc-5e9c-a476-7ddeae1f677b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | I Am Solo",
@@ -177,20 +234,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4da33b98-3eec-5e45-8ca1-6443902f3a53",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "i-am-solo",
    "path": "/crags/modling/erikagrat#4da33b98-3eec-5e45-8ca1-6443902f3a53",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Kaltfronterl",
@@ -204,20 +262,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c6877cc0-11a7-5aa0-8acc-7a4e133e5ae4",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "kaltfronterl",
    "path": "/crags/modling/erikagrat#c6877cc0-11a7-5aa0-8acc-7a4e133e5ae4",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Kamin",
@@ -231,20 +290,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0ed62ce4-f47c-5a45-ba89-d824a1eab151",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "kamin",
    "path": "/crags/modling/erikagrat#0ed62ce4-f47c-5a45-ba89-d824a1eab151",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Listig",
@@ -258,20 +318,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b5091bba-5398-51db-ab6f-d4b097c0b384",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "listig",
    "path": "/crags/modling/erikagrat#b5091bba-5398-51db-ab6f-d4b097c0b384",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Ozon Go Home",
@@ -285,20 +346,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "068074c8-f2a9-504e-8bc8-4b2f6b77f717",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "ozon-go-home",
    "path": "/crags/modling/erikagrat#068074c8-f2a9-504e-8bc8-4b2f6b77f717",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Pater Quirin Steig",
@@ -312,20 +374,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8cc51995-fb15-5e56-aab2-af3aab44c4b0",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "pater-quirin-steig",
    "path": "/crags/modling/erikagrat#8cc51995-fb15-5e56-aab2-af3aab44c4b0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Rennschnecke",
@@ -339,20 +402,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "97494235-c755-5058-9e7c-1aa344650186",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "rennschnecke",
    "path": "/crags/modling/erikagrat#97494235-c755-5058-9e7c-1aa344650186",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Rolfisteig",
@@ -366,20 +430,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8264f4f2-7010-5cb5-b602-3a7fdb2ccb80",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "rolfisteig",
    "path": "/crags/modling/erikagrat#8264f4f2-7010-5cb5-b602-3a7fdb2ccb80",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Salzstangerl",
@@ -393,20 +458,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5bcdbe0e-1c74-571c-a55d-d528b8aa5660",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "salzstangerl",
    "path": "/crags/modling/erikagrat#5bcdbe0e-1c74-571c-a55d-d528b8aa5660",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Steig Genau",
@@ -420,20 +486,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6b1d14ca-f1bb-51d1-ac5a-16763a028744",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "steig-genau",
    "path": "/crags/modling/erikagrat#6b1d14ca-f1bb-51d1-ac5a-16763a028744",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Steirerbua",
@@ -447,20 +514,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5ac1d706-89c0-509d-a789-196f1592bfd1",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "steirerbua",
    "path": "/crags/modling/erikagrat#5ac1d706-89c0-509d-a789-196f1592bfd1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Sunshine",
@@ -474,20 +542,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7f2936d4-d753-59a5-9ce6-a78b5d91daeb",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "sunshine",
    "path": "/crags/modling/erikagrat#7f2936d4-d753-59a5-9ce6-a78b5d91daeb",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Tiroler Bua",
@@ -501,20 +570,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cc6e9a78-4013-5a92-a3e7-4cedb29f5014",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "tiroler-bua",
    "path": "/crags/modling/erikagrat#cc6e9a78-4013-5a92-a3e7-4cedb29f5014",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Wotan Wartet Nicht",
@@ -528,20 +598,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c4a88041-9d45-54a5-a36e-2bfd70cd2d3d",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "wotan-wartet-nicht",
    "path": "/crags/modling/erikagrat#c4a88041-9d45-54a5-a36e-2bfd70cd2d3d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Übung mit Erika",
@@ -555,20 +626,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0df72e9b-08c5-51e8-9668-bf5032fa50ae",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "ubung-mit-erika",
    "path": "/crags/modling/erikagrat#0df72e9b-08c5-51e8-9668-bf5032fa50ae",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "6ca40275-b9e1-5d21-b610-bbb97c154dfc",
   "name": "Thalhoferkanzel",
@@ -8,8 +8,10 @@
   "region": "Hocheck",
   "region_slug": "hocheck",
   "route_count": 17,
-  "latitude": null,
-  "longitude": null,
+  "is_stub": false,
+  "latitude": 48.007239,
+  "longitude": 16.035987,
+  "coord_source": "routes",
   "grades": [
    "4+",
    "5",
@@ -26,7 +28,57 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/hocheck/thalhoferkanzel"
+  "path": "/crags/hocheck/thalhoferkanzel",
+  "osm": "relation/18166483",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18166483",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=48.007239&mlon=16.035987#map=16/48.007239/16.035987",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Thalhoferkanzel+Hocheck"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Thalhoferkanzel+Hocheck"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Thalhoferkanzel"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Thalhoferkanzel+Hocheck"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -41,20 +93,21 @@
    "crag": "Thalhoferkanzel",
    "wall": "Thalhoferkanzel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007239,
+   "longitude": 16.035987,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a787691c-bef2-59d6-b8f9-7aa851fd3a7c",
    "region_slug": "hocheck",
    "crag_slug": "thalhoferkanzel",
    "slug": "beichtstuhl",
    "path": "/crags/hocheck/thalhoferkanzel#a787691c-bef2-59d6-b8f9-7aa851fd3a7c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Thalhoferkanzel | Bin schon wieder weg",
@@ -68,20 +121,21 @@
    "crag": "Thalhoferkanzel",
    "wall": "Thalhoferkanzel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007239,
+   "longitude": 16.035987,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0fe2ea55-a1dd-577b-ab8f-a20c3b2d5794",
    "region_slug": "hocheck",
    "crag_slug": "thalhoferkanzel",
    "slug": "bin-schon-wieder-weg",
    "path": "/crags/hocheck/thalhoferkanzel#0fe2ea55-a1dd-577b-ab8f-a20c3b2d5794",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Thalhoferkanzel | Blutiger Samstag",
@@ -95,20 +149,21 @@
    "crag": "Thalhoferkanzel",
    "wall": "Thalhoferkanzel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007239,
+   "longitude": 16.035987,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2f39c207-fcfc-530c-9374-e6e0a0d7ab38",
    "region_slug": "hocheck",
    "crag_slug": "thalhoferkanzel",
    "slug": "blutiger-samstag",
    "path": "/crags/hocheck/thalhoferkanzel#2f39c207-fcfc-530c-9374-e6e0a0d7ab38",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Thalhoferkanzel | Der schmale Grat",
@@ -122,20 +177,21 @@
    "crag": "Thalhoferkanzel",
    "wall": "Thalhoferkanzel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007239,
+   "longitude": 16.035987,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ac279880-505a-5557-b9f3-cdb6c8727d63",
    "region_slug": "hocheck",
    "crag_slug": "thalhoferkanzel",
    "slug": "der-schmale-grat",
    "path": "/crags/hocheck/thalhoferkanzel#ac279880-505a-5557-b9f3-cdb6c8727d63",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Thalhoferkanzel | Die Kollekte",
@@ -149,20 +205,21 @@
    "crag": "Thalhoferkanzel",
    "wall": "Thalhoferkanzel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007239,
+   "longitude": 16.035987,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "23712af4-3fce-5d19-b475-460527d8453d",
    "region_slug": "hocheck",
    "crag_slug": "thalhoferkanzel",
    "slug": "die-kollekte",
    "path": "/crags/hocheck/thalhoferkanzel#23712af4-3fce-5d19-b475-460527d8453d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Thalhoferkanzel | Die schmale Verschneidung",
@@ -176,20 +233,21 @@
    "crag": "Thalhoferkanzel",
    "wall": "Thalhoferkanzel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007239,
+   "longitude": 16.035987,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "64c58d8f-340a-55bc-9758-b815073a189e",
    "region_slug": "hocheck",
    "crag_slug": "thalhoferkanzel",
    "slug": "die-schmale-verschneidung",
    "path": "/crags/hocheck/thalhoferkanzel#64c58d8f-340a-55bc-9758-b815073a189e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Thalhoferkanzel | Ho Ruck Verschneidung",
@@ -203,20 +261,21 @@
    "crag": "Thalhoferkanzel",
    "wall": "Thalhoferkanzel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007239,
+   "longitude": 16.035987,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ccf33e36-cdd5-59a9-83a4-892ad0c480bd",
    "region_slug": "hocheck",
    "crag_slug": "thalhoferkanzel",
    "slug": "ho-ruck-verschneidung",
    "path": "/crags/hocheck/thalhoferkanzel#ccf33e36-cdd5-59a9-83a4-892ad0c480bd",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Thalhoferkanzel | Keep Smiling",
@@ -230,20 +289,21 @@
    "crag": "Thalhoferkanzel",
    "wall": "Thalhoferkanzel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007239,
+   "longitude": 16.035987,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c4dcc387-a219-5a96-a753-11a04f9e021e",
    "region_slug": "hocheck",
    "crag_slug": "thalhoferkanzel",
    "slug": "keep-smiling",
    "path": "/crags/hocheck/thalhoferkanzel#c4dcc387-a219-5a96-a753-11a04f9e021e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Thalhoferkanzel | Let it be",
@@ -257,20 +317,21 @@
    "crag": "Thalhoferkanzel",
    "wall": "Thalhoferkanzel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007239,
+   "longitude": 16.035987,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c2fc90ab-a299-5150-8328-f3e8c962555b",
    "region_slug": "hocheck",
    "crag_slug": "thalhoferkanzel",
    "slug": "let-it-be",
    "path": "/crags/hocheck/thalhoferkanzel#c2fc90ab-a299-5150-8328-f3e8c962555b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Thalhoferkanzel | Moralpredigt",
@@ -284,20 +345,21 @@
    "crag": "Thalhoferkanzel",
    "wall": "Thalhoferkanzel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007239,
+   "longitude": 16.035987,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a3317b20-0531-59a2-9f9e-d809ca8670e3",
    "region_slug": "hocheck",
    "crag_slug": "thalhoferkanzel",
    "slug": "moralpredigt",
    "path": "/crags/hocheck/thalhoferkanzel#a3317b20-0531-59a2-9f9e-d809ca8670e3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Thalhoferkanzel | Rackerling",
@@ -311,20 +373,21 @@
    "crag": "Thalhoferkanzel",
    "wall": "Thalhoferkanzel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007239,
+   "longitude": 16.035987,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "20a604d8-3d50-5ab8-8852-46cccb5adf57",
    "region_slug": "hocheck",
    "crag_slug": "thalhoferkanzel",
    "slug": "rackerling",
    "path": "/crags/hocheck/thalhoferkanzel#20a604d8-3d50-5ab8-8852-46cccb5adf57",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Thalhoferkanzel | Schneetreiben",
@@ -338,20 +401,21 @@
    "crag": "Thalhoferkanzel",
    "wall": "Thalhoferkanzel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007239,
+   "longitude": 16.035987,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "afacbd82-df55-5fc3-8f09-5a60cdbf5b5f",
    "region_slug": "hocheck",
    "crag_slug": "thalhoferkanzel",
    "slug": "schneetreiben",
    "path": "/crags/hocheck/thalhoferkanzel#afacbd82-df55-5fc3-8f09-5a60cdbf5b5f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Thalhoferkanzel | Sonntagspredigt",
@@ -365,20 +429,21 @@
    "crag": "Thalhoferkanzel",
    "wall": "Thalhoferkanzel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007239,
+   "longitude": 16.035987,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "728616fd-3fa7-58b9-9a5b-a0bcf4e4fd00",
    "region_slug": "hocheck",
    "crag_slug": "thalhoferkanzel",
    "slug": "sonntagspredigt",
    "path": "/crags/hocheck/thalhoferkanzel#728616fd-3fa7-58b9-9a5b-a0bcf4e4fd00",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Thalhoferkanzel | Tres Dure - Drehtür",
@@ -392,20 +457,21 @@
    "crag": "Thalhoferkanzel",
    "wall": "Thalhoferkanzel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007239,
+   "longitude": 16.035987,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2d678fc3-9912-521b-9b47-7d719aae4093",
    "region_slug": "hocheck",
    "crag_slug": "thalhoferkanzel",
    "slug": "tres-dure-drehtur",
    "path": "/crags/hocheck/thalhoferkanzel#2d678fc3-9912-521b-9b47-7d719aae4093",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Thalhoferkanzel | Wer das Grauen sucht",
@@ -419,20 +485,21 @@
    "crag": "Thalhoferkanzel",
    "wall": "Thalhoferkanzel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007239,
+   "longitude": 16.035987,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "94559b24-263c-517e-88d9-ea9a7c438811",
    "region_slug": "hocheck",
    "crag_slug": "thalhoferkanzel",
    "slug": "wer-das-grauen-sucht",
    "path": "/crags/hocheck/thalhoferkanzel#94559b24-263c-517e-88d9-ea9a7c438811",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Thalhoferkanzel | Wer suchet der findet",
@@ -446,20 +513,21 @@
    "crag": "Thalhoferkanzel",
    "wall": "Thalhoferkanzel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007239,
+   "longitude": 16.035987,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "91707a8d-4fff-5fcc-a84c-23468e9c4993",
    "region_slug": "hocheck",
    "crag_slug": "thalhoferkanzel",
    "slug": "wer-suchet-der-findet",
    "path": "/crags/hocheck/thalhoferkanzel#91707a8d-4fff-5fcc-a84c-23468e9c4993",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Thalhoferkanzel | Yellow Submarine",
@@ -473,20 +541,21 @@
    "crag": "Thalhoferkanzel",
    "wall": "Thalhoferkanzel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007239,
+   "longitude": 16.035987,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6dda4a94-2010-5013-ade8-76763bd07735",
    "region_slug": "hocheck",
    "crag_slug": "thalhoferkanzel",
    "slug": "yellow-submarine",
    "path": "/crags/hocheck/thalhoferkanzel#6dda4a94-2010-5013-ade8-76763bd07735",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

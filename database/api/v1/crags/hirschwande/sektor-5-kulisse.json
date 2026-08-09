@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "59e3f33d-0ddb-5a7c-b0d1-45421761979b",
   "name": "Sektor 5 - Kulisse",
@@ -8,8 +8,10 @@
   "region": "Hirschwände",
   "region_slug": "hirschwande",
   "route_count": 48,
+  "is_stub": false,
   "latitude": null,
   "longitude": null,
+  "coord_source": null,
   "grades": [
    "10-",
    "10/10+",
@@ -34,7 +36,43 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/hirschwande/sektor-5-kulisse"
+  "path": "/crags/hirschwande/sektor-5-kulisse",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Sektor+5+-+Kulisse+Hirschw%C3%A4nde"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Sektor+5+-+Kulisse+Hirschw%C3%A4nde"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Sektor+5+-+Kulisse"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Sektor+5+-+Kulisse+Hirschw%C3%A4nde"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -51,18 +89,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c7d62f9d-09dd-57e5-a93f-9429f75c4126",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "amasake",
    "path": "/crags/hirschwande/sektor-5-kulisse#c7d62f9d-09dd-57e5-a93f-9429f75c4126",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Anarchoprak",
@@ -78,18 +117,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "506071af-0ab8-57e7-adca-9383cb9649bc",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "anarchoprak",
    "path": "/crags/hirschwande/sektor-5-kulisse#506071af-0ab8-57e7-adca-9383cb9649bc",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | B-Boulder",
@@ -105,18 +145,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9e9ff1cf-ad13-593f-94e3-18372ad985f9",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "b-boulder",
    "path": "/crags/hirschwande/sektor-5-kulisse#9e9ff1cf-ad13-593f-94e3-18372ad985f9",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Bad Boy Boogie",
@@ -132,18 +173,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a3b1ef4c-9dfd-5078-962a-ccfeca59592f",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "bad-boy-boogie",
    "path": "/crags/hirschwande/sektor-5-kulisse#a3b1ef4c-9dfd-5078-962a-ccfeca59592f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Barbietour",
@@ -159,18 +201,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "db99160c-1180-5baf-9ed4-49bf8d5febb6",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "barbietour",
    "path": "/crags/hirschwande/sektor-5-kulisse#db99160c-1180-5baf-9ed4-49bf8d5febb6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Ccenturio",
@@ -186,18 +229,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f87dffbe-ba83-58d1-b52c-a6404a9c88fd",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "ccenturio",
    "path": "/crags/hirschwande/sektor-5-kulisse#f87dffbe-ba83-58d1-b52c-a6404a9c88fd",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Chaosgasse 92",
@@ -213,18 +257,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "542f19e2-c003-5d59-8ec8-7d336daa36b3",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "chaosgasse-92",
    "path": "/crags/hirschwande/sektor-5-kulisse#542f19e2-c003-5d59-8ec8-7d336daa36b3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Cierne Dni",
@@ -240,18 +285,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "766ac469-f91b-51e3-a166-15d11fdc4fa9",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "cierne-dni",
    "path": "/crags/hirschwande/sektor-5-kulisse#766ac469-f91b-51e3-a166-15d11fdc4fa9",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Denken kannst da schenkn",
@@ -267,18 +313,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f733cfc5-9e09-5e4f-a7a4-dc877a73b723",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "denken-kannst-da-schenkn",
    "path": "/crags/hirschwande/sektor-5-kulisse#f733cfc5-9e09-5e4f-a7a4-dc877a73b723",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Faites vous jeux",
@@ -294,18 +341,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8236c8ee-aaae-531e-9e76-71cb941bff51",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "faites-vous-jeux",
    "path": "/crags/hirschwande/sektor-5-kulisse#8236c8ee-aaae-531e-9e76-71cb941bff51",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Gomphidius",
@@ -321,18 +369,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b3975a60-58f6-56fe-9bda-3bfefb4a760b",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "gomphidius",
    "path": "/crags/hirschwande/sektor-5-kulisse#b3975a60-58f6-56fe-9bda-3bfefb4a760b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Grantig Kantig",
@@ -348,18 +397,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e18ccd88-098f-5e51-8aef-cfbf184da318",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "grantig-kantig",
    "path": "/crags/hirschwande/sektor-5-kulisse#e18ccd88-098f-5e51-8aef-cfbf184da318",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Happy Birthday Dr.Kromer",
@@ -375,18 +425,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "61444c00-b86c-55b9-bfed-eeac684eb58b",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "happy-birthday-dr-kromer",
    "path": "/crags/hirschwande/sektor-5-kulisse#61444c00-b86c-55b9-bfed-eeac684eb58b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Hell Ain't a Bad Place to Be",
@@ -402,18 +453,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9554020d-3017-530d-bcd2-538fe4d869e0",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "hell-ain-t-a-bad-place-to-be",
    "path": "/crags/hirschwande/sektor-5-kulisse#9554020d-3017-530d-bcd2-538fe4d869e0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Holde Täuschung",
@@ -429,18 +481,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "503efd56-7bae-5859-a918-0cf5c1248972",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "holde-tauschung",
    "path": "/crags/hirschwande/sektor-5-kulisse#503efd56-7bae-5859-a918-0cf5c1248972",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Immer nur Lächeln",
@@ -456,18 +509,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c5f0167d-25f1-5755-bece-08a0fdc6dcd6",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "immer-nur-lacheln",
    "path": "/crags/hirschwande/sektor-5-kulisse#c5f0167d-25f1-5755-bece-08a0fdc6dcd6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Joyfight",
@@ -483,18 +537,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "aa511189-1be3-5042-914c-45ec86dc8999",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "joyfight",
    "path": "/crags/hirschwande/sektor-5-kulisse#aa511189-1be3-5042-914c-45ec86dc8999",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Joyride",
@@ -510,18 +565,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "33f290a9-6580-5e97-9223-2d6efa5e3872",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "joyride",
    "path": "/crags/hirschwande/sektor-5-kulisse#33f290a9-6580-5e97-9223-2d6efa5e3872",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Jägermeisterkamin",
@@ -537,18 +593,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4f63ba3d-2e54-5062-8d29-43d71f43d119",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "jagermeisterkamin",
    "path": "/crags/hirschwande/sektor-5-kulisse#4f63ba3d-2e54-5062-8d29-43d71f43d119",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Legionär",
@@ -564,18 +621,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e87b3379-a416-53f7-beca-4c0dc9a4e017",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "legionar",
    "path": "/crags/hirschwande/sektor-5-kulisse#e87b3379-a416-53f7-beca-4c0dc9a4e017",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Liebstling",
@@ -591,18 +649,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6d263365-2fc5-5727-85e4-b7f69aefc134",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "liebstling",
    "path": "/crags/hirschwande/sektor-5-kulisse#6d263365-2fc5-5727-85e4-b7f69aefc134",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Mach dich leicht",
@@ -618,18 +677,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9357f1dc-4e4e-5cfe-9887-c2ba2c44580a",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "mach-dich-leicht",
    "path": "/crags/hirschwande/sektor-5-kulisse#9357f1dc-4e4e-5cfe-9887-c2ba2c44580a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Mir is Wurscht",
@@ -645,18 +705,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "46b481ab-4e03-5380-801f-de803492dac5",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "mir-is-wurscht",
    "path": "/crags/hirschwande/sektor-5-kulisse#46b481ab-4e03-5380-801f-de803492dac5",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Moria",
@@ -672,18 +733,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "dd41b4da-2de4-5dab-97a4-3f3042f9f84d",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "moria",
    "path": "/crags/hirschwande/sektor-5-kulisse#dd41b4da-2de4-5dab-97a4-3f3042f9f84d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | No Way Back",
@@ -699,18 +761,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b89c9cbe-26b0-57b4-9747-40ad4e089fbd",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "no-way-back",
    "path": "/crags/hirschwande/sektor-5-kulisse#b89c9cbe-26b0-57b4-9747-40ad4e089fbd",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Ode Profanum Vulgos et Arceo",
@@ -726,18 +789,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c317dd2a-0ac0-52f2-b8c6-1962a066cc59",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "ode-profanum-vulgos-et-arceo",
    "path": "/crags/hirschwande/sektor-5-kulisse#c317dd2a-0ac0-52f2-b8c6-1962a066cc59",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Originaleinstieg",
@@ -753,18 +817,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a624b1c4-878c-5a81-a0a4-867ef837e3c7",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "originaleinstieg",
    "path": "/crags/hirschwande/sektor-5-kulisse#a624b1c4-878c-5a81-a0a4-867ef837e3c7",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Originaltrick",
@@ -780,18 +845,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6492092f-79f8-5efa-a1b1-a05b26ae2886",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "originaltrick",
    "path": "/crags/hirschwande/sektor-5-kulisse#6492092f-79f8-5efa-a1b1-a05b26ae2886",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Plattenspiele",
@@ -807,18 +873,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "88c08e15-cfb1-5d76-964a-2600df73a7dd",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "plattenspiele",
    "path": "/crags/hirschwande/sektor-5-kulisse#88c08e15-cfb1-5d76-964a-2600df73a7dd",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Procaine",
@@ -834,18 +901,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a0f15370-e66f-5088-8659-a11d6a00e6bd",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "procaine",
    "path": "/crags/hirschwande/sektor-5-kulisse#a0f15370-e66f-5088-8659-a11d6a00e6bd",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Pulvis et Umbra",
@@ -861,18 +929,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d4e70ad0-778c-50ea-8385-a429b734c7d4",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "pulvis-et-umbra",
    "path": "/crags/hirschwande/sektor-5-kulisse#d4e70ad0-778c-50ea-8385-a429b734c7d4",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Riesenkamin",
@@ -888,18 +957,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6215795f-3fe4-5bee-8845-477471ed32bc",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "riesenkamin",
    "path": "/crags/hirschwande/sektor-5-kulisse#6215795f-3fe4-5bee-8845-477471ed32bc",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Sadistenbehelf",
@@ -915,18 +985,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "db657b04-f16a-5eb8-85a8-c256d2518975",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "sadistenbehelf",
    "path": "/crags/hirschwande/sektor-5-kulisse#db657b04-f16a-5eb8-85a8-c256d2518975",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Same Player Tries Again",
@@ -942,18 +1013,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7a8d822d-cb99-5bd6-8a9b-b48251396fca",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "same-player-tries-again",
    "path": "/crags/hirschwande/sektor-5-kulisse#7a8d822d-cb99-5bd6-8a9b-b48251396fca",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Scherzpfeiferl",
@@ -969,18 +1041,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "72f3ad2e-2c33-546e-98c6-8d10fd61e413",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "scherzpfeiferl",
    "path": "/crags/hirschwande/sektor-5-kulisse#72f3ad2e-2c33-546e-98c6-8d10fd61e413",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Schnurzilein",
@@ -996,18 +1069,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0225a4f1-ad2a-5dd3-bccd-d47b632a6671",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "schnurzilein",
    "path": "/crags/hirschwande/sektor-5-kulisse#0225a4f1-ad2a-5dd3-bccd-d47b632a6671",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Schräges Gelände",
@@ -1023,18 +1097,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9df5412b-f97c-5e0a-942f-a4d975083d0f",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "schrages-gelande",
    "path": "/crags/hirschwande/sektor-5-kulisse#9df5412b-f97c-5e0a-942f-a4d975083d0f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Semirough",
@@ -1050,18 +1125,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "98d933de-3fa0-532b-8dfd-53897a5a31ce",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "semirough",
    "path": "/crags/hirschwande/sektor-5-kulisse#98d933de-3fa0-532b-8dfd-53897a5a31ce",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Singt mir ein Lied",
@@ -1077,18 +1153,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9dd94df3-2c0e-5350-bc25-5d04929b6957",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "singt-mir-ein-lied",
    "path": "/crags/hirschwande/sektor-5-kulisse#9dd94df3-2c0e-5350-bc25-5d04929b6957",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Sonnendiagonale",
@@ -1104,18 +1181,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4f349c5a-80c2-545e-8be4-ef472a62c82c",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "sonnendiagonale",
    "path": "/crags/hirschwande/sektor-5-kulisse#4f349c5a-80c2-545e-8be4-ef472a62c82c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Strenger Aufriss",
@@ -1131,18 +1209,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cc55591a-9caf-5211-bac9-cfb8ff6e8e63",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "strenger-aufriss",
    "path": "/crags/hirschwande/sektor-5-kulisse#cc55591a-9caf-5211-bac9-cfb8ff6e8e63",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Ut Aliquid Fieri Videatur",
@@ -1158,18 +1237,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2ac3c646-60dd-5f9e-96ad-fb50b1d2d43c",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "ut-aliquid-fieri-videatur",
    "path": "/crags/hirschwande/sektor-5-kulisse#2ac3c646-60dd-5f9e-96ad-fb50b1d2d43c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Var (Kulisse a)",
@@ -1185,18 +1265,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2a2f0dbe-c4bc-50e0-a168-bfe4711a6e32",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "var-kulisse-a",
    "path": "/crags/hirschwande/sektor-5-kulisse#2a2f0dbe-c4bc-50e0-a168-bfe4711a6e32",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Var (Kulisse b)",
@@ -1212,18 +1293,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4f6392a6-2cd9-5e5d-a872-8f5f69b20e48",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "var-kulisse-b",
    "path": "/crags/hirschwande/sektor-5-kulisse#4f6392a6-2cd9-5e5d-a872-8f5f69b20e48",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Verlängerung (Kulisse)",
@@ -1239,18 +1321,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "604e4dab-3978-5f44-be20-f6e1de6aec85",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "verlangerung-kulisse",
    "path": "/crags/hirschwande/sektor-5-kulisse#604e4dab-3978-5f44-be20-f6e1de6aec85",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Zaubernuss",
@@ -1266,18 +1349,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "999fcd75-1e83-5a70-aac8-93a99c87141e",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "zaubernuss",
    "path": "/crags/hirschwande/sektor-5-kulisse#999fcd75-1e83-5a70-aac8-93a99c87141e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Zaubernussini",
@@ -1293,18 +1377,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "27732d31-8150-577b-8656-a1e03642d1fd",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "zaubernussini",
    "path": "/crags/hirschwande/sektor-5-kulisse#27732d31-8150-577b-8656-a1e03642d1fd",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 5 - Kulisse | Zwergenfalle",
@@ -1320,18 +1405,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "94377d45-5a2a-5283-b3ba-84a1fdc138a0",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-5-kulisse",
    "slug": "zwergenfalle",
    "path": "/crags/hirschwande/sektor-5-kulisse#94377d45-5a2a-5283-b3ba-84a1fdc138a0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }

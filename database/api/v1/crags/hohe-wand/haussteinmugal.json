@@ -1,15 +1,17 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "70c84b3c-64b6-5925-a4a2-f36eac46cd89",
   "name": "Haussteinmugal",
   "slug": "haussteinmugal",
   "region": "Hohe Wand",
   "region_slug": "hohe-wand",
-  "route_count": 34,
+  "route_count": 32,
+  "is_stub": false,
   "latitude": null,
   "longitude": null,
+  "coord_source": null,
   "grades": [
    "3+",
    "3-",
@@ -31,10 +33,45 @@
    "9"
   ],
   "disciplines": [
-   "multipitch",
    "sport"
   ],
-  "path": "/crags/hohe-wand/haussteinmugal"
+  "path": "/crags/hohe-wand/haussteinmugal",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Haussteinmugal+Hohe+Wand"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Haussteinmugal+Hohe+Wand"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Haussteinmugal"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Haussteinmugal+Hohe+Wand"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -51,18 +88,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "88d2cb38-71a0-5b37-b5d2-8335d6b4d5d1",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "abschied-von-pernitz",
    "path": "/crags/hohe-wand/haussteinmugal#88d2cb38-71a0-5b37-b5d2-8335d6b4d5d1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Ausstieg",
@@ -78,18 +116,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ce5f0ba9-a133-50a3-96d0-f8289b9a9751",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "ausstieg",
    "path": "/crags/hohe-wand/haussteinmugal#ce5f0ba9-a133-50a3-96d0-f8289b9a9751",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Baumblade",
@@ -105,18 +144,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "faf7a5b8-d084-5e5d-ac6b-037f93d4badf",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "baumblade",
    "path": "/crags/hohe-wand/haussteinmugal#faf7a5b8-d084-5e5d-ac6b-037f93d4badf",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Bier am AMS",
@@ -132,18 +172,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "573fbe9f-606e-5bae-ad9e-6f2cc7708e84",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "bier-am-ams",
    "path": "/crags/hohe-wand/haussteinmugal#573fbe9f-606e-5bae-ad9e-6f2cc7708e84",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Brutal",
@@ -159,18 +200,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fadadbd6-6e3f-50f2-97e3-bcc25e7740c6",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "brutal",
    "path": "/crags/hohe-wand/haussteinmugal#fadadbd6-6e3f-50f2-97e3-bcc25e7740c6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Deppal",
@@ -186,18 +228,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "302bde65-8888-5a8e-a05f-4433a158d6a2",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "deppal",
    "path": "/crags/hohe-wand/haussteinmugal#302bde65-8888-5a8e-a05f-4433a158d6a2",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Der billige Jakob",
@@ -213,18 +256,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5094abc6-ff7f-5aa7-b045-7ddf447035a0",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "der-billige-jakob",
    "path": "/crags/hohe-wand/haussteinmugal#5094abc6-ff7f-5aa7-b045-7ddf447035a0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Diagonal",
@@ -240,18 +284,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6a251614-8846-501f-8694-a1eefd111e42",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "diagonal",
    "path": "/crags/hohe-wand/haussteinmugal#6a251614-8846-501f-8694-a1eefd111e42",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | E-Var",
@@ -267,18 +312,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3bf28093-01b8-570a-91b4-4caab8acef56",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "e-var",
    "path": "/crags/hohe-wand/haussteinmugal#3bf28093-01b8-570a-91b4-4caab8acef56",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Endlich Hocknstad",
@@ -294,18 +340,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1018aca3-2b2d-56a1-87aa-05fef263d40f",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "endlich-hocknstad",
    "path": "/crags/hohe-wand/haussteinmugal#1018aca3-2b2d-56a1-87aa-05fef263d40f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Fluchtburg",
@@ -321,18 +368,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d091f94c-9c9a-53dd-a7a7-44cb88e913b5",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "fluchtburg",
    "path": "/crags/hohe-wand/haussteinmugal#d091f94c-9c9a-53dd-a7a7-44cb88e913b5",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Genial",
@@ -348,18 +396,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "17da8e41-d4fb-5d10-9877-5df8f5204a4c",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "genial",
    "path": "/crags/hohe-wand/haussteinmugal#17da8e41-d4fb-5d10-9877-5df8f5204a4c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Halal",
@@ -375,18 +424,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fd81ceea-a787-5cba-bae4-938c42d6c08f",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "halal",
    "path": "/crags/hohe-wand/haussteinmugal#fd81ceea-a787-5cba-bae4-938c42d6c08f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | I'm God, Like Lil B",
@@ -402,45 +452,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "580b59d8-22a9-5cf0-bff1-bcb9d55a3537",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "i-m-god-like-lil-b",
    "path": "/crags/hohe-wand/haussteinmugal#580b59d8-22a9-5cf0-bff1-bcb9d55a3537",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
-  },
-  {
-   "row_key": "Hohe Wand | Haussteinmugal | Karnergeist",
-   "name": "Karnergeist",
-   "grade": "6",
-   "grade_band": "5-7",
-   "grade_system": "UIAA",
-   "discipline": "multipitch",
-   "region": "Hohe Wand",
-   "area": "Hohe Wand",
-   "crag": "Haussteinmugal",
-   "wall": "Haussteinmugal",
-   "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
-   "notion_page_id": null,
-   "workflow_status": "to create",
-   "provenance": [
-    "master"
-   ],
-   "id": "1721f4f8-98b4-5933-b0e8-bfc8f15246f1",
-   "region_slug": "hohe-wand",
-   "crag_slug": "haussteinmugal",
-   "slug": "karnergeist",
-   "path": "/crags/hohe-wand/haussteinmugal#1721f4f8-98b4-5933-b0e8-bfc8f15246f1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Katastrophal",
@@ -456,18 +480,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "42841afd-198b-5299-87aa-965840c6f5ad",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "katastrophal",
    "path": "/crags/hohe-wand/haussteinmugal#42841afd-198b-5299-87aa-965840c6f5ad",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Kausal",
@@ -483,18 +508,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1032f612-6033-522b-9299-f88e984a0205",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "kausal",
    "path": "/crags/hohe-wand/haussteinmugal#1032f612-6033-522b-9299-f88e984a0205",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Kinderversteck",
@@ -510,18 +536,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "bc0653f1-130b-57d5-bce0-dd46b750b917",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "kinderversteck",
    "path": "/crags/hohe-wand/haussteinmugal#bc0653f1-130b-57d5-bce0-dd46b750b917",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Lethal",
@@ -537,18 +564,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "97dc8b72-e599-5d1a-8c88-7b0ec2d7022f",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "lethal",
    "path": "/crags/hohe-wand/haussteinmugal#97dc8b72-e599-5d1a-8c88-7b0ec2d7022f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Mental",
@@ -564,18 +592,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "00ccdcd1-3628-5666-a5fb-e2be98a57a3f",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "mental",
    "path": "/crags/hohe-wand/haussteinmugal#00ccdcd1-3628-5666-a5fb-e2be98a57a3f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Miraplatte",
@@ -591,18 +620,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "bb1ed173-1a15-57ad-8b98-bd5c91c3574b",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "miraplatte",
    "path": "/crags/hohe-wand/haussteinmugal#bb1ed173-1a15-57ad-8b98-bd5c91c3574b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Miraverschneidung",
@@ -618,18 +648,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "af97eb0c-a173-5cf7-809e-55441b7c284d",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "miraverschneidung",
    "path": "/crags/hohe-wand/haussteinmugal#af97eb0c-a173-5cf7-809e-55441b7c284d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Neuer Wein",
@@ -645,18 +676,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "dc3dfbf4-6c01-59fe-89f3-5b9e848b44dd",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "neuer-wein",
    "path": "/crags/hohe-wand/haussteinmugal#dc3dfbf4-6c01-59fe-89f3-5b9e848b44dd",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Rissal",
@@ -672,18 +704,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7d65d77f-5545-50da-ade2-dde9ca05a677",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "rissal",
    "path": "/crags/hohe-wand/haussteinmugal#7d65d77f-5545-50da-ade2-dde9ca05a677",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Runse",
@@ -699,18 +732,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cd60b2e5-c991-5280-88b3-4b845e528f10",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "runse",
    "path": "/crags/hohe-wand/haussteinmugal#cd60b2e5-c991-5280-88b3-4b845e528f10",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Schnappal",
@@ -726,45 +760,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2814284d-8259-52e6-9776-af4171d20578",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "schnappal",
    "path": "/crags/hohe-wand/haussteinmugal#2814284d-8259-52e6-9776-af4171d20578",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
-  },
-  {
-   "row_key": "Hohe Wand | Haussteinmugal | Sepp Mayerl Gedächtnisführe",
-   "name": "Sepp Mayerl Gedächtnisführe",
-   "grade": "7-",
-   "grade_band": "5-7",
-   "grade_system": "UIAA",
-   "discipline": "multipitch",
-   "region": "Hohe Wand",
-   "area": "Hohe Wand",
-   "crag": "Haussteinmugal",
-   "wall": "Haussteinmugal",
-   "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
-   "notion_page_id": null,
-   "workflow_status": "to create",
-   "provenance": [
-    "master"
-   ],
-   "id": "238ffe34-0721-5e4d-bab6-c777c45859bc",
-   "region_slug": "hohe-wand",
-   "crag_slug": "haussteinmugal",
-   "slug": "sepp-mayerl-gedachtnisfuhre",
-   "path": "/crags/hohe-wand/haussteinmugal#238ffe34-0721-5e4d-bab6-c777c45859bc",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Sonnenbrand",
@@ -780,18 +788,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d443385d-53a3-5f04-9aa7-d6b12379596a",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "sonnenbrand",
    "path": "/crags/hohe-wand/haussteinmugal#d443385d-53a3-5f04-9aa7-d6b12379596a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Stille Wasser",
@@ -807,18 +816,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "32432cc0-6d28-560a-a827-0cb2ead24753",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "stille-wasser",
    "path": "/crags/hohe-wand/haussteinmugal#32432cc0-6d28-560a-a827-0cb2ead24753",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Suboptimal",
@@ -834,18 +844,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ac956b89-8cc8-57bf-aa2b-4926a97bd064",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "suboptimal",
    "path": "/crags/hohe-wand/haussteinmugal#ac956b89-8cc8-57bf-aa2b-4926a97bd064",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Swäg Bua Nr 18",
@@ -861,18 +872,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b1e2d2f7-e723-55ce-94b2-595cbbd3e826",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "swag-bua-nr-18",
    "path": "/crags/hohe-wand/haussteinmugal#b1e2d2f7-e723-55ce-94b2-595cbbd3e826",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Undercover Raxfreaks",
@@ -888,18 +900,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b03b9a33-6f95-5f8c-aebe-543f2850589a",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "undercover-raxfreaks",
    "path": "/crags/hohe-wand/haussteinmugal#b03b9a33-6f95-5f8c-aebe-543f2850589a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Visionär mit Erdbeeraugen",
@@ -915,18 +928,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f4d56aa8-19e6-56af-bf8d-6f4023894ef1",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "visionar-mit-erdbeeraugen",
    "path": "/crags/hohe-wand/haussteinmugal#f4d56aa8-19e6-56af-bf8d-6f4023894ef1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hohe Wand | Haussteinmugal | Wachablöse",
@@ -942,18 +956,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f8594034-86fe-53c6-989a-14448049ff81",
    "region_slug": "hohe-wand",
    "crag_slug": "haussteinmugal",
    "slug": "wachablose",
    "path": "/crags/hohe-wand/haussteinmugal#f8594034-86fe-53c6-989a-14448049ff81",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }

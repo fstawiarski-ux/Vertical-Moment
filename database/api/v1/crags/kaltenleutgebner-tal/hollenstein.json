@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "412db130-ed1a-509a-bdb6-f81bad42c1d3",
   "name": "Höllenstein",
@@ -8,8 +8,10 @@
   "region": "Kaltenleutgebner Tal",
   "region_slug": "kaltenleutgebner-tal",
   "route_count": 14,
+  "is_stub": false,
   "latitude": 48.096515,
   "longitude": 16.184047,
+  "coord_source": "routes",
   "grades": [
    "3",
    "4",
@@ -29,7 +31,57 @@
    "boulder",
    "sport"
   ],
-  "path": "/crags/kaltenleutgebner-tal/hollenstein"
+  "path": "/crags/kaltenleutgebner-tal/hollenstein",
+  "osm": "relation/18166695",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18166695",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=48.096553&mlon=16.184072#map=16/48.096553/16.184072",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+H%C3%B6llenstein+Kaltenleutgebner+Tal"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+H%C3%B6llenstein+Kaltenleutgebner+Tal"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+H%C3%B6llenstein"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+H%C3%B6llenstein+Kaltenleutgebner+Tal"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -46,18 +98,19 @@
    "source": "Keltenkalk",
    "latitude": 48.096515,
    "longitude": 16.184047,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0b01b23a-19cf-58e1-bb2a-c6a43771cd36",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "hollenstein",
    "slug": "aller-anfang-ist-schwer",
    "path": "/crags/kaltenleutgebner-tal/hollenstein#0b01b23a-19cf-58e1-bb2a-c6a43771cd36",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Höllenstein | Fanatics",
@@ -73,18 +126,19 @@
    "source": "Keltenkalk",
    "latitude": 48.096515,
    "longitude": 16.184047,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "40cb55bb-e9a8-51aa-ac26-a0b1350f1aac",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "hollenstein",
    "slug": "fanatics",
    "path": "/crags/kaltenleutgebner-tal/hollenstein#40cb55bb-e9a8-51aa-ac26-a0b1350f1aac",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Höllenstein | Holter di Boulder",
@@ -100,18 +154,19 @@
    "source": "Keltenkalk",
    "latitude": 48.096515,
    "longitude": 16.184047,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5059450a-af3e-5f9b-8d0c-187732a42932",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "hollenstein",
    "slug": "holter-di-boulder",
    "path": "/crags/kaltenleutgebner-tal/hollenstein#5059450a-af3e-5f9b-8d0c-187732a42932",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Höllenstein | Hänsel",
@@ -127,18 +182,19 @@
    "source": "Keltenkalk",
    "latitude": 48.096515,
    "longitude": 16.184047,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "aab025da-9d61-57c0-b2da-ace2abcbf9b1",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "hollenstein",
    "slug": "hansel",
    "path": "/crags/kaltenleutgebner-tal/hollenstein#aab025da-9d61-57c0-b2da-ace2abcbf9b1",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Höllenstein | Höllengeist",
@@ -154,18 +210,19 @@
    "source": "Keltenkalk",
    "latitude": 48.096515,
    "longitude": 16.184047,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "44e049a7-19c3-5465-b709-11d84c26fe6f",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "hollenstein",
    "slug": "hollengeist",
    "path": "/crags/kaltenleutgebner-tal/hollenstein#44e049a7-19c3-5465-b709-11d84c26fe6f",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Höllenstein | Karinweg",
@@ -181,18 +238,19 @@
    "source": "Keltenkalk",
    "latitude": 48.096515,
    "longitude": 16.184047,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "262c50a1-7910-506e-86b6-bd5c6eac4b81",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "hollenstein",
    "slug": "karinweg",
    "path": "/crags/kaltenleutgebner-tal/hollenstein#262c50a1-7910-506e-86b6-bd5c6eac4b81",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Höllenstein | Karl Riss",
@@ -208,18 +266,19 @@
    "source": "Keltenkalk",
    "latitude": 48.096515,
    "longitude": 16.184047,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "117537ea-9e23-53dc-9e2b-6b283fbe752a",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "hollenstein",
    "slug": "karl-riss",
    "path": "/crags/kaltenleutgebner-tal/hollenstein#117537ea-9e23-53dc-9e2b-6b283fbe752a",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Höllenstein | Lochgeist",
@@ -235,18 +294,19 @@
    "source": "Keltenkalk",
    "latitude": 48.096515,
    "longitude": 16.184047,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "92a2c453-8ffd-5daf-88a0-0d8f033233f9",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "hollenstein",
    "slug": "lochgeist",
    "path": "/crags/kaltenleutgebner-tal/hollenstein#92a2c453-8ffd-5daf-88a0-0d8f033233f9",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Höllenstein | Nordwestkante",
@@ -262,18 +322,19 @@
    "source": "Keltenkalk",
    "latitude": 48.096515,
    "longitude": 16.184047,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "11f66bae-1b4a-5049-97ee-eb0706cba291",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "hollenstein",
    "slug": "nordwestkante",
    "path": "/crags/kaltenleutgebner-tal/hollenstein#11f66bae-1b4a-5049-97ee-eb0706cba291",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Höllenstein | Oh Teufel",
@@ -289,18 +350,19 @@
    "source": "Keltenkalk",
    "latitude": 48.096515,
    "longitude": 16.184047,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "222be7d3-57b0-5f30-913f-f143d503d147",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "hollenstein",
    "slug": "oh-teufel",
    "path": "/crags/kaltenleutgebner-tal/hollenstein#222be7d3-57b0-5f30-913f-f143d503d147",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Höllenstein | Quergang",
@@ -316,18 +378,19 @@
    "source": "Keltenkalk",
    "latitude": 48.096515,
    "longitude": 16.184047,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "aa9cf9e8-5712-53a6-a8cf-e64fef54fcde",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "hollenstein",
    "slug": "quergang",
    "path": "/crags/kaltenleutgebner-tal/hollenstein#aa9cf9e8-5712-53a6-a8cf-e64fef54fcde",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Höllenstein | Südkante",
@@ -343,18 +406,19 @@
    "source": "Keltenkalk",
    "latitude": 48.096515,
    "longitude": 16.184047,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "bd13e23d-1e90-5be9-b594-a37e4e4c7bf8",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "hollenstein",
    "slug": "sudkante",
    "path": "/crags/kaltenleutgebner-tal/hollenstein#bd13e23d-1e90-5be9-b594-a37e4e4c7bf8",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Höllenstein | Südriss",
@@ -370,18 +434,19 @@
    "source": "Keltenkalk",
    "latitude": 48.096515,
    "longitude": 16.184047,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2b428e2a-8e70-5ac4-9e63-d3e2a0631a8a",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "hollenstein",
    "slug": "sudriss",
    "path": "/crags/kaltenleutgebner-tal/hollenstein#2b428e2a-8e70-5ac4-9e63-d3e2a0631a8a",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Höllenstein | Warmer Teufel",
@@ -397,18 +462,19 @@
    "source": "Keltenkalk",
    "latitude": 48.096515,
    "longitude": 16.184047,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b82e9de6-0d65-5955-aa8e-4dbc22df7618",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "hollenstein",
    "slug": "warmer-teufel",
    "path": "/crags/kaltenleutgebner-tal/hollenstein#b82e9de6-0d65-5955-aa8e-4dbc22df7618",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

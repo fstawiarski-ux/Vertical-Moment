@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "db9e1640-e3f3-50da-827c-0bba7d8175f5",
   "name": "Oberer Nordgrat",
@@ -8,8 +8,10 @@
   "region": "Hocheck",
   "region_slug": "hocheck",
   "route_count": 36,
-  "latitude": null,
-  "longitude": null,
+  "is_stub": false,
+  "latitude": 48.006238,
+  "longitude": 16.033774,
+  "coord_source": "routes",
   "grades": [
    "10-",
    "6",
@@ -33,7 +35,57 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/hocheck/oberer-nordgrat"
+  "path": "/crags/hocheck/oberer-nordgrat",
+  "osm": "relation/18166478",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18166478",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=48.006238&mlon=16.033774#map=16/48.006238/16.033774",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Oberer+Nordgrat+Hocheck"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Oberer+Nordgrat+Hocheck"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Oberer+Nordgrat"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Oberer+Nordgrat+Hocheck"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -48,20 +100,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "65faeb63-a1bb-51de-8fd1-6da2118af89e",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "abkurzung",
    "path": "/crags/hocheck/oberer-nordgrat#65faeb63-a1bb-51de-8fd1-6da2118af89e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Bösartiger Dachs",
@@ -75,20 +128,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "93507e6c-a8c3-5f4e-8e64-7bf23ab156dd",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "bosartiger-dachs",
    "path": "/crags/hocheck/oberer-nordgrat#93507e6c-a8c3-5f4e-8e64-7bf23ab156dd",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Crux einer Freundschaft",
@@ -102,20 +156,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3d102583-43f4-52d1-a4b4-7d4e6a16219c",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "crux-einer-freundschaft",
    "path": "/crags/hocheck/oberer-nordgrat#3d102583-43f4-52d1-a4b4-7d4e6a16219c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Dachsbau",
@@ -129,20 +184,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "966fc2c3-6243-5f6d-8a41-3c493f25d6ab",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "dachsbau",
    "path": "/crags/hocheck/oberer-nordgrat#966fc2c3-6243-5f6d-8a41-3c493f25d6ab",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Fatal Diagonal",
@@ -156,20 +212,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2b4909d2-586b-505f-917a-ee373b2fefdf",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "fatal-diagonal",
    "path": "/crags/hocheck/oberer-nordgrat#2b4909d2-586b-505f-917a-ee373b2fefdf",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Fingerschmalz",
@@ -183,20 +240,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "dcf3c09e-34a0-55dc-89f6-8f26b445e14c",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "fingerschmalz",
    "path": "/crags/hocheck/oberer-nordgrat#dcf3c09e-34a0-55dc-89f6-8f26b445e14c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Fluchtstollen",
@@ -210,20 +268,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f8ccb0cc-81e8-5ed9-baa6-138c91dc7a16",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "fluchtstollen",
    "path": "/crags/hocheck/oberer-nordgrat#f8ccb0cc-81e8-5ed9-baa6-138c91dc7a16",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Foolish",
@@ -237,20 +296,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "95844188-2082-531c-92a7-eda84d621dbb",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "foolish",
    "path": "/crags/hocheck/oberer-nordgrat#95844188-2082-531c-92a7-eda84d621dbb",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Ganzer Dach(s)lippenquergang",
@@ -264,20 +324,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "49cbe9ec-b142-5c1a-9b28-f0fa819e970e",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "ganzer-dach-s-lippenquergang",
    "path": "/crags/hocheck/oberer-nordgrat#49cbe9ec-b142-5c1a-9b28-f0fa819e970e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Gutmütiger Dachs",
@@ -291,20 +352,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "07ed1426-2f49-5b2e-b32f-873c451edc59",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "gutmutiger-dachs",
    "path": "/crags/hocheck/oberer-nordgrat#07ed1426-2f49-5b2e-b32f-873c451edc59",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Halber Dach(s)lippenquergang",
@@ -318,20 +380,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d96007eb-b8e9-5a66-8222-f00efe542fa5",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "halber-dach-s-lippenquergang",
    "path": "/crags/hocheck/oberer-nordgrat#d96007eb-b8e9-5a66-8222-f00efe542fa5",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Hannes kann es",
@@ -345,20 +408,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e6f8db09-8088-5a8c-914a-72d0e840afc2",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "hannes-kann-es",
    "path": "/crags/hocheck/oberer-nordgrat#e6f8db09-8088-5a8c-914a-72d0e840afc2",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Hausbesetzung",
@@ -372,20 +436,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ef71384a-dc2c-5dde-8b61-b6743ba47282",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "hausbesetzung",
    "path": "/crags/hocheck/oberer-nordgrat#ef71384a-dc2c-5dde-8b61-b6743ba47282",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Hirschschmalz",
@@ -399,20 +464,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f581eabd-a9e0-5216-b61a-222264b89c9e",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "hirschschmalz",
    "path": "/crags/hocheck/oberer-nordgrat#f581eabd-a9e0-5216-b61a-222264b89c9e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Höhlisch",
@@ -426,20 +492,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9e0cb760-61fc-5dc1-86e9-6aa3677b29df",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "hohlisch",
    "path": "/crags/hocheck/oberer-nordgrat#9e0cb760-61fc-5dc1-86e9-6aa3677b29df",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Höllisch",
@@ -453,20 +520,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c028e68b-6108-57e1-8405-31217b71a097",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "hollisch",
    "path": "/crags/hocheck/oberer-nordgrat#c028e68b-6108-57e1-8405-31217b71a097",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Im Angesicht des Dachses",
@@ -480,20 +548,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8f544d6f-46cb-5029-ac53-000d17925abe",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "im-angesicht-des-dachses",
    "path": "/crags/hocheck/oberer-nordgrat#8f544d6f-46cb-5029-ac53-000d17925abe",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Indiana Jones",
@@ -507,20 +576,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "33a51b61-2af5-5128-a9ed-ab2016d785f3",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "indiana-jones",
    "path": "/crags/hocheck/oberer-nordgrat#33a51b61-2af5-5128-a9ed-ab2016d785f3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Jäger und Sammler",
@@ -534,20 +604,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b79cab78-9c56-5429-bf53-992e9429996b",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "jager-und-sammler",
    "path": "/crags/hocheck/oberer-nordgrat#b79cab78-9c56-5429-bf53-992e9429996b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Katzen, die kratzen",
@@ -561,20 +632,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f7813f70-e776-54a1-aef2-643e438c91a0",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "katzen-die-kratzen",
    "path": "/crags/hocheck/oberer-nordgrat#f7813f70-e776-54a1-aef2-643e438c91a0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Meisen, die kreisen",
@@ -588,20 +660,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "30226369-c878-556a-bcd2-4ce230819f55",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "meisen-die-kreisen",
    "path": "/crags/hocheck/oberer-nordgrat#30226369-c878-556a-bcd2-4ce230819f55",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Mentale Prellung",
@@ -615,20 +688,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e5304c62-6986-5f29-a649-bba5bec9cdcb",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "mentale-prellung",
    "path": "/crags/hocheck/oberer-nordgrat#e5304c62-6986-5f29-a649-bba5bec9cdcb",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | More Junkie Than Monkey",
@@ -642,20 +716,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ed4d7fb1-672a-5d9e-975e-c44c4fe8eb17",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "more-junkie-than-monkey",
    "path": "/crags/hocheck/oberer-nordgrat#ed4d7fb1-672a-5d9e-975e-c44c4fe8eb17",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Nimm ihn schlecht",
@@ -669,20 +744,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f6ce7f93-e912-5747-9b35-7e730e4762f3",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "nimm-ihn-schlecht",
    "path": "/crags/hocheck/oberer-nordgrat#f6ce7f93-e912-5747-9b35-7e730e4762f3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Schadenfreudiger Dachs",
@@ -696,20 +772,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "41e9e20c-cac0-5750-a773-cc96ad8d2f9b",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "schadenfreudiger-dachs",
    "path": "/crags/hocheck/oberer-nordgrat#41e9e20c-cac0-5750-a773-cc96ad8d2f9b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Schlangenmensch",
@@ -723,20 +800,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c29c9775-cc35-5c31-83d1-64f36be1bbed",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "schlangenmensch",
    "path": "/crags/hocheck/oberer-nordgrat#c29c9775-cc35-5c31-83d1-64f36be1bbed",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Sondereinsatz",
@@ -750,20 +828,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "91c22c3b-a2f4-5c7d-9b78-d5dfa5a45040",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "sondereinsatz",
    "path": "/crags/hocheck/oberer-nordgrat#91c22c3b-a2f4-5c7d-9b78-d5dfa5a45040",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Space Cowboys",
@@ -777,20 +856,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0153d283-3120-5325-9075-7e24cdd6f168",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "space-cowboys",
    "path": "/crags/hocheck/oberer-nordgrat#0153d283-3120-5325-9075-7e24cdd6f168",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Sports for Spinners",
@@ -804,20 +884,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1e57fb35-326d-5a65-897c-8390ccdf4f08",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "sports-for-spinners",
    "path": "/crags/hocheck/oberer-nordgrat#1e57fb35-326d-5a65-897c-8390ccdf4f08",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Sports for Winners",
@@ -831,20 +912,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9955943b-43d1-5334-ab0a-5a8829f26b58",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "sports-for-winners",
    "path": "/crags/hocheck/oberer-nordgrat#9955943b-43d1-5334-ab0a-5a8829f26b58",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Stone Head",
@@ -858,20 +940,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ba727575-077e-5c2e-92ce-7c9d45916e91",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "stone-head",
    "path": "/crags/hocheck/oberer-nordgrat#ba727575-077e-5c2e-92ce-7c9d45916e91",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Sumito",
@@ -885,20 +968,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0b92336f-43b2-5675-842e-db3d27c4161a",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "sumito",
    "path": "/crags/hocheck/oberer-nordgrat#0b92336f-43b2-5675-842e-db3d27c4161a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Support Act",
@@ -912,20 +996,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "dab13b39-f465-5a32-a3b5-ec9dfb0f0b6f",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "support-act",
    "path": "/crags/hocheck/oberer-nordgrat#dab13b39-f465-5a32-a3b5-ec9dfb0f0b6f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Tiefblick zum Dach",
@@ -939,20 +1024,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "25607a38-9c2e-5bb2-9d5a-795d6d0f1d4f",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "tiefblick-zum-dach",
    "path": "/crags/hocheck/oberer-nordgrat#25607a38-9c2e-5bb2-9d5a-795d6d0f1d4f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Weird Nights",
@@ -966,20 +1052,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d6747666-6b89-59c4-9d0e-b60d99920218",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "weird-nights",
    "path": "/crags/hocheck/oberer-nordgrat#d6747666-6b89-59c4-9d0e-b60d99920218",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Oberer Nordgrat | Wie wird ihnen denn",
@@ -993,20 +1080,21 @@
    "crag": "Oberer Nordgrat",
    "wall": "Oberer Nordgrat",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.006238,
+   "longitude": 16.033774,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b0c6358b-5a5a-5f3a-8980-2e0ffaa6d0b6",
    "region_slug": "hocheck",
    "crag_slug": "oberer-nordgrat",
    "slug": "wie-wird-ihnen-denn",
    "path": "/crags/hocheck/oberer-nordgrat#b0c6358b-5a5a-5f3a-8980-2e0ffaa6d0b6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

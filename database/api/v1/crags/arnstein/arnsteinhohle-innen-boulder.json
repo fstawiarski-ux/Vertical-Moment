@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "5dcc9efc-bff0-58af-b2c9-bb76196fffb5",
   "name": "Arnsteinhöhle Innen (Boulder)",
@@ -8,8 +8,10 @@
   "region": "Arnstein",
   "region_slug": "arnstein",
   "route_count": 4,
+  "is_stub": false,
   "latitude": null,
   "longitude": null,
+  "coord_source": null,
   "grades": [
    "5a",
    "6a",
@@ -19,7 +21,43 @@
   "disciplines": [
    "boulder"
   ],
-  "path": "/crags/arnstein/arnsteinhohle-innen-boulder"
+  "path": "/crags/arnstein/arnsteinhohle-innen-boulder",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Arnsteinh%C3%B6hle+Innen+%28Boulder%29+Arnstein"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Arnsteinh%C3%B6hle+Innen+%28Boulder%29+Arnstein"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Arnsteinh%C3%B6hle+Innen+%28Boulder%29"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Arnsteinh%C3%B6hle+Innen+%28Boulder%29+Arnstein"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -36,18 +74,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b1a7b1fe-1da8-5181-b85e-2ae62fc2545b",
    "region_slug": "arnstein",
    "crag_slug": "arnsteinhohle-innen-boulder",
    "slug": "blue-in-the-face",
    "path": "/crags/arnstein/arnsteinhohle-innen-boulder#b1a7b1fe-1da8-5181-b85e-2ae62fc2545b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Arnsteinhöhle Innen (Boulder) | Everdry",
@@ -63,18 +102,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ed2a482c-7ef2-587a-85c8-f7668d16802f",
    "region_slug": "arnstein",
    "crag_slug": "arnsteinhohle-innen-boulder",
    "slug": "everdry",
    "path": "/crags/arnstein/arnsteinhohle-innen-boulder#ed2a482c-7ef2-587a-85c8-f7668d16802f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Arnsteinhöhle Innen (Boulder) | Füsse Runter",
@@ -90,18 +130,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8b9894fe-18eb-5270-b833-55670ca9f984",
    "region_slug": "arnstein",
    "crag_slug": "arnsteinhohle-innen-boulder",
    "slug": "fusse-runter",
    "path": "/crags/arnstein/arnsteinhohle-innen-boulder#8b9894fe-18eb-5270-b833-55670ca9f984",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Arnsteinhöhle Innen (Boulder) | Hyäne",
@@ -117,18 +158,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c7ef9845-a327-5fea-ba96-9c5232beb6a2",
    "region_slug": "arnstein",
    "crag_slug": "arnsteinhohle-innen-boulder",
    "slug": "hyane",
    "path": "/crags/arnstein/arnsteinhohle-innen-boulder#c7ef9845-a327-5fea-ba96-9c5232beb6a2",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }

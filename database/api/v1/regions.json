@@ -1,47 +1,494 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
- "count": 12,
+ "generated": "2026-08-09T13:29:28+00:00",
+ "count": 20,
  "regions": [
+  {
+   "id": "5dee1ced-b1a9-549d-8677-d054dba8c2d3",
+   "name": "Adlitzgraben",
+   "slug": "adlitzgraben",
+   "crag_count": 3,
+   "route_count": 0,
+   "path": "/crags/adlitzgraben",
+   "links": [
+    {
+     "kind": "exact",
+     "label": "theCrag — Vienna area overview",
+     "domain": "thecrag.com",
+     "url": "https://www.thecrag.com/en/climbing/austria/wien-vienna-area",
+     "note": "Community index of the whole Vienna region, with its own source list."
+    },
+    {
+     "kind": "exact",
+     "label": "Keltenkalk",
+     "domain": "keltenkalk.at",
+     "url": "http://www.keltenkalk.at/",
+     "note": "The main printed guidebook for the Vienna limestone — roughly 4,000 climbs and boulders."
+    },
+    {
+     "kind": "exact",
+     "label": "bergsteigen.com — Klettergarten index",
+     "domain": "bergsteigen.com",
+     "url": "https://www.bergsteigen.com/touren/klettergarten/",
+     "note": "Filterable crag database with descriptions, approach notes and many downloadable topos."
+    },
+    {
+     "kind": "exact",
+     "label": "Adlitzgräben Klettergarten",
+     "domain": "bergsteigen.com",
+     "url": "https://www.bergsteigen.com/touren/klettergarten/adlitzgraeben-klettergarten/",
+     "note": "Full topo, credited to dynamo.at."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Adlitzgraben+Klettergarten"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Adlitzgraben+Austria"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Adlitzgraben"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Adlitzgraben+Klettern"
+    }
+   ],
+   "more_info_note": "Vertical Moment does not publish topos yet. These are the places that do — follow them for the drawn lines, and verify anything safety-relevant on site."
+  },
+  {
+   "id": "6eafa243-d1d4-53ee-becc-3d100d97bf64",
+   "name": "Alland",
+   "slug": "alland",
+   "crag_count": 5,
+   "route_count": 0,
+   "path": "/crags/alland",
+   "links": [
+    {
+     "kind": "exact",
+     "label": "theCrag — Vienna area overview",
+     "domain": "thecrag.com",
+     "url": "https://www.thecrag.com/en/climbing/austria/wien-vienna-area",
+     "note": "Community index of the whole Vienna region, with its own source list."
+    },
+    {
+     "kind": "exact",
+     "label": "Keltenkalk",
+     "domain": "keltenkalk.at",
+     "url": "http://www.keltenkalk.at/",
+     "note": "The main printed guidebook for the Vienna limestone — roughly 4,000 climbs and boulders."
+    },
+    {
+     "kind": "exact",
+     "label": "bergsteigen.com — Klettergarten index",
+     "domain": "bergsteigen.com",
+     "url": "https://www.bergsteigen.com/touren/klettergarten/",
+     "note": "Filterable crag database with descriptions, approach notes and many downloadable topos."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Alland+Klettergarten"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Alland+Austria"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Alland"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Alland+Klettern"
+    }
+   ],
+   "more_info_note": "Vertical Moment does not publish topos yet. These are the places that do — follow them for the drawn lines, and verify anything safety-relevant on site."
+  },
   {
    "id": "ab426755-1276-5254-8293-e66150203802",
    "name": "Arnstein",
    "slug": "arnstein",
    "crag_count": 13,
    "route_count": 143,
-   "path": "/crags/arnstein"
+   "path": "/crags/arnstein",
+   "links": [
+    {
+     "kind": "exact",
+     "label": "theCrag — Vienna area overview",
+     "domain": "thecrag.com",
+     "url": "https://www.thecrag.com/en/climbing/austria/wien-vienna-area",
+     "note": "Community index of the whole Vienna region, with its own source list."
+    },
+    {
+     "kind": "exact",
+     "label": "Keltenkalk",
+     "domain": "keltenkalk.at",
+     "url": "http://www.keltenkalk.at/",
+     "note": "The main printed guidebook for the Vienna limestone — roughly 4,000 climbs and boulders."
+    },
+    {
+     "kind": "exact",
+     "label": "bergsteigen.com — Klettergarten index",
+     "domain": "bergsteigen.com",
+     "url": "https://www.bergsteigen.com/touren/klettergarten/",
+     "note": "Filterable crag database with descriptions, approach notes and many downloadable topos."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Arnstein+Klettergarten"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Arnstein+Austria"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Arnstein"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Arnstein+Klettern"
+    }
+   ],
+   "more_info_note": "Vertical Moment does not publish topos yet. These are the places that do — follow them for the drawn lines, and verify anything safety-relevant on site."
+  },
+  {
+   "id": "dd9633e8-e38c-5363-bcd0-83093a2b1714",
+   "name": "Baden",
+   "slug": "baden",
+   "crag_count": 18,
+   "route_count": 0,
+   "path": "/crags/baden",
+   "links": [
+    {
+     "kind": "exact",
+     "label": "theCrag — Vienna area overview",
+     "domain": "thecrag.com",
+     "url": "https://www.thecrag.com/en/climbing/austria/wien-vienna-area",
+     "note": "Community index of the whole Vienna region, with its own source list."
+    },
+    {
+     "kind": "exact",
+     "label": "Keltenkalk",
+     "domain": "keltenkalk.at",
+     "url": "http://www.keltenkalk.at/",
+     "note": "The main printed guidebook for the Vienna limestone — roughly 4,000 climbs and boulders."
+    },
+    {
+     "kind": "exact",
+     "label": "bergsteigen.com — Klettergarten index",
+     "domain": "bergsteigen.com",
+     "url": "https://www.bergsteigen.com/touren/klettergarten/",
+     "note": "Filterable crag database with descriptions, approach notes and many downloadable topos."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Baden+Klettergarten"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Baden+Austria"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Baden+Klettern"
+    }
+   ],
+   "more_info_note": "Vertical Moment does not publish topos yet. These are the places that do — follow them for the drawn lines, and verify anything safety-relevant on site."
   },
   {
    "id": "af6de9ee-48b7-512d-a4b1-6444e4dd221f",
    "name": "Bucklige Welt",
    "slug": "bucklige-welt",
-   "crag_count": 5,
+   "crag_count": 18,
    "route_count": 100,
-   "path": "/crags/bucklige-welt"
+   "path": "/crags/bucklige-welt",
+   "links": [
+    {
+     "kind": "exact",
+     "label": "theCrag — Vienna area overview",
+     "domain": "thecrag.com",
+     "url": "https://www.thecrag.com/en/climbing/austria/wien-vienna-area",
+     "note": "Community index of the whole Vienna region, with its own source list."
+    },
+    {
+     "kind": "exact",
+     "label": "Keltenkalk",
+     "domain": "keltenkalk.at",
+     "url": "http://www.keltenkalk.at/",
+     "note": "The main printed guidebook for the Vienna limestone — roughly 4,000 climbs and boulders."
+    },
+    {
+     "kind": "exact",
+     "label": "bergsteigen.com — Klettergarten index",
+     "domain": "bergsteigen.com",
+     "url": "https://www.bergsteigen.com/touren/klettergarten/",
+     "note": "Filterable crag database with descriptions, approach notes and many downloadable topos."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Bucklige+Welt+Klettergarten"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Bucklige+Welt+Austria"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Bucklige+Welt"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Bucklige+Welt+Klettern"
+    }
+   ],
+   "more_info_note": "Vertical Moment does not publish topos yet. These are the places that do — follow them for the drawn lines, and verify anything safety-relevant on site."
   },
   {
    "id": "ec9eeb90-c189-52af-9f1e-740d13fc173e",
    "name": "Fischauer Vorberge",
    "slug": "fischauer-vorberge",
-   "crag_count": 6,
+   "crag_count": 20,
    "route_count": 145,
-   "path": "/crags/fischauer-vorberge"
+   "path": "/crags/fischauer-vorberge",
+   "links": [
+    {
+     "kind": "exact",
+     "label": "theCrag — Vienna area overview",
+     "domain": "thecrag.com",
+     "url": "https://www.thecrag.com/en/climbing/austria/wien-vienna-area",
+     "note": "Community index of the whole Vienna region, with its own source list."
+    },
+    {
+     "kind": "exact",
+     "label": "Keltenkalk",
+     "domain": "keltenkalk.at",
+     "url": "http://www.keltenkalk.at/",
+     "note": "The main printed guidebook for the Vienna limestone — roughly 4,000 climbs and boulders."
+    },
+    {
+     "kind": "exact",
+     "label": "bergsteigen.com — Klettergarten index",
+     "domain": "bergsteigen.com",
+     "url": "https://www.bergsteigen.com/touren/klettergarten/",
+     "note": "Filterable crag database with descriptions, approach notes and many downloadable topos."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Fischauer+Vorberge+Klettergarten"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Fischauer+Vorberge+Austria"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Fischauer+Vorberge"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Fischauer+Vorberge+Klettern"
+    }
+   ],
+   "more_info_note": "Vertical Moment does not publish topos yet. These are the places that do — follow them for the drawn lines, and verify anything safety-relevant on site."
   },
   {
    "id": "892cee18-8fb8-529c-ab89-d06f5747785c",
    "name": "Helenental",
    "slug": "helenental",
-   "crag_count": 26,
+   "crag_count": 29,
    "route_count": 359,
-   "path": "/crags/helenental"
+   "path": "/crags/helenental",
+   "links": [
+    {
+     "kind": "exact",
+     "label": "theCrag — Vienna area overview",
+     "domain": "thecrag.com",
+     "url": "https://www.thecrag.com/en/climbing/austria/wien-vienna-area",
+     "note": "Community index of the whole Vienna region, with its own source list."
+    },
+    {
+     "kind": "exact",
+     "label": "Keltenkalk",
+     "domain": "keltenkalk.at",
+     "url": "http://www.keltenkalk.at/",
+     "note": "The main printed guidebook for the Vienna limestone — roughly 4,000 climbs and boulders."
+    },
+    {
+     "kind": "exact",
+     "label": "bergsteigen.com — Klettergarten index",
+     "domain": "bergsteigen.com",
+     "url": "https://www.bergsteigen.com/touren/klettergarten/",
+     "note": "Filterable crag database with descriptions, approach notes and many downloadable topos."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Helenental+Klettergarten"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Helenental+Austria"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Helenental"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Helenental+Klettern"
+    }
+   ],
+   "more_info_note": "Vertical Moment does not publish topos yet. These are the places that do — follow them for the drawn lines, and verify anything safety-relevant on site."
   },
   {
    "id": "5cec0b41-7cb1-584b-adc1-d5f73f2c4d62",
    "name": "Hirschwände",
    "slug": "hirschwande",
    "crag_count": 7,
-   "route_count": 120,
-   "path": "/crags/hirschwande"
+   "route_count": 119,
+   "path": "/crags/hirschwande",
+   "links": [
+    {
+     "kind": "exact",
+     "label": "theCrag — Vienna area overview",
+     "domain": "thecrag.com",
+     "url": "https://www.thecrag.com/en/climbing/austria/wien-vienna-area",
+     "note": "Community index of the whole Vienna region, with its own source list."
+    },
+    {
+     "kind": "exact",
+     "label": "Keltenkalk",
+     "domain": "keltenkalk.at",
+     "url": "http://www.keltenkalk.at/",
+     "note": "The main printed guidebook for the Vienna limestone — roughly 4,000 climbs and boulders."
+    },
+    {
+     "kind": "exact",
+     "label": "bergsteigen.com — Klettergarten index",
+     "domain": "bergsteigen.com",
+     "url": "https://www.bergsteigen.com/touren/klettergarten/",
+     "note": "Filterable crag database with descriptions, approach notes and many downloadable topos."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Hirschw%C3%A4nde+Klettergarten"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Hirschw%C3%A4nde+Austria"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Hirschw%C3%A4nde"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Hirschw%C3%A4nde+Klettern"
+    }
+   ],
+   "more_info_note": "Vertical Moment does not publish topos yet. These are the places that do — follow them for the drawn lines, and verify anything safety-relevant on site."
   },
   {
    "id": "44d3165c-7f33-5dd8-908b-4801f2ddcb03",
@@ -49,39 +496,507 @@
    "slug": "hocheck",
    "crag_count": 21,
    "route_count": 384,
-   "path": "/crags/hocheck"
+   "path": "/crags/hocheck",
+   "links": [
+    {
+     "kind": "exact",
+     "label": "theCrag — Vienna area overview",
+     "domain": "thecrag.com",
+     "url": "https://www.thecrag.com/en/climbing/austria/wien-vienna-area",
+     "note": "Community index of the whole Vienna region, with its own source list."
+    },
+    {
+     "kind": "exact",
+     "label": "Keltenkalk",
+     "domain": "keltenkalk.at",
+     "url": "http://www.keltenkalk.at/",
+     "note": "The main printed guidebook for the Vienna limestone — roughly 4,000 climbs and boulders."
+    },
+    {
+     "kind": "exact",
+     "label": "bergsteigen.com — Klettergarten index",
+     "domain": "bergsteigen.com",
+     "url": "https://www.bergsteigen.com/touren/klettergarten/",
+     "note": "Filterable crag database with descriptions, approach notes and many downloadable topos."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Hocheck+Klettergarten"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Hocheck+Austria"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Hocheck"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Hocheck+Klettern"
+    }
+   ],
+   "more_info_note": "Vertical Moment does not publish topos yet. These are the places that do — follow them for the drawn lines, and verify anything safety-relevant on site."
   },
   {
    "id": "50db06f6-0fec-5d68-9cc8-b17418f8ecc9",
    "name": "Hohe Wand",
    "slug": "hohe-wand",
-   "crag_count": 11,
-   "route_count": 401,
-   "path": "/crags/hohe-wand"
+   "crag_count": 35,
+   "route_count": 388,
+   "path": "/crags/hohe-wand",
+   "links": [
+    {
+     "kind": "exact",
+     "label": "theCrag — Vienna area overview",
+     "domain": "thecrag.com",
+     "url": "https://www.thecrag.com/en/climbing/austria/wien-vienna-area",
+     "note": "Community index of the whole Vienna region, with its own source list."
+    },
+    {
+     "kind": "exact",
+     "label": "Keltenkalk",
+     "domain": "keltenkalk.at",
+     "url": "http://www.keltenkalk.at/",
+     "note": "The main printed guidebook for the Vienna limestone — roughly 4,000 climbs and boulders."
+    },
+    {
+     "kind": "exact",
+     "label": "bergsteigen.com — Klettergarten index",
+     "domain": "bergsteigen.com",
+     "url": "https://www.bergsteigen.com/touren/klettergarten/",
+     "note": "Filterable crag database with descriptions, approach notes and many downloadable topos."
+    },
+    {
+     "kind": "exact",
+     "label": "Thomas Behm — Hohe Wand topos",
+     "domain": "thomasbehm.at",
+     "url": "http://www.thomasbehm.at/hohewand_topos_buch.htm",
+     "note": "Around 1,000 routes on the Hohe Wand."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Hohe+Wand+Klettergarten"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Hohe+Wand+Austria"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Hohe+Wand"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Hohe+Wand+Klettern"
+    }
+   ],
+   "more_info_note": "Vertical Moment does not publish topos yet. These are the places that do — follow them for the drawn lines, and verify anything safety-relevant on site."
+  },
+  {
+   "id": "67b8b7a2-4b35-5faf-91c5-d19299ae30d4",
+   "name": "Höllental-Rax",
+   "slug": "hollental-rax",
+   "crag_count": 41,
+   "route_count": 0,
+   "path": "/crags/hollental-rax",
+   "links": [
+    {
+     "kind": "exact",
+     "label": "theCrag — Vienna area overview",
+     "domain": "thecrag.com",
+     "url": "https://www.thecrag.com/en/climbing/austria/wien-vienna-area",
+     "note": "Community index of the whole Vienna region, with its own source list."
+    },
+    {
+     "kind": "exact",
+     "label": "Keltenkalk",
+     "domain": "keltenkalk.at",
+     "url": "http://www.keltenkalk.at/",
+     "note": "The main printed guidebook for the Vienna limestone — roughly 4,000 climbs and boulders."
+    },
+    {
+     "kind": "exact",
+     "label": "bergsteigen.com — Klettergarten index",
+     "domain": "bergsteigen.com",
+     "url": "https://www.bergsteigen.com/touren/klettergarten/",
+     "note": "Filterable crag database with descriptions, approach notes and many downloadable topos."
+    },
+    {
+     "kind": "exact",
+     "label": "Thomas Behm — Höllental topos",
+     "domain": "thomasbehm.at",
+     "url": "http://www.thomasbehm.at/hoellenthal.htm",
+     "note": "Around 2,000 routes across the Höllental, Rax and Schneeberg."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+H%C3%B6llental-Rax+Klettergarten"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+H%C3%B6llental-Rax+Austria"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+H%C3%B6llental-Rax"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+H%C3%B6llental-Rax+Klettern"
+    }
+   ],
+   "more_info_note": "Vertical Moment does not publish topos yet. These are the places that do — follow them for the drawn lines, and verify anything safety-relevant on site."
   },
   {
    "id": "8bd8cec5-7866-503c-94e4-7f8f0e13d152",
    "name": "Kaltenleutgebner Tal",
    "slug": "kaltenleutgebner-tal",
-   "crag_count": 13,
+   "crag_count": 26,
    "route_count": 261,
-   "path": "/crags/kaltenleutgebner-tal"
+   "path": "/crags/kaltenleutgebner-tal",
+   "links": [
+    {
+     "kind": "exact",
+     "label": "theCrag — Vienna area overview",
+     "domain": "thecrag.com",
+     "url": "https://www.thecrag.com/en/climbing/austria/wien-vienna-area",
+     "note": "Community index of the whole Vienna region, with its own source list."
+    },
+    {
+     "kind": "exact",
+     "label": "Keltenkalk",
+     "domain": "keltenkalk.at",
+     "url": "http://www.keltenkalk.at/",
+     "note": "The main printed guidebook for the Vienna limestone — roughly 4,000 climbs and boulders."
+    },
+    {
+     "kind": "exact",
+     "label": "bergsteigen.com — Klettergarten index",
+     "domain": "bergsteigen.com",
+     "url": "https://www.bergsteigen.com/touren/klettergarten/",
+     "note": "Filterable crag database with descriptions, approach notes and many downloadable topos."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Kaltenleutgebner+Tal+Klettergarten"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Kaltenleutgebner+Tal+Austria"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Kaltenleutgebner+Tal"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Kaltenleutgebner+Tal+Klettern"
+    }
+   ],
+   "more_info_note": "Vertical Moment does not publish topos yet. These are the places that do — follow them for the drawn lines, and verify anything safety-relevant on site."
   },
   {
    "id": "ea2f3035-dce0-5937-9557-3b15ceb08ff4",
    "name": "Lindkogel",
    "slug": "lindkogel",
-   "crag_count": 3,
+   "crag_count": 22,
    "route_count": 83,
-   "path": "/crags/lindkogel"
+   "path": "/crags/lindkogel",
+   "links": [
+    {
+     "kind": "exact",
+     "label": "theCrag — Vienna area overview",
+     "domain": "thecrag.com",
+     "url": "https://www.thecrag.com/en/climbing/austria/wien-vienna-area",
+     "note": "Community index of the whole Vienna region, with its own source list."
+    },
+    {
+     "kind": "exact",
+     "label": "Keltenkalk",
+     "domain": "keltenkalk.at",
+     "url": "http://www.keltenkalk.at/",
+     "note": "The main printed guidebook for the Vienna limestone — roughly 4,000 climbs and boulders."
+    },
+    {
+     "kind": "exact",
+     "label": "bergsteigen.com — Klettergarten index",
+     "domain": "bergsteigen.com",
+     "url": "https://www.bergsteigen.com/touren/klettergarten/",
+     "note": "Filterable crag database with descriptions, approach notes and many downloadable topos."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Lindkogel+Klettergarten"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Lindkogel+Austria"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Lindkogel"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Lindkogel+Klettern"
+    }
+   ],
+   "more_info_note": "Vertical Moment does not publish topos yet. These are the places that do — follow them for the drawn lines, and verify anything safety-relevant on site."
   },
   {
    "id": "3d327e75-6852-5359-840f-7e392ae8e346",
    "name": "Mödling",
    "slug": "modling",
-   "crag_count": 10,
+   "crag_count": 17,
    "route_count": 188,
-   "path": "/crags/modling"
+   "path": "/crags/modling",
+   "links": [
+    {
+     "kind": "exact",
+     "label": "theCrag — Vienna area overview",
+     "domain": "thecrag.com",
+     "url": "https://www.thecrag.com/en/climbing/austria/wien-vienna-area",
+     "note": "Community index of the whole Vienna region, with its own source list."
+    },
+    {
+     "kind": "exact",
+     "label": "Keltenkalk",
+     "domain": "keltenkalk.at",
+     "url": "http://www.keltenkalk.at/",
+     "note": "The main printed guidebook for the Vienna limestone — roughly 4,000 climbs and boulders."
+    },
+    {
+     "kind": "exact",
+     "label": "bergsteigen.com — Klettergarten index",
+     "domain": "bergsteigen.com",
+     "url": "https://www.bergsteigen.com/touren/klettergarten/",
+     "note": "Filterable crag database with descriptions, approach notes and many downloadable topos."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+M%C3%B6dling+Klettergarten"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+M%C3%B6dling+Austria"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+M%C3%B6dling+Klettern"
+    }
+   ],
+   "more_info_note": "Vertical Moment does not publish topos yet. These are the places that do — follow them for the drawn lines, and verify anything safety-relevant on site."
+  },
+  {
+   "id": "7ea9bdfa-c61b-5d68-8b6c-b92236c0459c",
+   "name": "Neunkirchen",
+   "slug": "neunkirchen",
+   "crag_count": 19,
+   "route_count": 0,
+   "path": "/crags/neunkirchen",
+   "links": [
+    {
+     "kind": "exact",
+     "label": "theCrag — Vienna area overview",
+     "domain": "thecrag.com",
+     "url": "https://www.thecrag.com/en/climbing/austria/wien-vienna-area",
+     "note": "Community index of the whole Vienna region, with its own source list."
+    },
+    {
+     "kind": "exact",
+     "label": "Keltenkalk",
+     "domain": "keltenkalk.at",
+     "url": "http://www.keltenkalk.at/",
+     "note": "The main printed guidebook for the Vienna limestone — roughly 4,000 climbs and boulders."
+    },
+    {
+     "kind": "exact",
+     "label": "bergsteigen.com — Klettergarten index",
+     "domain": "bergsteigen.com",
+     "url": "https://www.bergsteigen.com/touren/klettergarten/",
+     "note": "Filterable crag database with descriptions, approach notes and many downloadable topos."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Neunkirchen+Klettergarten"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Neunkirchen+Austria"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Neunkirchen+Klettern"
+    }
+   ],
+   "more_info_note": "Vertical Moment does not publish topos yet. These are the places that do — follow them for the drawn lines, and verify anything safety-relevant on site."
+  },
+  {
+   "id": "b729e172-7b3a-5fd9-97ce-899cf3d7c386",
+   "name": "Peilstein",
+   "slug": "peilstein",
+   "crag_count": 11,
+   "route_count": 0,
+   "path": "/crags/peilstein",
+   "links": [
+    {
+     "kind": "exact",
+     "label": "theCrag — Vienna area overview",
+     "domain": "thecrag.com",
+     "url": "https://www.thecrag.com/en/climbing/austria/wien-vienna-area",
+     "note": "Community index of the whole Vienna region, with its own source list."
+    },
+    {
+     "kind": "exact",
+     "label": "Keltenkalk",
+     "domain": "keltenkalk.at",
+     "url": "http://www.keltenkalk.at/",
+     "note": "The main printed guidebook for the Vienna limestone — roughly 4,000 climbs and boulders."
+    },
+    {
+     "kind": "exact",
+     "label": "bergsteigen.com — Klettergarten index",
+     "domain": "bergsteigen.com",
+     "url": "https://www.bergsteigen.com/touren/klettergarten/",
+     "note": "Filterable crag database with descriptions, approach notes and many downloadable topos."
+    },
+    {
+     "kind": "exact",
+     "label": "theCrag — Peilstein",
+     "domain": "thecrag.com",
+     "url": "https://www.thecrag.com/climbing/austria/peilstein",
+     "note": "Sector-by-sector breakdown of roughly 840 routes."
+    },
+    {
+     "kind": "exact",
+     "label": "27crags — Peilstein",
+     "domain": "27crags.com",
+     "url": "https://27crags.com/crags/peilstein-austria",
+     "note": "Map, topos and photos."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Peilstein+Klettergarten"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Peilstein+Austria"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Peilstein"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Peilstein+Klettern"
+    }
+   ],
+   "more_info_note": "Vertical Moment does not publish topos yet. These are the places that do — follow them for the drawn lines, and verify anything safety-relevant on site."
   },
   {
    "id": "c0dcb40a-4d8b-53a7-911b-aee36e799794",
@@ -89,7 +1004,179 @@
    "slug": "pernitz",
    "crag_count": 10,
    "route_count": 179,
-   "path": "/crags/pernitz"
+   "path": "/crags/pernitz",
+   "links": [
+    {
+     "kind": "exact",
+     "label": "theCrag — Vienna area overview",
+     "domain": "thecrag.com",
+     "url": "https://www.thecrag.com/en/climbing/austria/wien-vienna-area",
+     "note": "Community index of the whole Vienna region, with its own source list."
+    },
+    {
+     "kind": "exact",
+     "label": "Keltenkalk",
+     "domain": "keltenkalk.at",
+     "url": "http://www.keltenkalk.at/",
+     "note": "The main printed guidebook for the Vienna limestone — roughly 4,000 climbs and boulders."
+    },
+    {
+     "kind": "exact",
+     "label": "bergsteigen.com — Klettergarten index",
+     "domain": "bergsteigen.com",
+     "url": "https://www.bergsteigen.com/touren/klettergarten/",
+     "note": "Filterable crag database with descriptions, approach notes and many downloadable topos."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Pernitz+Klettergarten"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Pernitz+Austria"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Pernitz"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Pernitz+Klettern"
+    }
+   ],
+   "more_info_note": "Vertical Moment does not publish topos yet. These are the places that do — follow them for the drawn lines, and verify anything safety-relevant on site."
+  },
+  {
+   "id": "b863fe0f-d5a1-51ae-b075-3367950fd5ed",
+   "name": "Piestingtal",
+   "slug": "piestingtal",
+   "crag_count": 5,
+   "route_count": 0,
+   "path": "/crags/piestingtal",
+   "links": [
+    {
+     "kind": "exact",
+     "label": "theCrag — Vienna area overview",
+     "domain": "thecrag.com",
+     "url": "https://www.thecrag.com/en/climbing/austria/wien-vienna-area",
+     "note": "Community index of the whole Vienna region, with its own source list."
+    },
+    {
+     "kind": "exact",
+     "label": "Keltenkalk",
+     "domain": "keltenkalk.at",
+     "url": "http://www.keltenkalk.at/",
+     "note": "The main printed guidebook for the Vienna limestone — roughly 4,000 climbs and boulders."
+    },
+    {
+     "kind": "exact",
+     "label": "bergsteigen.com — Klettergarten index",
+     "domain": "bergsteigen.com",
+     "url": "https://www.bergsteigen.com/touren/klettergarten/",
+     "note": "Filterable crag database with descriptions, approach notes and many downloadable topos."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Piestingtal+Klettergarten"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Piestingtal+Austria"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Piestingtal"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Piestingtal+Klettern"
+    }
+   ],
+   "more_info_note": "Vertical Moment does not publish topos yet. These are the places that do — follow them for the drawn lines, and verify anything safety-relevant on site."
+  },
+  {
+   "id": "d6c2d98a-0c0a-5c9f-8997-1da90c1637cd",
+   "name": "Puchberg Grünbach",
+   "slug": "puchberg-grunbach",
+   "crag_count": 6,
+   "route_count": 0,
+   "path": "/crags/puchberg-grunbach",
+   "links": [
+    {
+     "kind": "exact",
+     "label": "theCrag — Vienna area overview",
+     "domain": "thecrag.com",
+     "url": "https://www.thecrag.com/en/climbing/austria/wien-vienna-area",
+     "note": "Community index of the whole Vienna region, with its own source list."
+    },
+    {
+     "kind": "exact",
+     "label": "Keltenkalk",
+     "domain": "keltenkalk.at",
+     "url": "http://www.keltenkalk.at/",
+     "note": "The main printed guidebook for the Vienna limestone — roughly 4,000 climbs and boulders."
+    },
+    {
+     "kind": "exact",
+     "label": "bergsteigen.com — Klettergarten index",
+     "domain": "bergsteigen.com",
+     "url": "https://www.bergsteigen.com/touren/klettergarten/",
+     "note": "Filterable crag database with descriptions, approach notes and many downloadable topos."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Puchberg+Gr%C3%BCnbach+Klettergarten"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Puchberg+Gr%C3%BCnbach+Austria"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Puchberg+Gr%C3%BCnbach"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Puchberg+Gr%C3%BCnbach+Klettern"
+    }
+   ],
+   "more_info_note": "Vertical Moment does not publish topos yet. These are the places that do — follow them for the drawn lines, and verify anything safety-relevant on site."
   },
   {
    "id": "083308f3-fdaa-5ccc-bcfc-ed6f43a28383",
@@ -97,7 +1184,59 @@
    "slug": "wollersdorf-hart",
    "crag_count": 4,
    "route_count": 53,
-   "path": "/crags/wollersdorf-hart"
+   "path": "/crags/wollersdorf-hart",
+   "links": [
+    {
+     "kind": "exact",
+     "label": "theCrag — Vienna area overview",
+     "domain": "thecrag.com",
+     "url": "https://www.thecrag.com/en/climbing/austria/wien-vienna-area",
+     "note": "Community index of the whole Vienna region, with its own source list."
+    },
+    {
+     "kind": "exact",
+     "label": "Keltenkalk",
+     "domain": "keltenkalk.at",
+     "url": "http://www.keltenkalk.at/",
+     "note": "The main printed guidebook for the Vienna limestone — roughly 4,000 climbs and boulders."
+    },
+    {
+     "kind": "exact",
+     "label": "bergsteigen.com — Klettergarten index",
+     "domain": "bergsteigen.com",
+     "url": "https://www.bergsteigen.com/touren/klettergarten/",
+     "note": "Filterable crag database with descriptions, approach notes and many downloadable topos."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+W%C3%B6llersdorf+Hart+Klettergarten"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+W%C3%B6llersdorf+Hart+Austria"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+W%C3%B6llersdorf+Hart"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+W%C3%B6llersdorf+Hart+Klettern"
+    }
+   ],
+   "more_info_note": "Vertical Moment does not publish topos yet. These are the places that do — follow them for the drawn lines, and verify anything safety-relevant on site."
   }
  ]
 }

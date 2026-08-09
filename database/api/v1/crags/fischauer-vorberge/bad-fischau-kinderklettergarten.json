@@ -1,0 +1,70 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:29:28+00:00",
+ "crag": {
+  "id": "30a09b84-99df-5dce-a544-977e66885244",
+  "name": "Bad Fischau Kinderklettergarten",
+  "slug": "bad-fischau-kinderklettergarten",
+  "region": "Fischauer Vorberge",
+  "region_slug": "fischauer-vorberge",
+  "route_count": 0,
+  "is_stub": true,
+  "latitude": 47.83855,
+  "longitude": 16.151882,
+  "coord_source": "osm",
+  "grades": [],
+  "disciplines": [],
+  "path": "/crags/fischauer-vorberge/bad-fischau-kinderklettergarten",
+  "osm": "relation/18233189",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18233189",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=47.83855&mlon=16.151882#map=16/47.83855/16.151882",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Bad+Fischau+Kinderklettergarten+Fischauer+Vorberge"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Bad+Fischau+Kinderklettergarten+Fischauer+Vorberge"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Bad+Fischau+Kinderklettergarten"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Bad+Fischau+Kinderklettergarten+Fischauer+Vorberge"
+   }
+  ],
+  "has_exact_links": false
+ },
+ "routes": []
+}

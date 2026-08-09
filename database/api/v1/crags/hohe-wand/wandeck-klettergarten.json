@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "27973e34-624e-5f40-a23e-234d9b95486d",
   "name": "Wandeck Klettergarten",
@@ -8,8 +8,10 @@
   "region": "Hohe Wand",
   "region_slug": "hohe-wand",
   "route_count": 64,
-  "latitude": null,
-  "longitude": null,
+  "is_stub": false,
+  "latitude": 47.849635,
+  "longitude": 16.078885,
+  "coord_source": "routes",
   "grades": [
    "10-",
    "3+",
@@ -34,7 +36,57 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/hohe-wand/wandeck-klettergarten"
+  "path": "/crags/hohe-wand/wandeck-klettergarten",
+  "osm": "relation/18217497",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18217497",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=47.849635&mlon=16.078885#map=16/47.849635/16.078885",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Wandeck+Klettergarten+Hohe+Wand"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Wandeck+Klettergarten+Hohe+Wand"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Wandeck+Klettergarten"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Wandeck+Klettergarten+Hohe+Wand"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -49,20 +101,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1b358219-bb08-5877-9cc8-e8b775546005",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "amygdala",
    "path": "/crags/hohe-wand/wandeck-klettergarten#1b358219-bb08-5877-9cc8-e8b775546005",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Ast im Rücken",
@@ -76,20 +129,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2dc1ebc4-2687-53d6-a4f5-36baff38655b",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "ast-im-rucken",
    "path": "/crags/hohe-wand/wandeck-klettergarten#2dc1ebc4-2687-53d6-a4f5-36baff38655b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Bergsportzentrumsweg",
@@ -103,20 +157,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "bb539bc5-7519-5663-aef6-7a1fc489e0a3",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "bergsportzentrumsweg",
    "path": "/crags/hohe-wand/wandeck-klettergarten#bb539bc5-7519-5663-aef6-7a1fc489e0a3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Bigtime",
@@ -130,20 +185,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ebc8eb53-c22b-58fd-afa9-ded187d339a2",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "bigtime",
    "path": "/crags/hohe-wand/wandeck-klettergarten#ebc8eb53-c22b-58fd-afa9-ded187d339a2",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Caressing the Tiger",
@@ -157,20 +213,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "da66bfe6-3d92-5e21-963f-f04e91850348",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "caressing-the-tiger",
    "path": "/crags/hohe-wand/wandeck-klettergarten#da66bfe6-3d92-5e21-963f-f04e91850348",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Damisch Dynamisch",
@@ -184,20 +241,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f0d88468-27f3-5fcd-aa2d-efc63e195086",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "damisch-dynamisch",
    "path": "/crags/hohe-wand/wandeck-klettergarten#f0d88468-27f3-5fcd-aa2d-efc63e195086",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Das Projekt (Wandeck)",
@@ -211,20 +269,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6c4bdf77-ead3-5e42-99e5-ed09a1c3437c",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "das-projekt-wandeck",
    "path": "/crags/hohe-wand/wandeck-klettergarten#6c4bdf77-ead3-5e42-99e5-ed09a1c3437c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Die Kleinen und die Bösen",
@@ -238,20 +297,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0165ad7c-33f4-5bf9-85bb-f81acbd4949b",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "die-kleinen-und-die-bosen",
    "path": "/crags/hohe-wand/wandeck-klettergarten#0165ad7c-33f4-5bf9-85bb-f81acbd4949b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Drescherbandpfeiler",
@@ -265,20 +325,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "99f08a06-6a40-5b26-9c2d-e28264093c9f",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "drescherbandpfeiler",
    "path": "/crags/hohe-wand/wandeck-klettergarten#99f08a06-6a40-5b26-9c2d-e28264093c9f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Eat the Rich",
@@ -292,20 +353,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b29d3241-15b0-5d71-bd19-755a1b3fce73",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "eat-the-rich",
    "path": "/crags/hohe-wand/wandeck-klettergarten#b29d3241-15b0-5d71-bd19-755a1b3fce73",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Eiertanz",
@@ -319,20 +381,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "862109dd-9b41-53b0-9e6e-a888c2f47b69",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "eiertanz",
    "path": "/crags/hohe-wand/wandeck-klettergarten#862109dd-9b41-53b0-9e6e-a888c2f47b69",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Escalier C",
@@ -346,20 +409,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "347a6a42-8a4d-5a2d-8ff0-f20ab817a984",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "escalier-c",
    "path": "/crags/hohe-wand/wandeck-klettergarten#347a6a42-8a4d-5a2d-8ff0-f20ab817a984",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Espandrillo",
@@ -373,20 +437,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "57a7049a-03ff-5732-b9e5-c4d814501f8d",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "espandrillo",
    "path": "/crags/hohe-wand/wandeck-klettergarten#57a7049a-03ff-5732-b9e5-c4d814501f8d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Fleischesser",
@@ -400,20 +465,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "418d3540-a2cd-5384-a302-7fdc37f92bf8",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "fleischesser",
    "path": "/crags/hohe-wand/wandeck-klettergarten#418d3540-a2cd-5384-a302-7fdc37f92bf8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Fleischwolf",
@@ -427,20 +493,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "50ef78fc-af59-521a-ad7d-1c08929e11e4",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "fleischwolf",
    "path": "/crags/hohe-wand/wandeck-klettergarten#50ef78fc-af59-521a-ad7d-1c08929e11e4",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Fluxus",
@@ -454,20 +521,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "bc7c1b6a-1836-5f55-bb20-5cd02e59049c",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "fluxus",
    "path": "/crags/hohe-wand/wandeck-klettergarten#bc7c1b6a-1836-5f55-bb20-5cd02e59049c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Fool on the Hill",
@@ -481,20 +549,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5b9c5898-6726-54d3-8aa7-296759f7feb7",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "fool-on-the-hill",
    "path": "/crags/hohe-wand/wandeck-klettergarten#5b9c5898-6726-54d3-8aa7-296759f7feb7",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Fugazi",
@@ -508,20 +577,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "53541722-4b0f-5f58-9cdc-3f8033aebcf4",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "fugazi",
    "path": "/crags/hohe-wand/wandeck-klettergarten#53541722-4b0f-5f58-9cdc-3f8033aebcf4",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Gran Fury",
@@ -535,20 +605,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e921d8b6-c182-54ba-9e6a-8439441d0f71",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "gran-fury",
    "path": "/crags/hohe-wand/wandeck-klettergarten#e921d8b6-c182-54ba-9e6a-8439441d0f71",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | HHSSA",
@@ -562,20 +633,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3f44051a-a348-5ba5-b728-a38832a78ffd",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "hhssa",
    "path": "/crags/hohe-wand/wandeck-klettergarten#3f44051a-a348-5ba5-b728-a38832a78ffd",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Hanky Panky",
@@ -589,20 +661,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b29bafba-3bbe-5e01-9f3d-1c65964ae861",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "hanky-panky",
    "path": "/crags/hohe-wand/wandeck-klettergarten#b29bafba-3bbe-5e01-9f3d-1c65964ae861",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Henkel Trocken",
@@ -616,20 +689,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f7eea404-3c23-5eb4-bd00-ab1b1e2150dd",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "henkel-trocken",
    "path": "/crags/hohe-wand/wandeck-klettergarten#f7eea404-3c23-5eb4-bd00-ab1b1e2150dd",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Herrgottschnitzerweg",
@@ -643,20 +717,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "99901590-75c8-56a0-87cc-c7e884415abd",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "herrgottschnitzerweg",
    "path": "/crags/hohe-wand/wandeck-klettergarten#99901590-75c8-56a0-87cc-c7e884415abd",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Hootchie Gootchie Man",
@@ -670,20 +745,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "bba3bf88-3b9e-59e5-a9cd-d0abed6b9f7e",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "hootchie-gootchie-man",
    "path": "/crags/hohe-wand/wandeck-klettergarten#bba3bf88-3b9e-59e5-a9cd-d0abed6b9f7e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Hunter",
@@ -697,20 +773,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fd04f130-c487-5153-8131-2a649d53ab4c",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "hunter",
    "path": "/crags/hohe-wand/wandeck-klettergarten#fd04f130-c487-5153-8131-2a649d53ab4c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Knollsteiglein",
@@ -724,20 +801,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5189aa60-0823-5599-8e2f-c2539a877861",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "knollsteiglein",
    "path": "/crags/hohe-wand/wandeck-klettergarten#5189aa60-0823-5599-8e2f-c2539a877861",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Knollverschneidung",
@@ -751,20 +829,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7fa2428e-e324-5242-ad0b-37e0be50b842",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "knollverschneidung",
    "path": "/crags/hohe-wand/wandeck-klettergarten#7fa2428e-e324-5242-ad0b-37e0be50b842",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Liebesnest",
@@ -778,20 +857,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "45f76858-40a6-512d-894b-08c33de08569",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "liebesnest",
    "path": "/crags/hohe-wand/wandeck-klettergarten#45f76858-40a6-512d-894b-08c33de08569",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Luckys Streik",
@@ -805,20 +885,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "492cdbd6-c960-50c5-bca3-96ec745845a3",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "luckys-streik",
    "path": "/crags/hohe-wand/wandeck-klettergarten#492cdbd6-c960-50c5-bca3-96ec745845a3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Malaria",
@@ -832,20 +913,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5c6f4c87-80ab-5f0f-b272-2dde0948974d",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "malaria",
    "path": "/crags/hohe-wand/wandeck-klettergarten#5c6f4c87-80ab-5f0f-b272-2dde0948974d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Mandela Dead",
@@ -859,20 +941,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f04038e3-a121-531e-a5a3-9ecf82463c1e",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "mandela-dead",
    "path": "/crags/hohe-wand/wandeck-klettergarten#f04038e3-a121-531e-a5a3-9ecf82463c1e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Mandela Free",
@@ -886,20 +969,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "bff497bd-8ad4-576b-9a15-7e72fdbee476",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "mandela-free",
    "path": "/crags/hohe-wand/wandeck-klettergarten#bff497bd-8ad4-576b-9a15-7e72fdbee476",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Morbus Parkinson",
@@ -913,20 +997,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2a63fc32-204c-586f-b07c-acbe9ccd96af",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "morbus-parkinson",
    "path": "/crags/hohe-wand/wandeck-klettergarten#2a63fc32-204c-586f-b07c-acbe9ccd96af",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Motzer",
@@ -940,20 +1025,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "51467753-93f7-50c2-9b2a-2619e6c0710c",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "motzer",
    "path": "/crags/hohe-wand/wandeck-klettergarten#51467753-93f7-50c2-9b2a-2619e6c0710c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Motzsteiglein",
@@ -967,20 +1053,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9b6a4472-6b58-5759-8a39-85d2d0e68f81",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "motzsteiglein",
    "path": "/crags/hohe-wand/wandeck-klettergarten#9b6a4472-6b58-5759-8a39-85d2d0e68f81",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | My Home Is My Hittn",
@@ -994,20 +1081,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9300a443-f78e-53c4-ac72-1633bdbcf137",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "my-home-is-my-hittn",
    "path": "/crags/hohe-wand/wandeck-klettergarten#9300a443-f78e-53c4-ac72-1633bdbcf137",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Namenlos (Wandeck a)",
@@ -1021,20 +1109,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "017d99be-a2d1-55a6-b6d0-e0a14ebbca31",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "namenlos-wandeck-a",
    "path": "/crags/hohe-wand/wandeck-klettergarten#017d99be-a2d1-55a6-b6d0-e0a14ebbca31",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Nenette",
@@ -1048,20 +1137,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e3f7414d-f47a-5295-9575-a969d61a44c6",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "nenette",
    "path": "/crags/hohe-wand/wandeck-klettergarten#e3f7414d-f47a-5295-9575-a969d61a44c6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Obermotzer",
@@ -1075,20 +1165,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b47176ed-c9c5-59e1-9241-8a6d2f5bce17",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "obermotzer",
    "path": "/crags/hohe-wand/wandeck-klettergarten#b47176ed-c9c5-59e1-9241-8a6d2f5bce17",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Oh du mein Hüttenwirt",
@@ -1102,20 +1193,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fcacd970-6963-5487-9255-a20a6e174bd2",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "oh-du-mein-huttenwirt",
    "path": "/crags/hohe-wand/wandeck-klettergarten#fcacd970-6963-5487-9255-a20a6e174bd2",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Ostwandkurti Neu",
@@ -1129,20 +1221,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f5765cf7-bf34-59f3-bf63-bed6079be1f6",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "ostwandkurti-neu",
    "path": "/crags/hohe-wand/wandeck-klettergarten#f5765cf7-bf34-59f3-bf63-bed6079be1f6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Pushmi Pullyu",
@@ -1156,20 +1249,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9bf45c9d-bb80-5fbc-aade-06a0fd88b50b",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "pushmi-pullyu",
    "path": "/crags/hohe-wand/wandeck-klettergarten#9bf45c9d-bb80-5fbc-aade-06a0fd88b50b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Red Hot Chili Peppers",
@@ -1183,20 +1277,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5891d07f-1b2f-5b7a-9e26-8c70223264eb",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "red-hot-chili-peppers",
    "path": "/crags/hohe-wand/wandeck-klettergarten#5891d07f-1b2f-5b7a-9e26-8c70223264eb",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Schicksalssymphonie",
@@ -1210,20 +1305,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fc2476ab-52ed-55ac-ab15-96d647986d42",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "schicksalssymphonie",
    "path": "/crags/hohe-wand/wandeck-klettergarten#fc2476ab-52ed-55ac-ab15-96d647986d42",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Schneuzelchen",
@@ -1237,20 +1333,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d4523f22-cab2-52ee-b807-7c6ed3253ba0",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "schneuzelchen",
    "path": "/crags/hohe-wand/wandeck-klettergarten#d4523f22-cab2-52ee-b807-7c6ed3253ba0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Skiny",
@@ -1264,20 +1361,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3f34d3bb-89ce-5370-b949-f8ecaece6d1d",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "skiny",
    "path": "/crags/hohe-wand/wandeck-klettergarten#3f34d3bb-89ce-5370-b949-f8ecaece6d1d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Sportsfreund",
@@ -1291,20 +1389,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "323cdfdc-d0a5-501c-b78e-2857bc120e46",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "sportsfreund",
    "path": "/crags/hohe-wand/wandeck-klettergarten#323cdfdc-d0a5-501c-b78e-2857bc120e46",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Steig der Schmiede",
@@ -1318,20 +1417,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a7c6e6df-286d-5f59-b931-5aa96660e73a",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "steig-der-schmiede",
    "path": "/crags/hohe-wand/wandeck-klettergarten#a7c6e6df-286d-5f59-b931-5aa96660e73a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Steig der mechanischen Werkstätte",
@@ -1345,20 +1445,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d809c7af-4179-5d9e-9b90-4800c36f16bf",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "steig-der-mechanischen-werkstatte",
    "path": "/crags/hohe-wand/wandeck-klettergarten#d809c7af-4179-5d9e-9b90-4800c36f16bf",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Summerrunning",
@@ -1372,20 +1473,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "80607c68-83f9-5323-a24f-cdd6fb4a5f2e",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "summerrunning",
    "path": "/crags/hohe-wand/wandeck-klettergarten#80607c68-83f9-5323-a24f-cdd6fb4a5f2e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Survival of the Fittest",
@@ -1399,20 +1501,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a5129a10-8957-51af-be36-29741b87a7a8",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "survival-of-the-fittest",
    "path": "/crags/hohe-wand/wandeck-klettergarten#a5129a10-8957-51af-be36-29741b87a7a8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Ten Years After",
@@ -1426,20 +1529,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4c5c3297-658c-56d0-aab6-f5c0f318e955",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "ten-years-after",
    "path": "/crags/hohe-wand/wandeck-klettergarten#4c5c3297-658c-56d0-aab6-f5c0f318e955",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Time and Again",
@@ -1453,20 +1557,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ca9a5ba4-d2fb-54b4-9a70-a9b7c7a0727b",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "time-and-again",
    "path": "/crags/hohe-wand/wandeck-klettergarten#ca9a5ba4-d2fb-54b4-9a70-a9b7c7a0727b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Tod und Teufel",
@@ -1480,20 +1585,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c9bb12eb-caf2-5c63-8593-6e6747ba7da1",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "tod-und-teufel",
    "path": "/crags/hohe-wand/wandeck-klettergarten#c9bb12eb-caf2-5c63-8593-6e6747ba7da1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Top Dog",
@@ -1507,20 +1613,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "11958591-2ad8-56a3-8372-303654f2b2e7",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "top-dog",
    "path": "/crags/hohe-wand/wandeck-klettergarten#11958591-2ad8-56a3-8372-303654f2b2e7",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Toptopdog",
@@ -1534,20 +1641,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5ac93262-01c8-5e57-bd51-025d21bb66bc",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "toptopdog",
    "path": "/crags/hohe-wand/wandeck-klettergarten#5ac93262-01c8-5e57-bd51-025d21bb66bc",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Var (Escalier)",
@@ -1561,20 +1669,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "10cd521e-bc67-503c-942e-7f43458fa037",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "var-escalier",
    "path": "/crags/hohe-wand/wandeck-klettergarten#10cd521e-bc67-503c-942e-7f43458fa037",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Verlängerung (Fugazi)",
@@ -1588,20 +1697,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "71888084-e360-5736-a973-8217cd2deca2",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "verlangerung-fugazi",
    "path": "/crags/hohe-wand/wandeck-klettergarten#71888084-e360-5736-a973-8217cd2deca2",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Verlängerung (Wild at Heart)",
@@ -1615,20 +1725,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f03e01f7-ee8e-572f-8954-2ed79d860534",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "verlangerung-wild-at-heart",
    "path": "/crags/hohe-wand/wandeck-klettergarten#f03e01f7-ee8e-572f-8954-2ed79d860534",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Vox Humana",
@@ -1642,20 +1753,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9cd3994c-7b60-59b0-a74c-7809b855c4d0",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "vox-humana",
    "path": "/crags/hohe-wand/wandeck-klettergarten#9cd3994c-7b60-59b0-a74c-7809b855c4d0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Wild at Heart",
@@ -1669,20 +1781,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6a613193-bc84-5d01-b881-046549a205df",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "wild-at-heart",
    "path": "/crags/hohe-wand/wandeck-klettergarten#6a613193-bc84-5d01-b881-046549a205df",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Wohin und zurück",
@@ -1696,20 +1809,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c7950846-1a3b-54d7-b7ab-a626d319948f",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "wohin-und-zuruck",
    "path": "/crags/hohe-wand/wandeck-klettergarten#c7950846-1a3b-54d7-b7ab-a626d319948f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Zarathustra",
@@ -1723,20 +1837,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b254b6d1-d9b6-5982-919a-f7839c2549b8",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "zarathustra",
    "path": "/crags/hohe-wand/wandeck-klettergarten#b254b6d1-d9b6-5982-919a-f7839c2549b8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Wandeck Klettergarten | Zwischenzeit",
@@ -1750,20 +1865,21 @@
    "crag": "Wandeck Klettergarten",
    "wall": "Wandeck Klettergarten",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.849635,
+   "longitude": 16.078885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3eb68070-cd1b-5d3f-88cf-a836e55e6cd7",
    "region_slug": "hohe-wand",
    "crag_slug": "wandeck-klettergarten",
    "slug": "zwischenzeit",
    "path": "/crags/hohe-wand/wandeck-klettergarten#3eb68070-cd1b-5d3f-88cf-a836e55e6cd7",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

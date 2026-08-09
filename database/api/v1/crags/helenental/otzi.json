@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "2b49f9db-0f24-5abc-8384-6f849e6692d3",
   "name": "Ötzi",
@@ -8,8 +8,10 @@
   "region": "Helenental",
   "region_slug": "helenental",
   "route_count": 3,
-  "latitude": null,
-  "longitude": null,
+  "is_stub": false,
+  "latitude": 48.023462,
+  "longitude": 16.192404,
+  "coord_source": "routes",
   "grades": [
    "7-",
    "9+",
@@ -18,7 +20,57 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/helenental/otzi"
+  "path": "/crags/helenental/otzi",
+  "osm": "relation/18166551",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18166551",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=48.023462&mlon=16.192404#map=16/48.023462/16.192404",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+%C3%96tzi+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+%C3%96tzi+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+%C3%96tzi"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+%C3%96tzi+Helenental"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -33,20 +85,21 @@
    "crag": "Ötzi",
    "wall": "Ötzi",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.023462,
+   "longitude": 16.192404,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1e212b52-49a1-5d84-8f85-94395969a455",
    "region_slug": "helenental",
    "crag_slug": "otzi",
    "slug": "orange-crush",
    "path": "/crags/helenental/otzi#1e212b52-49a1-5d84-8f85-94395969a455",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Ötzi | Orange Crush Rechts",
@@ -60,20 +113,21 @@
    "crag": "Ötzi",
    "wall": "Ötzi",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.023462,
+   "longitude": 16.192404,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1f3b1dab-1c5d-5d61-880b-7f038c01cf8b",
    "region_slug": "helenental",
    "crag_slug": "otzi",
    "slug": "orange-crush-rechts",
    "path": "/crags/helenental/otzi#1f3b1dab-1c5d-5d61-880b-7f038c01cf8b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Ötzi | Saskari",
@@ -87,20 +141,21 @@
    "crag": "Ötzi",
    "wall": "Ötzi",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.023462,
+   "longitude": 16.192404,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "dadd2351-8a40-5189-8069-9a77c332a386",
    "region_slug": "helenental",
    "crag_slug": "otzi",
    "slug": "saskari",
    "path": "/crags/helenental/otzi#dadd2351-8a40-5189-8069-9a77c332a386",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

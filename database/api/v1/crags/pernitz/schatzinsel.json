@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "e3b89e29-507a-5c2d-9688-a9c8f5b84f0c",
   "name": "Schatzinsel",
@@ -8,8 +8,10 @@
   "region": "Pernitz",
   "region_slug": "pernitz",
   "route_count": 24,
-  "latitude": null,
-  "longitude": null,
+  "is_stub": false,
+  "latitude": 47.853404,
+  "longitude": 16.036292,
+  "coord_source": "routes",
   "grades": [
    "10-",
    "5+",
@@ -30,7 +32,57 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/pernitz/schatzinsel"
+  "path": "/crags/pernitz/schatzinsel",
+  "osm": "relation/18218734",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18218734",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=47.853404&mlon=16.036292#map=16/47.853404/16.036292",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Schatzinsel+Pernitz"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Schatzinsel+Pernitz"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Schatzinsel"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Schatzinsel+Pernitz"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -45,20 +97,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fc0e6f1d-faf3-56ce-a6b1-0aa56db5a084",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "batida-de-coco",
    "path": "/crags/pernitz/schatzinsel#fc0e6f1d-faf3-56ce-a6b1-0aa56db5a084",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Boandlkramer",
@@ -72,20 +125,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "51d76225-9449-5901-a043-793294318b2d",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "boandlkramer",
    "path": "/crags/pernitz/schatzinsel#51d76225-9449-5901-a043-793294318b2d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Dei Thai",
@@ -99,20 +153,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4b10ddac-bafd-56f0-839a-d58706fbef89",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "dei-thai",
    "path": "/crags/pernitz/schatzinsel#4b10ddac-bafd-56f0-839a-d58706fbef89",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Eng aber Sexy",
@@ -126,20 +181,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b9093cf8-1f9e-522c-928f-d563b9726f21",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "eng-aber-sexy",
    "path": "/crags/pernitz/schatzinsel#b9093cf8-1f9e-522c-928f-d563b9726f21",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Esperanza Clandestina",
@@ -153,20 +209,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1dbe1111-5d65-5994-9344-3f6f9bb3ca54",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "esperanza-clandestina",
    "path": "/crags/pernitz/schatzinsel#1dbe1111-5d65-5994-9344-3f6f9bb3ca54",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Fluch der schwulen Piraten",
@@ -180,20 +237,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "50c2a424-e34c-5fb8-813a-409c68959543",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "fluch-der-schwulen-piraten",
    "path": "/crags/pernitz/schatzinsel#50c2a424-e34c-5fb8-813a-409c68959543",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Hände falten Goschn halten",
@@ -207,20 +265,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2def6484-b717-5ccd-9c35-14c9bf531053",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "hande-falten-goschn-halten",
    "path": "/crags/pernitz/schatzinsel#2def6484-b717-5ccd-9c35-14c9bf531053",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Jumping Around",
@@ -234,20 +293,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "09e3ec85-ae90-5e30-96f2-fafb050ec377",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "jumping-around",
    "path": "/crags/pernitz/schatzinsel#09e3ec85-ae90-5e30-96f2-fafb050ec377",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Käptn Iglo",
@@ -261,20 +321,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a362f6b0-992e-5b2b-9470-8ac7781c0d6a",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "kaptn-iglo",
    "path": "/crags/pernitz/schatzinsel#a362f6b0-992e-5b2b-9470-8ac7781c0d6a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | La Grande Fin",
@@ -288,20 +349,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "dd96c8ee-bbe0-5350-8a69-458e70149fdc",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "la-grande-fin",
    "path": "/crags/pernitz/schatzinsel#dd96c8ee-bbe0-5350-8a69-458e70149fdc",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | La Vie en Rose",
@@ -315,20 +377,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c6ef68d2-1030-5500-aa52-e6b8d1b8a77f",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "la-vie-en-rose",
    "path": "/crags/pernitz/schatzinsel#c6ef68d2-1030-5500-aa52-e6b8d1b8a77f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Mei Thai",
@@ -342,20 +405,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "84ef6a41-266b-5567-9aa6-77dbfd7e79ec",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "mei-thai",
    "path": "/crags/pernitz/schatzinsel#84ef6a41-266b-5567-9aa6-77dbfd7e79ec",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Mozzies Live",
@@ -369,20 +433,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "227804de-a5f0-59b8-b31e-54ccdb86913a",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "mozzies-live",
    "path": "/crags/pernitz/schatzinsel#227804de-a5f0-59b8-b31e-54ccdb86913a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Namenlos (Schatzinsel)",
@@ -396,20 +461,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e1b6bbd8-543c-5ec6-91f1-5c4b473fd87d",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "namenlos-schatzinsel",
    "path": "/crags/pernitz/schatzinsel#e1b6bbd8-543c-5ec6-91f1-5c4b473fd87d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Phönix aus der Asche",
@@ -423,20 +489,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "325207c3-f450-5b6a-b4f6-a06ac8ca73e4",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "phonix-aus-der-asche",
    "path": "/crags/pernitz/schatzinsel#325207c3-f450-5b6a-b4f6-a06ac8ca73e4",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Rollin on Chrome",
@@ -450,20 +517,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6f9261e7-e050-5981-85da-0d54f23362f5",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "rollin-on-chrome",
    "path": "/crags/pernitz/schatzinsel#6f9261e7-e050-5981-85da-0d54f23362f5",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Skywalker",
@@ -477,20 +545,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e6696221-63c1-538c-85d5-f58d5b66516e",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "skywalker",
    "path": "/crags/pernitz/schatzinsel#e6696221-63c1-538c-85d5-f58d5b66516e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Tanz der Schatten",
@@ -504,20 +573,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f1a16576-2ce4-58f5-8058-961a8c98012a",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "tanz-der-schatten",
    "path": "/crags/pernitz/schatzinsel#f1a16576-2ce4-58f5-8058-961a8c98012a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Tat Twam Asi",
@@ -531,20 +601,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f296d209-a874-5aa9-bbb9-4a56e0c0adb7",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "tat-twam-asi",
    "path": "/crags/pernitz/schatzinsel#f296d209-a874-5aa9-bbb9-4a56e0c0adb7",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | The Lost World",
@@ -558,20 +629,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ebe6fcb7-c11f-5d71-a1bd-eca2b98b194a",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "the-lost-world",
    "path": "/crags/pernitz/schatzinsel#ebe6fcb7-c11f-5d71-a1bd-eca2b98b194a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Totentanz",
@@ -585,20 +657,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3e3471f2-a610-50cc-9da7-eb5e2dc036cb",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "totentanz",
    "path": "/crags/pernitz/schatzinsel#3e3471f2-a610-50cc-9da7-eb5e2dc036cb",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Via Maria",
@@ -612,20 +685,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b3d4504b-1ff9-5234-b9a2-9089df97c58f",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "via-maria",
    "path": "/crags/pernitz/schatzinsel#b3d4504b-1ff9-5234-b9a2-9089df97c58f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Wie die Geier",
@@ -639,20 +713,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fd748d74-ac58-5ca4-9179-56df52033d83",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "wie-die-geier",
    "path": "/crags/pernitz/schatzinsel#fd748d74-ac58-5ca4-9179-56df52033d83",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Pernitz | Schatzinsel | Zwischen Pest und Cholera",
@@ -666,20 +741,21 @@
    "crag": "Schatzinsel",
    "wall": "Schatzinsel",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.853404,
+   "longitude": 16.036292,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f0da944a-d0e7-58db-9019-5c15c91c1081",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel",
    "slug": "zwischen-pest-und-cholera",
    "path": "/crags/pernitz/schatzinsel#f0da944a-d0e7-58db-9019-5c15c91c1081",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

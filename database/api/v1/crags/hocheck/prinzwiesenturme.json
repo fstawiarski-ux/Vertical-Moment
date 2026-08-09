@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "be20d0c4-36d6-587f-9874-af3f39296206",
   "name": "Prinzwiesentürme",
@@ -8,8 +8,10 @@
   "region": "Hocheck",
   "region_slug": "hocheck",
   "route_count": 14,
+  "is_stub": false,
   "latitude": null,
   "longitude": null,
+  "coord_source": null,
   "grades": [
    "4+",
    "5+",
@@ -23,7 +25,43 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/hocheck/prinzwiesenturme"
+  "path": "/crags/hocheck/prinzwiesenturme",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Prinzwiesent%C3%BCrme+Hocheck"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Prinzwiesent%C3%BCrme+Hocheck"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Prinzwiesent%C3%BCrme"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Prinzwiesent%C3%BCrme+Hocheck"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -40,18 +78,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e0b6757f-1db2-54c6-845e-49ea27300923",
    "region_slug": "hocheck",
    "crag_slug": "prinzwiesenturme",
    "slug": "abendhirsch",
    "path": "/crags/hocheck/prinzwiesenturme#e0b6757f-1db2-54c6-845e-49ea27300923",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Prinzwiesentürme | Abendhirsch von rechts",
@@ -67,18 +106,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "46c48408-4b3c-5809-9b8e-417a9c38f306",
    "region_slug": "hocheck",
    "crag_slug": "prinzwiesenturme",
    "slug": "abendhirsch-von-rechts",
    "path": "/crags/hocheck/prinzwiesenturme#46c48408-4b3c-5809-9b8e-417a9c38f306",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Prinzwiesentürme | Eigenbrötler",
@@ -94,18 +134,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "eb973f89-6d2c-54dd-b5ad-fcbf3bad4138",
    "region_slug": "hocheck",
    "crag_slug": "prinzwiesenturme",
    "slug": "eigenbrotler",
    "path": "/crags/hocheck/prinzwiesenturme#eb973f89-6d2c-54dd-b5ad-fcbf3bad4138",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Prinzwiesentürme | Erdverwachsen",
@@ -121,18 +162,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "64e3f3d7-f272-543d-a40d-5ffe002f922a",
    "region_slug": "hocheck",
    "crag_slug": "prinzwiesenturme",
    "slug": "erdverwachsen",
    "path": "/crags/hocheck/prinzwiesenturme#64e3f3d7-f272-543d-a40d-5ffe002f922a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Prinzwiesentürme | Gipfel der Frechheit",
@@ -148,18 +190,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "79c0d8a6-1ff6-59cb-8271-10fc11951452",
    "region_slug": "hocheck",
    "crag_slug": "prinzwiesenturme",
    "slug": "gipfel-der-frechheit",
    "path": "/crags/hocheck/prinzwiesenturme#79c0d8a6-1ff6-59cb-8271-10fc11951452",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Prinzwiesentürme | Heimatleuchten",
@@ -175,18 +218,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c0076eb4-0a24-5e5b-8c04-e5e0fd2a1c17",
    "region_slug": "hocheck",
    "crag_slug": "prinzwiesenturme",
    "slug": "heimatleuchten",
    "path": "/crags/hocheck/prinzwiesenturme#c0076eb4-0a24-5e5b-8c04-e5e0fd2a1c17",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Prinzwiesentürme | Hoagascht",
@@ -202,18 +246,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5f207bc1-c3c4-5787-be92-73927330aeb3",
    "region_slug": "hocheck",
    "crag_slug": "prinzwiesenturme",
    "slug": "hoagascht",
    "path": "/crags/hocheck/prinzwiesenturme#5f207bc1-c3c4-5787-be92-73927330aeb3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Prinzwiesentürme | Mogelpackung",
@@ -229,18 +274,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cce3516b-ee3e-5507-8860-3e764caf1bef",
    "region_slug": "hocheck",
    "crag_slug": "prinzwiesenturme",
    "slug": "mogelpackung",
    "path": "/crags/hocheck/prinzwiesenturme#cce3516b-ee3e-5507-8860-3e764caf1bef",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Prinzwiesentürme | Neue Abnormalität",
@@ -256,18 +302,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "76913c08-ff39-5c37-904a-404d76dd16c0",
    "region_slug": "hocheck",
    "crag_slug": "prinzwiesenturme",
    "slug": "neue-abnormalitat",
    "path": "/crags/hocheck/prinzwiesenturme#76913c08-ff39-5c37-904a-404d76dd16c0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Prinzwiesentürme | Scheinheiligtum",
@@ -283,18 +330,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "478e7f8c-4f4d-5d72-919a-e52d54d209ac",
    "region_slug": "hocheck",
    "crag_slug": "prinzwiesenturme",
    "slug": "scheinheiligtum",
    "path": "/crags/hocheck/prinzwiesenturme#478e7f8c-4f4d-5d72-919a-e52d54d209ac",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Prinzwiesentürme | Schiaches Gretal",
@@ -310,18 +358,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4b1db2ad-c42d-555c-8152-696cddbf9656",
    "region_slug": "hocheck",
    "crag_slug": "prinzwiesenturme",
    "slug": "schiaches-gretal",
    "path": "/crags/hocheck/prinzwiesenturme#4b1db2ad-c42d-555c-8152-696cddbf9656",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Prinzwiesentürme | Schöne Percht",
@@ -337,18 +386,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2e51232b-3837-567d-ba21-59aa606750a3",
    "region_slug": "hocheck",
    "crag_slug": "prinzwiesenturme",
    "slug": "schone-percht",
    "path": "/crags/hocheck/prinzwiesenturme#2e51232b-3837-567d-ba21-59aa606750a3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Prinzwiesentürme | Sturmfest",
@@ -364,18 +414,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5e0fdb63-10e6-5cd1-9cfd-e3f4e74ee074",
    "region_slug": "hocheck",
    "crag_slug": "prinzwiesenturme",
    "slug": "sturmfest",
    "path": "/crags/hocheck/prinzwiesenturme#5e0fdb63-10e6-5cd1-9cfd-e3f4e74ee074",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Prinzwiesentürme | Wendehals",
@@ -391,18 +442,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "bd0ea768-1ed2-5e76-9357-ab2993fb97f8",
    "region_slug": "hocheck",
    "crag_slug": "prinzwiesenturme",
    "slug": "wendehals",
    "path": "/crags/hocheck/prinzwiesenturme#bd0ea768-1ed2-5e76-9357-ab2993fb97f8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }

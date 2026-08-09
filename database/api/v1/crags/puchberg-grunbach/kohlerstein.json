@@ -1,0 +1,70 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:29:28+00:00",
+ "crag": {
+  "id": "318360b4-42f6-57a0-836f-7d83f6538ea4",
+  "name": "Köhlerstein",
+  "slug": "kohlerstein",
+  "region": "Puchberg Grünbach",
+  "region_slug": "puchberg-grunbach",
+  "route_count": 0,
+  "is_stub": true,
+  "latitude": 47.795678,
+  "longitude": 15.862872,
+  "coord_source": "osm",
+  "grades": [],
+  "disciplines": [],
+  "path": "/crags/puchberg-grunbach/kohlerstein",
+  "osm": "node/12736902663",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/node/12736902663",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=47.795678&mlon=15.862872#map=16/47.795678/15.862872",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+K%C3%B6hlerstein+Puchberg+Gr%C3%BCnbach"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+K%C3%B6hlerstein+Puchberg+Gr%C3%BCnbach"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+K%C3%B6hlerstein"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+K%C3%B6hlerstein+Puchberg+Gr%C3%BCnbach"
+   }
+  ],
+  "has_exact_links": false
+ },
+ "routes": []
+}

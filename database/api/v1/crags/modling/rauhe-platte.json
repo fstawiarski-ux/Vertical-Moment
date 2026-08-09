@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "430725b3-1158-5fce-936a-aea7e90d4ed9",
   "name": "Rauhe Platte",
@@ -8,8 +8,10 @@
   "region": "Mödling",
   "region_slug": "modling",
   "route_count": 9,
+  "is_stub": false,
   "latitude": null,
   "longitude": null,
+  "coord_source": null,
   "grades": [
    "3",
    "4",
@@ -19,7 +21,43 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/modling/rauhe-platte"
+  "path": "/crags/modling/rauhe-platte",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Rauhe+Platte+M%C3%B6dling"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Rauhe+Platte+M%C3%B6dling"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Rauhe+Platte"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Rauhe+Platte+M%C3%B6dling"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -36,18 +74,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8688dd3f-314d-5b00-a7a2-37f4c8596ee4",
    "region_slug": "modling",
    "crag_slug": "rauhe-platte",
    "slug": "andrea-the-croat",
    "path": "/crags/modling/rauhe-platte#8688dd3f-314d-5b00-a7a2-37f4c8596ee4",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Mödling | Rauhe Platte | Black Hole",
@@ -63,18 +102,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "63a6e515-c431-512c-914e-d9903b1b4fa2",
    "region_slug": "modling",
    "crag_slug": "rauhe-platte",
    "slug": "black-hole",
    "path": "/crags/modling/rauhe-platte#63a6e515-c431-512c-914e-d9903b1b4fa2",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Mödling | Rauhe Platte | Captain Kirk",
@@ -90,18 +130,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a6702340-06ac-528e-80df-bde50fa6b163",
    "region_slug": "modling",
    "crag_slug": "rauhe-platte",
    "slug": "captain-kirk",
    "path": "/crags/modling/rauhe-platte#a6702340-06ac-528e-80df-bde50fa6b163",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Mödling | Rauhe Platte | Direkte Südwand",
@@ -117,18 +158,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8ef49113-fa73-5fad-86ee-97751776b182",
    "region_slug": "modling",
    "crag_slug": "rauhe-platte",
    "slug": "direkte-sudwand",
    "path": "/crags/modling/rauhe-platte#8ef49113-fa73-5fad-86ee-97751776b182",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Mödling | Rauhe Platte | Enterprise",
@@ -144,18 +186,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "342482f7-b0bb-5fe8-a7e1-4007b2817b28",
    "region_slug": "modling",
    "crag_slug": "rauhe-platte",
    "slug": "enterprise",
    "path": "/crags/modling/rauhe-platte#342482f7-b0bb-5fe8-a7e1-4007b2817b28",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Mödling | Rauhe Platte | Mr Spock",
@@ -171,18 +214,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "39b05eea-aaf2-57d0-b057-bfb886ecdc56",
    "region_slug": "modling",
    "crag_slug": "rauhe-platte",
    "slug": "mr-spock",
    "path": "/crags/modling/rauhe-platte#39b05eea-aaf2-57d0-b057-bfb886ecdc56",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Mödling | Rauhe Platte | Pille",
@@ -198,18 +242,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a4f63d23-0e10-524c-ba81-ba1656b0086c",
    "region_slug": "modling",
    "crag_slug": "rauhe-platte",
    "slug": "pille",
    "path": "/crags/modling/rauhe-platte#a4f63d23-0e10-524c-ba81-ba1656b0086c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Mödling | Rauhe Platte | Sauerkraut Extrem",
@@ -225,18 +270,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0f112056-56fa-5113-b010-25b4f64ba707",
    "region_slug": "modling",
    "crag_slug": "rauhe-platte",
    "slug": "sauerkraut-extrem",
    "path": "/crags/modling/rauhe-platte#0f112056-56fa-5113-b010-25b4f64ba707",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Mödling | Rauhe Platte | Silicon Valley",
@@ -252,18 +298,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "564a1856-6bb4-5758-b13b-f86725cbc29d",
    "region_slug": "modling",
    "crag_slug": "rauhe-platte",
    "slug": "silicon-valley",
    "path": "/crags/modling/rauhe-platte#564a1856-6bb4-5758-b13b-f86725cbc29d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }

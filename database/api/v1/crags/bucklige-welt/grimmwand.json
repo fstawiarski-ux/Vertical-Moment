@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "a4b34047-203f-58e3-ba6f-a68cd0a20ca6",
   "name": "Grimmwand",
@@ -8,8 +8,10 @@
   "region": "Bucklige Welt",
   "region_slug": "bucklige-welt",
   "route_count": 25,
+  "is_stub": false,
   "latitude": 47.65307,
   "longitude": 16.133806,
+  "coord_source": "routes",
   "grades": [
    "4",
    "4+",
@@ -26,7 +28,64 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/bucklige-welt/grimmwand"
+  "path": "/crags/bucklige-welt/grimmwand",
+  "osm": "node/11837674633",
+  "rock": null,
+  "website": "https://www.bergsteigen.com/touren/klettergarten/grimmwand-scheiblingkirchen/",
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/node/11837674633",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Crag website",
+    "domain": "",
+    "url": "https://www.bergsteigen.com/touren/klettergarten/grimmwand-scheiblingkirchen/",
+    "note": "Official or community page, tagged in OSM."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=47.65307&mlon=16.133806#map=16/47.65307/16.133806",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Grimmwand+Bucklige+Welt"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Grimmwand+Bucklige+Welt"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Grimmwand"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Grimmwand+Bucklige+Welt"
+   }
+  ],
+  "has_exact_links": true
  },
  "routes": [
   {
@@ -43,18 +102,19 @@
    "source": "Keltenkalk",
    "latitude": 47.65307,
    "longitude": 16.133806,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8dd4f552-ea97-5251-ae4e-ad385b914c64",
    "region_slug": "bucklige-welt",
    "crag_slug": "grimmwand",
    "slug": "boten-des-todes",
    "path": "/crags/bucklige-welt/grimmwand#8dd4f552-ea97-5251-ae4e-ad385b914c64",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Grimmwand | Das kluge Gretl",
@@ -70,18 +130,19 @@
    "source": "Keltenkalk",
    "latitude": 47.65307,
    "longitude": 16.133806,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "bcc00ecf-f8f9-5744-bde1-a33693e69627",
    "region_slug": "bucklige-welt",
    "crag_slug": "grimmwand",
    "slug": "das-kluge-gretl",
    "path": "/crags/bucklige-welt/grimmwand#bcc00ecf-f8f9-5744-bde1-a33693e69627",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Grimmwand | Der Hase und der Igel",
@@ -97,18 +158,19 @@
    "source": "Keltenkalk",
    "latitude": 47.65307,
    "longitude": 16.133806,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3a8ea56f-183e-55cb-b35b-fd87a2c452e6",
    "region_slug": "bucklige-welt",
    "crag_slug": "grimmwand",
    "slug": "der-hase-und-der-igel",
    "path": "/crags/bucklige-welt/grimmwand#3a8ea56f-183e-55cb-b35b-fd87a2c452e6",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Grimmwand | Der alte Sultan",
@@ -124,18 +186,19 @@
    "source": "Keltenkalk",
    "latitude": 47.65307,
    "longitude": 16.133806,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0306d5be-e7c7-5c64-9ab3-9ebc64bf344d",
    "region_slug": "bucklige-welt",
    "crag_slug": "grimmwand",
    "slug": "der-alte-sultan",
    "path": "/crags/bucklige-welt/grimmwand#0306d5be-e7c7-5c64-9ab3-9ebc64bf344d",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Grimmwand | Der singende Knochen",
@@ -151,18 +214,19 @@
    "source": "Keltenkalk",
    "latitude": 47.65307,
    "longitude": 16.133806,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "34a3040d-3a39-5347-844d-6c24fb92c448",
    "region_slug": "bucklige-welt",
    "crag_slug": "grimmwand",
    "slug": "der-singende-knochen",
    "path": "/crags/bucklige-welt/grimmwand#34a3040d-3a39-5347-844d-6c24fb92c448",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Grimmwand | Die 12 Brüder",
@@ -178,18 +242,19 @@
    "source": "Keltenkalk",
    "latitude": 47.65307,
    "longitude": 16.133806,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b66922e8-c7be-5193-b2c7-33665ba880cf",
    "region_slug": "bucklige-welt",
    "crag_slug": "grimmwand",
    "slug": "die-12-bruder",
    "path": "/crags/bucklige-welt/grimmwand#b66922e8-c7be-5193-b2c7-33665ba880cf",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Grimmwand | Die 7 Raben",
@@ -205,18 +270,19 @@
    "source": "Keltenkalk",
    "latitude": 47.65307,
    "longitude": 16.133806,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1475395a-bd19-5ec3-a12c-3ddffc3696d6",
    "region_slug": "bucklige-welt",
    "crag_slug": "grimmwand",
    "slug": "die-7-raben",
    "path": "/crags/bucklige-welt/grimmwand#1475395a-bd19-5ec3-a12c-3ddffc3696d6",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Grimmwand | Die Alte im Wald",
@@ -232,18 +298,19 @@
    "source": "Keltenkalk",
    "latitude": 47.65307,
    "longitude": 16.133806,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "118987f7-c8c9-57bf-a086-966e1669eaa5",
    "region_slug": "bucklige-welt",
    "crag_slug": "grimmwand",
    "slug": "die-alte-im-wald",
    "path": "/crags/bucklige-welt/grimmwand#118987f7-c8c9-57bf-a086-966e1669eaa5",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Grimmwand | Die weisse Schlange",
@@ -259,18 +326,19 @@
    "source": "Keltenkalk",
    "latitude": 47.65307,
    "longitude": 16.133806,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b69a50bd-ec35-587f-b18d-e86b02b5aa02",
    "region_slug": "bucklige-welt",
    "crag_slug": "grimmwand",
    "slug": "die-weisse-schlange",
    "path": "/crags/bucklige-welt/grimmwand#b69a50bd-ec35-587f-b18d-e86b02b5aa02",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Grimmwand | Dreschflegel",
@@ -286,18 +354,19 @@
    "source": "Keltenkalk",
    "latitude": 47.65307,
    "longitude": 16.133806,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6a5b32dd-9c86-5746-81d4-dbf2c3823175",
    "region_slug": "bucklige-welt",
    "crag_slug": "grimmwand",
    "slug": "dreschflegel",
    "path": "/crags/bucklige-welt/grimmwand#6a5b32dd-9c86-5746-81d4-dbf2c3823175",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Grimmwand | Eisenhans",
@@ -313,18 +382,19 @@
    "source": "Keltenkalk",
    "latitude": 47.65307,
    "longitude": 16.133806,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9fff2f83-beb0-5f8c-a495-80b45dab7614",
    "region_slug": "bucklige-welt",
    "crag_slug": "grimmwand",
    "slug": "eisenhans",
    "path": "/crags/bucklige-welt/grimmwand#9fff2f83-beb0-5f8c-a495-80b45dab7614",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Grimmwand | Eisenofen",
@@ -340,18 +410,19 @@
    "source": "Keltenkalk",
    "latitude": 47.65307,
    "longitude": 16.133806,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "eeae2a57-2cc2-5e79-8cc6-50d2ff778beb",
    "region_slug": "bucklige-welt",
    "crag_slug": "grimmwand",
    "slug": "eisenofen",
    "path": "/crags/bucklige-welt/grimmwand#eeae2a57-2cc2-5e79-8cc6-50d2ff778beb",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Grimmwand | Eiserner Heinrich",
@@ -367,18 +438,19 @@
    "source": "Keltenkalk",
    "latitude": 47.65307,
    "longitude": 16.133806,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a1046462-d151-593a-a49e-efdd2ba9bd07",
    "region_slug": "bucklige-welt",
    "crag_slug": "grimmwand",
    "slug": "eiserner-heinrich",
    "path": "/crags/bucklige-welt/grimmwand#a1046462-d151-593a-a49e-efdd2ba9bd07",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Grimmwand | Gevatter Tod",
@@ -394,18 +466,19 @@
    "source": "Keltenkalk",
    "latitude": 47.65307,
    "longitude": 16.133806,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "88f8815f-6172-569b-ba1c-edf1c1bce704",
    "region_slug": "bucklige-welt",
    "crag_slug": "grimmwand",
    "slug": "gevatter-tod",
    "path": "/crags/bucklige-welt/grimmwand#88f8815f-6172-569b-ba1c-edf1c1bce704",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Grimmwand | Goldesel",
@@ -421,18 +494,19 @@
    "source": "Keltenkalk",
    "latitude": 47.65307,
    "longitude": 16.133806,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9ee19d07-4b7e-5e58-bd3c-f0dbfdd29871",
    "region_slug": "bucklige-welt",
    "crag_slug": "grimmwand",
    "slug": "goldesel",
    "path": "/crags/bucklige-welt/grimmwand#9ee19d07-4b7e-5e58-bd3c-f0dbfdd29871",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Grimmwand | Goldesel Direkt",
@@ -448,18 +522,19 @@
    "source": "Keltenkalk",
    "latitude": 47.65307,
    "longitude": 16.133806,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5b489937-9700-5aab-a5c5-c8a1dceb3cc0",
    "region_slug": "bucklige-welt",
    "crag_slug": "grimmwand",
    "slug": "goldesel-direkt",
    "path": "/crags/bucklige-welt/grimmwand#5b489937-9700-5aab-a5c5-c8a1dceb3cc0",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Grimmwand | Hans im Glück",
@@ -475,18 +550,19 @@
    "source": "Keltenkalk",
    "latitude": 47.65307,
    "longitude": 16.133806,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f8b2c95a-297c-5d9e-9db9-122661ad0192",
    "region_slug": "bucklige-welt",
    "crag_slug": "grimmwand",
    "slug": "hans-im-gluck",
    "path": "/crags/bucklige-welt/grimmwand#f8b2c95a-297c-5d9e-9db9-122661ad0192",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Grimmwand | Knüppel aus dem Sack",
@@ -502,18 +578,19 @@
    "source": "Keltenkalk",
    "latitude": 47.65307,
    "longitude": 16.133806,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "bf6c7091-aa61-5cbd-aea7-06a0d8c7811b",
    "region_slug": "bucklige-welt",
    "crag_slug": "grimmwand",
    "slug": "knuppel-aus-dem-sack",
    "path": "/crags/bucklige-welt/grimmwand#bf6c7091-aa61-5cbd-aea7-06a0d8c7811b",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Grimmwand | Krautesel",
@@ -529,18 +606,19 @@
    "source": "Keltenkalk",
    "latitude": 47.65307,
    "longitude": 16.133806,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d3dee069-5df2-56f5-b0cb-cacee072cd79",
    "region_slug": "bucklige-welt",
    "crag_slug": "grimmwand",
    "slug": "krautesel",
    "path": "/crags/bucklige-welt/grimmwand#d3dee069-5df2-56f5-b0cb-cacee072cd79",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Grimmwand | Kristallkugel",
@@ -556,18 +634,19 @@
    "source": "Keltenkalk",
    "latitude": 47.65307,
    "longitude": 16.133806,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "192bf52c-b2ac-5e0d-a8ad-d812faff32d4",
    "region_slug": "bucklige-welt",
    "crag_slug": "grimmwand",
    "slug": "kristallkugel",
    "path": "/crags/bucklige-welt/grimmwand#192bf52c-b2ac-5e0d-a8ad-d812faff32d4",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Grimmwand | Lumpengesindel",
@@ -583,18 +662,19 @@
    "source": "Keltenkalk",
    "latitude": 47.65307,
    "longitude": 16.133806,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7589cbb1-32ea-51a0-9323-143c9e398108",
    "region_slug": "bucklige-welt",
    "crag_slug": "grimmwand",
    "slug": "lumpengesindel",
    "path": "/crags/bucklige-welt/grimmwand#7589cbb1-32ea-51a0-9323-143c9e398108",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Grimmwand | Piazeinstieg",
@@ -610,18 +690,19 @@
    "source": "Keltenkalk",
    "latitude": 47.65307,
    "longitude": 16.133806,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9247c565-bb8f-5b85-b097-c346de6fa1c9",
    "region_slug": "bucklige-welt",
    "crag_slug": "grimmwand",
    "slug": "piazeinstieg",
    "path": "/crags/bucklige-welt/grimmwand#9247c565-bb8f-5b85-b097-c346de6fa1c9",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Grimmwand | Prinzessin Mäusehaut",
@@ -637,18 +718,19 @@
    "source": "Keltenkalk",
    "latitude": 47.65307,
    "longitude": 16.133806,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "19bab09e-a64f-5ac1-8cdd-09c844cfe633",
    "region_slug": "bucklige-welt",
    "crag_slug": "grimmwand",
    "slug": "prinzessin-mausehaut",
    "path": "/crags/bucklige-welt/grimmwand#19bab09e-a64f-5ac1-8cdd-09c844cfe633",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Grimmwand | Treuer Johannes",
@@ -664,18 +746,19 @@
    "source": "Keltenkalk",
    "latitude": 47.65307,
    "longitude": 16.133806,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "76d98d27-eb51-5869-8e31-d683ed974872",
    "region_slug": "bucklige-welt",
    "crag_slug": "grimmwand",
    "slug": "treuer-johannes",
    "path": "/crags/bucklige-welt/grimmwand#76d98d27-eb51-5869-8e31-d683ed974872",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Grimmwand | Wichtelmänner",
@@ -691,18 +774,19 @@
    "source": "Keltenkalk",
    "latitude": 47.65307,
    "longitude": 16.133806,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "dcaf640b-f3c3-52f0-ab55-9a9ad3af9f1e",
    "region_slug": "bucklige-welt",
    "crag_slug": "grimmwand",
    "slug": "wichtelmanner",
    "path": "/crags/bucklige-welt/grimmwand#dcaf640b-f3c3-52f0-ab55-9a9ad3af9f1e",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

@@ -1,0 +1,70 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:29:28+00:00",
+ "crag": {
+  "id": "280cdb7a-6bed-5d82-bc0d-7f2182d56cd5",
+  "name": "Wasserfall Klettergarten Losenheim",
+  "slug": "wasserfall-klettergarten-losenheim",
+  "region": "Puchberg Grünbach",
+  "region_slug": "puchberg-grunbach",
+  "route_count": 0,
+  "is_stub": true,
+  "latitude": 47.795223,
+  "longitude": 15.85628,
+  "coord_source": "osm",
+  "grades": [],
+  "disciplines": [],
+  "path": "/crags/puchberg-grunbach/wasserfall-klettergarten-losenheim",
+  "osm": "relation/21003543",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/21003543",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=47.795223&mlon=15.85628#map=16/47.795223/15.85628",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Wasserfall+Klettergarten+Losenheim+Puchberg+Gr%C3%BCnbach"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Wasserfall+Klettergarten+Losenheim+Puchberg+Gr%C3%BCnbach"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Wasserfall+Klettergarten+Losenheim"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Wasserfall+Klettergarten+Losenheim+Puchberg+Gr%C3%BCnbach"
+   }
+  ],
+  "has_exact_links": false
+ },
+ "routes": []
+}

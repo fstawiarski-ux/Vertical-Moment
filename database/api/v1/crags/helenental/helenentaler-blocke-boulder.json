@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "f70f09f0-762c-5abd-a562-02b80b1ef362",
   "name": "Helenentaler Blöcke (Boulder)",
@@ -8,8 +8,10 @@
   "region": "Helenental",
   "region_slug": "helenental",
   "route_count": 2,
+  "is_stub": false,
   "latitude": null,
   "longitude": null,
+  "coord_source": null,
   "grades": [
    "6a",
    "6c"
@@ -17,7 +19,43 @@
   "disciplines": [
    "boulder"
   ],
-  "path": "/crags/helenental/helenentaler-blocke-boulder"
+  "path": "/crags/helenental/helenentaler-blocke-boulder",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Helenentaler+Bl%C3%B6cke+%28Boulder%29+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Helenentaler+Bl%C3%B6cke+%28Boulder%29+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Helenentaler+Bl%C3%B6cke+%28Boulder%29"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Helenentaler+Bl%C3%B6cke+%28Boulder%29+Helenental"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -34,18 +72,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e0258828-47cc-5c27-b74e-72ab6d62f546",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke-boulder",
    "slug": "muttis-liebling",
    "path": "/crags/helenental/helenentaler-blocke-boulder#e0258828-47cc-5c27-b74e-72ab6d62f546",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Helenental | Helenentaler Blöcke (Boulder) | Scheisszange",
@@ -61,18 +100,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6c76c258-f1c0-5441-9f31-19c037a1c004",
    "region_slug": "helenental",
    "crag_slug": "helenentaler-blocke-boulder",
    "slug": "scheisszange",
    "path": "/crags/helenental/helenentaler-blocke-boulder#6c76c258-f1c0-5441-9f31-19c037a1c004",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }

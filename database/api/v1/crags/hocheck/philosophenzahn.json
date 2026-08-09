@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "cc56c8b8-22d9-50f5-86b0-344d8dadeee5",
   "name": "Philosophenzahn",
@@ -8,8 +8,10 @@
   "region": "Hocheck",
   "region_slug": "hocheck",
   "route_count": 11,
-  "latitude": null,
-  "longitude": null,
+  "is_stub": false,
+  "latitude": 48.007517,
+  "longitude": 16.036387,
+  "coord_source": "routes",
   "grades": [
    "5+",
    "5-",
@@ -22,7 +24,57 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/hocheck/philosophenzahn"
+  "path": "/crags/hocheck/philosophenzahn",
+  "osm": "relation/18166517",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18166517",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=48.007517&mlon=16.036387#map=16/48.007517/16.036387",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Philosophenzahn+Hocheck"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Philosophenzahn+Hocheck"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Philosophenzahn"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Philosophenzahn+Hocheck"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -37,20 +89,21 @@
    "crag": "Philosophenzahn",
    "wall": "Philosophenzahn",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007517,
+   "longitude": 16.036387,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "20c15a55-31b1-54cb-8e6f-4215f9358dd3",
    "region_slug": "hocheck",
    "crag_slug": "philosophenzahn",
    "slug": "backenzahn",
    "path": "/crags/hocheck/philosophenzahn#20c15a55-31b1-54cb-8e6f-4215f9358dd3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Philosophenzahn | Eckzahn",
@@ -64,20 +117,21 @@
    "crag": "Philosophenzahn",
    "wall": "Philosophenzahn",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007517,
+   "longitude": 16.036387,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "69b3184e-5d64-5139-8aca-683729f7589a",
    "region_slug": "hocheck",
    "crag_slug": "philosophenzahn",
    "slug": "eckzahn",
    "path": "/crags/hocheck/philosophenzahn#69b3184e-5d64-5139-8aca-683729f7589a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Philosophenzahn | Eichkätzerl lachen doof",
@@ -91,20 +145,21 @@
    "crag": "Philosophenzahn",
    "wall": "Philosophenzahn",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007517,
+   "longitude": 16.036387,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f24be939-ebd5-5353-bc6f-67e7686f5104",
    "region_slug": "hocheck",
    "crag_slug": "philosophenzahn",
    "slug": "eichkatzerl-lachen-doof",
    "path": "/crags/hocheck/philosophenzahn#f24be939-ebd5-5353-bc6f-67e7686f5104",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Philosophenzahn | Hättest du geschwiegen",
@@ -118,20 +173,21 @@
    "crag": "Philosophenzahn",
    "wall": "Philosophenzahn",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007517,
+   "longitude": 16.036387,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7aa2b71d-f4dd-58ae-aeb7-d988260f5827",
    "region_slug": "hocheck",
    "crag_slug": "philosophenzahn",
    "slug": "hattest-du-geschwiegen",
    "path": "/crags/hocheck/philosophenzahn#7aa2b71d-f4dd-58ae-aeb7-d988260f5827",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Philosophenzahn | Leisten-Schnapp-Quälgeist",
@@ -145,20 +201,21 @@
    "crag": "Philosophenzahn",
    "wall": "Philosophenzahn",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007517,
+   "longitude": 16.036387,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "265973bf-39ba-57cd-9c5f-3026d6a482a5",
    "region_slug": "hocheck",
    "crag_slug": "philosophenzahn",
    "slug": "leisten-schnapp-qualgeist",
    "path": "/crags/hocheck/philosophenzahn#265973bf-39ba-57cd-9c5f-3026d6a482a5",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Philosophenzahn | Löcher-Blockier-Quälgeist",
@@ -172,20 +229,21 @@
    "crag": "Philosophenzahn",
    "wall": "Philosophenzahn",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007517,
+   "longitude": 16.036387,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7b0f657e-d777-5c78-9298-dc05388bedea",
    "region_slug": "hocheck",
    "crag_slug": "philosophenzahn",
    "slug": "locher-blockier-qualgeist",
    "path": "/crags/hocheck/philosophenzahn#7b0f657e-d777-5c78-9298-dc05388bedea",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Philosophenzahn | Original",
@@ -199,20 +257,21 @@
    "crag": "Philosophenzahn",
    "wall": "Philosophenzahn",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007517,
+   "longitude": 16.036387,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e6362cf7-0d23-5425-b900-9107cd4535fe",
    "region_slug": "hocheck",
    "crag_slug": "philosophenzahn",
    "slug": "original",
    "path": "/crags/hocheck/philosophenzahn#e6362cf7-0d23-5425-b900-9107cd4535fe",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Philosophenzahn | Originell",
@@ -226,20 +285,21 @@
    "crag": "Philosophenzahn",
    "wall": "Philosophenzahn",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007517,
+   "longitude": 16.036387,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4a472096-bc67-5237-91a9-850e28b96183",
    "region_slug": "hocheck",
    "crag_slug": "philosophenzahn",
    "slug": "originell",
    "path": "/crags/hocheck/philosophenzahn#4a472096-bc67-5237-91a9-850e28b96183",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Philosophenzahn | Ostriss",
@@ -253,20 +313,21 @@
    "crag": "Philosophenzahn",
    "wall": "Philosophenzahn",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007517,
+   "longitude": 16.036387,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e15c80a6-8219-52ce-a298-5040b80604b1",
    "region_slug": "hocheck",
    "crag_slug": "philosophenzahn",
    "slug": "ostriss",
    "path": "/crags/hocheck/philosophenzahn#e15c80a6-8219-52ce-a298-5040b80604b1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Philosophenzahn | Prusikanstieg",
@@ -280,20 +341,21 @@
    "crag": "Philosophenzahn",
    "wall": "Philosophenzahn",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007517,
+   "longitude": 16.036387,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "87de8505-c7e0-568e-96cd-ed2f892688ca",
    "region_slug": "hocheck",
    "crag_slug": "philosophenzahn",
    "slug": "prusikanstieg",
    "path": "/crags/hocheck/philosophenzahn#87de8505-c7e0-568e-96cd-ed2f892688ca",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Philosophenzahn | Reden ist Silber",
@@ -307,20 +369,21 @@
    "crag": "Philosophenzahn",
    "wall": "Philosophenzahn",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007517,
+   "longitude": 16.036387,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6d46bb59-b0bf-5334-a244-5ac30b590e8a",
    "region_slug": "hocheck",
    "crag_slug": "philosophenzahn",
    "slug": "reden-ist-silber",
    "path": "/crags/hocheck/philosophenzahn#6d46bb59-b0bf-5334-a244-5ac30b590e8a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

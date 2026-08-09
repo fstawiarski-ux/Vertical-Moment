@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "6a70bf25-5806-5612-b551-863791bda7e5",
   "name": "Sektor 4 - Links Aussen",
@@ -8,8 +8,10 @@
   "region": "Hirschwände",
   "region_slug": "hirschwande",
   "route_count": 12,
+  "is_stub": false,
   "latitude": null,
   "longitude": null,
+  "coord_source": null,
   "grades": [
    "5",
    "5+",
@@ -24,7 +26,43 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/hirschwande/sektor-4-links-aussen"
+  "path": "/crags/hirschwande/sektor-4-links-aussen",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Sektor+4+-+Links+Aussen+Hirschw%C3%A4nde"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Sektor+4+-+Links+Aussen+Hirschw%C3%A4nde"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Sektor+4+-+Links+Aussen"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Sektor+4+-+Links+Aussen+Hirschw%C3%A4nde"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -41,18 +79,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3f9e01b2-5f7d-5cd7-a64c-7578ae09a3a4",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-4-links-aussen",
    "slug": "broselmaier",
    "path": "/crags/hirschwande/sektor-4-links-aussen#3f9e01b2-5f7d-5cd7-a64c-7578ae09a3a4",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 4 - Links Aussen | Curettage a vif",
@@ -68,18 +107,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "89b9dff6-858a-5be2-8691-c21b6b2a1738",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-4-links-aussen",
    "slug": "curettage-a-vif",
    "path": "/crags/hirschwande/sektor-4-links-aussen#89b9dff6-858a-5be2-8691-c21b6b2a1738",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 4 - Links Aussen | Henkelversprechung",
@@ -95,18 +135,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "20923e1e-8926-5d71-a09b-63e313ee8c98",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-4-links-aussen",
    "slug": "henkelversprechung",
    "path": "/crags/hirschwande/sektor-4-links-aussen#20923e1e-8926-5d71-a09b-63e313ee8c98",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 4 - Links Aussen | I Was Net",
@@ -122,18 +163,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4bfa5895-cedb-5d25-a7e4-a7744f44f185",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-4-links-aussen",
    "slug": "i-was-net",
    "path": "/crags/hirschwande/sektor-4-links-aussen#4bfa5895-cedb-5d25-a7e4-a7744f44f185",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 4 - Links Aussen | Klassischer Riss",
@@ -149,18 +191,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c7a82e2d-8718-5fd1-b325-687131a4ac03",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-4-links-aussen",
    "slug": "klassischer-riss",
    "path": "/crags/hirschwande/sektor-4-links-aussen#c7a82e2d-8718-5fd1-b325-687131a4ac03",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 4 - Links Aussen | Les Petits Riens",
@@ -176,18 +219,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7fd0b654-538e-56fe-85e4-5c99e0fc2410",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-4-links-aussen",
    "slug": "les-petits-riens",
    "path": "/crags/hirschwande/sektor-4-links-aussen#7fd0b654-538e-56fe-85e4-5c99e0fc2410",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 4 - Links Aussen | Nicht mein Problem",
@@ -203,18 +247,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "13c31c70-812d-55a6-a8a9-3d115994cd7e",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-4-links-aussen",
    "slug": "nicht-mein-problem",
    "path": "/crags/hirschwande/sektor-4-links-aussen#13c31c70-812d-55a6-a8a9-3d115994cd7e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 4 - Links Aussen | Sand in Sicht",
@@ -230,18 +275,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a264a354-d183-5b56-a323-90b7bad7d455",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-4-links-aussen",
    "slug": "sand-in-sicht",
    "path": "/crags/hirschwande/sektor-4-links-aussen#a264a354-d183-5b56-a323-90b7bad7d455",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 4 - Links Aussen | Scharfe Sache",
@@ -257,18 +303,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d2de0a64-968e-5904-bb50-5eabf1027577",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-4-links-aussen",
    "slug": "scharfe-sache",
    "path": "/crags/hirschwande/sektor-4-links-aussen#d2de0a64-968e-5904-bb50-5eabf1027577",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 4 - Links Aussen | Sternschnupperer",
@@ -284,18 +331,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1968dbec-bee1-5c53-9bc4-93078e4ebdf9",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-4-links-aussen",
    "slug": "sternschnupperer",
    "path": "/crags/hirschwande/sektor-4-links-aussen#1968dbec-bee1-5c53-9bc4-93078e4ebdf9",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 4 - Links Aussen | Sternschnupperer 1.SL",
@@ -311,18 +359,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d8542294-ab26-5792-ac69-19b379251092",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-4-links-aussen",
    "slug": "sternschnupperer-1-sl",
    "path": "/crags/hirschwande/sektor-4-links-aussen#d8542294-ab26-5792-ac69-19b379251092",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 4 - Links Aussen | Vivant Sequentes",
@@ -338,18 +387,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "eb933320-60ea-5260-a7d3-bc9f34cb71db",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-4-links-aussen",
    "slug": "vivant-sequentes",
    "path": "/crags/hirschwande/sektor-4-links-aussen#eb933320-60ea-5260-a7d3-bc9f34cb71db",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }

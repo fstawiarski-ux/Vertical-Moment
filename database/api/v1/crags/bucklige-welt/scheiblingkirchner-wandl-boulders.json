@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "890d8c4e-8e41-558b-bcdb-1ad2f8fb28d8",
   "name": "Scheiblingkirchner Wandl (boulders)",
@@ -8,8 +8,10 @@
   "region": "Bucklige Welt",
   "region_slug": "bucklige-welt",
   "route_count": 7,
+  "is_stub": false,
   "latitude": 47.660037,
   "longitude": 16.138196,
+  "coord_source": "routes",
   "grades": [
    "5b",
    "6a",
@@ -21,7 +23,50 @@
   "disciplines": [
    "boulder"
   ],
-  "path": "/crags/bucklige-welt/scheiblingkirchner-wandl-boulders"
+  "path": "/crags/bucklige-welt/scheiblingkirchner-wandl-boulders",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=47.660037&mlon=16.138196#map=16/47.660037/16.138196",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Scheiblingkirchner+Wandl+%28boulders%29+Bucklige+Welt"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Scheiblingkirchner+Wandl+%28boulders%29+Bucklige+Welt"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Scheiblingkirchner+Wandl+%28boulders%29"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Scheiblingkirchner+Wandl+%28boulders%29+Bucklige+Welt"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -38,18 +83,19 @@
    "source": "Keltenkalk",
    "latitude": 47.660037,
    "longitude": 16.138196,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "896386f0-8bfb-5525-8920-e9bfb0fe1d93",
    "region_slug": "bucklige-welt",
    "crag_slug": "scheiblingkirchner-wandl-boulders",
    "slug": "darwin",
    "path": "/crags/bucklige-welt/scheiblingkirchner-wandl-boulders#896386f0-8bfb-5525-8920-e9bfb0fe1d93",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Scheiblingkirchner Wandl (boulders) | Descent of Men",
@@ -65,18 +111,19 @@
    "source": "Keltenkalk",
    "latitude": 47.660037,
    "longitude": 16.138196,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "168cd70b-5efe-5e07-a075-adc91b33201c",
    "region_slug": "bucklige-welt",
    "crag_slug": "scheiblingkirchner-wandl-boulders",
    "slug": "descent-of-men",
    "path": "/crags/bucklige-welt/scheiblingkirchner-wandl-boulders#168cd70b-5efe-5e07-a075-adc91b33201c",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Scheiblingkirchner Wandl (boulders) | Eye of the Hurricane",
@@ -92,18 +139,19 @@
    "source": "Keltenkalk",
    "latitude": 47.660037,
    "longitude": 16.138196,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d25648f3-f872-53d2-9dc8-3485f48ccf8a",
    "region_slug": "bucklige-welt",
    "crag_slug": "scheiblingkirchner-wandl-boulders",
    "slug": "eye-of-the-hurricane",
    "path": "/crags/bucklige-welt/scheiblingkirchner-wandl-boulders#d25648f3-f872-53d2-9dc8-3485f48ccf8a",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Scheiblingkirchner Wandl (boulders) | Fette Qualle",
@@ -119,18 +167,19 @@
    "source": "Keltenkalk",
    "latitude": 47.660037,
    "longitude": 16.138196,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5dd87479-0bd4-59c9-a274-c4931ad95b40",
    "region_slug": "bucklige-welt",
    "crag_slug": "scheiblingkirchner-wandl-boulders",
    "slug": "fette-qualle",
    "path": "/crags/bucklige-welt/scheiblingkirchner-wandl-boulders#5dd87479-0bd4-59c9-a274-c4931ad95b40",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Scheiblingkirchner Wandl (boulders) | Handlertraverse",
@@ -146,18 +195,19 @@
    "source": "Keltenkalk",
    "latitude": 47.660037,
    "longitude": 16.138196,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "89715c5b-a227-5cd8-aa17-4ead56997945",
    "region_slug": "bucklige-welt",
    "crag_slug": "scheiblingkirchner-wandl-boulders",
    "slug": "handlertraverse",
    "path": "/crags/bucklige-welt/scheiblingkirchner-wandl-boulders#89715c5b-a227-5cd8-aa17-4ead56997945",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Scheiblingkirchner Wandl (boulders) | Hui Luft und Ziag",
@@ -173,18 +223,19 @@
    "source": "Keltenkalk",
    "latitude": 47.660037,
    "longitude": 16.138196,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f7f8b0e8-6df0-572e-9378-ec172fa5ce7f",
    "region_slug": "bucklige-welt",
    "crag_slug": "scheiblingkirchner-wandl-boulders",
    "slug": "hui-luft-und-ziag",
    "path": "/crags/bucklige-welt/scheiblingkirchner-wandl-boulders#f7f8b0e8-6df0-572e-9378-ec172fa5ce7f",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Scheiblingkirchner Wandl (boulders) | In Schutt und Asche",
@@ -200,18 +251,19 @@
    "source": "Keltenkalk",
    "latitude": 47.660037,
    "longitude": 16.138196,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "387af262-fca9-54fe-8fcd-e0d1d661d487",
    "region_slug": "bucklige-welt",
    "crag_slug": "scheiblingkirchner-wandl-boulders",
    "slug": "in-schutt-und-asche",
    "path": "/crags/bucklige-welt/scheiblingkirchner-wandl-boulders#387af262-fca9-54fe-8fcd-e0d1d661d487",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

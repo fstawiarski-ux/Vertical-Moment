@@ -1,0 +1,1265 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:29:28+00:00",
+ "region": {
+  "id": "dd9633e8-e38c-5363-bcd0-83093a2b1714",
+  "name": "Baden",
+  "slug": "baden",
+  "crag_count": 18,
+  "route_count": 0,
+  "path": "/crags/baden",
+  "links": [
+   {
+    "kind": "exact",
+    "label": "theCrag — Vienna area overview",
+    "domain": "thecrag.com",
+    "url": "https://www.thecrag.com/en/climbing/austria/wien-vienna-area",
+    "note": "Community index of the whole Vienna region, with its own source list."
+   },
+   {
+    "kind": "exact",
+    "label": "Keltenkalk",
+    "domain": "keltenkalk.at",
+    "url": "http://www.keltenkalk.at/",
+    "note": "The main printed guidebook for the Vienna limestone — roughly 4,000 climbs and boulders."
+   },
+   {
+    "kind": "exact",
+    "label": "bergsteigen.com — Klettergarten index",
+    "domain": "bergsteigen.com",
+    "url": "https://www.bergsteigen.com/touren/klettergarten/",
+    "note": "Filterable crag database with descriptions, approach notes and many downloadable topos."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Baden+Klettergarten"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Baden+Austria"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Baden"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Baden+Klettern"
+   }
+  ],
+  "more_info_note": "Vertical Moment does not publish topos yet. These are the places that do — follow them for the drawn lines, and verify anything safety-relevant on site."
+ },
+ "crags": [
+  {
+   "id": "677ecc36-a4ae-584a-bf9c-cda4f592878d",
+   "name": "Anninger",
+   "slug": "anninger",
+   "region": "Baden",
+   "region_slug": "baden",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 48.048727,
+   "longitude": 16.260159,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/baden/anninger",
+   "osm": "relation/18217413",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18217413",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.048727&mlon=16.260159#map=16/48.048727/16.260159",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Anninger+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Anninger+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Anninger"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Anninger+Baden"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "532c687f-9cbb-5281-a66a-610e8dfc0932",
+   "name": "Badener Kletterschule",
+   "slug": "badener-kletterschule",
+   "region": "Baden",
+   "region_slug": "baden",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 48.0197,
+   "longitude": 16.188871,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/baden/badener-kletterschule",
+   "osm": "relation/18165157",
+   "rock": null,
+   "website": "https://www.bergsteigen.com/touren/klettergarten/badener-kletterschule/",
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18165157",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Crag website",
+     "domain": "",
+     "url": "https://www.bergsteigen.com/touren/klettergarten/badener-kletterschule/",
+     "note": "Official or community page, tagged in OSM."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.0197&mlon=16.188871#map=16/48.0197/16.188871",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Badener+Kletterschule+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Badener+Kletterschule+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Badener+Kletterschule"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Badener+Kletterschule+Baden"
+    }
+   ],
+   "has_exact_links": true
+  },
+  {
+   "id": "fbaa664d-252e-5be1-abc8-adbb8f0a679b",
+   "name": "Block 3: Fraaanz",
+   "slug": "block-3-fraaanz",
+   "region": "Baden",
+   "region_slug": "baden",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 48.02051,
+   "longitude": 16.193022,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/baden/block-3-fraaanz",
+   "osm": "way/204576115",
+   "rock": "limestone",
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/way/204576115",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.02051&mlon=16.193022#map=16/48.02051/16.193022",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Block+3%3A+Fraaanz+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Block+3%3A+Fraaanz+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Block+3%3A+Fraaanz"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Block+3%3A+Fraaanz+Baden"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "a6e340ef-1f16-5210-b41c-9d0e88ad3df7",
+   "name": "Block 7",
+   "slug": "block-7",
+   "region": "Baden",
+   "region_slug": "baden",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 48.019492,
+   "longitude": 16.194966,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/baden/block-7",
+   "osm": "relation/18216601",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18216601",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.019492&mlon=16.194966#map=16/48.019492/16.194966",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Block+7+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Block+7+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Block+7"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Block+7+Baden"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "b2c92890-2929-5aa1-b9b0-0961730010d6",
+   "name": "Brückenfels",
+   "slug": "bruckenfels",
+   "region": "Baden",
+   "region_slug": "baden",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 48.018802,
+   "longitude": 16.191198,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/baden/bruckenfels",
+   "osm": "relation/18181426",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18181426",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.018802&mlon=16.191198#map=16/48.018802/16.191198",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Br%C3%BCckenfels+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Br%C3%BCckenfels+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Br%C3%BCckenfels"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Br%C3%BCckenfels+Baden"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "7c1ae4d4-e9f9-5c3d-89fa-daa12bcd7010",
+   "name": "Detlef",
+   "slug": "detlef",
+   "region": "Baden",
+   "region_slug": "baden",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 48.020126,
+   "longitude": 16.186798,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/baden/detlef",
+   "osm": "relation/18181425",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18181425",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.020126&mlon=16.186798#map=16/48.020126/16.186798",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Detlef+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Detlef+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Detlef"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Detlef+Baden"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "7749b02e-0d20-537c-826c-9312d63b7ab5",
+   "name": "Kaiserstein",
+   "slug": "kaiserstein",
+   "region": "Baden",
+   "region_slug": "baden",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.978979,
+   "longitude": 16.197344,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/baden/kaiserstein",
+   "osm": "relation/18217419",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18217419",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.978979&mlon=16.197344#map=16/47.978979/16.197344",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Kaiserstein+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Kaiserstein+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Kaiserstein"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Kaiserstein+Baden"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "88a4a259-df18-54f4-8d46-2e0f746034ec",
+   "name": "Kleines Verdon",
+   "slug": "kleines-verdon",
+   "region": "Baden",
+   "region_slug": "baden",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 48.017609,
+   "longitude": 16.196708,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/baden/kleines-verdon",
+   "osm": "relation/18181428",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18181428",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.017609&mlon=16.196708#map=16/48.017609/16.196708",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Kleines+Verdon+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Kleines+Verdon+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Kleines+Verdon"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Kleines+Verdon+Baden"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "b0142b42-4508-59f7-a544-f1d1ea63d1d1",
+   "name": "Klettergarten Gumpoldskirchen",
+   "slug": "klettergarten-gumpoldskirchen",
+   "region": "Baden",
+   "region_slug": "baden",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 48.046025,
+   "longitude": 16.269679,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/baden/klettergarten-gumpoldskirchen",
+   "osm": "relation/18166854",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18166854",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.046025&mlon=16.269679#map=16/48.046025/16.269679",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Klettergarten+Gumpoldskirchen+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Klettergarten+Gumpoldskirchen+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Klettergarten+Gumpoldskirchen"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Klettergarten+Gumpoldskirchen+Baden"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "935d3830-614d-54ad-945c-cd35254e3448",
+   "name": "Königshöhle",
+   "slug": "konigshohle",
+   "region": "Baden",
+   "region_slug": "baden",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 48.003913,
+   "longitude": 16.200519,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/baden/konigshohle",
+   "osm": "relation/18166837",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18166837",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.003913&mlon=16.200519#map=16/48.003913/16.200519",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+K%C3%B6nigsh%C3%B6hle+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+K%C3%B6nigsh%C3%B6hle+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+K%C3%B6nigsh%C3%B6hle"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+K%C3%B6nigsh%C3%B6hle+Baden"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "2cdca816-b91d-5919-88c3-7d91b9ca1b62",
+   "name": "Ospwandl und Dachswandl",
+   "slug": "ospwandl-und-dachswandl",
+   "region": "Baden",
+   "region_slug": "baden",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 48.016749,
+   "longitude": 16.197253,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/baden/ospwandl-und-dachswandl",
+   "osm": "relation/19600250",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/19600250",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.016749&mlon=16.197253#map=16/48.016749/16.197253",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Ospwandl+und+Dachswandl+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Ospwandl+und+Dachswandl+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Ospwandl+und+Dachswandl"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Ospwandl+und+Dachswandl+Baden"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "e07b1000-c94b-570e-b631-51b07f258cf4",
+   "name": "Rauhenstein",
+   "slug": "rauhenstein",
+   "region": "Baden",
+   "region_slug": "baden",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 48.012959,
+   "longitude": 16.206364,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/baden/rauhenstein",
+   "osm": "relation/18216605",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18216605",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.012959&mlon=16.206364#map=16/48.012959/16.206364",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Rauhenstein+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Rauhenstein+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Rauhenstein"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Rauhenstein+Baden"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "6aabfd57-cd0e-5565-8542-757ee2b57e08",
+   "name": "Riverdance",
+   "slug": "riverdance",
+   "region": "Baden",
+   "region_slug": "baden",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 48.007791,
+   "longitude": 16.207753,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/baden/riverdance",
+   "osm": "relation/18217426",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18217426",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.007791&mlon=16.207753#map=16/48.007791/16.207753",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Riverdance+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Riverdance+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Riverdance"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Riverdance+Baden"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "b00c79d1-1c20-5415-9cd5-fc13a2632d78",
+   "name": "Siegenfelder Steinbruch - Platte",
+   "slug": "siegenfelder-steinbruch-platte",
+   "region": "Baden",
+   "region_slug": "baden",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 48.022638,
+   "longitude": 16.191539,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/baden/siegenfelder-steinbruch-platte",
+   "osm": "relation/18146901",
+   "rock": null,
+   "website": "https://www.bergsteigen.com/touren/klettergarten/siegenfelder-steinbruch-platte/",
+   "topo": "https://www.bergsteigen.com/fileadmin/userdaten/tour/topo/5716/siegenfelder-steinbruch-platte-baden-klettern-topo.png",
+   "wikimedia": "File:Siegenfelder Steinbruch - Platte, left.jpg",
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18146901",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Crag website",
+     "domain": "",
+     "url": "https://www.bergsteigen.com/touren/klettergarten/siegenfelder-steinbruch-platte/",
+     "note": "Official or community page, tagged in OSM."
+    },
+    {
+     "kind": "exact",
+     "label": "Topo",
+     "domain": "",
+     "url": "https://www.bergsteigen.com/fileadmin/userdaten/tour/topo/5716/siegenfelder-steinbruch-platte-baden-klettern-topo.png",
+     "note": "Topo source tagged in OSM."
+    },
+    {
+     "kind": "exact",
+     "label": "Wikimedia Commons",
+     "domain": "commons.wikimedia.org",
+     "url": "https://commons.wikimedia.org/wiki/File%3ASiegenfelder+Steinbruch+-+Platte%2C+left.jpg",
+     "note": "Photograph of the crag."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.022638&mlon=16.191539#map=16/48.022638/16.191539",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Siegenfelder+Steinbruch+-+Platte+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Siegenfelder+Steinbruch+-+Platte+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Siegenfelder+Steinbruch+-+Platte"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Siegenfelder+Steinbruch+-+Platte+Baden"
+    }
+   ],
+   "has_exact_links": true
+  },
+  {
+   "id": "13941cb8-0d9e-5893-a820-cc7fd4516164",
+   "name": "Steinbruch",
+   "slug": "steinbruch",
+   "region": "Baden",
+   "region_slug": "baden",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.998745,
+   "longitude": 16.198017,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/baden/steinbruch",
+   "osm": "relation/18217425",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18217425",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.998745&mlon=16.198017#map=16/47.998745/16.198017",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Steinbruch+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Steinbruch+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Steinbruch"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Steinbruch+Baden"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "fe5a0adf-59bb-555b-b41a-a4f2e6f54e76",
+   "name": "Tiegerblock",
+   "slug": "tiegerblock",
+   "region": "Baden",
+   "region_slug": "baden",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 48.020637,
+   "longitude": 16.190754,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/baden/tiegerblock",
+   "osm": "node/2145298058",
+   "rock": "limestone",
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/node/2145298058",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.020637&mlon=16.190754#map=16/48.020637/16.190754",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Tiegerblock+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Tiegerblock+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Tiegerblock"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Tiegerblock+Baden"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "2013c92a-2772-532e-9359-8ba0bc8de68f",
+   "name": "Voglwandl",
+   "slug": "voglwandl",
+   "region": "Baden",
+   "region_slug": "baden",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 48.016494,
+   "longitude": 16.198491,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/baden/voglwandl",
+   "osm": "relation/18181429",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18181429",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.016494&mlon=16.198491#map=16/48.016494/16.198491",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Voglwandl+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Voglwandl+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Voglwandl"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Voglwandl+Baden"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "2e6f0125-264a-5929-93cd-bd9b2799cb08",
+   "name": "Ötziturm",
+   "slug": "otziturm",
+   "region": "Baden",
+   "region_slug": "baden",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 48.023462,
+   "longitude": 16.192404,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/baden/otziturm",
+   "osm": "relation/18166551",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18166551",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.023462&mlon=16.192404#map=16/48.023462/16.192404",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+%C3%96tziturm+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+%C3%96tziturm+Baden"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+%C3%96tziturm"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+%C3%96tziturm+Baden"
+    }
+   ],
+   "has_exact_links": false
+  }
+ ],
+ "routes": []
+}

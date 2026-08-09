@@ -1,0 +1,77 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:29:28+00:00",
+ "crag": {
+  "id": "d0af1b0e-968f-56dc-bc84-fdd18db23157",
+  "name": "Parapluie Wandl",
+  "slug": "parapluie-wandl",
+  "region": "Bucklige Welt",
+  "region_slug": "bucklige-welt",
+  "route_count": 0,
+  "is_stub": true,
+  "latitude": 47.659789,
+  "longitude": 16.139528,
+  "coord_source": "osm",
+  "grades": [],
+  "disciplines": [],
+  "path": "/crags/bucklige-welt/parapluie-wandl",
+  "osm": "node/11837674632",
+  "rock": null,
+  "website": "https://www.bergsteigen.com/touren/klettergarten/paraplui-wandl-scheiblingkirchen/",
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/node/11837674632",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Crag website",
+    "domain": "",
+    "url": "https://www.bergsteigen.com/touren/klettergarten/paraplui-wandl-scheiblingkirchen/",
+    "note": "Official or community page, tagged in OSM."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=47.659789&mlon=16.139528#map=16/47.659789/16.139528",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Parapluie+Wandl+Bucklige+Welt"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Parapluie+Wandl+Bucklige+Welt"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Parapluie+Wandl"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Parapluie+Wandl+Bucklige+Welt"
+   }
+  ],
+  "has_exact_links": true
+ },
+ "routes": []
+}

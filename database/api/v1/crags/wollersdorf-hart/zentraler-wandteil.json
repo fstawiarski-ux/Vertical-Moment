@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "58461cd6-ea6c-522f-b30f-072e0c4586c8",
   "name": "Zentraler Wandteil",
@@ -8,8 +8,10 @@
   "region": "Wöllersdorf Hart",
   "region_slug": "wollersdorf-hart",
   "route_count": 20,
+  "is_stub": false,
   "latitude": null,
   "longitude": null,
+  "coord_source": null,
   "grades": [
    "4",
    "4+",
@@ -28,7 +30,43 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/wollersdorf-hart/zentraler-wandteil"
+  "path": "/crags/wollersdorf-hart/zentraler-wandteil",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Zentraler+Wandteil+W%C3%B6llersdorf+Hart"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Zentraler+Wandteil+W%C3%B6llersdorf+Hart"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Zentraler+Wandteil"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Zentraler+Wandteil+W%C3%B6llersdorf+Hart"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -45,18 +83,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6333fe04-2db2-5171-ae2e-09c5f4551af9",
    "region_slug": "wollersdorf-hart",
    "crag_slug": "zentraler-wandteil",
    "slug": "a-beda-s-place-is-on-the-top",
    "path": "/crags/wollersdorf-hart/zentraler-wandteil#6333fe04-2db2-5171-ae2e-09c5f4551af9",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Wöllersdorf Hart | Zentraler Wandteil | Blede Gschicht",
@@ -72,18 +111,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4f035544-d483-5cc6-b457-5ad4b15aa271",
    "region_slug": "wollersdorf-hart",
    "crag_slug": "zentraler-wandteil",
    "slug": "blede-gschicht",
    "path": "/crags/wollersdorf-hart/zentraler-wandteil#4f035544-d483-5cc6-b457-5ad4b15aa271",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Wöllersdorf Hart | Zentraler Wandteil | Chiemsee",
@@ -99,18 +139,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "db372e8a-838d-564a-a639-67c5923bf030",
    "region_slug": "wollersdorf-hart",
    "crag_slug": "zentraler-wandteil",
    "slug": "chiemsee",
    "path": "/crags/wollersdorf-hart/zentraler-wandteil#db372e8a-838d-564a-a639-67c5923bf030",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Wöllersdorf Hart | Zentraler Wandteil | Confetti Show",
@@ -126,18 +167,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8b71ab66-9117-5e08-8c2b-fecb6caf92fc",
    "region_slug": "wollersdorf-hart",
    "crag_slug": "zentraler-wandteil",
    "slug": "confetti-show",
    "path": "/crags/wollersdorf-hart/zentraler-wandteil#8b71ab66-9117-5e08-8c2b-fecb6caf92fc",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Wöllersdorf Hart | Zentraler Wandteil | Das Knie ist hie",
@@ -153,18 +195,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cb4bd81a-93f9-564f-9620-9efed4a8662a",
    "region_slug": "wollersdorf-hart",
    "crag_slug": "zentraler-wandteil",
    "slug": "das-knie-ist-hie",
    "path": "/crags/wollersdorf-hart/zentraler-wandteil#cb4bd81a-93f9-564f-9620-9efed4a8662a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Wöllersdorf Hart | Zentraler Wandteil | Fistful of Power",
@@ -180,18 +223,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b2aa38fd-7112-5053-a489-699c5de8f4a4",
    "region_slug": "wollersdorf-hart",
    "crag_slug": "zentraler-wandteil",
    "slug": "fistful-of-power",
    "path": "/crags/wollersdorf-hart/zentraler-wandteil#b2aa38fd-7112-5053-a489-699c5de8f4a4",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Wöllersdorf Hart | Zentraler Wandteil | Fuck the Army",
@@ -207,18 +251,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f7da4914-2a78-5dbe-b128-14c36fb46492",
    "region_slug": "wollersdorf-hart",
    "crag_slug": "zentraler-wandteil",
    "slug": "fuck-the-army",
    "path": "/crags/wollersdorf-hart/zentraler-wandteil#f7da4914-2a78-5dbe-b128-14c36fb46492",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Wöllersdorf Hart | Zentraler Wandteil | Höhlenbär",
@@ -234,18 +279,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8d33fd0f-6066-57ae-88e5-5a308a7c46a4",
    "region_slug": "wollersdorf-hart",
    "crag_slug": "zentraler-wandteil",
    "slug": "hohlenbar",
    "path": "/crags/wollersdorf-hart/zentraler-wandteil#8d33fd0f-6066-57ae-88e5-5a308a7c46a4",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Wöllersdorf Hart | Zentraler Wandteil | Il Gufo",
@@ -261,18 +307,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "008e708f-b9a3-5133-94e2-74f7a1852b5a",
    "region_slug": "wollersdorf-hart",
    "crag_slug": "zentraler-wandteil",
    "slug": "il-gufo",
    "path": "/crags/wollersdorf-hart/zentraler-wandteil#008e708f-b9a3-5133-94e2-74f7a1852b5a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Wöllersdorf Hart | Zentraler Wandteil | It's a Pleasure",
@@ -288,18 +335,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d89830e6-7b68-5ab9-8d92-74f285a8bfb2",
    "region_slug": "wollersdorf-hart",
    "crag_slug": "zentraler-wandteil",
    "slug": "it-s-a-pleasure",
    "path": "/crags/wollersdorf-hart/zentraler-wandteil#d89830e6-7b68-5ab9-8d92-74f285a8bfb2",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Wöllersdorf Hart | Zentraler Wandteil | Kasperltheater",
@@ -315,18 +363,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5ff005ee-d9b8-583e-8956-5a6f35ef6573",
    "region_slug": "wollersdorf-hart",
    "crag_slug": "zentraler-wandteil",
    "slug": "kasperltheater",
    "path": "/crags/wollersdorf-hart/zentraler-wandteil#5ff005ee-d9b8-583e-8956-5a6f35ef6573",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Wöllersdorf Hart | Zentraler Wandteil | Le Champ de Chanvre",
@@ -342,18 +391,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "39ca6db0-d319-5926-b1b1-ca312d29da70",
    "region_slug": "wollersdorf-hart",
    "crag_slug": "zentraler-wandteil",
    "slug": "le-champ-de-chanvre",
    "path": "/crags/wollersdorf-hart/zentraler-wandteil#39ca6db0-d319-5926-b1b1-ca312d29da70",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Wöllersdorf Hart | Zentraler Wandteil | Make Your Way to the Matura",
@@ -369,18 +419,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "00e38957-ffb5-56db-8377-50456696809c",
    "region_slug": "wollersdorf-hart",
    "crag_slug": "zentraler-wandteil",
    "slug": "make-your-way-to-the-matura",
    "path": "/crags/wollersdorf-hart/zentraler-wandteil#00e38957-ffb5-56db-8377-50456696809c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Wöllersdorf Hart | Zentraler Wandteil | Putzorgie",
@@ -396,18 +447,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9c3311e6-9b40-5071-a1e7-169b044faf1c",
    "region_slug": "wollersdorf-hart",
    "crag_slug": "zentraler-wandteil",
    "slug": "putzorgie",
    "path": "/crags/wollersdorf-hart/zentraler-wandteil#9c3311e6-9b40-5071-a1e7-169b044faf1c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Wöllersdorf Hart | Zentraler Wandteil | Return of Tangram",
@@ -423,18 +475,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d73cdaf6-7be2-5844-9de8-db5fc73ba65b",
    "region_slug": "wollersdorf-hart",
    "crag_slug": "zentraler-wandteil",
    "slug": "return-of-tangram",
    "path": "/crags/wollersdorf-hart/zentraler-wandteil#d73cdaf6-7be2-5844-9de8-db5fc73ba65b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Wöllersdorf Hart | Zentraler Wandteil | The Nose",
@@ -450,18 +503,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5b16a831-1fcc-5123-adbf-3c2337b1862f",
    "region_slug": "wollersdorf-hart",
    "crag_slug": "zentraler-wandteil",
    "slug": "the-nose",
    "path": "/crags/wollersdorf-hart/zentraler-wandteil#5b16a831-1fcc-5123-adbf-3c2337b1862f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Wöllersdorf Hart | Zentraler Wandteil | Vollrausch",
@@ -477,18 +531,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0214ce92-0ad7-5395-8a00-840bfa56472d",
    "region_slug": "wollersdorf-hart",
    "crag_slug": "zentraler-wandteil",
    "slug": "vollrausch",
    "path": "/crags/wollersdorf-hart/zentraler-wandteil#0214ce92-0ad7-5395-8a00-840bfa56472d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Wöllersdorf Hart | Zentraler Wandteil | Wepsenstich",
@@ -504,18 +559,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b942cba1-d941-5054-a813-5719592ce8d7",
    "region_slug": "wollersdorf-hart",
    "crag_slug": "zentraler-wandteil",
    "slug": "wepsenstich",
    "path": "/crags/wollersdorf-hart/zentraler-wandteil#b942cba1-d941-5054-a813-5719592ce8d7",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Wöllersdorf Hart | Zentraler Wandteil | Wop Ebene",
@@ -531,18 +587,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c2e3c87e-3654-5719-a163-a7d61e0eea87",
    "region_slug": "wollersdorf-hart",
    "crag_slug": "zentraler-wandteil",
    "slug": "wop-ebene",
    "path": "/crags/wollersdorf-hart/zentraler-wandteil#c2e3c87e-3654-5719-a163-a7d61e0eea87",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Wöllersdorf Hart | Zentraler Wandteil | XTC",
@@ -558,18 +615,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "149c5d43-c0be-5e00-87b1-0537eaaf99aa",
    "region_slug": "wollersdorf-hart",
    "crag_slug": "zentraler-wandteil",
    "slug": "xtc",
    "path": "/crags/wollersdorf-hart/zentraler-wandteil#149c5d43-c0be-5e00-87b1-0537eaaf99aa",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }

@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "e3274afb-8933-50f8-8514-f946381ef1c1",
   "name": "Waldmühle",
@@ -8,8 +8,10 @@
   "region": "Kaltenleutgebner Tal",
   "region_slug": "kaltenleutgebner-tal",
   "route_count": 50,
+  "is_stub": false,
   "latitude": 48.118374,
   "longitude": 16.221751,
+  "coord_source": "routes",
   "grades": [
    "1",
    "2",
@@ -33,7 +35,57 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/kaltenleutgebner-tal/waldmuhle"
+  "path": "/crags/kaltenleutgebner-tal/waldmuhle",
+  "osm": "relation/18166740",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18166740",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=48.119422&mlon=16.220865#map=16/48.119422/16.220865",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Waldm%C3%BChle+Kaltenleutgebner+Tal"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Waldm%C3%BChle+Kaltenleutgebner+Tal"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Waldm%C3%BChle"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Waldm%C3%BChle+Kaltenleutgebner+Tal"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -50,18 +102,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "104eb84a-8d38-51bf-8717-5857735719da",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "18er-kante",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#104eb84a-8d38-51bf-8717-5857735719da",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | A - Killer",
@@ -77,18 +130,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8182ad3c-4399-5598-85c1-89a082b9cea4",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "a-killer",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#8182ad3c-4399-5598-85c1-89a082b9cea4",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Alles im Lot",
@@ -104,18 +158,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "dcc47d32-d37d-5bae-9e3a-8afac644172b",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "alles-im-lot",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#dcc47d32-d37d-5bae-9e3a-8afac644172b",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Bauchpinsler",
@@ -131,18 +186,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2b2911b3-583a-597d-b976-88eb4fd4d60b",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "bauchpinsler",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#2b2911b3-583a-597d-b976-88eb4fd4d60b",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Baumsteig",
@@ -158,18 +214,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "708aa629-eeb9-5eea-a5f4-5f9d8317d0d3",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "baumsteig",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#708aa629-eeb9-5eea-a5f4-5f9d8317d0d3",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Baumsteig 2",
@@ -185,18 +242,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "aebea327-0fed-5bd4-ba61-a07298da0411",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "baumsteig-2",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#aebea327-0fed-5bd4-ba61-a07298da0411",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Berger",
@@ -212,18 +270,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "052fee03-63ff-533c-a9e6-7ff30eaa7360",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "berger",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#052fee03-63ff-533c-a9e6-7ff30eaa7360",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Boris Risse",
@@ -239,18 +298,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "97d1bcd6-b0a6-5108-a422-ddc43912cf21",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "boris-risse",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#97d1bcd6-b0a6-5108-a422-ddc43912cf21",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Direkte Ro Kante",
@@ -266,18 +326,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d5aba7fa-b0c1-5930-b29d-db2478d48476",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "direkte-ro-kante",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#d5aba7fa-b0c1-5930-b29d-db2478d48476",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Direkter Berger",
@@ -293,18 +354,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "be9eb0b5-57a9-5c8f-a074-9b89a752ef0f",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "direkter-berger",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#be9eb0b5-57a9-5c8f-a074-9b89a752ef0f",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Direttissima",
@@ -320,18 +382,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "00541bc7-73be-5a76-8ff4-667e8eac71eb",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "direttissima",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#00541bc7-73be-5a76-8ff4-667e8eac71eb",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Drückeberger",
@@ -347,18 +410,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3d33a3e3-7406-586e-a026-db09a8bd7171",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "druckeberger",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#3d33a3e3-7406-586e-a026-db09a8bd7171",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Fight Gravity",
@@ -374,18 +438,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7a0ec3fa-71e7-5998-92b3-2affabeb5a14",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "fight-gravity",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#7a0ec3fa-71e7-5998-92b3-2affabeb5a14",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Herzweg",
@@ -401,18 +466,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a0373b18-e4c6-525c-8a18-5e30b9cfcd96",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "herzweg",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#a0373b18-e4c6-525c-8a18-5e30b9cfcd96",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Hoppala",
@@ -428,18 +494,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9b1adc9e-5391-546b-a9cb-e07b63fe8d22",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "hoppala",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#9b1adc9e-5391-546b-a9cb-e07b63fe8d22",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Idealist",
@@ -455,18 +522,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9252237d-7966-5d84-b63e-808353602cde",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "idealist",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#9252237d-7966-5d84-b63e-808353602cde",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Idealistenwahn",
@@ -482,18 +550,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fd894265-dae2-5e03-8d54-16e21e1efa11",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "idealistenwahn",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#fd894265-dae2-5e03-8d54-16e21e1efa11",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Kamin",
@@ -509,18 +578,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1bc2970a-0b9d-5335-956d-32ff835101c4",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "kamin",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#1bc2970a-0b9d-5335-956d-32ff835101c4",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | König",
@@ -536,18 +606,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "545fafbb-5933-5626-835d-0bf919dfaf95",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "konig",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#545fafbb-5933-5626-835d-0bf919dfaf95",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Magnesiaschrei",
@@ -563,18 +634,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "14807bba-871e-55ab-9991-353615e95d2d",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "magnesiaschrei",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#14807bba-871e-55ab-9991-353615e95d2d",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Mephisto",
@@ -590,18 +662,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e97681e1-2959-5224-83ff-49688f62ade9",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "mephisto",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#e97681e1-2959-5224-83ff-49688f62ade9",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Mittelweg",
@@ -617,18 +690,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6e5219e6-73ba-5d23-8adc-7c963db4364d",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "mittelweg",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#6e5219e6-73ba-5d23-8adc-7c963db4364d",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Neue Direttissima",
@@ -644,18 +718,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9509c182-b983-52a4-96d0-b4e41c5db4bb",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "neue-direttissima",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#9509c182-b983-52a4-96d0-b4e41c5db4bb",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Oberlehrer",
@@ -671,18 +746,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "425649da-abd3-512b-acb5-2bc9ab1fb283",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "oberlehrer",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#425649da-abd3-512b-acb5-2bc9ab1fb283",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Othmar",
@@ -698,18 +774,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cd357c3f-a2a2-564a-bf49-1971e229a08e",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "othmar",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#cd357c3f-a2a2-564a-bf49-1971e229a08e",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Polyp",
@@ -725,18 +802,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "de52832a-a0db-56e1-91d3-ba1976f5043c",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "polyp",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#de52832a-a0db-56e1-91d3-ba1976f5043c",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Pongo",
@@ -752,18 +830,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "997a1120-6606-581b-aa98-0a1a51378f86",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "pongo",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#997a1120-6606-581b-aa98-0a1a51378f86",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Prima Ballerina",
@@ -779,18 +858,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c502af0a-3855-5a5d-982f-9093e0fc219e",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "prima-ballerina",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#c502af0a-3855-5a5d-982f-9093e0fc219e",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Rabbit Run",
@@ -806,18 +886,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "de6457a4-4419-5b43-88f1-97b0f660f325",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "rabbit-run",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#de6457a4-4419-5b43-88f1-97b0f660f325",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Ro Kante",
@@ -833,18 +914,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0c603005-1b53-5581-b213-24652fe03f0c",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "ro-kante",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#0c603005-1b53-5581-b213-24652fe03f0c",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Rohling",
@@ -860,18 +942,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8db53cde-6bbb-5c1f-b027-cbe7e34659e3",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "rohling",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#8db53cde-6bbb-5c1f-b027-cbe7e34659e3",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Rolle Rückwärts",
@@ -887,18 +970,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7c360018-4805-5190-91c5-e84f024fe87d",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "rolle-ruckwarts",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#7c360018-4805-5190-91c5-e84f024fe87d",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Rote Punkte",
@@ -914,18 +998,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d0e8fac9-3eda-56aa-856a-da0bb37d1a5e",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "rote-punkte",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#d0e8fac9-3eda-56aa-856a-da0bb37d1a5e",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Satan",
@@ -941,18 +1026,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f1e20f64-5faa-5e92-aaa2-84daa68f1312",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "satan",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#f1e20f64-5faa-5e92-aaa2-84daa68f1312",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Schau, Schau",
@@ -968,18 +1054,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5acd45fb-36ca-593f-8896-64087f646e06",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "schau-schau",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#5acd45fb-36ca-593f-8896-64087f646e06",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Schmierseifenverschneidung",
@@ -995,18 +1082,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b1019cda-4957-500e-8dcd-dbfc014d4c38",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "schmierseifenverschneidung",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#b1019cda-4957-500e-8dcd-dbfc014d4c38",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Schwarzer Adler",
@@ -1022,18 +1110,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c63cdf9e-8684-5207-9953-409db26afa56",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "schwarzer-adler",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#c63cdf9e-8684-5207-9953-409db26afa56",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Sehr Schlau",
@@ -1049,18 +1138,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2c0ba89d-a2d9-5eb0-ad9e-10490181e3d6",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "sehr-schlau",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#2c0ba89d-a2d9-5eb0-ad9e-10490181e3d6",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Speckloch",
@@ -1076,18 +1166,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "43f9c754-969a-5b49-9e23-bd71ce034756",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "speckloch",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#43f9c754-969a-5b49-9e23-bd71ce034756",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Speed",
@@ -1103,18 +1194,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "95cb6f73-fb04-591f-9f21-e172cc39dfd0",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "speed",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#95cb6f73-fb04-591f-9f21-e172cc39dfd0",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Steinmühle",
@@ -1130,18 +1222,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "dd1796f2-0470-5f22-85c1-e00eee6fbdf6",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "steinmuhle",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#dd1796f2-0470-5f22-85c1-e00eee6fbdf6",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Strenger Lehrer",
@@ -1157,18 +1250,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4a78771d-2c1e-5ee1-a80d-39562eab81c9",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "strenger-lehrer",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#4a78771d-2c1e-5ee1-a80d-39562eab81c9",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Toni / Wo die Teufel Wohnen",
@@ -1184,18 +1278,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "32650c70-0f2a-56d4-bdf2-17a2c15ea66d",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "toni-wo-die-teufel-wohnen",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#32650c70-0f2a-56d4-bdf2-17a2c15ea66d",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Triglav",
@@ -1211,18 +1306,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "33ca3e19-d8f9-56be-9cc7-57c34f4e4933",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "triglav",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#33ca3e19-d8f9-56be-9cc7-57c34f4e4933",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Verschneidung",
@@ -1238,18 +1334,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b2f955c2-3f7d-5d68-a463-e3d8d5d42f0c",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "verschneidung",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#b2f955c2-3f7d-5d68-a463-e3d8d5d42f0c",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Via Frama",
@@ -1265,18 +1362,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "503fe471-445e-51db-aead-919d3f05b734",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "via-frama",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#503fe471-445e-51db-aead-919d3f05b734",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Waldknecht",
@@ -1292,18 +1390,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "98d88c10-0826-5115-9b73-fc161b3a3b6c",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "waldknecht",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#98d88c10-0826-5115-9b73-fc161b3a3b6c",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Westweg",
@@ -1319,18 +1418,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5c776346-8fc5-5c8f-951d-7189771e12ac",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "westweg",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#5c776346-8fc5-5c8f-951d-7189771e12ac",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Wiener Lehrer",
@@ -1346,18 +1446,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9022168e-ddc3-5d70-b50f-c8989f125e6d",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "wiener-lehrer",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#9022168e-ddc3-5d70-b50f-c8989f125e6d",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Waldmühle | Wilde Wuchtl",
@@ -1373,18 +1474,19 @@
    "source": "Keltenkalk",
    "latitude": 48.118374,
    "longitude": 16.221751,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "119a28b7-cfbb-53ed-a786-e58ff4aab6b5",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "waldmuhle",
    "slug": "wilde-wuchtl",
    "path": "/crags/kaltenleutgebner-tal/waldmuhle#119a28b7-cfbb-53ed-a786-e58ff4aab6b5",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

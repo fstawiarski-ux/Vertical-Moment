@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "796ea9b4-9bd8-5fba-99ac-bd1afd85a428",
   "name": "Auenland",
@@ -8,8 +8,10 @@
   "region": "Hocheck",
   "region_slug": "hocheck",
   "route_count": 10,
-  "latitude": null,
-  "longitude": null,
+  "is_stub": false,
+  "latitude": 48.007865,
+  "longitude": 16.036554,
+  "coord_source": "routes",
   "grades": [
    "1",
    "2+",
@@ -21,7 +23,57 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/hocheck/auenland"
+  "path": "/crags/hocheck/auenland",
+  "osm": "relation/18166516",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18166516",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=48.007865&mlon=16.036554#map=16/48.007865/16.036554",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Auenland+Hocheck"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Auenland+Hocheck"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Auenland"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Auenland+Hocheck"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -36,20 +88,21 @@
    "crag": "Auenland",
    "wall": "Auenland",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007865,
+   "longitude": 16.036554,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9860e89e-05d0-5378-9337-6df769728ec1",
    "region_slug": "hocheck",
    "crag_slug": "auenland",
    "slug": "aragorn-der-konig",
    "path": "/crags/hocheck/auenland#9860e89e-05d0-5378-9337-6df769728ec1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Auenland | Auenland",
@@ -63,20 +116,21 @@
    "crag": "Auenland",
    "wall": "Auenland",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007865,
+   "longitude": 16.036554,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "69f74c0b-c90b-5fcd-90ee-29d2b9f20c3d",
    "region_slug": "hocheck",
    "crag_slug": "auenland",
    "slug": "auenland",
    "path": "/crags/hocheck/auenland#69f74c0b-c90b-5fcd-90ee-29d2b9f20c3d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Auenland | Bilbo",
@@ -90,20 +144,21 @@
    "crag": "Auenland",
    "wall": "Auenland",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007865,
+   "longitude": 16.036554,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fbacffc2-448c-564f-b152-2c93c55f9561",
    "region_slug": "hocheck",
    "crag_slug": "auenland",
    "slug": "bilbo",
    "path": "/crags/hocheck/auenland#fbacffc2-448c-564f-b152-2c93c55f9561",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Auenland | Frodo",
@@ -117,20 +172,21 @@
    "crag": "Auenland",
    "wall": "Auenland",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007865,
+   "longitude": 16.036554,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8da2f99c-09d1-5e5a-93b3-b44abd546e49",
    "region_slug": "hocheck",
    "crag_slug": "auenland",
    "slug": "frodo",
    "path": "/crags/hocheck/auenland#8da2f99c-09d1-5e5a-93b3-b44abd546e49",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Auenland | Gandalf der Zauberer",
@@ -144,20 +200,21 @@
    "crag": "Auenland",
    "wall": "Auenland",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007865,
+   "longitude": 16.036554,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e1f9846b-c503-5798-ab28-66415f13e66d",
    "region_slug": "hocheck",
    "crag_slug": "auenland",
    "slug": "gandalf-der-zauberer",
    "path": "/crags/hocheck/auenland#e1f9846b-c503-5798-ab28-66415f13e66d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Auenland | Gimli der Zwerg",
@@ -171,20 +228,21 @@
    "crag": "Auenland",
    "wall": "Auenland",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007865,
+   "longitude": 16.036554,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "da433b6c-666d-5ef7-bde3-c9ebeb7716e1",
    "region_slug": "hocheck",
    "crag_slug": "auenland",
    "slug": "gimli-der-zwerg",
    "path": "/crags/hocheck/auenland#da433b6c-666d-5ef7-bde3-c9ebeb7716e1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Auenland | Legolas der Elb",
@@ -198,20 +256,21 @@
    "crag": "Auenland",
    "wall": "Auenland",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007865,
+   "longitude": 16.036554,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e2745b45-104c-5b79-b3c7-62b6b5fb4f14",
    "region_slug": "hocheck",
    "crag_slug": "auenland",
    "slug": "legolas-der-elb",
    "path": "/crags/hocheck/auenland#e2745b45-104c-5b79-b3c7-62b6b5fb4f14",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Auenland | Merry",
@@ -225,20 +284,21 @@
    "crag": "Auenland",
    "wall": "Auenland",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007865,
+   "longitude": 16.036554,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "05548682-4b46-5c12-8565-1e02fbd0cf2f",
    "region_slug": "hocheck",
    "crag_slug": "auenland",
    "slug": "merry",
    "path": "/crags/hocheck/auenland#05548682-4b46-5c12-8565-1e02fbd0cf2f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Auenland | Pippin",
@@ -252,20 +312,21 @@
    "crag": "Auenland",
    "wall": "Auenland",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007865,
+   "longitude": 16.036554,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f043d989-d9c1-5108-8de7-82d61176d028",
    "region_slug": "hocheck",
    "crag_slug": "auenland",
    "slug": "pippin",
    "path": "/crags/hocheck/auenland#f043d989-d9c1-5108-8de7-82d61176d028",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Auenland | Sam",
@@ -279,20 +340,21 @@
    "crag": "Auenland",
    "wall": "Auenland",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007865,
+   "longitude": 16.036554,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "57e73ae7-a69c-5af2-ad61-4e7747bd902d",
    "region_slug": "hocheck",
    "crag_slug": "auenland",
    "slug": "sam",
    "path": "/crags/hocheck/auenland#57e73ae7-a69c-5af2-ad61-4e7747bd902d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "17707729-3f37-5a04-a6d5-9933f597b783",
   "name": "Steinwandklamm",
@@ -8,8 +8,10 @@
   "region": "Pernitz",
   "region_slug": "pernitz",
   "route_count": 13,
+  "is_stub": false,
   "latitude": null,
   "longitude": null,
+  "coord_source": null,
   "grades": [
    "7",
    "7+",
@@ -24,7 +26,43 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/pernitz/steinwandklamm"
+  "path": "/crags/pernitz/steinwandklamm",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Steinwandklamm+Pernitz"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Steinwandklamm+Pernitz"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Steinwandklamm"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Steinwandklamm+Pernitz"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -41,18 +79,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3898b6a9-3cd6-5193-8801-bb53e8c87cbf",
    "region_slug": "pernitz",
    "crag_slug": "steinwandklamm",
    "slug": "all-girls-are-18",
    "path": "/crags/pernitz/steinwandklamm#3898b6a9-3cd6-5193-8801-bb53e8c87cbf",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Steinwandklamm | Anassazi",
@@ -68,18 +107,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "dfde150a-a3e1-51e3-998f-af9c1b5168bb",
    "region_slug": "pernitz",
    "crag_slug": "steinwandklamm",
    "slug": "anassazi",
    "path": "/crags/pernitz/steinwandklamm#dfde150a-a3e1-51e3-998f-af9c1b5168bb",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Steinwandklamm | Die Welle",
@@ -95,18 +135,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f7fe5868-3093-5ea4-8242-b071e6ce7b82",
    "region_slug": "pernitz",
    "crag_slug": "steinwandklamm",
    "slug": "die-welle",
    "path": "/crags/pernitz/steinwandklamm#f7fe5868-3093-5ea4-8242-b071e6ce7b82",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Steinwandklamm | Dirty Sanchez",
@@ -122,18 +163,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f6584b1f-c065-5ef7-8a8f-51f6682429e3",
    "region_slug": "pernitz",
    "crag_slug": "steinwandklamm",
    "slug": "dirty-sanchez",
    "path": "/crags/pernitz/steinwandklamm#f6584b1f-c065-5ef7-8a8f-51f6682429e3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Steinwandklamm | Dreckspatz",
@@ -149,18 +191,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "646fc799-aa48-541f-b96b-1ef35e17a598",
    "region_slug": "pernitz",
    "crag_slug": "steinwandklamm",
    "slug": "dreckspatz",
    "path": "/crags/pernitz/steinwandklamm#646fc799-aa48-541f-b96b-1ef35e17a598",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Steinwandklamm | Not-Aus",
@@ -176,18 +219,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "030a4e94-0965-58a6-adaf-819f0e63831e",
    "region_slug": "pernitz",
    "crag_slug": "steinwandklamm",
    "slug": "not-aus",
    "path": "/crags/pernitz/steinwandklamm#030a4e94-0965-58a6-adaf-819f0e63831e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Steinwandklamm | Not-Geil",
@@ -203,18 +247,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e4083a55-5dc5-5f5e-824a-fb85abd046b4",
    "region_slug": "pernitz",
    "crag_slug": "steinwandklamm",
    "slug": "not-geil",
    "path": "/crags/pernitz/steinwandklamm#e4083a55-5dc5-5f5e-824a-fb85abd046b4",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Steinwandklamm | Push Me Into a Cage",
@@ -230,18 +275,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c0c12801-657c-58f7-ada1-09a14e75832e",
    "region_slug": "pernitz",
    "crag_slug": "steinwandklamm",
    "slug": "push-me-into-a-cage",
    "path": "/crags/pernitz/steinwandklamm#c0c12801-657c-58f7-ada1-09a14e75832e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Steinwandklamm | Ready for SM",
@@ -257,18 +303,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c788109d-02f8-5874-8532-eaeece91c3c6",
    "region_slug": "pernitz",
    "crag_slug": "steinwandklamm",
    "slug": "ready-for-sm",
    "path": "/crags/pernitz/steinwandklamm#c788109d-02f8-5874-8532-eaeece91c3c6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Steinwandklamm | Ready or Not",
@@ -284,18 +331,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "650c146c-f121-5d00-9869-420f22439fd5",
    "region_slug": "pernitz",
    "crag_slug": "steinwandklamm",
    "slug": "ready-or-not",
    "path": "/crags/pernitz/steinwandklamm#650c146c-f121-5d00-9869-420f22439fd5",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Steinwandklamm | Sadomaso",
@@ -311,18 +359,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "19b83396-36e0-582a-9577-e49afc0f484d",
    "region_slug": "pernitz",
    "crag_slug": "steinwandklamm",
    "slug": "sadomaso",
    "path": "/crags/pernitz/steinwandklamm#19b83396-36e0-582a-9577-e49afc0f484d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Steinwandklamm | Speichelfäden in der Buttermilch",
@@ -338,18 +387,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a89bd50a-833a-5e44-ba45-ec2df94b8d01",
    "region_slug": "pernitz",
    "crag_slug": "steinwandklamm",
    "slug": "speichelfaden-in-der-buttermilch",
    "path": "/crags/pernitz/steinwandklamm#a89bd50a-833a-5e44-ba45-ec2df94b8d01",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Steinwandklamm | Verlängerung (Steinwandklamm)",
@@ -365,18 +415,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4c32c2b0-64b3-5681-839d-8fd53959d737",
    "region_slug": "pernitz",
    "crag_slug": "steinwandklamm",
    "slug": "verlangerung-steinwandklamm",
    "path": "/crags/pernitz/steinwandklamm#4c32c2b0-64b3-5681-839d-8fd53959d737",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }

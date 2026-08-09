@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "577112b7-72ce-5e44-b6f2-1f4507d1bbf7",
   "name": "Beethovenwand",
@@ -8,8 +8,10 @@
   "region": "Helenental",
   "region_slug": "helenental",
   "route_count": 24,
-  "latitude": null,
-  "longitude": null,
+  "is_stub": false,
+  "latitude": 48.015808,
+  "longitude": 16.195662,
+  "coord_source": "routes",
   "grades": [
    "10",
    "10+",
@@ -29,7 +31,57 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/helenental/beethovenwand"
+  "path": "/crags/helenental/beethovenwand",
+  "osm": "relation/18181430",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18181430",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=48.015808&mlon=16.195662#map=16/48.015808/16.195662",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Beethovenwand+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Beethovenwand+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Beethovenwand"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Beethovenwand+Helenental"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -44,20 +96,21 @@
    "crag": "Beethovenwand",
    "wall": "Beethovenwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015808,
+   "longitude": 16.195662,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-81df-8640-f68bab53f218",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "93a4c08e-2ff7-5885-9555-3fe5c10c8b87",
    "region_slug": "helenental",
    "crag_slug": "beethovenwand",
    "slug": "aus-spass-wird-ernst",
    "path": "/crags/helenental/beethovenwand#93a4c08e-2ff7-5885-9555-3fe5c10c8b87",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Beethovenwand | Bacdafucup",
@@ -71,20 +124,21 @@
    "crag": "Beethovenwand",
    "wall": "Beethovenwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015808,
+   "longitude": 16.195662,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-81ed-a731-d82e59063380",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "464179e3-5bec-59eb-8816-5ed083dc0948",
    "region_slug": "helenental",
    "crag_slug": "beethovenwand",
    "slug": "bacdafucup",
    "path": "/crags/helenental/beethovenwand#464179e3-5bec-59eb-8816-5ed083dc0948",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Beethovenwand | Depression",
@@ -98,20 +152,21 @@
    "crag": "Beethovenwand",
    "wall": "Beethovenwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015808,
+   "longitude": 16.195662,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-8193-adda-eb65ab87560f",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "47b2f803-72fb-5d11-bbe2-66d3310d6d2a",
    "region_slug": "helenental",
    "crag_slug": "beethovenwand",
    "slug": "depression",
    "path": "/crags/helenental/beethovenwand#47b2f803-72fb-5d11-bbe2-66d3310d6d2a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Beethovenwand | Dont Fly in Extra Dry",
@@ -125,20 +180,21 @@
    "crag": "Beethovenwand",
    "wall": "Beethovenwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015808,
+   "longitude": 16.195662,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-812b-b0e1-ee2db7093881",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "68c1aa96-94b7-59e8-bfa5-ce6e7300878c",
    "region_slug": "helenental",
    "crag_slug": "beethovenwand",
    "slug": "dont-fly-in-extra-dry",
    "path": "/crags/helenental/beethovenwand#68c1aa96-94b7-59e8-bfa5-ce6e7300878c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Beethovenwand | Dont Worry",
@@ -152,20 +208,21 @@
    "crag": "Beethovenwand",
    "wall": "Beethovenwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015808,
+   "longitude": 16.195662,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-8186-a3cd-e4b3c73c439a",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e91aeef6-d0c0-5bc6-a609-a5afff4f90b9",
    "region_slug": "helenental",
    "crag_slug": "beethovenwand",
    "slug": "dont-worry",
    "path": "/crags/helenental/beethovenwand#e91aeef6-d0c0-5bc6-a609-a5afff4f90b9",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Beethovenwand | Ewing",
@@ -179,20 +236,21 @@
    "crag": "Beethovenwand",
    "wall": "Beethovenwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015808,
+   "longitude": 16.195662,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-81ff-aa6e-d7e6f46168a4",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "446756eb-ba1d-5baf-ab67-2ecb16f32714",
    "region_slug": "helenental",
    "crag_slug": "beethovenwand",
    "slug": "ewing",
    "path": "/crags/helenental/beethovenwand#446756eb-ba1d-5baf-ab67-2ecb16f32714",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Beethovenwand | Feistritzer",
@@ -206,20 +264,21 @@
    "crag": "Beethovenwand",
    "wall": "Beethovenwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015808,
+   "longitude": 16.195662,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-81f3-8964-fcf292841e28",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c309816b-1ff6-56ea-af1a-1ad64a2ed24a",
    "region_slug": "helenental",
    "crag_slug": "beethovenwand",
    "slug": "feistritzer",
    "path": "/crags/helenental/beethovenwand#c309816b-1ff6-56ea-af1a-1ad64a2ed24a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Beethovenwand | Fritzelacke",
@@ -233,20 +292,21 @@
    "crag": "Beethovenwand",
    "wall": "Beethovenwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015808,
+   "longitude": 16.195662,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-817f-bf65-e224ea40e033",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "233ee24f-40f3-5865-9e44-f9aa8bc4bb26",
    "region_slug": "helenental",
    "crag_slug": "beethovenwand",
    "slug": "fritzelacke",
    "path": "/crags/helenental/beethovenwand#233ee24f-40f3-5865-9e44-f9aa8bc4bb26",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Beethovenwand | Give it Away",
@@ -260,20 +320,21 @@
    "crag": "Beethovenwand",
    "wall": "Beethovenwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015808,
+   "longitude": 16.195662,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-813f-bd64-f1237d79c507",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "58ce2b82-7ed3-5a76-9175-f7dbcc173bb1",
    "region_slug": "helenental",
    "crag_slug": "beethovenwand",
    "slug": "give-it-away",
    "path": "/crags/helenental/beethovenwand#58ce2b82-7ed3-5a76-9175-f7dbcc173bb1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Beethovenwand | Happel",
@@ -287,20 +348,21 @@
    "crag": "Beethovenwand",
    "wall": "Beethovenwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015808,
+   "longitude": 16.195662,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-8193-a15d-c07c283d9892",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6714f5bc-a5fa-5430-a1da-5bb21649ea2a",
    "region_slug": "helenental",
    "crag_slug": "beethovenwand",
    "slug": "happel",
    "path": "/crags/helenental/beethovenwand#6714f5bc-a5fa-5430-a1da-5bb21649ea2a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Beethovenwand | In Wie Schuppen von den Augen",
@@ -314,20 +376,21 @@
    "crag": "Beethovenwand",
    "wall": "Beethovenwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015808,
+   "longitude": 16.195662,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-81eb-9c71-f4470424c7c7",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "54ae27a6-2c43-5f1b-aaa8-599df7f426a1",
    "region_slug": "helenental",
    "crag_slug": "beethovenwand",
    "slug": "in-wie-schuppen-von-den-augen",
    "path": "/crags/helenental/beethovenwand#54ae27a6-2c43-5f1b-aaa8-599df7f426a1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Beethovenwand | It's Hard to Be a Man",
@@ -341,20 +404,21 @@
    "crag": "Beethovenwand",
    "wall": "Beethovenwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015808,
+   "longitude": 16.195662,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-8120-bfeb-e3e1a9f855cb",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8bb5c894-1c2d-521a-9f21-6ce34bd34982",
    "region_slug": "helenental",
    "crag_slug": "beethovenwand",
    "slug": "it-s-hard-to-be-a-man",
    "path": "/crags/helenental/beethovenwand#8bb5c894-1c2d-521a-9f21-6ce34bd34982",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Beethovenwand | Kvp",
@@ -368,20 +432,21 @@
    "crag": "Beethovenwand",
    "wall": "Beethovenwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015808,
+   "longitude": 16.195662,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-81d5-bdb0-d8ac96aa52a8",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "844cc302-d2d3-57a6-bb71-a58e20acef77",
    "region_slug": "helenental",
    "crag_slug": "beethovenwand",
    "slug": "kvp",
    "path": "/crags/helenental/beethovenwand#844cc302-d2d3-57a6-bb71-a58e20acef77",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Beethovenwand | LÜ",
@@ -395,20 +460,21 @@
    "crag": "Beethovenwand",
    "wall": "Beethovenwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015808,
+   "longitude": 16.195662,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-812f-af15-f2b457cb6c7b",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9a3d09bb-01c4-573d-803a-746687db5e64",
    "region_slug": "helenental",
    "crag_slug": "beethovenwand",
    "slug": "lu",
    "path": "/crags/helenental/beethovenwand#9a3d09bb-01c4-573d-803a-746687db5e64",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Beethovenwand | Pimplegionär",
@@ -422,20 +488,21 @@
    "crag": "Beethovenwand",
    "wall": "Beethovenwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015808,
+   "longitude": 16.195662,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-8124-87cc-eb2d6903d486",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "59c30ff0-755f-5441-b8eb-c25264281220",
    "region_slug": "helenental",
    "crag_slug": "beethovenwand",
    "slug": "pimplegionar",
    "path": "/crags/helenental/beethovenwand#59c30ff0-755f-5441-b8eb-c25264281220",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Beethovenwand | Romans Kante",
@@ -449,20 +516,21 @@
    "crag": "Beethovenwand",
    "wall": "Beethovenwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015808,
+   "longitude": 16.195662,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-818c-8dfb-ea00d62c7a8d",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b7367362-da84-5faf-bada-3316d2ae132a",
    "region_slug": "helenental",
    "crag_slug": "beethovenwand",
    "slug": "romans-kante",
    "path": "/crags/helenental/beethovenwand#b7367362-da84-5faf-bada-3316d2ae132a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Beethovenwand | Rosegarden Funeral of Sores",
@@ -476,20 +544,21 @@
    "crag": "Beethovenwand",
    "wall": "Beethovenwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015808,
+   "longitude": 16.195662,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-8176-92e7-cccff516c6bf",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e39d8766-f97b-5d5a-a055-7900e2e2b839",
    "region_slug": "helenental",
    "crag_slug": "beethovenwand",
    "slug": "rosegarden-funeral-of-sores",
    "path": "/crags/helenental/beethovenwand#e39d8766-f97b-5d5a-a055-7900e2e2b839",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Beethovenwand | Schwere Ausstattung",
@@ -503,20 +572,21 @@
    "crag": "Beethovenwand",
    "wall": "Beethovenwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015808,
+   "longitude": 16.195662,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-8100-9632-db541219b012",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0b2d96ee-b44f-514d-abdd-f8f5f3bdd7e6",
    "region_slug": "helenental",
    "crag_slug": "beethovenwand",
    "slug": "schwere-ausstattung",
    "path": "/crags/helenental/beethovenwand#0b2d96ee-b44f-514d-abdd-f8f5f3bdd7e6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Beethovenwand | Siddharta",
@@ -530,20 +600,21 @@
    "crag": "Beethovenwand",
    "wall": "Beethovenwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015808,
+   "longitude": 16.195662,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-8104-b7c1-c55b93343dbb",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fd3f69ae-9418-5ce8-b9a0-8a5c89483772",
    "region_slug": "helenental",
    "crag_slug": "beethovenwand",
    "slug": "siddharta",
    "path": "/crags/helenental/beethovenwand#fd3f69ae-9418-5ce8-b9a0-8a5c89483772",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Beethovenwand | Steppenwolf",
@@ -557,20 +628,21 @@
    "crag": "Beethovenwand",
    "wall": "Beethovenwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015808,
+   "longitude": 16.195662,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-8151-8241-d0107e6f2267",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "32a82d3d-81d3-50f7-9a5d-affd24cb627c",
    "region_slug": "helenental",
    "crag_slug": "beethovenwand",
    "slug": "steppenwolf",
    "path": "/crags/helenental/beethovenwand#32a82d3d-81d3-50f7-9a5d-affd24cb627c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Beethovenwand | Sterben ist zu wenig",
@@ -584,20 +656,21 @@
    "crag": "Beethovenwand",
    "wall": "Beethovenwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015808,
+   "longitude": 16.195662,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-81d6-8154-cda315733ea0",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "14410eec-ec0e-58d8-b397-dd75909a05d4",
    "region_slug": "helenental",
    "crag_slug": "beethovenwand",
    "slug": "sterben-ist-zu-wenig",
    "path": "/crags/helenental/beethovenwand#14410eec-ec0e-58d8-b397-dd75909a05d4",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Beethovenwand | Surprise",
@@ -611,20 +684,21 @@
    "crag": "Beethovenwand",
    "wall": "Beethovenwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015808,
+   "longitude": 16.195662,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-81b4-8bf7-d1a3f7f33aeb",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "36791a24-ac67-5a93-bb26-7e22cf3812d4",
    "region_slug": "helenental",
    "crag_slug": "beethovenwand",
    "slug": "surprise",
    "path": "/crags/helenental/beethovenwand#36791a24-ac67-5a93-bb26-7e22cf3812d4",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Beethovenwand | Vergangenheitsbewältigung",
@@ -638,20 +712,21 @@
    "crag": "Beethovenwand",
    "wall": "Beethovenwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015808,
+   "longitude": 16.195662,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-815b-9e3c-e4db0d4d1825",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b9149fe3-268c-513a-994e-813eb057e42a",
    "region_slug": "helenental",
    "crag_slug": "beethovenwand",
    "slug": "vergangenheitsbewaltigung",
    "path": "/crags/helenental/beethovenwand#b9149fe3-268c-513a-994e-813eb057e42a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Beethovenwand | ÖKM Kante",
@@ -665,20 +740,21 @@
    "crag": "Beethovenwand",
    "wall": "Beethovenwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015808,
+   "longitude": 16.195662,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-817d-8fc0-dce7ef897d54",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cb7a1077-223d-513f-a72c-e0bc1dfb228f",
    "region_slug": "helenental",
    "crag_slug": "beethovenwand",
    "slug": "okm-kante",
    "path": "/crags/helenental/beethovenwand#cb7a1077-223d-513f-a72c-e0bc1dfb228f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "3e86ecb5-4062-5c93-a330-afbd9cef6bfb",
   "name": "Weisses Kreuz",
@@ -8,8 +8,10 @@
   "region": "Lindkogel",
   "region_slug": "lindkogel",
   "route_count": 15,
+  "is_stub": false,
   "latitude": null,
   "longitude": null,
+  "coord_source": null,
   "grades": [
    "4",
    "4+",
@@ -28,7 +30,43 @@
    "boulder",
    "sport"
   ],
-  "path": "/crags/lindkogel/weisses-kreuz"
+  "path": "/crags/lindkogel/weisses-kreuz",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Weisses+Kreuz+Lindkogel"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Weisses+Kreuz+Lindkogel"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Weisses+Kreuz"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Weisses+Kreuz+Lindkogel"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -45,18 +83,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1d4cbc5f-526c-5db2-9467-95e8688b3856",
    "region_slug": "lindkogel",
    "crag_slug": "weisses-kreuz",
    "slug": "arbeitslosensteig",
    "path": "/crags/lindkogel/weisses-kreuz#1d4cbc5f-526c-5db2-9467-95e8688b3856",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Lindkogel | Weisses Kreuz | Backyard",
@@ -72,18 +111,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fa2be69e-5450-5002-8de0-c35729b5ec63",
    "region_slug": "lindkogel",
    "crag_slug": "weisses-kreuz",
    "slug": "backyard",
    "path": "/crags/lindkogel/weisses-kreuz#fa2be69e-5450-5002-8de0-c35729b5ec63",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Lindkogel | Weisses Kreuz | Cafemungo",
@@ -99,18 +139,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3ff1dd15-5186-5331-a93f-7bae1f337cc4",
    "region_slug": "lindkogel",
    "crag_slug": "weisses-kreuz",
    "slug": "cafemungo",
    "path": "/crags/lindkogel/weisses-kreuz#3ff1dd15-5186-5331-a93f-7bae1f337cc4",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Lindkogel | Weisses Kreuz | Diagonale",
@@ -126,18 +167,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8879c64d-917f-5f55-8be5-4931ed36c826",
    "region_slug": "lindkogel",
    "crag_slug": "weisses-kreuz",
    "slug": "diagonale",
    "path": "/crags/lindkogel/weisses-kreuz#8879c64d-917f-5f55-8be5-4931ed36c826",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Lindkogel | Weisses Kreuz | Edelweiss Steig",
@@ -153,18 +195,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f9313fe0-537d-55ec-9a7c-67877b20f76b",
    "region_slug": "lindkogel",
    "crag_slug": "weisses-kreuz",
    "slug": "edelweiss-steig",
    "path": "/crags/lindkogel/weisses-kreuz#f9313fe0-537d-55ec-9a7c-67877b20f76b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Lindkogel | Weisses Kreuz | Glatte Platte",
@@ -180,18 +223,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ae65de49-d08a-57f6-adc6-354eb53acb30",
    "region_slug": "lindkogel",
    "crag_slug": "weisses-kreuz",
    "slug": "glatte-platte",
    "path": "/crags/lindkogel/weisses-kreuz#ae65de49-d08a-57f6-adc6-354eb53acb30",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Lindkogel | Weisses Kreuz | Nr 1",
@@ -207,18 +251,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5efed30e-ac71-565f-ba6e-25040b65f2f7",
    "region_slug": "lindkogel",
    "crag_slug": "weisses-kreuz",
    "slug": "nr-1",
    "path": "/crags/lindkogel/weisses-kreuz#5efed30e-ac71-565f-ba6e-25040b65f2f7",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Lindkogel | Weisses Kreuz | Nr 2",
@@ -234,18 +279,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8365b61a-65d2-52d9-8a03-e103f89b0a3b",
    "region_slug": "lindkogel",
    "crag_slug": "weisses-kreuz",
    "slug": "nr-2",
    "path": "/crags/lindkogel/weisses-kreuz#8365b61a-65d2-52d9-8a03-e103f89b0a3b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Lindkogel | Weisses Kreuz | Pfeilerverschneidung",
@@ -261,18 +307,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cf02c5b3-9f27-5f86-9388-7d8b9fc581d3",
    "region_slug": "lindkogel",
    "crag_slug": "weisses-kreuz",
    "slug": "pfeilerverschneidung",
    "path": "/crags/lindkogel/weisses-kreuz#cf02c5b3-9f27-5f86-9388-7d8b9fc581d3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Lindkogel | Weisses Kreuz | Quartettsteig (1a)",
@@ -288,18 +335,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f58076e7-18b6-5caf-bbc9-b24fca246f3b",
    "region_slug": "lindkogel",
    "crag_slug": "weisses-kreuz",
    "slug": "quartettsteig-1a",
    "path": "/crags/lindkogel/weisses-kreuz#f58076e7-18b6-5caf-bbc9-b24fca246f3b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Lindkogel | Weisses Kreuz | Wandl mit Riss",
@@ -315,18 +363,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "bd0e447e-0282-5ed2-af53-4a0e9b52435d",
    "region_slug": "lindkogel",
    "crag_slug": "weisses-kreuz",
    "slug": "wandl-mit-riss",
    "path": "/crags/lindkogel/weisses-kreuz#bd0e447e-0282-5ed2-af53-4a0e9b52435d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Lindkogel | Weisses Kreuz | Weg der Überhänge",
@@ -342,18 +391,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ba5c107a-855b-5b4a-83c4-1408b9ed61a9",
    "region_slug": "lindkogel",
    "crag_slug": "weisses-kreuz",
    "slug": "weg-der-uberhange",
    "path": "/crags/lindkogel/weisses-kreuz#ba5c107a-855b-5b4a-83c4-1408b9ed61a9",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Lindkogel | Weisses Kreuz | Weisser Pfeiler",
@@ -369,18 +419,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "26d9f360-c174-5b2d-98f1-f4b377de5ed3",
    "region_slug": "lindkogel",
    "crag_slug": "weisses-kreuz",
    "slug": "weisser-pfeiler",
    "path": "/crags/lindkogel/weisses-kreuz#26d9f360-c174-5b2d-98f1-f4b377de5ed3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Lindkogel | Weisses Kreuz | White Crack",
@@ -396,18 +447,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "117a9b8a-29f2-5f47-8ce9-0fbd75e5ecea",
    "region_slug": "lindkogel",
    "crag_slug": "weisses-kreuz",
    "slug": "white-crack",
    "path": "/crags/lindkogel/weisses-kreuz#117a9b8a-29f2-5f47-8ce9-0fbd75e5ecea",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Lindkogel | Weisses Kreuz | White Reality",
@@ -423,18 +475,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cdf7cc4b-40d7-57d6-994a-6158aae73838",
    "region_slug": "lindkogel",
    "crag_slug": "weisses-kreuz",
    "slug": "white-reality",
    "path": "/crags/lindkogel/weisses-kreuz#cdf7cc4b-40d7-57d6-994a-6158aae73838",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }

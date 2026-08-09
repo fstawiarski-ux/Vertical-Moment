@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "7b9ee444-80b1-5be7-8e84-1f97a4d3d75d",
   "name": "Luckete Wand",
@@ -8,8 +8,10 @@
   "region": "Kaltenleutgebner Tal",
   "region_slug": "kaltenleutgebner-tal",
   "route_count": 51,
+  "is_stub": false,
   "latitude": 48.112115,
   "longitude": 16.200473,
+  "coord_source": "routes",
   "grades": [
    "1+",
    "2",
@@ -34,7 +36,57 @@
    "boulder",
    "sport"
   ],
-  "path": "/crags/kaltenleutgebner-tal/luckete-wand"
+  "path": "/crags/kaltenleutgebner-tal/luckete-wand",
+  "osm": "relation/19171489",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/19171489",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=48.015603&mlon=16.050593#map=16/48.015603/16.050593",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Luckete+Wand+Kaltenleutgebner+Tal"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Luckete+Wand+Kaltenleutgebner+Tal"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Luckete+Wand"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Luckete+Wand+Kaltenleutgebner+Tal"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -51,18 +103,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c0a14df2-758e-5c9c-8dc4-88e8f65760b7",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "athlet",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#c0a14df2-758e-5c9c-8dc4-88e8f65760b7",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Aus Alten Zeiten",
@@ -78,18 +131,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "877c9b9f-0b93-5a66-9ab8-108050ff54b2",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "aus-alten-zeiten",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#877c9b9f-0b93-5a66-9ab8-108050ff54b2",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Bananenföhre",
@@ -105,18 +159,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8f1fb85c-a053-5f97-af18-8b160ebb16ba",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "bananenfohre",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#8f1fb85c-a053-5f97-af18-8b160ebb16ba",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Blätterrauschen",
@@ -132,18 +187,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "39a99b85-ee45-5f4b-848c-0e759f12705d",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "blatterrauschen",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#39a99b85-ee45-5f4b-848c-0e759f12705d",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Buchenloch",
@@ -159,18 +215,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "36ed1b39-b781-5c03-81e1-1b44e09678a4",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "buchenloch",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#36ed1b39-b781-5c03-81e1-1b44e09678a4",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Croatdance",
@@ -186,18 +243,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8855a468-f68d-587b-ba1c-1a3e195fbe47",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "croatdance",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#8855a468-f68d-587b-ba1c-1a3e195fbe47",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Dachrinne",
@@ -213,18 +271,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9a700848-05e8-5cce-aa94-cef3ae1e0ab5",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "dachrinne",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#9a700848-05e8-5cce-aa94-cef3ae1e0ab5",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Dragon",
@@ -240,18 +299,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a61717e3-386c-526a-8a0e-0c2949acb096",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "dragon",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#a61717e3-386c-526a-8a0e-0c2949acb096",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Dreamer",
@@ -267,18 +327,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e68915ec-c36a-5850-9852-8ce24c561d0b",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "dreamer",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#e68915ec-c36a-5850-9852-8ce24c561d0b",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Dreamer (Nr 39)",
@@ -294,18 +355,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8fc30b99-b895-535f-aa18-bc55d6965ead",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "dreamer-nr-39",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#8fc30b99-b895-535f-aa18-bc55d6965ead",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Dreieck",
@@ -321,18 +383,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "83b1a01a-525c-52be-b58e-8c244faa7d59",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "dreieck",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#83b1a01a-525c-52be-b58e-8c244faa7d59",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Dreieck (Nr 40)",
@@ -348,18 +411,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3c5992f9-1f54-57bf-887e-eea4bc6e3467",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "dreieck-nr-40",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#3c5992f9-1f54-57bf-887e-eea4bc6e3467",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Felszacken",
@@ -375,18 +439,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3f85b564-5bfa-5f35-b19c-39edd16649f8",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "felszacken",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#3f85b564-5bfa-5f35-b19c-39edd16649f8",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Finale",
@@ -402,18 +467,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f9f84f37-6a21-5e2c-af88-1b58aa5aee1d",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "finale",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#f9f84f37-6a21-5e2c-af88-1b58aa5aee1d",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Für Alle",
@@ -429,18 +495,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7630b84a-1dfd-5ada-9d34-268af927effa",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "fur-alle",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#7630b84a-1dfd-5ada-9d34-268af927effa",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Ganz Lustig",
@@ -456,18 +523,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "45903543-1b19-50a6-b484-00cf3e3d1888",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "ganz-lustig",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#45903543-1b19-50a6-b484-00cf3e3d1888",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Gegenlicht",
@@ -483,18 +551,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5020ca05-f905-551b-8271-aa6d4dc0a628",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "gegenlicht",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#5020ca05-f905-551b-8271-aa6d4dc0a628",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Henkers Dessert",
@@ -510,18 +579,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "99e74b40-0f9b-5ed6-ace9-f7bdf475e1c8",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "henkers-dessert",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#99e74b40-0f9b-5ed6-ace9-f7bdf475e1c8",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Immer Mehr",
@@ -537,18 +607,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b4ddced5-8db5-5bf4-9901-1406d53cbcfc",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "immer-mehr",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#b4ddced5-8db5-5bf4-9901-1406d53cbcfc",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Kantenreiter",
@@ -564,18 +635,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c88a09e1-0c99-5ef9-b635-b2bd64b4864b",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "kantenreiter",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#c88a09e1-0c99-5ef9-b635-b2bd64b4864b",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Klarer Fall",
@@ -591,18 +663,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e0cad6f2-38c5-5de3-8b75-04589e6de13b",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "klarer-fall",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#e0cad6f2-38c5-5de3-8b75-04589e6de13b",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Klassiker",
@@ -618,18 +691,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "bd308bc6-7dd8-531f-8fdb-20cd36496552",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "klassiker",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#bd308bc6-7dd8-531f-8fdb-20cd36496552",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Kleiner Pfeiler",
@@ -645,18 +719,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "87991d61-da23-5986-8596-69cdbcb9d70a",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "kleiner-pfeiler",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#87991d61-da23-5986-8596-69cdbcb9d70a",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Kleiner Riss",
@@ -672,18 +747,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e0ab4644-fa80-58af-8a1d-8ebe818bafe6",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "kleiner-riss",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#e0ab4644-fa80-58af-8a1d-8ebe818bafe6",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Kraftakt",
@@ -699,18 +775,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "bcc25e93-2adc-575d-9ac6-abf6b7be597c",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "kraftakt",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#bcc25e93-2adc-575d-9ac6-abf6b7be597c",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Lange Rampe",
@@ -726,18 +803,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5bf6798f-cf35-52a7-95a1-1fcef4ba34e0",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "lange-rampe",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#5bf6798f-cf35-52a7-95a1-1fcef4ba34e0",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Little Jumps",
@@ -753,18 +831,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "29f4614c-711e-59e8-8d6e-a4c68a91f051",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "little-jumps",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#29f4614c-711e-59e8-8d6e-a4c68a91f051",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Luckete Wand Querung",
@@ -780,18 +859,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "677a1ec3-62ac-5273-bec6-5dd60d1f874e",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "luckete-wand-querung",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#677a1ec3-62ac-5273-bec6-5dd60d1f874e",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Mach's Schwieriger",
@@ -807,18 +887,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "86a39c2f-fa8b-5c94-bee6-b752f5a46da9",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "mach-s-schwieriger",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#86a39c2f-fa8b-5c94-bee6-b752f5a46da9",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Mit Sanfter Kraft",
@@ -834,18 +915,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e66af627-f537-5905-b840-26ef4df2077f",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "mit-sanfter-kraft",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#e66af627-f537-5905-b840-26ef4df2077f",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Nase",
@@ -861,18 +943,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0b838609-b9cc-58ea-bd0d-aee661a2295c",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "nase",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#0b838609-b9cc-58ea-bd0d-aee661a2295c",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Nicht Normal",
@@ -888,18 +971,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "059eb55c-c3ee-5bce-a08c-ef6423dd74cf",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "nicht-normal",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#059eb55c-c3ee-5bce-a08c-ef6423dd74cf",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Normalweg",
@@ -915,18 +999,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "86c8615a-a0a5-512f-9e18-aca2a4d7341e",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "normalweg",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#86c8615a-a0a5-512f-9e18-aca2a4d7341e",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Nur Zu",
@@ -942,18 +1027,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "168e7aa0-35e3-54e6-bd1a-e84b5f45c872",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "nur-zu",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#168e7aa0-35e3-54e6-bd1a-e84b5f45c872",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Oskar Steig",
@@ -969,18 +1055,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3dd18ba6-723c-505c-aa16-2fafd9037cd7",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "oskar-steig",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#3dd18ba6-723c-505c-aa16-2fafd9037cd7",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Polarisation",
@@ -996,18 +1083,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0a8da764-15a9-54e4-90b6-234a2947a1ba",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "polarisation",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#0a8da764-15a9-54e4-90b6-234a2947a1ba",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Riesenloch",
@@ -1023,18 +1111,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b4ef41a3-0405-5080-b347-5fee6983ff18",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "riesenloch",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#b4ef41a3-0405-5080-b347-5fee6983ff18",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Rote Punkte",
@@ -1050,18 +1139,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0760bfae-f09e-594f-a0b3-422e70509178",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "rote-punkte",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#0760bfae-f09e-594f-a0b3-422e70509178",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Rote Punkte (Nr 41)",
@@ -1077,18 +1167,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8eff4783-f561-58c0-960e-7950bc277ee8",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "rote-punkte-nr-41",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#8eff4783-f561-58c0-960e-7950bc277ee8",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Roter Zeck",
@@ -1104,18 +1195,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "898da53d-0e80-5d66-9606-30a4cb614690",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "roter-zeck",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#898da53d-0e80-5d66-9606-30a4cb614690",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Ruachl",
@@ -1131,18 +1223,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "75e92948-22d5-553a-b58e-826ef5cff926",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "ruachl",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#75e92948-22d5-553a-b58e-826ef5cff926",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Schiefer Überhang",
@@ -1158,18 +1251,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "05791f1f-0c0f-5779-b911-72f94f8a0e40",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "schiefer-uberhang",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#05791f1f-0c0f-5779-b911-72f94f8a0e40",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Serpentine",
@@ -1185,18 +1279,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f13b2299-dbc3-58c2-917e-bff039c31c49",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "serpentine",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#f13b2299-dbc3-58c2-917e-bff039c31c49",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Soso",
@@ -1212,18 +1307,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c5492014-bfa9-5790-9858-e632da56fdb2",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "soso",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#c5492014-bfa9-5790-9858-e632da56fdb2",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | TP",
@@ -1239,18 +1335,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "545ecb93-342c-5f11-9abc-0530dfe92bf0",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "tp",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#545ecb93-342c-5f11-9abc-0530dfe92bf0",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Traum",
@@ -1266,18 +1363,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "354ed06d-5417-5aec-b743-b0af549457a3",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "traum",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#354ed06d-5417-5aec-b743-b0af549457a3",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Traverse Oben",
@@ -1293,18 +1391,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c4f76ad2-31cf-55ed-b4db-0dba6ebab6f4",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "traverse-oben",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#c4f76ad2-31cf-55ed-b4db-0dba6ebab6f4",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Traverse Unten",
@@ -1320,18 +1419,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ab35f242-84e1-5343-abc5-3bce791ff1e6",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "traverse-unten",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#ab35f242-84e1-5343-abc5-3bce791ff1e6",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Unschlüssig",
@@ -1347,18 +1447,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e30abc3b-03b8-5df0-8672-9ce421212e0d",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "unschlussig",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#e30abc3b-03b8-5df0-8672-9ce421212e0d",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Verschneidung",
@@ -1374,18 +1475,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f234b0da-cd8b-56dc-87d2-411c992c8883",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "verschneidung",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#f234b0da-cd8b-56dc-87d2-411c992c8883",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Kaltenleutgebner Tal | Luckete Wand | Wohin",
@@ -1401,18 +1503,19 @@
    "source": "Keltenkalk",
    "latitude": 48.112115,
    "longitude": 16.200473,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a92d2af7-984d-54a4-a3e6-5034c4e2d5c9",
    "region_slug": "kaltenleutgebner-tal",
    "crag_slug": "luckete-wand",
    "slug": "wohin",
    "path": "/crags/kaltenleutgebner-tal/luckete-wand#a92d2af7-984d-54a4-a3e6-5034c4e2d5c9",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

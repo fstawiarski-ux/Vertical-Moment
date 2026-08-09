@@ -1,0 +1,1309 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T13:29:28+00:00",
+ "region": {
+  "id": "7ea9bdfa-c61b-5d68-8b6c-b92236c0459c",
+  "name": "Neunkirchen",
+  "slug": "neunkirchen",
+  "crag_count": 19,
+  "route_count": 0,
+  "path": "/crags/neunkirchen",
+  "links": [
+   {
+    "kind": "exact",
+    "label": "theCrag — Vienna area overview",
+    "domain": "thecrag.com",
+    "url": "https://www.thecrag.com/en/climbing/austria/wien-vienna-area",
+    "note": "Community index of the whole Vienna region, with its own source list."
+   },
+   {
+    "kind": "exact",
+    "label": "Keltenkalk",
+    "domain": "keltenkalk.at",
+    "url": "http://www.keltenkalk.at/",
+    "note": "The main printed guidebook for the Vienna limestone — roughly 4,000 climbs and boulders."
+   },
+   {
+    "kind": "exact",
+    "label": "bergsteigen.com — Klettergarten index",
+    "domain": "bergsteigen.com",
+    "url": "https://www.bergsteigen.com/touren/klettergarten/",
+    "note": "Filterable crag database with descriptions, approach notes and many downloadable topos."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Neunkirchen+Klettergarten"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Neunkirchen+Austria"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Neunkirchen"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Neunkirchen+Klettern"
+   }
+  ],
+  "more_info_note": "Vertical Moment does not publish topos yet. These are the places that do — follow them for the drawn lines, and verify anything safety-relevant on site."
+ },
+ "crags": [
+  {
+   "id": "822db6ae-38ef-5507-83bf-9eac0d1d13bf",
+   "name": "Armer Sünder",
+   "slug": "armer-sunder",
+   "region": "Neunkirchen",
+   "region_slug": "neunkirchen",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.74802,
+   "longitude": 16.015521,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/neunkirchen/armer-sunder",
+   "osm": "relation/18218485",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218485",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.74802&mlon=16.015521#map=16/47.74802/16.015521",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Armer+S%C3%BCnder+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Armer+S%C3%BCnder+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Armer+S%C3%BCnder"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Armer+S%C3%BCnder+Neunkirchen"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "f1638334-d847-5f41-ac9b-b19f07979a64",
+   "name": "Bierkessel",
+   "slug": "bierkessel",
+   "region": "Neunkirchen",
+   "region_slug": "neunkirchen",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.747713,
+   "longitude": 16.013783,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/neunkirchen/bierkessel",
+   "osm": "relation/18218489",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218489",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.747713&mlon=16.013783#map=16/47.747713/16.013783",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Bierkessel+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Bierkessel+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Bierkessel"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Bierkessel+Neunkirchen"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "6132eeba-1759-5a4f-a885-a9162be89546",
+   "name": "Die Fälle",
+   "slug": "die-falle",
+   "region": "Neunkirchen",
+   "region_slug": "neunkirchen",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.748687,
+   "longitude": 16.016131,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/neunkirchen/die-falle",
+   "osm": "relation/18218483",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218483",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.748687&mlon=16.016131#map=16/47.748687/16.016131",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Die+F%C3%A4lle+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Die+F%C3%A4lle+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Die+F%C3%A4lle"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Die+F%C3%A4lle+Neunkirchen"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "1e40bdc7-4c44-5f29-9b78-6797be0a4408",
+   "name": "Eibenwandln",
+   "slug": "eibenwandln",
+   "region": "Neunkirchen",
+   "region_slug": "neunkirchen",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.747388,
+   "longitude": 16.006636,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/neunkirchen/eibenwandln",
+   "osm": "relation/18218496",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218496",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.747388&mlon=16.006636#map=16/47.747388/16.006636",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Eibenwandln+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Eibenwandln+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Eibenwandln"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Eibenwandln+Neunkirchen"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "a3271f79-c764-5cbb-bd90-4dafed88f87c",
+   "name": "Flatzer Loch",
+   "slug": "flatzer-loch",
+   "region": "Neunkirchen",
+   "region_slug": "neunkirchen",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.747499,
+   "longitude": 16.007083,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/neunkirchen/flatzer-loch",
+   "osm": "relation/18218495",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218495",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.747499&mlon=16.007083#map=16/47.747499/16.007083",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Flatzer+Loch+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Flatzer+Loch+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Flatzer+Loch"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Flatzer+Loch+Neunkirchen"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "12c6e914-64b4-5f3e-a32a-ef9ae49b80be",
+   "name": "Heanakräuln",
+   "slug": "heanakrauln",
+   "region": "Neunkirchen",
+   "region_slug": "neunkirchen",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.737026,
+   "longitude": 16.008857,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/neunkirchen/heanakrauln",
+   "osm": "node/1473066073",
+   "rock": null,
+   "website": "https://www.bergsteigen.com/touren/klettergarten/hintenburg-ternitz/",
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/node/1473066073",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Crag website",
+     "domain": "",
+     "url": "https://www.bergsteigen.com/touren/klettergarten/hintenburg-ternitz/",
+     "note": "Official or community page, tagged in OSM."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.737026&mlon=16.008857#map=16/47.737026/16.008857",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Heanakr%C3%A4uln+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Heanakr%C3%A4uln+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Heanakr%C3%A4uln"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Heanakr%C3%A4uln+Neunkirchen"
+    }
+   ],
+   "has_exact_links": true
+  },
+  {
+   "id": "d61c3770-a611-5916-a567-1e144c7e80ca",
+   "name": "Hintenburg",
+   "slug": "hintenburg",
+   "region": "Neunkirchen",
+   "region_slug": "neunkirchen",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.73703,
+   "longitude": 16.008877,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/neunkirchen/hintenburg",
+   "osm": "relation/18218837",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218837",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.73703&mlon=16.008877#map=16/47.73703/16.008877",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Hintenburg+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Hintenburg+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Hintenburg"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Hintenburg+Neunkirchen"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "6565f5c9-4766-50db-a50c-d8663c765433",
+   "name": "Kugelmugel",
+   "slug": "kugelmugel",
+   "region": "Neunkirchen",
+   "region_slug": "neunkirchen",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.689489,
+   "longitude": 16.138006,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/neunkirchen/kugelmugel",
+   "osm": "relation/18218839",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218839",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.689489&mlon=16.138006#map=16/47.689489/16.138006",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Kugelmugel+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Kugelmugel+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Kugelmugel"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Kugelmugel+Neunkirchen"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "a8890d30-9a77-5f20-a6ac-68e4c8febbf5",
+   "name": "Lucky Luke",
+   "slug": "lucky-luke",
+   "region": "Neunkirchen",
+   "region_slug": "neunkirchen",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.748116,
+   "longitude": 16.01447,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/neunkirchen/lucky-luke",
+   "osm": "relation/18218487",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218487",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.748116&mlon=16.01447#map=16/47.748116/16.01447",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Lucky+Luke+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Lucky+Luke+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Lucky+Luke"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Lucky+Luke+Neunkirchen"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "d1ea7731-55be-59d8-a365-f976b3e39070",
+   "name": "Müslimann",
+   "slug": "muslimann",
+   "region": "Neunkirchen",
+   "region_slug": "neunkirchen",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.747929,
+   "longitude": 16.014708,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/neunkirchen/muslimann",
+   "osm": "relation/18218486",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218486",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.747929&mlon=16.014708#map=16/47.747929/16.014708",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+M%C3%BCslimann+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+M%C3%BCslimann+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+M%C3%BCslimann"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+M%C3%BCslimann+Neunkirchen"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "833499fd-8de1-549f-8836-8e45e3447b85",
+   "name": "Republikstein",
+   "slug": "republikstein",
+   "region": "Neunkirchen",
+   "region_slug": "neunkirchen",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.747963,
+   "longitude": 16.013933,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/neunkirchen/republikstein",
+   "osm": "relation/18218488",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218488",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.747963&mlon=16.013933#map=16/47.747963/16.013933",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Republikstein+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Republikstein+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Republikstein"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Republikstein+Neunkirchen"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "fb801244-747d-5766-b7c6-c0c67a7b335b",
+   "name": "Rumpelstilzchen",
+   "slug": "rumpelstilzchen",
+   "region": "Neunkirchen",
+   "region_slug": "neunkirchen",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.747918,
+   "longitude": 16.013559,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/neunkirchen/rumpelstilzchen",
+   "osm": "relation/18218490",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218490",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.747918&mlon=16.013559#map=16/47.747918/16.013559",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Rumpelstilzchen+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Rumpelstilzchen+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Rumpelstilzchen"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Rumpelstilzchen+Neunkirchen"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "6ee785dd-5632-5013-88c6-3c87549b35ad",
+   "name": "Schiebbögen",
+   "slug": "schiebbogen",
+   "region": "Neunkirchen",
+   "region_slug": "neunkirchen",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.747539,
+   "longitude": 16.007952,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/neunkirchen/schiebbogen",
+   "osm": "relation/18218494",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218494",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.747539&mlon=16.007952#map=16/47.747539/16.007952",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Schiebb%C3%B6gen+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Schiebb%C3%B6gen+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Schiebb%C3%B6gen"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Schiebb%C3%B6gen+Neunkirchen"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "4bfc7674-75e2-5dba-9940-200f263439e2",
+   "name": "Sunshine",
+   "slug": "sunshine",
+   "region": "Neunkirchen",
+   "region_slug": "neunkirchen",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.747829,
+   "longitude": 16.013301,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/neunkirchen/sunshine",
+   "osm": "relation/18218491",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218491",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.747829&mlon=16.013301#map=16/47.747829/16.013301",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Sunshine+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Sunshine+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Sunshine"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Sunshine+Neunkirchen"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "b5451d1d-9d35-5ae2-92cb-a238a3217924",
+   "name": "Süßes Wandl",
+   "slug": "susses-wandl",
+   "region": "Neunkirchen",
+   "region_slug": "neunkirchen",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.747396,
+   "longitude": 16.011396,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/neunkirchen/susses-wandl",
+   "osm": "relation/18218492",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218492",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.747396&mlon=16.011396#map=16/47.747396/16.011396",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+S%C3%BC%C3%9Fes+Wandl+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+S%C3%BC%C3%9Fes+Wandl+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+S%C3%BC%C3%9Fes+Wandl"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+S%C3%BC%C3%9Fes+Wandl+Neunkirchen"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "51383238-c4c9-5cf2-a140-564671f8a2a7",
+   "name": "Türkensturz",
+   "slug": "turkensturz",
+   "region": "Neunkirchen",
+   "region_slug": "neunkirchen",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.679161,
+   "longitude": 16.136374,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/neunkirchen/turkensturz",
+   "osm": "relation/18218841",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218841",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.679161&mlon=16.136374#map=16/47.679161/16.136374",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+T%C3%BCrkensturz+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+T%C3%BCrkensturz+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+T%C3%BCrkensturz"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+T%C3%BCrkensturz+Neunkirchen"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "6796c2c9-5248-58d7-a0ce-bda41b4c5ff7",
+   "name": "Uhus Albtraum",
+   "slug": "uhus-albtraum",
+   "region": "Neunkirchen",
+   "region_slug": "neunkirchen",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.748683,
+   "longitude": 16.01681,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/neunkirchen/uhus-albtraum",
+   "osm": "relation/18218482",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218482",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.748683&mlon=16.01681#map=16/47.748683/16.01681",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Uhus+Albtraum+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Uhus+Albtraum+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Uhus+Albtraum"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Uhus+Albtraum+Neunkirchen"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "c94afeab-0e1e-5b64-9588-a5f871c4c753",
+   "name": "Waldbauer",
+   "slug": "waldbauer",
+   "region": "Neunkirchen",
+   "region_slug": "neunkirchen",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.747563,
+   "longitude": 16.009122,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/neunkirchen/waldbauer",
+   "osm": "relation/18218493",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218493",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.747563&mlon=16.009122#map=16/47.747563/16.009122",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Waldbauer+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Waldbauer+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Waldbauer"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Waldbauer+Neunkirchen"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "c066afb5-4f68-5977-b141-f568752956d3",
+   "name": "geheimer Kessel",
+   "slug": "geheimer-kessel",
+   "region": "Neunkirchen",
+   "region_slug": "neunkirchen",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 47.748088,
+   "longitude": 16.015639,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/neunkirchen/geheimer-kessel",
+   "osm": "relation/18218484",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18218484",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=47.748088&mlon=16.015639#map=16/47.748088/16.015639",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+geheimer+Kessel+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+geheimer+Kessel+Neunkirchen"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+geheimer+Kessel"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+geheimer+Kessel+Neunkirchen"
+    }
+   ],
+   "has_exact_links": false
+  }
+ ],
+ "routes": []
+}

@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "71f68ce1-1625-54ae-a0bf-eab01104a1ca",
   "name": "Feenturm",
@@ -8,8 +8,10 @@
   "region": "Arnstein",
   "region_slug": "arnstein",
   "route_count": 5,
+  "is_stub": false,
   "latitude": null,
   "longitude": null,
+  "coord_source": null,
   "grades": [
    "5+",
    "7-",
@@ -19,7 +21,43 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/arnstein/feenturm"
+  "path": "/crags/arnstein/feenturm",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Feenturm+Arnstein"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Feenturm+Arnstein"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Feenturm"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Feenturm+Arnstein"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -36,18 +74,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "36461b20-ee1c-52bd-bff4-ab1dd642e791",
    "region_slug": "arnstein",
    "crag_slug": "feenturm",
    "slug": "buck-dich-fee",
    "path": "/crags/arnstein/feenturm#36461b20-ee1c-52bd-bff4-ab1dd642e791",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Feenturm | Die aufrechte Fee",
@@ -63,18 +102,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "84c130af-7c48-5ab0-a998-d6bdb46286e8",
    "region_slug": "arnstein",
    "crag_slug": "feenturm",
    "slug": "die-aufrechte-fee",
    "path": "/crags/arnstein/feenturm#84c130af-7c48-5ab0-a998-d6bdb46286e8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Feenturm | Die steile Fee",
@@ -90,18 +130,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "36c3cf5b-919c-5442-ad92-31d8293bd2cf",
    "region_slug": "arnstein",
    "crag_slug": "feenturm",
    "slug": "die-steile-fee",
    "path": "/crags/arnstein/feenturm#36c3cf5b-919c-5442-ad92-31d8293bd2cf",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Feenturm | Feenwald",
@@ -117,18 +158,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "222b1a9c-4b22-54ff-9864-d9a5a4a961c1",
    "region_slug": "arnstein",
    "crag_slug": "feenturm",
    "slug": "feenwald",
    "path": "/crags/arnstein/feenturm#222b1a9c-4b22-54ff-9864-d9a5a4a961c1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Feenturm | Oh it's a Fee",
@@ -144,18 +186,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "01059826-139f-5e92-8871-587579d2c9d0",
    "region_slug": "arnstein",
    "crag_slug": "feenturm",
    "slug": "oh-it-s-a-fee",
    "path": "/crags/arnstein/feenturm#01059826-139f-5e92-8871-587579d2c9d0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }

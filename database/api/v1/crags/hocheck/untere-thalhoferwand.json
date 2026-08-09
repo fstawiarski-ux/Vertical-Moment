@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "140ddbb9-8e47-5251-b2d2-d9dca9c93482",
   "name": "Untere Thalhoferwand",
@@ -8,8 +8,10 @@
   "region": "Hocheck",
   "region_slug": "hocheck",
   "route_count": 27,
-  "latitude": null,
-  "longitude": null,
+  "is_stub": false,
+  "latitude": 48.007285,
+  "longitude": 16.036561,
+  "coord_source": "routes",
   "grades": [
    "5",
    "5+",
@@ -27,7 +29,57 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/hocheck/untere-thalhoferwand"
+  "path": "/crags/hocheck/untere-thalhoferwand",
+  "osm": "relation/18166480",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18166480",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=48.007285&mlon=16.036561#map=16/48.007285/16.036561",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Untere+Thalhoferwand+Hocheck"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Untere+Thalhoferwand+Hocheck"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Untere+Thalhoferwand"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Untere+Thalhoferwand+Hocheck"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -42,20 +94,21 @@
    "crag": "Untere Thalhoferwand",
    "wall": "Untere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007285,
+   "longitude": 16.036561,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "66f12add-959f-5e9d-a929-5c0f46e5e10d",
    "region_slug": "hocheck",
    "crag_slug": "untere-thalhoferwand",
    "slug": "amadeus",
    "path": "/crags/hocheck/untere-thalhoferwand#66f12add-959f-5e9d-a929-5c0f46e5e10d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Untere Thalhoferwand | Amerika",
@@ -69,20 +122,21 @@
    "crag": "Untere Thalhoferwand",
    "wall": "Untere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007285,
+   "longitude": 16.036561,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f7bbbf26-8a4b-5745-8100-0c2ab40065f5",
    "region_slug": "hocheck",
    "crag_slug": "untere-thalhoferwand",
    "slug": "amerika",
    "path": "/crags/hocheck/untere-thalhoferwand#f7bbbf26-8a4b-5745-8100-0c2ab40065f5",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Untere Thalhoferwand | Auf die Maus gekommen",
@@ -96,20 +150,21 @@
    "crag": "Untere Thalhoferwand",
    "wall": "Untere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007285,
+   "longitude": 16.036561,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a4dc4ef3-78ff-5083-9552-9ee2bf90b6a1",
    "region_slug": "hocheck",
    "crag_slug": "untere-thalhoferwand",
    "slug": "auf-die-maus-gekommen",
    "path": "/crags/hocheck/untere-thalhoferwand#a4dc4ef3-78ff-5083-9552-9ee2bf90b6a1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Untere Thalhoferwand | Coming Home",
@@ -123,20 +178,21 @@
    "crag": "Untere Thalhoferwand",
    "wall": "Untere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007285,
+   "longitude": 16.036561,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8f67d41c-9533-5229-b443-54634a070013",
    "region_slug": "hocheck",
    "crag_slug": "untere-thalhoferwand",
    "slug": "coming-home",
    "path": "/crags/hocheck/untere-thalhoferwand#8f67d41c-9533-5229-b443-54634a070013",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Untere Thalhoferwand | Der Kommissar",
@@ -150,20 +206,21 @@
    "crag": "Untere Thalhoferwand",
    "wall": "Untere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007285,
+   "longitude": 16.036561,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "05d3783b-bef2-58e1-b5b8-2eade902a7dc",
    "region_slug": "hocheck",
    "crag_slug": "untere-thalhoferwand",
    "slug": "der-kommissar",
    "path": "/crags/hocheck/untere-thalhoferwand#05d3783b-bef2-58e1-b5b8-2eade902a7dc",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Untere Thalhoferwand | Don Albatros",
@@ -177,20 +234,21 @@
    "crag": "Untere Thalhoferwand",
    "wall": "Untere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007285,
+   "longitude": 16.036561,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "46b3ee35-2661-5f5c-9f05-e42d304abb16",
    "region_slug": "hocheck",
    "crag_slug": "untere-thalhoferwand",
    "slug": "don-albatros",
    "path": "/crags/hocheck/untere-thalhoferwand#46b3ee35-2661-5f5c-9f05-e42d304abb16",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Untere Thalhoferwand | Don Carlos",
@@ -204,20 +262,21 @@
    "crag": "Untere Thalhoferwand",
    "wall": "Untere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007285,
+   "longitude": 16.036561,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "70b34a14-6055-52de-a572-0c838743f095",
    "region_slug": "hocheck",
    "crag_slug": "untere-thalhoferwand",
    "slug": "don-carlos",
    "path": "/crags/hocheck/untere-thalhoferwand#70b34a14-6055-52de-a572-0c838743f095",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Untere Thalhoferwand | Don Roberto",
@@ -231,20 +290,21 @@
    "crag": "Untere Thalhoferwand",
    "wall": "Untere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007285,
+   "longitude": 16.036561,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "884806f8-21ce-561f-b519-3bd3225eebeb",
    "region_slug": "hocheck",
    "crag_slug": "untere-thalhoferwand",
    "slug": "don-roberto",
    "path": "/crags/hocheck/untere-thalhoferwand#884806f8-21ce-561f-b519-3bd3225eebeb",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Untere Thalhoferwand | Don Rosl",
@@ -258,20 +318,21 @@
    "crag": "Untere Thalhoferwand",
    "wall": "Untere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007285,
+   "longitude": 16.036561,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7e4c041c-648a-5770-ab0b-bd016826525c",
    "region_slug": "hocheck",
    "crag_slug": "untere-thalhoferwand",
    "slug": "don-rosl",
    "path": "/crags/hocheck/untere-thalhoferwand#7e4c041c-648a-5770-ab0b-bd016826525c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Untere Thalhoferwand | Eine Kuh",
@@ -285,20 +346,21 @@
    "crag": "Untere Thalhoferwand",
    "wall": "Untere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007285,
+   "longitude": 16.036561,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "975897be-faca-5746-8936-b57221297bbd",
    "region_slug": "hocheck",
    "crag_slug": "untere-thalhoferwand",
    "slug": "eine-kuh",
    "path": "/crags/hocheck/untere-thalhoferwand#975897be-faca-5746-8936-b57221297bbd",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Untere Thalhoferwand | Falco Live",
@@ -312,20 +374,21 @@
    "crag": "Untere Thalhoferwand",
    "wall": "Untere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007285,
+   "longitude": 16.036561,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8f7e9552-35f2-54ec-b085-399774001544",
    "region_slug": "hocheck",
    "crag_slug": "untere-thalhoferwand",
    "slug": "falco-live",
    "path": "/crags/hocheck/untere-thalhoferwand#8f7e9552-35f2-54ec-b085-399774001544",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Untere Thalhoferwand | Gottardi Riss",
@@ -339,20 +402,21 @@
    "crag": "Untere Thalhoferwand",
    "wall": "Untere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007285,
+   "longitude": 16.036561,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "521875f5-cbad-58a4-b960-00fdf025e29b",
    "region_slug": "hocheck",
    "crag_slug": "untere-thalhoferwand",
    "slug": "gottardi-riss",
    "path": "/crags/hocheck/untere-thalhoferwand#521875f5-cbad-58a4-b960-00fdf025e29b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Untere Thalhoferwand | Homerun",
@@ -366,20 +430,21 @@
    "crag": "Untere Thalhoferwand",
    "wall": "Untere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007285,
+   "longitude": 16.036561,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c87e4c03-af84-56bd-a50d-ad616af56d15",
    "region_slug": "hocheck",
    "crag_slug": "untere-thalhoferwand",
    "slug": "homerun",
    "path": "/crags/hocheck/untere-thalhoferwand#c87e4c03-af84-56bd-a50d-ad616af56d15",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Untere Thalhoferwand | Hulmeister",
@@ -393,20 +458,21 @@
    "crag": "Untere Thalhoferwand",
    "wall": "Untere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007285,
+   "longitude": 16.036561,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b5175a6b-e579-5082-8545-e3496c9c8160",
    "region_slug": "hocheck",
    "crag_slug": "untere-thalhoferwand",
    "slug": "hulmeister",
    "path": "/crags/hocheck/untere-thalhoferwand#b5175a6b-e579-5082-8545-e3496c9c8160",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Untere Thalhoferwand | Jeanny",
@@ -420,20 +486,21 @@
    "crag": "Untere Thalhoferwand",
    "wall": "Untere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007285,
+   "longitude": 16.036561,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "18e4e58a-b10e-5df7-9321-2b4521d951d1",
    "region_slug": "hocheck",
    "crag_slug": "untere-thalhoferwand",
    "slug": "jeanny",
    "path": "/crags/hocheck/untere-thalhoferwand#18e4e58a-b10e-5df7-9321-2b4521d951d1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Untere Thalhoferwand | Kuh Rosl",
@@ -447,20 +514,21 @@
    "crag": "Untere Thalhoferwand",
    "wall": "Untere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007285,
+   "longitude": 16.036561,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "38706a3b-d278-58b3-9f73-9df674c0e925",
    "region_slug": "hocheck",
    "crag_slug": "untere-thalhoferwand",
    "slug": "kuh-rosl",
    "path": "/crags/hocheck/untere-thalhoferwand#38706a3b-d278-58b3-9f73-9df674c0e925",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Untere Thalhoferwand | Mit neuer Kraft",
@@ -474,20 +542,21 @@
    "crag": "Untere Thalhoferwand",
    "wall": "Untere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007285,
+   "longitude": 16.036561,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f407b3d3-c612-5aa2-b653-e2cf763b426b",
    "region_slug": "hocheck",
    "crag_slug": "untere-thalhoferwand",
    "slug": "mit-neuer-kraft",
    "path": "/crags/hocheck/untere-thalhoferwand#f407b3d3-c612-5aa2-b653-e2cf763b426b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Untere Thalhoferwand | Morgengrauen",
@@ -501,20 +570,21 @@
    "crag": "Untere Thalhoferwand",
    "wall": "Untere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007285,
+   "longitude": 16.036561,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a5f44188-5a08-5787-8305-cdb73ad22371",
    "region_slug": "hocheck",
    "crag_slug": "untere-thalhoferwand",
    "slug": "morgengrauen",
    "path": "/crags/hocheck/untere-thalhoferwand#a5f44188-5a08-5787-8305-cdb73ad22371",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Untere Thalhoferwand | Morgentau",
@@ -528,20 +598,21 @@
    "crag": "Untere Thalhoferwand",
    "wall": "Untere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007285,
+   "longitude": 16.036561,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5048a229-e199-5ec7-9f55-977599d0fb7a",
    "region_slug": "hocheck",
    "crag_slug": "untere-thalhoferwand",
    "slug": "morgentau",
    "path": "/crags/hocheck/untere-thalhoferwand#5048a229-e199-5ec7-9f55-977599d0fb7a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Untere Thalhoferwand | Mäusefalle",
@@ -555,20 +626,21 @@
    "crag": "Untere Thalhoferwand",
    "wall": "Untere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007285,
+   "longitude": 16.036561,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8cdbe2cf-cc19-55a3-baba-a7cf6d1a2353",
    "region_slug": "hocheck",
    "crag_slug": "untere-thalhoferwand",
    "slug": "mausefalle",
    "path": "/crags/hocheck/untere-thalhoferwand#8cdbe2cf-cc19-55a3-baba-a7cf6d1a2353",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Untere Thalhoferwand | Mäusefutter",
@@ -582,20 +654,21 @@
    "crag": "Untere Thalhoferwand",
    "wall": "Untere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007285,
+   "longitude": 16.036561,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "449199f3-0cee-5f9e-87bc-7242bb301049",
    "region_slug": "hocheck",
    "crag_slug": "untere-thalhoferwand",
    "slug": "mausefutter",
    "path": "/crags/hocheck/untere-thalhoferwand#449199f3-0cee-5f9e-87bc-7242bb301049",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Untere Thalhoferwand | Mäusehochzeit",
@@ -609,20 +682,21 @@
    "crag": "Untere Thalhoferwand",
    "wall": "Untere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007285,
+   "longitude": 16.036561,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cb572c22-6440-5304-aec0-7a44e98a8cce",
    "region_slug": "hocheck",
    "crag_slug": "untere-thalhoferwand",
    "slug": "mausehochzeit",
    "path": "/crags/hocheck/untere-thalhoferwand#cb572c22-6440-5304-aec0-7a44e98a8cce",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Untere Thalhoferwand | Mäusejagd",
@@ -636,20 +710,21 @@
    "crag": "Untere Thalhoferwand",
    "wall": "Untere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007285,
+   "longitude": 16.036561,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "70c88377-9586-558e-aa6d-96a2d148f54c",
    "region_slug": "hocheck",
    "crag_slug": "untere-thalhoferwand",
    "slug": "mausejagd",
    "path": "/crags/hocheck/untere-thalhoferwand#70c88377-9586-558e-aa6d-96a2d148f54c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Untere Thalhoferwand | Mäusekönig",
@@ -663,20 +738,21 @@
    "crag": "Untere Thalhoferwand",
    "wall": "Untere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007285,
+   "longitude": 16.036561,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a2e979e9-e61e-543c-91f0-09ac0667e5d9",
    "region_slug": "hocheck",
    "crag_slug": "untere-thalhoferwand",
    "slug": "mausekonig",
    "path": "/crags/hocheck/untere-thalhoferwand#a2e979e9-e61e-543c-91f0-09ac0667e5d9",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Untere Thalhoferwand | Ratatouille Verschneidung",
@@ -690,20 +766,21 @@
    "crag": "Untere Thalhoferwand",
    "wall": "Untere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007285,
+   "longitude": 16.036561,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2ced8bb1-9cf0-5ad9-a419-6a8a5c04abc4",
    "region_slug": "hocheck",
    "crag_slug": "untere-thalhoferwand",
    "slug": "ratatouille-verschneidung",
    "path": "/crags/hocheck/untere-thalhoferwand#2ced8bb1-9cf0-5ad9-a419-6a8a5c04abc4",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Untere Thalhoferwand | Saurer Regen",
@@ -717,20 +794,21 @@
    "crag": "Untere Thalhoferwand",
    "wall": "Untere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007285,
+   "longitude": 16.036561,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "507e286f-9900-597b-9b10-e379e0c8bd73",
    "region_slug": "hocheck",
    "crag_slug": "untere-thalhoferwand",
    "slug": "saurer-regen",
    "path": "/crags/hocheck/untere-thalhoferwand#507e286f-9900-597b-9b10-e379e0c8bd73",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hocheck | Untere Thalhoferwand | Ökopoli",
@@ -744,20 +822,21 @@
    "crag": "Untere Thalhoferwand",
    "wall": "Untere Thalhoferwand",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.007285,
+   "longitude": 16.036561,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "05344556-89cf-5bd3-9024-f68f4d78b3ad",
    "region_slug": "hocheck",
    "crag_slug": "untere-thalhoferwand",
    "slug": "okopoli",
    "path": "/crags/hocheck/untere-thalhoferwand#05344556-89cf-5bd3-9024-f68f4d78b3ad",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

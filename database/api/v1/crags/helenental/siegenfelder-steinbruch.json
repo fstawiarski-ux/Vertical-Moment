@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "61b8e24d-acf9-54bb-9df2-ff167d63eeca",
   "name": "Siegenfelder Steinbruch",
@@ -8,8 +8,10 @@
   "region": "Helenental",
   "region_slug": "helenental",
   "route_count": 12,
-  "latitude": null,
-  "longitude": null,
+  "is_stub": false,
+  "latitude": 47.998745,
+  "longitude": 16.198017,
+  "coord_source": "routes",
   "grades": [
    "3+",
    "4",
@@ -20,7 +22,57 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/helenental/siegenfelder-steinbruch"
+  "path": "/crags/helenental/siegenfelder-steinbruch",
+  "osm": "relation/18217425",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18217425",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=47.998745&mlon=16.198017#map=16/47.998745/16.198017",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Siegenfelder+Steinbruch+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Siegenfelder+Steinbruch+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Siegenfelder+Steinbruch"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Siegenfelder+Steinbruch+Helenental"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -35,20 +87,21 @@
    "crag": "Siegenfelder Steinbruch",
    "wall": "Siegenfelder Steinbruch",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.998745,
+   "longitude": 16.198017,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-81c6-99b1-fdc72c96822e",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e86703f4-9e6a-5bb5-bb80-6b0363196ced",
    "region_slug": "helenental",
    "crag_slug": "siegenfelder-steinbruch",
    "slug": "blaupunkt",
    "path": "/crags/helenental/siegenfelder-steinbruch#e86703f4-9e6a-5bb5-bb80-6b0363196ced",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Siegenfelder Steinbruch | Kurz und Bündig",
@@ -62,20 +115,21 @@
    "crag": "Siegenfelder Steinbruch",
    "wall": "Siegenfelder Steinbruch",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.998745,
+   "longitude": 16.198017,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-8149-9ad2-e89f97c02ae0",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4515b957-14b8-5a33-a82e-c6053fbcec2b",
    "region_slug": "helenental",
    "crag_slug": "siegenfelder-steinbruch",
    "slug": "kurz-und-bundig",
    "path": "/crags/helenental/siegenfelder-steinbruch#4515b957-14b8-5a33-a82e-c6053fbcec2b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Siegenfelder Steinbruch | Numb",
@@ -89,20 +143,21 @@
    "crag": "Siegenfelder Steinbruch",
    "wall": "Siegenfelder Steinbruch",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.998745,
+   "longitude": 16.198017,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-81dc-be09-f9a2782640c0",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "bebac31c-a213-5982-97de-a1dc6e216a7d",
    "region_slug": "helenental",
    "crag_slug": "siegenfelder-steinbruch",
    "slug": "numb",
    "path": "/crags/helenental/siegenfelder-steinbruch#bebac31c-a213-5982-97de-a1dc6e216a7d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Siegenfelder Steinbruch | Plattiger Riss",
@@ -116,20 +171,21 @@
    "crag": "Siegenfelder Steinbruch",
    "wall": "Siegenfelder Steinbruch",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.998745,
+   "longitude": 16.198017,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-8166-a10f-f2777128498d",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "bcaa58cf-c50d-5198-aa90-74d4d87cb293",
    "region_slug": "helenental",
    "crag_slug": "siegenfelder-steinbruch",
    "slug": "plattiger-riss",
    "path": "/crags/helenental/siegenfelder-steinbruch#bcaa58cf-c50d-5198-aa90-74d4d87cb293",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Siegenfelder Steinbruch | Prinz",
@@ -143,20 +199,21 @@
    "crag": "Siegenfelder Steinbruch",
    "wall": "Siegenfelder Steinbruch",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.998745,
+   "longitude": 16.198017,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-81da-ab62-cd6e31a608f9",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d05007b8-aa6f-5698-88fa-76f8c96f6149",
    "region_slug": "helenental",
    "crag_slug": "siegenfelder-steinbruch",
    "slug": "prinz",
    "path": "/crags/helenental/siegenfelder-steinbruch#d05007b8-aa6f-5698-88fa-76f8c96f6149",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Siegenfelder Steinbruch | Rozario",
@@ -170,20 +227,21 @@
    "crag": "Siegenfelder Steinbruch",
    "wall": "Siegenfelder Steinbruch",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.998745,
+   "longitude": 16.198017,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-81fe-9853-f9b1e86f3d38",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2cc8a3f3-594a-52c4-9114-fa09c2035d0f",
    "region_slug": "helenental",
    "crag_slug": "siegenfelder-steinbruch",
    "slug": "rozario",
    "path": "/crags/helenental/siegenfelder-steinbruch#2cc8a3f3-594a-52c4-9114-fa09c2035d0f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Siegenfelder Steinbruch | Streitspur",
@@ -197,20 +255,21 @@
    "crag": "Siegenfelder Steinbruch",
    "wall": "Siegenfelder Steinbruch",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.998745,
+   "longitude": 16.198017,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-810f-a7d0-fe0be595b4ab",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1b78866f-0eaa-5513-983d-1340da2d7cc4",
    "region_slug": "helenental",
    "crag_slug": "siegenfelder-steinbruch",
    "slug": "streitspur",
    "path": "/crags/helenental/siegenfelder-steinbruch#1b78866f-0eaa-5513-983d-1340da2d7cc4",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Siegenfelder Steinbruch | The Fox",
@@ -224,20 +283,21 @@
    "crag": "Siegenfelder Steinbruch",
    "wall": "Siegenfelder Steinbruch",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.998745,
+   "longitude": 16.198017,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-8121-80c7-d130ca390ad2",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c1290b37-d069-5415-9b3b-96b7f531e2ac",
    "region_slug": "helenental",
    "crag_slug": "siegenfelder-steinbruch",
    "slug": "the-fox",
    "path": "/crags/helenental/siegenfelder-steinbruch#c1290b37-d069-5415-9b3b-96b7f531e2ac",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Siegenfelder Steinbruch | Vergessener Grat",
@@ -251,20 +311,21 @@
    "crag": "Siegenfelder Steinbruch",
    "wall": "Siegenfelder Steinbruch",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.998745,
+   "longitude": 16.198017,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-815e-b971-f2af1d3bf9e8",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0b842e8a-3e23-5c37-8296-0eda32268e17",
    "region_slug": "helenental",
    "crag_slug": "siegenfelder-steinbruch",
    "slug": "vergessener-grat",
    "path": "/crags/helenental/siegenfelder-steinbruch#0b842e8a-3e23-5c37-8296-0eda32268e17",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Siegenfelder Steinbruch | Waiting",
@@ -278,20 +339,21 @@
    "crag": "Siegenfelder Steinbruch",
    "wall": "Siegenfelder Steinbruch",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.998745,
+   "longitude": 16.198017,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-816f-b0ad-d42386608e14",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0d6beb6b-4a8c-5770-b337-9f5927494a52",
    "region_slug": "helenental",
    "crag_slug": "siegenfelder-steinbruch",
    "slug": "waiting",
    "path": "/crags/helenental/siegenfelder-steinbruch#0d6beb6b-4a8c-5770-b337-9f5927494a52",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Siegenfelder Steinbruch | Weisser Pfeiler",
@@ -305,20 +367,21 @@
    "crag": "Siegenfelder Steinbruch",
    "wall": "Siegenfelder Steinbruch",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.998745,
+   "longitude": 16.198017,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-8124-971c-c9c68efb0f79",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9bdfe4fe-bf18-5a18-a102-e8dfaadd3599",
    "region_slug": "helenental",
    "crag_slug": "siegenfelder-steinbruch",
    "slug": "weisser-pfeiler",
    "path": "/crags/helenental/siegenfelder-steinbruch#9bdfe4fe-bf18-5a18-a102-e8dfaadd3599",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Siegenfelder Steinbruch | Zooropa",
@@ -332,20 +395,21 @@
    "crag": "Siegenfelder Steinbruch",
    "wall": "Siegenfelder Steinbruch",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.998745,
+   "longitude": 16.198017,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-81e2-a007-f8e87647d40f",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d2ffbfa3-63f1-5b0f-9feb-b64e6ab1252d",
    "region_slug": "helenental",
    "crag_slug": "siegenfelder-steinbruch",
    "slug": "zooropa",
    "path": "/crags/helenental/siegenfelder-steinbruch#d2ffbfa3-63f1-5b0f-9feb-b64e6ab1252d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

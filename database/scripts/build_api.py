@@ -192,6 +192,23 @@ def load_canonical(path: Path) -> list[dict]:
     return out
 
 
+def load_canonical_structural(path: Path) -> tuple[dict, dict]:
+    """The canonical file's OWN crags[] and regions[] arrays, keyed for lookup.
+
+    These carry OSM-only stub crags (0 routes) and zero-route regions, plus
+    the links[] blocks — none of which can be reconstructed from routes
+    alone. build_crags()/build_regions() overlay route-derived stats on top
+    of this, so every crag/region the canonical file knows about still gets
+    a page, not just the ones with transcribed routes.
+    """
+    if not path.exists():
+        return {}, {}
+    doc = json.loads(path.read_text(encoding="utf-8"))
+    crags = {(c["region"], c["name"]): c for c in doc.get("crags", [])}
+    regions = {r["name"]: r for r in doc.get("regions", [])}
+    return crags, regions
+
+
 SOURCES = [
     ("canonical", lambda d: load_canonical(d / "master" / "vertical-moment-canonical.json")),
     ("notion", lambda d: load_notion_csv(d / "sources" / "notion-export.csv")),
@@ -238,14 +255,33 @@ def write_json(path: Path, payload) -> int:
     return len(text.encode("utf-8"))
 
 
-def build_crags(routes: list[dict]) -> list[dict]:
+def build_crags(routes: list[dict], canon_crags: dict | None = None) -> list[dict]:
+    canon_crags = canon_crags or {}
     byc: dict[tuple, list] = defaultdict(list)
     for r in routes:
         byc[(r["region"], r["crag"])].append(r)
+
+    # Union of every crag with routes AND every crag the canonical file
+    # knows about (OSM-only stubs included) — a stub must still get a page.
+    all_keys = set(byc.keys()) | set(canon_crags.keys())
+
     crags = []
-    for (region, crag), rs in sorted(byc.items()):
+    for region, crag in sorted(all_keys):
+        rs = byc.get((region, crag), [])
+        src = canon_crags.get((region, crag))
+
         lats = [r["latitude"] for r in rs if r.get("latitude") is not None]
         lons = [r["longitude"] for r in rs if r.get("longitude") is not None]
+        if lats:
+            lat = round(sum(lats) / len(lats), 6)
+            lon = round(sum(lons) / len(lons), 6)
+            coord_source = "routes"
+        elif src and src.get("latitude") is not None:
+            lat, lon = src["latitude"], src["longitude"]
+            coord_source = src.get("coord_source") or "osm"
+        else:
+            lat = lon = coord_source = None
+
         crags.append({
             "id": str(uuid.uuid5(uuid.NAMESPACE_URL, ID_NAMESPACE + f"crag:{region} | {crag}")),
             "name": crag,
@@ -253,13 +289,46 @@ def build_crags(routes: list[dict]) -> list[dict]:
             "region": region,
             "region_slug": slugify(region),
             "route_count": len(rs),
-            "latitude": round(sum(lats) / len(lats), 6) if lats else None,
-            "longitude": round(sum(lons) / len(lons), 6) if lons else None,
+            "is_stub": len(rs) == 0,
+            "latitude": lat,
+            "longitude": lon,
+            "coord_source": coord_source,
             "grades": sorted({r["grade"] for r in rs if r.get("grade")}),
             "disciplines": sorted({r["discipline"] for r in rs if r.get("discipline")}),
             "path": f"/crags/{slugify(region)}/{slugify(crag)}",
+            "osm": (src or {}).get("osm"),
+            "rock": (src or {}).get("rock"),
+            "website": (src or {}).get("website"),
+            "topo": (src or {}).get("topo"),
+            "wikimedia": (src or {}).get("wikimedia"),
+            "links": (src or {}).get("links", []),
+            "has_exact_links": (src or {}).get("has_exact_links", False),
         })
     return crags
+
+
+def build_regions(routes: list[dict], crags: list[dict], canon_regions: dict | None = None) -> list[dict]:
+    canon_regions = canon_regions or {}
+    # Union of every region with routes/crags AND every region the
+    # canonical file knows about (zero-route regions included).
+    names = {r["region"] for r in routes} | {c["region"] for c in crags} | set(canon_regions.keys())
+
+    regions = []
+    for name in sorted(names):
+        rs = [r for r in routes if r["region"] == name]
+        cs = [c for c in crags if c["region"] == name]
+        src = canon_regions.get(name)
+        regions.append({
+            "id": str(uuid.uuid5(uuid.NAMESPACE_URL, ID_NAMESPACE + f"region:{name}")),
+            "name": name,
+            "slug": slugify(name),
+            "crag_count": len(cs),
+            "route_count": len(rs),
+            "path": f"/crags/{slugify(name)}",
+            "links": (src or {}).get("links", []),
+            "more_info_note": (src or {}).get("more_info_note"),
+        })
+    return regions
 
 
 def main() -> int:
@@ -277,18 +346,11 @@ def main() -> int:
         print(f"  source {label:8s} {len(recs):5d} records")
         batches.append((label, recs))
 
+    canon_crags, canon_regions = load_canonical_structural(HERE / "master" / "vertical-moment-canonical.json")
+
     routes = merge(batches)
-    crags = build_crags(routes)
-    regions = []
-    for name in sorted({r["region"] for r in routes}):
-        rs = [r for r in routes if r["region"] == name]
-        cs = [c for c in crags if c["region"] == name]
-        regions.append({
-            "id": str(uuid.uuid5(uuid.NAMESPACE_URL, ID_NAMESPACE + f"region:{name}")),
-            "name": name, "slug": slugify(name),
-            "crag_count": len(cs), "route_count": len(rs),
-            "path": f"/crags/{slugify(name)}",
-        })
+    crags = build_crags(routes, canon_crags)
+    regions = build_regions(routes, crags, canon_regions)
 
     generated = datetime.now(timezone.utc).isoformat(timespec="seconds")
     meta = {"schema_version": SCHEMA_VERSION, "generated": generated}

@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "3c68bd95-f047-59c9-80a0-57acd55ac6c5",
   "name": "Ostplatte",
@@ -8,8 +8,10 @@
   "region": "Hocheck",
   "region_slug": "hocheck",
   "route_count": 26,
+  "is_stub": false,
   "latitude": null,
   "longitude": null,
+  "coord_source": null,
   "grades": [
    "5",
    "5+",
@@ -28,7 +30,43 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/hocheck/ostplatte"
+  "path": "/crags/hocheck/ostplatte",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Ostplatte+Hocheck"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Ostplatte+Hocheck"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Ostplatte"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Ostplatte+Hocheck"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -45,18 +83,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a4ec22b4-3a1e-582b-a5cf-2d3609d408a8",
    "region_slug": "hocheck",
    "crag_slug": "ostplatte",
    "slug": "ab-durch-die-mitte",
    "path": "/crags/hocheck/ostplatte#a4ec22b4-3a1e-582b-a5cf-2d3609d408a8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Ostplatte | Anny's Delikt",
@@ -72,18 +111,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e8e8b3ec-a42e-5ae6-8d32-a60be4c62c99",
    "region_slug": "hocheck",
    "crag_slug": "ostplatte",
    "slug": "anny-s-delikt",
    "path": "/crags/hocheck/ostplatte#e8e8b3ec-a42e-5ae6-8d32-a60be4c62c99",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Ostplatte | Augenblicke des Glücks",
@@ -99,18 +139,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "eb445fb8-0aca-5534-a7d4-3d2717112fd9",
    "region_slug": "hocheck",
    "crag_slug": "ostplatte",
    "slug": "augenblicke-des-glucks",
    "path": "/crags/hocheck/ostplatte#eb445fb8-0aca-5534-a7d4-3d2717112fd9",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Ostplatte | Die wahre Komplizierte",
@@ -126,18 +167,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ddb46ea8-2586-5ba6-9380-374a417dca8f",
    "region_slug": "hocheck",
    "crag_slug": "ostplatte",
    "slug": "die-wahre-komplizierte",
    "path": "/crags/hocheck/ostplatte#ddb46ea8-2586-5ba6-9380-374a417dca8f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Ostplatte | Es geht weiter, Schoko",
@@ -153,18 +195,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d6269246-384c-577e-b675-2d2575fed748",
    "region_slug": "hocheck",
    "crag_slug": "ostplatte",
    "slug": "es-geht-weiter-schoko",
    "path": "/crags/hocheck/ostplatte#d6269246-384c-577e-b675-2d2575fed748",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Ostplatte | Grantige Laus",
@@ -180,18 +223,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8c1eeee4-599a-5f90-9b15-2703ffe51767",
    "region_slug": "hocheck",
    "crag_slug": "ostplatte",
    "slug": "grantige-laus",
    "path": "/crags/hocheck/ostplatte#8c1eeee4-599a-5f90-9b15-2703ffe51767",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Ostplatte | Grisu",
@@ -207,18 +251,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5478cf8e-c647-557e-a60e-81cbc9b0593f",
    "region_slug": "hocheck",
    "crag_slug": "ostplatte",
    "slug": "grisu",
    "path": "/crags/hocheck/ostplatte#5478cf8e-c647-557e-a60e-81cbc9b0593f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Ostplatte | Grizzly",
@@ -234,18 +279,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ff37879d-edff-52c5-91ce-cf8ba095f0f0",
    "region_slug": "hocheck",
    "crag_slug": "ostplatte",
    "slug": "grizzly",
    "path": "/crags/hocheck/ostplatte#ff37879d-edff-52c5-91ce-cf8ba095f0f0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Ostplatte | Mein Gott Anny (Ostplatte)",
@@ -261,18 +307,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2fe99b3f-94af-5c06-be27-eeee1bf592f2",
    "region_slug": "hocheck",
    "crag_slug": "ostplatte",
    "slug": "mein-gott-anny-ostplatte",
    "path": "/crags/hocheck/ostplatte#2fe99b3f-94af-5c06-be27-eeee1bf592f2",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Ostplatte | Oberer Annysteig",
@@ -288,18 +335,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a2062532-32f2-5669-b512-fb1e842d96e2",
    "region_slug": "hocheck",
    "crag_slug": "ostplatte",
    "slug": "oberer-annysteig",
    "path": "/crags/hocheck/ostplatte#a2062532-32f2-5669-b512-fb1e842d96e2",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Ostplatte | Rumpelstilzchen",
@@ -315,18 +363,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ee65e53d-2dbb-521d-8102-9a9a7080735c",
    "region_slug": "hocheck",
    "crag_slug": "ostplatte",
    "slug": "rumpelstilzchen",
    "path": "/crags/hocheck/ostplatte#ee65e53d-2dbb-521d-8102-9a9a7080735c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Ostplatte | Schoko Intensiv",
@@ -342,18 +391,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "97bc0fc8-6027-5282-8af6-137b58d98356",
    "region_slug": "hocheck",
    "crag_slug": "ostplatte",
    "slug": "schoko-intensiv",
    "path": "/crags/hocheck/ostplatte#97bc0fc8-6027-5282-8af6-137b58d98356",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Ostplatte | Schokokamin",
@@ -369,18 +419,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d90640d6-a6e5-526d-aca3-20ec48d2e660",
    "region_slug": "hocheck",
    "crag_slug": "ostplatte",
    "slug": "schokokamin",
    "path": "/crags/hocheck/ostplatte#d90640d6-a6e5-526d-aca3-20ec48d2e660",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Ostplatte | Schokoladenbauer",
@@ -396,18 +447,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "357bd3cf-94c5-5ef7-ab55-d68dd38246d7",
    "region_slug": "hocheck",
    "crag_slug": "ostplatte",
    "slug": "schokoladenbauer",
    "path": "/crags/hocheck/ostplatte#357bd3cf-94c5-5ef7-ab55-d68dd38246d7",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Ostplatte | Schokoladenpudding",
@@ -423,18 +475,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b8d7d57c-45f7-5b4e-a06a-bd26a21cc4b9",
    "region_slug": "hocheck",
    "crag_slug": "ostplatte",
    "slug": "schokoladenpudding",
    "path": "/crags/hocheck/ostplatte#b8d7d57c-45f7-5b4e-a06a-bd26a21cc4b9",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Ostplatte | Single Man",
@@ -450,18 +503,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ec139188-5897-5c53-9903-19213f8b221d",
    "region_slug": "hocheck",
    "crag_slug": "ostplatte",
    "slug": "single-man",
    "path": "/crags/hocheck/ostplatte#ec139188-5897-5c53-9903-19213f8b221d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Ostplatte | Thalidach",
@@ -477,18 +531,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "21cd75c2-3ad6-5f1c-8325-d0d4bb074dba",
    "region_slug": "hocheck",
    "crag_slug": "ostplatte",
    "slug": "thalidach",
    "path": "/crags/hocheck/ostplatte#21cd75c2-3ad6-5f1c-8325-d0d4bb074dba",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Ostplatte | Thalidynamisch",
@@ -504,18 +559,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1613ce50-20af-574a-bf13-cd587531a0d3",
    "region_slug": "hocheck",
    "crag_slug": "ostplatte",
    "slug": "thalidynamisch",
    "path": "/crags/hocheck/ostplatte#1613ce50-20af-574a-bf13-cd587531a0d3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Ostplatte | Thaliffizil",
@@ -531,18 +587,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9c7a2e96-f1ca-523d-a9c5-fa4fa8c49f51",
    "region_slug": "hocheck",
    "crag_slug": "ostplatte",
    "slug": "thaliffizil",
    "path": "/crags/hocheck/ostplatte#9c7a2e96-f1ca-523d-a9c5-fa4fa8c49f51",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Ostplatte | Thaliplatte",
@@ -558,18 +615,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3030d9c7-052e-5ba0-81c7-17ce7d5cf67b",
    "region_slug": "hocheck",
    "crag_slug": "ostplatte",
    "slug": "thaliplatte",
    "path": "/crags/hocheck/ostplatte#3030d9c7-052e-5ba0-81c7-17ce7d5cf67b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Ostplatte | Thaliriss",
@@ -585,18 +643,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "03a24505-c857-5390-aa1c-edddf4c664f8",
    "region_slug": "hocheck",
    "crag_slug": "ostplatte",
    "slug": "thaliriss",
    "path": "/crags/hocheck/ostplatte#03a24505-c857-5390-aa1c-edddf4c664f8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Ostplatte | Thalistrophal",
@@ -612,18 +671,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "41cf3291-1445-50a4-8231-768776a3fa05",
    "region_slug": "hocheck",
    "crag_slug": "ostplatte",
    "slug": "thalistrophal",
    "path": "/crags/hocheck/ostplatte#41cf3291-1445-50a4-8231-768776a3fa05",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Ostplatte | Thalitastisch",
@@ -639,18 +699,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3cd4a24c-303f-527c-af57-51d92e127a53",
    "region_slug": "hocheck",
    "crag_slug": "ostplatte",
    "slug": "thalitastisch",
    "path": "/crags/hocheck/ostplatte#3cd4a24c-303f-527c-af57-51d92e127a53",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Ostplatte | Uta Steig",
@@ -666,18 +727,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ad39be24-ab51-538f-b427-a911f82900f0",
    "region_slug": "hocheck",
    "crag_slug": "ostplatte",
    "slug": "uta-steig",
    "path": "/crags/hocheck/ostplatte#ad39be24-ab51-538f-b427-a911f82900f0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Ostplatte | Voodoo",
@@ -693,18 +755,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d2448624-4611-5309-9d20-812843884d18",
    "region_slug": "hocheck",
    "crag_slug": "ostplatte",
    "slug": "voodoo",
    "path": "/crags/hocheck/ostplatte#d2448624-4611-5309-9d20-812843884d18",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hocheck | Ostplatte | Wild Palms",
@@ -720,18 +783,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d78d2cef-90ee-51c1-8425-3dbf285b2975",
    "region_slug": "hocheck",
    "crag_slug": "ostplatte",
    "slug": "wild-palms",
    "path": "/crags/hocheck/ostplatte#d78d2cef-90ee-51c1-8425-3dbf285b2975",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }

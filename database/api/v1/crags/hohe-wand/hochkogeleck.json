@@ -1,17 +1,18 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "bda1cc8d-58cd-5908-8287-4a92855d6ee3",
   "name": "Hochkogeleck",
   "slug": "hochkogeleck",
   "region": "Hohe Wand",
   "region_slug": "hohe-wand",
-  "route_count": 18,
-  "latitude": null,
-  "longitude": null,
+  "route_count": 14,
+  "is_stub": false,
+  "latitude": 47.823588,
+  "longitude": 16.040483,
+  "coord_source": "routes",
   "grades": [
-   "10-",
    "2-",
    "3+",
    "5+",
@@ -21,14 +22,62 @@
    "7",
    "7+",
    "7-",
-   "8",
-   "9/9+"
+   "8"
   ],
   "disciplines": [
-   "multipitch",
    "sport"
   ],
-  "path": "/crags/hohe-wand/hochkogeleck"
+  "path": "/crags/hohe-wand/hochkogeleck",
+  "osm": "relation/18200382",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18200382",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=47.823588&mlon=16.040483#map=16/47.823588/16.040483",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Hochkogeleck+Hohe+Wand"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Hochkogeleck+Hohe+Wand"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Hochkogeleck"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Hochkogeleck+Hohe+Wand"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -43,20 +92,21 @@
    "crag": "Hochkogeleck",
    "wall": "Hochkogeleck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.823588,
+   "longitude": 16.040483,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a4277d3e-a155-5cea-8f55-4392c05853ce",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogeleck",
    "slug": "alek",
    "path": "/crags/hohe-wand/hochkogeleck#a4277d3e-a155-5cea-8f55-4392c05853ce",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogeleck | An Bahnsteigen stehn",
@@ -70,20 +120,21 @@
    "crag": "Hochkogeleck",
    "wall": "Hochkogeleck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.823588,
+   "longitude": 16.040483,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "80850a85-9a09-50af-9209-d99b9e36f976",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogeleck",
    "slug": "an-bahnsteigen-stehn",
    "path": "/crags/hohe-wand/hochkogeleck#80850a85-9a09-50af-9209-d99b9e36f976",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogeleck | Bocksteig",
@@ -97,20 +148,21 @@
    "crag": "Hochkogeleck",
    "wall": "Hochkogeleck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.823588,
+   "longitude": 16.040483,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0ce9b440-9a50-5ac5-aef7-c1b5461f2538",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogeleck",
    "slug": "bocksteig",
    "path": "/crags/hohe-wand/hochkogeleck#0ce9b440-9a50-5ac5-aef7-c1b5461f2538",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogeleck | Die Wende",
@@ -124,20 +176,21 @@
    "crag": "Hochkogeleck",
    "wall": "Hochkogeleck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.823588,
+   "longitude": 16.040483,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "029a2dbf-1101-5095-8bcb-7b882cabec79",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogeleck",
    "slug": "die-wende",
    "path": "/crags/hohe-wand/hochkogeleck#029a2dbf-1101-5095-8bcb-7b882cabec79",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogeleck | Die neue Welle",
@@ -151,20 +204,21 @@
    "crag": "Hochkogeleck",
    "wall": "Hochkogeleck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.823588,
+   "longitude": 16.040483,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "808f3417-d7b4-54dd-a5af-8e2c8ad20a6e",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogeleck",
    "slug": "die-neue-welle",
    "path": "/crags/hohe-wand/hochkogeleck#808f3417-d7b4-54dd-a5af-8e2c8ad20a6e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogeleck | Drangsal",
@@ -178,47 +232,21 @@
    "crag": "Hochkogeleck",
    "wall": "Hochkogeleck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.823588,
+   "longitude": 16.040483,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b5b25abb-48d9-51ce-8761-b066536c138b",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogeleck",
    "slug": "drangsal",
    "path": "/crags/hohe-wand/hochkogeleck#b5b25abb-48d9-51ce-8761-b066536c138b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
-  },
-  {
-   "row_key": "Hohe Wand | Hochkogeleck | Drangsal Lang",
-   "name": "Drangsal Lang",
-   "grade": "9/9+",
-   "grade_band": "8-11",
-   "grade_system": "UIAA",
-   "discipline": "multipitch",
-   "region": "Hohe Wand",
-   "area": "Hohe Wand",
-   "crag": "Hochkogeleck",
-   "wall": "Hochkogeleck",
-   "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
-   "notion_page_id": null,
-   "workflow_status": "to create",
-   "provenance": [
-    "master"
-   ],
-   "id": "29bd12fc-cced-5391-945f-21189686cdbf",
-   "region_slug": "hohe-wand",
-   "crag_slug": "hochkogeleck",
-   "slug": "drangsal-lang",
-   "path": "/crags/hohe-wand/hochkogeleck#29bd12fc-cced-5391-945f-21189686cdbf",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogeleck | FCK System",
@@ -232,74 +260,21 @@
    "crag": "Hochkogeleck",
    "wall": "Hochkogeleck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.823588,
+   "longitude": 16.040483,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "167b1b76-46ea-5f48-a118-b64ab51a2c09",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogeleck",
    "slug": "fck-system",
    "path": "/crags/hohe-wand/hochkogeleck#167b1b76-46ea-5f48-a118-b64ab51a2c09",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
-  },
-  {
-   "row_key": "Hohe Wand | Hochkogeleck | Feuropa",
-   "name": "Feuropa",
-   "grade": "7",
-   "grade_band": "5-7",
-   "grade_system": "UIAA",
-   "discipline": "multipitch",
-   "region": "Hohe Wand",
-   "area": "Hohe Wand",
-   "crag": "Hochkogeleck",
-   "wall": "Hochkogeleck",
-   "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
-   "notion_page_id": null,
-   "workflow_status": "to create",
-   "provenance": [
-    "master"
-   ],
-   "id": "4418c9b4-8046-5461-b4f2-3d7384a3a0cb",
-   "region_slug": "hohe-wand",
-   "crag_slug": "hochkogeleck",
-   "slug": "feuropa",
-   "path": "/crags/hohe-wand/hochkogeleck#4418c9b4-8046-5461-b4f2-3d7384a3a0cb",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
-  },
-  {
-   "row_key": "Hohe Wand | Hochkogeleck | Feuropa + Neuer Einstieg",
-   "name": "Feuropa + Neuer Einstieg",
-   "grade": "7",
-   "grade_band": "5-7",
-   "grade_system": "UIAA",
-   "discipline": "multipitch",
-   "region": "Hohe Wand",
-   "area": "Hohe Wand",
-   "crag": "Hochkogeleck",
-   "wall": "Hochkogeleck",
-   "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
-   "notion_page_id": null,
-   "workflow_status": "to create",
-   "provenance": [
-    "master"
-   ],
-   "id": "9333e66d-05e9-5285-ac19-82f2d55a6bea",
-   "region_slug": "hohe-wand",
-   "crag_slug": "hochkogeleck",
-   "slug": "feuropa-neuer-einstieg",
-   "path": "/crags/hohe-wand/hochkogeleck#9333e66d-05e9-5285-ac19-82f2d55a6bea",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogeleck | Graue Kante",
@@ -313,20 +288,21 @@
    "crag": "Hochkogeleck",
    "wall": "Hochkogeleck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.823588,
+   "longitude": 16.040483,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fa29e066-aece-53ca-a1be-e3c95af61b79",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogeleck",
    "slug": "graue-kante",
    "path": "/crags/hohe-wand/hochkogeleck#fa29e066-aece-53ca-a1be-e3c95af61b79",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogeleck | Gungnir",
@@ -340,47 +316,21 @@
    "crag": "Hochkogeleck",
    "wall": "Hochkogeleck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.823588,
+   "longitude": 16.040483,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7f7db3c1-c3a1-5925-9c0a-31aff82f809b",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogeleck",
    "slug": "gungnir",
    "path": "/crags/hohe-wand/hochkogeleck#7f7db3c1-c3a1-5925-9c0a-31aff82f809b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
-  },
-  {
-   "row_key": "Hohe Wand | Hochkogeleck | Gungnir Lang",
-   "name": "Gungnir Lang",
-   "grade": "10-",
-   "grade_band": "8-11",
-   "grade_system": "UIAA",
-   "discipline": "multipitch",
-   "region": "Hohe Wand",
-   "area": "Hohe Wand",
-   "crag": "Hochkogeleck",
-   "wall": "Hochkogeleck",
-   "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
-   "notion_page_id": null,
-   "workflow_status": "to create",
-   "provenance": [
-    "master"
-   ],
-   "id": "cc2b0e66-692a-5248-9ea2-cfd611bf97ac",
-   "region_slug": "hohe-wand",
-   "crag_slug": "hochkogeleck",
-   "slug": "gungnir-lang",
-   "path": "/crags/hohe-wand/hochkogeleck#cc2b0e66-692a-5248-9ea2-cfd611bf97ac",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogeleck | Horusauge",
@@ -394,20 +344,21 @@
    "crag": "Hochkogeleck",
    "wall": "Hochkogeleck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.823588,
+   "longitude": 16.040483,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b489480f-c95b-53fa-b77d-4271a23a28ce",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogeleck",
    "slug": "horusauge",
    "path": "/crags/hohe-wand/hochkogeleck#b489480f-c95b-53fa-b77d-4271a23a28ce",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogeleck | Miss Helsinki",
@@ -421,20 +372,21 @@
    "crag": "Hochkogeleck",
    "wall": "Hochkogeleck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.823588,
+   "longitude": 16.040483,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f12fe7ca-78fb-52a9-a711-a981c5b3117a",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogeleck",
    "slug": "miss-helsinki",
    "path": "/crags/hohe-wand/hochkogeleck#f12fe7ca-78fb-52a9-a711-a981c5b3117a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogeleck | Trumpets Call",
@@ -448,20 +400,21 @@
    "crag": "Hochkogeleck",
    "wall": "Hochkogeleck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.823588,
+   "longitude": 16.040483,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "987022d8-af32-5edd-88fe-3a8729f05bfe",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogeleck",
    "slug": "trumpets-call",
    "path": "/crags/hohe-wand/hochkogeleck#987022d8-af32-5edd-88fe-3a8729f05bfe",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogeleck | Walknut",
@@ -475,20 +428,21 @@
    "crag": "Hochkogeleck",
    "wall": "Hochkogeleck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.823588,
+   "longitude": 16.040483,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fbb04afc-6f3b-5807-b0a5-066557db6b17",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogeleck",
    "slug": "walknut",
    "path": "/crags/hohe-wand/hochkogeleck#fbb04afc-6f3b-5807-b0a5-066557db6b17",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hochkogeleck | Yes We Can",
@@ -502,20 +456,21 @@
    "crag": "Hochkogeleck",
    "wall": "Hochkogeleck",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.823588,
+   "longitude": 16.040483,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6893c3ab-fab3-5dea-91bc-c5a0464bca72",
    "region_slug": "hohe-wand",
    "crag_slug": "hochkogeleck",
    "slug": "yes-we-can",
    "path": "/crags/hohe-wand/hochkogeleck#6893c3ab-fab3-5dea-91bc-c5a0464bca72",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

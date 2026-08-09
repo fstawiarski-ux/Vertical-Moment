@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "8f74e530-9807-595a-bc56-c00beb35676d",
   "name": "Ospwandl",
@@ -8,8 +8,10 @@
   "region": "Helenental",
   "region_slug": "helenental",
   "route_count": 6,
+  "is_stub": false,
   "latitude": null,
   "longitude": null,
+  "coord_source": null,
   "grades": [
    "7+",
    "7+/8-",
@@ -21,7 +23,43 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/helenental/ospwandl"
+  "path": "/crags/helenental/ospwandl",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Ospwandl+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Ospwandl+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Ospwandl"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Ospwandl+Helenental"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -38,18 +76,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3ddf816d-2330-5b39-bbb2-789eec7f96a3",
    "region_slug": "helenental",
    "crag_slug": "ospwandl",
    "slug": "cooper",
    "path": "/crags/helenental/ospwandl#3ddf816d-2330-5b39-bbb2-789eec7f96a3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Helenental | Ospwandl | Cooper Hard",
@@ -65,18 +104,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "dbf74cd4-75a5-5565-ab4b-9113794759f1",
    "region_slug": "helenental",
    "crag_slug": "ospwandl",
    "slug": "cooper-hard",
    "path": "/crags/helenental/ospwandl#dbf74cd4-75a5-5565-ab4b-9113794759f1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Helenental | Ospwandl | Little OSP",
@@ -92,18 +132,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5e52deef-5e5a-575d-a56e-b6f99573a68c",
    "region_slug": "helenental",
    "crag_slug": "ospwandl",
    "slug": "little-osp",
    "path": "/crags/helenental/ospwandl#5e52deef-5e5a-575d-a56e-b6f99573a68c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Helenental | Ospwandl | Poltergeist (Ospwandl)",
@@ -119,18 +160,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": "3a921413-5351-81c1-8512-cb693b704ca9",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "da17f7be-4bbd-5da5-b137-364cd9560d07",
    "region_slug": "helenental",
    "crag_slug": "ospwandl",
    "slug": "poltergeist-ospwandl",
    "path": "/crags/helenental/ospwandl#da17f7be-4bbd-5da5-b137-364cd9560d07",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Helenental | Ospwandl | Primorka",
@@ -146,18 +188,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "684c2059-b09e-50d1-8ab1-38bcc4b8222c",
    "region_slug": "helenental",
    "crag_slug": "ospwandl",
    "slug": "primorka",
    "path": "/crags/helenental/ospwandl#684c2059-b09e-50d1-8ab1-38bcc4b8222c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Helenental | Ospwandl | Saft",
@@ -173,18 +216,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f8ca219b-d7d1-5c68-b351-52d89702cda8",
    "region_slug": "helenental",
    "crag_slug": "ospwandl",
    "slug": "saft",
    "path": "/crags/helenental/ospwandl#f8ca219b-d7d1-5c68-b351-52d89702cda8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }

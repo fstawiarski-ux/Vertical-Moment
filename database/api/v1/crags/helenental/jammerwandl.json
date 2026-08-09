@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "619c32e6-5837-51c6-a12e-7a83c426ca75",
   "name": "Jammerwandl",
@@ -8,8 +8,10 @@
   "region": "Helenental",
   "region_slug": "helenental",
   "route_count": 37,
-  "latitude": null,
-  "longitude": null,
+  "is_stub": false,
+  "latitude": 48.015385,
+  "longitude": 16.198357,
+  "coord_source": "routes",
   "grades": [
    "4+",
    "5",
@@ -27,7 +29,57 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/helenental/jammerwandl"
+  "path": "/crags/helenental/jammerwandl",
+  "osm": "relation/18181438",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18181438",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=48.015385&mlon=16.198357#map=16/48.015385/16.198357",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Jammerwandl+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Jammerwandl+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Jammerwandl"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Jammerwandl+Helenental"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -42,20 +94,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "dbcab209-c306-5a6f-98bf-04f7d6489043",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "ameisenbar",
    "path": "/crags/helenental/jammerwandl#dbcab209-c306-5a6f-98bf-04f7d6489043",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Ameisenmord",
@@ -69,20 +122,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4ecf1782-b170-5dc1-bd14-e91f9d581e0f",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "ameisenmord",
    "path": "/crags/helenental/jammerwandl#4ecf1782-b170-5dc1-bd14-e91f9d581e0f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Berta",
@@ -96,20 +150,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d30de9f6-224f-5713-b7ac-362bbc2c844f",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "berta",
    "path": "/crags/helenental/jammerwandl#d30de9f6-224f-5713-b7ac-362bbc2c844f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Bertl",
@@ -123,20 +178,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a9933d62-fd47-5c20-9f09-23571494cada",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "bertl",
    "path": "/crags/helenental/jammerwandl#a9933d62-fd47-5c20-9f09-23571494cada",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Bunte Kuh",
@@ -150,20 +206,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d1353126-9b1b-50db-8876-e603a9de7f2b",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "bunte-kuh",
    "path": "/crags/helenental/jammerwandl#d1353126-9b1b-50db-8876-e603a9de7f2b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Dacquis",
@@ -177,20 +234,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8763f977-4dc5-503f-ad68-bcf3974d8e50",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "dacquis",
    "path": "/crags/helenental/jammerwandl#8763f977-4dc5-503f-ad68-bcf3974d8e50",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Das Comeback",
@@ -204,20 +262,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6ea53a0f-ffde-5f96-917a-a9897707a267",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "das-comeback",
    "path": "/crags/helenental/jammerwandl#6ea53a0f-ffde-5f96-917a-a9897707a267",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Das grosse Aufwärmen",
@@ -231,20 +290,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1143d865-1038-5321-a377-376405c90172",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "das-grosse-aufwarmen",
    "path": "/crags/helenental/jammerwandl#1143d865-1038-5321-a377-376405c90172",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Das kleine Aufwärmen",
@@ -258,20 +318,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2c8c9f2c-340f-541c-b79b-c7142c4d1138",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "das-kleine-aufwarmen",
    "path": "/crags/helenental/jammerwandl#2c8c9f2c-340f-541c-b79b-c7142c4d1138",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Direkter Einstieg (Jammerwandl a)",
@@ -285,20 +346,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-8123-9f01-fcc196fd52be",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "68065196-4e77-5c0a-a590-d795ec350636",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "direkter-einstieg-jammerwandl-a",
    "path": "/crags/helenental/jammerwandl#68065196-4e77-5c0a-a590-d795ec350636",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Direkter Einstieg (Jammerwandl b)",
@@ -312,20 +374,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-8123-9f01-fcc196fd52be",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "76e3b76c-0c5a-56bf-8960-181aaa0dc0f5",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "direkter-einstieg-jammerwandl-b",
    "path": "/crags/helenental/jammerwandl#76e3b76c-0c5a-56bf-8960-181aaa0dc0f5",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Efeuteufel",
@@ -339,20 +402,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0cbf707a-b834-52da-b0cd-5a0c4693146b",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "efeuteufel",
    "path": "/crags/helenental/jammerwandl#0cbf707a-b834-52da-b0cd-5a0c4693146b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Efeuzorn",
@@ -366,20 +430,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ec2f7240-6fb9-5218-90da-1ad8d668a587",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "efeuzorn",
    "path": "/crags/helenental/jammerwandl#ec2f7240-6fb9-5218-90da-1ad8d668a587",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Faade Nocken",
@@ -393,20 +458,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b2cc808a-d44e-5fea-852c-adcce2879bd8",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "faade-nocken",
    "path": "/crags/helenental/jammerwandl#b2cc808a-d44e-5fea-852c-adcce2879bd8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Golden Ambrosia",
@@ -420,20 +486,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0c93a851-aa5f-58b6-a8a0-8abcbdd32b6c",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "golden-ambrosia",
    "path": "/crags/helenental/jammerwandl#0c93a851-aa5f-58b6-a8a0-8abcbdd32b6c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Hexalotte",
@@ -447,20 +514,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cb51b11f-6c26-55d0-8e73-9ec193c7493c",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "hexalotte",
    "path": "/crags/helenental/jammerwandl#cb51b11f-6c26-55d0-8e73-9ec193c7493c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Invasion der Ameisen",
@@ -474,20 +542,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1a8e9a40-b5ec-5f84-9b92-efb40cf33a37",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "invasion-der-ameisen",
    "path": "/crags/helenental/jammerwandl#1a8e9a40-b5ec-5f84-9b92-efb40cf33a37",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Jammer Pepi",
@@ -501,20 +570,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9b6d3d96-6743-5d9c-8aef-4699dda322cd",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "jammer-pepi",
    "path": "/crags/helenental/jammerwandl#9b6d3d96-6743-5d9c-8aef-4699dda322cd",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Junge Römer",
@@ -528,20 +598,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b6d8624d-eff2-5ad9-9b97-96a520651c50",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "junge-romer",
    "path": "/crags/helenental/jammerwandl#b6d8624d-eff2-5ad9-9b97-96a520651c50",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Kurze Kamine",
@@ -555,20 +626,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2fbae456-c1fd-5855-aff9-479308891e95",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "kurze-kamine",
    "path": "/crags/helenental/jammerwandl#2fbae456-c1fd-5855-aff9-479308891e95",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Laubfrosch",
@@ -582,20 +654,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6b2c3f14-9814-5732-b5b6-954ec242068d",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "laubfrosch",
    "path": "/crags/helenental/jammerwandl#6b2c3f14-9814-5732-b5b6-954ec242068d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Lueg emol es bitzeli",
@@ -609,20 +682,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "28f3ae66-d3ce-5360-b592-782c45ab0e4f",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "lueg-emol-es-bitzeli",
    "path": "/crags/helenental/jammerwandl#28f3ae66-d3ce-5360-b592-782c45ab0e4f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Mayflower Nr 1",
@@ -636,20 +710,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1cbddf7b-db97-5e67-bc1b-ba76c28c8a16",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "mayflower-nr-1",
    "path": "/crags/helenental/jammerwandl#1cbddf7b-db97-5e67-bc1b-ba76c28c8a16",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Ohne Baum",
@@ -663,20 +738,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1cfafdca-d4e5-5104-a228-bb9fafc53ab9",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "ohne-baum",
    "path": "/crags/helenental/jammerwandl#1cfafdca-d4e5-5104-a228-bb9fafc53ab9",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Plattenzauber",
@@ -690,20 +766,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8bb468f3-689b-5b92-9a86-248425fdbb9d",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "plattenzauber",
    "path": "/crags/helenental/jammerwandl#8bb468f3-689b-5b92-9a86-248425fdbb9d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Putzteufel",
@@ -717,20 +794,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "59b347de-d6ce-5145-a3ff-479fc24bbf02",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "putzteufel",
    "path": "/crags/helenental/jammerwandl#59b347de-d6ce-5145-a3ff-479fc24bbf02",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Sai ned faaad",
@@ -744,20 +822,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e7996d71-ddd0-5fd1-aa05-ef8d04c69037",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "sai-ned-faaad",
    "path": "/crags/helenental/jammerwandl#e7996d71-ddd0-5fd1-aa05-ef8d04c69037",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Schokopalatschinke",
@@ -771,20 +850,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3681eb95-81b3-5736-99dc-a8093530c880",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "schokopalatschinke",
    "path": "/crags/helenental/jammerwandl#3681eb95-81b3-5736-99dc-a8093530c880",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Schuppe der Zweifel",
@@ -798,20 +878,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c1398e26-d160-5a9e-b229-c9eda518c2ba",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "schuppe-der-zweifel",
    "path": "/crags/helenental/jammerwandl#c1398e26-d160-5a9e-b229-c9eda518c2ba",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Sonnenkante",
@@ -825,20 +906,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b8ccc99f-84b3-576e-8555-cea0006c3a7f",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "sonnenkante",
    "path": "/crags/helenental/jammerwandl#b8ccc99f-84b3-576e-8555-cea0006c3a7f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Tante Emma",
@@ -852,20 +934,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ae3bd4f8-7bc2-56fa-9ca1-37213c20852f",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "tante-emma",
    "path": "/crags/helenental/jammerwandl#ae3bd4f8-7bc2-56fa-9ca1-37213c20852f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Terassendiagonale",
@@ -879,20 +962,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "428b6f6c-2628-5bc4-8027-d7298c2f67bc",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "terassendiagonale",
    "path": "/crags/helenental/jammerwandl#428b6f6c-2628-5bc4-8027-d7298c2f67bc",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Teststrecke",
@@ -906,20 +990,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "46b18ff9-dbe2-54e4-8605-f18ab4b10858",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "teststrecke",
    "path": "/crags/helenental/jammerwandl#46b18ff9-dbe2-54e4-8605-f18ab4b10858",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Topstar",
@@ -933,20 +1018,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e9f18df7-59a1-5f0f-965c-fd69bb4ae5ca",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "topstar",
    "path": "/crags/helenental/jammerwandl#e9f18df7-59a1-5f0f-965c-fd69bb4ae5ca",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Unschlüssig",
@@ -960,20 +1046,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b507f8d1-1402-5380-8164-bd91a61d594f",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "unschlussig",
    "path": "/crags/helenental/jammerwandl#b507f8d1-1402-5380-8164-bd91a61d594f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Variante (Jammerwandl)",
@@ -987,20 +1074,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": "3a921413-5351-816e-96e6-d7e49e83dad5",
    "workflow_status": "review (Helenental) — in DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "99b7722a-fb93-563b-88d1-71ed3f2178f2",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "variante-jammerwandl",
    "path": "/crags/helenental/jammerwandl#99b7722a-fb93-563b-88d1-71ed3f2178f2",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Jammerwandl | Wilder Schnittlauch",
@@ -1014,20 +1102,21 @@
    "crag": "Jammerwandl",
    "wall": "Jammerwandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.015385,
+   "longitude": 16.198357,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cb78f815-3d92-544e-8b0f-0865b670b1e1",
    "region_slug": "helenental",
    "crag_slug": "jammerwandl",
    "slug": "wilder-schnittlauch",
    "path": "/crags/helenental/jammerwandl#cb78f815-3d92-544e-8b0f-0865b670b1e1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

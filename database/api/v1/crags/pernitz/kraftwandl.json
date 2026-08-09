@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "d3c6fb6e-2a00-58a0-aaba-2dc6814d205f",
   "name": "Kraftwandl",
@@ -8,8 +8,10 @@
   "region": "Pernitz",
   "region_slug": "pernitz",
   "route_count": 13,
+  "is_stub": false,
   "latitude": null,
   "longitude": null,
+  "coord_source": null,
   "grades": [
    "6+",
    "6b trav",
@@ -25,7 +27,43 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/pernitz/kraftwandl"
+  "path": "/crags/pernitz/kraftwandl",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Kraftwandl+Pernitz"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Kraftwandl+Pernitz"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Kraftwandl"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Kraftwandl+Pernitz"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -42,18 +80,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "74165ed8-f961-5c3b-a271-67d4487dba3f",
    "region_slug": "pernitz",
    "crag_slug": "kraftwandl",
    "slug": "a-riss-der-kana-is",
    "path": "/crags/pernitz/kraftwandl#74165ed8-f961-5c3b-a271-67d4487dba3f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kraftwandl | Ach wie gut dass niemand weiss",
@@ -69,18 +108,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "06d34385-3f4c-5d32-8042-ba7899a4e2aa",
    "region_slug": "pernitz",
    "crag_slug": "kraftwandl",
    "slug": "ach-wie-gut-dass-niemand-weiss",
    "path": "/crags/pernitz/kraftwandl#06d34385-3f4c-5d32-8042-ba7899a4e2aa",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kraftwandl | Armarock",
@@ -96,18 +136,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "17b110e0-6c9f-5b3f-aafe-4dca2a690f20",
    "region_slug": "pernitz",
    "crag_slug": "kraftwandl",
    "slug": "armarock",
    "path": "/crags/pernitz/kraftwandl#17b110e0-6c9f-5b3f-aafe-4dca2a690f20",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kraftwandl | Geile Sau",
@@ -123,18 +164,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "897a8fd4-8fd8-52ff-bfa1-526e5f4dff61",
    "region_slug": "pernitz",
    "crag_slug": "kraftwandl",
    "slug": "geile-sau",
    "path": "/crags/pernitz/kraftwandl#897a8fd4-8fd8-52ff-bfa1-526e5f4dff61",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kraftwandl | Helmi",
@@ -150,18 +192,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "29e057c9-1993-52fb-bdff-fdbef6c2a987",
    "region_slug": "pernitz",
    "crag_slug": "kraftwandl",
    "slug": "helmi",
    "path": "/crags/pernitz/kraftwandl#29e057c9-1993-52fb-bdff-fdbef6c2a987",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kraftwandl | Meerschweine",
@@ -177,18 +220,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6ff9f506-0a37-53a3-a305-614566e1c948",
    "region_slug": "pernitz",
    "crag_slug": "kraftwandl",
    "slug": "meerschweine",
    "path": "/crags/pernitz/kraftwandl#6ff9f506-0a37-53a3-a305-614566e1c948",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kraftwandl | Muggendance",
@@ -204,18 +248,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d02c36db-c4c1-568e-9980-f7cc3572c7ec",
    "region_slug": "pernitz",
    "crag_slug": "kraftwandl",
    "slug": "muggendance",
    "path": "/crags/pernitz/kraftwandl#d02c36db-c4c1-568e-9980-f7cc3572c7ec",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kraftwandl | Nicht verzagen",
@@ -231,18 +276,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "936c8ab0-0bc5-554d-9805-b9c19e110c80",
    "region_slug": "pernitz",
    "crag_slug": "kraftwandl",
    "slug": "nicht-verzagen",
    "path": "/crags/pernitz/kraftwandl#936c8ab0-0bc5-554d-9805-b9c19e110c80",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kraftwandl | Nicht warum fragen",
@@ -258,18 +304,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "bd3fcd04-38b3-5467-bcbf-dc73b8b14861",
    "region_slug": "pernitz",
    "crag_slug": "kraftwandl",
    "slug": "nicht-warum-fragen",
    "path": "/crags/pernitz/kraftwandl#bd3fcd04-38b3-5467-bcbf-dc73b8b14861",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kraftwandl | No Pain No Game",
@@ -285,18 +332,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "323632d8-a3db-5d7d-826c-bef5bd1ce99f",
    "region_slug": "pernitz",
    "crag_slug": "kraftwandl",
    "slug": "no-pain-no-game",
    "path": "/crags/pernitz/kraftwandl#323632d8-a3db-5d7d-826c-bef5bd1ce99f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kraftwandl | Pe Jing Express",
@@ -312,18 +360,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "dae9cb92-1b65-55ce-9e1b-f906df14a37e",
    "region_slug": "pernitz",
    "crag_slug": "kraftwandl",
    "slug": "pe-jing-express",
    "path": "/crags/pernitz/kraftwandl#dae9cb92-1b65-55ce-9e1b-f906df14a37e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kraftwandl | Power Control",
@@ -339,18 +388,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "17dffc9c-30fb-5b31-9012-52c88f78638b",
    "region_slug": "pernitz",
    "crag_slug": "kraftwandl",
    "slug": "power-control",
    "path": "/crags/pernitz/kraftwandl#17dffc9c-30fb-5b31-9012-52c88f78638b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Kraftwandl | Proteinminister",
@@ -366,18 +416,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b64c43ed-b079-5450-89d7-81e446e86bc6",
    "region_slug": "pernitz",
    "crag_slug": "kraftwandl",
    "slug": "proteinminister",
    "path": "/crags/pernitz/kraftwandl#b64c43ed-b079-5450-89d7-81e446e86bc6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }

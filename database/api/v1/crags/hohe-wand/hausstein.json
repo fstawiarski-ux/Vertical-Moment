@@ -1,15 +1,17 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "383aead4-c81e-5e25-b886-2595f8f07e8f",
   "name": "Hausstein",
   "slug": "hausstein",
   "region": "Hohe Wand",
   "region_slug": "hohe-wand",
-  "route_count": 54,
-  "latitude": null,
-  "longitude": null,
+  "route_count": 51,
+  "is_stub": false,
+  "latitude": 47.801825,
+  "longitude": 15.960955,
+  "coord_source": "routes",
   "grades": [
    "10",
    "10-",
@@ -35,10 +37,59 @@
    "9/9+"
   ],
   "disciplines": [
-   "multipitch",
    "sport"
   ],
-  "path": "/crags/hohe-wand/hausstein"
+  "path": "/crags/hohe-wand/hausstein",
+  "osm": "relation/18161918",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18161918",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=47.801825&mlon=15.960955#map=16/47.801825/15.960955",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Hausstein+Hohe+Wand"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Hausstein+Hohe+Wand"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Hausstein"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Hausstein+Hohe+Wand"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -53,20 +104,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7417e2e1-26f0-5c8a-8423-5d83ed773e18",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "alles-ist-moglich",
    "path": "/crags/hohe-wand/hausstein#7417e2e1-26f0-5c8a-8423-5d83ed773e18",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Amerikanerweg",
@@ -80,20 +132,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "03c6c04d-c88b-5143-afb0-8801b90899d8",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "amerikanerweg",
    "path": "/crags/hohe-wand/hausstein#03c6c04d-c88b-5143-afb0-8801b90899d8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Anarchists Just Wanna Have Fun",
@@ -107,20 +160,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e33e0bcd-ee6a-5bc5-b2a1-20fe323925fc",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "anarchists-just-wanna-have-fun",
    "path": "/crags/hohe-wand/hausstein#e33e0bcd-ee6a-5bc5-b2a1-20fe323925fc",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Angriff RRT",
@@ -134,20 +188,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8b8d1884-21ba-5937-94dc-f395ef3a3e4c",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "angriff-rrt",
    "path": "/crags/hohe-wand/hausstein#8b8d1884-21ba-5937-94dc-f395ef3a3e4c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Arsch im Raum der Zeit",
@@ -161,20 +216,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cea6d8e7-2c77-5194-b733-00e1b2d8cefd",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "arsch-im-raum-der-zeit",
    "path": "/crags/hohe-wand/hausstein#cea6d8e7-2c77-5194-b733-00e1b2d8cefd",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Da Wuchtldrucka",
@@ -188,20 +244,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "05c3b22d-0fd8-5684-be85-9cce409eb93d",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "da-wuchtldrucka",
    "path": "/crags/hohe-wand/hausstein#05c3b22d-0fd8-5684-be85-9cce409eb93d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Dach überm Kopf",
@@ -215,20 +272,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b69e233e-26b5-5765-bcbd-43bb18fada69",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "dach-uberm-kopf",
    "path": "/crags/hohe-wand/hausstein#b69e233e-26b5-5765-bcbd-43bb18fada69",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Das Heulen des Gösing-Wolfes",
@@ -242,20 +300,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b0189d5a-06c5-5c06-82c0-8694d55fc106",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "das-heulen-des-gosing-wolfes",
    "path": "/crags/hohe-wand/hausstein#b0189d5a-06c5-5c06-82c0-8694d55fc106",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Der einbrennte Hund",
@@ -269,20 +328,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "807f1e98-584c-5317-a3e4-6cc7e75a02b7",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "der-einbrennte-hund",
    "path": "/crags/hohe-wand/hausstein#807f1e98-584c-5317-a3e4-6cc7e75a02b7",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Die ultimativen Bewegungen",
@@ -296,20 +356,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6663f566-9687-59dd-971f-f7406f4bfe25",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "die-ultimativen-bewegungen",
    "path": "/crags/hohe-wand/hausstein#6663f566-9687-59dd-971f-f7406f4bfe25",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Direkte Haussteinkante",
@@ -323,20 +384,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cbeb837a-2b36-5b4d-aaf1-4a5c697d7750",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "direkte-haussteinkante",
    "path": "/crags/hohe-wand/hausstein#cbeb837a-2b36-5b4d-aaf1-4a5c697d7750",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Epic Problem",
@@ -350,20 +412,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cabee4b0-62a2-5e97-bd28-ed9506f60af7",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "epic-problem",
    "path": "/crags/hohe-wand/hausstein#cabee4b0-62a2-5e97-bd28-ed9506f60af7",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Fanfare for Effective Freedom",
@@ -377,20 +440,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5871badc-5db3-5d87-a508-8a78a86ccfb2",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "fanfare-for-effective-freedom",
    "path": "/crags/hohe-wand/hausstein#5871badc-5db3-5d87-a508-8a78a86ccfb2",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Favete Linguis",
@@ -404,47 +468,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "57006404-dc0d-5916-9d71-9ab230a3daad",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "favete-linguis",
    "path": "/crags/hohe-wand/hausstein#57006404-dc0d-5916-9d71-9ab230a3daad",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
-  },
-  {
-   "row_key": "Hohe Wand | Hausstein | Fledermausdach",
-   "name": "Fledermausdach",
-   "grade": "8+",
-   "grade_band": "8-11",
-   "grade_system": "UIAA",
-   "discipline": "multipitch",
-   "region": "Hohe Wand",
-   "area": "Hohe Wand",
-   "crag": "Hausstein",
-   "wall": "Hausstein",
-   "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
-   "notion_page_id": null,
-   "workflow_status": "to create",
-   "provenance": [
-    "master"
-   ],
-   "id": "e90e5325-817a-5c4a-825c-e04ca6727152",
-   "region_slug": "hohe-wand",
-   "crag_slug": "hausstein",
-   "slug": "fledermausdach",
-   "path": "/crags/hohe-wand/hausstein#e90e5325-817a-5c4a-825c-e04ca6727152",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Ghadaffi grüsst Kreisky",
@@ -458,20 +496,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "04ee0186-4cb3-5569-bd17-9e31c6548d46",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "ghadaffi-grusst-kreisky",
    "path": "/crags/hohe-wand/hausstein#04ee0186-4cb3-5569-bd17-9e31c6548d46",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Goat Lips",
@@ -485,20 +524,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c67cf349-927e-5de4-83e8-167be406f312",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "goat-lips",
    "path": "/crags/hohe-wand/hausstein#c67cf349-927e-5de4-83e8-167be406f312",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Happy Haki Hour",
@@ -512,20 +552,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ec8d925b-acb9-56ff-b4d3-64c67f2fb759",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "happy-haki-hour",
    "path": "/crags/hohe-wand/hausstein#ec8d925b-acb9-56ff-b4d3-64c67f2fb759",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Hausstein Drei",
@@ -539,20 +580,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f68ef1bb-ab7d-585a-9fb5-b31b36ffa501",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "hausstein-drei",
    "path": "/crags/hohe-wand/hausstein#f68ef1bb-ab7d-585a-9fb5-b31b36ffa501",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Hausstein Eins",
@@ -566,20 +608,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fe260482-b201-59fd-9825-896dd5073180",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "hausstein-eins",
    "path": "/crags/hohe-wand/hausstein#fe260482-b201-59fd-9825-896dd5073180",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Hausstein Zwei",
@@ -593,20 +636,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f97fa663-a27d-5f46-ac7b-2a0ceb6cc6cf",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "hausstein-zwei",
    "path": "/crags/hohe-wand/hausstein#f97fa663-a27d-5f46-ac7b-2a0ceb6cc6cf",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Herbert West",
@@ -620,47 +664,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "792f891c-3697-517a-acba-93b0afaf5cff",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "herbert-west",
    "path": "/crags/hohe-wand/hausstein#792f891c-3697-517a-acba-93b0afaf5cff",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
-  },
-  {
-   "row_key": "Hohe Wand | Hausstein | Husch Husch ins Körbchen",
-   "name": "Husch Husch ins Körbchen",
-   "grade": "7",
-   "grade_band": "5-7",
-   "grade_system": "UIAA",
-   "discipline": "multipitch",
-   "region": "Hohe Wand",
-   "area": "Hohe Wand",
-   "crag": "Hausstein",
-   "wall": "Hausstein",
-   "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
-   "notion_page_id": null,
-   "workflow_status": "to create",
-   "provenance": [
-    "master"
-   ],
-   "id": "3ce4de4e-8c44-55f1-871f-e020b39bfe58",
-   "region_slug": "hohe-wand",
-   "crag_slug": "hausstein",
-   "slug": "husch-husch-ins-korbchen",
-   "path": "/crags/hohe-wand/hausstein#3ce4de4e-8c44-55f1-871f-e020b39bfe58",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Ich möcht alt sein mit einem Krückstock",
@@ -674,20 +692,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "44acb407-f144-584e-b7f9-9b547957d6b4",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "ich-mocht-alt-sein-mit-einem-kruckstock",
    "path": "/crags/hohe-wand/hausstein#44acb407-f144-584e-b7f9-9b547957d6b4",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Inox",
@@ -701,20 +720,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "55fb313b-392c-55cf-9416-c19af12546e6",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "inox",
    "path": "/crags/hohe-wand/hausstein#55fb313b-392c-55cf-9416-c19af12546e6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Irrsinnsdimensionen",
@@ -728,20 +748,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2c2c58d8-4390-5abb-ba49-845122653a4e",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "irrsinnsdimensionen",
    "path": "/crags/hohe-wand/hausstein#2c2c58d8-4390-5abb-ba49-845122653a4e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Jagasimmerl",
@@ -755,20 +776,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1f9aeb49-3480-5938-9248-9e7388882e9b",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "jagasimmerl",
    "path": "/crags/hohe-wand/hausstein#1f9aeb49-3480-5938-9248-9e7388882e9b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Kamin",
@@ -782,47 +804,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7dbb8799-7bed-5ecf-8b36-937517d91b50",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "kamin",
    "path": "/crags/hohe-wand/hausstein#7dbb8799-7bed-5ecf-8b36-937517d91b50",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
-  },
-  {
-   "row_key": "Hohe Wand | Hausstein | Kerzlschlicka",
-   "name": "Kerzlschlicka",
-   "grade": "9-",
-   "grade_band": "8-11",
-   "grade_system": "UIAA",
-   "discipline": "multipitch",
-   "region": "Hohe Wand",
-   "area": "Hohe Wand",
-   "crag": "Hausstein",
-   "wall": "Hausstein",
-   "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
-   "notion_page_id": null,
-   "workflow_status": "to create",
-   "provenance": [
-    "master"
-   ],
-   "id": "c7269037-caa2-56ac-b3c5-36b9ae6ee7a8",
-   "region_slug": "hohe-wand",
-   "crag_slug": "hausstein",
-   "slug": "kerzlschlicka",
-   "path": "/crags/hohe-wand/hausstein#c7269037-caa2-56ac-b3c5-36b9ae6ee7a8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Köpek",
@@ -836,20 +832,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "78c3eca4-126d-523f-a6ae-9ae14932e233",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "kopek",
    "path": "/crags/hohe-wand/hausstein#78c3eca4-126d-523f-a6ae-9ae14932e233",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Kühlschrankkante",
@@ -863,20 +860,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d4a8f06a-1bb1-5dd2-9c27-66289729e651",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "kuhlschrankkante",
    "path": "/crags/hohe-wand/hausstein#d4a8f06a-1bb1-5dd2-9c27-66289729e651",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | La Tirania de la Tradicion",
@@ -890,20 +888,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cc64ad8f-4954-5eb2-9cf2-394a730b7d05",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "la-tirania-de-la-tradicion",
    "path": "/crags/hohe-wand/hausstein#cc64ad8f-4954-5eb2-9cf2-394a730b7d05",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | La Zampa del Mago",
@@ -917,20 +916,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "245db23c-d370-5c90-a1a7-50b877d0748e",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "la-zampa-del-mago",
    "path": "/crags/hohe-wand/hausstein#245db23c-d370-5c90-a1a7-50b877d0748e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Meine Hawara san Echsen-Menschen",
@@ -944,20 +944,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fe28034f-20d0-53d5-bf9c-4bb57f32539d",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "meine-hawara-san-echsen-menschen",
    "path": "/crags/hohe-wand/hausstein#fe28034f-20d0-53d5-bf9c-4bb57f32539d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Mostschank Wöber",
@@ -971,20 +972,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "750b234d-9996-5e10-bf43-9db0782a494d",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "mostschank-wober",
    "path": "/crags/hohe-wand/hausstein#750b234d-9996-5e10-bf43-9db0782a494d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Napoleon Solo This Is Forever",
@@ -998,20 +1000,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "bf7eaaf0-080d-5852-a42d-696a5ccdd2a3",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "napoleon-solo-this-is-forever",
    "path": "/crags/hohe-wand/hausstein#bf7eaaf0-080d-5852-a42d-696a5ccdd2a3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Patagonia",
@@ -1025,20 +1028,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4790b8d4-d878-558e-8efd-c7f349306f5c",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "patagonia",
    "path": "/crags/hohe-wand/hausstein#4790b8d4-d878-558e-8efd-c7f349306f5c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Philipp",
@@ -1052,20 +1056,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ca9bcf7c-4e9e-5267-8c4c-083e832bf2b0",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "philipp",
    "path": "/crags/hohe-wand/hausstein#ca9bcf7c-4e9e-5267-8c4c-083e832bf2b0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Radarfalle",
@@ -1079,20 +1084,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d2c6df8b-fe55-524f-b0e2-f612e0332dfa",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "radarfalle",
    "path": "/crags/hohe-wand/hausstein#d2c6df8b-fe55-524f-b0e2-f612e0332dfa",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Resls Riss",
@@ -1106,20 +1112,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "466fe53e-cf6c-5875-97b3-2893d0fc1233",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "resls-riss",
    "path": "/crags/hohe-wand/hausstein#466fe53e-cf6c-5875-97b3-2893d0fc1233",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Santa Sangre",
@@ -1133,20 +1140,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1d77bd4f-a0be-5c78-9dec-faf05aa2f704",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "santa-sangre",
    "path": "/crags/hohe-wand/hausstein#1d77bd4f-a0be-5c78-9dec-faf05aa2f704",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Schankholz",
@@ -1160,20 +1168,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d891ac88-aa35-5ee9-a9f6-2049684797ec",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "schankholz",
    "path": "/crags/hohe-wand/hausstein#d891ac88-aa35-5ee9-a9f6-2049684797ec",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Schneebergblick",
@@ -1187,20 +1196,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2d349711-6ec5-540e-975e-f6a34497e42f",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "schneebergblick",
    "path": "/crags/hohe-wand/hausstein#2d349711-6ec5-540e-975e-f6a34497e42f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Schneeglöckchen",
@@ -1214,20 +1224,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ff1fe960-db5b-5963-8186-00d302af095f",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "schneeglockchen",
    "path": "/crags/hohe-wand/hausstein#ff1fe960-db5b-5963-8186-00d302af095f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Schwammerldirettissima",
@@ -1241,20 +1252,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d49a82c9-8089-5012-a2c6-431b0e80fe51",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "schwammerldirettissima",
    "path": "/crags/hohe-wand/hausstein#d49a82c9-8089-5012-a2c6-431b0e80fe51",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Spenglerriss",
@@ -1268,20 +1280,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8a868383-5cbd-5b49-ba36-ff399d19ed35",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "spenglerriss",
    "path": "/crags/hohe-wand/hausstein#8a868383-5cbd-5b49-ba36-ff399d19ed35",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Spenglerverschneidung",
@@ -1295,20 +1308,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4599a6c1-387c-5115-a114-6bfe2bf0d358",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "spenglerverschneidung",
    "path": "/crags/hohe-wand/hausstein#4599a6c1-387c-5115-a114-6bfe2bf0d358",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Thats Not Me",
@@ -1322,20 +1336,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7773374d-101f-52dc-8ce3-43eb37a86e66",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "thats-not-me",
    "path": "/crags/hohe-wand/hausstein#7773374d-101f-52dc-8ce3-43eb37a86e66",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | The Exclusive Character of Victory",
@@ -1349,20 +1364,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8f3ff422-d712-511d-b536-48910b8f79dd",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "the-exclusive-character-of-victory",
    "path": "/crags/hohe-wand/hausstein#8f3ff422-d712-511d-b536-48910b8f79dd",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | The Going Gong of Laddio Bolocko",
@@ -1376,20 +1392,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "325b77ed-2490-5196-97e1-25ab171ca0bf",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "the-going-gong-of-laddio-bolocko",
    "path": "/crags/hohe-wand/hausstein#325b77ed-2490-5196-97e1-25ab171ca0bf",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | There Is No 666 in Outta Space",
@@ -1403,20 +1420,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3079f5d6-39a1-5a98-800f-1093a293b9cb",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "there-is-no-666-in-outta-space",
    "path": "/crags/hohe-wand/hausstein#3079f5d6-39a1-5a98-800f-1093a293b9cb",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Torturplatte",
@@ -1430,20 +1448,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "30a18daf-6739-5c35-9609-5a3002087455",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "torturplatte",
    "path": "/crags/hohe-wand/hausstein#30a18daf-6739-5c35-9609-5a3002087455",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Var (Inox)",
@@ -1457,20 +1476,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6585748c-2cb9-5f6b-8cee-1cb9fecbf3bf",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "var-inox",
    "path": "/crags/hohe-wand/hausstein#6585748c-2cb9-5f6b-8cee-1cb9fecbf3bf",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Hohe Wand | Hausstein | Wolf Like Me",
@@ -1484,20 +1504,21 @@
    "crag": "Hausstein",
    "wall": "Hausstein",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 47.801825,
+   "longitude": 15.960955,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3f269e40-0cd1-514b-af27-66905785d60e",
    "region_slug": "hohe-wand",
    "crag_slug": "hausstein",
    "slug": "wolf-like-me",
    "path": "/crags/hohe-wand/hausstein#3f269e40-0cd1-514b-af27-66905785d60e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

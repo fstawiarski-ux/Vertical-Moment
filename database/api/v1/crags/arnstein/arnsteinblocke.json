@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "34e88438-8c74-57b3-a167-3c9b26ccfdac",
   "name": "Arnsteinblöcke",
@@ -8,8 +8,10 @@
   "region": "Arnstein",
   "region_slug": "arnstein",
   "route_count": 15,
+  "is_stub": false,
   "latitude": null,
   "longitude": null,
+  "coord_source": null,
   "grades": [
    "2",
    "3",
@@ -23,7 +25,43 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/arnstein/arnsteinblocke"
+  "path": "/crags/arnstein/arnsteinblocke",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Arnsteinbl%C3%B6cke+Arnstein"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Arnsteinbl%C3%B6cke+Arnstein"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Arnsteinbl%C3%B6cke"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Arnsteinbl%C3%B6cke+Arnstein"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -40,18 +78,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "da030799-3f74-507b-a23e-cf00130f3d21",
    "region_slug": "arnstein",
    "crag_slug": "arnsteinblocke",
    "slug": "backbord",
    "path": "/crags/arnstein/arnsteinblocke#da030799-3f74-507b-a23e-cf00130f3d21",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Arnsteinblöcke | Beziehungskrise",
@@ -67,18 +106,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d78eed7a-5bc1-5e8e-b732-aed232b9b981",
    "region_slug": "arnstein",
    "crag_slug": "arnsteinblocke",
    "slug": "beziehungskrise",
    "path": "/crags/arnstein/arnsteinblocke#d78eed7a-5bc1-5e8e-b732-aed232b9b981",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Arnsteinblöcke | Direkter Schock",
@@ -94,18 +134,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1846488b-019b-5925-a55f-c0c298eec945",
    "region_slug": "arnstein",
    "crag_slug": "arnsteinblocke",
    "slug": "direkter-schock",
    "path": "/crags/arnstein/arnsteinblocke#1846488b-019b-5925-a55f-c0c298eec945",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Arnsteinblöcke | Eiswind",
@@ -121,18 +162,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d15ee52a-ce11-5a9f-b761-7f072db6afc6",
    "region_slug": "arnstein",
    "crag_slug": "arnsteinblocke",
    "slug": "eiswind",
    "path": "/crags/arnstein/arnsteinblocke#d15ee52a-ce11-5a9f-b761-7f072db6afc6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Arnsteinblöcke | Geentert",
@@ -148,18 +190,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "741659c8-c4b1-5d98-9e60-51951e183438",
    "region_slug": "arnstein",
    "crag_slug": "arnsteinblocke",
    "slug": "geentert",
    "path": "/crags/arnstein/arnsteinblocke#741659c8-c4b1-5d98-9e60-51951e183438",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Arnsteinblöcke | Gekentert",
@@ -175,18 +218,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f77143b2-713b-5a7a-a200-4827d3df1d9a",
    "region_slug": "arnstein",
    "crag_slug": "arnsteinblocke",
    "slug": "gekentert",
    "path": "/crags/arnstein/arnsteinblocke#f77143b2-713b-5a7a-a200-4827d3df1d9a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Arnsteinblöcke | Gespaltene Beziehung",
@@ -202,18 +246,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0a5ff201-36e2-52c9-867e-0d902d9be28b",
    "region_slug": "arnstein",
    "crag_slug": "arnsteinblocke",
    "slug": "gespaltene-beziehung",
    "path": "/crags/arnstein/arnsteinblocke#0a5ff201-36e2-52c9-867e-0d902d9be28b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Arnsteinblöcke | Kreislaufstillstand",
@@ -229,18 +274,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "58bd7cb3-a738-5326-b734-2ca3387b4aad",
    "region_slug": "arnstein",
    "crag_slug": "arnsteinblocke",
    "slug": "kreislaufstillstand",
    "path": "/crags/arnstein/arnsteinblocke#58bd7cb3-a738-5326-b734-2ca3387b4aad",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Arnsteinblöcke | Nebelhorn",
@@ -256,18 +302,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4e404d9e-5892-555c-9f0c-1da17bcf4d76",
    "region_slug": "arnstein",
    "crag_slug": "arnsteinblocke",
    "slug": "nebelhorn",
    "path": "/crags/arnstein/arnsteinblocke#4e404d9e-5892-555c-9f0c-1da17bcf4d76",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Arnsteinblöcke | Polarsturm",
@@ -283,18 +330,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "68af7796-bc65-5545-a7aa-9c8f37a464bf",
    "region_slug": "arnstein",
    "crag_slug": "arnsteinblocke",
    "slug": "polarsturm",
    "path": "/crags/arnstein/arnsteinblocke#68af7796-bc65-5545-a7aa-9c8f37a464bf",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Arnsteinblöcke | Reling",
@@ -310,18 +358,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "bbb32d4a-dffa-50c6-9d5a-b4254e0b6f8a",
    "region_slug": "arnstein",
    "crag_slug": "arnsteinblocke",
    "slug": "reling",
    "path": "/crags/arnstein/arnsteinblocke#bbb32d4a-dffa-50c6-9d5a-b4254e0b6f8a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Arnsteinblöcke | Schiffsbug",
@@ -337,18 +386,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "79a0b285-1351-568d-bda2-31dee218883a",
    "region_slug": "arnstein",
    "crag_slug": "arnsteinblocke",
    "slug": "schiffsbug",
    "path": "/crags/arnstein/arnsteinblocke#79a0b285-1351-568d-bda2-31dee218883a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Arnsteinblöcke | Schock",
@@ -364,18 +414,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fbc32548-bc3f-5368-950d-67ca5befbb6d",
    "region_slug": "arnstein",
    "crag_slug": "arnsteinblocke",
    "slug": "schock",
    "path": "/crags/arnstein/arnsteinblocke#fbc32548-bc3f-5368-950d-67ca5befbb6d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Arnsteinblöcke | Steuerbord",
@@ -391,18 +442,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "73206256-1d46-577c-9963-64492d64d09d",
    "region_slug": "arnstein",
    "crag_slug": "arnsteinblocke",
    "slug": "steuerbord",
    "path": "/crags/arnstein/arnsteinblocke#73206256-1d46-577c-9963-64492d64d09d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Arnstein | Arnsteinblöcke | Südföhn",
@@ -418,18 +470,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "072c5fd1-25f1-5513-94c9-58faf2ff51cf",
    "region_slug": "arnstein",
    "crag_slug": "arnsteinblocke",
    "slug": "sudfohn",
    "path": "/crags/arnstein/arnsteinblocke#072c5fd1-25f1-5513-94c9-58faf2ff51cf",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }

@@ -1,15 +1,132 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "region": {
   "id": "3d327e75-6852-5359-840f-7e392ae8e346",
   "name": "Mödling",
   "slug": "modling",
-  "crag_count": 10,
+  "crag_count": 17,
   "route_count": 188,
-  "path": "/crags/modling"
+  "path": "/crags/modling",
+  "links": [
+   {
+    "kind": "exact",
+    "label": "theCrag — Vienna area overview",
+    "domain": "thecrag.com",
+    "url": "https://www.thecrag.com/en/climbing/austria/wien-vienna-area",
+    "note": "Community index of the whole Vienna region, with its own source list."
+   },
+   {
+    "kind": "exact",
+    "label": "Keltenkalk",
+    "domain": "keltenkalk.at",
+    "url": "http://www.keltenkalk.at/",
+    "note": "The main printed guidebook for the Vienna limestone — roughly 4,000 climbs and boulders."
+   },
+   {
+    "kind": "exact",
+    "label": "bergsteigen.com — Klettergarten index",
+    "domain": "bergsteigen.com",
+    "url": "https://www.bergsteigen.com/touren/klettergarten/",
+    "note": "Filterable crag database with descriptions, approach notes and many downloadable topos."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+M%C3%B6dling+Klettergarten"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+M%C3%B6dling+Austria"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+M%C3%B6dling"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+M%C3%B6dling+Klettern"
+   }
+  ],
+  "more_info_note": "Vertical Moment does not publish topos yet. These are the places that do — follow them for the drawn lines, and verify anything safety-relevant on site."
  },
  "crags": [
+  {
+   "id": "3ac5d4ee-8026-5842-a395-d63139e36599",
+   "name": "Block 2",
+   "slug": "block-2",
+   "region": "Mödling",
+   "region_slug": "modling",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 48.081892,
+   "longitude": 16.275178,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/modling/block-2",
+   "osm": "relation/18216628",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18216628",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.081892&mlon=16.275178#map=16/48.081892/16.275178",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Block+2+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Block+2+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Block+2"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Block+2+M%C3%B6dling"
+    }
+   ],
+   "has_exact_links": false
+  },
   {
    "id": "b9893263-d6c7-57d9-91ff-459931e2a9e7",
    "name": "Efeugrat",
@@ -17,8 +134,10 @@
    "region": "Mödling",
    "region_slug": "modling",
    "route_count": 37,
-   "latitude": null,
-   "longitude": null,
+   "is_stub": false,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "routes",
    "grades": [
     "10-",
     "2",
@@ -43,7 +162,57 @@
    "disciplines": [
     "sport"
    ],
-   "path": "/crags/modling/efeugrat"
+   "path": "/crags/modling/efeugrat",
+   "osm": "relation/18147427",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18147427",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.080646&mlon=16.270495#map=16/48.080646/16.270495",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Efeugrat+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Efeugrat+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Efeugrat"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Efeugrat+M%C3%B6dling"
+    }
+   ],
+   "has_exact_links": false
   },
   {
    "id": "723c56a6-9814-55dc-bcbe-ad0fad3d6b81",
@@ -52,8 +221,10 @@
    "region": "Mödling",
    "region_slug": "modling",
    "route_count": 20,
-   "latitude": null,
-   "longitude": null,
+   "is_stub": false,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "routes",
    "grades": [
     "2+",
     "3",
@@ -71,7 +242,122 @@
    "disciplines": [
     "sport"
    ],
-   "path": "/crags/modling/erikagrat"
+   "path": "/crags/modling/erikagrat",
+   "osm": "relation/18216626",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18216626",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.081424&mlon=16.275497#map=16/48.081424/16.275497",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Erikagrat+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Erikagrat+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Erikagrat"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Erikagrat+M%C3%B6dling"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "ccaf6908-b759-54fb-abf6-7b3a22dc9ca0",
+   "name": "Fangoboy",
+   "slug": "fangoboy",
+   "region": "Mödling",
+   "region_slug": "modling",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 48.081978,
+   "longitude": 16.274904,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/modling/fangoboy",
+   "osm": "relation/18216627",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18216627",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.081978&mlon=16.274904#map=16/48.081978/16.274904",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Fangoboy+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Fangoboy+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Fangoboy"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Fangoboy+M%C3%B6dling"
+    }
+   ],
+   "has_exact_links": false
   },
   {
    "id": "bcc07e30-6a98-5769-b309-4b480c65cf22",
@@ -80,8 +366,10 @@
    "region": "Mödling",
    "region_slug": "modling",
    "route_count": 30,
-   "latitude": null,
-   "longitude": null,
+   "is_stub": false,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "routes",
    "grades": [
     "3",
     "3+",
@@ -100,7 +388,57 @@
    "disciplines": [
     "sport"
    ],
-   "path": "/crags/modling/glocknergrat"
+   "path": "/crags/modling/glocknergrat",
+   "osm": "relation/18166682",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18166682",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.082238&mlon=16.276261#map=16/48.082238/16.276261",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Glocknergrat+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Glocknergrat+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Glocknergrat"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Glocknergrat+M%C3%B6dling"
+    }
+   ],
+   "has_exact_links": false
   },
   {
    "id": "283665da-a56d-597a-9b58-47c5906ee010",
@@ -109,8 +447,10 @@
    "region": "Mödling",
    "region_slug": "modling",
    "route_count": 11,
-   "latitude": null,
-   "longitude": null,
+   "is_stub": false,
+   "latitude": 48.046025,
+   "longitude": 16.269679,
+   "coord_source": "routes",
    "grades": [
     "4+",
     "4-",
@@ -123,7 +463,122 @@
    "disciplines": [
     "sport"
    ],
-   "path": "/crags/modling/gumpoldskirchen"
+   "path": "/crags/modling/gumpoldskirchen",
+   "osm": "relation/18166854",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18166854",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.046025&mlon=16.269679#map=16/48.046025/16.269679",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Gumpoldskirchen+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Gumpoldskirchen+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Gumpoldskirchen"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Gumpoldskirchen+M%C3%B6dling"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "9f211f31-e635-5c36-9eed-a27a1e844dce",
+   "name": "Lausbubenpfeiler",
+   "slug": "lausbubenpfeiler",
+   "region": "Mödling",
+   "region_slug": "modling",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 48.080482,
+   "longitude": 16.272344,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/modling/lausbubenpfeiler",
+   "osm": "relation/18989235",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18989235",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.080482&mlon=16.272344#map=16/48.080482/16.272344",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Lausbubenpfeiler+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Lausbubenpfeiler+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Lausbubenpfeiler"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Lausbubenpfeiler+M%C3%B6dling"
+    }
+   ],
+   "has_exact_links": false
   },
   {
    "id": "f04c35d2-d328-5973-8d74-d66d4174be23",
@@ -132,8 +587,10 @@
    "region": "Mödling",
    "region_slug": "modling",
    "route_count": 52,
-   "latitude": null,
-   "longitude": null,
+   "is_stub": false,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "routes",
    "grades": [
     "10-/10",
     "3+",
@@ -162,7 +619,57 @@
     "boulder",
     "sport"
    ],
-   "path": "/crags/modling/lausbubenwand"
+   "path": "/crags/modling/lausbubenwand",
+   "osm": "relation/18981885",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18981885",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.080482&mlon=16.272032#map=16/48.080482/16.272032",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Lausbubenwand+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Lausbubenwand+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Lausbubenwand"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Lausbubenwand+M%C3%B6dling"
+    }
+   ],
+   "has_exact_links": false
   },
   {
    "id": "a8e71aa7-b327-58b3-8879-fe21acf07b63",
@@ -171,8 +678,10 @@
    "region": "Mödling",
    "region_slug": "modling",
    "route_count": 12,
-   "latitude": null,
-   "longitude": null,
+   "is_stub": false,
+   "latitude": 48.014969,
+   "longitude": 16.049373,
+   "coord_source": "routes",
    "grades": [
     "2",
     "3",
@@ -186,7 +695,122 @@
    "disciplines": [
     "sport"
    ],
-   "path": "/crags/modling/matterhorndl"
+   "path": "/crags/modling/matterhorndl",
+   "osm": "relation/19171461",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/19171461",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.014969&mlon=16.049373#map=16/48.014969/16.049373",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Matterh%C3%B6rndl+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Matterh%C3%B6rndl+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Matterh%C3%B6rndl"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Matterh%C3%B6rndl+M%C3%B6dling"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "1852f147-ae47-53c9-8511-1f179d24b49c",
+   "name": "Obere Lausbubenwand",
+   "slug": "obere-lausbubenwand",
+   "region": "Mödling",
+   "region_slug": "modling",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 48.080234,
+   "longitude": 16.272269,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/modling/obere-lausbubenwand",
+   "osm": "relation/18166856",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18166856",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.080234&mlon=16.272269#map=16/48.080234/16.272269",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Obere+Lausbubenwand+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Obere+Lausbubenwand+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Obere+Lausbubenwand"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Obere+Lausbubenwand+M%C3%B6dling"
+    }
+   ],
+   "has_exact_links": false
   },
   {
    "id": "620454ac-06e8-596a-a5d3-df812ea88a80",
@@ -195,8 +819,10 @@
    "region": "Mödling",
    "region_slug": "modling",
    "route_count": 7,
-   "latitude": null,
-   "longitude": null,
+   "is_stub": false,
+   "latitude": 48.083002,
+   "longitude": 16.276885,
+   "coord_source": "routes",
    "grades": [
     "2+",
     "4",
@@ -210,7 +836,122 @@
     "boulder",
     "sport"
    ],
-   "path": "/crags/modling/promenadenfels"
+   "path": "/crags/modling/promenadenfels",
+   "osm": "relation/18216613",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18216613",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.083002&mlon=16.276885#map=16/48.083002/16.276885",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Promenadenfels+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Promenadenfels+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Promenadenfels"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Promenadenfels+M%C3%B6dling"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "293d22ae-aae4-5123-a22d-c94706a415d2",
+   "name": "Raue Platte",
+   "slug": "raue-platte",
+   "region": "Mödling",
+   "region_slug": "modling",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 48.078912,
+   "longitude": 16.277024,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/modling/raue-platte",
+   "osm": "relation/18216610",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18216610",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.078912&mlon=16.277024#map=16/48.078912/16.277024",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Raue+Platte+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Raue+Platte+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Raue+Platte"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Raue+Platte+M%C3%B6dling"
+    }
+   ],
+   "has_exact_links": false
   },
   {
    "id": "430725b3-1158-5fce-936a-aea7e90d4ed9",
@@ -219,8 +960,10 @@
    "region": "Mödling",
    "region_slug": "modling",
    "route_count": 9,
+   "is_stub": false,
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "grades": [
     "3",
     "4",
@@ -230,7 +973,43 @@
    "disciplines": [
     "sport"
    ],
-   "path": "/crags/modling/rauhe-platte"
+   "path": "/crags/modling/rauhe-platte",
+   "osm": null,
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Rauhe+Platte+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Rauhe+Platte+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Rauhe+Platte"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Rauhe+Platte+M%C3%B6dling"
+    }
+   ],
+   "has_exact_links": false
   },
   {
    "id": "6ca83baa-095f-573a-a9c7-387f9fd4d2f5",
@@ -239,8 +1018,10 @@
    "region": "Mödling",
    "region_slug": "modling",
    "route_count": 5,
-   "latitude": null,
-   "longitude": null,
+   "is_stub": false,
+   "latitude": 48.080464,
+   "longitude": 16.266338,
+   "coord_source": "routes",
    "grades": [
     "6+/7-",
     "7+",
@@ -250,7 +1031,122 @@
    "disciplines": [
     "sport"
    ],
-   "path": "/crags/modling/ritterfels"
+   "path": "/crags/modling/ritterfels",
+   "osm": "relation/18216607",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18216607",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.080464&mlon=16.266338#map=16/48.080464/16.266338",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Ritterfels+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Ritterfels+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Ritterfels"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Ritterfels+M%C3%B6dling"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "16e37d37-4452-58bb-94ac-39b061fc726b",
+   "name": "Sturmwand",
+   "slug": "sturmwand",
+   "region": "Mödling",
+   "region_slug": "modling",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 48.079306,
+   "longitude": 16.271175,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/modling/sturmwand",
+   "osm": "relation/18217206",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18217206",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.079306&mlon=16.271175#map=16/48.079306/16.271175",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Sturmwand+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Sturmwand+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Sturmwand"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Sturmwand+M%C3%B6dling"
+    }
+   ],
+   "has_exact_links": false
   },
   {
    "id": "5336c04c-fa0b-541f-a38d-710e7db5a3e4",
@@ -259,8 +1155,10 @@
    "region": "Mödling",
    "region_slug": "modling",
    "route_count": 5,
-   "latitude": null,
-   "longitude": null,
+   "is_stub": false,
+   "latitude": 48.079306,
+   "longitude": 16.271175,
+   "coord_source": "routes",
    "grades": [
     "6+",
     "6-",
@@ -269,7 +1167,122 @@
    "disciplines": [
     "sport"
    ],
-   "path": "/crags/modling/sturmwandl"
+   "path": "/crags/modling/sturmwandl",
+   "osm": "relation/18217206",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18217206",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.079306&mlon=16.271175#map=16/48.079306/16.271175",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Sturmwandl+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Sturmwandl+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Sturmwandl"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Sturmwandl+M%C3%B6dling"
+    }
+   ],
+   "has_exact_links": false
+  },
+  {
+   "id": "7e5a31e4-3f97-59b8-ba22-2472869b84b6",
+   "name": "Untere Lausbubenwand",
+   "slug": "untere-lausbubenwand",
+   "region": "Mödling",
+   "region_slug": "modling",
+   "route_count": 0,
+   "is_stub": true,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "osm",
+   "grades": [],
+   "disciplines": [],
+   "path": "/crags/modling/untere-lausbubenwand",
+   "osm": "relation/18981885",
+   "rock": null,
+   "website": null,
+   "topo": null,
+   "wikimedia": null,
+   "links": [
+    {
+     "kind": "exact",
+     "label": "OpenStreetMap",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/relation/18981885",
+     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+    },
+    {
+     "kind": "exact",
+     "label": "Open in maps",
+     "domain": "openstreetmap.org",
+     "url": "https://www.openstreetmap.org/?mlat=48.080482&mlon=16.272032#map=16/48.080482/16.272032",
+     "note": "Approach and parking."
+    },
+    {
+     "kind": "search",
+     "label": "bergsteigen.com",
+     "domain": "bergsteigen.com",
+     "note": "Topos, approach and conditions.",
+     "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Untere+Lausbubenwand+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "theCrag",
+     "domain": "thecrag.com",
+     "note": "Community route database.",
+     "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Untere+Lausbubenwand+M%C3%B6dling"
+    },
+    {
+     "kind": "search",
+     "label": "27crags",
+     "domain": "27crags.com",
+     "note": "Topos and photos.",
+     "url": "https://duckduckgo.com/?q=site%3A27crags.com+Untere+Lausbubenwand"
+    },
+    {
+     "kind": "search",
+     "label": "komoot",
+     "domain": "komoot.com",
+     "note": "Approach tracks and GPX.",
+     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Untere+Lausbubenwand+M%C3%B6dling"
+    }
+   ],
+   "has_exact_links": false
   }
  ],
  "routes": [
@@ -285,20 +1298,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5de3bb0f-bebd-53df-94da-249726f553a8",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "bier-fia-n-hias",
    "path": "/crags/modling/efeugrat#5de3bb0f-bebd-53df-94da-249726f553a8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Black Shadow on the Wall",
@@ -312,20 +1326,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c6a1dd20-b950-50f6-9288-ef92fcc34089",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "black-shadow-on-the-wall",
    "path": "/crags/modling/efeugrat#c6a1dd20-b950-50f6-9288-ef92fcc34089",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Co - KG",
@@ -339,20 +1354,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9424a4a9-d422-5903-906c-036d4c0fabfb",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "co-kg",
    "path": "/crags/modling/efeugrat#9424a4a9-d422-5903-906c-036d4c0fabfb",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Dechant Müller",
@@ -366,20 +1382,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a22cc35e-ea40-52a3-b543-46fafda1a6b4",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "dechant-muller",
    "path": "/crags/modling/efeugrat#a22cc35e-ea40-52a3-b543-46fafda1a6b4",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Der Galgen",
@@ -393,20 +1410,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fb96533d-62bd-562a-9d86-a4ce91ee3737",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "der-galgen",
    "path": "/crags/modling/efeugrat#fb96533d-62bd-562a-9d86-a4ce91ee3737",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Diagonalriss",
@@ -420,20 +1438,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3cddd945-4ddc-5472-b95f-526c63141e83",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "diagonalriss",
    "path": "/crags/modling/efeugrat#3cddd945-4ddc-5472-b95f-526c63141e83",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Diagonalverschneidung",
@@ -447,20 +1466,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7d30a112-0e64-5e5d-81e4-f24ff3d8e77d",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "diagonalverschneidung",
    "path": "/crags/modling/efeugrat#7d30a112-0e64-5e5d-81e4-f24ff3d8e77d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Direkter Galgen",
@@ -474,20 +1494,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ffba19e9-ba8a-5031-8f0c-4a1ef50ccb3e",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "direkter-galgen",
    "path": "/crags/modling/efeugrat#ffba19e9-ba8a-5031-8f0c-4a1ef50ccb3e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Direkter Hias",
@@ -501,20 +1522,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fadeb9c5-0516-5218-a87e-8500cd84b981",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "direkter-hias",
    "path": "/crags/modling/efeugrat#fadeb9c5-0516-5218-a87e-8500cd84b981",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Dornröschen",
@@ -528,20 +1550,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "64ca6f51-c483-504f-8dd2-a191a6c587fc",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "dornroschen",
    "path": "/crags/modling/efeugrat#64ca6f51-c483-504f-8dd2-a191a6c587fc",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Efeu Ade",
@@ -555,20 +1578,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a819a46d-ca20-5677-889f-e7d2500961ff",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "efeu-ade",
    "path": "/crags/modling/efeugrat#a819a46d-ca20-5677-889f-e7d2500961ff",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Eiertanz",
@@ -582,20 +1606,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6e012cad-edbe-5cfb-961a-7a75442773b0",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "eiertanz",
    "path": "/crags/modling/efeugrat#6e012cad-edbe-5cfb-961a-7a75442773b0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Ein Herz für Anfänger",
@@ -609,20 +1634,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "dcb8cf5c-7212-558b-b70f-7c31a4ae8521",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "ein-herz-fur-anfanger",
    "path": "/crags/modling/efeugrat#dcb8cf5c-7212-558b-b70f-7c31a4ae8521",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Ernas Angst",
@@ -636,20 +1662,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "af70c1f0-a0a7-543c-bf91-b80f129d6f0f",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "ernas-angst",
    "path": "/crags/modling/efeugrat#af70c1f0-a0a7-543c-bf91-b80f129d6f0f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Federnelkenweg",
@@ -663,20 +1690,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "87c40335-4c03-584e-95fb-f7f5b074a451",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "federnelkenweg",
    "path": "/crags/modling/efeugrat#87c40335-4c03-584e-95fb-f7f5b074a451",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Fingerbeisser",
@@ -690,20 +1718,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3c95b12a-d8b1-53c0-b94c-45ad98a3276c",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "fingerbeisser",
    "path": "/crags/modling/efeugrat#3c95b12a-d8b1-53c0-b94c-45ad98a3276c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Fuck Head",
@@ -717,20 +1746,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "258c3e48-5d91-5c63-b17c-7573c4ec9221",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "fuck-head",
    "path": "/crags/modling/efeugrat#258c3e48-5d91-5c63-b17c-7573c4ec9221",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Kamin",
@@ -744,20 +1774,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2a367478-277a-5a40-b98f-3a135fcab77e",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "kamin",
    "path": "/crags/modling/efeugrat#2a367478-277a-5a40-b98f-3a135fcab77e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Kantenflug",
@@ -771,20 +1802,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b52af77a-fbc8-5861-be57-1ccedf703769",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "kantenflug",
    "path": "/crags/modling/efeugrat#b52af77a-fbc8-5861-be57-1ccedf703769",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Luis",
@@ -798,20 +1830,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "718e965c-2fef-5d09-90a8-04adbf1e7e7b",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "luis",
    "path": "/crags/modling/efeugrat#718e965c-2fef-5d09-90a8-04adbf1e7e7b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Mashiwo",
@@ -825,20 +1858,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7a6b94e2-23aa-5d15-aeab-81e26ea96062",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "mashiwo",
    "path": "/crags/modling/efeugrat#7a6b94e2-23aa-5d15-aeab-81e26ea96062",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Nr 3",
@@ -852,20 +1886,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f7f5c550-013a-5972-b4e9-19cd8a70039a",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "nr-3",
    "path": "/crags/modling/efeugrat#f7f5c550-013a-5972-b4e9-19cd8a70039a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Nr 37",
@@ -879,20 +1914,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c20e3d7d-85d8-5169-bb82-f243838ac52d",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "nr-37",
    "path": "/crags/modling/efeugrat#c20e3d7d-85d8-5169-bb82-f243838ac52d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Nähmaschine",
@@ -906,20 +1942,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "85fe4cf2-a0da-5429-a42e-12485a8e17d0",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "nahmaschine",
    "path": "/crags/modling/efeugrat#85fe4cf2-a0da-5429-a42e-12485a8e17d0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Nähmaschinenfusserl",
@@ -933,20 +1970,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "20e6e43a-db64-5e1f-b1d3-7d77e68b7903",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "nahmaschinenfusserl",
    "path": "/crags/modling/efeugrat#20e6e43a-db64-5e1f-b1d3-7d77e68b7903",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Play",
@@ -960,20 +1998,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "39fbeeed-4dd6-59e7-a3b8-dc3012d0740c",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "play",
    "path": "/crags/modling/efeugrat#39fbeeed-4dd6-59e7-a3b8-dc3012d0740c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Rampe",
@@ -987,20 +2026,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e16f9f43-5872-5778-b738-b37ea6f1091b",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "rampe",
    "path": "/crags/modling/efeugrat#e16f9f43-5872-5778-b738-b37ea6f1091b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Rechtsdrall",
@@ -1014,20 +2054,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "70e7e36e-d6ac-5921-9444-56a6f5768474",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "rechtsdrall",
    "path": "/crags/modling/efeugrat#70e7e36e-d6ac-5921-9444-56a6f5768474",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Sarkas Prüfung",
@@ -1041,20 +2082,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "701277e9-45f9-594b-9902-a943337bae05",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "sarkas-prufung",
    "path": "/crags/modling/efeugrat#701277e9-45f9-594b-9902-a943337bae05",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Schlange",
@@ -1068,20 +2110,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "283ed192-b560-565b-837d-e28e2a6718cb",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "schlange",
    "path": "/crags/modling/efeugrat#283ed192-b560-565b-837d-e28e2a6718cb",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Schroffenweg",
@@ -1095,20 +2138,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "eb5cf335-8116-5b9d-81e7-8dce637a4bc9",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "schroffenweg",
    "path": "/crags/modling/efeugrat#eb5cf335-8116-5b9d-81e7-8dce637a4bc9",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Schweisstreiber",
@@ -1122,20 +2166,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d89408cb-e244-5bdc-ad01-727119372d13",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "schweisstreiber",
    "path": "/crags/modling/efeugrat#d89408cb-e244-5bdc-ad01-727119372d13",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Snöf",
@@ -1149,20 +2194,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3d808732-df1a-5c47-bf40-ba4503108468",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "snof",
    "path": "/crags/modling/efeugrat#3d808732-df1a-5c47-bf40-ba4503108468",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Sondereinsatz",
@@ -1176,20 +2222,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c43f0887-f9cc-5c5c-81cd-5a3f974756db",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "sondereinsatz",
    "path": "/crags/modling/efeugrat#c43f0887-f9cc-5c5c-81cd-5a3f974756db",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Variante",
@@ -1203,20 +2250,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "aea6ce01-669b-532a-9bd8-eaec1bdb8892",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "variante",
    "path": "/crags/modling/efeugrat#aea6ce01-669b-532a-9bd8-eaec1bdb8892",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Verschneidung",
@@ -1230,20 +2278,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b6a0d1f3-1dbf-556e-824b-9047dba84cc4",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "verschneidung",
    "path": "/crags/modling/efeugrat#b6a0d1f3-1dbf-556e-824b-9047dba84cc4",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Efeugrat | Winkler Empor",
@@ -1257,20 +2306,21 @@
    "crag": "Efeugrat",
    "wall": "Efeugrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080646,
+   "longitude": 16.270495,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0ff6b0dc-cb9f-5326-8653-d544d1d43017",
    "region_slug": "modling",
    "crag_slug": "efeugrat",
    "slug": "winkler-empor",
    "path": "/crags/modling/efeugrat#0ff6b0dc-cb9f-5326-8653-d544d1d43017",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Die Helden Sind Müde",
@@ -1284,20 +2334,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "658c74e2-cb3c-529d-afa0-39a2688809f0",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "die-helden-sind-mude",
    "path": "/crags/modling/erikagrat#658c74e2-cb3c-529d-afa0-39a2688809f0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Erika Aktuell",
@@ -1311,20 +2362,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6ef9809e-c656-5f20-9c25-4b2f28183caa",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "erika-aktuell",
    "path": "/crags/modling/erikagrat#6ef9809e-c656-5f20-9c25-4b2f28183caa",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Erika Verschneidung",
@@ -1338,20 +2390,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a8bb24d3-0455-5e3f-8506-34da319de2d6",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "erika-verschneidung",
    "path": "/crags/modling/erikagrat#a8bb24d3-0455-5e3f-8506-34da319de2d6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Gratüberschreitung",
@@ -1365,20 +2418,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "512b6182-4138-5d13-b4c7-eed8bfdbb568",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "gratuberschreitung",
    "path": "/crags/modling/erikagrat#512b6182-4138-5d13-b4c7-eed8bfdbb568",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Hausmeisterehepaar I.R.",
@@ -1392,20 +2446,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1e565ee3-a3fc-5e9c-a476-7ddeae1f677b",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "hausmeisterehepaar-i-r",
    "path": "/crags/modling/erikagrat#1e565ee3-a3fc-5e9c-a476-7ddeae1f677b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | I Am Solo",
@@ -1419,20 +2474,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4da33b98-3eec-5e45-8ca1-6443902f3a53",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "i-am-solo",
    "path": "/crags/modling/erikagrat#4da33b98-3eec-5e45-8ca1-6443902f3a53",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Kaltfronterl",
@@ -1446,20 +2502,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c6877cc0-11a7-5aa0-8acc-7a4e133e5ae4",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "kaltfronterl",
    "path": "/crags/modling/erikagrat#c6877cc0-11a7-5aa0-8acc-7a4e133e5ae4",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Kamin",
@@ -1473,20 +2530,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0ed62ce4-f47c-5a45-ba89-d824a1eab151",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "kamin",
    "path": "/crags/modling/erikagrat#0ed62ce4-f47c-5a45-ba89-d824a1eab151",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Listig",
@@ -1500,20 +2558,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b5091bba-5398-51db-ab6f-d4b097c0b384",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "listig",
    "path": "/crags/modling/erikagrat#b5091bba-5398-51db-ab6f-d4b097c0b384",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Ozon Go Home",
@@ -1527,20 +2586,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "068074c8-f2a9-504e-8bc8-4b2f6b77f717",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "ozon-go-home",
    "path": "/crags/modling/erikagrat#068074c8-f2a9-504e-8bc8-4b2f6b77f717",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Pater Quirin Steig",
@@ -1554,20 +2614,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8cc51995-fb15-5e56-aab2-af3aab44c4b0",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "pater-quirin-steig",
    "path": "/crags/modling/erikagrat#8cc51995-fb15-5e56-aab2-af3aab44c4b0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Rennschnecke",
@@ -1581,20 +2642,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "97494235-c755-5058-9e7c-1aa344650186",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "rennschnecke",
    "path": "/crags/modling/erikagrat#97494235-c755-5058-9e7c-1aa344650186",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Rolfisteig",
@@ -1608,20 +2670,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8264f4f2-7010-5cb5-b602-3a7fdb2ccb80",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "rolfisteig",
    "path": "/crags/modling/erikagrat#8264f4f2-7010-5cb5-b602-3a7fdb2ccb80",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Salzstangerl",
@@ -1635,20 +2698,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5bcdbe0e-1c74-571c-a55d-d528b8aa5660",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "salzstangerl",
    "path": "/crags/modling/erikagrat#5bcdbe0e-1c74-571c-a55d-d528b8aa5660",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Steig Genau",
@@ -1662,20 +2726,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6b1d14ca-f1bb-51d1-ac5a-16763a028744",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "steig-genau",
    "path": "/crags/modling/erikagrat#6b1d14ca-f1bb-51d1-ac5a-16763a028744",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Steirerbua",
@@ -1689,20 +2754,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5ac1d706-89c0-509d-a789-196f1592bfd1",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "steirerbua",
    "path": "/crags/modling/erikagrat#5ac1d706-89c0-509d-a789-196f1592bfd1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Sunshine",
@@ -1716,20 +2782,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7f2936d4-d753-59a5-9ce6-a78b5d91daeb",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "sunshine",
    "path": "/crags/modling/erikagrat#7f2936d4-d753-59a5-9ce6-a78b5d91daeb",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Tiroler Bua",
@@ -1743,20 +2810,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cc6e9a78-4013-5a92-a3e7-4cedb29f5014",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "tiroler-bua",
    "path": "/crags/modling/erikagrat#cc6e9a78-4013-5a92-a3e7-4cedb29f5014",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Wotan Wartet Nicht",
@@ -1770,20 +2838,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c4a88041-9d45-54a5-a36e-2bfd70cd2d3d",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "wotan-wartet-nicht",
    "path": "/crags/modling/erikagrat#c4a88041-9d45-54a5-a36e-2bfd70cd2d3d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Erikagrat | Übung mit Erika",
@@ -1797,20 +2866,21 @@
    "crag": "Erikagrat",
    "wall": "Erikagrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.081424,
+   "longitude": 16.275497,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0df72e9b-08c5-51e8-9668-bf5032fa50ae",
    "region_slug": "modling",
    "crag_slug": "erikagrat",
    "slug": "ubung-mit-erika",
    "path": "/crags/modling/erikagrat#0df72e9b-08c5-51e8-9668-bf5032fa50ae",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Aids oder Geht's",
@@ -1824,20 +2894,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "288dcbe6-a5b1-569b-9a9a-261d7a9cd18b",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "aids-oder-geht-s",
    "path": "/crags/modling/glocknergrat#288dcbe6-a5b1-569b-9a9a-261d7a9cd18b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Blauer Portugieser",
@@ -1851,20 +2922,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "24eb3f26-3ca1-5566-8d0f-2b221ebe8448",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "blauer-portugieser",
    "path": "/crags/modling/glocknergrat#24eb3f26-3ca1-5566-8d0f-2b221ebe8448",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Dornröschen",
@@ -1878,20 +2950,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "42b59505-96ef-5cff-927b-4335d94107ef",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "dornroschen",
    "path": "/crags/modling/glocknergrat#42b59505-96ef-5cff-927b-4335d94107ef",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Duo Links",
@@ -1905,20 +2978,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "61faec89-2033-533d-b663-667e4cc80db8",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "duo-links",
    "path": "/crags/modling/glocknergrat#61faec89-2033-533d-b663-667e4cc80db8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Duo Rechts",
@@ -1932,20 +3006,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e152b799-d7c6-5ec5-8573-dada9351bceb",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "duo-rechts",
    "path": "/crags/modling/glocknergrat#e152b799-d7c6-5ec5-8573-dada9351bceb",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Fiaker",
@@ -1959,20 +3034,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "72d72f87-feff-5e35-bfa1-2551e0ae41ed",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "fiaker",
    "path": "/crags/modling/glocknergrat#72d72f87-feff-5e35-bfa1-2551e0ae41ed",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Frühling",
@@ -1986,20 +3062,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "71e0e150-3946-57c4-ad7d-bc03a6d8ff79",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "fruhling",
    "path": "/crags/modling/glocknergrat#71e0e150-3946-57c4-ad7d-bc03a6d8ff79",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Frühschoppen",
@@ -2013,20 +3090,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ad2f7845-ae10-54ff-9646-4222190e32d8",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "fruhschoppen",
    "path": "/crags/modling/glocknergrat#ad2f7845-ae10-54ff-9646-4222190e32d8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Gratüberschreitung",
@@ -2040,20 +3118,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3dc8cc0d-e75c-5588-8167-1dac933df55a",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "gratuberschreitung",
    "path": "/crags/modling/glocknergrat#3dc8cc0d-e75c-5588-8167-1dac933df55a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Kleiner Gerhard",
@@ -2067,20 +3146,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f4e7f450-d652-554e-a9db-54fa98082337",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "kleiner-gerhard",
    "path": "/crags/modling/glocknergrat#f4e7f450-d652-554e-a9db-54fa98082337",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Kleiner Hansi",
@@ -2094,20 +3174,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c3c40146-e06e-5297-be53-6f69c66a6850",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "kleiner-hansi",
    "path": "/crags/modling/glocknergrat#c3c40146-e06e-5297-be53-6f69c66a6850",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Kleiner Kurti",
@@ -2121,20 +3202,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "66e8d4f7-0635-531b-ae2a-85256314b49e",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "kleiner-kurti",
    "path": "/crags/modling/glocknergrat#66e8d4f7-0635-531b-ae2a-85256314b49e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Locker vom Hocker",
@@ -2148,20 +3230,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8e90410e-3244-52e8-b33f-841e860289ae",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "locker-vom-hocker",
    "path": "/crags/modling/glocknergrat#8e90410e-3244-52e8-b33f-841e860289ae",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Neue Schreams'n",
@@ -2175,20 +3258,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0f594555-54ef-5d4b-bb0f-7f37b89bec5f",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "neue-schreams-n",
    "path": "/crags/modling/glocknergrat#0f594555-54ef-5d4b-bb0f-7f37b89bec5f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Noch Einfacher",
@@ -2202,20 +3286,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2997b6f5-edd1-5c47-85a9-b99b6a5a8571",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "noch-einfacher",
    "path": "/crags/modling/glocknergrat#2997b6f5-edd1-5c47-85a9-b99b6a5a8571",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Nr 20",
@@ -2229,20 +3314,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3f515bfe-f349-5c95-83bc-e7132bab541e",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "nr-20",
    "path": "/crags/modling/glocknergrat#3f515bfe-f349-5c95-83bc-e7132bab541e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Nr 21 (keine Haken)",
@@ -2256,20 +3342,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "498eb02f-d4e8-5614-9ca1-bcc8d22bd5fc",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "nr-21-keine-haken",
    "path": "/crags/modling/glocknergrat#498eb02f-d4e8-5614-9ca1-bcc8d22bd5fc",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Nr 26",
@@ -2283,20 +3370,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "370fcc15-3ac9-5f5b-a0b0-838c722d6e52",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "nr-26",
    "path": "/crags/modling/glocknergrat#370fcc15-3ac9-5f5b-a0b0-838c722d6e52",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Nr 29",
@@ -2310,20 +3398,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "28018497-8ff1-50b1-920e-c412a5194af6",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "nr-29",
    "path": "/crags/modling/glocknergrat#28018497-8ff1-50b1-920e-c412a5194af6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Nr 8",
@@ -2337,20 +3426,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "84cc3756-9ae6-5d79-836f-483b08001f31",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "nr-8",
    "path": "/crags/modling/glocknergrat#84cc3756-9ae6-5d79-836f-483b08001f31",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Pferdehölle",
@@ -2364,20 +3454,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9443f957-5d43-5a88-87c4-4e782b90814b",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "pferdeholle",
    "path": "/crags/modling/glocknergrat#9443f957-5d43-5a88-87c4-4e782b90814b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Rote Spur",
@@ -2391,20 +3482,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "67df3ea3-21e4-546a-9b78-45dbe6e40a9f",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "rote-spur",
    "path": "/crags/modling/glocknergrat#67df3ea3-21e4-546a-9b78-45dbe6e40a9f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Sommer",
@@ -2418,20 +3510,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "92e2b3b8-ec6a-5547-9a90-17ce9b889eaa",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "sommer",
    "path": "/crags/modling/glocknergrat#92e2b3b8-ec6a-5547-9a90-17ce9b889eaa",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | The Edge",
@@ -2445,20 +3538,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "143d1e65-6ff7-5385-a2de-afef51710049",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "the-edge",
    "path": "/crags/modling/glocknergrat#143d1e65-6ff7-5385-a2de-afef51710049",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Variante",
@@ -2472,20 +3566,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cd52fcc2-599c-51af-bd54-37c02a2054ce",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "variante",
    "path": "/crags/modling/glocknergrat#cd52fcc2-599c-51af-bd54-37c02a2054ce",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Westwandplatte",
@@ -2499,20 +3594,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e8bfc6cd-e407-58c2-ad7d-5b8357e15a93",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "westwandplatte",
    "path": "/crags/modling/glocknergrat#e8bfc6cd-e407-58c2-ad7d-5b8357e15a93",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Winter",
@@ -2526,20 +3622,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3a356d7a-101b-5b9a-944a-9982f3f32e15",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "winter",
    "path": "/crags/modling/glocknergrat#3a356d7a-101b-5b9a-944a-9982f3f32e15",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Winterriss",
@@ -2553,20 +3650,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fe131133-3e2d-553d-ac76-09d8305520df",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "winterriss",
    "path": "/crags/modling/glocknergrat#fe131133-3e2d-553d-ac76-09d8305520df",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Zeitgeisterfahrer",
@@ -2580,20 +3678,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1af29a28-cf06-5cf6-9bb0-052cba6fef09",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "zeitgeisterfahrer",
    "path": "/crags/modling/glocknergrat#1af29a28-cf06-5cf6-9bb0-052cba6fef09",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Zu Einfach",
@@ -2607,20 +3706,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "02b5b6f3-1e99-5c44-b8dd-c2e411284e8f",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "zu-einfach",
    "path": "/crags/modling/glocknergrat#02b5b6f3-1e99-5c44-b8dd-c2e411284e8f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Gumpoldskirchen | Andi los mi owa",
@@ -2634,20 +3734,21 @@
    "crag": "Gumpoldskirchen",
    "wall": "Gumpoldskirchen",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.046025,
+   "longitude": 16.269679,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c10559e6-f33a-589e-b999-8d6d02936793",
    "region_slug": "modling",
    "crag_slug": "gumpoldskirchen",
    "slug": "andi-los-mi-owa",
    "path": "/crags/modling/gumpoldskirchen#c10559e6-f33a-589e-b999-8d6d02936793",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Gumpoldskirchen | Blaubarschbubi",
@@ -2661,20 +3762,21 @@
    "crag": "Gumpoldskirchen",
    "wall": "Gumpoldskirchen",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.046025,
+   "longitude": 16.269679,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "60c19418-4725-5db7-95ef-b62e277de40d",
    "region_slug": "modling",
    "crag_slug": "gumpoldskirchen",
    "slug": "blaubarschbubi",
    "path": "/crags/modling/gumpoldskirchen#60c19418-4725-5db7-95ef-b62e277de40d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Gumpoldskirchen | Dancing Susi",
@@ -2688,20 +3790,21 @@
    "crag": "Gumpoldskirchen",
    "wall": "Gumpoldskirchen",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.046025,
+   "longitude": 16.269679,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "710ca124-5899-55de-b85b-dc1022063a86",
    "region_slug": "modling",
    "crag_slug": "gumpoldskirchen",
    "slug": "dancing-susi",
    "path": "/crags/modling/gumpoldskirchen#710ca124-5899-55de-b85b-dc1022063a86",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Gumpoldskirchen | Ferdis Thron",
@@ -2715,20 +3818,21 @@
    "crag": "Gumpoldskirchen",
    "wall": "Gumpoldskirchen",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.046025,
+   "longitude": 16.269679,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "25f22c0c-7276-5394-8b1b-17b052ff1f2c",
    "region_slug": "modling",
    "crag_slug": "gumpoldskirchen",
    "slug": "ferdis-thron",
    "path": "/crags/modling/gumpoldskirchen#25f22c0c-7276-5394-8b1b-17b052ff1f2c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Gumpoldskirchen | Flitzer",
@@ -2742,20 +3846,21 @@
    "crag": "Gumpoldskirchen",
    "wall": "Gumpoldskirchen",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.046025,
+   "longitude": 16.269679,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7ea350a5-72e5-5be5-b144-cac78695a474",
    "region_slug": "modling",
    "crag_slug": "gumpoldskirchen",
    "slug": "flitzer",
    "path": "/crags/modling/gumpoldskirchen#7ea350a5-72e5-5be5-b144-cac78695a474",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Gumpoldskirchen | Flummi",
@@ -2769,20 +3874,21 @@
    "crag": "Gumpoldskirchen",
    "wall": "Gumpoldskirchen",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.046025,
+   "longitude": 16.269679,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "67430cb5-0c83-5da5-9425-88180227c46e",
    "region_slug": "modling",
    "crag_slug": "gumpoldskirchen",
    "slug": "flummi",
    "path": "/crags/modling/gumpoldskirchen#67430cb5-0c83-5da5-9425-88180227c46e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Gumpoldskirchen | Klettersteigrunde B",
@@ -2796,20 +3902,21 @@
    "crag": "Gumpoldskirchen",
    "wall": "Gumpoldskirchen",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.046025,
+   "longitude": 16.269679,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e4838cd4-0751-54d0-9433-aa2a238cb476",
    "region_slug": "modling",
    "crag_slug": "gumpoldskirchen",
    "slug": "klettersteigrunde-b",
    "path": "/crags/modling/gumpoldskirchen#e4838cd4-0751-54d0-9433-aa2a238cb476",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Gumpoldskirchen | Nr 10",
@@ -2823,20 +3930,21 @@
    "crag": "Gumpoldskirchen",
    "wall": "Gumpoldskirchen",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.046025,
+   "longitude": 16.269679,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7d5b3cb7-d1a9-57ea-8ce4-91e8e298c91a",
    "region_slug": "modling",
    "crag_slug": "gumpoldskirchen",
    "slug": "nr-10",
    "path": "/crags/modling/gumpoldskirchen#7d5b3cb7-d1a9-57ea-8ce4-91e8e298c91a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Gumpoldskirchen | Nr 7",
@@ -2850,20 +3958,21 @@
    "crag": "Gumpoldskirchen",
    "wall": "Gumpoldskirchen",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.046025,
+   "longitude": 16.269679,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7adaab93-5634-5555-86c4-929a1bc0a274",
    "region_slug": "modling",
    "crag_slug": "gumpoldskirchen",
    "slug": "nr-7",
    "path": "/crags/modling/gumpoldskirchen#7adaab93-5634-5555-86c4-929a1bc0a274",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Gumpoldskirchen | Olé",
@@ -2877,20 +3986,21 @@
    "crag": "Gumpoldskirchen",
    "wall": "Gumpoldskirchen",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.046025,
+   "longitude": 16.269679,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a5c2a994-abbd-57f8-87c5-e06ac186c341",
    "region_slug": "modling",
    "crag_slug": "gumpoldskirchen",
    "slug": "ole",
    "path": "/crags/modling/gumpoldskirchen#a5c2a994-abbd-57f8-87c5-e06ac186c341",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Gumpoldskirchen | Prutschurdl",
@@ -2904,20 +4014,21 @@
    "crag": "Gumpoldskirchen",
    "wall": "Gumpoldskirchen",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.046025,
+   "longitude": 16.269679,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "80bad76b-c187-55dd-8453-804cc81c8b14",
    "region_slug": "modling",
    "crag_slug": "gumpoldskirchen",
    "slug": "prutschurdl",
    "path": "/crags/modling/gumpoldskirchen#80bad76b-c187-55dd-8453-804cc81c8b14",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Abendsonne",
@@ -2931,20 +4042,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6c70e45d-be9b-560e-9567-951119ffabb7",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "abendsonne",
    "path": "/crags/modling/lausbubenwand#6c70e45d-be9b-560e-9567-951119ffabb7",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Alfis Übung",
@@ -2958,20 +4070,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fdd703dd-7577-594e-b98d-f5705c490275",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "alfis-ubung",
    "path": "/crags/modling/lausbubenwand#fdd703dd-7577-594e-b98d-f5705c490275",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Asterix",
@@ -2985,20 +4098,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f471da6f-06e8-52bc-82f3-a82ad3577720",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "asterix",
    "path": "/crags/modling/lausbubenwand#f471da6f-06e8-52bc-82f3-a82ad3577720",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Au So Rauh",
@@ -3012,20 +4126,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7c6db575-6aa7-5849-9dcb-36f9dc6fedaf",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "au-so-rauh",
    "path": "/crags/modling/lausbubenwand#7c6db575-6aa7-5849-9dcb-36f9dc6fedaf",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Bergbaron",
@@ -3039,20 +4154,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2224963b-7d20-5631-be99-fe021b839426",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "bergbaron",
    "path": "/crags/modling/lausbubenwand#2224963b-7d20-5631-be99-fe021b839426",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Bergführerriss",
@@ -3066,20 +4182,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "044ac15a-1543-5908-8569-75ace4b7313d",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "bergfuhrerriss",
    "path": "/crags/modling/lausbubenwand#044ac15a-1543-5908-8569-75ace4b7313d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Beyond the Edge",
@@ -3093,20 +4210,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e5678acb-119e-5f49-a32a-222afc7c8743",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "beyond-the-edge",
    "path": "/crags/modling/lausbubenwand#e5678acb-119e-5f49-a32a-222afc7c8743",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Das Omen",
@@ -3120,20 +4238,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c2caba0f-9ad8-53b8-b079-df7fa755fbe9",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "das-omen",
    "path": "/crags/modling/lausbubenwand#c2caba0f-9ad8-53b8-b079-df7fa755fbe9",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Die Letzten Beissen die Hunde",
@@ -3147,20 +4266,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4a101e8a-c18f-5d10-80c4-b3177645693c",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "die-letzten-beissen-die-hunde",
    "path": "/crags/modling/lausbubenwand#4a101e8a-c18f-5d10-80c4-b3177645693c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Erstiegener",
@@ -3174,20 +4294,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d17e6d46-3ff8-55e8-b54a-366e1586090d",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "erstiegener",
    "path": "/crags/modling/lausbubenwand#d17e6d46-3ff8-55e8-b54a-366e1586090d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Excitation",
@@ -3201,20 +4322,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3c7ef14f-0824-5159-8509-b84e4dec727c",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "excitation",
    "path": "/crags/modling/lausbubenwand#3c7ef14f-0824-5159-8509-b84e4dec727c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Falten und Strecken",
@@ -3228,20 +4350,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "66d70ca8-f897-51d0-86ca-2820755b90b5",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "falten-und-strecken",
    "path": "/crags/modling/lausbubenwand#66d70ca8-f897-51d0-86ca-2820755b90b5",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Gipfelausstieg",
@@ -3255,20 +4378,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "966c7323-d48b-5c04-a016-5eddd4571c2d",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "gipfelausstieg",
    "path": "/crags/modling/lausbubenwand#966c7323-d48b-5c04-a016-5eddd4571c2d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Hansisteig",
@@ -3282,20 +4406,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1799eeca-674e-52fc-9f3e-72da87f56aed",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "hansisteig",
    "path": "/crags/modling/lausbubenwand#1799eeca-674e-52fc-9f3e-72da87f56aed",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Hidden Hole",
@@ -3309,20 +4434,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8fc03472-83e3-5d09-b6c7-76d33263eaab",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "hidden-hole",
    "path": "/crags/modling/lausbubenwand#8fc03472-83e3-5d09-b6c7-76d33263eaab",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Hin und Her",
@@ -3336,20 +4462,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fae2270f-0db6-5292-a787-be8ec3ddb8d0",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "hin-und-her",
    "path": "/crags/modling/lausbubenwand#fae2270f-0db6-5292-a787-be8ec3ddb8d0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Horror",
@@ -3363,20 +4490,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "52560fb2-0653-53b2-82ba-16c8b4feb091",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "horror",
    "path": "/crags/modling/lausbubenwand#52560fb2-0653-53b2-82ba-16c8b4feb091",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Idefix",
@@ -3390,20 +4518,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fe9f72da-437b-5ccc-baea-06c0830617ee",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "idefix",
    "path": "/crags/modling/lausbubenwand#fe9f72da-437b-5ccc-baea-06c0830617ee",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Kamin",
@@ -3417,20 +4546,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "608ca309-f722-56ab-b1af-ce269bd764f6",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "kamin",
    "path": "/crags/modling/lausbubenwand#608ca309-f722-56ab-b1af-ce269bd764f6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Klassiker",
@@ -3444,20 +4574,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6b681ef2-1141-554a-a58e-7c1ffef5961b",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "klassiker",
    "path": "/crags/modling/lausbubenwand#6b681ef2-1141-554a-a58e-7c1ffef5961b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Lausbubengrat",
@@ -3471,20 +4602,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "892afe87-434d-5ae6-95f8-d26c9432a2d0",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "lausbubengrat",
    "path": "/crags/modling/lausbubenwand#892afe87-434d-5ae6-95f8-d26c9432a2d0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Lausbubenkante",
@@ -3498,20 +4630,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ebcee521-cf83-5d17-bb4b-8cfbb03ea85b",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "lausbubenkante",
    "path": "/crags/modling/lausbubenwand#ebcee521-cf83-5d17-bb4b-8cfbb03ea85b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Lausbubenverschneidung",
@@ -3525,20 +4658,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2e132dd7-074d-522f-8f06-488ba42c2c76",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "lausbubenverschneidung",
    "path": "/crags/modling/lausbubenwand#2e132dd7-074d-522f-8f06-488ba42c2c76",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Machs Doch Schwer",
@@ -3552,20 +4686,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "16a8a4c6-5d8c-50f7-a8ca-3dd2ad70e506",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "machs-doch-schwer",
    "path": "/crags/modling/lausbubenwand#16a8a4c6-5d8c-50f7-a8ca-3dd2ad70e506",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Miraculix",
@@ -3579,20 +4714,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9b671040-4a21-5d48-8f2b-33cd7234b9ab",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "miraculix",
    "path": "/crags/modling/lausbubenwand#9b671040-4a21-5d48-8f2b-33cd7234b9ab",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Mist",
@@ -3606,20 +4742,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5580b416-579f-5f90-8471-723415fc2d5b",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "mist",
    "path": "/crags/modling/lausbubenwand#5580b416-579f-5f90-8471-723415fc2d5b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Moralist",
@@ -3633,20 +4770,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3b241e8a-14d5-5676-9920-88ee280beabf",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "moralist",
    "path": "/crags/modling/lausbubenwand#3b241e8a-14d5-5676-9920-88ee280beabf",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Nr 14",
@@ -3660,20 +4798,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ad3c51af-a8f2-56b3-a609-a81ffdac2305",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "nr-14",
    "path": "/crags/modling/lausbubenwand#ad3c51af-a8f2-56b3-a609-a81ffdac2305",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Nr 6",
@@ -3687,20 +4826,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "56303bbb-d6a4-54d3-b7ea-c840df719df0",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "nr-6",
    "path": "/crags/modling/lausbubenwand#56303bbb-d6a4-54d3-b7ea-c840df719df0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Obelix",
@@ -3714,20 +4854,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a6a88001-52aa-56f1-a725-eaac9313f170",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "obelix",
    "path": "/crags/modling/lausbubenwand#a6a88001-52aa-56f1-a725-eaac9313f170",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Oho",
@@ -3741,20 +4882,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6d26e642-4804-52ed-9941-dfc08322c882",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "oho",
    "path": "/crags/modling/lausbubenwand#6d26e642-4804-52ed-9941-dfc08322c882",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Pfeiler",
@@ -3768,20 +4910,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9b2e2c53-2b91-5d3d-a09c-f963db0c4d62",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "pfeiler",
    "path": "/crags/modling/lausbubenwand#9b2e2c53-2b91-5d3d-a09c-f963db0c4d62",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Projekt (Nr 2)",
@@ -3795,20 +4938,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1b7299f9-5a20-5bac-b213-18cae8aeb94d",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "projekt-nr-2",
    "path": "/crags/modling/lausbubenwand#1b7299f9-5a20-5bac-b213-18cae8aeb94d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Prolo",
@@ -3822,20 +4966,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f642c3f7-56be-53b4-baab-3e312cc9f935",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "prolo",
    "path": "/crags/modling/lausbubenwand#f642c3f7-56be-53b4-baab-3e312cc9f935",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Psycho I",
@@ -3849,20 +4994,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2ef17997-bc31-5c1a-a57e-c9f70a321a25",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "psycho-i",
    "path": "/crags/modling/lausbubenwand#2ef17997-bc31-5c1a-a57e-c9f70a321a25",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Reichtvariante",
@@ -3876,20 +5022,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fe0fd9c6-badc-5759-b53e-70a9df8233ff",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "reichtvariante",
    "path": "/crags/modling/lausbubenwand#fe0fd9c6-badc-5759-b53e-70a9df8233ff",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Rheumatic Fever",
@@ -3903,20 +5050,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2ddabe88-9890-51ea-afda-3fa8054fad0a",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "rheumatic-fever",
    "path": "/crags/modling/lausbubenwand#2ddabe88-9890-51ea-afda-3fa8054fad0a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Riss",
@@ -3930,20 +5078,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fe29ab19-96c1-5fb1-8305-a65b6f35e066",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "riss",
    "path": "/crags/modling/lausbubenwand#fe29ab19-96c1-5fb1-8305-a65b6f35e066",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Riss (Nr 42)",
@@ -3957,20 +5106,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e2bce6dd-645f-5f18-b84e-0102bea83e24",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "riss-nr-42",
    "path": "/crags/modling/lausbubenwand#e2bce6dd-645f-5f18-b84e-0102bea83e24",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Riss (Nr 48)",
@@ -3984,20 +5134,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "83284140-0a1d-5ea6-a084-524964ad0b74",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "riss-nr-48",
    "path": "/crags/modling/lausbubenwand#83284140-0a1d-5ea6-a084-524964ad0b74",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Steinzeit",
@@ -4011,20 +5162,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5cb8ab1a-988d-5da3-b470-91ccee21e615",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "steinzeit",
    "path": "/crags/modling/lausbubenwand#5cb8ab1a-988d-5da3-b470-91ccee21e615",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Streck Dich",
@@ -4038,20 +5190,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4fd33176-9756-5b62-bdfa-c1ab46ff7bbf",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "streck-dich",
    "path": "/crags/modling/lausbubenwand#4fd33176-9756-5b62-bdfa-c1ab46ff7bbf",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Sturmtag",
@@ -4065,20 +5218,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6eba3359-7685-50ae-976f-cb930aa406fa",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "sturmtag",
    "path": "/crags/modling/lausbubenwand#6eba3359-7685-50ae-976f-cb930aa406fa",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Tape Dich",
@@ -4092,20 +5246,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "bfe9ac70-5a61-565a-9563-7f084c46e4db",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "tape-dich",
    "path": "/crags/modling/lausbubenwand#bfe9ac70-5a61-565a-9563-7f084c46e4db",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Tape Dich Direkt",
@@ -4119,20 +5274,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "43a30175-ad9d-5a4d-b097-109a2713db0e",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "tape-dich-direkt",
    "path": "/crags/modling/lausbubenwand#43a30175-ad9d-5a4d-b097-109a2713db0e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Tränen für Irene",
@@ -4146,20 +5302,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "65619546-aeb1-540e-92d8-fd71aa2c746f",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "tranen-fur-irene",
    "path": "/crags/modling/lausbubenwand#65619546-aeb1-540e-92d8-fd71aa2c746f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Uknudel",
@@ -4173,20 +5330,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "239cd932-8625-5a17-8c88-628cb8b3cb1d",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "uknudel",
    "path": "/crags/modling/lausbubenwand#239cd932-8625-5a17-8c88-628cb8b3cb1d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Verlängerung",
@@ -4200,20 +5358,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "89f57586-215d-5a48-8350-a7aa695cd419",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "verlangerung",
    "path": "/crags/modling/lausbubenwand#89f57586-215d-5a48-8350-a7aa695cd419",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Via Ente",
@@ -4227,20 +5386,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6bbe0bab-4a7e-52d4-ba2f-3daa8d422383",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "via-ente",
    "path": "/crags/modling/lausbubenwand#6bbe0bab-4a7e-52d4-ba2f-3daa8d422383",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Vollmond",
@@ -4254,20 +5414,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ae2e55b7-4328-5894-be7e-982547ff86be",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "vollmond",
    "path": "/crags/modling/lausbubenwand#ae2e55b7-4328-5894-be7e-982547ff86be",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Zwerg",
@@ -4281,20 +5442,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e1aa7d99-b3a9-5341-8441-97c237d0d001",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "zwerg",
    "path": "/crags/modling/lausbubenwand#e1aa7d99-b3a9-5341-8441-97c237d0d001",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Lausbubenwand | Öha",
@@ -4308,20 +5470,21 @@
    "crag": "Lausbubenwand",
    "wall": "Lausbubenwand",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080482,
+   "longitude": 16.272032,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "850f4fd8-6c56-5872-888e-638f891f279a",
    "region_slug": "modling",
    "crag_slug": "lausbubenwand",
    "slug": "oha",
    "path": "/crags/modling/lausbubenwand#850f4fd8-6c56-5872-888e-638f891f279a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Matterhörndl | Nordkante",
@@ -4335,20 +5498,21 @@
    "crag": "Matterhörndl",
    "wall": "Matterhörndl",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.014969,
+   "longitude": 16.049373,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f1ef45df-0f2c-5833-bb1a-4c5325cbf682",
    "region_slug": "modling",
    "crag_slug": "matterhorndl",
    "slug": "nordkante",
    "path": "/crags/modling/matterhorndl#f1ef45df-0f2c-5833-bb1a-4c5325cbf682",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Matterhörndl | Nordwand",
@@ -4362,20 +5526,21 @@
    "crag": "Matterhörndl",
    "wall": "Matterhörndl",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.014969,
+   "longitude": 16.049373,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7f1ef7fc-5c6c-57a1-8c52-724c9b10af50",
    "region_slug": "modling",
    "crag_slug": "matterhorndl",
    "slug": "nordwand",
    "path": "/crags/modling/matterhorndl#7f1ef7fc-5c6c-57a1-8c52-724c9b10af50",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Matterhörndl | Nordwestwand",
@@ -4389,20 +5554,21 @@
    "crag": "Matterhörndl",
    "wall": "Matterhörndl",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.014969,
+   "longitude": 16.049373,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "eeb3183a-c7eb-577f-a1ad-fcb20d95b597",
    "region_slug": "modling",
    "crag_slug": "matterhorndl",
    "slug": "nordwestwand",
    "path": "/crags/modling/matterhorndl#eeb3183a-c7eb-577f-a1ad-fcb20d95b597",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Matterhörndl | Normalweg",
@@ -4416,20 +5582,21 @@
    "crag": "Matterhörndl",
    "wall": "Matterhörndl",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.014969,
+   "longitude": 16.049373,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1478b49e-24c8-5151-bc57-34656d6c5957",
    "region_slug": "modling",
    "crag_slug": "matterhorndl",
    "slug": "normalweg",
    "path": "/crags/modling/matterhorndl#1478b49e-24c8-5151-bc57-34656d6c5957",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Matterhörndl | Ostkamin",
@@ -4443,20 +5610,21 @@
    "crag": "Matterhörndl",
    "wall": "Matterhörndl",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.014969,
+   "longitude": 16.049373,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "acd19387-1f51-545c-b7fc-b346f160818a",
    "region_slug": "modling",
    "crag_slug": "matterhorndl",
    "slug": "ostkamin",
    "path": "/crags/modling/matterhorndl#acd19387-1f51-545c-b7fc-b346f160818a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Matterhörndl | Ostkante",
@@ -4470,20 +5638,21 @@
    "crag": "Matterhörndl",
    "wall": "Matterhörndl",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.014969,
+   "longitude": 16.049373,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "11c19c6a-a87a-583f-975e-b6e59bbfdf35",
    "region_slug": "modling",
    "crag_slug": "matterhorndl",
    "slug": "ostkante",
    "path": "/crags/modling/matterhorndl#11c19c6a-a87a-583f-975e-b6e59bbfdf35",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Matterhörndl | Rampe",
@@ -4497,20 +5666,21 @@
    "crag": "Matterhörndl",
    "wall": "Matterhörndl",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.014969,
+   "longitude": 16.049373,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4a8715d2-b1d9-512e-a9b6-a8614ee1e7df",
    "region_slug": "modling",
    "crag_slug": "matterhorndl",
    "slug": "rampe",
    "path": "/crags/modling/matterhorndl#4a8715d2-b1d9-512e-a9b6-a8614ee1e7df",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Matterhörndl | Rechte Südkante",
@@ -4524,20 +5694,21 @@
    "crag": "Matterhörndl",
    "wall": "Matterhörndl",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.014969,
+   "longitude": 16.049373,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5fb175f6-1fa2-53c5-9025-fc3034d802e5",
    "region_slug": "modling",
    "crag_slug": "matterhorndl",
    "slug": "rechte-sudkante",
    "path": "/crags/modling/matterhorndl#5fb175f6-1fa2-53c5-9025-fc3034d802e5",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Matterhörndl | Südostriss",
@@ -4551,20 +5722,21 @@
    "crag": "Matterhörndl",
    "wall": "Matterhörndl",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.014969,
+   "longitude": 16.049373,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e6788ca7-42ee-512e-81c2-974bf81fef4d",
    "region_slug": "modling",
    "crag_slug": "matterhorndl",
    "slug": "sudostriss",
    "path": "/crags/modling/matterhorndl#e6788ca7-42ee-512e-81c2-974bf81fef4d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Matterhörndl | Südwestriss",
@@ -4578,20 +5750,21 @@
    "crag": "Matterhörndl",
    "wall": "Matterhörndl",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.014969,
+   "longitude": 16.049373,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "eba859ca-d5c0-5824-9775-7d69fb2d61b0",
    "region_slug": "modling",
    "crag_slug": "matterhorndl",
    "slug": "sudwestriss",
    "path": "/crags/modling/matterhorndl#eba859ca-d5c0-5824-9775-7d69fb2d61b0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Matterhörndl | Westkamin",
@@ -4605,20 +5778,21 @@
    "crag": "Matterhörndl",
    "wall": "Matterhörndl",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.014969,
+   "longitude": 16.049373,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fe11a52c-bc23-507a-bb97-4f7783f67bd3",
    "region_slug": "modling",
    "crag_slug": "matterhorndl",
    "slug": "westkamin",
    "path": "/crags/modling/matterhorndl#fe11a52c-bc23-507a-bb97-4f7783f67bd3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Matterhörndl | Westriss",
@@ -4632,20 +5806,21 @@
    "crag": "Matterhörndl",
    "wall": "Matterhörndl",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.014969,
+   "longitude": 16.049373,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4bc08bff-02df-5cb4-b96c-b0112994a52f",
    "region_slug": "modling",
    "crag_slug": "matterhorndl",
    "slug": "westriss",
    "path": "/crags/modling/matterhorndl#4bc08bff-02df-5cb4-b96c-b0112994a52f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Promenadenfels | Boulder Me",
@@ -4659,20 +5834,21 @@
    "crag": "Promenadenfels",
    "wall": "Promenadenfels",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.083002,
+   "longitude": 16.276885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6c1674b5-c2be-5330-8ee5-86cc1ea9709d",
    "region_slug": "modling",
    "crag_slug": "promenadenfels",
    "slug": "boulder-me",
    "path": "/crags/modling/promenadenfels#6c1674b5-c2be-5330-8ee5-86cc1ea9709d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Promenadenfels | Erdloch",
@@ -4686,20 +5862,21 @@
    "crag": "Promenadenfels",
    "wall": "Promenadenfels",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.083002,
+   "longitude": 16.276885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "46bc49c0-7a72-5b47-8b43-01421671ef3a",
    "region_slug": "modling",
    "crag_slug": "promenadenfels",
    "slug": "erdloch",
    "path": "/crags/modling/promenadenfels#46bc49c0-7a72-5b47-8b43-01421671ef3a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Promenadenfels | Night Bolts",
@@ -4713,20 +5890,21 @@
    "crag": "Promenadenfels",
    "wall": "Promenadenfels",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.083002,
+   "longitude": 16.276885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5243c18e-e675-5a21-aed7-ba64b2ad8968",
    "region_slug": "modling",
    "crag_slug": "promenadenfels",
    "slug": "night-bolts",
    "path": "/crags/modling/promenadenfels#5243c18e-e675-5a21-aed7-ba64b2ad8968",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Promenadenfels | Nr 3",
@@ -4740,20 +5918,21 @@
    "crag": "Promenadenfels",
    "wall": "Promenadenfels",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.083002,
+   "longitude": 16.276885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "593b9bef-d65d-5803-a808-276d408db51a",
    "region_slug": "modling",
    "crag_slug": "promenadenfels",
    "slug": "nr-3",
    "path": "/crags/modling/promenadenfels#593b9bef-d65d-5803-a808-276d408db51a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Promenadenfels | Painkiller",
@@ -4767,20 +5946,21 @@
    "crag": "Promenadenfels",
    "wall": "Promenadenfels",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.083002,
+   "longitude": 16.276885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "82f80ff8-a6c5-5d7b-9bde-bcdd021911a1",
    "region_slug": "modling",
    "crag_slug": "promenadenfels",
    "slug": "painkiller",
    "path": "/crags/modling/promenadenfels#82f80ff8-a6c5-5d7b-9bde-bcdd021911a1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Promenadenfels | Promenadengrat",
@@ -4794,20 +5974,21 @@
    "crag": "Promenadenfels",
    "wall": "Promenadenfels",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.083002,
+   "longitude": 16.276885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c9db5d8a-ab2b-58db-a4d7-dd5dba7daa5c",
    "region_slug": "modling",
    "crag_slug": "promenadenfels",
    "slug": "promenadengrat",
    "path": "/crags/modling/promenadenfels#c9db5d8a-ab2b-58db-a4d7-dd5dba7daa5c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Promenadenfels | Torture Garden",
@@ -4821,20 +6002,21 @@
    "crag": "Promenadenfels",
    "wall": "Promenadenfels",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.083002,
+   "longitude": 16.276885,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8a6db6b3-cd8d-5b2e-b415-b620b2f5adac",
    "region_slug": "modling",
    "crag_slug": "promenadenfels",
    "slug": "torture-garden",
    "path": "/crags/modling/promenadenfels#8a6db6b3-cd8d-5b2e-b415-b620b2f5adac",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Rauhe Platte | Andrea the Croat",
@@ -4850,18 +6032,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8688dd3f-314d-5b00-a7a2-37f4c8596ee4",
    "region_slug": "modling",
    "crag_slug": "rauhe-platte",
    "slug": "andrea-the-croat",
    "path": "/crags/modling/rauhe-platte#8688dd3f-314d-5b00-a7a2-37f4c8596ee4",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Mödling | Rauhe Platte | Black Hole",
@@ -4877,18 +6060,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "63a6e515-c431-512c-914e-d9903b1b4fa2",
    "region_slug": "modling",
    "crag_slug": "rauhe-platte",
    "slug": "black-hole",
    "path": "/crags/modling/rauhe-platte#63a6e515-c431-512c-914e-d9903b1b4fa2",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Mödling | Rauhe Platte | Captain Kirk",
@@ -4904,18 +6088,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a6702340-06ac-528e-80df-bde50fa6b163",
    "region_slug": "modling",
    "crag_slug": "rauhe-platte",
    "slug": "captain-kirk",
    "path": "/crags/modling/rauhe-platte#a6702340-06ac-528e-80df-bde50fa6b163",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Mödling | Rauhe Platte | Direkte Südwand",
@@ -4931,18 +6116,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8ef49113-fa73-5fad-86ee-97751776b182",
    "region_slug": "modling",
    "crag_slug": "rauhe-platte",
    "slug": "direkte-sudwand",
    "path": "/crags/modling/rauhe-platte#8ef49113-fa73-5fad-86ee-97751776b182",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Mödling | Rauhe Platte | Enterprise",
@@ -4958,18 +6144,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "342482f7-b0bb-5fe8-a7e1-4007b2817b28",
    "region_slug": "modling",
    "crag_slug": "rauhe-platte",
    "slug": "enterprise",
    "path": "/crags/modling/rauhe-platte#342482f7-b0bb-5fe8-a7e1-4007b2817b28",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Mödling | Rauhe Platte | Mr Spock",
@@ -4985,18 +6172,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "39b05eea-aaf2-57d0-b057-bfb886ecdc56",
    "region_slug": "modling",
    "crag_slug": "rauhe-platte",
    "slug": "mr-spock",
    "path": "/crags/modling/rauhe-platte#39b05eea-aaf2-57d0-b057-bfb886ecdc56",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Mödling | Rauhe Platte | Pille",
@@ -5012,18 +6200,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a4f63d23-0e10-524c-ba81-ba1656b0086c",
    "region_slug": "modling",
    "crag_slug": "rauhe-platte",
    "slug": "pille",
    "path": "/crags/modling/rauhe-platte#a4f63d23-0e10-524c-ba81-ba1656b0086c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Mödling | Rauhe Platte | Sauerkraut Extrem",
@@ -5039,18 +6228,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0f112056-56fa-5113-b010-25b4f64ba707",
    "region_slug": "modling",
    "crag_slug": "rauhe-platte",
    "slug": "sauerkraut-extrem",
    "path": "/crags/modling/rauhe-platte#0f112056-56fa-5113-b010-25b4f64ba707",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Mödling | Rauhe Platte | Silicon Valley",
@@ -5066,18 +6256,19 @@
    "source": "Keltenkalk",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "564a1856-6bb4-5758-b13b-f86725cbc29d",
    "region_slug": "modling",
    "crag_slug": "rauhe-platte",
    "slug": "silicon-valley",
    "path": "/crags/modling/rauhe-platte#564a1856-6bb4-5758-b13b-f86725cbc29d",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Mödling | Ritterfels | Burggraben Direttissima",
@@ -5091,20 +6282,21 @@
    "crag": "Ritterfels",
    "wall": "Ritterfels",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080464,
+   "longitude": 16.266338,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "01161bb2-b5c7-5906-8c6e-283f5947f767",
    "region_slug": "modling",
    "crag_slug": "ritterfels",
    "slug": "burggraben-direttissima",
    "path": "/crags/modling/ritterfels#01161bb2-b5c7-5906-8c6e-283f5947f767",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Ritterfels | Burgherr",
@@ -5118,20 +6310,21 @@
    "crag": "Ritterfels",
    "wall": "Ritterfels",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080464,
+   "longitude": 16.266338,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "d7805bc0-6776-5371-9afc-450244e57a92",
    "region_slug": "modling",
    "crag_slug": "ritterfels",
    "slug": "burgherr",
    "path": "/crags/modling/ritterfels#d7805bc0-6776-5371-9afc-450244e57a92",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Ritterfels | Hofnarr",
@@ -5145,20 +6338,21 @@
    "crag": "Ritterfels",
    "wall": "Ritterfels",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080464,
+   "longitude": 16.266338,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4f6ea44a-bf35-5bea-b1a9-fe0ae23d6373",
    "region_slug": "modling",
    "crag_slug": "ritterfels",
    "slug": "hofnarr",
    "path": "/crags/modling/ritterfels#4f6ea44a-bf35-5bea-b1a9-fe0ae23d6373",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Ritterfels | Raubritter",
@@ -5172,20 +6366,21 @@
    "crag": "Ritterfels",
    "wall": "Ritterfels",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080464,
+   "longitude": 16.266338,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "83655e61-1dc3-5e10-8303-0e00615a2132",
    "region_slug": "modling",
    "crag_slug": "ritterfels",
    "slug": "raubritter",
    "path": "/crags/modling/ritterfels#83655e61-1dc3-5e10-8303-0e00615a2132",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Ritterfels | Ritterfräulein",
@@ -5199,20 +6394,21 @@
    "crag": "Ritterfels",
    "wall": "Ritterfels",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.080464,
+   "longitude": 16.266338,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "371d031d-5e5d-55b9-98ff-72abd630a37a",
    "region_slug": "modling",
    "crag_slug": "ritterfels",
    "slug": "ritterfraulein",
    "path": "/crags/modling/ritterfels#371d031d-5e5d-55b9-98ff-72abd630a37a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Sturmwandl | Die Lange Entscheidung",
@@ -5226,20 +6422,21 @@
    "crag": "Sturmwandl",
    "wall": "Sturmwandl",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.079306,
+   "longitude": 16.271175,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "40958358-eb58-5ecc-8c5b-64a704a7564b",
    "region_slug": "modling",
    "crag_slug": "sturmwandl",
    "slug": "die-lange-entscheidung",
    "path": "/crags/modling/sturmwandl#40958358-eb58-5ecc-8c5b-64a704a7564b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Sturmwandl | Frühjahrsputz",
@@ -5253,20 +6450,21 @@
    "crag": "Sturmwandl",
    "wall": "Sturmwandl",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.079306,
+   "longitude": 16.271175,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0befb6f5-70e6-5c1a-bc76-658f4a9e348f",
    "region_slug": "modling",
    "crag_slug": "sturmwandl",
    "slug": "fruhjahrsputz",
    "path": "/crags/modling/sturmwandl#0befb6f5-70e6-5c1a-bc76-658f4a9e348f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Sturmwandl | Orkan",
@@ -5280,20 +6478,21 @@
    "crag": "Sturmwandl",
    "wall": "Sturmwandl",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.079306,
+   "longitude": 16.271175,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ba614466-d0e8-5d3a-af46-15e48aa91833",
    "region_slug": "modling",
    "crag_slug": "sturmwandl",
    "slug": "orkan",
    "path": "/crags/modling/sturmwandl#ba614466-d0e8-5d3a-af46-15e48aa91833",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Sturmwandl | Roger Rabbit",
@@ -5307,20 +6506,21 @@
    "crag": "Sturmwandl",
    "wall": "Sturmwandl",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.079306,
+   "longitude": 16.271175,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "30e6684b-80d5-5848-a35a-ae0415f16232",
    "region_slug": "modling",
    "crag_slug": "sturmwandl",
    "slug": "roger-rabbit",
    "path": "/crags/modling/sturmwandl#30e6684b-80d5-5848-a35a-ae0415f16232",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Sturmwandl | Seitenwind",
@@ -5334,20 +6534,21 @@
    "crag": "Sturmwandl",
    "wall": "Sturmwandl",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.079306,
+   "longitude": 16.271175,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5b3c970d-0e51-5ac3-9627-4781684769e6",
    "region_slug": "modling",
    "crag_slug": "sturmwandl",
    "slug": "seitenwind",
    "path": "/crags/modling/sturmwandl#5b3c970d-0e51-5ac3-9627-4781684769e6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "16093273-1f4b-5fad-8536-13d26c0a51bb",
   "name": "Kleiner Engelsberg",
@@ -8,8 +8,10 @@
   "region": "Fischauer Vorberge",
   "region_slug": "fischauer-vorberge",
   "route_count": 31,
+  "is_stub": false,
   "latitude": null,
   "longitude": null,
+  "coord_source": null,
   "grades": [
    "10",
    "10-",
@@ -32,7 +34,43 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/fischauer-vorberge/kleiner-engelsberg"
+  "path": "/crags/fischauer-vorberge/kleiner-engelsberg",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Kleiner+Engelsberg+Fischauer+Vorberge"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Kleiner+Engelsberg+Fischauer+Vorberge"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Kleiner+Engelsberg"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Kleiner+Engelsberg+Fischauer+Vorberge"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -49,18 +87,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c3278b30-908a-5b88-aa12-8dd0ab2571a8",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "alpinist",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#c3278b30-908a-5b88-aa12-8dd0ab2571a8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | Balla Balla",
@@ -76,18 +115,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "81215eaa-709f-5a63-abec-ef0c0f274b27",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "balla-balla",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#81215eaa-709f-5a63-abec-ef0c0f274b27",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | Dromedar",
@@ -103,18 +143,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "26f1e76f-c6b4-553a-9801-a74644e12108",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "dromedar",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#26f1e76f-c6b4-553a-9801-a74644e12108",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | Engelberg Humperdinck",
@@ -130,18 +171,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "28b51717-00e3-5216-b052-d0b723b79c0e",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "engelberg-humperdinck",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#28b51717-00e3-5216-b052-d0b723b79c0e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | Fang das Griff",
@@ -157,18 +199,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "988a6fea-9fc3-5840-b1ac-17f89557b871",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "fang-das-griff",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#988a6fea-9fc3-5840-b1ac-17f89557b871",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | Fleischwald",
@@ -184,18 +227,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "354c8a3e-1987-5b34-bf00-622f897b58ca",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "fleischwald",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#354c8a3e-1987-5b34-bf00-622f897b58ca",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | Kalium",
@@ -211,18 +255,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "137476c0-f214-55f2-9fd7-488b1122147a",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "kalium",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#137476c0-f214-55f2-9fd7-488b1122147a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | Kalte Finger",
@@ -238,18 +283,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "31098b74-c50d-5c54-9c82-56864c5b9fc7",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "kalte-finger",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#31098b74-c50d-5c54-9c82-56864c5b9fc7",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | Kamelbuckeln",
@@ -265,18 +311,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0e5cd21d-f104-5184-82cc-0bfa2d719dc6",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "kamelbuckeln",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#0e5cd21d-f104-5184-82cc-0bfa2d719dc6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | Kurzer Kamin (Kl.Engelsberg)",
@@ -292,18 +339,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e1e4d2c2-ff8e-582e-9a89-c41786012ff0",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "kurzer-kamin-kl-engelsberg",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#e1e4d2c2-ff8e-582e-9a89-c41786012ff0",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | Like Spain",
@@ -319,18 +367,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "755f94f8-4cc0-51c5-a6b1-c8dbde49ad00",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "like-spain",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#755f94f8-4cc0-51c5-a6b1-c8dbde49ad00",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | Lithium",
@@ -346,18 +395,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "6144fef9-ac3f-5260-91ec-5599261c9161",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "lithium",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#6144fef9-ac3f-5260-91ec-5599261c9161",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | Mac Gepp",
@@ -373,18 +423,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3f4350dc-b227-5cd1-bec2-e7ccb1aceec1",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "mac-gepp",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#3f4350dc-b227-5cd1-bec2-e7ccb1aceec1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | Muss man halt mögen",
@@ -400,18 +451,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "665ceb61-cb0e-5bb7-bdcd-b460a638c1e2",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "muss-man-halt-mogen",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#665ceb61-cb0e-5bb7-bdcd-b460a638c1e2",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | Namenlos (Kl.Engelsberg a)",
@@ -427,18 +479,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9c440bce-c735-5a0b-b765-bfb48202c070",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "namenlos-kl-engelsberg-a",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#9c440bce-c735-5a0b-b765-bfb48202c070",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | Namenlos (Kl.Engelsberg b)",
@@ -454,18 +507,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cfa86dbf-b81e-537c-bb4d-f91fd9fbd7c1",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "namenlos-kl-engelsberg-b",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#cfa86dbf-b81e-537c-bb4d-f91fd9fbd7c1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | Namenlos (Kl.Engelsberg c)",
@@ -481,18 +535,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "66dcddfa-d843-58cb-9295-b98b01f3507e",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "namenlos-kl-engelsberg-c",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#66dcddfa-d843-58cb-9295-b98b01f3507e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | Namenlos (Kl.Engelsberg d)",
@@ -508,18 +563,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "10fb3f5e-b5c0-5ae2-b787-64a8f4b3c5f5",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "namenlos-kl-engelsberg-d",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#10fb3f5e-b5c0-5ae2-b787-64a8f4b3c5f5",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | Pestpfeiler",
@@ -535,18 +591,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ab2b7430-7515-54f9-b5b6-9db8a9558094",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "pestpfeiler",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#ab2b7430-7515-54f9-b5b6-9db8a9558094",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | Please Release Me",
@@ -562,18 +619,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "153484dc-a084-5f11-adac-7a78b0df76bb",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "please-release-me",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#153484dc-a084-5f11-adac-7a78b0df76bb",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | Reisewinter",
@@ -589,18 +647,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "98641695-f3fb-5470-a45a-d7ed1fed0f75",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "reisewinter",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#98641695-f3fb-5470-a45a-d7ed1fed0f75",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | Ruckreisemanager",
@@ -616,18 +675,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4657c3a3-0924-5014-9082-338b84a41efa",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "ruckreisemanager",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#4657c3a3-0924-5014-9082-338b84a41efa",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | Schöner Wald",
@@ -643,18 +703,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f0247832-6602-540b-8504-5a05b59526d3",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "schoner-wald",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#f0247832-6602-540b-8504-5a05b59526d3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | Skaldensang",
@@ -670,18 +731,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "950165ff-2219-5a3e-8ab3-7368ae75e1f4",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "skaldensang",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#950165ff-2219-5a3e-8ab3-7368ae75e1f4",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | Slab & Mantle",
@@ -697,18 +759,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "dcc08125-3bd9-50be-b404-ca9caf0784ad",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "slab-mantle",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#dcc08125-3bd9-50be-b404-ca9caf0784ad",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | The Best of the Rest",
@@ -724,18 +787,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e0dee75b-e6e2-5cbd-b986-82d4fd7c4e36",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "the-best-of-the-rest",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#e0dee75b-e6e2-5cbd-b986-82d4fd7c4e36",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | This Is the End",
@@ -751,18 +815,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1eafaddc-5939-525c-9dd5-0607459eedd9",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "this-is-the-end",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#1eafaddc-5939-525c-9dd5-0607459eedd9",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | Traktor",
@@ -778,18 +843,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3067d998-012f-5c3d-8f73-f4c5af9dfcfb",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "traktor",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#3067d998-012f-5c3d-8f73-f4c5af9dfcfb",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | Und täglich grüsst das Murmeltier",
@@ -805,18 +871,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f15b4969-6eb3-5b8d-99d1-e41cc1829d69",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "und-taglich-grusst-das-murmeltier",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#f15b4969-6eb3-5b8d-99d1-e41cc1829d69",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | Waldpfad",
@@ -832,18 +899,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cb71b17a-0217-5366-bd75-4d0209bfb10f",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "waldpfad",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#cb71b17a-0217-5366-bd75-4d0209bfb10f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Fischauer Vorberge | Kleiner Engelsberg | Wolfsriss",
@@ -859,18 +927,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "91fc00ef-4b78-53cb-8457-49bc0e33617a",
    "region_slug": "fischauer-vorberge",
    "crag_slug": "kleiner-engelsberg",
    "slug": "wolfsriss",
    "path": "/crags/fischauer-vorberge/kleiner-engelsberg#91fc00ef-4b78-53cb-8457-49bc0e33617a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }

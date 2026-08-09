@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "95aa6a66-4991-58fa-a066-a3751ca65426",
   "name": "Scheiblingkirchner Wandl",
@@ -8,8 +8,10 @@
   "region": "Bucklige Welt",
   "region_slug": "bucklige-welt",
   "route_count": 21,
+  "is_stub": false,
   "latitude": 47.660037,
   "longitude": 16.138196,
+  "coord_source": "routes",
   "grades": [
    "10-",
    "5-",
@@ -27,7 +29,57 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/bucklige-welt/scheiblingkirchner-wandl"
+  "path": "/crags/bucklige-welt/scheiblingkirchner-wandl",
+  "osm": "relation/18218647",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18218647",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=47.65957&mlon=16.138991#map=16/47.65957/16.138991",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Scheiblingkirchner+Wandl+Bucklige+Welt"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Scheiblingkirchner+Wandl+Bucklige+Welt"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Scheiblingkirchner+Wandl"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Scheiblingkirchner+Wandl+Bucklige+Welt"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -44,18 +96,19 @@
    "source": "Keltenkalk",
    "latitude": 47.660037,
    "longitude": 16.138196,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8955746c-3a54-5ce4-9d16-e49134f55518",
    "region_slug": "bucklige-welt",
    "crag_slug": "scheiblingkirchner-wandl",
    "slug": "6meup",
    "path": "/crags/bucklige-welt/scheiblingkirchner-wandl#8955746c-3a54-5ce4-9d16-e49134f55518",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Scheiblingkirchner Wandl | Alles Porno",
@@ -71,18 +124,19 @@
    "source": "Keltenkalk",
    "latitude": 47.660037,
    "longitude": 16.138196,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2e4be831-d73a-5baa-a932-b3fd2bda0587",
    "region_slug": "bucklige-welt",
    "crag_slug": "scheiblingkirchner-wandl",
    "slug": "alles-porno",
    "path": "/crags/bucklige-welt/scheiblingkirchner-wandl#2e4be831-d73a-5baa-a932-b3fd2bda0587",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Scheiblingkirchner Wandl | Dagfin",
@@ -98,18 +152,19 @@
    "source": "Keltenkalk",
    "latitude": 47.660037,
    "longitude": 16.138196,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "38cc936c-c68f-58cf-b634-20062e3b5850",
    "region_slug": "bucklige-welt",
    "crag_slug": "scheiblingkirchner-wandl",
    "slug": "dagfin",
    "path": "/crags/bucklige-welt/scheiblingkirchner-wandl#38cc936c-c68f-58cf-b634-20062e3b5850",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Scheiblingkirchner Wandl | Herbstleyd",
@@ -125,18 +180,19 @@
    "source": "Keltenkalk",
    "latitude": 47.660037,
    "longitude": 16.138196,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ac651f68-da2b-51c8-948d-2ae4a30e2702",
    "region_slug": "bucklige-welt",
    "crag_slug": "scheiblingkirchner-wandl",
    "slug": "herbstleyd",
    "path": "/crags/bucklige-welt/scheiblingkirchner-wandl#ac651f68-da2b-51c8-948d-2ae4a30e2702",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Scheiblingkirchner Wandl | Im Trend der Zeit",
@@ -152,18 +208,19 @@
    "source": "Keltenkalk",
    "latitude": 47.660037,
    "longitude": 16.138196,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4016bec3-f0e8-53ed-ba80-ee1dd0c47d1e",
    "region_slug": "bucklige-welt",
    "crag_slug": "scheiblingkirchner-wandl",
    "slug": "im-trend-der-zeit",
    "path": "/crags/bucklige-welt/scheiblingkirchner-wandl#4016bec3-f0e8-53ed-ba80-ee1dd0c47d1e",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Scheiblingkirchner Wandl | Isili",
@@ -179,18 +236,19 @@
    "source": "Keltenkalk",
    "latitude": 47.660037,
    "longitude": 16.138196,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ddedad15-2751-580f-ad9c-7403bb79c977",
    "region_slug": "bucklige-welt",
    "crag_slug": "scheiblingkirchner-wandl",
    "slug": "isili",
    "path": "/crags/bucklige-welt/scheiblingkirchner-wandl#ddedad15-2751-580f-ad9c-7403bb79c977",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Scheiblingkirchner Wandl | Judas Iscariot",
@@ -206,18 +264,19 @@
    "source": "Keltenkalk",
    "latitude": 47.660037,
    "longitude": 16.138196,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "646e7ad7-71bf-5cab-a712-05a6f4b349f8",
    "region_slug": "bucklige-welt",
    "crag_slug": "scheiblingkirchner-wandl",
    "slug": "judas-iscariot",
    "path": "/crags/bucklige-welt/scheiblingkirchner-wandl#646e7ad7-71bf-5cab-a712-05a6f4b349f8",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Scheiblingkirchner Wandl | Letzte Ausfahrt Dagfin",
@@ -233,18 +292,19 @@
    "source": "Keltenkalk",
    "latitude": 47.660037,
    "longitude": 16.138196,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "192b708a-6f5d-5fa1-9d54-06c39c97b882",
    "region_slug": "bucklige-welt",
    "crag_slug": "scheiblingkirchner-wandl",
    "slug": "letzte-ausfahrt-dagfin",
    "path": "/crags/bucklige-welt/scheiblingkirchner-wandl#192b708a-6f5d-5fa1-9d54-06c39c97b882",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Scheiblingkirchner Wandl | Mayhem",
@@ -260,18 +320,19 @@
    "source": "Keltenkalk",
    "latitude": 47.660037,
    "longitude": 16.138196,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2ada0608-6bde-5bf9-a5a4-f9f83d181fef",
    "region_slug": "bucklige-welt",
    "crag_slug": "scheiblingkirchner-wandl",
    "slug": "mayhem",
    "path": "/crags/bucklige-welt/scheiblingkirchner-wandl#2ada0608-6bde-5bf9-a5a4-f9f83d181fef",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Scheiblingkirchner Wandl | Merlins Crack",
@@ -287,18 +348,19 @@
    "source": "Keltenkalk",
    "latitude": 47.660037,
    "longitude": 16.138196,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ff1b9acf-039e-5eec-80d8-06612275e873",
    "region_slug": "bucklige-welt",
    "crag_slug": "scheiblingkirchner-wandl",
    "slug": "merlins-crack",
    "path": "/crags/bucklige-welt/scheiblingkirchner-wandl#ff1b9acf-039e-5eec-80d8-06612275e873",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Scheiblingkirchner Wandl | Midian",
@@ -314,18 +376,19 @@
    "source": "Keltenkalk",
    "latitude": 47.660037,
    "longitude": 16.138196,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "066d9d29-689c-54d7-aaff-cb9b882466b3",
    "region_slug": "bucklige-welt",
    "crag_slug": "scheiblingkirchner-wandl",
    "slug": "midian",
    "path": "/crags/bucklige-welt/scheiblingkirchner-wandl#066d9d29-689c-54d7-aaff-cb9b882466b3",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Scheiblingkirchner Wandl | Midian Direkt",
@@ -341,18 +404,19 @@
    "source": "Keltenkalk",
    "latitude": 47.660037,
    "longitude": 16.138196,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "61b7323f-48de-5d6a-a633-d301069d4dd6",
    "region_slug": "bucklige-welt",
    "crag_slug": "scheiblingkirchner-wandl",
    "slug": "midian-direkt",
    "path": "/crags/bucklige-welt/scheiblingkirchner-wandl#61b7323f-48de-5d6a-a633-d301069d4dd6",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Scheiblingkirchner Wandl | Moonfog",
@@ -368,18 +432,19 @@
    "source": "Keltenkalk",
    "latitude": 47.660037,
    "longitude": 16.138196,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a926f577-0c74-5bb7-92ce-a429c2d0c84b",
    "region_slug": "bucklige-welt",
    "crag_slug": "scheiblingkirchner-wandl",
    "slug": "moonfog",
    "path": "/crags/bucklige-welt/scheiblingkirchner-wandl#a926f577-0c74-5bb7-92ce-a429c2d0c84b",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Scheiblingkirchner Wandl | Panzerdivision",
@@ -395,18 +460,19 @@
    "source": "Keltenkalk",
    "latitude": 47.660037,
    "longitude": 16.138196,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "65c68c1c-e83c-5cf8-8e57-745581783c09",
    "region_slug": "bucklige-welt",
    "crag_slug": "scheiblingkirchner-wandl",
    "slug": "panzerdivision",
    "path": "/crags/bucklige-welt/scheiblingkirchner-wandl#65c68c1c-e83c-5cf8-8e57-745581783c09",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Scheiblingkirchner Wandl | Paraplui",
@@ -422,18 +488,19 @@
    "source": "Keltenkalk",
    "latitude": 47.660037,
    "longitude": 16.138196,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "740be379-4809-508d-b44c-8736630a5355",
    "region_slug": "bucklige-welt",
    "crag_slug": "scheiblingkirchner-wandl",
    "slug": "paraplui",
    "path": "/crags/bucklige-welt/scheiblingkirchner-wandl#740be379-4809-508d-b44c-8736630a5355",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Scheiblingkirchner Wandl | Pfeift",
@@ -449,18 +516,19 @@
    "source": "Keltenkalk",
    "latitude": 47.660037,
    "longitude": 16.138196,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5da5a86c-b30e-5070-a717-9439b45b575d",
    "region_slug": "bucklige-welt",
    "crag_slug": "scheiblingkirchner-wandl",
    "slug": "pfeift",
    "path": "/crags/bucklige-welt/scheiblingkirchner-wandl#5da5a86c-b30e-5070-a717-9439b45b575d",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Scheiblingkirchner Wandl | Quintessence",
@@ -476,18 +544,19 @@
    "source": "Keltenkalk",
    "latitude": 47.660037,
    "longitude": 16.138196,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cb876186-75ee-5300-b300-1b44e7180062",
    "region_slug": "bucklige-welt",
    "crag_slug": "scheiblingkirchner-wandl",
    "slug": "quintessence",
    "path": "/crags/bucklige-welt/scheiblingkirchner-wandl#cb876186-75ee-5300-b300-1b44e7180062",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Scheiblingkirchner Wandl | Thors Wohnsitz",
@@ -503,18 +572,19 @@
    "source": "Keltenkalk",
    "latitude": 47.660037,
    "longitude": 16.138196,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "55fe7a13-577c-5a03-a447-0ace61aee2f5",
    "region_slug": "bucklige-welt",
    "crag_slug": "scheiblingkirchner-wandl",
    "slug": "thors-wohnsitz",
    "path": "/crags/bucklige-welt/scheiblingkirchner-wandl#55fe7a13-577c-5a03-a447-0ace61aee2f5",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Scheiblingkirchner Wandl | Tod durch Pentagramm",
@@ -530,18 +600,19 @@
    "source": "Keltenkalk",
    "latitude": 47.660037,
    "longitude": 16.138196,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9875cca9-cbf4-519c-8114-af7aa561614d",
    "region_slug": "bucklige-welt",
    "crag_slug": "scheiblingkirchner-wandl",
    "slug": "tod-durch-pentagramm",
    "path": "/crags/bucklige-welt/scheiblingkirchner-wandl#9875cca9-cbf4-519c-8114-af7aa561614d",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Scheiblingkirchner Wandl | Wabenkante",
@@ -557,18 +628,19 @@
    "source": "Keltenkalk",
    "latitude": 47.660037,
    "longitude": 16.138196,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "93e4431e-f9ea-5a33-9659-d7835a8f36b8",
    "region_slug": "bucklige-welt",
    "crag_slug": "scheiblingkirchner-wandl",
    "slug": "wabenkante",
    "path": "/crags/bucklige-welt/scheiblingkirchner-wandl#93e4431e-f9ea-5a33-9659-d7835a8f36b8",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Bucklige Welt | Scheiblingkirchner Wandl | Wadi Rum",
@@ -584,18 +656,19 @@
    "source": "Keltenkalk",
    "latitude": 47.660037,
    "longitude": 16.138196,
+   "coord_source": "route",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e5e895d7-39f6-50a1-a897-2331a1b4b551",
    "region_slug": "bucklige-welt",
    "crag_slug": "scheiblingkirchner-wandl",
    "slug": "wadi-rum",
    "path": "/crags/bucklige-welt/scheiblingkirchner-wandl#e5e895d7-39f6-50a1-a897-2331a1b4b551",
-   "has_coords": true,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

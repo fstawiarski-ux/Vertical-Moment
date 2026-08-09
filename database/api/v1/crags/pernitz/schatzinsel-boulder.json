@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "3d9f5906-7464-5237-9627-99f79ffe06fa",
   "name": "Schatzinsel (Boulder)",
@@ -8,8 +8,10 @@
   "region": "Pernitz",
   "region_slug": "pernitz",
   "route_count": 16,
+  "is_stub": false,
   "latitude": null,
   "longitude": null,
+  "coord_source": null,
   "grades": [
    "6a",
    "6b",
@@ -23,7 +25,43 @@
   "disciplines": [
    "boulder"
   ],
-  "path": "/crags/pernitz/schatzinsel-boulder"
+  "path": "/crags/pernitz/schatzinsel-boulder",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Schatzinsel+%28Boulder%29+Pernitz"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Schatzinsel+%28Boulder%29+Pernitz"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Schatzinsel+%28Boulder%29"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Schatzinsel+%28Boulder%29+Pernitz"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -40,18 +78,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c476d986-2534-5397-b0d5-4c3f6d4a7602",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "calisto",
    "path": "/crags/pernitz/schatzinsel-boulder#c476d986-2534-5397-b0d5-4c3f6d4a7602",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | Fantasma de Luxe",
@@ -67,18 +106,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "5996f650-a0ab-5817-8cbc-20b85ca4d9a1",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "fantasma-de-luxe",
    "path": "/crags/pernitz/schatzinsel-boulder#5996f650-a0ab-5817-8cbc-20b85ca4d9a1",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | Gleichgewichtsstörung",
@@ -94,18 +134,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b169a362-f890-5b1f-891a-c1d2c1d00a40",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "gleichgewichtsstorung",
    "path": "/crags/pernitz/schatzinsel-boulder#b169a362-f890-5b1f-891a-c1d2c1d00a40",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | Justice",
@@ -121,18 +162,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7fe7d414-9003-55e9-9a73-e4cbd78f42fd",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "justice",
    "path": "/crags/pernitz/schatzinsel-boulder#7fe7d414-9003-55e9-9a73-e4cbd78f42fd",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | Like an Egyptian",
@@ -148,18 +190,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4b9c7780-34b2-5a86-aa4c-e6ba88f07218",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "like-an-egyptian",
    "path": "/crags/pernitz/schatzinsel-boulder#4b9c7780-34b2-5a86-aa4c-e6ba88f07218",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | Mülhalde",
@@ -175,18 +218,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "90ce1420-8ead-519b-bf51-31ac59c915bc",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "mulhalde",
    "path": "/crags/pernitz/schatzinsel-boulder#90ce1420-8ead-519b-bf51-31ac59c915bc",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | No Justice",
@@ -202,18 +246,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a24c20ff-3356-52f6-8906-eafbf5a12b38",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "no-justice",
    "path": "/crags/pernitz/schatzinsel-boulder#a24c20ff-3356-52f6-8906-eafbf5a12b38",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | Romantisch Sterben",
@@ -229,18 +274,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "aa78e324-e6c0-5f8e-a13c-9dfab2a4b543",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "romantisch-sterben",
    "path": "/crags/pernitz/schatzinsel-boulder#aa78e324-e6c0-5f8e-a13c-9dfab2a4b543",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | Sacred Spirit",
@@ -256,18 +302,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ea961fa4-1e45-591f-b54c-764bd4bd3ca5",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "sacred-spirit",
    "path": "/crags/pernitz/schatzinsel-boulder#ea961fa4-1e45-591f-b54c-764bd4bd3ca5",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | Sauer",
@@ -283,18 +330,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "72149d27-50b8-5474-9a27-1f410d0b6529",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "sauer",
    "path": "/crags/pernitz/schatzinsel-boulder#72149d27-50b8-5474-9a27-1f410d0b6529",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | Squeezing My Ibanez",
@@ -310,18 +358,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c0f5a60a-e26a-5ee2-8a04-5df819d05b5f",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "squeezing-my-ibanez",
    "path": "/crags/pernitz/schatzinsel-boulder#c0f5a60a-e26a-5ee2-8a04-5df819d05b5f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | Things I've Seen",
@@ -337,18 +386,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2f2773be-272b-5421-9294-6afe431bf7c6",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "things-i-ve-seen",
    "path": "/crags/pernitz/schatzinsel-boulder#2f2773be-272b-5421-9294-6afe431bf7c6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | Traverse (Schatzinsel)",
@@ -364,18 +414,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "b2decd63-5e27-5a36-b240-956d910c044b",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "traverse-schatzinsel",
    "path": "/crags/pernitz/schatzinsel-boulder#b2decd63-5e27-5a36-b240-956d910c044b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | You Feel Good",
@@ -391,18 +442,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "76889f72-6957-597f-9fa5-c5c20f15d983",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "you-feel-good",
    "path": "/crags/pernitz/schatzinsel-boulder#76889f72-6957-597f-9fa5-c5c20f15d983",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | Zeck Muss Weg",
@@ -418,18 +470,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fe2ebdb3-783d-5c15-91e2-9fa62f7f3021",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "zeck-muss-weg",
    "path": "/crags/pernitz/schatzinsel-boulder#fe2ebdb3-783d-5c15-91e2-9fa62f7f3021",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Pernitz | Schatzinsel (Boulder) | Zeckenattacke",
@@ -445,18 +498,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "eb38f16c-1e34-5fb2-b4f7-1842b15a49c7",
    "region_slug": "pernitz",
    "crag_slug": "schatzinsel-boulder",
    "slug": "zeckenattacke",
    "path": "/crags/pernitz/schatzinsel-boulder#eb38f16c-1e34-5fb2-b4f7-1842b15a49c7",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }

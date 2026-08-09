@@ -1,55 +1,64 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "40f5807e-4ecc-5bc5-bab0-2f006d018dd5",
   "name": "Sektor 7 - Rechtsaussen",
   "slug": "sektor-7-rechtsaussen",
   "region": "Hirschwände",
   "region_slug": "hirschwande",
-  "route_count": 6,
+  "route_count": 5,
+  "is_stub": false,
   "latitude": null,
   "longitude": null,
+  "coord_source": null,
   "grades": [
-   "6-",
    "7+",
    "7-",
    "8"
   ],
   "disciplines": [
-   "multipitch",
    "sport"
   ],
-  "path": "/crags/hirschwande/sektor-7-rechtsaussen"
+  "path": "/crags/hirschwande/sektor-7-rechtsaussen",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Sektor+7+-+Rechtsaussen+Hirschw%C3%A4nde"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Sektor+7+-+Rechtsaussen+Hirschw%C3%A4nde"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Sektor+7+-+Rechtsaussen"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Sektor+7+-+Rechtsaussen+Hirschw%C3%A4nde"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
-  {
-   "row_key": "Hirschwände | Sektor 7 - Rechtsaussen | Direkter Ostgrat",
-   "name": "Direkter Ostgrat",
-   "grade": "6-",
-   "grade_band": "5-7",
-   "grade_system": "UIAA",
-   "discipline": "multipitch",
-   "region": "Hirschwände",
-   "area": "Hirschwände",
-   "crag": "Sektor 7 - Rechtsaussen",
-   "wall": "Sektor 7 - Rechtsaussen",
-   "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
-   "notion_page_id": null,
-   "workflow_status": "to create",
-   "provenance": [
-    "master"
-   ],
-   "id": "93b8af63-d91d-5352-8010-3a852ff60e87",
-   "region_slug": "hirschwande",
-   "crag_slug": "sektor-7-rechtsaussen",
-   "slug": "direkter-ostgrat",
-   "path": "/crags/hirschwande/sektor-7-rechtsaussen#93b8af63-d91d-5352-8010-3a852ff60e87",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
-  },
   {
    "row_key": "Hirschwände | Sektor 7 - Rechtsaussen | Eintritt Frei",
    "name": "Eintritt Frei",
@@ -64,18 +73,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2482479a-0d7d-57d5-82f0-361e165828bb",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-7-rechtsaussen",
    "slug": "eintritt-frei",
    "path": "/crags/hirschwande/sektor-7-rechtsaussen#2482479a-0d7d-57d5-82f0-361e165828bb",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 7 - Rechtsaussen | May Gods Love Be With You",
@@ -91,18 +101,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c7c30fbf-269c-5e3b-ad16-428d7e50931a",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-7-rechtsaussen",
    "slug": "may-gods-love-be-with-you",
    "path": "/crags/hirschwande/sektor-7-rechtsaussen#c7c30fbf-269c-5e3b-ad16-428d7e50931a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 7 - Rechtsaussen | Skidroad",
@@ -118,18 +129,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "29f8813b-5eb7-5a4f-b0fd-6c144d66068f",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-7-rechtsaussen",
    "slug": "skidroad",
    "path": "/crags/hirschwande/sektor-7-rechtsaussen#29f8813b-5eb7-5a4f-b0fd-6c144d66068f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 7 - Rechtsaussen | Sunset Boulevard",
@@ -145,18 +157,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8f5e227d-1c69-5f05-bd40-c4c46e0f2435",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-7-rechtsaussen",
    "slug": "sunset-boulevard",
    "path": "/crags/hirschwande/sektor-7-rechtsaussen#8f5e227d-1c69-5f05-bd40-c4c46e0f2435",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Hirschwände | Sektor 7 - Rechtsaussen | Ut Aliquod Fiat",
@@ -172,18 +185,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "to create",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "57298754-e237-5477-abd2-7589be9d7701",
    "region_slug": "hirschwande",
    "crag_slug": "sektor-7-rechtsaussen",
    "slug": "ut-aliquod-fiat",
    "path": "/crags/hirschwande/sektor-7-rechtsaussen#57298754-e237-5477-abd2-7589be9d7701",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }

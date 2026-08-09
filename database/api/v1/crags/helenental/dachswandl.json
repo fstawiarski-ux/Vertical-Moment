@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "bf0fd66d-4720-5ed0-98ca-227c5c6425ac",
   "name": "Dachswandl",
@@ -8,8 +8,10 @@
   "region": "Helenental",
   "region_slug": "helenental",
   "route_count": 7,
-  "latitude": null,
-  "longitude": null,
+  "is_stub": false,
+  "latitude": 48.016749,
+  "longitude": 16.197253,
+  "coord_source": "routes",
   "grades": [
    "3+",
    "4+",
@@ -20,7 +22,57 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/helenental/dachswandl"
+  "path": "/crags/helenental/dachswandl",
+  "osm": "relation/19600250",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/19600250",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=48.016749&mlon=16.197253#map=16/48.016749/16.197253",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Dachswandl+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Dachswandl+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Dachswandl"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Dachswandl+Helenental"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -35,20 +87,21 @@
    "crag": "Dachswandl",
    "wall": "Dachswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.016749,
+   "longitude": 16.197253,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "004d4410-f96a-5f87-add6-80ae90a9573c",
    "region_slug": "helenental",
    "crag_slug": "dachswandl",
    "slug": "bissiger-dachs",
    "path": "/crags/helenental/dachswandl#004d4410-f96a-5f87-add6-80ae90a9573c",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Dachswandl | Bröselriss",
@@ -62,20 +115,21 @@
    "crag": "Dachswandl",
    "wall": "Dachswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.016749,
+   "longitude": 16.197253,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "937c5dfa-d185-589e-a046-0df09cc0aa42",
    "region_slug": "helenental",
    "crag_slug": "dachswandl",
    "slug": "broselriss",
    "path": "/crags/helenental/dachswandl#937c5dfa-d185-589e-a046-0df09cc0aa42",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Dachswandl | Dachsbeute",
@@ -89,20 +143,21 @@
    "crag": "Dachswandl",
    "wall": "Dachswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.016749,
+   "longitude": 16.197253,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "74901898-65aa-51ea-9b76-ffc079b8c88e",
    "region_slug": "helenental",
    "crag_slug": "dachswandl",
    "slug": "dachsbeute",
    "path": "/crags/helenental/dachswandl#74901898-65aa-51ea-9b76-ffc079b8c88e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Dachswandl | Dachsfalle",
@@ -116,20 +171,21 @@
    "crag": "Dachswandl",
    "wall": "Dachswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.016749,
+   "longitude": 16.197253,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cfae7ebe-0a48-523d-8739-1e079701b9d6",
    "region_slug": "helenental",
    "crag_slug": "dachswandl",
    "slug": "dachsfalle",
    "path": "/crags/helenental/dachswandl#cfae7ebe-0a48-523d-8739-1e079701b9d6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Dachswandl | Dachsfell",
@@ -143,20 +199,21 @@
    "crag": "Dachswandl",
    "wall": "Dachswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.016749,
+   "longitude": 16.197253,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4c1393bd-b897-5ba8-b413-6330dbb8a510",
    "region_slug": "helenental",
    "crag_slug": "dachswandl",
    "slug": "dachsfell",
    "path": "/crags/helenental/dachswandl#4c1393bd-b897-5ba8-b413-6330dbb8a510",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Dachswandl | Unterarmalarm",
@@ -170,20 +227,21 @@
    "crag": "Dachswandl",
    "wall": "Dachswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.016749,
+   "longitude": 16.197253,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "4fddd67b-c4ca-555c-ad6e-959406224428",
    "region_slug": "helenental",
    "crag_slug": "dachswandl",
    "slug": "unterarmalarm",
    "path": "/crags/helenental/dachswandl#4fddd67b-c4ca-555c-ad6e-959406224428",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Helenental | Dachswandl | Wilder Dachs",
@@ -197,20 +255,21 @@
    "crag": "Dachswandl",
    "wall": "Dachswandl",
    "source": "Österreich Ost",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.016749,
+   "longitude": 16.197253,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "bce2e883-7132-535d-ab58-2a2249aa0bb3",
    "region_slug": "helenental",
    "crag_slug": "dachswandl",
    "slug": "wilder-dachs",
    "path": "/crags/helenental/dachswandl#bce2e883-7132-535d-ab58-2a2249aa0bb3",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

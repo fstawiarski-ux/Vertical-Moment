@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "bcc07e30-6a98-5769-b309-4b480c65cf22",
   "name": "Glocknergrat",
@@ -8,8 +8,10 @@
   "region": "Mödling",
   "region_slug": "modling",
   "route_count": 30,
-  "latitude": null,
-  "longitude": null,
+  "is_stub": false,
+  "latitude": 48.082238,
+  "longitude": 16.276261,
+  "coord_source": "routes",
   "grades": [
    "3",
    "3+",
@@ -28,7 +30,57 @@
   "disciplines": [
    "sport"
   ],
-  "path": "/crags/modling/glocknergrat"
+  "path": "/crags/modling/glocknergrat",
+  "osm": "relation/18166682",
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "exact",
+    "label": "OpenStreetMap",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/relation/18166682",
+    "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
+   },
+   {
+    "kind": "exact",
+    "label": "Open in maps",
+    "domain": "openstreetmap.org",
+    "url": "https://www.openstreetmap.org/?mlat=48.082238&mlon=16.276261#map=16/48.082238/16.276261",
+    "note": "Approach and parking."
+   },
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Glocknergrat+M%C3%B6dling"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Glocknergrat+M%C3%B6dling"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Glocknergrat"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Glocknergrat+M%C3%B6dling"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -43,20 +95,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "288dcbe6-a5b1-569b-9a9a-261d7a9cd18b",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "aids-oder-geht-s",
    "path": "/crags/modling/glocknergrat#288dcbe6-a5b1-569b-9a9a-261d7a9cd18b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Blauer Portugieser",
@@ -70,20 +123,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "24eb3f26-3ca1-5566-8d0f-2b221ebe8448",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "blauer-portugieser",
    "path": "/crags/modling/glocknergrat#24eb3f26-3ca1-5566-8d0f-2b221ebe8448",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Dornröschen",
@@ -97,20 +151,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "42b59505-96ef-5cff-927b-4335d94107ef",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "dornroschen",
    "path": "/crags/modling/glocknergrat#42b59505-96ef-5cff-927b-4335d94107ef",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Duo Links",
@@ -124,20 +179,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "61faec89-2033-533d-b663-667e4cc80db8",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "duo-links",
    "path": "/crags/modling/glocknergrat#61faec89-2033-533d-b663-667e4cc80db8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Duo Rechts",
@@ -151,20 +207,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e152b799-d7c6-5ec5-8573-dada9351bceb",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "duo-rechts",
    "path": "/crags/modling/glocknergrat#e152b799-d7c6-5ec5-8573-dada9351bceb",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Fiaker",
@@ -178,20 +235,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "72d72f87-feff-5e35-bfa1-2551e0ae41ed",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "fiaker",
    "path": "/crags/modling/glocknergrat#72d72f87-feff-5e35-bfa1-2551e0ae41ed",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Frühling",
@@ -205,20 +263,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "71e0e150-3946-57c4-ad7d-bc03a6d8ff79",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "fruhling",
    "path": "/crags/modling/glocknergrat#71e0e150-3946-57c4-ad7d-bc03a6d8ff79",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Frühschoppen",
@@ -232,20 +291,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "ad2f7845-ae10-54ff-9646-4222190e32d8",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "fruhschoppen",
    "path": "/crags/modling/glocknergrat#ad2f7845-ae10-54ff-9646-4222190e32d8",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Gratüberschreitung",
@@ -259,20 +319,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3dc8cc0d-e75c-5588-8167-1dac933df55a",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "gratuberschreitung",
    "path": "/crags/modling/glocknergrat#3dc8cc0d-e75c-5588-8167-1dac933df55a",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Kleiner Gerhard",
@@ -286,20 +347,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "f4e7f450-d652-554e-a9db-54fa98082337",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "kleiner-gerhard",
    "path": "/crags/modling/glocknergrat#f4e7f450-d652-554e-a9db-54fa98082337",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Kleiner Hansi",
@@ -313,20 +375,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "c3c40146-e06e-5297-be53-6f69c66a6850",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "kleiner-hansi",
    "path": "/crags/modling/glocknergrat#c3c40146-e06e-5297-be53-6f69c66a6850",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Kleiner Kurti",
@@ -340,20 +403,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "66e8d4f7-0635-531b-ae2a-85256314b49e",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "kleiner-kurti",
    "path": "/crags/modling/glocknergrat#66e8d4f7-0635-531b-ae2a-85256314b49e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Locker vom Hocker",
@@ -367,20 +431,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "8e90410e-3244-52e8-b33f-841e860289ae",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "locker-vom-hocker",
    "path": "/crags/modling/glocknergrat#8e90410e-3244-52e8-b33f-841e860289ae",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Neue Schreams'n",
@@ -394,20 +459,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "0f594555-54ef-5d4b-bb0f-7f37b89bec5f",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "neue-schreams-n",
    "path": "/crags/modling/glocknergrat#0f594555-54ef-5d4b-bb0f-7f37b89bec5f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Noch Einfacher",
@@ -421,20 +487,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "2997b6f5-edd1-5c47-85a9-b99b6a5a8571",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "noch-einfacher",
    "path": "/crags/modling/glocknergrat#2997b6f5-edd1-5c47-85a9-b99b6a5a8571",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Nr 20",
@@ -448,20 +515,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3f515bfe-f349-5c95-83bc-e7132bab541e",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "nr-20",
    "path": "/crags/modling/glocknergrat#3f515bfe-f349-5c95-83bc-e7132bab541e",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Nr 21 (keine Haken)",
@@ -475,20 +543,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "498eb02f-d4e8-5614-9ca1-bcc8d22bd5fc",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "nr-21-keine-haken",
    "path": "/crags/modling/glocknergrat#498eb02f-d4e8-5614-9ca1-bcc8d22bd5fc",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Nr 26",
@@ -502,20 +571,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "370fcc15-3ac9-5f5b-a0b0-838c722d6e52",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "nr-26",
    "path": "/crags/modling/glocknergrat#370fcc15-3ac9-5f5b-a0b0-838c722d6e52",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Nr 29",
@@ -529,20 +599,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "28018497-8ff1-50b1-920e-c412a5194af6",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "nr-29",
    "path": "/crags/modling/glocknergrat#28018497-8ff1-50b1-920e-c412a5194af6",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Nr 8",
@@ -556,20 +627,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "84cc3756-9ae6-5d79-836f-483b08001f31",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "nr-8",
    "path": "/crags/modling/glocknergrat#84cc3756-9ae6-5d79-836f-483b08001f31",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Pferdehölle",
@@ -583,20 +655,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "9443f957-5d43-5a88-87c4-4e782b90814b",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "pferdeholle",
    "path": "/crags/modling/glocknergrat#9443f957-5d43-5a88-87c4-4e782b90814b",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Rote Spur",
@@ -610,20 +683,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "67df3ea3-21e4-546a-9b78-45dbe6e40a9f",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "rote-spur",
    "path": "/crags/modling/glocknergrat#67df3ea3-21e4-546a-9b78-45dbe6e40a9f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Sommer",
@@ -637,20 +711,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "92e2b3b8-ec6a-5547-9a90-17ce9b889eaa",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "sommer",
    "path": "/crags/modling/glocknergrat#92e2b3b8-ec6a-5547-9a90-17ce9b889eaa",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | The Edge",
@@ -664,20 +739,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "143d1e65-6ff7-5385-a2de-afef51710049",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "the-edge",
    "path": "/crags/modling/glocknergrat#143d1e65-6ff7-5385-a2de-afef51710049",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Variante",
@@ -691,20 +767,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "cd52fcc2-599c-51af-bd54-37c02a2054ce",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "variante",
    "path": "/crags/modling/glocknergrat#cd52fcc2-599c-51af-bd54-37c02a2054ce",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Westwandplatte",
@@ -718,20 +795,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "e8bfc6cd-e407-58c2-ad7d-5b8357e15a93",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "westwandplatte",
    "path": "/crags/modling/glocknergrat#e8bfc6cd-e407-58c2-ad7d-5b8357e15a93",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Winter",
@@ -745,20 +823,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "3a356d7a-101b-5b9a-944a-9982f3f32e15",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "winter",
    "path": "/crags/modling/glocknergrat#3a356d7a-101b-5b9a-944a-9982f3f32e15",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Winterriss",
@@ -772,20 +851,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "fe131133-3e2d-553d-ac76-09d8305520df",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "winterriss",
    "path": "/crags/modling/glocknergrat#fe131133-3e2d-553d-ac76-09d8305520df",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Zeitgeisterfahrer",
@@ -799,20 +879,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "1af29a28-cf06-5cf6-9bb0-052cba6fef09",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "zeitgeisterfahrer",
    "path": "/crags/modling/glocknergrat#1af29a28-cf06-5cf6-9bb0-052cba6fef09",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   },
   {
    "row_key": "Mödling | Glocknergrat | Zu Einfach",
@@ -826,20 +907,21 @@
    "crag": "Glocknergrat",
    "wall": "Glocknergrat",
    "source": "Keltenkalk",
-   "latitude": null,
-   "longitude": null,
+   "latitude": 48.082238,
+   "longitude": 16.276261,
+   "coord_source": "crag",
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "02b5b6f3-1e99-5c44-b8dd-c2e411284e8f",
    "region_slug": "modling",
    "crag_slug": "glocknergrat",
    "slug": "zu-einfach",
    "path": "/crags/modling/glocknergrat#02b5b6f3-1e99-5c44-b8dd-c2e411284e8f",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": true
   }
  ]
 }

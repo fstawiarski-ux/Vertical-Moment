@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T09:11:05+00:00",
+ "generated": "2026-08-09T13:29:28+00:00",
  "crag": {
   "id": "9f9e14e4-9359-5e8c-b045-a9ad785177ad",
   "name": "Rum (Boulder)",
@@ -8,8 +8,10 @@
   "region": "Helenental",
   "region_slug": "helenental",
   "route_count": 3,
+  "is_stub": false,
   "latitude": null,
   "longitude": null,
+  "coord_source": null,
   "grades": [
    "6a",
    "6b",
@@ -18,7 +20,43 @@
   "disciplines": [
    "boulder"
   ],
-  "path": "/crags/helenental/rum-boulder"
+  "path": "/crags/helenental/rum-boulder",
+  "osm": null,
+  "rock": null,
+  "website": null,
+  "topo": null,
+  "wikimedia": null,
+  "links": [
+   {
+    "kind": "search",
+    "label": "bergsteigen.com",
+    "domain": "bergsteigen.com",
+    "note": "Topos, approach and conditions.",
+    "url": "https://duckduckgo.com/?q=site%3Abergsteigen.com+Rum+%28Boulder%29+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "theCrag",
+    "domain": "thecrag.com",
+    "note": "Community route database.",
+    "url": "https://duckduckgo.com/?q=site%3Athecrag.com+Rum+%28Boulder%29+Helenental"
+   },
+   {
+    "kind": "search",
+    "label": "27crags",
+    "domain": "27crags.com",
+    "note": "Topos and photos.",
+    "url": "https://duckduckgo.com/?q=site%3A27crags.com+Rum+%28Boulder%29"
+   },
+   {
+    "kind": "search",
+    "label": "komoot",
+    "domain": "komoot.com",
+    "note": "Approach tracks and GPX.",
+    "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Rum+%28Boulder%29+Helenental"
+   }
+  ],
+  "has_exact_links": false
  },
  "routes": [
   {
@@ -35,18 +73,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "7a9eae65-d4bd-5cac-be4d-4fb50d563a86",
    "region_slug": "helenental",
    "crag_slug": "rum-boulder",
    "slug": "bier",
    "path": "/crags/helenental/rum-boulder#7a9eae65-d4bd-5cac-be4d-4fb50d563a86",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Helenental | Rum (Boulder) | Pezi Bär",
@@ -62,18 +101,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "35fd2d09-dfc9-5063-83f0-3f8375e0c5f2",
    "region_slug": "helenental",
    "crag_slug": "rum-boulder",
    "slug": "pezi-bar",
    "path": "/crags/helenental/rum-boulder#35fd2d09-dfc9-5063-83f0-3f8375e0c5f2",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   },
   {
    "row_key": "Helenental | Rum (Boulder) | Rum",
@@ -89,18 +129,19 @@
    "source": "Österreich Ost",
    "latitude": null,
    "longitude": null,
+   "coord_source": null,
    "notion_page_id": null,
    "workflow_status": "review (Helenental) — new",
+   "verification_status": "imported-unverified",
    "provenance": [
-    "master"
+    "canonical"
    ],
    "id": "a8eab2a5-3388-5967-a7c9-757cc055f415",
    "region_slug": "helenental",
    "crag_slug": "rum-boulder",
    "slug": "rum",
    "path": "/crags/helenental/rum-boulder#a8eab2a5-3388-5967-a7c9-757cc055f415",
-   "has_coords": false,
-   "verification_status": "imported-unverified"
+   "has_coords": false
   }
  ]
 }
