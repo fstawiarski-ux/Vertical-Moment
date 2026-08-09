@@ -8,10 +8,8 @@ import PhotographyHero from './components/photography-hero';
 import PhotographyGallery from './components/photography-gallery';
 import PhotographyRail from './components/photography-rail';
 import PhotographyReveal from './components/photography-reveal';
-import PhotographyTheme from './components/photography-theme';
 import PhotographyLayered from './components/photography-layered';
 import { spareScene } from './data/layered-photos';
-import PhotographyModels from './components/photography-models';
 
 export const metadata: Metadata = {
   title: 'Vertical Moment — Climbing photography, Vienna',
@@ -474,41 +472,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* --------------------------------------------------------- 3D lab */}
-      <section className={styles.lab} id="lab">
-        <div className={styles.labBg}>
-          <img
-            src="/photography/lab/lab-texture.webp"
-            alt=""
-            width={1400}
-            height={1400}
-            loading="lazy"
-            aria-hidden="true"
-          />
-        </div>
-        <div className={styles.labTint} />
-        <div className={`${styles.wrap} ${styles.labGrid}`}>
-          <div>
-            <p className={`${styles.eyebrow} ${styles.onDeep}`}>Vertical Moment Collective</p>
-            <h2>3D Lab — the wall, rebuilt.</h2>
-            <p>
-              Walls rebuilt from photo sets and put on the page as geometry you can turn in your hands. Pick a sector,
-              drag to orbit, scroll to come in close — the same crags the photographs above were shot on.
-            </p>
-            <ul>
-              <li>Crag models in GLB, straight in the browser — nothing to install</li>
-              <li>Route lines, grades and bolt counts landing on the geometry next</li>
-              <li>Built from the same photo sets as the portfolio</li>
-              <li>Open topo data for the crags around Vienna</li>
-            </ul>
-            <a className={styles.ghost} href="/nasenwand-concepts">
-              Explore the Nasenwand study
-            </a>
-          </div>
-          <PhotographyModels />
-        </div>
-      </section>
-
       {/* ------------------------------------------------------------ faq */}
       <section className={styles.faq}>
         <div className={styles.wrap}>
@@ -579,7 +542,7 @@ export default function Page() {
             <a href="https://www.twitch.tv/ineedbooz" rel="noreferrer noopener" target="_blank">
               Twitch
             </a>
-            <a href="/explore">Explore climbing</a>
+            <a href="/explore">Climbers Lounge</a>
             <span>Vienna, AT</span>
           </div>
         </div>
@@ -608,9 +571,6 @@ export default function Page() {
                   <a href="#about">About</a>
                 </li>
                 <li>
-                  <a href="#lab">3D Lab</a>
-                </li>
-                <li>
                   <a href="#contact">Contact</a>
                 </li>
               </ul>
@@ -637,16 +597,7 @@ export default function Page() {
               <h4>Collective</h4>
               <ul>
                 <li>
-                  <a href="/explore">Explore crags</a>
-                </li>
-                <li>
-                  <a href="/technology">Technology</a>
-                </li>
-                <li>
-                  <a href="/report">Report a route</a>
-                </li>
-                <li>
-                  <a href="/contribute">Contribute</a>
+                  <a href="/explore">Climbers Lounge</a>
                 </li>
               </ul>
             </div>
@@ -657,8 +608,6 @@ export default function Page() {
           </div>
         </div>
       </footer>
-
-      <PhotographyTheme />
     </main>
   );
 }

@@ -8,14 +8,13 @@ const LINKS: { href: string; label: string }[] = [
   { href: '#approach', label: 'Approach' },
   { href: '#services', label: 'Services' },
   { href: '#about', label: 'About' },
-  { href: '#lab', label: '3D Lab' },
-  { href: '/vision/wall-reveal', label: 'Vision' },
   { href: '#contact', label: 'Contact' },
 ];
 
 export default function PhotographyNav() {
   const [solid, setSolid] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [dark, setDark] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setSolid(window.scrollY > window.innerHeight * 0.8);
@@ -33,6 +32,22 @@ export default function PhotographyNav() {
     return () => document.removeEventListener('keydown', onKey);
   }, [menuOpen]);
 
+  useEffect(() => {
+    setDark(document.documentElement.getAttribute('data-theme') === 'dark');
+  }, []);
+
+  function toggleTheme() {
+    const next = !dark;
+    setDark(next);
+    const t = next ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', t);
+    try {
+      window.localStorage.setItem('vm-theme', t);
+    } catch {
+      /* storage unavailable — theme still applies for this visit */
+    }
+  }
+
   return (
     <>
       <header className={`${styles.nav} ${solid ? styles.navSolid : ''}`}>
@@ -47,8 +62,17 @@ export default function PhotographyNav() {
             </a>
           ))}
           <a className={styles.pill} href="/explore">
-            Explore climbing
+            Climbers Lounge
           </a>
+          <button
+            type="button"
+            className={styles.lnk}
+            onClick={toggleTheme}
+            aria-label="Toggle light/dark mode"
+            aria-pressed={dark}
+          >
+            {dark ? 'Light' : 'Dark'}
+          </button>
           <button type="button" className={styles.burger} onClick={() => setMenuOpen(true)}>
             Menu
           </button>
@@ -67,8 +91,17 @@ export default function PhotographyNav() {
               </a>
             ))}
             <a href="/explore" onClick={() => setMenuOpen(false)}>
-              Explore climbing
+              Climbers Lounge
             </a>
+            <button
+              type="button"
+              onClick={() => {
+                toggleTheme();
+                setMenuOpen(false);
+              }}
+            >
+              {dark ? 'Switch to light' : 'Switch to dark'}
+            </button>
           </nav>
         </div>
       )}

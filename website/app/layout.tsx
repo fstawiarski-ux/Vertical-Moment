@@ -24,7 +24,11 @@ export const metadata: Metadata = {
   },
 };
 
-const themeInit = `(function(){try{var t=localStorage.getItem('vm-theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();`;
+// Validates against the only two real states. Older browsers may still have
+// a leftover value from the retired five-mode photography switcher (day,
+// night, sunny, colorful) cached under this same key — treat anything that
+// isn't exactly "light" or "dark" as "light" rather than setting it as-is.
+const themeInit = `(function(){try{var t=localStorage.getItem('vm-theme');if(t!=='dark'&&t!=='light'){t='light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
