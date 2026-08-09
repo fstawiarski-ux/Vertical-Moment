@@ -1,0 +1,50 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T09:11:05+00:00",
+ "crag": {
+  "id": "7d80cfd9-6ff3-5849-82fe-340e6c7f048e",
+  "name": "Prinzwiesentürme (Boulder)",
+  "slug": "prinzwiesenturme-boulder",
+  "region": "Hocheck",
+  "region_slug": "hocheck",
+  "route_count": 1,
+  "latitude": null,
+  "longitude": null,
+  "grades": [
+   "6c/7a trav"
+  ],
+  "disciplines": [
+   "boulder"
+  ],
+  "path": "/crags/hocheck/prinzwiesenturme-boulder"
+ },
+ "routes": [
+  {
+   "row_key": "Hocheck | Prinzwiesentürme (Boulder) | Heilige Ruh",
+   "name": "Heilige Ruh",
+   "grade": "6c/7a trav",
+   "grade_band": "Boulder",
+   "grade_system": "Font",
+   "discipline": "boulder",
+   "region": "Hocheck",
+   "area": "Hocheck",
+   "crag": "Prinzwiesentürme (Boulder)",
+   "wall": "Prinzwiesentürme (Boulder)",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "notion_page_id": null,
+   "workflow_status": "to create",
+   "provenance": [
+    "master"
+   ],
+   "id": "ec1be046-7e9d-55d9-b098-73db0ab7d554",
+   "region_slug": "hocheck",
+   "crag_slug": "prinzwiesenturme-boulder",
+   "slug": "heilige-ruh",
+   "path": "/crags/hocheck/prinzwiesenturme-boulder#ec1be046-7e9d-55d9-b098-73db0ab7d554",
+   "has_coords": false,
+   "verification_status": "imported-unverified"
+  }
+ ]
+}

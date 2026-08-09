@@ -1,0 +1,161 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T09:11:05+00:00",
+ "crag": {
+  "id": "8ca6b59f-8029-5ebb-8af1-273d4317f4f7",
+  "name": "Kinderwand",
+  "slug": "kinderwand",
+  "region": "Wöllersdorf Hart",
+  "region_slug": "wollersdorf-hart",
+  "route_count": 5,
+  "latitude": null,
+  "longitude": null,
+  "grades": [
+   "4",
+   "5-",
+   "6+",
+   "7+"
+  ],
+  "disciplines": [
+   "sport"
+  ],
+  "path": "/crags/wollersdorf-hart/kinderwand"
+ },
+ "routes": [
+  {
+   "row_key": "Wöllersdorf Hart | Kinderwand | Bimbulli",
+   "name": "Bimbulli",
+   "grade": "5-",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Wöllersdorf Hart",
+   "area": "Wöllersdorf Hart",
+   "crag": "Kinderwand",
+   "wall": "Kinderwand",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "notion_page_id": null,
+   "workflow_status": "to create",
+   "provenance": [
+    "master"
+   ],
+   "id": "fd460d16-d94d-5007-82ff-aad8ed1120ae",
+   "region_slug": "wollersdorf-hart",
+   "crag_slug": "kinderwand",
+   "slug": "bimbulli",
+   "path": "/crags/wollersdorf-hart/kinderwand#fd460d16-d94d-5007-82ff-aad8ed1120ae",
+   "has_coords": false,
+   "verification_status": "imported-unverified"
+  },
+  {
+   "row_key": "Wöllersdorf Hart | Kinderwand | Hallo Kitty",
+   "name": "Hallo Kitty",
+   "grade": "4",
+   "grade_band": "1-4",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Wöllersdorf Hart",
+   "area": "Wöllersdorf Hart",
+   "crag": "Kinderwand",
+   "wall": "Kinderwand",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "notion_page_id": null,
+   "workflow_status": "to create",
+   "provenance": [
+    "master"
+   ],
+   "id": "711757fb-c07d-5ff6-b73c-f798cc3e7a72",
+   "region_slug": "wollersdorf-hart",
+   "crag_slug": "kinderwand",
+   "slug": "hallo-kitty",
+   "path": "/crags/wollersdorf-hart/kinderwand#711757fb-c07d-5ff6-b73c-f798cc3e7a72",
+   "has_coords": false,
+   "verification_status": "imported-unverified"
+  },
+  {
+   "row_key": "Wöllersdorf Hart | Kinderwand | Halvar",
+   "name": "Halvar",
+   "grade": "7+",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Wöllersdorf Hart",
+   "area": "Wöllersdorf Hart",
+   "crag": "Kinderwand",
+   "wall": "Kinderwand",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "notion_page_id": null,
+   "workflow_status": "to create",
+   "provenance": [
+    "master"
+   ],
+   "id": "47841b68-6562-51d2-9349-834cc8c6edf5",
+   "region_slug": "wollersdorf-hart",
+   "crag_slug": "kinderwand",
+   "slug": "halvar",
+   "path": "/crags/wollersdorf-hart/kinderwand#47841b68-6562-51d2-9349-834cc8c6edf5",
+   "has_coords": false,
+   "verification_status": "imported-unverified"
+  },
+  {
+   "row_key": "Wöllersdorf Hart | Kinderwand | Mama Muh Räumtauf",
+   "name": "Mama Muh Räumtauf",
+   "grade": "4",
+   "grade_band": "1-4",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Wöllersdorf Hart",
+   "area": "Wöllersdorf Hart",
+   "crag": "Kinderwand",
+   "wall": "Kinderwand",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "notion_page_id": null,
+   "workflow_status": "to create",
+   "provenance": [
+    "master"
+   ],
+   "id": "cbbfa343-c364-5409-b7f6-a479cb14f989",
+   "region_slug": "wollersdorf-hart",
+   "crag_slug": "kinderwand",
+   "slug": "mama-muh-raumtauf",
+   "path": "/crags/wollersdorf-hart/kinderwand#cbbfa343-c364-5409-b7f6-a479cb14f989",
+   "has_coords": false,
+   "verification_status": "imported-unverified"
+  },
+  {
+   "row_key": "Wöllersdorf Hart | Kinderwand | Wickie",
+   "name": "Wickie",
+   "grade": "6+",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Wöllersdorf Hart",
+   "area": "Wöllersdorf Hart",
+   "crag": "Kinderwand",
+   "wall": "Kinderwand",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "notion_page_id": null,
+   "workflow_status": "to create",
+   "provenance": [
+    "master"
+   ],
+   "id": "4905f8d7-ccae-53c0-86ed-891d767e390d",
+   "region_slug": "wollersdorf-hart",
+   "crag_slug": "kinderwand",
+   "slug": "wickie",
+   "path": "/crags/wollersdorf-hart/kinderwand#4905f8d7-ccae-53c0-86ed-891d767e390d",
+   "has_coords": false,
+   "verification_status": "imported-unverified"
+  }
+ ]
+}

@@ -1,0 +1,617 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T09:11:05+00:00",
+ "name": "Vertical Moment climbing data",
+ "license": "route data CC-BY-SA; crag geometry © OpenStreetMap contributors (ODbL)",
+ "id_recipe": "uuid5(NAMESPACE_URL, \"vertical-moment:\" + row_key)",
+ "stats": {
+  "routes": 2416,
+  "crags": 129,
+  "regions": 12,
+  "with_coords": 319,
+  "by_provenance": {
+   "master": 2416,
+   "notion": 0
+  },
+  "by_region": {
+   "Arnstein": 143,
+   "Bucklige Welt": 100,
+   "Fischauer Vorberge": 145,
+   "Helenental": 359,
+   "Hirschwände": 120,
+   "Hocheck": 384,
+   "Hohe Wand": 401,
+   "Kaltenleutgebner Tal": 261,
+   "Lindkogel": 83,
+   "Mödling": 188,
+   "Pernitz": 179,
+   "Wöllersdorf Hart": 53
+  }
+ },
+ "endpoints": [
+  {
+   "file": "crags.json",
+   "bytes": 58088
+  },
+  {
+   "file": "crags/arnstein/alpinwandl.json",
+   "bytes": 6565
+  },
+  {
+   "file": "crags/arnstein/arnstein-hauptwand-boulder.json",
+   "bytes": 2100
+  },
+  {
+   "file": "crags/arnstein/arnstein-hauptwand.json",
+   "bytes": 30528
+  },
+  {
+   "file": "crags/arnstein/arnsteinblocke-boulder.json",
+   "bytes": 2944
+  },
+  {
+   "file": "crags/arnstein/arnsteinblocke.json",
+   "bytes": 11939
+  },
+  {
+   "file": "crags/arnstein/arnsteinhohle-innen-boulder.json",
+   "bytes": 3854
+  },
+  {
+   "file": "crags/arnstein/arnsteinhohle-innen.json",
+   "bytes": 13343
+  },
+  {
+   "file": "crags/arnstein/arnsteinturm-boulder.json",
+   "bytes": 6218
+  },
+  {
+   "file": "crags/arnstein/arnsteinturm.json",
+   "bytes": 14199
+  },
+  {
+   "file": "crags/arnstein/feenturm-boulder.json",
+   "bytes": 1223
+  },
+  {
+   "file": "crags/arnstein/feenturm.json",
+   "bytes": 4130
+  },
+  {
+   "file": "crags/arnstein/kurze-liebe.json",
+   "bytes": 2671
+  },
+  {
+   "file": "crags/arnstein/tigerturm.json",
+   "bytes": 17649
+  },
+  {
+   "file": "crags/bucklige-welt/black-metal.json",
+   "bytes": 25441
+  },
+  {
+   "file": "crags/bucklige-welt/gretlwandl.json",
+   "bytes": 12037
+  },
+  {
+   "file": "crags/bucklige-welt/grimmwand.json",
+   "bytes": 19945
+  },
+  {
+   "file": "crags/bucklige-welt/scheiblingkirchner-wandl-boulders.json",
+   "bytes": 6938
+  },
+  {
+   "file": "crags/bucklige-welt/scheiblingkirchner-wandl.json",
+   "bytes": 18277
+  },
+  {
+   "file": "crags/fischauer-vorberge/bad-fischau-klettergarten.json",
+   "bytes": 53832
+  },
+  {
+   "file": "crags/fischauer-vorberge/engelsberg.json",
+   "bytes": 16493
+  },
+  {
+   "file": "crags/fischauer-vorberge/kleiner-engelsberg.json",
+   "bytes": 26756
+  },
+  {
+   "file": "crags/fischauer-vorberge/marmorsteinbruch.json",
+   "bytes": 11192
+  },
+  {
+   "file": "crags/fischauer-vorberge/pc-wandl.json",
+   "bytes": 9058
+  },
+  {
+   "file": "crags/fischauer-vorberge/willendorfer-wandl.json",
+   "bytes": 7976
+  },
+  {
+   "file": "crags/helenental/badener-turm-boulder.json",
+   "bytes": 2141
+  },
+  {
+   "file": "crags/helenental/badener-turm.json",
+   "bytes": 20973
+  },
+  {
+   "file": "crags/helenental/beethovenwand.json",
+   "bytes": 20473
+  },
+  {
+   "file": "crags/helenental/breite-wand-boulder.json",
+   "bytes": 1338
+  },
+  {
+   "file": "crags/helenental/breite-wand.json",
+   "bytes": 41363
+  },
+  {
+   "file": "crags/helenental/dachswandl.json",
+   "bytes": 5843
+  },
+  {
+   "file": "crags/helenental/efeufelsen-boulder.json",
+   "bytes": 1303
+  },
+  {
+   "file": "crags/helenental/efeufelsen.json",
+   "bytes": 11159
+  },
+  {
+   "file": "crags/helenental/engelstein-boulder.json",
+   "bytes": 1312
+  },
+  {
+   "file": "crags/helenental/engelstein.json",
+   "bytes": 14228
+  },
+  {
+   "file": "crags/helenental/helenentaler-blocke-boulder.json",
+   "bytes": 2239
+  },
+  {
+   "file": "crags/helenental/helenentaler-blocke.json",
+   "bytes": 23536
+  },
+  {
+   "file": "crags/helenental/herziges-turmchen.json",
+   "bytes": 2954
+  },
+  {
+   "file": "crags/helenental/jammerwandl.json",
+   "bytes": 29564
+  },
+  {
+   "file": "crags/helenental/ospwandl.json",
+   "bytes": 5051
+  },
+  {
+   "file": "crags/helenental/otzi-boulder.json",
+   "bytes": 6810
+  },
+  {
+   "file": "crags/helenental/otzi.json",
+   "bytes": 2673
+  },
+  {
+   "file": "crags/helenental/rum-boulder.json",
+   "bytes": 2752
+  },
+  {
+   "file": "crags/helenental/scharfeneck.json",
+   "bytes": 16909
+  },
+  {
+   "file": "crags/helenental/siegenfelder-steinbruch-boulder.json",
+   "bytes": 1410
+  },
+  {
+   "file": "crags/helenental/siegenfelder-steinbruch.json",
+   "bytes": 10880
+  },
+  {
+   "file": "crags/helenental/trenkerwand-boulder.json",
+   "bytes": 7026
+  },
+  {
+   "file": "crags/helenental/trenkerwand.json",
+   "bytes": 35906
+  },
+  {
+   "file": "crags/helenental/vogelwandl.json",
+   "bytes": 19380
+  },
+  {
+   "file": "crags/helenental/zwergwandl-boulder.json",
+   "bytes": 4767
+  },
+  {
+   "file": "crags/helenental/zwergwandl.json",
+   "bytes": 11140
+  },
+  {
+   "file": "crags/hirschwande/sektor-1-calimero-wall.json",
+   "bytes": 18108
+  },
+  {
+   "file": "crags/hirschwande/sektor-2-messer.json",
+   "bytes": 6869
+  },
+  {
+   "file": "crags/hirschwande/sektor-3-gamshohlen.json",
+   "bytes": 4554
+  },
+  {
+   "file": "crags/hirschwande/sektor-4-links-aussen.json",
+   "bytes": 10522
+  },
+  {
+   "file": "crags/hirschwande/sektor-5-kulisse.json",
+   "bytes": 39287
+  },
+  {
+   "file": "crags/hirschwande/sektor-6-zentrum.json",
+   "bytes": 16550
+  },
+  {
+   "file": "crags/hirschwande/sektor-7-rechtsaussen.json",
+   "bytes": 5509
+  },
+  {
+   "file": "crags/hocheck/auenland.json",
+   "bytes": 7667
+  },
+  {
+   "file": "crags/hocheck/himmelsfinger.json",
+   "bytes": 15833
+  },
+  {
+   "file": "crags/hocheck/holzschlag-boulder.json",
+   "bytes": 4379
+  },
+  {
+   "file": "crags/hocheck/holzschlag.json",
+   "bytes": 35242
+  },
+  {
+   "file": "crags/hocheck/mittlerer-nordgrat.json",
+   "bytes": 7550
+  },
+  {
+   "file": "crags/hocheck/obere-ostwand.json",
+   "bytes": 20109
+  },
+  {
+   "file": "crags/hocheck/obere-thalhoferwand.json",
+   "bytes": 20255
+  },
+  {
+   "file": "crags/hocheck/obere-westwand.json",
+   "bytes": 25658
+  },
+  {
+   "file": "crags/hocheck/oberer-nordgrat-boulder.json",
+   "bytes": 1253
+  },
+  {
+   "file": "crags/hocheck/oberer-nordgrat.json",
+   "bytes": 28508
+  },
+  {
+   "file": "crags/hocheck/ostplatte.json",
+   "bytes": 19738
+  },
+  {
+   "file": "crags/hocheck/philosophenzahn.json",
+   "bytes": 8998
+  },
+  {
+   "file": "crags/hocheck/prinzwiesenturme-boulder.json",
+   "bytes": 1296
+  },
+  {
+   "file": "crags/hocheck/prinzwiesenturme.json",
+   "bytes": 11394
+  },
+  {
+   "file": "crags/hocheck/sudwestwand.json",
+   "bytes": 11733
+  },
+  {
+   "file": "crags/hocheck/thalhoferkanzel.json",
+   "bytes": 13691
+  },
+  {
+   "file": "crags/hocheck/trinkratzahn.json",
+   "bytes": 5750
+  },
+  {
+   "file": "crags/hocheck/untere-thalhoferwand.json",
+   "bytes": 21793
+  },
+  {
+   "file": "crags/hocheck/untere-westwand.json",
+   "bytes": 18972
+  },
+  {
+   "file": "crags/hocheck/unterer-nordgrat.json",
+   "bytes": 14681
+  },
+  {
+   "file": "crags/hocheck/zentrale-thalhoferwand.json",
+   "bytes": 10049
+  },
+  {
+   "file": "crags/hohe-wand/hausstein.json",
+   "bytes": 41739
+  },
+  {
+   "file": "crags/hohe-wand/haussteinmugal.json",
+   "bytes": 26707
+  },
+  {
+   "file": "crags/hohe-wand/hirnflitzstein.json",
+   "bytes": 20695
+  },
+  {
+   "file": "crags/hohe-wand/hochfallbasis.json",
+   "bytes": 33072
+  },
+  {
+   "file": "crags/hohe-wand/hochkogel.json",
+   "bytes": 28974
+  },
+  {
+   "file": "crags/hohe-wand/hochkogeleck.json",
+   "bytes": 14175
+  },
+  {
+   "file": "crags/hohe-wand/naglplatten.json",
+   "bytes": 34633
+  },
+  {
+   "file": "crags/hohe-wand/otk-klettergarten.json",
+   "bytes": 25990
+  },
+  {
+   "file": "crags/hohe-wand/strassenwand.json",
+   "bytes": 23277
+  },
+  {
+   "file": "crags/hohe-wand/unterer-almfrieden.json",
+   "bytes": 14806
+  },
+  {
+   "file": "crags/hohe-wand/wandeck-klettergarten.json",
+   "bytes": 52459
+  },
+  {
+   "file": "crags/kaltenleutgebner-tal/hollenstein.json",
+   "bytes": 12025
+  },
+  {
+   "file": "crags/kaltenleutgebner-tal/jungkunststein.json",
+   "bytes": 11321
+  },
+  {
+   "file": "crags/kaltenleutgebner-tal/kalksburger-grat.json",
+   "bytes": 5441
+  },
+  {
+   "file": "crags/kaltenleutgebner-tal/kaltenleutgebner-grat.json",
+   "bytes": 16116
+  },
+  {
+   "file": "crags/kaltenleutgebner-tal/kirchengrat.json",
+   "bytes": 4572
+  },
+  {
+   "file": "crags/kaltenleutgebner-tal/lowenkopf.json",
+   "bytes": 6154
+  },
+  {
+   "file": "crags/kaltenleutgebner-tal/luckete-wand.json",
+   "bytes": 42314
+  },
+  {
+   "file": "crags/kaltenleutgebner-tal/lutterwand.json",
+   "bytes": 23257
+  },
+  {
+   "file": "crags/kaltenleutgebner-tal/meije.json",
+   "bytes": 6729
+  },
+  {
+   "file": "crags/kaltenleutgebner-tal/mizzi-langer-wand.json",
+   "bytes": 22755
+  },
+  {
+   "file": "crags/kaltenleutgebner-tal/schoffelturm.json",
+   "bytes": 3762
+  },
+  {
+   "file": "crags/kaltenleutgebner-tal/streberwande.json",
+   "bytes": 26250
+  },
+  {
+   "file": "crags/kaltenleutgebner-tal/waldmuhle.json",
+   "bytes": 40872
+  },
+  {
+   "file": "crags/lindkogel/friedrichswand.json",
+   "bytes": 21537
+  },
+  {
+   "file": "crags/lindkogel/roter-ofen.json",
+   "bytes": 31084
+  },
+  {
+   "file": "crags/lindkogel/weisses-kreuz.json",
+   "bytes": 12007
+  },
+  {
+   "file": "crags/modling/efeugrat.json",
+   "bytes": 27498
+  },
+  {
+   "file": "crags/modling/erikagrat.json",
+   "bytes": 15275
+  },
+  {
+   "file": "crags/modling/glocknergrat.json",
+   "bytes": 22949
+  },
+  {
+   "file": "crags/modling/gumpoldskirchen.json",
+   "bytes": 8822
+  },
+  {
+   "file": "crags/modling/lausbubenwand.json",
+   "bytes": 39666
+  },
+  {
+   "file": "crags/modling/matterhorndl.json",
+   "bytes": 9421
+  },
+  {
+   "file": "crags/modling/promenadenfels.json",
+   "bytes": 5787
+  },
+  {
+   "file": "crags/modling/rauhe-platte.json",
+   "bytes": 7186
+  },
+  {
+   "file": "crags/modling/ritterfels.json",
+   "bytes": 4160
+  },
+  {
+   "file": "crags/modling/sturmwandl.json",
+   "bytes": 4139
+  },
+  {
+   "file": "crags/pernitz/badener-turm.json",
+   "bytes": 16522
+  },
+  {
+   "file": "crags/pernitz/gamswand.json",
+   "bytes": 15204
+  },
+  {
+   "file": "crags/pernitz/gamswandl.json",
+   "bytes": 12364
+  },
+  {
+   "file": "crags/pernitz/kalkofenwand.json",
+   "bytes": 23758
+  },
+  {
+   "file": "crags/pernitz/kleine-klause.json",
+   "bytes": 14062
+  },
+  {
+   "file": "crags/pernitz/kraftwandl.json",
+   "bytes": 10206
+  },
+  {
+   "file": "crags/pernitz/schatzinsel-boulder.json",
+   "bytes": 13326
+  },
+  {
+   "file": "crags/pernitz/schatzinsel.json",
+   "bytes": 18658
+  },
+  {
+   "file": "crags/pernitz/shadow-wall.json",
+   "bytes": 5755
+  },
+  {
+   "file": "crags/pernitz/steinwandklamm.json",
+   "bytes": 10467
+  },
+  {
+   "file": "crags/wollersdorf-hart/kinderwand.json",
+   "bytes": 4365
+  },
+  {
+   "file": "crags/wollersdorf-hart/linker-wandteil.json",
+   "bytes": 6899
+  },
+  {
+   "file": "crags/wollersdorf-hart/wollersdorf-hart-boulder.json",
+   "bytes": 18040
+  },
+  {
+   "file": "crags/wollersdorf-hart/zentraler-wandteil.json",
+   "bytes": 17190
+  },
+  {
+   "file": "facets.json",
+   "bytes": 477
+  },
+  {
+   "file": "regions.json",
+   "bytes": 2341
+  },
+  {
+   "file": "regions/arnstein.json",
+   "bytes": 116683
+  },
+  {
+   "file": "regions/bucklige-welt.json",
+   "bytes": 82580
+  },
+  {
+   "file": "regions/fischauer-vorberge.json",
+   "bytes": 125204
+  },
+  {
+   "file": "regions/helenental.json",
+   "bytes": 301498
+  },
+  {
+   "file": "regions/hirschwande.json",
+   "bytes": 101188
+  },
+  {
+   "file": "regions/hocheck.json",
+   "bytes": 303331
+  },
+  {
+   "file": "regions/hohe-wand.json",
+   "bytes": 316099
+  },
+  {
+   "file": "regions/kaltenleutgebner-tal.json",
+   "bytes": 220974
+  },
+  {
+   "file": "regions/lindkogel.json",
+   "bytes": 64716
+  },
+  {
+   "file": "regions/modling.json",
+   "bytes": 144475
+  },
+  {
+   "file": "regions/pernitz.json",
+   "bytes": 139897
+  },
+  {
+   "file": "regions/wollersdorf-hart.json",
+   "bytes": 46511
+  },
+  {
+   "file": "routes.json",
+   "bytes": 1901767
+  },
+  {
+   "file": "stats.json",
+   "bytes": 485
+  }
+ ]
+}

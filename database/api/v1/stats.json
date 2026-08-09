@@ -1,0 +1,26 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T09:11:05+00:00",
+ "routes": 2416,
+ "crags": 129,
+ "regions": 12,
+ "with_coords": 319,
+ "by_provenance": {
+  "master": 2416,
+  "notion": 0
+ },
+ "by_region": {
+  "Arnstein": 143,
+  "Bucklige Welt": 100,
+  "Fischauer Vorberge": 145,
+  "Helenental": 359,
+  "Hirschwände": 120,
+  "Hocheck": 384,
+  "Hohe Wand": 401,
+  "Kaltenleutgebner Tal": 261,
+  "Lindkogel": 83,
+  "Mödling": 188,
+  "Pernitz": 179,
+  "Wöllersdorf Hart": 53
+ }
+}

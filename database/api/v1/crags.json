@@ -1,0 +1,3339 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T09:11:05+00:00",
+ "count": 129,
+ "crags": [
+  {
+   "id": "bb97ed89-41d3-5990-970a-4a3f8c088c6f",
+   "name": "Alpinwandl",
+   "slug": "alpinwandl",
+   "region": "Arnstein",
+   "region_slug": "arnstein",
+   "route_count": 8,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "5",
+    "5+",
+    "6",
+    "6+/7-",
+    "7+/8-",
+    "7/7+"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/arnstein/alpinwandl"
+  },
+  {
+   "id": "f1b8b1ce-72ec-5386-9073-f3e947767573",
+   "name": "Arnstein Hauptwand",
+   "slug": "arnstein-hauptwand",
+   "region": "Arnstein",
+   "region_slug": "arnstein",
+   "route_count": 38,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "10",
+    "10-",
+    "2",
+    "2+",
+    "3+",
+    "4",
+    "5",
+    "5+",
+    "5-",
+    "6",
+    "6+",
+    "6/6+",
+    "7",
+    "7+",
+    "7-",
+    "7/7+",
+    "8",
+    "8+",
+    "8-",
+    "9/9+"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/arnstein/arnstein-hauptwand"
+  },
+  {
+   "id": "68ef1862-2448-5d28-9460-bf2fa1016db5",
+   "name": "Arnstein Hauptwand (Boulder)",
+   "slug": "arnstein-hauptwand-boulder",
+   "region": "Arnstein",
+   "region_slug": "arnstein",
+   "route_count": 2,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "5a",
+    "6a"
+   ],
+   "disciplines": [
+    "boulder"
+   ],
+   "path": "/crags/arnstein/arnstein-hauptwand-boulder"
+  },
+  {
+   "id": "34e88438-8c74-57b3-a167-3c9b26ccfdac",
+   "name": "Arnsteinblöcke",
+   "slug": "arnsteinblocke",
+   "region": "Arnstein",
+   "region_slug": "arnstein",
+   "route_count": 15,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "2",
+    "3",
+    "3+",
+    "4+",
+    "6+",
+    "6+/7-",
+    "7+",
+    "7-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/arnstein/arnsteinblocke"
+  },
+  {
+   "id": "fbf86089-80a7-5101-8c46-1dc5b93725ed",
+   "name": "Arnsteinblöcke (Boulder)",
+   "slug": "arnsteinblocke-boulder",
+   "region": "Arnstein",
+   "region_slug": "arnstein",
+   "route_count": 3,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "3b",
+    "4a"
+   ],
+   "disciplines": [
+    "boulder"
+   ],
+   "path": "/crags/arnstein/arnsteinblocke-boulder"
+  },
+  {
+   "id": "e7257a07-bf4e-5931-9849-f8b5940f2db4",
+   "name": "Arnsteinhöhle Innen",
+   "slug": "arnsteinhohle-innen",
+   "region": "Arnstein",
+   "region_slug": "arnstein",
+   "route_count": 16,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "3+",
+    "5",
+    "7",
+    "7+",
+    "7-",
+    "8",
+    "9",
+    "9-",
+    "9-/9"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/arnstein/arnsteinhohle-innen"
+  },
+  {
+   "id": "5dcc9efc-bff0-58af-b2c9-bb76196fffb5",
+   "name": "Arnsteinhöhle Innen (Boulder)",
+   "slug": "arnsteinhohle-innen-boulder",
+   "region": "Arnstein",
+   "region_slug": "arnstein",
+   "route_count": 4,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "5a",
+    "6a",
+    "6c",
+    "7a"
+   ],
+   "disciplines": [
+    "boulder"
+   ],
+   "path": "/crags/arnstein/arnsteinhohle-innen-boulder"
+  },
+  {
+   "id": "add259ce-4e2d-5547-89be-b01befa42bc7",
+   "name": "Arnsteinturm",
+   "slug": "arnsteinturm",
+   "region": "Arnstein",
+   "region_slug": "arnstein",
+   "route_count": 18,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "5+",
+    "6+",
+    "6+/7-",
+    "6-",
+    "7+",
+    "7-",
+    "7-/7",
+    "7/7+",
+    "8",
+    "8-",
+    "8/8+"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/arnstein/arnsteinturm"
+  },
+  {
+   "id": "339ef39b-5cb5-5f1e-88bd-17e195e6b0c9",
+   "name": "Arnsteinturm (Boulder)",
+   "slug": "arnsteinturm-boulder",
+   "region": "Arnstein",
+   "region_slug": "arnstein",
+   "route_count": 7,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "6a",
+    "6b",
+    "6b+",
+    "6c",
+    "7a"
+   ],
+   "disciplines": [
+    "boulder"
+   ],
+   "path": "/crags/arnstein/arnsteinturm-boulder"
+  },
+  {
+   "id": "71f68ce1-1625-54ae-a0bf-eab01104a1ca",
+   "name": "Feenturm",
+   "slug": "feenturm",
+   "region": "Arnstein",
+   "region_slug": "arnstein",
+   "route_count": 5,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "5+",
+    "7-",
+    "7/7+",
+    "8"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/arnstein/feenturm"
+  },
+  {
+   "id": "69a257ac-44f0-53e0-8731-678783d63602",
+   "name": "Feenturm (Boulder)",
+   "slug": "feenturm-boulder",
+   "region": "Arnstein",
+   "region_slug": "arnstein",
+   "route_count": 1,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "5b"
+   ],
+   "disciplines": [
+    "boulder"
+   ],
+   "path": "/crags/arnstein/feenturm-boulder"
+  },
+  {
+   "id": "8509c026-d19f-5e62-9250-8b513a013b4e",
+   "name": "Kurze Liebe",
+   "slug": "kurze-liebe",
+   "region": "Arnstein",
+   "region_slug": "arnstein",
+   "route_count": 3,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "4+",
+    "6"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/arnstein/kurze-liebe"
+  },
+  {
+   "id": "eecb68a2-dfd2-5f52-a3b7-66844b47fbe8",
+   "name": "Tigerturm",
+   "slug": "tigerturm",
+   "region": "Arnstein",
+   "region_slug": "arnstein",
+   "route_count": 23,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "3",
+    "3+",
+    "4",
+    "4+",
+    "5",
+    "5+",
+    "6",
+    "6+",
+    "6+/7-",
+    "7",
+    "7+",
+    "7-",
+    "8",
+    "8-",
+    "8/8+",
+    "9-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/arnstein/tigerturm"
+  },
+  {
+   "id": "cc019c16-c790-51d3-a7ee-ac38ee30221a",
+   "name": "Black Metal",
+   "slug": "black-metal",
+   "region": "Bucklige Welt",
+   "region_slug": "bucklige-welt",
+   "route_count": 32,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "4c",
+    "5a",
+    "5b",
+    "5c",
+    "6a",
+    "6a+",
+    "6b",
+    "6b+",
+    "6c",
+    "6c+",
+    "7a",
+    "7a+",
+    "7b+",
+    "7c",
+    "8a"
+   ],
+   "disciplines": [
+    "boulder"
+   ],
+   "path": "/crags/bucklige-welt/black-metal"
+  },
+  {
+   "id": "fb424b5b-4cb8-5c75-a35c-ab1544c2eecb",
+   "name": "Gretlwandl",
+   "slug": "gretlwandl",
+   "region": "Bucklige Welt",
+   "region_slug": "bucklige-welt",
+   "route_count": 15,
+   "latitude": 47.651395,
+   "longitude": 16.133521,
+   "grades": [
+    "4",
+    "5+",
+    "6+",
+    "7",
+    "7+",
+    "7-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/bucklige-welt/gretlwandl"
+  },
+  {
+   "id": "a4b34047-203f-58e3-ba6f-a68cd0a20ca6",
+   "name": "Grimmwand",
+   "slug": "grimmwand",
+   "region": "Bucklige Welt",
+   "region_slug": "bucklige-welt",
+   "route_count": 25,
+   "latitude": 47.65307,
+   "longitude": 16.133806,
+   "grades": [
+    "4",
+    "4+",
+    "4-",
+    "5+",
+    "5-",
+    "6",
+    "6+",
+    "6-",
+    "7",
+    "7+",
+    "7-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/bucklige-welt/grimmwand"
+  },
+  {
+   "id": "95aa6a66-4991-58fa-a066-a3751ca65426",
+   "name": "Scheiblingkirchner Wandl",
+   "slug": "scheiblingkirchner-wandl",
+   "region": "Bucklige Welt",
+   "region_slug": "bucklige-welt",
+   "route_count": 21,
+   "latitude": 47.660037,
+   "longitude": 16.138196,
+   "grades": [
+    "10-",
+    "5-",
+    "6",
+    "6+",
+    "6-",
+    "7",
+    "7+",
+    "8",
+    "8+",
+    "8-",
+    "9",
+    "9+"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/bucklige-welt/scheiblingkirchner-wandl"
+  },
+  {
+   "id": "890d8c4e-8e41-558b-bcdb-1ad2f8fb28d8",
+   "name": "Scheiblingkirchner Wandl (boulders)",
+   "slug": "scheiblingkirchner-wandl-boulders",
+   "region": "Bucklige Welt",
+   "region_slug": "bucklige-welt",
+   "route_count": 7,
+   "latitude": 47.660037,
+   "longitude": 16.138196,
+   "grades": [
+    "5b",
+    "6a",
+    "6c",
+    "7a",
+    "7a+",
+    "8a"
+   ],
+   "disciplines": [
+    "boulder"
+   ],
+   "path": "/crags/bucklige-welt/scheiblingkirchner-wandl-boulders"
+  },
+  {
+   "id": "e8a82ea5-093a-5fdb-bc00-bd6fdb946cad",
+   "name": "Bad Fischau Klettergarten",
+   "slug": "bad-fischau-klettergarten",
+   "region": "Fischauer Vorberge",
+   "region_slug": "fischauer-vorberge",
+   "route_count": 61,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "10-",
+    "3",
+    "4",
+    "4+",
+    "5",
+    "5+",
+    "5-",
+    "6",
+    "6+",
+    "6-",
+    "7",
+    "7+",
+    "7-",
+    "7a+ trav",
+    "8",
+    "8+",
+    "8-",
+    "8-/8",
+    "8/9",
+    "9-",
+    "9-/9"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/fischauer-vorberge/bad-fischau-klettergarten"
+  },
+  {
+   "id": "a46d8e03-c066-54d8-ab62-d94b03dd7551",
+   "name": "Engelsberg",
+   "slug": "engelsberg",
+   "region": "Fischauer Vorberge",
+   "region_slug": "fischauer-vorberge",
+   "route_count": 20,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "6",
+    "6+",
+    "7+",
+    "7+/8-",
+    "7-",
+    "8",
+    "8+",
+    "8-",
+    "8-/8",
+    "9+",
+    "9-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/fischauer-vorberge/engelsberg"
+  },
+  {
+   "id": "16093273-1f4b-5fad-8536-13d26c0a51bb",
+   "name": "Kleiner Engelsberg",
+   "slug": "kleiner-engelsberg",
+   "region": "Fischauer Vorberge",
+   "region_slug": "fischauer-vorberge",
+   "route_count": 31,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "10",
+    "10-",
+    "5",
+    "5c trav",
+    "6",
+    "6+",
+    "6-",
+    "6c trav",
+    "7",
+    "7+/8",
+    "7-",
+    "8",
+    "8+",
+    "8-",
+    "9",
+    "9+",
+    "9-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/fischauer-vorberge/kleiner-engelsberg"
+  },
+  {
+   "id": "f3f86f3e-4c81-5f4b-921e-4ce11ca00a80",
+   "name": "Marmorsteinbruch",
+   "slug": "marmorsteinbruch",
+   "region": "Fischauer Vorberge",
+   "region_slug": "fischauer-vorberge",
+   "route_count": 13,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "4+",
+    "4-",
+    "5",
+    "5+",
+    "5-",
+    "6",
+    "7",
+    "7+"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/fischauer-vorberge/marmorsteinbruch"
+  },
+  {
+   "id": "c4ee5881-31ec-54cf-8408-bcdeb26f0ff1",
+   "name": "PC-Wandl",
+   "slug": "pc-wandl",
+   "region": "Fischauer Vorberge",
+   "region_slug": "fischauer-vorberge",
+   "route_count": 11,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "5+",
+    "5-",
+    "6+",
+    "7",
+    "7+",
+    "7-",
+    "8-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/fischauer-vorberge/pc-wandl"
+  },
+  {
+   "id": "10a929fd-ae11-52f0-9c23-75a3687e817c",
+   "name": "Willendorfer Wandl",
+   "slug": "willendorfer-wandl",
+   "region": "Fischauer Vorberge",
+   "region_slug": "fischauer-vorberge",
+   "route_count": 9,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "4+",
+    "5+",
+    "6",
+    "6+",
+    "7",
+    "7+",
+    "8"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/fischauer-vorberge/willendorfer-wandl"
+  },
+  {
+   "id": "a814d9c4-2a82-5ff6-814f-ba81e6ecbe6d",
+   "name": "Badener Turm",
+   "slug": "badener-turm",
+   "region": "Helenental",
+   "region_slug": "helenental",
+   "route_count": 25,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "4",
+    "4-",
+    "5",
+    "5-",
+    "6",
+    "6+",
+    "6+/7-",
+    "6-",
+    "7",
+    "7+",
+    "7+/8-",
+    "7-",
+    "9-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/helenental/badener-turm"
+  },
+  {
+   "id": "b41924d0-4262-5afe-8fb3-75d728a3958d",
+   "name": "Badener Turm (Boulder)",
+   "slug": "badener-turm-boulder",
+   "region": "Helenental",
+   "region_slug": "helenental",
+   "route_count": 2,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "5b",
+    "6a"
+   ],
+   "disciplines": [
+    "boulder"
+   ],
+   "path": "/crags/helenental/badener-turm-boulder"
+  },
+  {
+   "id": "577112b7-72ce-5e44-b6f2-1f4507d1bbf7",
+   "name": "Beethovenwand",
+   "slug": "beethovenwand",
+   "region": "Helenental",
+   "region_slug": "helenental",
+   "route_count": 24,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "10",
+    "10+",
+    "10+/11-",
+    "10-",
+    "10-/10",
+    "6-",
+    "8",
+    "8+",
+    "8-",
+    "9",
+    "9+",
+    "9+/10-",
+    "9-",
+    "9-/9"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/helenental/beethovenwand"
+  },
+  {
+   "id": "95adbca6-2b3a-5356-9108-36d7973a878e",
+   "name": "Breite Wand",
+   "slug": "breite-wand",
+   "region": "Helenental",
+   "region_slug": "helenental",
+   "route_count": 50,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "2",
+    "4",
+    "5",
+    "5+",
+    "5-",
+    "6",
+    "6+",
+    "7",
+    "7+/8-",
+    "7-",
+    "8",
+    "8+",
+    "8-",
+    "8/8+",
+    "9",
+    "9+/10-",
+    "9-/9"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/helenental/breite-wand"
+  },
+  {
+   "id": "1dc053fa-975e-5c74-b88b-6fdccd683873",
+   "name": "Breite Wand (Boulder)",
+   "slug": "breite-wand-boulder",
+   "region": "Helenental",
+   "region_slug": "helenental",
+   "route_count": 1,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "8b"
+   ],
+   "disciplines": [
+    "boulder"
+   ],
+   "path": "/crags/helenental/breite-wand-boulder"
+  },
+  {
+   "id": "bf0fd66d-4720-5ed0-98ca-227c5c6425ac",
+   "name": "Dachswandl",
+   "slug": "dachswandl",
+   "region": "Helenental",
+   "region_slug": "helenental",
+   "route_count": 7,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "3+",
+    "4+",
+    "5+",
+    "6+",
+    "7"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/helenental/dachswandl"
+  },
+  {
+   "id": "fadffb6b-737b-531a-a0dd-683c1021b7b2",
+   "name": "Efeufelsen",
+   "slug": "efeufelsen",
+   "region": "Helenental",
+   "region_slug": "helenental",
+   "route_count": 13,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "4",
+    "4+",
+    "6",
+    "6+",
+    "7",
+    "8+",
+    "8-",
+    "9",
+    "9-",
+    "9-/9"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/helenental/efeufelsen"
+  },
+  {
+   "id": "1b1119f1-ee35-558f-a6f0-f06524e78e6b",
+   "name": "Efeufelsen (Boulder)",
+   "slug": "efeufelsen-boulder",
+   "region": "Helenental",
+   "region_slug": "helenental",
+   "route_count": 1,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "6b"
+   ],
+   "disciplines": [
+    "boulder"
+   ],
+   "path": "/crags/helenental/efeufelsen-boulder"
+  },
+  {
+   "id": "da1f6302-ecdd-530f-add9-55a8d8a03777",
+   "name": "Engelstein",
+   "slug": "engelstein",
+   "region": "Helenental",
+   "region_slug": "helenental",
+   "route_count": 17,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "5+",
+    "6+",
+    "6-",
+    "7",
+    "7+",
+    "8",
+    "8-",
+    "9-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/helenental/engelstein"
+  },
+  {
+   "id": "b2b1de49-d14a-5a09-bf27-42abe740f856",
+   "name": "Engelstein (Boulder)",
+   "slug": "engelstein-boulder",
+   "region": "Helenental",
+   "region_slug": "helenental",
+   "route_count": 1,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "8a"
+   ],
+   "disciplines": [
+    "boulder"
+   ],
+   "path": "/crags/helenental/engelstein-boulder"
+  },
+  {
+   "id": "79e4659a-a8dd-59ed-8e7f-20055b03d11a",
+   "name": "Helenentaler Blöcke",
+   "slug": "helenentaler-blocke",
+   "region": "Helenental",
+   "region_slug": "helenental",
+   "route_count": 27,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "10-",
+    "3",
+    "4",
+    "4+",
+    "5",
+    "5-",
+    "6+",
+    "7",
+    "8",
+    "8+",
+    "8-",
+    "9",
+    "9+",
+    "9-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/helenental/helenentaler-blocke"
+  },
+  {
+   "id": "f70f09f0-762c-5abd-a562-02b80b1ef362",
+   "name": "Helenentaler Blöcke (Boulder)",
+   "slug": "helenentaler-blocke-boulder",
+   "region": "Helenental",
+   "region_slug": "helenental",
+   "route_count": 2,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "6a",
+    "6c"
+   ],
+   "disciplines": [
+    "boulder"
+   ],
+   "path": "/crags/helenental/helenentaler-blocke-boulder"
+  },
+  {
+   "id": "4c8249ba-ccb6-560b-b9e8-0a84b6081093",
+   "name": "Herziges Türmchen",
+   "slug": "herziges-turmchen",
+   "region": "Helenental",
+   "region_slug": "helenental",
+   "route_count": 3,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "5+",
+    "7",
+    "7-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/helenental/herziges-turmchen"
+  },
+  {
+   "id": "619c32e6-5837-51c6-a12e-7a83c426ca75",
+   "name": "Jammerwandl",
+   "slug": "jammerwandl",
+   "region": "Helenental",
+   "region_slug": "helenental",
+   "route_count": 37,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "4+",
+    "5",
+    "5+",
+    "6",
+    "6+",
+    "6+/7-",
+    "6-",
+    "7",
+    "7+",
+    "7-",
+    "8",
+    "9-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/helenental/jammerwandl"
+  },
+  {
+   "id": "8f74e530-9807-595a-bc56-c00beb35676d",
+   "name": "Ospwandl",
+   "slug": "ospwandl",
+   "region": "Helenental",
+   "region_slug": "helenental",
+   "route_count": 6,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "7+",
+    "7+/8-",
+    "8",
+    "8+/9-",
+    "8-/8",
+    "9-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/helenental/ospwandl"
+  },
+  {
+   "id": "9f9e14e4-9359-5e8c-b045-a9ad785177ad",
+   "name": "Rum (Boulder)",
+   "slug": "rum-boulder",
+   "region": "Helenental",
+   "region_slug": "helenental",
+   "route_count": 3,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "6a",
+    "6b",
+    "7a"
+   ],
+   "disciplines": [
+    "boulder"
+   ],
+   "path": "/crags/helenental/rum-boulder"
+  },
+  {
+   "id": "f3e3c3e8-150e-5480-9096-fcf25af30d89",
+   "name": "Scharfeneck",
+   "slug": "scharfeneck",
+   "region": "Helenental",
+   "region_slug": "helenental",
+   "route_count": 21,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "10-",
+    "3",
+    "4+",
+    "5-",
+    "6",
+    "6+",
+    "6-",
+    "7",
+    "7+",
+    "7-",
+    "8",
+    "8+",
+    "9",
+    "9+"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/helenental/scharfeneck"
+  },
+  {
+   "id": "61b8e24d-acf9-54bb-9df2-ff167d63eeca",
+   "name": "Siegenfelder Steinbruch",
+   "slug": "siegenfelder-steinbruch",
+   "region": "Helenental",
+   "region_slug": "helenental",
+   "route_count": 12,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "3+",
+    "4",
+    "4+",
+    "5",
+    "8"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/helenental/siegenfelder-steinbruch"
+  },
+  {
+   "id": "cf37c4a6-1ce9-59d1-a95d-1d22995dd07a",
+   "name": "Siegenfelder Steinbruch (Boulder)",
+   "slug": "siegenfelder-steinbruch-boulder",
+   "region": "Helenental",
+   "region_slug": "helenental",
+   "route_count": 1,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "6a"
+   ],
+   "disciplines": [
+    "boulder"
+   ],
+   "path": "/crags/helenental/siegenfelder-steinbruch-boulder"
+  },
+  {
+   "id": "48cf58c6-4c9f-5737-acfd-2c334564900e",
+   "name": "Trenkerwand",
+   "slug": "trenkerwand",
+   "region": "Helenental",
+   "region_slug": "helenental",
+   "route_count": 45,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "4",
+    "4+",
+    "4-",
+    "5",
+    "5+",
+    "5-",
+    "6",
+    "6+",
+    "6-",
+    "7",
+    "7+",
+    "7-",
+    "8",
+    "8-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/helenental/trenkerwand"
+  },
+  {
+   "id": "99ac9061-2ed6-5495-a958-052f97d846cf",
+   "name": "Trenkerwand (Boulder)",
+   "slug": "trenkerwand-boulder",
+   "region": "Helenental",
+   "region_slug": "helenental",
+   "route_count": 8,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "5b",
+    "5c",
+    "6a+",
+    "6b+",
+    "7a+"
+   ],
+   "disciplines": [
+    "boulder"
+   ],
+   "path": "/crags/helenental/trenkerwand-boulder"
+  },
+  {
+   "id": "76b04447-5a91-5c6c-927f-a82ca76149cd",
+   "name": "Vogelwandl",
+   "slug": "vogelwandl",
+   "region": "Helenental",
+   "region_slug": "helenental",
+   "route_count": 24,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "3+",
+    "4+",
+    "5+",
+    "5-",
+    "6",
+    "6+",
+    "6-",
+    "6/6+",
+    "7+",
+    "7-",
+    "7-/7"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/helenental/vogelwandl"
+  },
+  {
+   "id": "23952d9a-3882-56d0-8018-aa0e90cbccf5",
+   "name": "Zwergwandl",
+   "slug": "zwergwandl",
+   "region": "Helenental",
+   "region_slug": "helenental",
+   "route_count": 13,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "4+",
+    "6",
+    "6+",
+    "6-",
+    "7",
+    "7+/8-",
+    "7-",
+    "8",
+    "8-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/helenental/zwergwandl"
+  },
+  {
+   "id": "f5c8a502-10d1-5716-9827-2d8d2d8b42ac",
+   "name": "Zwergwandl (Boulder)",
+   "slug": "zwergwandl-boulder",
+   "region": "Helenental",
+   "region_slug": "helenental",
+   "route_count": 5,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "4a",
+    "5a",
+    "5c",
+    "6b+"
+   ],
+   "disciplines": [
+    "boulder"
+   ],
+   "path": "/crags/helenental/zwergwandl-boulder"
+  },
+  {
+   "id": "2b49f9db-0f24-5abc-8384-6f849e6692d3",
+   "name": "Ötzi",
+   "slug": "otzi",
+   "region": "Helenental",
+   "region_slug": "helenental",
+   "route_count": 3,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "7-",
+    "9+",
+    "9+/10-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/helenental/otzi"
+  },
+  {
+   "id": "e277fe12-699f-5d0e-80d0-538a641e1dfa",
+   "name": "Ötzi (Boulder)",
+   "slug": "otzi-boulder",
+   "region": "Helenental",
+   "region_slug": "helenental",
+   "route_count": 8,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "3",
+    "4b",
+    "5a",
+    "6b+",
+    "6c+",
+    "7a",
+    "7b+"
+   ],
+   "disciplines": [
+    "boulder"
+   ],
+   "path": "/crags/helenental/otzi-boulder"
+  },
+  {
+   "id": "2765817c-fc22-5f4b-97b5-b87168eeef9f",
+   "name": "Sektor 1 - Calimero Wall",
+   "slug": "sektor-1-calimero-wall",
+   "region": "Hirschwände",
+   "region_slug": "hirschwande",
+   "route_count": 21,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "5+",
+    "6+",
+    "6+/7-",
+    "7",
+    "7+",
+    "7+/8-",
+    "7-",
+    "8",
+    "8+",
+    "8+/9-",
+    "8-",
+    "9-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hirschwande/sektor-1-calimero-wall"
+  },
+  {
+   "id": "dc0ba6ed-01d5-516d-bba3-be7994469905",
+   "name": "Sektor 2 - Messer",
+   "slug": "sektor-2-messer",
+   "region": "Hirschwände",
+   "region_slug": "hirschwande",
+   "route_count": 8,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "6+",
+    "7",
+    "7+",
+    "8"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hirschwande/sektor-2-messer"
+  },
+  {
+   "id": "45ef5ad5-ad59-55f9-84a1-8d77b2e90a6a",
+   "name": "Sektor 3 - Gamshöhlen",
+   "slug": "sektor-3-gamshohlen",
+   "region": "Hirschwände",
+   "region_slug": "hirschwande",
+   "route_count": 5,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "5",
+    "6+",
+    "7",
+    "7-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hirschwande/sektor-3-gamshohlen"
+  },
+  {
+   "id": "6a70bf25-5806-5612-b551-863791bda7e5",
+   "name": "Sektor 4 - Links Aussen",
+   "slug": "sektor-4-links-aussen",
+   "region": "Hirschwände",
+   "region_slug": "hirschwande",
+   "route_count": 12,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "5",
+    "5+",
+    "6",
+    "6+",
+    "7+",
+    "7-",
+    "8",
+    "8+",
+    "9-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hirschwande/sektor-4-links-aussen"
+  },
+  {
+   "id": "59e3f33d-0ddb-5a7c-b0d1-45421761979b",
+   "name": "Sektor 5 - Kulisse",
+   "slug": "sektor-5-kulisse",
+   "region": "Hirschwände",
+   "region_slug": "hirschwande",
+   "route_count": 48,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "10-",
+    "10/10+",
+    "3",
+    "5+",
+    "6",
+    "6+",
+    "7",
+    "7+",
+    "7+/8-",
+    "7-",
+    "8",
+    "8+",
+    "8+/9-",
+    "8-",
+    "9",
+    "9+",
+    "9+/10-",
+    "9-/9",
+    "9/9+"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hirschwande/sektor-5-kulisse"
+  },
+  {
+   "id": "f742da71-84da-55aa-a7ae-a8bd1f6e68b6",
+   "name": "Sektor 6 - Zentrum",
+   "slug": "sektor-6-zentrum",
+   "region": "Hirschwände",
+   "region_slug": "hirschwande",
+   "route_count": 20,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "10",
+    "4+",
+    "5",
+    "5-",
+    "6",
+    "6+",
+    "7",
+    "7+",
+    "8",
+    "8+",
+    "9"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hirschwande/sektor-6-zentrum"
+  },
+  {
+   "id": "40f5807e-4ecc-5bc5-bab0-2f006d018dd5",
+   "name": "Sektor 7 - Rechtsaussen",
+   "slug": "sektor-7-rechtsaussen",
+   "region": "Hirschwände",
+   "region_slug": "hirschwande",
+   "route_count": 6,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "6-",
+    "7+",
+    "7-",
+    "8"
+   ],
+   "disciplines": [
+    "multipitch",
+    "sport"
+   ],
+   "path": "/crags/hirschwande/sektor-7-rechtsaussen"
+  },
+  {
+   "id": "796ea9b4-9bd8-5fba-99ac-bd1afd85a428",
+   "name": "Auenland",
+   "slug": "auenland",
+   "region": "Hocheck",
+   "region_slug": "hocheck",
+   "route_count": 10,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "1",
+    "2+",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hocheck/auenland"
+  },
+  {
+   "id": "433317f6-b177-54b7-9281-5154b4829753",
+   "name": "Himmelsfinger",
+   "slug": "himmelsfinger",
+   "region": "Hocheck",
+   "region_slug": "hocheck",
+   "route_count": 20,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "4",
+    "4+",
+    "4+/5-",
+    "5+",
+    "5-",
+    "6",
+    "6+",
+    "6b trav",
+    "7"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hocheck/himmelsfinger"
+  },
+  {
+   "id": "3cb51c9d-7396-5595-aacf-adfedf48ec61",
+   "name": "Holzschlag",
+   "slug": "holzschlag",
+   "region": "Hocheck",
+   "region_slug": "hocheck",
+   "route_count": 47,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "10",
+    "3",
+    "3+",
+    "4",
+    "4+",
+    "5",
+    "5+",
+    "6",
+    "6+",
+    "6+/7-",
+    "6-",
+    "7",
+    "7+",
+    "7-",
+    "8+",
+    "8-",
+    "9",
+    "9+",
+    "9+/10-",
+    "9-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hocheck/holzschlag"
+  },
+  {
+   "id": "e71b22d8-c526-5cf1-b454-502662389002",
+   "name": "Holzschlag (Boulder)",
+   "slug": "holzschlag-boulder",
+   "region": "Hocheck",
+   "region_slug": "hocheck",
+   "route_count": 5,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "4a",
+    "5b",
+    "6b",
+    "6c",
+    "7a"
+   ],
+   "disciplines": [
+    "boulder"
+   ],
+   "path": "/crags/hocheck/holzschlag-boulder"
+  },
+  {
+   "id": "54975ce4-d824-57a0-9779-e7882d11b708",
+   "name": "Mittlerer Nordgrat",
+   "slug": "mittlerer-nordgrat",
+   "region": "Hocheck",
+   "region_slug": "hocheck",
+   "route_count": 9,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "6",
+    "7",
+    "7+",
+    "7-",
+    "8"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hocheck/mittlerer-nordgrat"
+  },
+  {
+   "id": "d01209f5-19b2-5f9e-b6f4-7800b31a29af",
+   "name": "Obere Ostwand",
+   "slug": "obere-ostwand",
+   "region": "Hocheck",
+   "region_slug": "hocheck",
+   "route_count": 26,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "10+",
+    "11-",
+    "4",
+    "5",
+    "6",
+    "6+",
+    "7",
+    "7+",
+    "7-",
+    "8",
+    "8+",
+    "9-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hocheck/obere-ostwand"
+  },
+  {
+   "id": "57b50831-8060-5099-b4df-5a3dee74d69f",
+   "name": "Obere Thalhoferwand",
+   "slug": "obere-thalhoferwand",
+   "region": "Hocheck",
+   "region_slug": "hocheck",
+   "route_count": 25,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "5",
+    "5+",
+    "6",
+    "6+",
+    "6+/7-",
+    "6-",
+    "7",
+    "7+",
+    "7-",
+    "7a",
+    "8",
+    "8+"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hocheck/obere-thalhoferwand"
+  },
+  {
+   "id": "c4dee1ed-89bc-5623-a3f5-ead687748c54",
+   "name": "Obere Westwand",
+   "slug": "obere-westwand",
+   "region": "Hocheck",
+   "region_slug": "hocheck",
+   "route_count": 33,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "10",
+    "10/10+",
+    "11-",
+    "3+",
+    "4",
+    "4+",
+    "5",
+    "5+",
+    "5-",
+    "6",
+    "6+",
+    "7",
+    "7+",
+    "7-",
+    "7/7+",
+    "7b trav",
+    "8",
+    "8+/9-",
+    "9+/10-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hocheck/obere-westwand"
+  },
+  {
+   "id": "db9e1640-e3f3-50da-827c-0bba7d8175f5",
+   "name": "Oberer Nordgrat",
+   "slug": "oberer-nordgrat",
+   "region": "Hocheck",
+   "region_slug": "hocheck",
+   "route_count": 36,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "10-",
+    "6",
+    "6+",
+    "7",
+    "7+",
+    "7+/8",
+    "7-",
+    "7/7+",
+    "8",
+    "8+",
+    "8+/9-",
+    "8-",
+    "8-/9-",
+    "9",
+    "9+",
+    "9+/10-",
+    "9-",
+    "9/9+"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hocheck/oberer-nordgrat"
+  },
+  {
+   "id": "b9cdd507-7649-509f-a484-e30cbbe95e51",
+   "name": "Oberer Nordgrat (Boulder)",
+   "slug": "oberer-nordgrat-boulder",
+   "region": "Hocheck",
+   "region_slug": "hocheck",
+   "route_count": 1,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "6c"
+   ],
+   "disciplines": [
+    "boulder"
+   ],
+   "path": "/crags/hocheck/oberer-nordgrat-boulder"
+  },
+  {
+   "id": "3c68bd95-f047-59c9-80a0-57acd55ac6c5",
+   "name": "Ostplatte",
+   "slug": "ostplatte",
+   "region": "Hocheck",
+   "region_slug": "hocheck",
+   "route_count": 26,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "5",
+    "5+",
+    "6",
+    "6+",
+    "6+/7-",
+    "7",
+    "7+",
+    "7+/8-",
+    "7-",
+    "8",
+    "8+/9-",
+    "9",
+    "9-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hocheck/ostplatte"
+  },
+  {
+   "id": "cc56c8b8-22d9-50f5-86b0-344d8dadeee5",
+   "name": "Philosophenzahn",
+   "slug": "philosophenzahn",
+   "region": "Hocheck",
+   "region_slug": "hocheck",
+   "route_count": 11,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "5+",
+    "5-",
+    "6-",
+    "7",
+    "7+/8-",
+    "7-",
+    "8"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hocheck/philosophenzahn"
+  },
+  {
+   "id": "be20d0c4-36d6-587f-9874-af3f39296206",
+   "name": "Prinzwiesentürme",
+   "slug": "prinzwiesenturme",
+   "region": "Hocheck",
+   "region_slug": "hocheck",
+   "route_count": 14,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "4+",
+    "5+",
+    "6+",
+    "7+",
+    "7+/8-",
+    "7-",
+    "7-7",
+    "8-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hocheck/prinzwiesenturme"
+  },
+  {
+   "id": "7d80cfd9-6ff3-5849-82fe-340e6c7f048e",
+   "name": "Prinzwiesentürme (Boulder)",
+   "slug": "prinzwiesenturme-boulder",
+   "region": "Hocheck",
+   "region_slug": "hocheck",
+   "route_count": 1,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "6c/7a trav"
+   ],
+   "disciplines": [
+    "boulder"
+   ],
+   "path": "/crags/hocheck/prinzwiesenturme-boulder"
+  },
+  {
+   "id": "4444a450-4fa6-50cd-8a39-0faf35d3e30d",
+   "name": "Südwestwand",
+   "slug": "sudwestwand",
+   "region": "Hocheck",
+   "region_slug": "hocheck",
+   "route_count": 15,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "3",
+    "4",
+    "5",
+    "6",
+    "6+",
+    "7"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hocheck/sudwestwand"
+  },
+  {
+   "id": "6ca40275-b9e1-5d21-b610-bbb97c154dfc",
+   "name": "Thalhoferkanzel",
+   "slug": "thalhoferkanzel",
+   "region": "Hocheck",
+   "region_slug": "hocheck",
+   "route_count": 17,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "4+",
+    "5",
+    "5-",
+    "6",
+    "6+",
+    "7",
+    "7+",
+    "7-",
+    "8+",
+    "8-",
+    "9"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hocheck/thalhoferkanzel"
+  },
+  {
+   "id": "99093643-fbea-55d0-956a-be7b2d635fd2",
+   "name": "Trinkratzahn",
+   "slug": "trinkratzahn",
+   "region": "Hocheck",
+   "region_slug": "hocheck",
+   "route_count": 7,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "2+",
+    "4",
+    "5+",
+    "6",
+    "6+",
+    "7+"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hocheck/trinkratzahn"
+  },
+  {
+   "id": "140ddbb9-8e47-5251-b2d2-d9dca9c93482",
+   "name": "Untere Thalhoferwand",
+   "slug": "untere-thalhoferwand",
+   "region": "Hocheck",
+   "region_slug": "hocheck",
+   "route_count": 27,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "5",
+    "5+",
+    "5-",
+    "6",
+    "6+",
+    "6+/7-",
+    "6b trav",
+    "7",
+    "7+",
+    "7-",
+    "7/7+",
+    "8-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hocheck/untere-thalhoferwand"
+  },
+  {
+   "id": "00eec527-6590-5448-a4a3-e9a5f45f2cd9",
+   "name": "Untere Westwand",
+   "slug": "untere-westwand",
+   "region": "Hocheck",
+   "region_slug": "hocheck",
+   "route_count": 24,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "5",
+    "5+",
+    "6+",
+    "7",
+    "7+",
+    "7-",
+    "8",
+    "8+",
+    "8-",
+    "8-/9-",
+    "8/8+",
+    "9+/10-",
+    "9-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hocheck/untere-westwand"
+  },
+  {
+   "id": "3aed9c1c-077f-5f19-b3dc-90d06c6b8ed9",
+   "name": "Unterer Nordgrat",
+   "slug": "unterer-nordgrat",
+   "region": "Hocheck",
+   "region_slug": "hocheck",
+   "route_count": 18,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "3",
+    "3-",
+    "5",
+    "5+",
+    "5-",
+    "6",
+    "6+",
+    "6+/7-",
+    "7+",
+    "7-",
+    "7a trav",
+    "8"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hocheck/unterer-nordgrat"
+  },
+  {
+   "id": "9ccfdb3f-371f-5956-a91a-22ddaa844358",
+   "name": "Zentrale Thalhoferwand",
+   "slug": "zentrale-thalhoferwand",
+   "region": "Hocheck",
+   "region_slug": "hocheck",
+   "route_count": 12,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "4",
+    "5",
+    "6",
+    "7",
+    "7+/8-",
+    "7-",
+    "8-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hocheck/zentrale-thalhoferwand"
+  },
+  {
+   "id": "383aead4-c81e-5e25-b886-2595f8f07e8f",
+   "name": "Hausstein",
+   "slug": "hausstein",
+   "region": "Hohe Wand",
+   "region_slug": "hohe-wand",
+   "route_count": 54,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "10",
+    "10-",
+    "10-/10",
+    "11-",
+    "5",
+    "5+",
+    "6",
+    "6+",
+    "7",
+    "7+",
+    "7-",
+    "7/7+",
+    "8",
+    "8 A0",
+    "8+",
+    "8-",
+    "8/8+",
+    "9",
+    "9+",
+    "9+/10-",
+    "9-",
+    "9/9+"
+   ],
+   "disciplines": [
+    "multipitch",
+    "sport"
+   ],
+   "path": "/crags/hohe-wand/hausstein"
+  },
+  {
+   "id": "70c84b3c-64b6-5925-a4a2-f36eac46cd89",
+   "name": "Haussteinmugal",
+   "slug": "haussteinmugal",
+   "region": "Hohe Wand",
+   "region_slug": "hohe-wand",
+   "route_count": 34,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "3+",
+    "3-",
+    "4",
+    "4+",
+    "4-",
+    "5",
+    "5+",
+    "5-",
+    "6",
+    "6+",
+    "6+/7-",
+    "6-",
+    "7+",
+    "7-",
+    "8",
+    "8+",
+    "8-/8",
+    "9"
+   ],
+   "disciplines": [
+    "multipitch",
+    "sport"
+   ],
+   "path": "/crags/hohe-wand/haussteinmugal"
+  },
+  {
+   "id": "38477826-1706-54f5-8ba0-2adf10ef4373",
+   "name": "Hirnflitzstein",
+   "slug": "hirnflitzstein",
+   "region": "Hohe Wand",
+   "region_slug": "hohe-wand",
+   "route_count": 26,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "4+",
+    "5",
+    "5+",
+    "6",
+    "6+",
+    "7",
+    "7+",
+    "7+/8-",
+    "7-",
+    "8",
+    "8+",
+    "8+/9-",
+    "9-/9"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hohe-wand/hirnflitzstein"
+  },
+  {
+   "id": "63d7bb4d-502e-5f52-b17a-b37ab960621d",
+   "name": "Hochfallbasis",
+   "slug": "hochfallbasis",
+   "region": "Hohe Wand",
+   "region_slug": "hohe-wand",
+   "route_count": 42,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "1+ bis 2+",
+    "10-",
+    "6",
+    "6+",
+    "7",
+    "7+",
+    "7+/8-",
+    "7-",
+    "8",
+    "8+",
+    "8-",
+    "8-/8",
+    "8/8+",
+    "9",
+    "9+",
+    "9+/10-",
+    "9-/10-"
+   ],
+   "disciplines": [
+    "multipitch",
+    "sport"
+   ],
+   "path": "/crags/hohe-wand/hochfallbasis"
+  },
+  {
+   "id": "5ed3126e-58df-5de7-8a75-164311a33544",
+   "name": "Hochkogel",
+   "slug": "hochkogel",
+   "region": "Hohe Wand",
+   "region_slug": "hohe-wand",
+   "route_count": 38,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "10",
+    "10+",
+    "10-",
+    "10-/10",
+    "10/10",
+    "10/10+",
+    "11-",
+    "6+",
+    "7",
+    "7+",
+    "7-",
+    "8",
+    "8+/9-",
+    "8-",
+    "9+",
+    "9+/10-",
+    "9-",
+    "9-/9"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hohe-wand/hochkogel"
+  },
+  {
+   "id": "bda1cc8d-58cd-5908-8287-4a92855d6ee3",
+   "name": "Hochkogeleck",
+   "slug": "hochkogeleck",
+   "region": "Hohe Wand",
+   "region_slug": "hohe-wand",
+   "route_count": 18,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "10-",
+    "2-",
+    "3+",
+    "5+",
+    "5-",
+    "6+",
+    "6-",
+    "7",
+    "7+",
+    "7-",
+    "8",
+    "9/9+"
+   ],
+   "disciplines": [
+    "multipitch",
+    "sport"
+   ],
+   "path": "/crags/hohe-wand/hochkogeleck"
+  },
+  {
+   "id": "71e758bd-dc85-5058-959c-9345f4b86867",
+   "name": "Naglplatten",
+   "slug": "naglplatten",
+   "region": "Hohe Wand",
+   "region_slug": "hohe-wand",
+   "route_count": 45,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "4-",
+    "5",
+    "5+",
+    "6",
+    "6+",
+    "6-",
+    "7",
+    "7+",
+    "7+/8-",
+    "7-",
+    "8",
+    "8-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hohe-wand/naglplatten"
+  },
+  {
+   "id": "6da7df9a-0466-5986-b6aa-3e43bf87490b",
+   "name": "Strassenwand",
+   "slug": "strassenwand",
+   "region": "Hohe Wand",
+   "region_slug": "hohe-wand",
+   "route_count": 30,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "6",
+    "6+",
+    "7",
+    "7+",
+    "7-",
+    "8",
+    "8+",
+    "8-",
+    "8/8+",
+    "9+",
+    "9+/10-",
+    "9-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hohe-wand/strassenwand"
+  },
+  {
+   "id": "c889db2e-0141-5f5b-920a-977afbdc42f9",
+   "name": "Unterer Almfrieden",
+   "slug": "unterer-almfrieden",
+   "region": "Hohe Wand",
+   "region_slug": "hohe-wand",
+   "route_count": 18,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "5+",
+    "6",
+    "6+",
+    "7",
+    "7+",
+    "7-",
+    "7/7+",
+    "8",
+    "8+",
+    "8+/9-",
+    "8-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hohe-wand/unterer-almfrieden"
+  },
+  {
+   "id": "27973e34-624e-5f40-a23e-234d9b95486d",
+   "name": "Wandeck Klettergarten",
+   "slug": "wandeck-klettergarten",
+   "region": "Hohe Wand",
+   "region_slug": "hohe-wand",
+   "route_count": 64,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "10-",
+    "3+",
+    "4",
+    "5",
+    "5+",
+    "5-",
+    "6",
+    "6+",
+    "6-",
+    "7",
+    "7+",
+    "7+/8-",
+    "7-",
+    "8",
+    "8+",
+    "8-",
+    "8-/8",
+    "9+",
+    "9-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hohe-wand/wandeck-klettergarten"
+  },
+  {
+   "id": "4322fbdd-4e2c-5a7d-9414-448fcf348b35",
+   "name": "ÖTK Klettergarten",
+   "slug": "otk-klettergarten",
+   "region": "Hohe Wand",
+   "region_slug": "hohe-wand",
+   "route_count": 32,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "2-",
+    "3",
+    "3+",
+    "3-",
+    "4",
+    "4+",
+    "4-",
+    "5",
+    "5-",
+    "6",
+    "6+",
+    "7",
+    "7+/8-",
+    "7-",
+    "8",
+    "8+",
+    "8-",
+    "9",
+    "9+"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/hohe-wand/otk-klettergarten"
+  },
+  {
+   "id": "412db130-ed1a-509a-bdb6-f81bad42c1d3",
+   "name": "Höllenstein",
+   "slug": "hollenstein",
+   "region": "Kaltenleutgebner Tal",
+   "region_slug": "kaltenleutgebner-tal",
+   "route_count": 14,
+   "latitude": 48.096515,
+   "longitude": 16.184047,
+   "grades": [
+    "3",
+    "4",
+    "5+",
+    "5-",
+    "5b",
+    "6+",
+    "6+/7-",
+    "6-",
+    "6a",
+    "7",
+    "7-",
+    "8+",
+    "8-"
+   ],
+   "disciplines": [
+    "boulder",
+    "sport"
+   ],
+   "path": "/crags/kaltenleutgebner-tal/hollenstein"
+  },
+  {
+   "id": "2fd353df-2fbb-5e12-8f92-93cfd4f82182",
+   "name": "Jungkunststein",
+   "slug": "jungkunststein",
+   "region": "Kaltenleutgebner Tal",
+   "region_slug": "kaltenleutgebner-tal",
+   "route_count": 13,
+   "latitude": 48.109702,
+   "longitude": 16.204405,
+   "grades": [
+    "2",
+    "3-",
+    "4",
+    "4-",
+    "5",
+    "5-",
+    "5a",
+    "6",
+    "6+"
+   ],
+   "disciplines": [
+    "boulder",
+    "sport"
+   ],
+   "path": "/crags/kaltenleutgebner-tal/jungkunststein"
+  },
+  {
+   "id": "1a1783d7-7381-5e07-b8c9-5a53e7d8bc61",
+   "name": "Kalksburger Grat",
+   "slug": "kalksburger-grat",
+   "region": "Kaltenleutgebner Tal",
+   "region_slug": "kaltenleutgebner-tal",
+   "route_count": 6,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "2",
+    "2+",
+    "3",
+    "4",
+    "4+",
+    "5-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/kaltenleutgebner-tal/kalksburger-grat"
+  },
+  {
+   "id": "933227d6-49a5-5178-9934-50385379789a",
+   "name": "Kaltenleutgebner Grat",
+   "slug": "kaltenleutgebner-grat",
+   "region": "Kaltenleutgebner Tal",
+   "region_slug": "kaltenleutgebner-tal",
+   "route_count": 18,
+   "latitude": 48.116353,
+   "longitude": 16.213972,
+   "grades": [
+    "2",
+    "3+",
+    "4+",
+    "4-",
+    "6+",
+    "7",
+    "7+/8-",
+    "7-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/kaltenleutgebner-tal/kaltenleutgebner-grat"
+  },
+  {
+   "id": "54bf1448-ab80-5f5f-bfa9-2c475f0fae61",
+   "name": "Kirchengrat",
+   "slug": "kirchengrat",
+   "region": "Kaltenleutgebner Tal",
+   "region_slug": "kaltenleutgebner-tal",
+   "route_count": 5,
+   "latitude": 48.113728,
+   "longitude": 16.197626,
+   "grades": [
+    "5-",
+    "6+",
+    "6-",
+    "7/7+"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/kaltenleutgebner-tal/kirchengrat"
+  },
+  {
+   "id": "7b9ee444-80b1-5be7-8e84-1f97a4d3d75d",
+   "name": "Luckete Wand",
+   "slug": "luckete-wand",
+   "region": "Kaltenleutgebner Tal",
+   "region_slug": "kaltenleutgebner-tal",
+   "route_count": 51,
+   "latitude": 48.112115,
+   "longitude": 16.200473,
+   "grades": [
+    "1+",
+    "2",
+    "2+",
+    "3",
+    "3+",
+    "3-",
+    "4",
+    "4+",
+    "4-",
+    "4c",
+    "5",
+    "5+",
+    "5-",
+    "6",
+    "6+",
+    "6-",
+    "6b",
+    "7+"
+   ],
+   "disciplines": [
+    "boulder",
+    "sport"
+   ],
+   "path": "/crags/kaltenleutgebner-tal/luckete-wand"
+  },
+  {
+   "id": "49ede56e-925e-5fbe-921b-543b3dea4878",
+   "name": "Lutterwand",
+   "slug": "lutterwand",
+   "region": "Kaltenleutgebner Tal",
+   "region_slug": "kaltenleutgebner-tal",
+   "route_count": 28,
+   "latitude": 48.128969,
+   "longitude": 16.250156,
+   "grades": [
+    "1+",
+    "2",
+    "2+",
+    "3",
+    "3+",
+    "4",
+    "4+",
+    "4-",
+    "5",
+    "5+",
+    "5-",
+    "6",
+    "6+",
+    "6-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/kaltenleutgebner-tal/lutterwand"
+  },
+  {
+   "id": "4e5ac247-1d62-5abc-8b3b-1c2270af676f",
+   "name": "Löwenkopf",
+   "slug": "lowenkopf",
+   "region": "Kaltenleutgebner Tal",
+   "region_slug": "kaltenleutgebner-tal",
+   "route_count": 7,
+   "latitude": 48.119135,
+   "longitude": 16.211473,
+   "grades": [
+    "3+",
+    "5+",
+    "5-",
+    "6",
+    "6+",
+    "7-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/kaltenleutgebner-tal/lowenkopf"
+  },
+  {
+   "id": "7a9ba7a7-2442-5728-9002-9d66c634b639",
+   "name": "Meije",
+   "slug": "meije",
+   "region": "Kaltenleutgebner Tal",
+   "region_slug": "kaltenleutgebner-tal",
+   "route_count": 8,
+   "latitude": 48.117436,
+   "longitude": 16.223987,
+   "grades": [
+    "3+",
+    "4",
+    "5-",
+    "5c",
+    "6+"
+   ],
+   "disciplines": [
+    "boulder",
+    "sport"
+   ],
+   "path": "/crags/kaltenleutgebner-tal/meije"
+  },
+  {
+   "id": "dc6f9abc-ced7-5798-bb82-da4ed06b2421",
+   "name": "Mizzi Langer Wand",
+   "slug": "mizzi-langer-wand",
+   "region": "Kaltenleutgebner Tal",
+   "region_slug": "kaltenleutgebner-tal",
+   "route_count": 26,
+   "latitude": 48.131243,
+   "longitude": 16.252346,
+   "grades": [
+    "2",
+    "3",
+    "3+",
+    "3-",
+    "4+",
+    "4-",
+    "5",
+    "5+",
+    "5-",
+    "6",
+    "6+",
+    "6-",
+    "6b"
+   ],
+   "disciplines": [
+    "boulder",
+    "sport"
+   ],
+   "path": "/crags/kaltenleutgebner-tal/mizzi-langer-wand"
+  },
+  {
+   "id": "a9db4133-3d57-599f-885c-0b52f38aee8c",
+   "name": "Schöffelturm",
+   "slug": "schoffelturm",
+   "region": "Kaltenleutgebner Tal",
+   "region_slug": "kaltenleutgebner-tal",
+   "route_count": 4,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "5",
+    "5-",
+    "7+",
+    "7-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/kaltenleutgebner-tal/schoffelturm"
+  },
+  {
+   "id": "75b6d9ea-5488-5025-a8a5-1103f71a8cdc",
+   "name": "Streberwände",
+   "slug": "streberwande",
+   "region": "Kaltenleutgebner Tal",
+   "region_slug": "kaltenleutgebner-tal",
+   "route_count": 31,
+   "latitude": 48.11711,
+   "longitude": 16.215608,
+   "grades": [
+    "2+",
+    "3+",
+    "4",
+    "5+",
+    "5-",
+    "5b",
+    "5c",
+    "6",
+    "6+",
+    "6-",
+    "7",
+    "7+",
+    "7-",
+    "7-/7",
+    "8+",
+    "9-/9"
+   ],
+   "disciplines": [
+    "boulder",
+    "sport"
+   ],
+   "path": "/crags/kaltenleutgebner-tal/streberwande"
+  },
+  {
+   "id": "e3274afb-8933-50f8-8514-f946381ef1c1",
+   "name": "Waldmühle",
+   "slug": "waldmuhle",
+   "region": "Kaltenleutgebner Tal",
+   "region_slug": "kaltenleutgebner-tal",
+   "route_count": 50,
+   "latitude": 48.118374,
+   "longitude": 16.221751,
+   "grades": [
+    "1",
+    "2",
+    "2+",
+    "3",
+    "3+",
+    "4",
+    "4+",
+    "5",
+    "5+",
+    "6",
+    "6+",
+    "6+/7-",
+    "6-",
+    "7",
+    "7+",
+    "7-",
+    "8",
+    "8-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/kaltenleutgebner-tal/waldmuhle"
+  },
+  {
+   "id": "0461ee47-c0e9-57da-8a92-e3dbef111530",
+   "name": "Friedrichswand",
+   "slug": "friedrichswand",
+   "region": "Lindkogel",
+   "region_slug": "lindkogel",
+   "route_count": 27,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "1-2",
+    "2",
+    "3",
+    "3+",
+    "4",
+    "4+",
+    "4/4+",
+    "5",
+    "5+",
+    "5-",
+    "6"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/lindkogel/friedrichswand"
+  },
+  {
+   "id": "c07db7a8-a35c-5d9c-b0dc-91f695b22e37",
+   "name": "Roter Ofen",
+   "slug": "roter-ofen",
+   "region": "Lindkogel",
+   "region_slug": "lindkogel",
+   "route_count": 41,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "10+",
+    "2",
+    "3",
+    "3+",
+    "4",
+    "4+",
+    "5",
+    "5+",
+    "5-",
+    "6",
+    "6+",
+    "6/6+",
+    "7",
+    "7+",
+    "7+/8-",
+    "7-",
+    "7-/7",
+    "7/7+",
+    "8",
+    "8+",
+    "9",
+    "9-",
+    "ca 9+"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/lindkogel/roter-ofen"
+  },
+  {
+   "id": "3e86ecb5-4062-5c93-a330-afbd9cef6bfb",
+   "name": "Weisses Kreuz",
+   "slug": "weisses-kreuz",
+   "region": "Lindkogel",
+   "region_slug": "lindkogel",
+   "route_count": 15,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "4",
+    "4+",
+    "5",
+    "5-",
+    "6+",
+    "6+/7-",
+    "6b",
+    "7",
+    "7+",
+    "7-",
+    "8-",
+    "9-/9"
+   ],
+   "disciplines": [
+    "boulder",
+    "sport"
+   ],
+   "path": "/crags/lindkogel/weisses-kreuz"
+  },
+  {
+   "id": "b9893263-d6c7-57d9-91ff-459931e2a9e7",
+   "name": "Efeugrat",
+   "slug": "efeugrat",
+   "region": "Mödling",
+   "region_slug": "modling",
+   "route_count": 37,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "10-",
+    "2",
+    "4",
+    "4+",
+    "5",
+    "5+",
+    "6",
+    "6+",
+    "6-",
+    "7",
+    "7+",
+    "7+/8-",
+    "7-",
+    "8",
+    "8+/9-",
+    "8-",
+    "8/8+",
+    "9",
+    "9-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/modling/efeugrat"
+  },
+  {
+   "id": "723c56a6-9814-55dc-bcbe-ad0fad3d6b81",
+   "name": "Erikagrat",
+   "slug": "erikagrat",
+   "region": "Mödling",
+   "region_slug": "modling",
+   "route_count": 20,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "2+",
+    "3",
+    "3+",
+    "4+",
+    "5+",
+    "6",
+    "6+",
+    "6-",
+    "7+",
+    "7-",
+    "8",
+    "8-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/modling/erikagrat"
+  },
+  {
+   "id": "bcc07e30-6a98-5769-b309-4b480c65cf22",
+   "name": "Glocknergrat",
+   "slug": "glocknergrat",
+   "region": "Mödling",
+   "region_slug": "modling",
+   "route_count": 30,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "3",
+    "3+",
+    "4",
+    "4+",
+    "5",
+    "5+",
+    "6",
+    "6+",
+    "6+/7-",
+    "7+",
+    "7-",
+    "8+/9-",
+    "8-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/modling/glocknergrat"
+  },
+  {
+   "id": "283665da-a56d-597a-9b58-47c5906ee010",
+   "name": "Gumpoldskirchen",
+   "slug": "gumpoldskirchen",
+   "region": "Mödling",
+   "region_slug": "modling",
+   "route_count": 11,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "4+",
+    "4-",
+    "5",
+    "5+",
+    "5-",
+    "6-",
+    "B"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/modling/gumpoldskirchen"
+  },
+  {
+   "id": "f04c35d2-d328-5973-8d74-d66d4174be23",
+   "name": "Lausbubenwand",
+   "slug": "lausbubenwand",
+   "region": "Mödling",
+   "region_slug": "modling",
+   "route_count": 52,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "10-/10",
+    "3+",
+    "4",
+    "4+",
+    "5",
+    "5+",
+    "5a",
+    "6",
+    "6+",
+    "6+/7-",
+    "6b",
+    "6c",
+    "7",
+    "7+",
+    "7+/8-",
+    "7-",
+    "7/7+",
+    "8",
+    "8+",
+    "8-",
+    "8-/8",
+    "9+"
+   ],
+   "disciplines": [
+    "boulder",
+    "sport"
+   ],
+   "path": "/crags/modling/lausbubenwand"
+  },
+  {
+   "id": "a8e71aa7-b327-58b3-8879-fe21acf07b63",
+   "name": "Matterhörndl",
+   "slug": "matterhorndl",
+   "region": "Mödling",
+   "region_slug": "modling",
+   "route_count": 12,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "2",
+    "3",
+    "4",
+    "4+",
+    "5",
+    "5+",
+    "5-",
+    "6-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/modling/matterhorndl"
+  },
+  {
+   "id": "620454ac-06e8-596a-a5d3-df812ea88a80",
+   "name": "Promenadenfels",
+   "slug": "promenadenfels",
+   "region": "Mödling",
+   "region_slug": "modling",
+   "route_count": 7,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "2+",
+    "4",
+    "6",
+    "6-",
+    "7+",
+    "7a",
+    "7b/7b+"
+   ],
+   "disciplines": [
+    "boulder",
+    "sport"
+   ],
+   "path": "/crags/modling/promenadenfels"
+  },
+  {
+   "id": "430725b3-1158-5fce-936a-aea7e90d4ed9",
+   "name": "Rauhe Platte",
+   "slug": "rauhe-platte",
+   "region": "Mödling",
+   "region_slug": "modling",
+   "route_count": 9,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "3",
+    "4",
+    "4+",
+    "5-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/modling/rauhe-platte"
+  },
+  {
+   "id": "6ca83baa-095f-573a-a9c7-387f9fd4d2f5",
+   "name": "Ritterfels",
+   "slug": "ritterfels",
+   "region": "Mödling",
+   "region_slug": "modling",
+   "route_count": 5,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "6+/7-",
+    "7+",
+    "7+/8-",
+    "7-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/modling/ritterfels"
+  },
+  {
+   "id": "5336c04c-fa0b-541f-a38d-710e7db5a3e4",
+   "name": "Sturmwandl",
+   "slug": "sturmwandl",
+   "region": "Mödling",
+   "region_slug": "modling",
+   "route_count": 5,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "6+",
+    "6-",
+    "7-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/modling/sturmwandl"
+  },
+  {
+   "id": "136b30d3-d1e0-5371-ac21-5298b34e8f1a",
+   "name": "Badener Turm",
+   "slug": "badener-turm",
+   "region": "Pernitz",
+   "region_slug": "pernitz",
+   "route_count": 21,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "7",
+    "7+",
+    "7-",
+    "7-7",
+    "8",
+    "8+",
+    "8+/9-",
+    "8-",
+    "9+/10-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/pernitz/badener-turm"
+  },
+  {
+   "id": "f480c654-e571-5d47-856c-f3187c4ae23c",
+   "name": "Gamswand",
+   "slug": "gamswand",
+   "region": "Pernitz",
+   "region_slug": "pernitz",
+   "route_count": 20,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "6",
+    "6+",
+    "7",
+    "7+",
+    "7-",
+    "7/7+",
+    "8",
+    "8+/9-",
+    "8-",
+    "8/8+",
+    "9"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/pernitz/gamswand"
+  },
+  {
+   "id": "b3cd86e8-3c54-52ca-bf7b-7349c1f702f0",
+   "name": "Gamswandl",
+   "slug": "gamswandl",
+   "region": "Pernitz",
+   "region_slug": "pernitz",
+   "route_count": 16,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "10/10+",
+    "7",
+    "7+",
+    "7+/8-",
+    "8+",
+    "8-",
+    "8/8+",
+    "9+",
+    "9-",
+    "9-/9",
+    "9/9+"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/pernitz/gamswandl"
+  },
+  {
+   "id": "dbb86e45-2b45-52bb-abf6-f83243f791f0",
+   "name": "Kalkofenwand",
+   "slug": "kalkofenwand",
+   "region": "Pernitz",
+   "region_slug": "pernitz",
+   "route_count": 31,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "1+",
+    "2",
+    "2+",
+    "3+",
+    "3-",
+    "4",
+    "5",
+    "5-",
+    "6",
+    "6+",
+    "7",
+    "7-",
+    "8",
+    "8+",
+    "8-",
+    "9",
+    "9-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/pernitz/kalkofenwand"
+  },
+  {
+   "id": "3a46b32a-027a-5b73-a2f4-6d85bab465ff",
+   "name": "Kleine Klause",
+   "slug": "kleine-klause",
+   "region": "Pernitz",
+   "region_slug": "pernitz",
+   "route_count": 18,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "6",
+    "6+",
+    "7",
+    "7+",
+    "7+/8-",
+    "8",
+    "8+/9-",
+    "9+",
+    "9-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/pernitz/kleine-klause"
+  },
+  {
+   "id": "d3c6fb6e-2a00-58a0-aaba-2dc6814d205f",
+   "name": "Kraftwandl",
+   "slug": "kraftwandl",
+   "region": "Pernitz",
+   "region_slug": "pernitz",
+   "route_count": 13,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "6+",
+    "6b trav",
+    "7",
+    "7+",
+    "7+/8-",
+    "8",
+    "8/8+",
+    "9+",
+    "9-",
+    "9-/9"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/pernitz/kraftwandl"
+  },
+  {
+   "id": "e3b89e29-507a-5c2d-9688-a9c8f5b84f0c",
+   "name": "Schatzinsel",
+   "slug": "schatzinsel",
+   "region": "Pernitz",
+   "region_slug": "pernitz",
+   "route_count": 24,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "10-",
+    "5+",
+    "6-",
+    "7+/8-",
+    "7-",
+    "8",
+    "8+",
+    "8+/9-",
+    "8-",
+    "8/8+",
+    "9",
+    "9+",
+    "9+/10-",
+    "9-",
+    "9-/9"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/pernitz/schatzinsel"
+  },
+  {
+   "id": "3d9f5906-7464-5237-9627-99f79ffe06fa",
+   "name": "Schatzinsel (Boulder)",
+   "slug": "schatzinsel-boulder",
+   "region": "Pernitz",
+   "region_slug": "pernitz",
+   "route_count": 16,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "6a",
+    "6b",
+    "6b+",
+    "6c",
+    "7a",
+    "7a+",
+    "7b+",
+    "8a"
+   ],
+   "disciplines": [
+    "boulder"
+   ],
+   "path": "/crags/pernitz/schatzinsel-boulder"
+  },
+  {
+   "id": "c63789da-ed28-5dc2-9041-79c16f2eb742",
+   "name": "Shadow Wall",
+   "slug": "shadow-wall",
+   "region": "Pernitz",
+   "region_slug": "pernitz",
+   "route_count": 7,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "6+/7-",
+    "7+",
+    "7-",
+    "7/7+",
+    "8+/9-",
+    "9"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/pernitz/shadow-wall"
+  },
+  {
+   "id": "17707729-3f37-5a04-a6d5-9933f597b783",
+   "name": "Steinwandklamm",
+   "slug": "steinwandklamm",
+   "region": "Pernitz",
+   "region_slug": "pernitz",
+   "route_count": 13,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "7",
+    "7+",
+    "7+/8-",
+    "8",
+    "8+",
+    "8-",
+    "9+",
+    "9+/10-",
+    "9-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/pernitz/steinwandklamm"
+  },
+  {
+   "id": "8ca6b59f-8029-5ebb-8af1-273d4317f4f7",
+   "name": "Kinderwand",
+   "slug": "kinderwand",
+   "region": "Wöllersdorf Hart",
+   "region_slug": "wollersdorf-hart",
+   "route_count": 5,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "4",
+    "5-",
+    "6+",
+    "7+"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/wollersdorf-hart/kinderwand"
+  },
+  {
+   "id": "85ba3553-e436-59c9-a80b-7eb7e8648600",
+   "name": "Linker Wandteil",
+   "slug": "linker-wandteil",
+   "region": "Wöllersdorf Hart",
+   "region_slug": "wollersdorf-hart",
+   "route_count": 8,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "4",
+    "5+",
+    "6+",
+    "7+",
+    "7-",
+    "7-8",
+    "9-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/wollersdorf-hart/linker-wandteil"
+  },
+  {
+   "id": "232e7dbb-9a1c-5376-a72b-8f1a56471eff",
+   "name": "Wöllersdorf Hart (Boulder)",
+   "slug": "wollersdorf-hart-boulder",
+   "region": "Wöllersdorf Hart",
+   "region_slug": "wollersdorf-hart",
+   "route_count": 20,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "4a",
+    "4b",
+    "4c",
+    "5a",
+    "5b",
+    "5c",
+    "6a",
+    "6a+",
+    "6b",
+    "6c",
+    "6c+"
+   ],
+   "disciplines": [
+    "boulder"
+   ],
+   "path": "/crags/wollersdorf-hart/wollersdorf-hart-boulder"
+  },
+  {
+   "id": "58461cd6-ea6c-522f-b30f-072e0c4586c8",
+   "name": "Zentraler Wandteil",
+   "slug": "zentraler-wandteil",
+   "region": "Wöllersdorf Hart",
+   "region_slug": "wollersdorf-hart",
+   "route_count": 20,
+   "latitude": null,
+   "longitude": null,
+   "grades": [
+    "4",
+    "4+",
+    "5",
+    "5+",
+    "6",
+    "6+",
+    "6-",
+    "7",
+    "7+",
+    "7+/8-",
+    "7-",
+    "8",
+    "8-"
+   ],
+   "disciplines": [
+    "sport"
+   ],
+   "path": "/crags/wollersdorf-hart/zentraler-wandteil"
+  }
+ ]
+}

@@ -1,0 +1,161 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T09:11:05+00:00",
+ "crag": {
+  "id": "6ca83baa-095f-573a-a9c7-387f9fd4d2f5",
+  "name": "Ritterfels",
+  "slug": "ritterfels",
+  "region": "Mödling",
+  "region_slug": "modling",
+  "route_count": 5,
+  "latitude": null,
+  "longitude": null,
+  "grades": [
+   "6+/7-",
+   "7+",
+   "7+/8-",
+   "7-"
+  ],
+  "disciplines": [
+   "sport"
+  ],
+  "path": "/crags/modling/ritterfels"
+ },
+ "routes": [
+  {
+   "row_key": "Mödling | Ritterfels | Burggraben Direttissima",
+   "name": "Burggraben Direttissima",
+   "grade": "6+/7-",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Mödling",
+   "area": "Mödling",
+   "crag": "Ritterfels",
+   "wall": "Ritterfels",
+   "source": "Keltenkalk",
+   "latitude": null,
+   "longitude": null,
+   "notion_page_id": null,
+   "workflow_status": "in Notion DB",
+   "provenance": [
+    "master"
+   ],
+   "id": "01161bb2-b5c7-5906-8c6e-283f5947f767",
+   "region_slug": "modling",
+   "crag_slug": "ritterfels",
+   "slug": "burggraben-direttissima",
+   "path": "/crags/modling/ritterfels#01161bb2-b5c7-5906-8c6e-283f5947f767",
+   "has_coords": false,
+   "verification_status": "imported-unverified"
+  },
+  {
+   "row_key": "Mödling | Ritterfels | Burgherr",
+   "name": "Burgherr",
+   "grade": "7+/8-",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Mödling",
+   "area": "Mödling",
+   "crag": "Ritterfels",
+   "wall": "Ritterfels",
+   "source": "Keltenkalk",
+   "latitude": null,
+   "longitude": null,
+   "notion_page_id": null,
+   "workflow_status": "in Notion DB",
+   "provenance": [
+    "master"
+   ],
+   "id": "d7805bc0-6776-5371-9afc-450244e57a92",
+   "region_slug": "modling",
+   "crag_slug": "ritterfels",
+   "slug": "burgherr",
+   "path": "/crags/modling/ritterfels#d7805bc0-6776-5371-9afc-450244e57a92",
+   "has_coords": false,
+   "verification_status": "imported-unverified"
+  },
+  {
+   "row_key": "Mödling | Ritterfels | Hofnarr",
+   "name": "Hofnarr",
+   "grade": "7-",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Mödling",
+   "area": "Mödling",
+   "crag": "Ritterfels",
+   "wall": "Ritterfels",
+   "source": "Keltenkalk",
+   "latitude": null,
+   "longitude": null,
+   "notion_page_id": null,
+   "workflow_status": "in Notion DB",
+   "provenance": [
+    "master"
+   ],
+   "id": "4f6ea44a-bf35-5bea-b1a9-fe0ae23d6373",
+   "region_slug": "modling",
+   "crag_slug": "ritterfels",
+   "slug": "hofnarr",
+   "path": "/crags/modling/ritterfels#4f6ea44a-bf35-5bea-b1a9-fe0ae23d6373",
+   "has_coords": false,
+   "verification_status": "imported-unverified"
+  },
+  {
+   "row_key": "Mödling | Ritterfels | Raubritter",
+   "name": "Raubritter",
+   "grade": "7+",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Mödling",
+   "area": "Mödling",
+   "crag": "Ritterfels",
+   "wall": "Ritterfels",
+   "source": "Keltenkalk",
+   "latitude": null,
+   "longitude": null,
+   "notion_page_id": null,
+   "workflow_status": "in Notion DB",
+   "provenance": [
+    "master"
+   ],
+   "id": "83655e61-1dc3-5e10-8303-0e00615a2132",
+   "region_slug": "modling",
+   "crag_slug": "ritterfels",
+   "slug": "raubritter",
+   "path": "/crags/modling/ritterfels#83655e61-1dc3-5e10-8303-0e00615a2132",
+   "has_coords": false,
+   "verification_status": "imported-unverified"
+  },
+  {
+   "row_key": "Mödling | Ritterfels | Ritterfräulein",
+   "name": "Ritterfräulein",
+   "grade": "7-",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Mödling",
+   "area": "Mödling",
+   "crag": "Ritterfels",
+   "wall": "Ritterfels",
+   "source": "Keltenkalk",
+   "latitude": null,
+   "longitude": null,
+   "notion_page_id": null,
+   "workflow_status": "in Notion DB",
+   "provenance": [
+    "master"
+   ],
+   "id": "371d031d-5e5d-55b9-98ff-72abd630a37a",
+   "region_slug": "modling",
+   "crag_slug": "ritterfels",
+   "slug": "ritterfraulein",
+   "path": "/crags/modling/ritterfels#371d031d-5e5d-55b9-98ff-72abd630a37a",
+   "has_coords": false,
+   "verification_status": "imported-unverified"
+  }
+ ]
+}

@@ -1,0 +1,105 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T09:11:05+00:00",
+ "crag": {
+  "id": "fbf86089-80a7-5101-8c46-1dc5b93725ed",
+  "name": "Arnsteinblöcke (Boulder)",
+  "slug": "arnsteinblocke-boulder",
+  "region": "Arnstein",
+  "region_slug": "arnstein",
+  "route_count": 3,
+  "latitude": null,
+  "longitude": null,
+  "grades": [
+   "3b",
+   "4a"
+  ],
+  "disciplines": [
+   "boulder"
+  ],
+  "path": "/crags/arnstein/arnsteinblocke-boulder"
+ },
+ "routes": [
+  {
+   "row_key": "Arnstein | Arnsteinblöcke (Boulder) | Easy Rider (Arnstein)",
+   "name": "Easy Rider (Arnstein)",
+   "grade": "3b",
+   "grade_band": "Boulder",
+   "grade_system": "Font",
+   "discipline": "boulder",
+   "region": "Arnstein",
+   "area": "Arnstein",
+   "crag": "Arnsteinblöcke (Boulder)",
+   "wall": "Arnsteinblöcke (Boulder)",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "notion_page_id": null,
+   "workflow_status": "to create",
+   "provenance": [
+    "master"
+   ],
+   "id": "14f7e0e7-e93c-5aef-9f81-d701aaf1cf20",
+   "region_slug": "arnstein",
+   "crag_slug": "arnsteinblocke-boulder",
+   "slug": "easy-rider-arnstein",
+   "path": "/crags/arnstein/arnsteinblocke-boulder#14f7e0e7-e93c-5aef-9f81-d701aaf1cf20",
+   "has_coords": false,
+   "verification_status": "imported-unverified"
+  },
+  {
+   "row_key": "Arnstein | Arnsteinblöcke (Boulder) | Gigant",
+   "name": "Gigant",
+   "grade": "4a",
+   "grade_band": "Boulder",
+   "grade_system": "Font",
+   "discipline": "boulder",
+   "region": "Arnstein",
+   "area": "Arnstein",
+   "crag": "Arnsteinblöcke (Boulder)",
+   "wall": "Arnsteinblöcke (Boulder)",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "notion_page_id": null,
+   "workflow_status": "to create",
+   "provenance": [
+    "master"
+   ],
+   "id": "7633ff12-dfb7-5efa-b08f-09a36da5e59f",
+   "region_slug": "arnstein",
+   "crag_slug": "arnsteinblocke-boulder",
+   "slug": "gigant",
+   "path": "/crags/arnstein/arnsteinblocke-boulder#7633ff12-dfb7-5efa-b08f-09a36da5e59f",
+   "has_coords": false,
+   "verification_status": "imported-unverified"
+  },
+  {
+   "row_key": "Arnstein | Arnsteinblöcke (Boulder) | Scherbendiagorauf",
+   "name": "Scherbendiagorauf",
+   "grade": "4a",
+   "grade_band": "Boulder",
+   "grade_system": "Font",
+   "discipline": "boulder",
+   "region": "Arnstein",
+   "area": "Arnstein",
+   "crag": "Arnsteinblöcke (Boulder)",
+   "wall": "Arnsteinblöcke (Boulder)",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "notion_page_id": null,
+   "workflow_status": "to create",
+   "provenance": [
+    "master"
+   ],
+   "id": "f1a45f0a-d8f6-5162-8f75-db141c6c94f4",
+   "region_slug": "arnstein",
+   "crag_slug": "arnsteinblocke-boulder",
+   "slug": "scherbendiagorauf",
+   "path": "/crags/arnstein/arnsteinblocke-boulder#f1a45f0a-d8f6-5162-8f75-db141c6c94f4",
+   "has_coords": false,
+   "verification_status": "imported-unverified"
+  }
+ ]
+}

@@ -1,0 +1,161 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T09:11:05+00:00",
+ "crag": {
+  "id": "f5c8a502-10d1-5716-9827-2d8d2d8b42ac",
+  "name": "Zwergwandl (Boulder)",
+  "slug": "zwergwandl-boulder",
+  "region": "Helenental",
+  "region_slug": "helenental",
+  "route_count": 5,
+  "latitude": null,
+  "longitude": null,
+  "grades": [
+   "4a",
+   "5a",
+   "5c",
+   "6b+"
+  ],
+  "disciplines": [
+   "boulder"
+  ],
+  "path": "/crags/helenental/zwergwandl-boulder"
+ },
+ "routes": [
+  {
+   "row_key": "Helenental | Zwergwandl (Boulder) | Arschglatt",
+   "name": "Arschglatt",
+   "grade": "6b+",
+   "grade_band": "Boulder",
+   "grade_system": "Font",
+   "discipline": "boulder",
+   "region": "Helenental",
+   "area": "Helenental",
+   "crag": "Zwergwandl (Boulder)",
+   "wall": "Zwergwandl (Boulder)",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "notion_page_id": "3a921413-5351-8112-bb63-d36d470b40e9",
+   "workflow_status": "review (Helenental) — in DB",
+   "provenance": [
+    "master"
+   ],
+   "id": "101d1948-1583-5833-a576-6a59f93d661f",
+   "region_slug": "helenental",
+   "crag_slug": "zwergwandl-boulder",
+   "slug": "arschglatt",
+   "path": "/crags/helenental/zwergwandl-boulder#101d1948-1583-5833-a576-6a59f93d661f",
+   "has_coords": false,
+   "verification_status": "imported-unverified"
+  },
+  {
+   "row_key": "Helenental | Zwergwandl (Boulder) | Fingerbeisser",
+   "name": "Fingerbeisser",
+   "grade": "6b+",
+   "grade_band": "Boulder",
+   "grade_system": "Font",
+   "discipline": "boulder",
+   "region": "Helenental",
+   "area": "Helenental",
+   "crag": "Zwergwandl (Boulder)",
+   "wall": "Zwergwandl (Boulder)",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "notion_page_id": "3a921413-5351-8137-9c2c-e0ee4e9e815c",
+   "workflow_status": "review (Helenental) — in DB",
+   "provenance": [
+    "master"
+   ],
+   "id": "77edc292-c53f-5da8-b225-f720d4ee2e78",
+   "region_slug": "helenental",
+   "crag_slug": "zwergwandl-boulder",
+   "slug": "fingerbeisser",
+   "path": "/crags/helenental/zwergwandl-boulder#77edc292-c53f-5da8-b225-f720d4ee2e78",
+   "has_coords": false,
+   "verification_status": "imported-unverified"
+  },
+  {
+   "row_key": "Helenental | Zwergwandl (Boulder) | Glattarsch",
+   "name": "Glattarsch",
+   "grade": "5c",
+   "grade_band": "Boulder",
+   "grade_system": "Font",
+   "discipline": "boulder",
+   "region": "Helenental",
+   "area": "Helenental",
+   "crag": "Zwergwandl (Boulder)",
+   "wall": "Zwergwandl (Boulder)",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "notion_page_id": "3a921413-5351-81c5-bfa0-c2baedc3e81d",
+   "workflow_status": "review (Helenental) — in DB",
+   "provenance": [
+    "master"
+   ],
+   "id": "265692c0-39ae-5ec7-9418-1fa1c34b128f",
+   "region_slug": "helenental",
+   "crag_slug": "zwergwandl-boulder",
+   "slug": "glattarsch",
+   "path": "/crags/helenental/zwergwandl-boulder#265692c0-39ae-5ec7-9418-1fa1c34b128f",
+   "has_coords": false,
+   "verification_status": "imported-unverified"
+  },
+  {
+   "row_key": "Helenental | Zwergwandl (Boulder) | Mooszwerg",
+   "name": "Mooszwerg",
+   "grade": "4a",
+   "grade_band": "Boulder",
+   "grade_system": "Font",
+   "discipline": "boulder",
+   "region": "Helenental",
+   "area": "Helenental",
+   "crag": "Zwergwandl (Boulder)",
+   "wall": "Zwergwandl (Boulder)",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "notion_page_id": "3a921413-5351-81a1-9930-f5c61a1ac670",
+   "workflow_status": "review (Helenental) — in DB",
+   "provenance": [
+    "master"
+   ],
+   "id": "ddeb6a25-7854-508c-adbd-4c117c29af38",
+   "region_slug": "helenental",
+   "crag_slug": "zwergwandl-boulder",
+   "slug": "mooszwerg",
+   "path": "/crags/helenental/zwergwandl-boulder#ddeb6a25-7854-508c-adbd-4c117c29af38",
+   "has_coords": false,
+   "verification_status": "imported-unverified"
+  },
+  {
+   "row_key": "Helenental | Zwergwandl (Boulder) | Zwergdiagonale",
+   "name": "Zwergdiagonale",
+   "grade": "5a",
+   "grade_band": "Boulder",
+   "grade_system": "Font",
+   "discipline": "boulder",
+   "region": "Helenental",
+   "area": "Helenental",
+   "crag": "Zwergwandl (Boulder)",
+   "wall": "Zwergwandl (Boulder)",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "notion_page_id": "3a921413-5351-8156-bbac-df6a429dda30",
+   "workflow_status": "review (Helenental) — in DB",
+   "provenance": [
+    "master"
+   ],
+   "id": "1809277d-7d4e-5f41-9827-c69233d41f40",
+   "region_slug": "helenental",
+   "crag_slug": "zwergwandl-boulder",
+   "slug": "zwergdiagonale",
+   "path": "/crags/helenental/zwergwandl-boulder#1809277d-7d4e-5f41-9827-c69233d41f40",
+   "has_coords": false,
+   "verification_status": "imported-unverified"
+  }
+ ]
+}

@@ -1,0 +1,103 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T09:11:05+00:00",
+ "count": 12,
+ "regions": [
+  {
+   "id": "ab426755-1276-5254-8293-e66150203802",
+   "name": "Arnstein",
+   "slug": "arnstein",
+   "crag_count": 13,
+   "route_count": 143,
+   "path": "/crags/arnstein"
+  },
+  {
+   "id": "af6de9ee-48b7-512d-a4b1-6444e4dd221f",
+   "name": "Bucklige Welt",
+   "slug": "bucklige-welt",
+   "crag_count": 5,
+   "route_count": 100,
+   "path": "/crags/bucklige-welt"
+  },
+  {
+   "id": "ec9eeb90-c189-52af-9f1e-740d13fc173e",
+   "name": "Fischauer Vorberge",
+   "slug": "fischauer-vorberge",
+   "crag_count": 6,
+   "route_count": 145,
+   "path": "/crags/fischauer-vorberge"
+  },
+  {
+   "id": "892cee18-8fb8-529c-ab89-d06f5747785c",
+   "name": "Helenental",
+   "slug": "helenental",
+   "crag_count": 26,
+   "route_count": 359,
+   "path": "/crags/helenental"
+  },
+  {
+   "id": "5cec0b41-7cb1-584b-adc1-d5f73f2c4d62",
+   "name": "Hirschwände",
+   "slug": "hirschwande",
+   "crag_count": 7,
+   "route_count": 120,
+   "path": "/crags/hirschwande"
+  },
+  {
+   "id": "44d3165c-7f33-5dd8-908b-4801f2ddcb03",
+   "name": "Hocheck",
+   "slug": "hocheck",
+   "crag_count": 21,
+   "route_count": 384,
+   "path": "/crags/hocheck"
+  },
+  {
+   "id": "50db06f6-0fec-5d68-9cc8-b17418f8ecc9",
+   "name": "Hohe Wand",
+   "slug": "hohe-wand",
+   "crag_count": 11,
+   "route_count": 401,
+   "path": "/crags/hohe-wand"
+  },
+  {
+   "id": "8bd8cec5-7866-503c-94e4-7f8f0e13d152",
+   "name": "Kaltenleutgebner Tal",
+   "slug": "kaltenleutgebner-tal",
+   "crag_count": 13,
+   "route_count": 261,
+   "path": "/crags/kaltenleutgebner-tal"
+  },
+  {
+   "id": "ea2f3035-dce0-5937-9557-3b15ceb08ff4",
+   "name": "Lindkogel",
+   "slug": "lindkogel",
+   "crag_count": 3,
+   "route_count": 83,
+   "path": "/crags/lindkogel"
+  },
+  {
+   "id": "3d327e75-6852-5359-840f-7e392ae8e346",
+   "name": "Mödling",
+   "slug": "modling",
+   "crag_count": 10,
+   "route_count": 188,
+   "path": "/crags/modling"
+  },
+  {
+   "id": "c0dcb40a-4d8b-53a7-911b-aee36e799794",
+   "name": "Pernitz",
+   "slug": "pernitz",
+   "crag_count": 10,
+   "route_count": 179,
+   "path": "/crags/pernitz"
+  },
+  {
+   "id": "083308f3-fdaa-5ccc-bcfc-ed6f43a28383",
+   "name": "Wöllersdorf Hart",
+   "slug": "wollersdorf-hart",
+   "crag_count": 4,
+   "route_count": 53,
+   "path": "/crags/wollersdorf-hart"
+  }
+ ]
+}

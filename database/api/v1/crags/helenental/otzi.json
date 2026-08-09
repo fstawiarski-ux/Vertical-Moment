@@ -1,0 +1,106 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T09:11:05+00:00",
+ "crag": {
+  "id": "2b49f9db-0f24-5abc-8384-6f849e6692d3",
+  "name": "Ötzi",
+  "slug": "otzi",
+  "region": "Helenental",
+  "region_slug": "helenental",
+  "route_count": 3,
+  "latitude": null,
+  "longitude": null,
+  "grades": [
+   "7-",
+   "9+",
+   "9+/10-"
+  ],
+  "disciplines": [
+   "sport"
+  ],
+  "path": "/crags/helenental/otzi"
+ },
+ "routes": [
+  {
+   "row_key": "Helenental | Ötzi | Orange Crush",
+   "name": "Orange Crush",
+   "grade": "9+/10-",
+   "grade_band": "8-11",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Helenental",
+   "area": "Helenental",
+   "crag": "Ötzi",
+   "wall": "Ötzi",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "notion_page_id": null,
+   "workflow_status": "review (Helenental) — new",
+   "provenance": [
+    "master"
+   ],
+   "id": "1e212b52-49a1-5d84-8f85-94395969a455",
+   "region_slug": "helenental",
+   "crag_slug": "otzi",
+   "slug": "orange-crush",
+   "path": "/crags/helenental/otzi#1e212b52-49a1-5d84-8f85-94395969a455",
+   "has_coords": false,
+   "verification_status": "imported-unverified"
+  },
+  {
+   "row_key": "Helenental | Ötzi | Orange Crush Rechts",
+   "name": "Orange Crush Rechts",
+   "grade": "9+",
+   "grade_band": "8-11",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Helenental",
+   "area": "Helenental",
+   "crag": "Ötzi",
+   "wall": "Ötzi",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "notion_page_id": null,
+   "workflow_status": "review (Helenental) — new",
+   "provenance": [
+    "master"
+   ],
+   "id": "1f3b1dab-1c5d-5d61-880b-7f038c01cf8b",
+   "region_slug": "helenental",
+   "crag_slug": "otzi",
+   "slug": "orange-crush-rechts",
+   "path": "/crags/helenental/otzi#1f3b1dab-1c5d-5d61-880b-7f038c01cf8b",
+   "has_coords": false,
+   "verification_status": "imported-unverified"
+  },
+  {
+   "row_key": "Helenental | Ötzi | Saskari",
+   "name": "Saskari",
+   "grade": "7-",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Helenental",
+   "area": "Helenental",
+   "crag": "Ötzi",
+   "wall": "Ötzi",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "notion_page_id": null,
+   "workflow_status": "review (Helenental) — new",
+   "provenance": [
+    "master"
+   ],
+   "id": "dadd2351-8a40-5189-8069-9a77c332a386",
+   "region_slug": "helenental",
+   "crag_slug": "otzi",
+   "slug": "saskari",
+   "path": "/crags/helenental/otzi#dadd2351-8a40-5189-8069-9a77c332a386",
+   "has_coords": false,
+   "verification_status": "imported-unverified"
+  }
+ ]
+}

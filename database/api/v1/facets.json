@@ -1,0 +1,33 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T09:11:05+00:00",
+ "regions": [
+  "Arnstein",
+  "Bucklige Welt",
+  "Fischauer Vorberge",
+  "Helenental",
+  "Hirschwände",
+  "Hocheck",
+  "Hohe Wand",
+  "Kaltenleutgebner Tal",
+  "Lindkogel",
+  "Mödling",
+  "Pernitz",
+  "Wöllersdorf Hart"
+ ],
+ "disciplines": [
+  "boulder",
+  "multipitch",
+  "sport"
+ ],
+ "grade_bands": [
+  "1-4",
+  "5-7",
+  "8-11",
+  "Boulder"
+ ],
+ "sources": [
+  "Keltenkalk",
+  "Österreich Ost"
+ ]
+}

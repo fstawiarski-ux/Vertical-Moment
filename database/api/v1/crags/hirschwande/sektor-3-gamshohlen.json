@@ -1,0 +1,161 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T09:11:05+00:00",
+ "crag": {
+  "id": "45ef5ad5-ad59-55f9-84a1-8d77b2e90a6a",
+  "name": "Sektor 3 - Gamshöhlen",
+  "slug": "sektor-3-gamshohlen",
+  "region": "Hirschwände",
+  "region_slug": "hirschwande",
+  "route_count": 5,
+  "latitude": null,
+  "longitude": null,
+  "grades": [
+   "5",
+   "6+",
+   "7",
+   "7-"
+  ],
+  "disciplines": [
+   "sport"
+  ],
+  "path": "/crags/hirschwande/sektor-3-gamshohlen"
+ },
+ "routes": [
+  {
+   "row_key": "Hirschwände | Sektor 3 - Gamshöhlen | Bat Bitch (Gamshöhlen)",
+   "name": "Bat Bitch (Gamshöhlen)",
+   "grade": "7",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Hirschwände",
+   "area": "Hirschwände",
+   "crag": "Sektor 3 - Gamshöhlen",
+   "wall": "Sektor 3 - Gamshöhlen",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "notion_page_id": null,
+   "workflow_status": "to create",
+   "provenance": [
+    "master"
+   ],
+   "id": "49d55fb3-4505-5614-a403-ed3ceb65621e",
+   "region_slug": "hirschwande",
+   "crag_slug": "sektor-3-gamshohlen",
+   "slug": "bat-bitch-gamshohlen",
+   "path": "/crags/hirschwande/sektor-3-gamshohlen#49d55fb3-4505-5614-a403-ed3ceb65621e",
+   "has_coords": false,
+   "verification_status": "imported-unverified"
+  },
+  {
+   "row_key": "Hirschwände | Sektor 3 - Gamshöhlen | Dopingtest",
+   "name": "Dopingtest",
+   "grade": "7-",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Hirschwände",
+   "area": "Hirschwände",
+   "crag": "Sektor 3 - Gamshöhlen",
+   "wall": "Sektor 3 - Gamshöhlen",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "notion_page_id": null,
+   "workflow_status": "to create",
+   "provenance": [
+    "master"
+   ],
+   "id": "6b7e1055-24be-55bf-8fd4-e88af5e6ee27",
+   "region_slug": "hirschwande",
+   "crag_slug": "sektor-3-gamshohlen",
+   "slug": "dopingtest",
+   "path": "/crags/hirschwande/sektor-3-gamshohlen#6b7e1055-24be-55bf-8fd4-e88af5e6ee27",
+   "has_coords": false,
+   "verification_status": "imported-unverified"
+  },
+  {
+   "row_key": "Hirschwände | Sektor 3 - Gamshöhlen | Exit",
+   "name": "Exit",
+   "grade": "5",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Hirschwände",
+   "area": "Hirschwände",
+   "crag": "Sektor 3 - Gamshöhlen",
+   "wall": "Sektor 3 - Gamshöhlen",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "notion_page_id": null,
+   "workflow_status": "to create",
+   "provenance": [
+    "master"
+   ],
+   "id": "2f41fc8a-6e7b-543a-8901-ef656f46373f",
+   "region_slug": "hirschwande",
+   "crag_slug": "sektor-3-gamshohlen",
+   "slug": "exit",
+   "path": "/crags/hirschwande/sektor-3-gamshohlen#2f41fc8a-6e7b-543a-8901-ef656f46373f",
+   "has_coords": false,
+   "verification_status": "imported-unverified"
+  },
+  {
+   "row_key": "Hirschwände | Sektor 3 - Gamshöhlen | Masterpiece",
+   "name": "Masterpiece",
+   "grade": "7",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Hirschwände",
+   "area": "Hirschwände",
+   "crag": "Sektor 3 - Gamshöhlen",
+   "wall": "Sektor 3 - Gamshöhlen",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "notion_page_id": null,
+   "workflow_status": "to create",
+   "provenance": [
+    "master"
+   ],
+   "id": "0f817d07-bfd3-54b8-ac4f-e3dad7df01fc",
+   "region_slug": "hirschwande",
+   "crag_slug": "sektor-3-gamshohlen",
+   "slug": "masterpiece",
+   "path": "/crags/hirschwande/sektor-3-gamshohlen#0f817d07-bfd3-54b8-ac4f-e3dad7df01fc",
+   "has_coords": false,
+   "verification_status": "imported-unverified"
+  },
+  {
+   "row_key": "Hirschwände | Sektor 3 - Gamshöhlen | Rap the Rock",
+   "name": "Rap the Rock",
+   "grade": "6+",
+   "grade_band": "5-7",
+   "grade_system": "UIAA",
+   "discipline": "sport",
+   "region": "Hirschwände",
+   "area": "Hirschwände",
+   "crag": "Sektor 3 - Gamshöhlen",
+   "wall": "Sektor 3 - Gamshöhlen",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "notion_page_id": null,
+   "workflow_status": "to create",
+   "provenance": [
+    "master"
+   ],
+   "id": "7a0aca0f-bbe1-5005-b45a-01787c9843f0",
+   "region_slug": "hirschwande",
+   "crag_slug": "sektor-3-gamshohlen",
+   "slug": "rap-the-rock",
+   "path": "/crags/hirschwande/sektor-3-gamshohlen#7a0aca0f-bbe1-5005-b45a-01787c9843f0",
+   "has_coords": false,
+   "verification_status": "imported-unverified"
+  }
+ ]
+}

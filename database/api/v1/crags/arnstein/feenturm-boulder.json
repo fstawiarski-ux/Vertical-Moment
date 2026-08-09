@@ -1,0 +1,50 @@
+{
+ "schema_version": "1.0.0",
+ "generated": "2026-08-09T09:11:05+00:00",
+ "crag": {
+  "id": "69a257ac-44f0-53e0-8731-678783d63602",
+  "name": "Feenturm (Boulder)",
+  "slug": "feenturm-boulder",
+  "region": "Arnstein",
+  "region_slug": "arnstein",
+  "route_count": 1,
+  "latitude": null,
+  "longitude": null,
+  "grades": [
+   "5b"
+  ],
+  "disciplines": [
+   "boulder"
+  ],
+  "path": "/crags/arnstein/feenturm-boulder"
+ },
+ "routes": [
+  {
+   "row_key": "Arnstein | Feenturm (Boulder) | Feentraverse",
+   "name": "Feentraverse",
+   "grade": "5b",
+   "grade_band": "Boulder",
+   "grade_system": "Font",
+   "discipline": "boulder",
+   "region": "Arnstein",
+   "area": "Arnstein",
+   "crag": "Feenturm (Boulder)",
+   "wall": "Feenturm (Boulder)",
+   "source": "Österreich Ost",
+   "latitude": null,
+   "longitude": null,
+   "notion_page_id": null,
+   "workflow_status": "to create",
+   "provenance": [
+    "master"
+   ],
+   "id": "9012dfdf-cd77-5b89-a3d3-fcadc082475e",
+   "region_slug": "arnstein",
+   "crag_slug": "feenturm-boulder",
+   "slug": "feentraverse",
+   "path": "/crags/arnstein/feenturm-boulder#9012dfdf-cd77-5b89-a3d3-fcadc082475e",
+   "has_coords": false,
+   "verification_status": "imported-unverified"
+  }
+ ]
+}
