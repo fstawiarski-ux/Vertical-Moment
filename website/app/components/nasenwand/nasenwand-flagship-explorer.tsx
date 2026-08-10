@@ -14,7 +14,6 @@ type Chapter = 0 | 1 | 2 | 3;
 type Route = { name: string; grade: string; length?: string; pitches?: string };
 type Point = { x: number; y: number };
 type PanoState = { zoom: number; x: number; y: number };
-
 type Region = { name: string; meta: string; image: string };
 
 const ORBIT_DURATION = 110 / 30;
@@ -38,7 +37,7 @@ const CHAPTERS = [
   { label: 'Place', kicker: 'Wachau · Place', title: 'Nasenwand', body: 'Move through the approach while region, panorama and route context stay fixed around the media window.' },
   { label: 'Wall', kicker: 'Nasenwand · Wall', title: 'Meet the wall.', body: 'The wall remains readable while the persistent controls stay within thumb reach.' },
   { label: 'Sector', kicker: 'Nasenwand · Upper Sector', title: 'Read the sector.', body: 'The verified close-wall orbit becomes the sector transition before topo.' },
-  { label: 'Topo', kicker: 'Upper Sector · 12 routes', title: 'Pick a route.', body: 'Use the route rail above the media and the compact information panel on the right.' },
+  { label: 'Topo', kicker: 'Upper Sector · 12 routes', title: 'Pick a route.', body: 'Use the route rail above the media and the compact informational panel on the right.' },
 ] as const;
 
 const PANORAMAS = [
@@ -94,7 +93,6 @@ export default function NasenwandFlagshipExplorer() {
   const [selected, setSelected] = useState<Route>(ROUTES[5]);
   const [panoIndex, setPanoIndex] = useState(1);
   const [panoState, setPanoState] = useState<PanoState>({ zoom: 1, x: 0, y: 0 });
-  const [galleryOpen, setGalleryOpen] = useState(true);
   const [activeSector, setActiveSector] = useState('Upper');
   const [panelHidden, setPanelHidden] = useState(false);
 
@@ -160,8 +158,6 @@ export default function NasenwandFlagshipExplorer() {
     if (!node) return;
     node.scrollBy({ left: direction * Math.min(460, node.clientWidth * .72), behavior: 'smooth' });
   };
-
-
 
   const trackPointerDown = (kind: 'region' | 'route', event: ReactPointerEvent<HTMLDivElement>) => {
     const node = kind === 'region' ? regionTrack.current : routeTrack.current;
@@ -269,7 +265,10 @@ export default function NasenwandFlagshipExplorer() {
 
   return (
     <div ref={runway} className={styles.runway}>
-      <main className={styles.stage}>
+      <main
+        className={styles.stage}
+        style={{ '--pano-bg': `url(${PANORAMAS[panoIndex]})` } as CSSProperties}
+      >
         <header className={styles.topbar}>
           <div className={styles.headerIdentity}>
             <a href="/" className={styles.brand} aria-label="Vertical Moment home">
@@ -284,7 +283,15 @@ export default function NasenwandFlagshipExplorer() {
 
           <div className={styles.regionDock}>
             <button className={styles.regionArrow} onClick={() => scrollTrack('region', -1)} aria-label="Previous regions">‹</button>
-            <div ref={regionTrack} className={styles.regionTrack} onPointerDown={(event) => trackPointerDown('region', event)} onPointerMove={trackPointerMove} onPointerUp={trackPointerUp} onPointerCancel={trackPointerUp} onClickCapture={suppressTrackClick}>
+            <div
+              ref={regionTrack}
+              className={styles.regionTrack}
+              onPointerDown={(event) => trackPointerDown('region', event)}
+              onPointerMove={trackPointerMove}
+              onPointerUp={trackPointerUp}
+              onPointerCancel={trackPointerUp}
+              onClickCapture={suppressTrackClick}
+            >
               {REGIONS.map((region, i) => (
                 <button
                   key={region.name}
@@ -297,6 +304,19 @@ export default function NasenwandFlagshipExplorer() {
               ))}
             </div>
             <button className={styles.regionArrow} onClick={() => scrollTrack('region', 1)} aria-label="Next regions">›</button>
+          </div>
+
+          <div className={styles.headerPanoramas} aria-label="Wachau panorama album">
+            {PANORAMAS.map((src, i) => (
+              <button
+                key={src}
+                onClick={() => choosePano(i)}
+                className={i === panoIndex ? styles.panoThumbActive : ''}
+                aria-label={`Show panorama ${i + 1}`}
+              >
+                <img src={src} alt="" />
+              </button>
+            ))}
           </div>
         </header>
 
@@ -327,23 +347,6 @@ export default function NasenwandFlagshipExplorer() {
           >
             <b>360°</b><small>View</small>
           </a>
-          <button className={styles.galleryToggle} onClick={() => setGalleryOpen((open) => !open)}>Gallery</button>
-          {galleryOpen && (
-            <div className={styles.panoGallery}>
-              {PANORAMAS.map((src, i) => (
-                <button key={src} onClick={() => choosePano(i)} className={i === panoIndex ? styles.panoThumbActive : ''}>
-                  <img src={src} alt="" />
-                </button>
-              ))}
-            </div>
-          )}
-          <button
-            className={styles.hidePanel}
-            onClick={() => setPanelHidden((hidden) => !hidden)}
-            aria-expanded={!panelHidden}
-          >
-            <span>{panelHidden ? 'Show panel' : 'Hide panel'}</span><b>{panelHidden ? '‹' : '›'}</b>
-          </button>
           <span className={styles.panoHint}>Drag to explore · wheel / pinch to zoom · double-click to reset</span>
         </section>
 
@@ -377,7 +380,15 @@ export default function NasenwandFlagshipExplorer() {
 
           <section className={styles.routeBelt}>
             <button className={styles.routeArrow} onClick={() => scrollTrack('route', -1)} aria-label="Previous routes">‹</button>
-            <div ref={routeTrack} className={styles.routeTrack} onPointerDown={(event) => trackPointerDown('route', event)} onPointerMove={trackPointerMove} onPointerUp={trackPointerUp} onPointerCancel={trackPointerUp} onClickCapture={suppressTrackClick}>
+            <div
+              ref={routeTrack}
+              className={styles.routeTrack}
+              onPointerDown={(event) => trackPointerDown('route', event)}
+              onPointerMove={trackPointerMove}
+              onPointerUp={trackPointerUp}
+              onPointerCancel={trackPointerUp}
+              onClickCapture={suppressTrackClick}
+            >
               {ROUTES.map((route, i) => (
                 <button
                   key={route.name}
@@ -417,7 +428,9 @@ export default function NasenwandFlagshipExplorer() {
               <h1>{c.title}</h1>
               <p>{c.body}</p>
             </div>
+          </div>
 
+          <aside className={styles.stageRail} aria-label="Explorer scroll stages">
             <nav className={styles.rail} aria-label="Explorer stages">
               {CHAPTERS.map((item, i) => (
                 <button key={item.label} className={chapter === i ? styles.activeRail : ''} onClick={() => jump(i as Chapter)}>
@@ -426,7 +439,7 @@ export default function NasenwandFlagshipExplorer() {
                 </button>
               ))}
             </nav>
-          </div>
+          </aside>
 
           <aside className={styles.infoRail} style={{ '--rail-image': `url(${infoImage})` } as CSSProperties}>
             <div className={styles.infoShade} />
@@ -449,6 +462,14 @@ export default function NasenwandFlagshipExplorer() {
             </div>
           </aside>
         </section>
+
+        <button
+          className={styles.hidePanel}
+          onClick={() => setPanelHidden((hidden) => !hidden)}
+          aria-expanded={!panelHidden}
+        >
+          <span>{panelHidden ? 'Show panel' : 'Hide panel'}</span><b>{panelHidden ? '‹' : '›'}</b>
+        </button>
 
         <div className={styles.progress}><i style={{ width: `${progress * 100}%` }} /></div>
       </main>
