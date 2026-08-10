@@ -1,0 +1,316 @@
+{
+  "id_mismatch_in_matched": [],
+  "id_mismatch_in_added_count": 1682,
+  "bad_coords": [
+    {
+      "row_key": "Wienerwald i okolice | Großer Illing | Südwest Kante",
+      "lat": 47.624011,
+      "lon": 11.2637843,
+      "region": "Wienerwald i okolice"
+    },
+    {
+      "row_key": "Berchtesgaden | — | Hochkranz Ostgrat",
+      "lat": 47.5236584,
+      "lon": 12.7895733,
+      "region": "Berchtesgaden"
+    },
+    {
+      "row_key": "Berchtesgaden | — | Südrampe Hochthron",
+      "lat": 47.6935146,
+      "lon": 12.986619,
+      "region": "Berchtesgaden"
+    },
+    {
+      "row_key": "Berchtesgaden | — | Berchtesgadener Hochthron",
+      "lat": 47.6935146,
+      "lon": 12.986619,
+      "region": "Berchtesgaden"
+    },
+    {
+      "row_key": "Berchtesgaden | Dießbachthörl | Hundstod Südwest Grat",
+      "lat": 47.5127249,
+      "lon": 12.8849252,
+      "region": "Berchtesgaden"
+    },
+    {
+      "row_key": "Berchtesgaden | Watzmann-Mittelspitze | Wiederroute",
+      "lat": 47.5543889,
+      "lon": 12.9220342,
+      "region": "Berchtesgaden"
+    },
+    {
+      "row_key": "Berchtesgaden | Berchtesgaden | Watzmann Ostwand",
+      "lat": 47.5543889,
+      "lon": 12.9220342,
+      "region": "Berchtesgaden"
+    },
+    {
+      "row_key": "Berchtesgaden | — | Blaueisumrahmung",
+      "lat": 47.5543889,
+      "lon": 12.9220342,
+      "region": "Berchtesgaden"
+    },
+    {
+      "row_key": "Berchtesgaden | Wagendrischelhorn | Zellerführe",
+      "lat": 47.5988564,
+      "lon": 12.7917253,
+      "region": "Berchtesgaden"
+    },
+    {
+      "row_key": "Wilder Kaiser | Karlspitze | Jakobsweg",
+      "lat": 47.563983,
+      "lon": 12.315917,
+      "region": "Wilder Kaiser"
+    },
+    {
+      "row_key": "Wilder Kaiser | — | Ellmauer Tor Tour",
+      "lat": 47.5659252,
+      "lon": 12.3207684,
+      "region": "Wilder Kaiser"
+    },
+    {
+      "row_key": "Wilder Kaiser | — | Hintere Goinger Halt Nordg.",
+      "lat": 47.5687712,
+      "lon": 12.3239622,
+      "region": "Wilder Kaiser"
+    },
+    {
+      "row_key": "Wilder Kaiser | Kleine Halt | Weiße Spur",
+      "lat": 47.5684601,
+      "lon": 12.3160217,
+      "region": "Wilder Kaiser"
+    },
+    {
+      "row_key": "Wilder Kaiser | Kleine L... | Bügeleisenkante",
+      "lat": 47.5622,
+      "lon": 12.3072,
+      "region": "Wilder Kaiser"
+    },
+    {
+      "row_key": "Wilder Kaiser | Sonneck | Ostgrat",
+      "lat": 47.5624978,
+      "lon": 12.3268595,
+      "region": "Wilder Kaiser"
+    },
+    {
+      "row_key": "Wilder Kaiser | — | Vordere Karlspitze Südostgr.",
+      "lat": 47.563983,
+      "lon": 12.315917,
+      "region": "Wilder Kaiser"
+    },
+    {
+      "row_key": "Wilder Kaiser | Kleine La... | Egerländerkante",
+      "lat": 47.5622,
+      "lon": 12.3072,
+      "region": "Wilder Kaiser"
+    },
+    {
+      "row_key": "Wilder Kaiser | Totenkirchl | Führerweg",
+      "lat": 47.5659252,
+      "lon": 12.3207684,
+      "region": "Wilder Kaiser"
+    },
+    {
+      "row_key": "Wilder Kaiser | Wilder Kaiser | Kopftörlgrat",
+      "lat": 47.5622495,
+      "lon": 12.307177,
+      "region": "Wilder Kaiser"
+    },
+    {
+      "row_key": "Wilder Kaiser | Scheffauer | Ostler Führe",
+      "lat": 47.5590174,
+      "lon": 12.2958457,
+      "region": "Wilder Kaiser"
+    },
+    {
+      "row_key": "Wilder Kaiser | Kleine H... | Klettergeheimnis",
+      "lat": 47.5622,
+      "lon": 12.3072,
+      "region": "Wilder Kaiser"
+    },
+    {
+      "row_key": "Hohe Tauern — Glockner | — | Glocknergrat Gratüberschr.",
+      "lat": 47.0745464,
+      "lon": 12.6938826,
+      "region": "Hohe Tauern — Glockner"
+    },
+    {
+      "row_key": "Hohe Tauern — Glockner | Großglockner | Stüdlgrat",
+      "lat": 47.0745464,
+      "lon": 12.6938826,
+      "region": "Hohe Tauern — Glockner"
+    },
+    {
+      "row_key": "Hohe Tauern — Glockner | Großglockner | Meletzkigrat",
+      "lat": 47.0745464,
+      "lon": 12.6938826,
+      "region": "Hohe Tauern — Glockner"
+    },
+    {
+      "row_key": "Nowe rejony alpejskie (Odkryte w procesie redakcji) | Aggenstein | Kemptner Kante",
+      "lat": 47.5363453,
+      "lon": 10.5608016,
+      "region": "Nowe rejony alpejskie (Odkryte w procesie redakcji)"
+    },
+    {
+      "row_key": "Nowe rejony alpejskie (Odkryte w procesie redakcji) | Hochwiesler | Hüttengrat",
+      "lat": 47.4975514,
+      "lon": 10.6141826,
+      "region": "Nowe rejony alpejskie (Odkryte w procesie redakcji)"
+    },
+    {
+      "row_key": "Nowe rejony alpejskie (Odkryte w procesie redakcji) | Zugspitze | Bergführerweg Eisenzeit",
+      "lat": 47.4213,
+      "lon": 10.9863,
+      "region": "Nowe rejony alpejskie (Odkryte w procesie redakcji)"
+    },
+    {
+      "row_key": "Nowe rejony alpejskie (Odkryte w procesie redakcji) | Festkogel | Anfängerglück",
+      "lat": 46.8521363,
+      "lon": 11.0510882,
+      "region": "Nowe rejony alpejskie (Odkryte w procesie redakcji)"
+    },
+    {
+      "row_key": "Nowe rejony alpejskie (Odkryte w procesie redakcji) | — | Lärmstange Nordkante",
+      "lat": 47.0802326,
+      "lon": 11.6543606,
+      "region": "Nowe rejony alpejskie (Odkryte w procesie redakcji)"
+    },
+    {
+      "row_key": "Nowe rejony alpejskie (Odkryte w procesie redakcji) | — | *Ruchenköpfe Westgrat*",
+      "lat": 47.6480977,
+      "lon": 11.9472618,
+      "region": "Nowe rejony alpejskie (Odkryte w procesie redakcji)"
+    }
+  ],
+  "unparseable_grades": [
+    {
+      "row_key": "Lindkogel | Friedrichswand | Rinne",
+      "grade": "1-2"
+    },
+    {
+      "row_key": "Lindkogel | Roter Ofen | Projekt (Nr 1)",
+      "grade": "ca 9+"
+    },
+    {
+      "row_key": "Mödling | Gumpoldskirchen | Klettersteigrunde B",
+      "grade": "B"
+    },
+    {
+      "row_key": "Mödling | Promenadenfels | Painkiller",
+      "grade": "7b/7b+"
+    },
+    {
+      "row_key": "Lindkogel | Fraaanz | Fraaanz",
+      "grade": "7b+ trav"
+    },
+    {
+      "row_key": "Lindkogel | Fraaanz | Löchlis",
+      "grade": "6a trav"
+    },
+    {
+      "row_key": "Hohe Wand | Hohe Wand | Teufelsgrat",
+      "grade": "3+ (3)"
+    },
+    {
+      "row_key": "Hohe Wand | Hohe Wand | Betty & Paul",
+      "grade": "6 (5+)"
+    },
+    {
+      "row_key": "Hohe Wand | Hohe Wand | Danglweg",
+      "grade": "6+ (6)"
+    },
+    {
+      "row_key": "Hohe Wand | Hohe Wand | Draschgrat light",
+      "grade": "4- (4-)"
+    },
+    {
+      "row_key": "Hohe Wand | Hohe Wand | Wienersteig",
+      "grade": "3+ (3)"
+    },
+    {
+      "row_key": "Rax i Schneeberg | Preinerwand | Malersteig",
+      "grade": "3 (3)"
+    },
+    {
+      "row_key": "Rax i Schneeberg | — | Westweg Preinerwand",
+      "grade": "3+ (3+)"
+    },
+    {
+      "row_key": "Wienerwald i okolice | Weizklamm | Gratweg Rablgrat",
+      "grade": "3+ (3+)"
+    },
+    {
+      "row_key": "Wienerwald i okolice | Flatzer Wand | Der große Affenzirkus",
+      "grade": "6- (4+)"
+    },
+    {
+      "row_key": "Wienerwald i okolice | Röthelstein SO-Wand | Postlerweg",
+      "grade": "4+ (4-)"
+    },
+    {
+      "row_key": "Wienerwald i okolice | Großofen | Kombinationsweg",
+      "grade": "4- (4-)"
+    },
+    {
+      "row_key": "Wienerwald i okolice | Großer Illing | Südwest Kante",
+      "grade": "5+ (4+)"
+    },
+    {
+      "row_key": "Wienerwald i okolice | Röthelstein | Fontanesteig",
+      "grade": "3+ (3+)"
+    },
+    {
+      "row_key": "Gesäuse i Haller Mauern | — | Großer Pyhrgas Ostgrat un.",
+      "grade": "2 (2)"
+    },
+    {
+      "row_key": "Gesäuse i Haller Mauern | Großer Buchstein | Buchstein Westgrat",
+      "grade": "3+ (3+)"
+    },
+    {
+      "row_key": "Totes Gebirge | — | Grimming Südostgrat",
+      "grade": "2+ (2+)"
+    },
+    {
+      "row_key": "Salzkammergut | Plombergstein | Clou",
+      "grade": "6- (5)"
+    },
+    {
+      "row_key": "Salzkammergut | Plombergstein | Franziskus",
+      "grade": "4+ (4-)"
+    },
+    {
+      "row_key": "Berchtesgaden | — | Südrampe Hochthron",
+      "grade": "4+ (3+)"
+    },
+    {
+      "row_key": "Berchtesgaden | Berchtesgaden | Watzmann Ostwand",
+      "grade": "3+ (3)"
+    },
+    {
+      "row_key": "Wilder Kaiser | Kleine L... | Bügeleisenkante",
+      "grade": "4 (3)"
+    },
+    {
+      "row_key": "Wilder Kaiser | Kleine H... | Klettergeheimnis",
+      "grade": "4+ (4+)"
+    },
+    {
+      "row_key": "Hohe Tauern — Glockner | Großglockner | Stüdlgrat",
+      "grade": "3+ (3)"
+    },
+    {
+      "row_key": "Nowe rejony alpejskie (Odkryte w procesie redakcji) | Festkogel | Anfängerglück",
+      "grade": "3+ (3+)"
+    },
+    {
+      "row_key": "Nowe rejony alpejskie (Odkryte w procesie redakcji) | Hochschwab | Baumgartnerweg",
+      "grade": "3 (3)"
+    },
+    {
+      "row_key": "Nowe rejony alpejskie (Odkryte w procesie redakcji) | West... | *Zwergerlrutschbahn*",
+      "grade": "—"
+    }
+  ]
+}
