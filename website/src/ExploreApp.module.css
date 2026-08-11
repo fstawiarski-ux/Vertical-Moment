@@ -1,7 +1,7 @@
 .app {
   position: fixed;
   inset: 0;
-  overflow: hidden;
+  overflow: clip;
   color: #f4f1e8;
   background: #0d1510;
   isolation: isolate;

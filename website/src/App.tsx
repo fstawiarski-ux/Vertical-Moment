@@ -16,6 +16,7 @@ import styles from "./ExploreApp.module.css";
 const CragLocator = lazy(() => import("./components/boxes/BoxCragLocator"));
 const NasenwandRoutes = lazy(() => import("./components/boxes/BoxNasenwandRoutes"));
 const WachauPanorama = lazy(() => import("./components/boxes/BoxWachauPanorama"));
+const WallReveal = lazy(() => import("./components/boxes/BoxWallReveal"));
 
 function seedLayout(registry: ExploreContentRegistry): LayoutState {
   return {
@@ -113,10 +114,36 @@ function NasenwandModule({ isActive }: { isActive: boolean }) {
   );
 }
 
+function WallRevealModule({ isActive }: { isActive: boolean }) {
+  const [requested, setRequested] = useState(false);
+
+  useEffect(() => {
+    if (isActive) setRequested(true);
+  }, [isActive]);
+
+  if (!requested) {
+    return (
+      <div className={styles.moduleGate}>
+        <small>4-stage story - shared heavy media</small>
+        <strong>Wall Reveal</strong>
+        <p>Move from place to motion, provisional topo and 3D without duplicating the scrub or model.</p>
+        <button type="button" onClick={() => setRequested(true)}>Open Wall Reveal</button>
+      </div>
+    );
+  }
+
+  return (
+    <Suspense fallback={<div className={styles.moduleLoading}>Loading Wall Reveal...</div>}>
+      <WallReveal />
+    </Suspense>
+  );
+}
+
 function BoxContent({ content, isActive, priority = false }: { content: ExploreContentBox; isActive: boolean; priority?: boolean }) {
   if (content.type === "atlas") return <AtlasModule isActive={isActive} />;
   if (content.type === "panorama") return <PanoramaModule isActive={isActive} />;
   if (content.type === "nasenwand") return <NasenwandModule isActive={isActive} />;
+  if (content.type === "wallreveal") return <WallRevealModule isActive={isActive} />;
 
   if (content.type === "model3d" && content.model) {
     return <Box3DModel model={content.model} poster={content.image} isActive={isActive} />;
@@ -170,11 +197,30 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
     return () => window.removeEventListener("vm:focus-box", focusRequestedBox);
   }, [boxes, contentById, dispatch]);
 
+  useEffect(() => {
+    const showScrollHero = () => {
+      dispatch({ type: "SET_HERO_BOX", id: null });
+      for (const box of boxes) {
+        if (box.mode === "expanded" || box.mode === "fullscreen") {
+          dispatch({ type: "UPDATE_BOX", id: box.id, patch: { mode: "normal" } });
+        }
+      }
+    };
+    window.addEventListener("vm:show-scroll-hero", showScrollHero);
+    return () => window.removeEventListener("vm:show-scroll-hero", showScrollHero);
+  }, [boxes, dispatch]);
+
   const renderBox = (box: BoxState) => {
     const content = contentById.get(box.dataRef ?? box.id);
     if (!content || box.id === heroBoxId) return null;
     return (
-      <BoxContainer key={box.id} box={box} title={content.title} eyebrow={`${content.crag} · ${content.type}`} viewportMode={viewportMode}>
+      <BoxContainer
+        key={box.id}
+        box={box}
+        title={content.title}
+        eyebrow={`${content.crag} · ${content.type === "nasenwand" ? "routes" : content.type === "wallreveal" ? "story" : content.type}`}
+        viewportMode={viewportMode}
+      >
         <BoxContent content={content} isActive={activeBoxId === box.id} priority={content.id === registry.boxes[0]?.id} />
       </BoxContainer>
     );

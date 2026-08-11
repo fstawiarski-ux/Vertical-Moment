@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "updatedAt": "2026-08-11",
   "background": {
     "src": "/photography/explore-app/climbers-lounge-collage-45866ab7-1920.webp",
@@ -130,6 +130,21 @@
         "bytes": 1745504
       },
       "initialLayout": { "x": 520, "y": 524, "width": 470, "height": 340 }
+    },
+    {
+      "id": "wall-reveal",
+      "type": "wallreveal",
+      "title": "Wall Reveal",
+      "crag": "Nasenwand",
+      "description": "A four-stage story that reuses the app-shell scrub, provisional topo layers and shared 3D box.",
+      "image": {
+        "src": "/photography/nasenwand/media/poster-1600.webp",
+        "alt": "Nasenwand Wall Reveal poster",
+        "width": 1600,
+        "height": 900,
+        "sizes": "(max-width: 767px) calc(100vw - 32px), 430px"
+      },
+      "initialLayout": { "x": 820, "y": 300, "width": 430, "height": 350 }
     }
   ],
   "offlinePack": [
