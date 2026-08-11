@@ -1,0 +1,40 @@
+.viewer { position: relative; width: 100%; height: 100%; min-height: 230px; overflow: hidden; background: #0b110d; }
+.poster,
+.model { display: block; width: 100%; height: 100%; object-fit: cover; }
+.model { position: absolute; inset: 0; background: radial-gradient(circle at 50% 36%, #3d463f, #0c120e 72%); }
+.poster { filter: grayscale(1) contrast(1.08); }
+
+.gate,
+.status,
+.error {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-content: center;
+  gap: 10px;
+  padding: 20px;
+  color: #f3efe4;
+  text-align: center;
+  background: rgb(7 12 9 / 52%);
+  backdrop-filter: blur(5px);
+}
+
+.gate span,
+.status,
+.error span { color: #d1c8b2; font: 500 11px/1.4 ui-monospace, SFMono-Regular, Consolas, monospace; }
+.gate button,
+.error button {
+  min-height: 44px;
+  padding: 0 16px;
+  color: #111711;
+  border: 0;
+  border-radius: 999px;
+  background: #d2bd87;
+  font: 700 11px/1 Arial, sans-serif;
+  cursor: pointer;
+}
+.gate button:focus-visible,
+.error button:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.error strong { font: 600 17px/1.2 Arial, sans-serif; }
+.hint { position: absolute; right: 10px; bottom: 10px; z-index: 3; padding: 7px 9px; color: #e0d7c1; border-radius: 999px; background: rgb(4 8 6 / 68%); font: 600 8px/1 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .05em; text-transform: uppercase; pointer-events: none; }

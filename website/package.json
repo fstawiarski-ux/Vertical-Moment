@@ -6,30 +6,41 @@
     "sync-data": "node scripts/sync-data.mjs",
     "predev": "npm run sync-data",
     "prebuild": "npm run sync-data",
-    "build": "next build",
+    "build": "next build && serwist build serwist.config.mjs",
+    "build:cloudflare": "opennextjs-cloudflare build && node scripts/copy-service-worker.mjs",
+    "build:next": "next build",
+    "build:sw": "serwist build serwist.config.mjs",
     "dev": "next dev",
     "start": "next start",
     "lint": "next lint",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
+    "preview": "npm run build:cloudflare && opennextjs-cloudflare preview",
+    "deploy": "npm run build:cloudflare && opennextjs-cloudflare deploy",
+    "upload": "npm run build:cloudflare && opennextjs-cloudflare upload",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
+    "@google/model-viewer": "4.3.1",
     "@phosphor-icons/react": "^2.1.10",
     "drizzle-orm": "^0.45.2",
+    "idb-keyval": "6.3.0",
     "next": "^16.2.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "three": "0.183.2",
+    "zustand": "5.0.14"
   },
   "devDependencies": {
     "@opennextjs/cloudflare": "^1.20.2",
+    "@serwist/cli": "9.5.12",
+    "@serwist/next": "9.5.12",
     "@types/node": "^20.14.15",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "esbuild": "0.28.2",
+    "serwist": "9.5.12",
     "sharp": "^0.35.3",
     "typescript": "^5.5.4",
-    "wrangler": "^4.116.0"
+    "wrangler": "4.120.1"
   },
   "overrides": {
     "nanoid": "^3.3.18",

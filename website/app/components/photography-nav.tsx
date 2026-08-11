@@ -63,7 +63,7 @@ export default function PhotographyNav() {
               </a>
             ))}
           </div>
-          <a className={styles.pill} href="/explore">
+          <a className={styles.pill} href="/climbers-lounge">
             Climbers Lounge
           </a>
           <button
@@ -96,7 +96,7 @@ export default function PhotographyNav() {
                 {l.label}
               </a>
             ))}
-            <a href="/explore" onClick={() => setMenuOpen(false)}>
+            <a href="/climbers-lounge" onClick={() => setMenuOpen(false)}>
               Climbers Lounge
             </a>
             <button
