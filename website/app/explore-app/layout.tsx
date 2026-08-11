@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Explore Lab",
+  title: "Climbers Lounge Lab",
   description: "An offline-capable experimental canvas for Vertical Moment climbing photography, panoramas and spatial studies.",
   manifest: "/manifest.webmanifest",
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "Explore Lab",
+    title: "Climbers Lounge",
   },
   icons: {
     icon: "/icons/explore-app-192.png",

@@ -1,7 +1,7 @@
 {
   "id": "/explore-app",
-  "name": "Vertical Moment Explore Lab",
-  "short_name": "Explore Lab",
+  "name": "Vertical Moment Climbers Lounge",
+  "short_name": "Climbers Lounge",
   "description": "An offline-capable workspace for Vertical Moment climbing photography, panoramas and 3D studies.",
   "start_url": "/explore-app?source=pwa",
   "scope": "/explore-app",

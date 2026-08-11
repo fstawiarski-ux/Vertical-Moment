@@ -1,6 +1,12 @@
 # Vertical Moment website
 
-This repository contains the phone-first Vertical Moment climbing platform and the experimental **Explore Lab** PWA at `/explore-app`.
+This repository contains the Vertical Moment photography site, the archived phone-first climbing platform and the experimental **Climbers Lounge / Explore Lab** PWA at `/explore-app`.
+
+## Public bridge and private lab
+
+The public photography navigation points to `/climbers-lounge`, a lightweight **Coming Soon** page with no link to the private lab. The previous `/explore` route tree remains preserved in the repository for future photography-oriented development, but is removed from navigation and the sitemap and marked `noindex`.
+
+The PWA lives separately at `/explore-app`. Its deployment access policy must be configured before public release; hiding or omitting the URL is not authentication.
 
 ## Explore Lab
 
@@ -25,7 +31,7 @@ Layout state, box modes and the promoted hero are persisted locally. Mobile uses
 
 ### PWA and offline behavior
 
-The manifest, install icons and Serwist service worker provide an installable app shell. The service worker:
+The manifest installs the app on a phone as **Climbers Lounge**, while the approved workspace retains its internal Explore Lab identity. Install icons and the Serwist service worker provide an installable app shell. The service worker:
 
 - precaches the Explore Lab route, offline fallback, registry, icons and Leaflet runtime;
 - caches images, the shared scrub, GLB model and recently viewed map tiles in separate bounded caches;

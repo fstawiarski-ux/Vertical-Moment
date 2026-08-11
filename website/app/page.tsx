@@ -541,7 +541,7 @@ export default function Page() {
             <a href="https://www.twitch.tv/ineedbooz" rel="noreferrer noopener" target="_blank">
               Twitch
             </a>
-            <a href="/explore">Climbers Lounge</a>
+            <a href="/climbers-lounge">Climbers Lounge</a>
             <span>Vienna, AT</span>
           </div>
         </div>
@@ -599,7 +599,7 @@ export default function Page() {
               <h4>Collective</h4>
               <ul>
                 <li>
-                  <a href="/explore">Climbers Lounge</a>
+                  <a href="/climbers-lounge">Climbers Lounge</a>
                 </li>
               </ul>
             </div>
