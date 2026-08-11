@@ -1,0 +1,58 @@
+.background,
+.image,
+.veil,
+.grain {
+  position: absolute;
+  inset: 0;
+}
+
+.background {
+  overflow: hidden;
+  background: #101713;
+}
+
+.image {
+  animation: background-in 520ms ease both;
+  transform: scale(1.04);
+}
+
+.image picture,
+.image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.image img {
+  object-fit: cover;
+  filter: saturate(.82) contrast(1.04);
+}
+
+.veil {
+  background:
+    radial-gradient(circle at 50% 38%, transparent 0 22%, rgb(5 11 8 / 22%) 64%, rgb(4 8 6 / 82%) 100%),
+    linear-gradient(180deg, rgb(6 12 9 / 38%), rgb(6 11 8 / 72%));
+  backdrop-filter: blur(12px);
+  transition: backdrop-filter 420ms ease, background 420ms ease;
+}
+
+.veil.promoted {
+  background: linear-gradient(180deg, rgb(4 9 7 / 20%), rgb(4 9 7 / 54%));
+  backdrop-filter: blur(4px);
+}
+
+.grain {
+  opacity: .13;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.34'/%3E%3C/svg%3E");
+}
+
+@keyframes background-in {
+  from { opacity: 0; transform: scale(1.08); }
+  to { opacity: 1; transform: scale(1.04); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image { animation: none; }
+  .veil { transition: none; }
+}

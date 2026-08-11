@@ -1,0 +1,203 @@
+.box {
+  position: absolute;
+  display: flex;
+  min-width: 280px;
+  min-height: 180px;
+  flex-direction: column;
+  overflow: hidden;
+  color: #f4f1e8;
+  border: 1px solid rgb(230 219 190 / 24%);
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgb(25 34 28 / 88%), rgb(10 17 13 / 82%));
+  box-shadow: 0 22px 70px rgb(0 0 0 / 32%), inset 0 1px rgb(255 255 255 / 8%);
+  backdrop-filter: blur(18px) saturate(1.16);
+  transition: box-shadow 180ms ease, border-color 180ms ease, opacity 180ms ease;
+  will-change: transform;
+}
+
+.box:focus-within,
+.box:hover {
+  border-color: rgb(209 185 125 / 56%);
+  box-shadow: 0 26px 86px rgb(0 0 0 / 42%), inset 0 1px rgb(255 255 255 / 10%);
+}
+
+.header {
+  display: grid;
+  min-height: 54px;
+  grid-template-columns: 20px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px 8px 14px;
+  border-bottom: 1px solid rgb(255 255 255 / 9%);
+  background: rgb(10 16 12 / 52%);
+  touch-action: none;
+  user-select: none;
+  cursor: grab;
+}
+
+.dragging .header { cursor: grabbing; }
+.dragging { opacity: .88; box-shadow: 0 32px 100px rgb(0 0 0 / 55%); }
+
+.handle {
+  display: grid;
+  grid-template-columns: repeat(2, 3px);
+  gap: 3px;
+  opacity: .52;
+}
+
+.handle i {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.heading { min-width: 0; }
+.heading small {
+  display: block;
+  overflow: hidden;
+  color: #cdbb8b;
+  font: 600 9px/1.2 ui-monospace, SFMono-Regular, Consolas, monospace;
+  letter-spacing: .12em;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.heading h2 {
+  overflow: hidden;
+  margin: 2px 0 0;
+  font: 600 14px/1.2 Arial, sans-serif;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.controls { display: flex; gap: 4px; }
+.controls button {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  color: #f4f1e8;
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 9px;
+  background: rgb(255 255 255 / 5%);
+  font: 600 16px/1 Arial, sans-serif;
+  cursor: pointer;
+}
+
+.controls button:hover,
+.controls button:focus-visible {
+  color: #151b16;
+  outline: none;
+  border-color: #d1b97d;
+  background: #d1b97d;
+}
+
+.body {
+  min-height: 0;
+  flex: 1;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+.resize {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  background: linear-gradient(135deg, transparent 48%, rgb(209 185 125 / 72%) 49% 56%, transparent 57% 65%, rgb(209 185 125 / 72%) 66% 73%, transparent 74%);
+  cursor: nwse-resize;
+  touch-action: none;
+}
+
+.boxModeMinimized {
+  width: 58px !important;
+  min-width: 58px;
+  height: 58px !important;
+  min-height: 58px;
+  border-radius: 17px;
+}
+
+.boxModeMinimized .header {
+  min-height: 58px;
+  grid-template-columns: 1fr;
+  padding: 0;
+  place-items: center;
+  border: 0;
+}
+
+.boxModeMinimized .handle,
+.boxModeMinimized .heading,
+.boxModeMinimized .controls button:not(:nth-child(2)) { display: none; }
+
+.boxModeMinimized .controls button:nth-child(2) {
+  width: 44px;
+  height: 44px;
+  font-size: 0;
+}
+
+.boxModeMinimized .controls button:nth-child(2)::after {
+  content: "+";
+  font-size: 20px;
+}
+
+.boxModeExpanded,
+.boxModeFullscreen {
+  position: fixed;
+  z-index: 9000 !important;
+  transform: none !important;
+}
+
+.boxModeExpanded {
+  inset: max(76px, 8vh) max(28px, 8vw) max(78px, 8vh);
+  width: auto !important;
+  height: auto !important;
+}
+
+.boxModeFullscreen {
+  inset: 0;
+  width: 100vw !important;
+  height: 100dvh !important;
+  border: 0;
+  border-radius: 0;
+}
+
+.box[data-viewport="tablet"],
+.box[data-viewport="mobile"] {
+  position: relative;
+  min-width: 0;
+  transform: none !important;
+  width: 100%;
+}
+
+.box[data-viewport="tablet"] { height: 360px; }
+
+.box[data-viewport="mobile"] {
+  height: min(66dvh, 620px);
+  min-height: 420px;
+  scroll-snap-align: start;
+}
+
+.box[data-viewport="tablet"] .header,
+.box[data-viewport="mobile"] .header { cursor: default; touch-action: auto; }
+
+.box[data-viewport="tablet"].boxModeMinimized,
+.box[data-viewport="mobile"].boxModeMinimized {
+  width: 58px !important;
+  min-width: 58px;
+  height: 58px;
+  min-height: 58px;
+}
+
+@media (max-width: 767px) {
+  .controls button { width: 36px; height: 36px; }
+  .controls button:nth-child(4) { display: none; }
+  .header { grid-template-columns: 14px minmax(0, 1fr) auto; padding-left: 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .box { transition: none; }
+}

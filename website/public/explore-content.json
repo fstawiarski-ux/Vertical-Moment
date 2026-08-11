@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-11",
+  "background": {
+    "src": "/photography/explore-app/climbers-lounge-collage-45866ab7-1920.webp",
+    "alt": "Vertical Moment climbers, hands, equipment and limestone",
+    "width": 1920,
+    "height": 1080,
+    "sizes": "100vw",
+    "sources": [
+      {
+        "type": "image/avif",
+        "srcSet": "/photography/explore-app/climbers-lounge-collage-45866ab7-480.avif 480w, /photography/explore-app/climbers-lounge-collage-45866ab7-960.avif 960w, /photography/explore-app/climbers-lounge-collage-45866ab7-1920.avif 1920w"
+      },
+      {
+        "type": "image/webp",
+        "srcSet": "/photography/explore-app/climbers-lounge-collage-45866ab7-480.webp 480w, /photography/explore-app/climbers-lounge-collage-45866ab7-960.webp 960w, /photography/explore-app/climbers-lounge-collage-45866ab7-1920.webp 1920w"
+      }
+    ]
+  },
+  "scrollScrubHero": {
+    "video": "/photography/nasenwand/media/nasenwand-orbit-scrub-allkey.mp4",
+    "poster": "/photography/explore-app/nasenwand-spatial-1b1849da-960.webp",
+    "alt": "A close orbit around the Nasenwand climbing wall"
+  },
+  "boxes": [
+    {
+      "id": "vm-7073",
+      "type": "gallery",
+      "title": "Steep Ground",
+      "crag": "Peilstein",
+      "description": "A compact limestone field frame from the Vertical Moment gallery.",
+      "image": {
+        "src": "/photography/gallery/vm-7073-steep-ground.webp",
+        "alt": "Climber moving through steep limestone",
+        "width": 532,
+        "height": 532,
+        "sizes": "(max-width: 767px) calc(100vw - 32px), 360px"
+      },
+      "initialLayout": { "x": 48, "y": 128, "width": 340, "height": 360 }
+    },
+    {
+      "id": "nasenwand-spatial",
+      "type": "spatial",
+      "title": "Nasenwand Spatial Study",
+      "crag": "Nasenwand",
+      "description": "Photography and spatial context prepared for a future route-reading layer.",
+      "image": {
+        "src": "/photography/explore-app/nasenwand-spatial-1b1849da-1280.webp",
+        "alt": "Spatial study of the Nasenwand climbing face",
+        "width": 1280,
+        "height": 960,
+        "sizes": "(max-width: 767px) calc(100vw - 32px), 420px",
+        "sources": [
+          {
+            "type": "image/avif",
+            "srcSet": "/photography/explore-app/nasenwand-spatial-1b1849da-480.avif 480w, /photography/explore-app/nasenwand-spatial-1b1849da-960.avif 960w, /photography/explore-app/nasenwand-spatial-1b1849da-1280.avif 1280w"
+          },
+          {
+            "type": "image/webp",
+            "srcSet": "/photography/explore-app/nasenwand-spatial-1b1849da-480.webp 480w, /photography/explore-app/nasenwand-spatial-1b1849da-960.webp 960w, /photography/explore-app/nasenwand-spatial-1b1849da-1280.webp 1280w"
+          }
+        ]
+      },
+      "initialLayout": { "x": 424, "y": 96, "width": 440, "height": 390 }
+    },
+    {
+      "id": "wachau-16",
+      "type": "panorama",
+      "title": "Wachau Panorama",
+      "crag": "Wachau",
+      "description": "A wide Danube corridor study for orientation and sector context.",
+      "image": {
+        "src": "/photography/explore-app/wachau-16-9a8f6f68-1600.webp",
+        "alt": "Panorama above the Wachau and Danube corridor",
+        "width": 1600,
+        "height": 462,
+        "sizes": "(max-width: 767px) calc(100vw - 32px), 520px",
+        "sources": [
+          {
+            "type": "image/avif",
+            "srcSet": "/photography/explore-app/wachau-16-9a8f6f68-480.avif 480w, /photography/explore-app/wachau-16-9a8f6f68-960.avif 960w, /photography/explore-app/wachau-16-9a8f6f68-1600.avif 1600w"
+          },
+          {
+            "type": "image/webp",
+            "srcSet": "/photography/explore-app/wachau-16-9a8f6f68-480.webp 480w, /photography/explore-app/wachau-16-9a8f6f68-960.webp 960w, /photography/explore-app/wachau-16-9a8f6f68-1600.webp 1600w"
+          }
+        ]
+      },
+      "initialLayout": { "x": 900, "y": 132, "width": 500, "height": 300 }
+    },
+    {
+      "id": "note-north-face",
+      "type": "note",
+      "title": "A Face That Never Gets Sun",
+      "crag": "Peilstein",
+      "description": "North-facing limestone stays cold until midday. This field note keeps the photographic decision beside the wall context.",
+      "image": {
+        "src": "/photography/notes/note-north-face.webp",
+        "alt": "Climbers on a shaded north-facing wall",
+        "width": 820,
+        "height": 473,
+        "sizes": "(max-width: 767px) calc(100vw - 32px), 360px"
+      },
+      "initialLayout": { "x": 92, "y": 536, "width": 390, "height": 280 }
+    },
+    {
+      "id": "nasenwand-model",
+      "type": "model3d",
+      "title": "Nasenwand 3D",
+      "crag": "Nasenwand",
+      "description": "A browser-ready model with orbit, pan and zoom controls. Geometry remains provisional until field verification.",
+      "image": {
+        "src": "/photography/explore-app/nasenwand-spatial-1b1849da-960.webp",
+        "alt": "Preview of the Nasenwand 3D study",
+        "width": 960,
+        "height": 720,
+        "sizes": "(max-width: 767px) calc(100vw - 32px), 440px"
+      },
+      "model": {
+        "src": "/models/nasenwand-topo.glb",
+        "bytes": 1745504
+      },
+      "initialLayout": { "x": 520, "y": 524, "width": 470, "height": 340 }
+    }
+  ],
+  "offlinePack": [
+    "/photography/explore-app/climbers-lounge-collage-45866ab7-960.avif",
+    "/photography/explore-app/climbers-lounge-collage-45866ab7-960.webp",
+    "/photography/gallery/vm-7073-steep-ground.webp",
+    "/photography/explore-app/nasenwand-spatial-1b1849da-960.avif",
+    "/photography/explore-app/nasenwand-spatial-1b1849da-960.webp",
+    "/photography/explore-app/wachau-16-9a8f6f68-960.avif",
+    "/photography/explore-app/wachau-16-9a8f6f68-960.webp",
+    "/photography/notes/note-north-face.webp"
+  ],
+  "heavyAssets": [
+    "/photography/nasenwand/media/nasenwand-orbit-scrub-allkey.mp4",
+    "/models/nasenwand-topo.glb"
+  ]
+}
