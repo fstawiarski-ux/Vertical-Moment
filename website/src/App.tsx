@@ -14,6 +14,7 @@ import { ServiceWorkerRegistration } from "./pwa/sw-registration";
 import styles from "./ExploreApp.module.css";
 
 const CragLocator = lazy(() => import("./components/boxes/BoxCragLocator"));
+const NasenwandRoutes = lazy(() => import("./components/boxes/BoxNasenwandRoutes"));
 const WachauPanorama = lazy(() => import("./components/boxes/BoxWachauPanorama"));
 
 function seedLayout(registry: ExploreContentRegistry): LayoutState {
@@ -87,9 +88,35 @@ function PanoramaModule({ isActive }: { isActive: boolean }) {
   );
 }
 
+function NasenwandModule({ isActive }: { isActive: boolean }) {
+  const [requested, setRequested] = useState(false);
+
+  useEffect(() => {
+    if (isActive) setRequested(true);
+  }, [isActive]);
+
+  if (!requested) {
+    return (
+      <div className={styles.moduleGate}>
+        <small>4 sectors - Upper Sector route list integrated</small>
+        <strong>Nasenwand route workspace</strong>
+        <p>Read supplied route facts beside the photo and spatial study. Unverified route geometry stays hidden.</p>
+        <button type="button" onClick={() => setRequested(true)}>Open Nasenwand</button>
+      </div>
+    );
+  }
+
+  return (
+    <Suspense fallback={<div className={styles.moduleLoading}>Loading Nasenwand...</div>}>
+      <NasenwandRoutes />
+    </Suspense>
+  );
+}
+
 function BoxContent({ content, isActive, priority = false }: { content: ExploreContentBox; isActive: boolean; priority?: boolean }) {
   if (content.type === "atlas") return <AtlasModule isActive={isActive} />;
   if (content.type === "panorama") return <PanoramaModule isActive={isActive} />;
+  if (content.type === "nasenwand") return <NasenwandModule isActive={isActive} />;
 
   if (content.type === "model3d" && content.model) {
     return <Box3DModel model={content.model} poster={content.image} isActive={isActive} />;
@@ -123,6 +150,25 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
       dispatch({ type: "APPLY_AUTO_LAYOUT", viewport: { width: window.innerWidth, height: window.innerHeight } });
     }
   }, [dispatch, viewportMode]);
+
+  useEffect(() => {
+    const focusRequestedBox = (event: Event) => {
+      const detail = (event as CustomEvent<{ id?: string; mode?: "normal" | "expanded" | "fullscreen" }>).detail;
+      if (!detail?.id || !contentById.has(detail.id)) return;
+      const nextMode = detail.mode ?? "expanded";
+      if (nextMode !== "normal") {
+        for (const box of boxes) {
+          if (box.id !== detail.id && (box.mode === "expanded" || box.mode === "fullscreen")) {
+            dispatch({ type: "UPDATE_BOX", id: box.id, patch: { mode: "normal" } });
+          }
+        }
+      }
+      dispatch({ type: "UPDATE_BOX", id: detail.id, patch: { mode: nextMode } });
+      dispatch({ type: "SET_ACTIVE_BOX", id: detail.id });
+    };
+    window.addEventListener("vm:focus-box", focusRequestedBox);
+    return () => window.removeEventListener("vm:focus-box", focusRequestedBox);
+  }, [boxes, contentById, dispatch]);
 
   const renderBox = (box: BoxState) => {
     const content = contentById.get(box.dataRef ?? box.id);
