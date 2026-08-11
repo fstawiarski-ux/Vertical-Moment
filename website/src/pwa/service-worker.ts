@@ -26,6 +26,22 @@ const serwist = new Serwist({
   },
   runtimeCaching: [
     {
+      matcher: ({ url, request }) => request.method === "GET" && (
+        url.hostname === "tile.openstreetmap.org"
+        || url.hostname.endsWith(".tile.opentopomap.org")
+        || url.hostname === "server.arcgisonline.com"
+        || url.hostname.endsWith(".basemaps.cartocdn.com")
+        || url.hostname === "api.mapbox.com"
+      ),
+      handler: new CacheFirst({
+        cacheName: "vm-map-tiles-v1",
+        plugins: [
+          new CacheableResponsePlugin({ statuses: [0, 200] }),
+          new ExpirationPlugin({ maxEntries: 160, maxAgeSeconds: 14 * 24 * 60 * 60, purgeOnQuotaError: true }),
+        ],
+      }),
+    },
+    {
       matcher: ({ url, request }) => isSameOrigin(url) && request.method === "GET" && url.pathname.endsWith(".glb"),
       handler: new CacheFirst({
         cacheName: "vm-models-v1",

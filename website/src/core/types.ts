@@ -51,7 +51,7 @@ export interface ExploreModelAsset {
 
 export interface ExploreContentBox {
   id: string;
-  type: "gallery" | "spatial" | "panorama" | "note" | "model3d" | "info";
+  type: "gallery" | "spatial" | "panorama" | "note" | "model3d" | "atlas" | "nasenwand" | "wallreveal" | "info";
   title: string;
   crag: string;
   description: string;

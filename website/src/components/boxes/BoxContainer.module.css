@@ -147,7 +147,7 @@
 .boxModeExpanded,
 .boxModeFullscreen {
   position: fixed;
-  z-index: 9000 !important;
+  z-index: 9450 !important;
   transform: none !important;
 }
 
@@ -196,6 +196,17 @@
   .controls button { width: 36px; height: 36px; }
   .controls button:nth-child(4) { display: none; }
   .header { grid-template-columns: 14px minmax(0, 1fr) auto; padding-left: 10px; }
+
+  .box[data-viewport="mobile"].boxModeExpanded {
+    position: fixed;
+    z-index: 9450 !important;
+    inset: 0;
+    width: 100vw !important;
+    height: 100dvh !important;
+    min-height: 0;
+    border: 0;
+    border-radius: 0;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

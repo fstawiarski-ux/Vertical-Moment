@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import { ScrollScrubHero } from "./components/animation/ScrollScrubHero";
 import { Box3DModel } from "./components/boxes/Box3DModel";
 import { BoxContainer } from "./components/boxes/BoxContainer";
@@ -12,6 +12,8 @@ import type { BoxState, ExploreContentBox, ExploreContentRegistry, LayoutState }
 import { useViewportMode } from "./hooks/useViewportMode";
 import { ServiceWorkerRegistration } from "./pwa/sw-registration";
 import styles from "./ExploreApp.module.css";
+
+const CragLocator = lazy(() => import("./components/boxes/BoxCragLocator"));
 
 function seedLayout(registry: ExploreContentRegistry): LayoutState {
   return {
@@ -34,7 +36,34 @@ function seedLayout(registry: ExploreContentRegistry): LayoutState {
   };
 }
 
+function AtlasModule({ isActive }: { isActive: boolean }) {
+  const [requested, setRequested] = useState(false);
+
+  useEffect(() => {
+    if (isActive) setRequested(true);
+  }, [isActive]);
+
+  if (!requested) {
+    return (
+      <div className={styles.moduleGate}>
+        <small>26 regions · 187 crags · 2,314 routes</small>
+        <strong>Crag Locator</strong>
+        <p>The route data works offline. Live map tiles are cached as you explore.</p>
+        <button type="button" onClick={() => setRequested(true)}>Open the Atlas</button>
+      </div>
+    );
+  }
+
+  return (
+    <Suspense fallback={<div className={styles.moduleLoading}>Loading the Atlas…</div>}>
+      <CragLocator />
+    </Suspense>
+  );
+}
+
 function BoxContent({ content, isActive, priority = false }: { content: ExploreContentBox; isActive: boolean; priority?: boolean }) {
+  if (content.type === "atlas") return <AtlasModule isActive={isActive} />;
+
   if (content.type === "model3d" && content.model) {
     return <Box3DModel model={content.model} poster={content.image} isActive={isActive} />;
   }

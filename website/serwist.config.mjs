@@ -15,6 +15,8 @@ export default await serwist({
     { url: "/icons/explore-app-192.png", revision: "icon-v1" },
     { url: "/icons/explore-app-512.png", revision: "icon-v1" },
     { url: "/icons/explore-app-maskable-512.png", revision: "icon-v1" },
+    { url: "/vendor/leaflet/leaflet.js", revision: "leaflet-v1" },
+    { url: "/vendor/leaflet/leaflet.css", revision: "leaflet-v1" },
   ],
   globIgnores: [
     "**/node_modules/**/*",
