@@ -14,6 +14,7 @@ import { ServiceWorkerRegistration } from "./pwa/sw-registration";
 import styles from "./ExploreApp.module.css";
 
 const CragLocator = lazy(() => import("./components/boxes/BoxCragLocator"));
+const WachauPanorama = lazy(() => import("./components/boxes/BoxWachauPanorama"));
 
 function seedLayout(registry: ExploreContentRegistry): LayoutState {
   return {
@@ -61,8 +62,34 @@ function AtlasModule({ isActive }: { isActive: boolean }) {
   );
 }
 
+function PanoramaModule({ isActive }: { isActive: boolean }) {
+  const [requested, setRequested] = useState(false);
+
+  useEffect(() => {
+    if (isActive) setRequested(true);
+  }, [isActive]);
+
+  if (!requested) {
+    return (
+      <div className={styles.moduleGate}>
+        <small>9 studies - 10.3 MB optional offline pack</small>
+        <strong>Wachau panorama workspace</strong>
+        <p>Move from region to crag and sector detail, or open the public Google 360 degree sphere.</p>
+        <button type="button" onClick={() => setRequested(true)}>Open panorama viewer</button>
+      </div>
+    );
+  }
+
+  return (
+    <Suspense fallback={<div className={styles.moduleLoading}>Loading the panoramas...</div>}>
+      <WachauPanorama />
+    </Suspense>
+  );
+}
+
 function BoxContent({ content, isActive, priority = false }: { content: ExploreContentBox; isActive: boolean; priority?: boolean }) {
   if (content.type === "atlas") return <AtlasModule isActive={isActive} />;
+  if (content.type === "panorama") return <PanoramaModule isActive={isActive} />;
 
   if (content.type === "model3d" && content.model) {
     return <Box3DModel model={content.model} poster={content.image} isActive={isActive} />;

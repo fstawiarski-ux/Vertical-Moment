@@ -147,9 +147,11 @@
 .boxModeExpanded,
 .boxModeFullscreen {
   position: fixed;
-  z-index: 9450 !important;
   transform: none !important;
 }
+
+.boxModeExpanded { z-index: 9450 !important; }
+.boxModeFullscreen { z-index: 9490 !important; }
 
 .boxModeExpanded {
   inset: max(76px, 8vh) max(28px, 8vw) max(78px, 8vh);
@@ -207,6 +209,19 @@
     border: 0;
     border-radius: 0;
   }
+
+  .box[data-viewport="mobile"].boxModeFullscreen {
+    position: fixed;
+    z-index: 9490 !important;
+    inset: 0;
+    width: 100vw !important;
+    height: 100dvh !important;
+    min-height: 0;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .box[data-viewport="mobile"].boxModeFullscreen .controls button:nth-child(4) { display: grid; }
 }
 
 @media (prefers-reduced-motion: reduce) {
