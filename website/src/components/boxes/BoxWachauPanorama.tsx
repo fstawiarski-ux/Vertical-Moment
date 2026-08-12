@@ -10,6 +10,7 @@ import {
   type WheelEvent as ReactWheelEvent,
 } from "react";
 import { panoramas, type Panorama } from "../../../app/data/panoramas";
+import { dropLegacyPackCaches, RUNTIME_IMAGE_CACHE } from "../../pwa/offlineCache";
 import styles from "./BoxWachauPanorama.module.css";
 
 type ChapterId = "region" | "crag" | "sector" | "360";
@@ -24,7 +25,9 @@ const CHAPTERS: Array<{ id: ChapterId; label: string; panoramaId?: string }> = [
 
 const GOOGLE_360_HREF = "https://maps.app.goo.gl/eXBK67PMrUGCVvsS7";
 const GOOGLE_360_EMBED = "https://www.google.com/maps/embed?pb=!3m2!1sen!2sat!4v1786272580869!5m2!1sen!2sat!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJREUwcUNBTWc.!2m2!1d48.39575198431061!2d15.51663212296914!3f211.83674207632868!4f1.4136926584171903!5f0.7820865974627469";
-const OFFLINE_CACHE = "vm-wachau-panorama-pack-v1";
+// Shared with the app-shell pack: this is the cache the worker's image route
+// reads, and the only one a page-saved asset can be served from offline.
+const OFFLINE_CACHE = RUNTIME_IMAGE_CACHE;
 const OFFLINE_ASSETS = panoramas.flatMap((panorama) => [panorama.src, panorama.thumbnail]);
 
 function clamp(value: number, min: number, max: number) {
@@ -41,6 +44,7 @@ function PanoramaOfflinePack() {
       return;
     }
     let cancelled = false;
+    dropLegacyPackCaches();
     caches.open(OFFLINE_CACHE)
       .then(async (cache) => Promise.all(OFFLINE_ASSETS.map((asset) => cache.match(asset))))
       .then((matches) => {
