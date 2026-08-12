@@ -13,8 +13,6 @@ const modes: Array<{ id: LayoutMode; label: string }> = [
 
 export function LayoutToolbar({ viewportMode, offlinePack }: { viewportMode: ViewportMode; offlinePack: string[] }) {
   const layoutMode = useLayoutState((state) => state.layoutMode);
-  const activeBoxId = useLayoutState((state) => state.activeBoxId);
-  const heroBoxId = useLayoutState((state) => state.heroBoxId);
   const dispatch = useLayoutState((state) => state.dispatch);
 
   const autoLayout = () => dispatch({
@@ -40,20 +38,6 @@ export function LayoutToolbar({ viewportMode, offlinePack }: { viewportMode: Vie
       <button type="button" onClick={autoLayout}>Auto-align</button>
       <button type="button" onClick={() => dispatch({ type: "MINIMIZE_ALL" })}>Minimize all</button>
       <OfflinePackButton urls={offlinePack} />
-      <button
-        type="button"
-        disabled={!activeBoxId}
-        onClick={() => dispatch({ type: "SET_HERO_BOX", id: activeBoxId })}
-      >
-        Make hero
-      </button>
-      <button
-        type="button"
-        disabled={!heroBoxId}
-        onClick={() => dispatch({ type: "SET_HERO_BOX", id: null })}
-      >
-        Default hero
-      </button>
       <span className={styles.viewport}>{viewportMode}</span>
     </nav>
   );

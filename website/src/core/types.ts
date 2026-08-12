@@ -71,11 +71,28 @@ export interface ScrollScrubAsset {
   alt: string;
 }
 
+export interface ScrollScrubChapterAsset {
+  id: string;
+  from: string;
+  to: string;
+  video: string;
+  duration: number;
+  alt: string;
+  direction: "forward" | "reverse";
+  objectPosition?: string;
+}
+
+export interface ScrollScrubSequenceAsset {
+  poster: string;
+  chapters: ScrollScrubChapterAsset[];
+}
+
 export interface ExploreContentRegistry {
   version: number;
   updatedAt: string;
   background: ExploreImageAsset;
   scrollScrubHero: ScrollScrubAsset;
+  introScrubSequence: ScrollScrubSequenceAsset;
   boxes: ExploreContentBox[];
   offlinePack: string[];
   heavyAssets: string[];

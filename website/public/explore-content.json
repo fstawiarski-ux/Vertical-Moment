@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 6,
   "updatedAt": "2026-08-11",
   "background": {
     "src": "/photography/explore-app/climbers-lounge-collage-45866ab7-1920.webp",
@@ -23,6 +23,41 @@
     "poster": "/photography/explore-app/nasenwand-spatial-1b1849da-960.webp",
     "alt": "A close orbit around the Nasenwand climbing wall"
   },
+  "introScrubSequence": {
+    "poster": "/photography/explore-app/scrub/region-poster.jpg",
+    "chapters": [
+      {
+        "id": "region-rock",
+        "from": "Region",
+        "to": "Rock",
+        "video": "/photography/explore-app/scrub/region-rock-pan-a.mp4",
+        "duration": 3,
+        "alt": "Drone approach from the Wachau and Danube toward the Nasenwand rock formation",
+        "direction": "reverse",
+        "objectPosition": "52% center"
+      },
+      {
+        "id": "rock-sector",
+        "from": "Rock",
+        "to": "Sector",
+        "video": "/photography/explore-app/scrub/rock-sector-dji0058.mp4",
+        "duration": 20.52,
+        "alt": "Drone move from the wider rock formation toward the climbing sector",
+        "direction": "reverse",
+        "objectPosition": "50% center"
+      },
+      {
+        "id": "sector-topo",
+        "from": "Sector",
+        "to": "Topo",
+        "video": "/photography/explore-app/scrub/sector-topo-pan-b.mp4",
+        "duration": 2.4,
+        "alt": "Drone move from the sector overview toward close wall detail",
+        "direction": "reverse",
+        "objectPosition": "48% center"
+      }
+    ]
+  },
   "boxes": [
     {
       "id": "vm-7073",
@@ -37,7 +72,7 @@
         "height": 532,
         "sizes": "(max-width: 767px) calc(100vw - 32px), 360px"
       },
-      "initialLayout": { "x": 48, "y": 128, "width": 340, "height": 360 }
+      "initialLayout": { "x": 20, "y": 92, "width": 250, "height": 168 }
     },
     {
       "id": "nasenwand-spatial",
@@ -62,7 +97,7 @@
           }
         ]
       },
-      "initialLayout": { "x": 424, "y": 96, "width": 440, "height": 390 }
+      "initialLayout": { "x": 282, "y": 92, "width": 280, "height": 168 }
     },
     {
       "id": "wachau-16",
@@ -87,7 +122,7 @@
           }
         ]
       },
-      "initialLayout": { "x": 900, "y": 132, "width": 500, "height": 300 }
+      "initialLayout": { "x": 20, "y": 272, "width": 250, "height": 168 }
     },
     {
       "id": "crag-locator",
@@ -95,7 +130,7 @@
       "title": "Crag Locator",
       "crag": "Vienna Limestone Belt",
       "description": "Search and browse the working atlas without the Explore page navigation or prototype footer.",
-      "initialLayout": { "x": 176, "y": 112, "width": 760, "height": 610 }
+      "initialLayout": { "x": 20, "y": 632, "width": 542, "height": 220 }
     },
     {
       "id": "note-north-face",
@@ -110,7 +145,7 @@
         "height": 473,
         "sizes": "(max-width: 767px) calc(100vw - 32px), 360px"
       },
-      "initialLayout": { "x": 92, "y": 536, "width": 390, "height": 280 }
+      "initialLayout": { "x": 20, "y": 452, "width": 250, "height": 168 }
     },
     {
       "id": "nasenwand-model",
@@ -129,7 +164,7 @@
         "src": "/models/nasenwand-topo.glb",
         "bytes": 1745504
       },
-      "initialLayout": { "x": 520, "y": 524, "width": 470, "height": 340 }
+      "initialLayout": { "x": 282, "y": 452, "width": 280, "height": 168 }
     },
     {
       "id": "wall-reveal",
@@ -144,7 +179,7 @@
         "height": 900,
         "sizes": "(max-width: 767px) calc(100vw - 32px), 430px"
       },
-      "initialLayout": { "x": 820, "y": 300, "width": 430, "height": 350 }
+      "initialLayout": { "x": 282, "y": 272, "width": 280, "height": 168 }
     }
   ],
   "offlinePack": [
@@ -159,6 +194,9 @@
   ],
   "heavyAssets": [
     "/photography/nasenwand/media/nasenwand-orbit-scrub-allkey.mp4",
+    "/photography/explore-app/scrub/region-rock-pan-a.mp4",
+    "/photography/explore-app/scrub/rock-sector-dji0058.mp4",
+    "/photography/explore-app/scrub/sector-topo-pan-b.mp4",
     "/models/nasenwand-topo.glb"
   ]
 }

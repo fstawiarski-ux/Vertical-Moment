@@ -1,12 +1,11 @@
 "use client";
 
 import { lazy, Suspense, useEffect, useMemo, useState } from "react";
-import { ScrollScrubHero } from "./components/animation/ScrollScrubHero";
+import { IntroScrubSequence } from "./components/animation/IntroScrubSequence";
 import { Box3DModel } from "./components/boxes/Box3DModel";
 import { BoxContainer } from "./components/boxes/BoxContainer";
 import { ResponsiveImage } from "./components/media/ResponsiveImage";
 import { LayoutToolbar } from "./components/shell/LayoutToolbar";
-import { LockedBackground } from "./components/shell/LockedBackground";
 import { LayoutProvider, useLayoutState } from "./core/layoutState";
 import type { BoxState, ExploreContentBox, ExploreContentRegistry, LayoutState } from "./core/types";
 import { useViewportMode } from "./hooks/useViewportMode";
@@ -154,7 +153,7 @@ function BoxContent({ content, isActive, priority = false }: { content: ExploreC
       {content.image && <ResponsiveImage image={content.image} priority={priority} />}
       <div className={styles.boxCopy}>
         <p>{content.description}</p>
-        <span>Promote this box to make it the locked hero.</span>
+        <span>Resize or expand this box to bring its detail forward.</span>
       </div>
     </div>
   );
@@ -162,14 +161,13 @@ function BoxContent({ content, isActive, priority = false }: { content: ExploreC
 
 function Workspace({ registry }: { registry: ExploreContentRegistry }) {
   const viewportMode = useViewportMode();
+  const [workspaceUnlocked, setWorkspaceUnlocked] = useState(false);
   const boxes = useLayoutState((state) => state.boxes);
   const activeBoxId = useLayoutState((state) => state.activeBoxId);
   const heroBoxId = useLayoutState((state) => state.heroBoxId);
   const hydrated = useLayoutState((state) => state.hydrated);
   const dispatch = useLayoutState((state) => state.dispatch);
   const contentById = useMemo(() => new Map(registry.boxes.map((box) => [box.id, box])), [registry]);
-  const heroContent = heroBoxId ? contentById.get(heroBoxId) : undefined;
-  const background = heroContent?.image ?? registry.background;
 
   useEffect(() => {
     if (viewportMode === "tablet") {
@@ -212,7 +210,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
 
   const renderBox = (box: BoxState) => {
     const content = contentById.get(box.dataRef ?? box.id);
-    if (!content || box.id === heroBoxId) return null;
+    if (!content) return null;
     return (
       <BoxContainer
         key={box.id}
@@ -231,15 +229,13 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
 
   return (
     <main className={styles.app} data-viewport={viewportMode}>
-      <LockedBackground image={background} isPromoted={Boolean(heroBoxId)} />
-      <ScrollScrubHero asset={registry.scrollScrubHero} visible={!heroBoxId} />
+      <IntroScrubSequence sequence={registry.introScrubSequence} onUnlock={() => setWorkspaceUnlocked(true)} />
       <header className={styles.brand}>
         <span className={styles.mark} aria-hidden="true" />
         <div><small>Vertical Moment</small><strong>Explore Lab</strong></div>
-        <p>{hydrated ? "Layout saved locally" : "Loading local layout…"}</p>
       </header>
 
-      {viewportMode === "mobile" ? (
+      {workspaceUnlocked && (viewportMode === "mobile" ? (
         <section className={styles.cardStack} aria-label="Explore cards">
           {visible.map(renderBox)}
         </section>
@@ -247,9 +243,9 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
         <section className={styles.boxLayer} data-layout={viewportMode} aria-label="Explore canvas">
           {visible.map(renderBox)}
         </section>
-      )}
+      ))}
 
-      {minimized.length > 0 && (
+      {workspaceUnlocked && minimized.length > 0 && (
         <aside className={styles.minimizedTray} aria-label="Minimized boxes">
           {minimized.map((box) => {
             const content = contentById.get(box.dataRef ?? box.id);
@@ -271,7 +267,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
           })}
         </aside>
       )}
-      <LayoutToolbar viewportMode={viewportMode} offlinePack={registry.offlinePack} />
+      {workspaceUnlocked && <LayoutToolbar viewportMode={viewportMode} offlinePack={registry.offlinePack} />}
     </main>
   );
 }
@@ -290,7 +286,15 @@ export default function ExploreApp({ initialRegistry }: { initialRegistry?: Expl
       })
       .then((content) => {
         if (!cancelled) {
-          setRegistry((current) => current?.version === content.version && current.updatedAt === content.updatedAt ? current : content);
+          setRegistry((current) => {
+            // A previously installed service worker can briefly return an older
+            // registry while the new worker activates. Never let that stale
+            // response downgrade a server-rendered app that already has the
+            // intro sequence required by this release.
+            if (!content.introScrubSequence?.chapters?.length) return current;
+            if (current && content.version < current.version) return current;
+            return current?.version === content.version && current.updatedAt === content.updatedAt ? current : content;
+          });
         }
       })
       .catch((reason: unknown) => { if (!cancelled) setError(reason instanceof Error ? reason.message : "Content registry unavailable"); });

@@ -1,32 +1,36 @@
 .toolbar {
   position: absolute;
-  left: 50%;
-  bottom: max(16px, env(safe-area-inset-bottom));
+  top: 50%;
+  right: max(12px, env(safe-area-inset-right));
   z-index: 9500;
   display: flex;
-  max-width: calc(100vw - 24px);
+  max-height: calc(100dvh - 150px);
+  width: 82px;
+  flex-direction: column;
   align-items: center;
   gap: 6px;
   padding: 7px;
   color: #f5f1e6;
   border: 1px solid rgb(238 225 190 / 22%);
-  border-radius: 999px;
+  border-radius: 20px;
   background: rgb(9 15 11 / 82%);
   box-shadow: 0 16px 54px rgb(0 0 0 / 35%);
   backdrop-filter: blur(18px) saturate(1.2);
-  transform: translateX(-50%);
+  transform: translateY(-50%);
+  animation: toolbarReveal 420ms 120ms cubic-bezier(.2,.8,.2,1) both;
 }
 
 .toolbar button {
   min-height: 38px;
-  padding: 0 13px;
+  width: 100%;
+  padding: 0 7px;
   color: inherit;
   border: 1px solid transparent;
   border-radius: 999px;
   background: transparent;
   font: 600 11px/1 Arial, sans-serif;
   letter-spacing: .025em;
-  white-space: nowrap;
+  white-space: normal;
   cursor: pointer;
 }
 
@@ -40,8 +44,8 @@
 }
 
 .toolbar button:disabled { opacity: .34; cursor: not-allowed; }
-.modes { display: flex; }
-.divider { width: 1px; height: 26px; background: rgb(255 255 255 / 14%); }
+.modes { display: flex; width: 100%; flex-direction: column; gap: 4px; }
+.divider { width: 44px; height: 1px; background: rgb(255 255 255 / 14%); }
 .viewport {
   padding: 0 8px;
   color: #b9aa82;
@@ -51,12 +55,17 @@
 }
 
 @media (max-width: 900px) {
-  .toolbar { overflow-x: auto; justify-content: flex-start; transform: translateX(-50%); }
+  .toolbar { overflow-y: auto; justify-content: flex-start; }
   .toolbar::-webkit-scrollbar { display: none; }
-  .viewport, .divider { display: none; }
+  .viewport { display: none; }
 }
 
 @media (max-width: 767px) {
-  .toolbar { right: 12px; left: 12px; width: auto; max-width: none; transform: none; }
-  .toolbar button { min-height: 44px; padding: 0 12px; }
+  .toolbar { right: 8px; width: 70px; max-height: calc(100dvh - 130px); }
+  .toolbar button { min-height: 42px; padding: 0 5px; font-size: 9px; }
+}
+
+@keyframes toolbarReveal {
+  from { opacity: 0; transform: translateY(-50%) translateX(14px); }
+  to { opacity: 1; transform: translateY(-50%) translateX(0); }
 }
