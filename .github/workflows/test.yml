@@ -1,0 +1,43 @@
+name: Test website
+
+on:
+  pull_request:
+    paths:
+      - "website/**"
+  push:
+    branches: [main]
+    paths:
+      - "website/**"
+  workflow_dispatch: {}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: website
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        # No lfs: the unit tests never touch the scrub media.
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: website/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      # public/data/v1/*.json is generated, not committed. The build gets it via
+      # the prebuild hook; a typecheck that never builds has to ask for it.
+      - name: Sync data
+        run: npm run sync-data
+
+      - name: Typecheck
+        run: npx tsc --noEmit -p tsconfig.json
+
+      - name: Unit tests
+        run: npm test
