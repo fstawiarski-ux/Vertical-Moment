@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { dropLegacyPackCaches, RUNTIME_IMAGE_CACHE } from "./offlineCache";
 
-const CACHE_NAME = "vm-offline-pack-v1";
+const CACHE_NAME = RUNTIME_IMAGE_CACHE;
 
 export function OfflinePackButton({ urls }: { urls: string[] }) {
   const [status, setStatus] = useState<"idle" | "saving" | "saved" | "partial">("idle");
@@ -10,6 +11,7 @@ export function OfflinePackButton({ urls }: { urls: string[] }) {
 
   useEffect(() => {
     if (!("caches" in window)) return;
+    dropLegacyPackCaches();
     void caches.open(CACHE_NAME).then(async (cache) => {
       const matches = await Promise.all(urls.map((url) => cache.match(url)));
       if (matches.every(Boolean)) {

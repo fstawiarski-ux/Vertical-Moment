@@ -22,7 +22,25 @@ const serwist = new Serwist({
   navigationPreload: true,
   precacheOptions: {
     cleanupOutdatedCaches: true,
-    ignoreURLParametersMatching: [/^utm_/, /^vm-/, /^source$/],
+    // The precached /explore-app shell is stored without a query string, so any
+    // parameter left in this list must be stripped before lookup or the
+    // navigation misses precache entirely and falls through to the network —
+    // which offline means the /offline fallback.
+    //
+    // Every deep-link parameter belongs here: the shell is byte-identical for
+    // all of them and the client reads window.location.search after boot. The
+    // manifest shortcuts are all ?open=…&intro=skip, so without this an
+    // installed app cannot cold-start offline from its own shortcuts.
+    ignoreURLParametersMatching: [
+      /^utm_/,
+      /^vm-/,
+      /^source$/,
+      /^open$/,
+      /^crag$/,
+      /^sector$/,
+      /^intro$/,
+      /^mode$/,
+    ],
   },
   runtimeCaching: [
     {
