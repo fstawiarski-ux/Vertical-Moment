@@ -30,6 +30,11 @@ export function slugify(value: string): string {
   return value
     .toLowerCase()
     .normalize("NFKD")
+    // NFKD splits "ö" into "o" + a combining mark. That mark has to be deleted
+    // outright: leaving it to the punctuation rule below turns it into a
+    // separator, so "Mödling" would slug to "mo-dling". Austrian crag names are
+    // full of umlauts, so this is the common case, not an edge case.
+    .replace(/\p{M}/gu, "")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
 }

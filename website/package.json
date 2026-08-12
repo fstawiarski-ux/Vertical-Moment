@@ -13,6 +13,8 @@
     "dev": "next dev",
     "start": "next start",
     "lint": "next lint",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "preview": "npm run build:cloudflare && opennextjs-cloudflare preview",
     "deploy": "npm run build:cloudflare && opennextjs-cloudflare deploy",
     "upload": "npm run build:cloudflare && opennextjs-cloudflare upload",
@@ -40,6 +42,7 @@
     "serwist": "9.5.12",
     "sharp": "^0.35.3",
     "typescript": "^5.5.4",
+    "vitest": "^3.2.7",
     "wrangler": "4.120.1"
   },
   "overrides": {
