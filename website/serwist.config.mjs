@@ -1,4 +1,30 @@
 import { serwist } from "@serwist/next/config";
+import { createHash } from "node:crypto";
+import { readFile } from "node:fs/promises";
+import { join, dirname } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Read and normalize explore-app.html with BUILD_ID
+const buildId = (await readFile(join(__dirname, ".next/BUILD_ID"), "utf8")).trim();
+if (!buildId) {
+  throw new Error("BUILD_ID is empty");
+}
+
+const exploreAppHtml = await readFile(join(__dirname, ".next/server/app/explore-app.html"), "utf8");
+
+// Validate that BUILD_ID is found in HTML
+if (!exploreAppHtml.includes(buildId)) {
+  throw new Error(`BUILD_ID "${buildId}" not found in explore-app.html`);
+}
+
+// Normalize HTML by replacing BUILD_ID with marker
+const normalizedHtml = exploreAppHtml.replaceAll(buildId, "<NEXT_BUILD_ID>");
+
+// Generate SHA-256 hash
+const exploreAppRevision = createHash("sha256").update(normalizedHtml).digest("hex");
 
 export default await serwist({
   swSrc: "src/pwa/service-worker.ts",
@@ -13,7 +39,7 @@ export default await serwist({
   // explore-content.json version bump, and the manifest revision whenever
   // manifest.webmanifest changes, or returning installs keep the old build.
   additionalPrecacheEntries: [
-    { url: "/explore-app", revision: "explore-app-v9" },
+    { url: "/explore-app", revision: `explore-app-${exploreAppRevision}` },
     { url: "/offline", revision: "offline-v1" },
     { url: "/explore-content.json", revision: "registry-v7" },
     { url: "/manifest.webmanifest", revision: "manifest-v2" },
