@@ -1,0 +1,60 @@
+.breadcrumb {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 2px;
+  overflow: hidden;
+  padding: 5px 6px;
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 999px;
+  background: rgb(5 10 7 / 52%);
+  backdrop-filter: blur(10px);
+  pointer-events: auto;
+}
+
+.level { display: flex; min-width: 0; align-items: center; gap: 2px; }
+
+.level i {
+  flex: 0 0 auto;
+  color: #7f7c6f;
+  font: 600 12px/1 Arial, sans-serif;
+  font-style: normal;
+}
+
+.breadcrumb button {
+  max-width: 22ch;
+  overflow: hidden;
+  padding: 5px 10px;
+  color: #d9d3c2;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  font: 600 11px/1.2 Arial, sans-serif;
+  letter-spacing: .01em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.breadcrumb button:hover,
+.breadcrumb button:focus-visible {
+  color: #151b16;
+  outline: none;
+  border-color: #d2bd87;
+  background: #d2bd87;
+}
+
+.breadcrumb button[aria-current="location"] { color: #f2ecdb; }
+
+/* The resting label is one short phrase, not a place name, so it is never
+   clamped to the per-level width. */
+.resting { max-width: none !important; color: #b0a992 !important; }
+
+@media (max-width: 900px) {
+  .breadcrumb button { max-width: 14ch; font-size: 10px; padding: 5px 8px; }
+  /* The region is the level a phone can most afford to drop — and dropping it
+     must also drop the separator that would otherwise lead the crumb. */
+  .level:first-child { display: none; }
+  .level:nth-child(2) i { display: none; }
+}

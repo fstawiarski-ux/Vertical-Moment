@@ -4,6 +4,13 @@ export type LayoutMode = "explore" | "grid" | "presentation";
 
 export type ViewportMode = "desktop" | "tablet" | "mobile";
 
+/**
+ * "cinematic" runs the three scrub chapters. "static" holds the final frame and
+ * shows the workspace immediately — used for reduced-motion visitors and for
+ * anyone who has already travelled the journey once.
+ */
+export type IntroMode = "cinematic" | "static";
+
 export interface BoxState {
   id: string;
   type: string;
@@ -21,7 +28,6 @@ export interface BoxState {
 export interface LayoutState {
   boxes: BoxState[];
   activeBoxId: string | null;
-  heroBoxId: string | null;
   layoutMode: LayoutMode;
 }
 
@@ -53,8 +59,14 @@ export interface ExploreContentBox {
   id: string;
   type: "gallery" | "spatial" | "panorama" | "note" | "model3d" | "atlas" | "nasenwand" | "wallreveal" | "info";
   title: string;
+  /** Region → crag → sector is the spatial spine the whole Lounge reads from. */
+  region: string;
   crag: string;
+  /** Omitted where no verified sector exists for the box yet. */
+  sector?: string;
   description: string;
+  /** Extra search terms that are not already in the title, crag or description. */
+  keywords?: string[];
   image?: ExploreImageAsset;
   model?: ExploreModelAsset;
   initialLayout: {
@@ -63,12 +75,6 @@ export interface ExploreContentBox {
     width: number;
     height: number;
   };
-}
-
-export interface ScrollScrubAsset {
-  video: string;
-  poster: string;
-  alt: string;
 }
 
 export interface ScrollScrubChapterAsset {
@@ -91,7 +97,6 @@ export interface ExploreContentRegistry {
   version: number;
   updatedAt: string;
   background: ExploreImageAsset;
-  scrollScrubHero: ScrollScrubAsset;
   introScrubSequence: ScrollScrubSequenceAsset;
   boxes: ExploreContentBox[];
   offlinePack: string[];

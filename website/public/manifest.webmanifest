@@ -10,6 +10,29 @@
   "background_color": "#0d1510",
   "theme_color": "#0d1510",
   "categories": ["photo", "productivity", "travel"],
+  "shortcuts": [
+    {
+      "name": "Nasenwand routes",
+      "short_name": "Nasenwand",
+      "description": "Open the Nasenwand route workspace straight away.",
+      "url": "/explore-app?open=nasenwand-routes&intro=skip",
+      "icons": [{ "src": "/icons/explore-app-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Wachau panorama",
+      "short_name": "Panorama",
+      "description": "Open the Wachau panorama workspace.",
+      "url": "/explore-app?open=wachau-panorama&intro=skip",
+      "icons": [{ "src": "/icons/explore-app-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Crag Locator",
+      "short_name": "Atlas",
+      "description": "Search the offline crag atlas.",
+      "url": "/explore-app?open=crag-locator&intro=skip",
+      "icons": [{ "src": "/icons/explore-app-192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ],
   "icons": [
     {
       "src": "/icons/explore-app-192.png",

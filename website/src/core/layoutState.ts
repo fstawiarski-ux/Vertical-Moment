@@ -7,17 +7,24 @@ import { applyExploreLayout, applyGridLayout, applyPresentationLayout } from "./
 import type { BoxState, LayoutMode, LayoutState, ViewportBounds } from "./types";
 
 const STORAGE_KEY = "vertical-moment:explore-app:layout";
-const STORAGE_VERSION = 2;
+// 3: dropped the always-null heroBoxId left over from the pre-#28 hero shell.
+const STORAGE_VERSION = 3;
+
+const HISTORY_LIMIT = 50;
+// A drag or resize dispatches UPDATE_BOX on every pointermove. Without
+// coalescing, one gesture would bury the history under a hundred entries and
+// undo would crawl back a pixel at a time.
+const HISTORY_COALESCE_MS = 600;
 
 export type LayoutAction =
   | { type: "ADD_BOX"; box: BoxState }
   | { type: "REMOVE_BOX"; id: string }
   | { type: "UPDATE_BOX"; id: string; patch: Partial<Omit<BoxState, "id">> }
   | { type: "SET_ACTIVE_BOX"; id: string | null }
-  | { type: "SET_HERO_BOX"; id: string | null }
   | { type: "SET_LAYOUT_MODE"; mode: LayoutMode }
   | { type: "APPLY_AUTO_LAYOUT"; viewport?: ViewportBounds }
   | { type: "MINIMIZE_ALL" }
+  | { type: "RESET_LAYOUT"; state: LayoutState }
   | { type: "LOAD_STATE"; state: LayoutState };
 
 interface PersistedLayout {
@@ -27,14 +34,19 @@ interface PersistedLayout {
 
 export interface LayoutStore extends LayoutState {
   hydrated: boolean;
+  canUndo: boolean;
+  canRedo: boolean;
   dispatch: (action: LayoutAction) => void;
+  undo: () => void;
+  redo: () => void;
+  /** Returns every box to the position, size and mode the registry seeded. */
+  reset: () => void;
   markHydrated: () => void;
 }
 
 const defaultState: LayoutState = {
   boxes: [],
   activeBoxId: null,
-  heroBoxId: null,
   layoutMode: "explore",
 };
 
@@ -60,7 +72,6 @@ function isLayoutState(value: unknown): value is LayoutState {
   return Array.isArray(state.boxes)
     && state.boxes.every(isBoxState)
     && (state.activeBoxId === null || typeof state.activeBoxId === "string")
-    && (state.heroBoxId === null || typeof state.heroBoxId === "string")
     && typeof state.layoutMode === "string"
     && validLayouts.has(state.layoutMode);
 }
@@ -83,7 +94,6 @@ function mergePersistedState(persisted: LayoutState, fallback: LayoutState): Lay
   return {
     boxes,
     activeBoxId: persisted.activeBoxId && ids.has(persisted.activeBoxId) ? persisted.activeBoxId : null,
-    heroBoxId: persisted.heroBoxId && ids.has(persisted.heroBoxId) ? persisted.heroBoxId : null,
     layoutMode: persisted.layoutMode,
   };
 }
@@ -105,7 +115,6 @@ export function layoutReducer(state: LayoutState, action: LayoutAction): LayoutS
         ...state,
         boxes,
         activeBoxId: state.activeBoxId === action.id ? null : state.activeBoxId,
-        heroBoxId: state.heroBoxId === action.id ? null : state.heroBoxId,
       };
     }
     case "UPDATE_BOX":
@@ -123,17 +132,13 @@ export function layoutReducer(state: LayoutState, action: LayoutAction): LayoutS
         boxes: state.boxes.map((box) => box.id === action.id ? { ...box, zIndex } : box),
       };
     }
-    case "SET_HERO_BOX":
-      return action.id === null || state.boxes.some((box) => box.id === action.id)
-        ? { ...state, heroBoxId: action.id }
-        : state;
     case "SET_LAYOUT_MODE":
       return { ...state, layoutMode: action.mode };
     case "APPLY_AUTO_LAYOUT": {
       const boxes = state.layoutMode === "grid"
         ? applyGridLayout(state.boxes, action.viewport)
         : state.layoutMode === "presentation"
-          ? applyPresentationLayout(state.boxes, action.viewport, state.heroBoxId ?? state.activeBoxId)
+          ? applyPresentationLayout(state.boxes, action.viewport, state.activeBoxId)
           : applyExploreLayout(state.boxes, action.viewport);
       return { ...state, boxes };
     }
@@ -143,6 +148,7 @@ export function layoutReducer(state: LayoutState, action: LayoutAction): LayoutS
         activeBoxId: null,
         boxes: state.boxes.map((box) => box.pinned ? box : { ...box, mode: "minimized" }),
       };
+    case "RESET_LAYOUT":
     case "LOAD_STATE":
       return action.state;
     default:
@@ -150,13 +156,107 @@ export function layoutReducer(state: LayoutState, action: LayoutAction): LayoutS
   }
 }
 
+/**
+ * Actions that belong on the undo stack, keyed so that a continuous gesture
+ * folds into a single entry. The patch signature keeps a drag ("x,y") from
+ * being merged with a mode change ("mode") on the same box.
+ */
+function historyKey(action: LayoutAction): string | null {
+  switch (action.type) {
+    case "UPDATE_BOX":
+      return `UPDATE_BOX:${action.id}:${Object.keys(action.patch).sort().join(",")}`;
+    case "ADD_BOX":
+    case "REMOVE_BOX":
+    case "SET_LAYOUT_MODE":
+    case "APPLY_AUTO_LAYOUT":
+    case "MINIMIZE_ALL":
+    case "RESET_LAYOUT":
+      return action.type;
+    default:
+      return null;
+  }
+}
+
 export function createLayoutStore(initialState: LayoutState = defaultState): StoreApi<LayoutStore> {
-  return createStore<LayoutStore>()((set) => ({
-    ...initialState,
-    hydrated: false,
-    dispatch: (action) => set((current) => ({ ...current, ...layoutReducer(current, action) })),
-    markHydrated: () => set({ hydrated: true }),
-  }));
+  return createStore<LayoutStore>()((set, get) => {
+    let past: LayoutState[] = [];
+    let future: LayoutState[] = [];
+    let lastKey: string | null = null;
+    let lastPushAt = 0;
+
+    const snapshot = (): LayoutState => {
+      const state = get();
+      return { boxes: state.boxes, activeBoxId: state.activeBoxId, layoutMode: state.layoutMode };
+    };
+
+    const commit = (state: LayoutState) => set({
+      ...state,
+      canUndo: past.length > 0,
+      canRedo: future.length > 0,
+    });
+
+    return {
+      ...initialState,
+      hydrated: false,
+      canUndo: false,
+      canRedo: false,
+
+      dispatch: (action) => {
+        const before = snapshot();
+        const after = layoutReducer(before, action);
+        // The reducer returns its input untouched when an action is a no-op.
+        if (after === before) return;
+
+        // Hydrating a persisted workspace is not something the user did, so it
+        // starts a fresh history rather than becoming an undoable step.
+        if (action.type === "LOAD_STATE") {
+          past = [];
+          future = [];
+          lastKey = null;
+          commit(after);
+          return;
+        }
+
+        const key = historyKey(action);
+        if (key === null) {
+          // A non-undoable action still ends the current gesture run.
+          lastKey = null;
+        } else {
+          const now = Date.now();
+          if (key !== lastKey || now - lastPushAt >= HISTORY_COALESCE_MS) {
+            past = [...past, before].slice(-HISTORY_LIMIT);
+            future = [];
+          }
+          lastKey = key;
+          lastPushAt = now;
+        }
+
+        commit(after);
+      },
+
+      undo: () => {
+        const previous = past[past.length - 1];
+        if (!previous) return;
+        past = past.slice(0, -1);
+        future = [snapshot(), ...future].slice(0, HISTORY_LIMIT);
+        lastKey = null;
+        commit(previous);
+      },
+
+      redo: () => {
+        const next = future[0];
+        if (!next) return;
+        future = future.slice(1);
+        past = [...past, snapshot()].slice(-HISTORY_LIMIT);
+        lastKey = null;
+        commit(next);
+      },
+
+      reset: () => get().dispatch({ type: "RESET_LAYOUT", state: initialState }),
+
+      markHydrated: () => set({ hydrated: true }),
+    };
+  });
 }
 
 const LayoutStoreContext = createContext<StoreApi<LayoutStore> | null>(null);
@@ -192,7 +292,6 @@ export function LayoutProvider({ children, initialState }: { children: ReactNode
             const state: LayoutState = {
               boxes: next.boxes,
               activeBoxId: next.activeBoxId,
-              heroBoxId: next.heroBoxId,
               layoutMode: next.layoutMode,
             };
             void set(STORAGE_KEY, { version: STORAGE_VERSION, state } satisfies PersistedLayout);
