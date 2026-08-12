@@ -9,7 +9,7 @@ import {
   type PointerEvent as ReactPointerEvent,
   type WheelEvent as ReactWheelEvent,
 } from "react";
-import type { ScrollScrubSequenceAsset } from "../../core/types";
+import type { IntroMode, ScrollScrubSequenceAsset } from "../../core/types";
 import styles from "./IntroScrubSequence.module.css";
 
 const clamp = (value: number) => Math.max(0, Math.min(1, value));
@@ -23,7 +23,14 @@ const SCRUB_STATIONS = [
 
 type ScrubStation = (typeof SCRUB_STATIONS)[number];
 
-export function IntroScrubSequence({ sequence, onUnlock }: { sequence: ScrollScrubSequenceAsset; onUnlock: () => void }) {
+export type UnlockReason = "completed" | "skipped" | "static";
+
+export function IntroScrubSequence({ sequence, mode, onUnlock }: {
+  sequence: ScrollScrubSequenceAsset;
+  /** null while the visitor's intro preference is still being read. */
+  mode: IntroMode | null;
+  onUnlock: (reason: UnlockReason) => void;
+}) {
   const videoRefs = useRef<Array<HTMLVideoElement | null>>([]);
   const dragRef = useRef<{ pointerId: number; x: number; progress: number } | null>(null);
   const progressRef = useRef(0);
@@ -36,6 +43,11 @@ export function IntroScrubSequence({ sequence, onUnlock }: { sequence: ScrollScr
   const scaledProgress = Math.min(progress * chapterCount, chapterCount - 0.000001);
   const activeIndex = Math.floor(scaledProgress);
   const activeLocalProgress = scaledProgress - activeIndex;
+
+  const resolved = mode !== null;
+  const cinematic = mode === "cinematic";
+  // Reduced-motion visitors keep the timeline, but it jumps rather than flies.
+  const animateFlights = mode !== "static";
 
   useEffect(() => {
     setLoaded((current) => {
@@ -67,16 +79,19 @@ export function IntroScrubSequence({ sequence, onUnlock }: { sequence: ScrollScr
     return () => cancelAnimationFrame(frame);
   }, [progress, syncVideos]);
 
+  const unlock = useCallback((reason: UnlockReason) => {
+    if (unlockedRef.current) return;
+    unlockedRef.current = true;
+    setUnlocked(true);
+    onUnlock(reason);
+  }, [onUnlock]);
+
   const moveTo = useCallback((value: number) => {
     const next = clamp(value);
     progressRef.current = next;
     setProgress(next);
-    if (next >= 0.995 && !unlockedRef.current) {
-      unlockedRef.current = true;
-      setUnlocked(true);
-      onUnlock();
-    }
-  }, [onUnlock]);
+    if (next >= 0.995) unlock("completed");
+  }, [unlock]);
 
   const cancelFlight = useCallback(() => {
     if (flightFrameRef.current !== null) cancelAnimationFrame(flightFrameRef.current);
@@ -84,6 +99,15 @@ export function IntroScrubSequence({ sequence, onUnlock }: { sequence: ScrollScr
   }, []);
 
   useEffect(() => cancelFlight, [cancelFlight]);
+
+  // A static intro holds the arrival frame and hands over the workspace at once.
+  useEffect(() => {
+    if (mode !== "static") return;
+    cancelFlight();
+    progressRef.current = 1;
+    setProgress(1);
+    unlock("static");
+  }, [cancelFlight, mode, unlock]);
 
   const flyToStation = useCallback((station: ScrubStation) => {
     cancelFlight();
@@ -93,7 +117,7 @@ export function IntroScrubSequence({ sequence, onUnlock }: { sequence: ScrollScr
       detail: { station: station.id, progress: station.progress },
     }));
 
-    if (distance < 0.001) {
+    if (distance < 0.001 || !animateFlights) {
       moveTo(station.progress);
       announceArrival();
       return;
@@ -116,7 +140,15 @@ export function IntroScrubSequence({ sequence, onUnlock }: { sequence: ScrollScr
     };
 
     flightFrameRef.current = requestAnimationFrame(tick);
-  }, [cancelFlight, moveTo]);
+  }, [animateFlights, cancelFlight, moveTo]);
+
+  const skip = useCallback(() => {
+    cancelFlight();
+    // Claim the unlock first so moveTo does not report this as a completed run.
+    unlock("skipped");
+    progressRef.current = 1;
+    setProgress(1);
+  }, [cancelFlight, unlock]);
 
   const onWheel = (event: ReactWheelEvent<HTMLDivElement>) => {
     if (unlocked) return;
@@ -126,7 +158,7 @@ export function IntroScrubSequence({ sequence, onUnlock }: { sequence: ScrollScr
   };
 
   const onPointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
-    if (unlocked || (event.target as Element).closest("input")) return;
+    if (unlocked || (event.target as Element).closest("input, button")) return;
     cancelFlight();
     dragRef.current = { pointerId: event.pointerId, x: event.clientX, progress };
     event.currentTarget.setPointerCapture(event.pointerId);
@@ -184,48 +216,53 @@ export function IntroScrubSequence({ sequence, onUnlock }: { sequence: ScrollScr
         onPointerUp={onPointerUp}
         onPointerCancel={onPointerUp}
       >
-        {!unlocked && (
+        {cinematic && !unlocked && (
           <div className={styles.introCopy}>
             <small>Wachau · three-stage approach</small>
             <strong>Move from region to the wall</strong>
             <span>Drag from right to left, scroll, or use the timeline.</span>
+            <button type="button" className={styles.skip} onClick={skip}>
+              {progress > 0.9 ? "Enter workspace" : "Skip to workspace"}
+            </button>
           </div>
         )}
       </div>
 
-      <div className={styles.timeline}>
-        <label className={styles.visuallyHidden} htmlFor="explore-intro-timeline">Move from Region on the right to Topo on the left</label>
-        <span className={styles.chapterLabels} aria-label="Scrub stations">
-          {SCRUB_STATIONS.map((station) => (
-            <button
-              key={station.id}
-              type="button"
-              aria-label={`Fly to ${station.label}`}
-              aria-current={Math.abs(progress - station.progress) < 0.015 ? "step" : undefined}
-              onClick={() => flyToStation(station)}
-            >
-              {station.label}
-            </button>
-          ))}
-        </span>
-        <span className={styles.trackRow}>
-          <input
-            id="explore-intro-timeline"
-            aria-label="Move from Region on the right to Topo on the left"
-            type="range"
-            min="0"
-            max="100"
-            step="0.1"
-            value={progress * 100}
-            onPointerDown={cancelFlight}
-            onChange={(event) => {
-              cancelFlight();
-              moveTo(Number(event.target.value) / 100);
-            }}
-          />
-          <output>{Math.round(progress * 100)}%</output>
-        </span>
-      </div>
+      {resolved && (
+        <div className={styles.timeline}>
+          <label className={styles.visuallyHidden} htmlFor="explore-intro-timeline">Move from Region on the right to Topo on the left</label>
+          <span className={styles.chapterLabels} aria-label="Scrub stations">
+            {SCRUB_STATIONS.map((station) => (
+              <button
+                key={station.id}
+                type="button"
+                aria-label={`Fly to ${station.label}`}
+                aria-current={Math.abs(progress - station.progress) < 0.015 ? "step" : undefined}
+                onClick={() => flyToStation(station)}
+              >
+                {station.label}
+              </button>
+            ))}
+          </span>
+          <span className={styles.trackRow}>
+            <input
+              id="explore-intro-timeline"
+              aria-label="Move from Region on the right to Topo on the left"
+              type="range"
+              min="0"
+              max="100"
+              step="0.1"
+              value={progress * 100}
+              onPointerDown={cancelFlight}
+              onChange={(event) => {
+                cancelFlight();
+                moveTo(Number(event.target.value) / 100);
+              }}
+            />
+            <output>{Math.round(progress * 100)}%</output>
+          </span>
+        </div>
+      )}
     </section>
   );
 }

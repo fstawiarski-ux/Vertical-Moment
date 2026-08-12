@@ -1,13 +1,18 @@
 "use client";
 
-import { lazy, Suspense, useEffect, useMemo, useState } from "react";
-import { IntroScrubSequence } from "./components/animation/IntroScrubSequence";
+import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { IntroScrubSequence, type UnlockReason } from "./components/animation/IntroScrubSequence";
 import { Box3DModel } from "./components/boxes/Box3DModel";
 import { BoxContainer } from "./components/boxes/BoxContainer";
 import { ResponsiveImage } from "./components/media/ResponsiveImage";
+import { CommandPalette } from "./components/shell/CommandPalette";
+import { ContextBreadcrumb } from "./components/shell/ContextBreadcrumb";
 import { LayoutToolbar } from "./components/shell/LayoutToolbar";
+import { deepLinkFor, parseDeepLink, resolveDeepLink, writeDeepLinkToUrl } from "./core/deepLink";
+import { hasSeenIntro, prefersReducedMotion, rememberIntroSeen } from "./core/introPreferences";
 import { LayoutProvider, useLayoutState } from "./core/layoutState";
-import type { BoxState, ExploreContentBox, ExploreContentRegistry, LayoutState } from "./core/types";
+import { buildContentEntries, type SearchEntry } from "./core/searchIndex";
+import type { BoxMode, BoxState, ExploreContentBox, ExploreContentRegistry, IntroMode, LayoutState } from "./core/types";
 import { useViewportMode } from "./hooks/useViewportMode";
 import { ServiceWorkerRegistration } from "./pwa/sw-registration";
 import styles from "./ExploreApp.module.css";
@@ -33,7 +38,6 @@ function seedLayout(registry: ExploreContentRegistry): LayoutState {
       stackIndex: index,
     })),
     activeBoxId: null,
-    heroBoxId: null,
     layoutMode: "explore",
   };
 }
@@ -161,13 +165,78 @@ function BoxContent({ content, isActive, priority = false }: { content: ExploreC
 
 function Workspace({ registry }: { registry: ExploreContentRegistry }) {
   const viewportMode = useViewportMode();
+  const [introMode, setIntroMode] = useState<IntroMode | null>(null);
   const [workspaceUnlocked, setWorkspaceUnlocked] = useState(false);
+  const [replayCount, setReplayCount] = useState(0);
+  const [paletteOpen, setPaletteOpen] = useState(false);
+  const [paletteQuery, setPaletteQuery] = useState("");
+
   const boxes = useLayoutState((state) => state.boxes);
   const activeBoxId = useLayoutState((state) => state.activeBoxId);
-  const heroBoxId = useLayoutState((state) => state.heroBoxId);
-  const hydrated = useLayoutState((state) => state.hydrated);
   const dispatch = useLayoutState((state) => state.dispatch);
+  const undo = useLayoutState((state) => state.undo);
+  const redo = useLayoutState((state) => state.redo);
+  const reset = useLayoutState((state) => state.reset);
+
   const contentById = useMemo(() => new Map(registry.boxes.map((box) => [box.id, box])), [registry]);
+  const activeContent = activeBoxId ? contentById.get(activeBoxId) ?? null : null;
+  const deepLinkApplied = useRef(false);
+
+  // Focus handling reads the live box list, but the window listener below must
+  // not resubscribe on every drag frame — hence the ref rather than a dep.
+  const boxesRef = useRef(boxes);
+  useEffect(() => { boxesRef.current = boxes; }, [boxes]);
+
+  const focusBox = useCallback((id: string, mode: BoxMode = "expanded") => {
+    if (!contentById.has(id)) return;
+    if (mode !== "normal") {
+      for (const box of boxesRef.current) {
+        if (box.id !== id && (box.mode === "expanded" || box.mode === "fullscreen")) {
+          dispatch({ type: "UPDATE_BOX", id: box.id, patch: { mode: "normal" } });
+        }
+      }
+    }
+    dispatch({ type: "UPDATE_BOX", id, patch: { mode } });
+    dispatch({ type: "SET_ACTIVE_BOX", id });
+  }, [contentById, dispatch]);
+
+  const replayIntro = useCallback(() => {
+    setWorkspaceUnlocked(false);
+    setIntroMode("cinematic");
+    // Remounts the sequence so it restarts from Region rather than resuming.
+    setReplayCount((current) => current + 1);
+  }, []);
+
+  const handleUnlock = useCallback((reason: UnlockReason) => {
+    setWorkspaceUnlocked(true);
+    if (reason !== "static") void rememberIntroSeen();
+  }, []);
+
+  /**
+   * Decides how the journey opens. An explicit `?intro=` wins; otherwise a deep
+   * link into a module, a previous visit, or a reduced-motion preference each
+   * hand the visitor straight to the workspace.
+   */
+  useEffect(() => {
+    let cancelled = false;
+    const request = parseDeepLink(window.location.search);
+
+    void (async () => {
+      const seen = await hasSeenIntro();
+      if (cancelled) return;
+      if (request.intro === "play") {
+        setIntroMode("cinematic");
+        return;
+      }
+      const goStraightIn = request.intro === "skip"
+        || Boolean(request.open || request.crag)
+        || seen
+        || prefersReducedMotion();
+      setIntroMode(goStraightIn ? "static" : "cinematic");
+    })();
+
+    return () => { cancelled = true; };
+  }, []);
 
   useEffect(() => {
     if (viewportMode === "tablet") {
@@ -176,37 +245,146 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
     }
   }, [dispatch, viewportMode]);
 
+  // Deep links wait for the workspace so the opened box is not hidden behind
+  // an intro that is still running.
   useEffect(() => {
-    const focusRequestedBox = (event: Event) => {
-      const detail = (event as CustomEvent<{ id?: string; mode?: "normal" | "expanded" | "fullscreen" }>).detail;
-      if (!detail?.id || !contentById.has(detail.id)) return;
-      const nextMode = detail.mode ?? "expanded";
-      if (nextMode !== "normal") {
-        for (const box of boxes) {
-          if (box.id !== detail.id && (box.mode === "expanded" || box.mode === "fullscreen")) {
-            dispatch({ type: "UPDATE_BOX", id: box.id, patch: { mode: "normal" } });
-          }
-        }
-      }
-      dispatch({ type: "UPDATE_BOX", id: detail.id, patch: { mode: nextMode } });
-      dispatch({ type: "SET_ACTIVE_BOX", id: detail.id });
-    };
-    window.addEventListener("vm:focus-box", focusRequestedBox);
-    return () => window.removeEventListener("vm:focus-box", focusRequestedBox);
-  }, [boxes, contentById, dispatch]);
+    if (!workspaceUnlocked || deepLinkApplied.current) return;
+    deepLinkApplied.current = true;
+    const target = resolveDeepLink(parseDeepLink(window.location.search), registry);
+    if (target) focusBox(target.boxId, target.mode);
+  }, [focusBox, registry, workspaceUnlocked]);
+
+  // Keeps the address bar shareable: whatever is in focus is what a copied URL reopens.
+  useEffect(() => {
+    if (!workspaceUnlocked) return;
+    writeDeepLinkToUrl(activeContent);
+  }, [activeContent, workspaceUnlocked]);
 
   useEffect(() => {
-    const showScrollHero = () => {
-      dispatch({ type: "SET_HERO_BOX", id: null });
-      for (const box of boxes) {
-        if (box.mode === "expanded" || box.mode === "fullscreen") {
-          dispatch({ type: "UPDATE_BOX", id: box.id, patch: { mode: "normal" } });
-        }
-      }
+    const onFocusRequest = (event: Event) => {
+      const detail = (event as CustomEvent<{ id?: string; mode?: BoxMode }>).detail;
+      if (detail?.id) focusBox(detail.id, detail.mode ?? "expanded");
     };
-    window.addEventListener("vm:show-scroll-hero", showScrollHero);
-    return () => window.removeEventListener("vm:show-scroll-hero", showScrollHero);
-  }, [boxes, dispatch]);
+    const onReplayRequest = () => replayIntro();
+
+    window.addEventListener("vm:focus-box", onFocusRequest);
+    window.addEventListener("vm:replay-intro", onReplayRequest);
+    return () => {
+      window.removeEventListener("vm:focus-box", onFocusRequest);
+      window.removeEventListener("vm:replay-intro", onReplayRequest);
+    };
+  }, [focusBox, replayIntro]);
+
+  const openPalette = useCallback((query: string) => {
+    setPaletteQuery(query);
+    setPaletteOpen(true);
+  }, []);
+
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      const key = event.key.toLowerCase();
+      if ((event.metaKey || event.ctrlKey) && key === "k") {
+        event.preventDefault();
+        openPalette("");
+        return;
+      }
+
+      // Undo and redo must not fight the palette's own text field.
+      const target = event.target as HTMLElement | null;
+      if (target && /^(input|textarea|select)$/i.test(target.tagName)) return;
+      if (!(event.metaKey || event.ctrlKey) || key !== "z") return;
+      event.preventDefault();
+      if (event.shiftKey) redo(); else undo();
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [openPalette, redo, undo]);
+
+  const searchEntries = useMemo<SearchEntry[]>(() => {
+    const actions: SearchEntry[] = [
+      {
+        id: "action:auto-align",
+        kind: "action",
+        label: "Auto-align workspace",
+        detail: "Layout",
+        terms: "auto align tidy arrange layout snap",
+        run: () => dispatch({ type: "APPLY_AUTO_LAYOUT", viewport: { width: window.innerWidth, height: window.innerHeight } }),
+      },
+      {
+        id: "action:minimize-all",
+        kind: "action",
+        label: "Minimize all boxes",
+        detail: "Layout",
+        terms: "minimise minimize collapse hide all boxes clear",
+        run: () => dispatch({ type: "MINIMIZE_ALL" }),
+      },
+      {
+        id: "action:reset",
+        kind: "action",
+        label: "Reset layout",
+        detail: "Layout",
+        terms: "reset restore default original layout start over",
+        run: reset,
+      },
+      {
+        id: "action:undo",
+        kind: "action",
+        label: "Undo layout change",
+        detail: "History",
+        terms: "undo back revert step",
+        shortcut: "Ctrl Z",
+        run: undo,
+      },
+      {
+        id: "action:redo",
+        kind: "action",
+        label: "Redo layout change",
+        detail: "History",
+        terms: "redo forward repeat step",
+        shortcut: "Ctrl ⇧ Z",
+        run: redo,
+      },
+      {
+        id: "action:replay-intro",
+        kind: "action",
+        label: "Replay approach journey",
+        detail: "Intro",
+        terms: "replay intro journey scrub region rock sector topo approach again",
+        run: replayIntro,
+      },
+    ];
+
+    for (const mode of ["explore", "grid", "presentation"] as const) {
+      actions.push({
+        id: `action:layout-${mode}`,
+        kind: "action",
+        label: `Switch to ${mode === "presentation" ? "Present" : mode === "grid" ? "Grid" : "Explore"} layout`,
+        detail: "Layout mode",
+        terms: `layout mode ${mode} present grid explore`,
+        run: () => dispatch({ type: "SET_LAYOUT_MODE", mode }),
+      });
+    }
+
+    return [...buildContentEntries(registry), ...actions];
+  }, [dispatch, redo, registry, replayIntro, reset, undo]);
+
+  const onPaletteSelect = useCallback((entry: SearchEntry) => {
+    setPaletteOpen(false);
+    if (entry.run) {
+      entry.run();
+      return;
+    }
+    if (entry.boxId) focusBox(entry.boxId, "expanded");
+  }, [focusBox]);
+
+  const onPaletteCopyLink = useCallback((entry: SearchEntry) => {
+    const content = entry.boxId ? contentById.get(entry.boxId) : undefined;
+    if (!content || !navigator.clipboard) return;
+    void navigator.clipboard
+      .writeText(`${window.location.origin}${deepLinkFor(content)}`)
+      .catch(() => { /* Clipboard access can be blocked; the URL bar still holds the link. */ });
+  }, [contentById]);
 
   const renderBox = (box: BoxState) => {
     const content = contentById.get(box.dataRef ?? box.id);
@@ -225,14 +403,20 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
   };
 
   const visible = boxes.filter((box) => box.mode !== "minimized");
-  const minimized = boxes.filter((box) => box.mode === "minimized" && box.id !== heroBoxId);
+  const minimized = boxes.filter((box) => box.mode === "minimized");
 
   return (
     <main className={styles.app} data-viewport={viewportMode}>
-      <IntroScrubSequence sequence={registry.introScrubSequence} onUnlock={() => setWorkspaceUnlocked(true)} />
+      <IntroScrubSequence
+        key={replayCount}
+        sequence={registry.introScrubSequence}
+        mode={introMode}
+        onUnlock={handleUnlock}
+      />
       <header className={styles.brand}>
         <span className={styles.mark} aria-hidden="true" />
         <div><small>Vertical Moment</small><strong>Explore Lab</strong></div>
+        {workspaceUnlocked && <ContextBreadcrumb box={activeContent} onNavigate={openPalette} />}
       </header>
 
       {workspaceUnlocked && (viewportMode === "mobile" ? (
@@ -256,10 +440,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
                 type="button"
                 title={`Restore ${content.title}`}
                 aria-label={`Restore ${content.title}`}
-                onClick={() => {
-                  dispatch({ type: "UPDATE_BOX", id: box.id, patch: { mode: "normal" } });
-                  dispatch({ type: "SET_ACTIVE_BOX", id: box.id });
-                }}
+                onClick={() => focusBox(box.id, "normal")}
               >
                 <span>{content.title.slice(0, 1)}</span>
               </button>
@@ -267,7 +448,24 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
           })}
         </aside>
       )}
-      {workspaceUnlocked && <LayoutToolbar viewportMode={viewportMode} offlinePack={registry.offlinePack} />}
+
+      {workspaceUnlocked && (
+        <LayoutToolbar
+          viewportMode={viewportMode}
+          offlinePack={registry.offlinePack}
+          onSearch={() => openPalette("")}
+          onReplayIntro={replayIntro}
+        />
+      )}
+
+      <CommandPalette
+        open={paletteOpen}
+        entries={searchEntries}
+        initialQuery={paletteQuery}
+        onClose={() => setPaletteOpen(false)}
+        onSelect={onPaletteSelect}
+        onCopyLink={onPaletteCopyLink}
+      />
     </main>
   );
 }

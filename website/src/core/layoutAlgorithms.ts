@@ -52,13 +52,13 @@ export function applyGridLayout(boxes: BoxState[], viewport?: ViewportBounds, gr
 export function applyPresentationLayout(
   boxes: BoxState[],
   viewport?: ViewportBounds,
-  heroBoxId?: string | null,
+  focusBoxId?: string | null,
 ): BoxState[] {
   if (boxes.length === 0) return boxes;
   const bounds = usableBounds(viewport);
   const margin = bounds.width < 768 ? 16 : 28;
   const gap = 14;
-  const hero = boxes.find((box) => box.id === heroBoxId)
+  const hero = boxes.find((box) => box.id === focusBoxId)
     ?? [...boxes].sort((a, b) => b.zIndex - a.zIndex)[0];
   const rest = boxes.filter((box) => box.id !== hero.id);
 

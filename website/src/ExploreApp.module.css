@@ -28,24 +28,18 @@
   clip-path: polygon(0 0, 100% 10%, 70% 100%, 18% 88%);
 }
 
-.brand div { display: flex; flex-direction: column; }
+.brand div { display: flex; flex-direction: column; flex: 0 0 auto; }
 .brand small {
   color: #d2bd87;
-  font: 600 9px/1.1 ui-monospace, SFMono-Regular, Consolas, monospace;
+  font: 600 10px/1.1 ui-monospace, SFMono-Regular, Consolas, monospace;
   letter-spacing: .14em;
   text-transform: uppercase;
 }
 .brand strong { margin-top: 4px; font: 600 18px/1 Arial, sans-serif; letter-spacing: -.02em; }
-.brand p {
-  margin: 0 0 0 auto;
-  padding: 8px 11px;
-  color: #d9d3c2;
-  border: 1px solid rgb(255 255 255 / 12%);
-  border-radius: 999px;
-  background: rgb(5 10 7 / 48%);
-  font: 500 10px/1 Arial, sans-serif;
-  backdrop-filter: blur(10px);
-}
+
+/* The breadcrumb sits to the right of the wordmark and keeps clear of the
+   control rail, which owns the far right edge. */
+.brand nav { margin-left: auto; margin-right: 96px; }
 
 .boxLayer { position: absolute; inset: 0; z-index: 10; pointer-events: none; animation: workspaceReveal 520ms cubic-bezier(.2,.8,.2,1) both; }
 .boxLayer > * { pointer-events: auto; }
@@ -111,7 +105,7 @@
 .boxContent img { display: block; width: 100%; height: 100%; min-height: 160px; object-fit: cover; }
 .boxCopy { padding: 14px 16px 16px; background: linear-gradient(180deg, rgb(12 20 15 / 74%), rgb(8 14 10 / 96%)); }
 .boxCopy p { margin: 0; color: #e5e0d3; font: 500 13px/1.45 Arial, sans-serif; }
-.boxCopy span { display: block; margin-top: 9px; color: #aa9d7d; font: 600 9px/1.35 ui-monospace, SFMono-Regular, Consolas, monospace; text-transform: uppercase; letter-spacing: .07em; }
+.boxCopy span { display: block; margin-top: 9px; color: #aa9d7d; font: 600 10px/1.35 ui-monospace, SFMono-Regular, Consolas, monospace; text-transform: uppercase; letter-spacing: .07em; }
 
 .loading {
   min-height: 100dvh;
@@ -144,13 +138,13 @@
 
 .moduleGate small {
   color: #ccb982;
-  font: 700 9px/1.2 ui-monospace, SFMono-Regular, Consolas, monospace;
+  font: 700 10px/1.2 ui-monospace, SFMono-Regular, Consolas, monospace;
   letter-spacing: .12em;
   text-transform: uppercase;
 }
 
 .moduleGate strong { font: 500 clamp(25px, 4vw, 46px)/.95 Georgia, serif; }
-.moduleGate p { max-width: 42ch; margin: 0; color: #c4c0b5; font: 500 12px/1.5 Arial, sans-serif; }
+.moduleGate p { max-width: 42ch; margin: 0; color: #c4c0b5; font: 500 13px/1.5 Arial, sans-serif; }
 .moduleGate button {
   min-height: 40px;
   margin-top: 5px;
@@ -159,7 +153,7 @@
   border: 0;
   border-radius: 999px;
   background: #d0ba81;
-  font: 700 10px/1 Arial, sans-serif;
+  font: 700 11px/1 Arial, sans-serif;
   cursor: pointer;
 }
 .moduleGate button:hover,
@@ -201,7 +195,7 @@
     scroll-snap-align: start;
   }
   .brand { right: 16px; left: 16px; }
-  .brand p { display: none; }
+  .brand nav { margin-right: 76px; }
   .minimizedTray { right: 14px; bottom: 72px; overflow-x: auto; }
 }
 

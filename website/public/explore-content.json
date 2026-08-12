@@ -1,6 +1,6 @@
 {
-  "version": 6,
-  "updatedAt": "2026-08-11",
+  "version": 7,
+  "updatedAt": "2026-08-12",
   "background": {
     "src": "/photography/explore-app/climbers-lounge-collage-45866ab7-1920.webp",
     "alt": "Vertical Moment climbers, hands, equipment and limestone",
@@ -17,11 +17,6 @@
         "srcSet": "/photography/explore-app/climbers-lounge-collage-45866ab7-480.webp 480w, /photography/explore-app/climbers-lounge-collage-45866ab7-960.webp 960w, /photography/explore-app/climbers-lounge-collage-45866ab7-1920.webp 1920w"
       }
     ]
-  },
-  "scrollScrubHero": {
-    "video": "/photography/nasenwand/media/nasenwand-orbit-scrub-allkey.mp4",
-    "poster": "/photography/explore-app/nasenwand-spatial-1b1849da-960.webp",
-    "alt": "A close orbit around the Nasenwand climbing wall"
   },
   "introScrubSequence": {
     "poster": "/photography/explore-app/scrub/region-poster.jpg",
@@ -63,6 +58,7 @@
       "id": "vm-7073",
       "type": "gallery",
       "title": "Steep Ground",
+      "region": "Vienna Limestone Belt",
       "crag": "Peilstein",
       "description": "A compact limestone field frame from the Vertical Moment gallery.",
       "image": {
@@ -78,7 +74,9 @@
       "id": "nasenwand-spatial",
       "type": "nasenwand",
       "title": "Nasenwand Routes",
+      "region": "Wachau",
       "crag": "Nasenwand",
+      "sector": "Upper",
       "description": "A native sector and route workspace using supplied facts without unverified route geometry.",
       "image": {
         "src": "/photography/explore-app/nasenwand-spatial-1b1849da-1280.webp",
@@ -103,6 +101,7 @@
       "id": "wachau-16",
       "type": "panorama",
       "title": "Wachau Panorama",
+      "region": "Wachau",
       "crag": "Wachau",
       "description": "Nine Wachau studies with region, crag, sector and Google 360 degree views.",
       "image": {
@@ -128,6 +127,7 @@
       "id": "crag-locator",
       "type": "atlas",
       "title": "Crag Locator",
+      "region": "Vienna Limestone Belt",
       "crag": "Vienna Limestone Belt",
       "description": "Search and browse the working atlas without the Explore page navigation or prototype footer.",
       "initialLayout": { "x": 20, "y": 632, "width": 542, "height": 220 }
@@ -136,6 +136,7 @@
       "id": "note-north-face",
       "type": "note",
       "title": "A Face That Never Gets Sun",
+      "region": "Vienna Limestone Belt",
       "crag": "Peilstein",
       "description": "North-facing limestone stays cold until midday. This field note keeps the photographic decision beside the wall context.",
       "image": {
@@ -151,7 +152,9 @@
       "id": "nasenwand-model",
       "type": "model3d",
       "title": "Nasenwand 3D",
+      "region": "Wachau",
       "crag": "Nasenwand",
+      "sector": "Upper",
       "description": "A browser-ready model with orbit, pan and zoom controls. Geometry remains provisional until field verification.",
       "image": {
         "src": "/photography/explore-app/nasenwand-spatial-1b1849da-960.webp",
@@ -170,7 +173,9 @@
       "id": "wall-reveal",
       "type": "wallreveal",
       "title": "Wall Reveal",
+      "region": "Wachau",
       "crag": "Nasenwand",
+      "sector": "Upper",
       "description": "A four-stage story that reuses the app-shell scrub, provisional topo layers and shared 3D box.",
       "image": {
         "src": "/photography/nasenwand/media/poster-1600.webp",
@@ -193,7 +198,6 @@
     "/photography/notes/note-north-face.webp"
   ],
   "heavyAssets": [
-    "/photography/nasenwand/media/nasenwand-orbit-scrub-allkey.mp4",
     "/photography/explore-app/scrub/region-rock-pan-a.mp4",
     "/photography/explore-app/scrub/rock-sector-dji0058.mp4",
     "/photography/explore-app/scrub/sector-topo-pan-b.mp4",

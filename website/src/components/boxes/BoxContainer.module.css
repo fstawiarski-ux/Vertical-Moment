@@ -65,7 +65,7 @@
   display: block;
   overflow: hidden;
   color: #cdbb8b;
-  font: 600 9px/1.2 ui-monospace, SFMono-Regular, Consolas, monospace;
+  font: 600 10px/1.2 ui-monospace, SFMono-Regular, Consolas, monospace;
   letter-spacing: .12em;
   text-overflow: ellipsis;
   text-transform: uppercase;

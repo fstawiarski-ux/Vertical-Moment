@@ -56,8 +56,8 @@ function focusBox(id: string) {
   window.dispatchEvent(new CustomEvent("vm:focus-box", { detail: { id, mode: "expanded" } }));
 }
 
-function revealSharedScrub() {
-  window.dispatchEvent(new CustomEvent("vm:show-scroll-hero"));
+function replayApproachJourney() {
+  window.dispatchEvent(new CustomEvent("vm:replay-intro"));
 }
 
 export default function BoxWallReveal() {
@@ -88,7 +88,7 @@ export default function BoxWallReveal() {
               <small>One scrub, shared by the whole workspace</small>
               <strong>3.1 MB app-shell motion</strong>
               <span>The 17.7 MB Wall Reveal prototype remains archived and unloaded.</span>
-              <button type="button" onClick={revealSharedScrub}>Show shared scrub hero</button>
+              <button type="button" onClick={replayApproachJourney}>Replay the approach journey</button>
             </div>
           </div>
         )}
