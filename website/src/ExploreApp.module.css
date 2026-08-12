@@ -47,10 +47,11 @@
   backdrop-filter: blur(10px);
 }
 
-.boxLayer { position: absolute; inset: 0; z-index: 10; pointer-events: none; }
+.boxLayer { position: absolute; inset: 0; z-index: 10; pointer-events: none; animation: workspaceReveal 520ms cubic-bezier(.2,.8,.2,1) both; }
 .boxLayer > * { pointer-events: auto; }
 .boxLayer[data-layout="tablet"] {
   top: 82px;
+  right: 100px;
   bottom: 80px;
   display: grid;
   overflow-y: auto;
@@ -74,6 +75,7 @@
   scroll-padding-top: 8px;
   scroll-snap-type: y mandatory;
   overscroll-behavior: contain;
+  animation: workspaceReveal 520ms cubic-bezier(.2,.8,.2,1) both;
 }
 
 .minimizedTray {
@@ -165,10 +167,18 @@
 .moduleLoading { color: #d8d1c1; font: 600 12px/1.4 Arial, sans-serif; }
 
 @keyframes spin { to { transform: rotate(360deg); } }
+@keyframes workspaceReveal {
+  from { opacity: 0; transform: translateY(18px) scale(.985); }
+  to { opacity: 1; transform: none; }
+}
 
 @media (max-width: 767px) {
+  .cardStack {
+    right: 86px;
+    padding-right: 8px;
+  }
   .boxLayer {
-    inset: 82px 0 76px;
+    inset: 82px 86px 76px 0;
     display: flex;
     flex-direction: column;
     gap: 16px;

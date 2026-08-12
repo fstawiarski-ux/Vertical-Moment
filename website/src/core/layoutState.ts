@@ -7,7 +7,7 @@ import { applyExploreLayout, applyGridLayout, applyPresentationLayout } from "./
 import type { BoxState, LayoutMode, LayoutState, ViewportBounds } from "./types";
 
 const STORAGE_KEY = "vertical-moment:explore-app:layout";
-const STORAGE_VERSION = 1;
+const STORAGE_VERSION = 2;
 
 export type LayoutAction =
   | { type: "ADD_BOX"; box: BoxState }

@@ -54,11 +54,11 @@ const serwist = new Serwist({
     {
       matcher: ({ url, request }) => isSameOrigin(url) && request.method === "GET" && url.pathname.endsWith(".mp4"),
       handler: new CacheFirst({
-        cacheName: "vm-scrub-video-v1",
+        cacheName: "vm-scrub-video-v2",
         plugins: [
           new CacheableResponsePlugin({ statuses: [200] }),
           new RangeRequestsPlugin(),
-          new ExpirationPlugin({ maxEntries: 2, maxAgeSeconds: 30 * 24 * 60 * 60, purgeOnQuotaError: true }),
+          new ExpirationPlugin({ maxEntries: 4, maxAgeSeconds: 30 * 24 * 60 * 60, purgeOnQuotaError: true }),
         ],
       }),
     },
