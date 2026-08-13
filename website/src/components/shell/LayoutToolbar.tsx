@@ -62,6 +62,18 @@ export function LayoutToolbar({ viewportMode, offlinePack, onSearch, onReplayInt
         </button>
       )}
 
+      {collapsed && (
+        <a
+          className={styles.compactContribute}
+          href="/contribute?source=explore-app"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Open contributor field beta"
+        >
+          Add
+        </a>
+      )}
+
       {!collapsed && (
         <>
           <button type="button" className={styles.search} onClick={onSearch}>
@@ -95,6 +107,14 @@ export function LayoutToolbar({ viewportMode, offlinePack, onSearch, onReplayInt
           <span className={styles.divider} />
 
           <button type="button" onClick={onReplayIntro}>Replay journey</button>
+          <a
+            className={styles.contribute}
+            href="/contribute?source=explore-app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Contribute
+          </a>
           <OfflinePackButton urls={offlinePack} />
           <span className={styles.viewport}>{viewportMode}</span>
         </>

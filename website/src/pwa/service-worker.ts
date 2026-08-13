@@ -100,7 +100,12 @@ const serwist = new Serwist({
     {
       matcher: ({ url, request }) => isSameOrigin(url)
         && request.mode === "navigate"
-        && (url.pathname.startsWith("/explore-app") || url.pathname === "/offline"),
+        && (
+          url.pathname.startsWith("/explore-app")
+          || url.pathname === "/contribute"
+          || url.pathname === "/report"
+          || url.pathname === "/offline"
+        ),
       handler: new NetworkFirst({
         cacheName: "vm-explore-pages-v1",
         networkTimeoutSeconds: 3,

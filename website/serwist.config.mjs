@@ -13,7 +13,8 @@ export default await serwist({
   // explore-content.json version bump, and the manifest revision whenever
   // manifest.webmanifest changes, or returning installs keep the old build.
   additionalPrecacheEntries: [
-    { url: "/explore-app", revision: "explore-app-v9" },
+    { url: "/explore-app", revision: "explore-app-v10" },
+    { url: "/contribute", revision: "contribute-local-beta-v1" },
     { url: "/offline", revision: "offline-v1" },
     { url: "/explore-content.json", revision: "registry-v7" },
     { url: "/manifest.webmanifest", revision: "manifest-v2" },

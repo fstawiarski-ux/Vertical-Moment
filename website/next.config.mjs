@@ -13,9 +13,9 @@ const nextConfig = {
     // claim that they "all resolve." /explore now has a real page (the
     // crag locator) so it comes out of the list. The rest are still
     // redirected — /start and /review-preview are the two the brief
-    // flags for Filip to decide on gating; /technology and /contribute
-    // weren't in scope for this change, left as found.
-    return ["/technology", "/report", "/contribute", "/review-preview", "/start"]
+    // flags for Filip to decide on gating. The owner-only contributor beta is
+    // now intentionally reachable at /contribute; /report forwards into it.
+    return ["/technology", "/review-preview", "/start"]
       .map((source) => ({ source, destination: "/", permanent: false }));
   },
 };
