@@ -184,7 +184,7 @@ export function BoxContainer({ box, title, eyebrow, viewportMode, children, jour
             <button type="button" onClick={() => setMode(box.mode === "fullscreen" ? "normal" : "fullscreen")} aria-label={box.mode === "fullscreen" ? `Exit full screen ${title}` : `Open ${title} full screen`} title="Full screen">⛶</button>
           </div>
         </div>
-        {box.mode !== "minimized" && <div className={styles.body}>{children}</div>}
+        {presentationBox.mode !== "minimized" && <div className={styles.body}>{children}</div>}
       </div>
       {canFreeform && (Object.keys(resizeClass) as ResizeDirection[]).map((direction) => (
         <button

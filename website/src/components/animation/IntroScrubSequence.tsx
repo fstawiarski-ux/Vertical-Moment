@@ -134,11 +134,14 @@ export function IntroScrubSequence({ sequence, mode, onUnlock }: {
   const flyToStation = useCallback((station: ScrubStation) => {
     cancelFlight();
     suppressPreviewRef.current = true;
+    // Change the presentation at click time, not only after the easing flight
+    // arrives. This lets the previous box recede while the scrub media moves.
+    lastAnnouncedStationRef.current = station.id;
+    announceStation(station.id, "preview", "button", station.progress);
     const from = progressRef.current;
     const distance = Math.abs(station.progress - from);
     const announceArrival = () => {
       suppressPreviewRef.current = false;
-      lastAnnouncedStationRef.current = station.id;
       announceStation(station.id, "arrived", "button", station.progress);
     };
 
