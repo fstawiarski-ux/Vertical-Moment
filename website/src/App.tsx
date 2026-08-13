@@ -22,7 +22,7 @@ import type {
   LayoutState,
   ScrubStationEventDetail,
 } from "./core/types";
-import { STATION_PRESENTATIONS } from "./core/stationPresentation";
+import { STATION_PRESENTATIONS, stationForFocusBoxId } from "./core/stationPresentation";
 import { useViewportMode } from "./hooks/useViewportMode";
 import { ServiceWorkerRegistration } from "./pwa/sw-registration";
 import styles from "./ExploreApp.module.css";
@@ -227,6 +227,16 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
     dispatch({ type: "SET_ACTIVE_BOX", id });
   }, [contentById, dispatch]);
 
+  const openIndependentBox = useCallback((id: string, mode: BoxMode = "expanded") => {
+    setFollowJourney(false);
+    for (const other of boxesRef.current) {
+      if (other.id !== id && other.mode !== "minimized") {
+        dispatch({ type: "UPDATE_BOX", id: other.id, patch: { mode: "minimized" } });
+      }
+    }
+    focusBox(id, mode);
+  }, [dispatch, focusBox]);
+
   const replayIntro = useCallback(() => {
     setWorkspaceUnlocked(false);
     setJourneyStation("region");
@@ -239,11 +249,15 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
 
   const handleUnlock = useCallback((reason: UnlockReason) => {
     setWorkspaceUnlocked(true);
-    setJourneyStation("topo");
+    const deepLinkTarget = resolveDeepLink(parseDeepLink(window.location.search), registry);
+    const deepLinkStation = deepLinkTarget ? stationForFocusBoxId(deepLinkTarget.boxId) : null;
+    setJourneyStation(deepLinkStation ?? "topo");
     setStationPreviewVisible(false);
-    setFollowJourney(reason === "completed");
+    // Skip/static still land at a journey station; they should not expose all
+    // seven boxes underneath the arrival box.
+    setFollowJourney(deepLinkTarget ? Boolean(deepLinkStation) : true);
     if (reason !== "static") void rememberIntroSeen();
-  }, []);
+  }, [registry]);
 
   useEffect(() => {
     const onStation = (event: Event) => {
@@ -252,6 +266,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
       setJourneyStation(detail.station);
       if (detail.phase === "preview") {
         if (!workspaceUnlocked) setStationPreviewVisible(true);
+        else setFollowJourney(true);
         return;
       }
       setStationPreviewVisible(!workspaceUnlocked);
@@ -301,8 +316,17 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
     if (!workspaceUnlocked || deepLinkApplied.current) return;
     deepLinkApplied.current = true;
     const target = resolveDeepLink(parseDeepLink(window.location.search), registry);
-    if (target) focusBox(target.boxId, target.mode);
-  }, [focusBox, registry, workspaceUnlocked]);
+    if (target) {
+      const station = stationForFocusBoxId(target.boxId);
+      if (station) {
+        setJourneyStation(station);
+        setFollowJourney(true);
+        focusBox(target.boxId, target.mode);
+      } else {
+        openIndependentBox(target.boxId, target.mode);
+      }
+    }
+  }, [focusBox, openIndependentBox, registry, workspaceUnlocked]);
 
   // Keeps the address bar shareable: whatever is in focus is what a copied URL reopens.
   useEffect(() => {
@@ -314,8 +338,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
     const onFocusRequest = (event: Event) => {
       const detail = (event as CustomEvent<{ id?: string; mode?: BoxMode }>).detail;
       if (detail?.id) {
-        setFollowJourney(false);
-        focusBox(detail.id, detail.mode ?? "expanded");
+        openIndependentBox(detail.id, detail.mode ?? "expanded");
       }
     };
     const onReplayRequest = () => replayIntro();
@@ -326,7 +349,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
       window.removeEventListener("vm:focus-box", onFocusRequest);
       window.removeEventListener("vm:replay-intro", onReplayRequest);
     };
-  }, [focusBox, replayIntro]);
+  }, [openIndependentBox, replayIntro]);
 
   const leaveJourney = useCallback(() => setFollowJourney(false), []);
 
@@ -426,13 +449,12 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
 
   const onPaletteSelect = useCallback((entry: SearchEntry) => {
     setPaletteOpen(false);
-    leaveJourney();
     if (entry.run) {
       entry.run();
       return;
     }
-    if (entry.boxId) focusBox(entry.boxId, "expanded");
-  }, [focusBox, leaveJourney]);
+    if (entry.boxId) openIndependentBox(entry.boxId);
+  }, [openIndependentBox]);
 
   const onPaletteCopyLink = useCallback((entry: SearchEntry) => {
     const content = entry.boxId ? contentById.get(entry.boxId) : undefined;
@@ -455,7 +477,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
         journeyPresentation={journeyPresentation}
         onManualInteraction={journeyPresentation ? leaveJourney : undefined}
       >
-        <BoxContent content={content} isActive={journeyPresentation === "focus" || activeBoxId === box.id} priority={content.id === registry.boxes[0]?.id} />
+        <BoxContent content={content} isActive={journeyPresentation === "focus" || activeBoxId === box.id} priority={journeyPresentation === "focus" || content.id === registry.boxes[0]?.id} />
       </BoxContainer>
     );
   };
@@ -507,7 +529,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
                 type="button"
                 title={`Open ${content.title} independently`}
                 aria-label={`Open ${content.title} independently`}
-                onClick={() => { leaveJourney(); focusBox(box.id, "expanded"); }}
+                onClick={() => openIndependentBox(box.id)}
               >
                 <span>{content.title.slice(0, 1)}</span>
                 <strong>{content.title}</strong>

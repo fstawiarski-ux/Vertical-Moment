@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { STATION_PRESENTATIONS, stationForProgress } from "./stationPresentation";
+import { STATION_PRESENTATIONS, stationForFocusBoxId, stationForProgress } from "./stationPresentation";
 
 describe("station presentation", () => {
   it("keeps the journey in four stable presentation states", () => {
@@ -17,5 +17,13 @@ describe("station presentation", () => {
       "nasenwand-spatial",
       "nasenwand-model",
     ]);
+  });
+
+  it("resolves station deep links back to the correct journey station", () => {
+    expect(stationForFocusBoxId("crag-locator")).toBe("region");
+    expect(stationForFocusBoxId("wall-reveal")).toBe("rock");
+    expect(stationForFocusBoxId("nasenwand-spatial")).toBe("sector");
+    expect(stationForFocusBoxId("nasenwand-model")).toBe("topo");
+    expect(stationForFocusBoxId("wachau-panorama")).toBeNull();
   });
 });

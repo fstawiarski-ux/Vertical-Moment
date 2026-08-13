@@ -56,3 +56,11 @@ export function stationForProgress(progress: number): JourneyStation {
   if (progress < 5 / 6) return "sector";
   return "topo";
 }
+
+/** Resolve a deep-linked station box back to the journey station it represents. */
+export function stationForFocusBoxId(boxId: string): JourneyStation | null {
+  for (const station of ["region", "rock", "sector", "topo"] as const) {
+    if (STATION_PRESENTATIONS[station].focusBoxId === boxId) return station;
+  }
+  return null;
+}

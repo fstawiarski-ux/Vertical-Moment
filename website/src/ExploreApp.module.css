@@ -247,7 +247,22 @@
   .brand nav { margin-right: 76px; }
   .minimizedTray { right: 14px; bottom: 72px; overflow-x: auto; }
   .stationPreview { top: auto; right: 14px; bottom: 92px; left: 14px; width: auto; transform: none; }
-  .stationTray { top: auto; right: 14px; bottom: 92px; left: 14px; width: auto; transform: none; }
+  .stationTray {
+    top: auto;
+    right: 10px;
+    bottom: 72px;
+    left: 10px;
+    width: auto;
+    max-width: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    overflow-x: auto;
+    transform: none;
+  }
+  .stationTray > small { flex: 0 0 auto; }
+  .stationTray button { flex: 0 0 auto; max-width: 150px; padding: 6px 4px; }
+  .stationTray button strong { max-width: 104px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

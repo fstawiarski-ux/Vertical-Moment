@@ -180,7 +180,7 @@
    foregrounded during the journey and never rewrites the saved layout. */
 .journeyFocus {
   position: fixed !important;
-  inset: max(76px, 8vh) max(28px, 8vw) max(78px, 8vh) !important;
+  inset: max(76px, 8vh) max(246px, 17vw) max(78px, 8vh) max(28px, 8vw) !important;
   width: auto !important;
   height: auto !important;
   transform: none !important;
@@ -264,12 +264,12 @@
   .box[data-viewport="mobile"].boxModeFullscreen .controls button:nth-child(3) { display: grid; }
 
   .box[data-viewport="mobile"].journeyFocus {
-    inset: 0 !important;
-    width: 100vw !important;
-    height: 100dvh !important;
+    inset: 70px 10px 116px !important;
+    width: auto !important;
+    height: auto !important;
     min-height: 0;
-    border: 0;
-    border-radius: 0;
+    border: 1px solid rgb(230 219 190 / 24%);
+    border-radius: 16px;
   }
 }
 
