@@ -14,6 +14,12 @@ import {
 declare const self: ServiceWorkerGlobalScope & { __SW_MANIFEST: Array<PrecacheEntry | string> };
 
 const isSameOrigin = (url: URL) => url.origin === self.location.origin;
+const isPrivateSpatialNavigation = (pathname: string) => (
+  pathname === "/explore"
+  || pathname.startsWith("/explore/")
+  || pathname === "/nasenwand-concepts"
+  || pathname === "/vision/wall-reveal"
+);
 
 const serwist = new Serwist({
   precacheEntries: self.__SW_MANIFEST,
@@ -102,6 +108,7 @@ const serwist = new Serwist({
         && request.mode === "navigate"
         && (
           url.pathname.startsWith("/explore-app")
+          || isPrivateSpatialNavigation(url.pathname)
           || url.pathname === "/contribute"
           || url.pathname === "/report"
           || url.pathname === "/offline"

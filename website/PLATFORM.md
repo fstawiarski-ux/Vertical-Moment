@@ -44,9 +44,19 @@ Route and crag JSON is generated, never hand-edited. Source of truth is
 `python database/scripts/build_api.py` and the `database/api/v1/` tree rebuilds.
 See `database/API_README.md`.
 
-## Public routes
+## Route discovery boundary
 
-`/explore` `/technology` `/report` `/contribute` `/start` `/review-preview`
+Public, indexable surfaces are `/`, `/climbers-lounge`,
+`/prints/panoramas` and `/technology`. The print route is the public entry to
+the panorama viewer and inquiry surface; the technology route is a plain-
+language explanation of the shared build.
 
-`/start` and `/review-preview` are internal-facing and currently reachable by
-anyone. Gate or remove them before wider launch.
+Private climbing surfaces are `/explore` and its region/crag descendants,
+`/explore-app`, `/offline`, `/nasenwand-concepts` and
+`/vision/wall-reveal`. They remain directly usable but emit `noindex` metadata
+and are not included in the public sitemap.
+
+`/contribute` and `/report` are the unlisted local-first contributor beta and
+emit `noindex` metadata. `/review-preview` is a directly reachable internal
+draft review surface and also emits `noindex`; it is not exposed in shared
+navigation. `/start` remains a legacy redirect to `/`.

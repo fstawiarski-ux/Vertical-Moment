@@ -34,8 +34,8 @@ export default function NotFound() {
             <Link href="/#work" className={styles.link}>
               Selected work
             </Link>
-            <Link href="/explore" className={styles.link}>
-              Explore crags
+            <Link href="/climbers-lounge" className={styles.link}>
+              Climbers Lounge
             </Link>
             <Link href="/#contact" className={styles.link}>
               Book a session

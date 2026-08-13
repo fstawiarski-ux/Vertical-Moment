@@ -1,11 +1,13 @@
+import type { Metadata } from "next";
 import { SiteFooter } from "../components/site-footer";
 import { SiteNav } from "../components/site-nav";
 import { ReviewPreview } from "../components/review-preview";
 import reviewData from "../data/review-routes.json";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Guidebook Reconciliation · Vertical Moment",
   description: "Draft-PR preview of the approved guidebook source reconciliation.",
+  robots: { index: false, follow: false },
 };
 
 export default function ReviewPreviewPage() {

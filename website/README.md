@@ -36,6 +36,7 @@ Layout state, box modes and the promoted hero are persisted locally. Mobile uses
 The manifest installs the app on a phone as **Climbers Lounge**, while the approved workspace retains its internal Explore Lab identity. Install icons and the Serwist service worker provide an installable app shell. The service worker:
 
 - precaches the Explore Lab route, contributor route, offline fallback, registry, icons and Leaflet runtime;
+- precaches the `/explore`, Nasenwand and Wall Reveal route shells while keeping those spatial surfaces out of public discovery;
 - caches images, the shared scrub, GLB model and recently viewed map tiles in separate bounded caches;
 - keeps heavy panorama derivatives behind the user-triggered Wachau offline pack;
 - falls back to `/offline` when an uncached document cannot be reached.

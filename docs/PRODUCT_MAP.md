@@ -63,12 +63,15 @@ Any change here must declare compatibility impact for both products.
 |---|---|---|
 | `/` | Public website | Public |
 | approved gallery/contact/print pages | Public website | Public after review |
+| `/prints/panoramas` | Public website | Public, indexable print/viewer surface |
+| `/technology` | Public website | Public, indexable explanatory surface |
 | `/climbers-lounge` | PWA bridge | Public bridge only; no private-app exposure by implication |
 | `/explore-app` | PWA | Private beta; no public navigation link without approval |
-| `/explore` and region/crag descendants | PWA | Protected development stream |
+| `/explore` and region/crag descendants | PWA | Protected development stream; noindex |
+| `/nasenwand-concepts`, `/vision/wall-reveal` and other topo/3D/spatial routes | PWA | Protected climbing-experience stream; noindex |
 | `/contribute` and `/report` | PWA companion | Unlisted/noindex local-first beta; reachable from the PWA, with no server upload or automatic publication |
+| `/review-preview` | Shared internal surface | Directly reachable draft review; noindex and absent from shared navigation |
 | `/offline` | PWA | PWA support route |
-| Nasenwand/topo/3D/spatial concept routes | PWA | Protected climbing-experience stream |
 
 ## Target package layout
 
