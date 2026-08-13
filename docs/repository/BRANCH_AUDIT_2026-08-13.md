@@ -4,9 +4,9 @@ Repository: `fstawiarski-ux/Vertical-Moment`
 
 ## Final result
 
-- `main` at `2eb49f4` is the canonical integration and current production source.
+- PR #35 at `2eb49f4` is the canonical product/deployment baseline; `main` also contains the documentation-only Phase 2 record from PR #36.
 - GitHub reported no open pull requests before or after cleanup.
-- PRs #1-#35 remain available as repository history.
+- Every merged PR remains available as repository history.
 - Thirty remote branch pointers whose tips exactly matched their merged PR head commits were deleted on 2026-08-13.
 - `agent/explore-capabilities-2026-08-12` remains the active PWA/EXP-02 branch at `5fb71fe`.
 - `agent/jammerwandl-source-glb` remains at `8f4b894` because it advanced by three valuable commits after PR #6 merged.

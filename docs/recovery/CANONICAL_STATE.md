@@ -8,7 +8,8 @@
 
 | Item | Classification | Evidence |
 |---|---|---|
-| `main` at `2eb49f402eeb6497042e3dccffd59513ae551efc` | Current committed and deployed integration baseline at update time | PR #35 merge plus successful Cloudflare deployment run `31702587081` |
+| PR #35 at `2eb49f402eeb6497042e3dccffd59513ae551efc` | Current product and deployed integration baseline | Successful Cloudflare deployment run `31702587081` |
+| PR #36 at `4266d845e4456b6bc0e4d971f96fa2c3a03cc188` | Phase 2 cleanup record | Documentation-only merge after remote branch cleanup |
 | PR #33 at `3640c12e0cafe6947440a4f603f998a49f4aa66a` | Public V5 release checkpoint | Merged PR and successful Cloudflare deployment |
 | PR #34 at `da6630cdcba8ed2d44015ed1cea9af47bdc99971` | Contributor beta release checkpoint | Merged PR, successful deployment, live HTTP/browser verification |
 | `checkpoint/two-product-contract-2026-08-13` | Canonical repository-contract tag | Resolves to `2eb49f4` |

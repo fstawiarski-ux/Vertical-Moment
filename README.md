@@ -78,7 +78,7 @@ Build and publication are separate approval gates. `npm run build` generates `we
 
 ## Current recovery anchors
 
-- Current committed/deployed integration baseline recorded on 2026-08-13: `2eb49f402eeb6497042e3dccffd59513ae551efc`.
+- Current product/deployment baseline merged through PR #35 on 2026-08-13: `2eb49f402eeb6497042e3dccffd59513ae551efc`.
 - Active PWA capability branch recorded at: `5fb71fe0249d51f8759273c5e2e903fe3c59cf72`.
 - Preserved unmerged Jammerwandl workflow branch recorded at: `8f4b894953041b61d8c371b3f054551f4eec8195`.
 - Public V5 redesign: shipped through PR #33 at `3640c12e0cafe6947440a4f603f998a49f4aa66a`; logo, background, fonts and photography refinements remain future public-site work.
