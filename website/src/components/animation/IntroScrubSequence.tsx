@@ -29,6 +29,24 @@ export const SCRUB_STATIONS: ReadonlyArray<{ id: JourneyStation; label: string; 
 ] as const;
 
 type ScrubStation = (typeof SCRUB_STATIONS)[number];
+type DragAxis = "horizontal" | "vertical";
+
+interface DragState {
+  pointerId: number;
+  startX: number;
+  startY: number;
+  progress: number;
+  axis: DragAxis | null;
+}
+
+const WHEEL_LINE_HEIGHT = 16;
+const WHEEL_PROGRESS_SCALE = 0.00065;
+
+function wheelDeltaInPixels(event: ReactWheelEvent<HTMLDivElement>) {
+  if (event.deltaMode === 1) return event.deltaY * WHEEL_LINE_HEIGHT;
+  if (event.deltaMode === 2) return event.deltaY * window.innerHeight;
+  return event.deltaY;
+}
 
 export type UnlockReason = "completed" | "skipped" | "static";
 
@@ -39,7 +57,7 @@ export function IntroScrubSequence({ sequence, mode, onUnlock }: {
   onUnlock: (reason: UnlockReason) => void;
 }) {
   const videoRefs = useRef<Array<HTMLVideoElement | null>>([]);
-  const dragRef = useRef<{ pointerId: number; x: number; progress: number } | null>(null);
+  const dragRef = useRef<DragState | null>(null);
   const progressRef = useRef(0);
   const flightFrameRef = useRef<number | null>(null);
   const unlockedRef = useRef(false);
@@ -184,20 +202,34 @@ export function IntroScrubSequence({ sequence, mode, onUnlock }: {
     if (unlocked) return;
     event.preventDefault();
     cancelFlight();
-    moveTo(progress + event.deltaY * 0.00065, "wheel");
+    moveTo(progressRef.current + wheelDeltaInPixels(event) * WHEEL_PROGRESS_SCALE, "wheel");
   };
 
   const onPointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
     if (unlocked || (event.target as Element).closest("input, button")) return;
     cancelFlight();
-    dragRef.current = { pointerId: event.pointerId, x: event.clientX, progress };
+    dragRef.current = {
+      pointerId: event.pointerId,
+      startX: event.clientX,
+      startY: event.clientY,
+      progress: progressRef.current,
+      axis: null,
+    };
     event.currentTarget.setPointerCapture(event.pointerId);
   };
 
   const onPointerMove = (event: ReactPointerEvent<HTMLDivElement>) => {
     const drag = dragRef.current;
     if (!drag || drag.pointerId !== event.pointerId) return;
-    moveTo(drag.progress + (drag.x - event.clientX) / Math.max(320, window.innerWidth * 0.86), "drag");
+    const deltaX = drag.startX - event.clientX;
+    const deltaY = drag.startY - event.clientY;
+    if (!drag.axis && Math.max(Math.abs(deltaX), Math.abs(deltaY)) >= 4) {
+      drag.axis = Math.abs(deltaY) > Math.abs(deltaX) ? "vertical" : "horizontal";
+    }
+    if (!drag.axis) return;
+    const delta = drag.axis === "vertical" ? deltaY : deltaX;
+    const viewportSize = drag.axis === "vertical" ? window.innerHeight : window.innerWidth;
+    moveTo(drag.progress + delta / Math.max(320, viewportSize * 0.86), "drag");
   };
 
   const onPointerUp = (event: ReactPointerEvent<HTMLDivElement>) => {
@@ -250,7 +282,7 @@ export function IntroScrubSequence({ sequence, mode, onUnlock }: {
           <div className={styles.introCopy}>
             <small>Wachau · three-stage approach</small>
             <strong>Move from region to the wall</strong>
-            <span>Drag from right to left, scroll, or use the timeline.</span>
+        <span>Drag sideways, swipe vertically, scroll, or use the timeline.</span>
             <button type="button" className={styles.skip} onClick={skip}>
               {progress > 0.9 ? "Enter workspace" : "Skip to workspace"}
             </button>
