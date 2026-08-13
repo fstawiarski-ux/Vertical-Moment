@@ -39,6 +39,7 @@ Package manifests, the root Next layout, OpenNext, Wrangler, workflows and share
 - Merged PWA foundation: PRs #27-#32 on `main`.
 - Local-first contributor beta: PR #34 on `main` at `da6630c`; live `/contribute` is unlisted/noindex and stores originals in device IndexedDB until ZIP export.
 - Active capability branch: `agent/explore-capabilities-2026-08-12` at recorded HEAD `5fb71fe0249d51f8759273c5e2e903fe3c59cf72`.
+- Preserved spatial workflow: `agent/jammerwandl-source-glb` at `8f4b894`; review its three post-PR #6 viewer/overlay/Blender commits before integration.
 - EXP-02 is preserved separately as a four-file Master ZIP/review patch.
 - Registry version recorded for EXP work: `7`.
 - `website/public/sw.js` is generated and must not enter source patches.
