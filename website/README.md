@@ -1,12 +1,14 @@
 # Vertical Moment website
 
-This repository contains the Vertical Moment photography site, the archived phone-first climbing platform and the experimental **Climbers Lounge / Explore Lab** PWA at `/explore-app`.
+> **Transitional combined runtime:** this package currently contains two products. Read the repository root `README.md`, `AGENTS.md` and `docs/PRODUCT_MAP.md` before editing. Public-site tasks use `site/` branches; Climbers Lounge/Explore PWA tasks use `pwa/` branches. Do not use installed PWA names as separate product identities.
+
+This package contains the live Vertical Moment public photography site and the active **Climbers Lounge / Explore Lab** PWA family.
 
 ## Public bridge and private lab
 
-The public photography navigation points to `/climbers-lounge`, a lightweight **Coming Soon** page with no link to the private lab. The previous `/explore` route tree remains preserved in the repository for future photography-oriented development, but is removed from navigation and the sitemap and marked `noindex`.
+The public photography product and the climbing product share one deployment but have separate route ownership. `/climbers-lounge` is the public bridge; `/explore-app` is the workspace; `/explore` is the PWA atlas/region/crag experience.
 
-The PWA lives separately at `/explore-app`. Its deployment access policy must be configured before public release; hiding or omitting the URL is not authentication.
+The unlisted `/contribute` companion is a local-first field beta. It is `noindex`, stores original files in device IndexedDB and exports ZIP review packages. It has no server upload, account gate, review queue or automatic publication yet. Hiding or omitting a URL is not authentication.
 
 ## Explore Lab
 
@@ -33,7 +35,7 @@ Layout state, box modes and the promoted hero are persisted locally. Mobile uses
 
 The manifest installs the app on a phone as **Climbers Lounge**, while the approved workspace retains its internal Explore Lab identity. Install icons and the Serwist service worker provide an installable app shell. The service worker:
 
-- precaches the Explore Lab route, offline fallback, registry, icons and Leaflet runtime;
+- precaches the Explore Lab route, contributor route, offline fallback, registry, icons and Leaflet runtime;
 - caches images, the shared scrub, GLB model and recently viewed map tiles in separate bounded caches;
 - keeps heavy panorama derivatives behind the user-triggered Wachau offline pack;
 - falls back to `/offline` when an uncached document cannot be reached.
@@ -66,7 +68,7 @@ Preview that production build locally:
 npm start
 ```
 
-Then open `http://localhost:3000/explore-app`.
+Then open `http://localhost:3000/explore-app`. Use `http://localhost:3000/contribute` for the unlisted local field beta.
 
 `npm run preview` is reserved for the OpenNext/Cloudflare preview workflow. Cloudflare publication remains separate from a GitHub push and requires explicit cutover approval.
 

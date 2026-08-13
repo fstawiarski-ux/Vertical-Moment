@@ -1,0 +1,48 @@
+name: Product change
+description: Propose a focused change to one Vertical Moment product or an approved shared foundation.
+title: "[product] "
+body:
+  - type: dropdown
+    id: product
+    attributes:
+      label: Product scope
+      description: Select one primary scope before implementation.
+      options:
+        - Public website
+        - Climbers Lounge / Explore PWA
+        - Shared data or infrastructure
+        - Repository operations or documentation
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: Describe the user-visible or operational result.
+    validations:
+      required: true
+
+  - type: textarea
+    id: source
+    attributes:
+      label: Source and canonical status
+      description: Identify the current branch, prototype, data source or recovery artifact and whether it is canonical, approved reference, provisional or missing.
+    validations:
+      required: true
+
+  - type: textarea
+    id: boundary
+    attributes:
+      label: Product-boundary impact
+      description: State whether the other product or shared Cloudflare/OpenNext/Serwist/data foundations are affected.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance and review evidence
+      description: List tests, build, visual/device QA and any data or PWA checks needed before approval.
+    validations:
+      required: true

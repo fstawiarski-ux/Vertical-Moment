@@ -2,7 +2,7 @@
 
 Condensed handoff for session **"Wachau climbing GPX data extraction"** (`ses_0408b1bd8ffek5YdnWDX7ncoVf`), run overnight **2026-08-01 → 2026-08-02** in workspace **OpenWork Chat** (`C:\Users\ineedbooze\OpenWork Chat`).
 
-The tab can no longer be opened in the OpenWork UI (shows "expired" — server-side lookup fails), but **nothing was lost**. This file is the "remember the method and the outputs" reference for future chats. The full recovered transcript (263 messages) is in [`wachau-session-recovery.md`](./wachau-session-recovery.md).
+The tab can no longer be opened in the OpenWork UI (shows "expired" — server-side lookup fails). This file preserves the method and output inventory for future chats. A 263-message transcript was historically referenced as `reports\wachau-session-recovery.md`, but that transcript is **not committed in this repository**; do not treat the old path as a recoverable repo link.
 
 ## 1. Goal
 
@@ -62,7 +62,7 @@ Per `BUILD_README.md`: single source of truth = `master4\vertical_moment_master_
 | `reports\vertical-moment-enrichment-summary.md` | Per-area coverage before/after + method |
 | `reports\build_dataset.py` | Reproducible builder (also in `%TEMP%\opencode\master4\`) |
 | `photos\` (192 JPGs) + `photo_manifest.csv` | Deduped photo library |
-| `reports\wachau-session-recovery.md` | **Full recovered transcript** (263 messages) of the original session |
+| `reports\wachau-session-recovery.md` | Historical external/missing reference; not committed in this repository |
 
 Other artifacts: `%TEMP%\opencode\vm_routes_processed.json` (coord-fill intermediate), `%TEMP%\opencode\photo_exif.json` (EXIF scan), original master backed up as `vertical_moment_master_routes.xlsx.ORIGINAL.xlsx`.
 
@@ -88,4 +88,4 @@ Other artifacts: `%TEMP%\opencode\vm_routes_processed.json` (coord-fill intermed
 1. Read this file first.
 2. Verify the outputs exist and validate (JSON parses, counts match the table above).
 3. Pick up the pending items (photo→route matching with a vision model, or the staged Notion push).
-4. If more context is needed, the full transcript is in `reports\wachau-session-recovery.md`.
+4. If more context is needed, search the original OpenWork recovery storage for `wachau-session-recovery.md`; do not assume it exists in this repository.
