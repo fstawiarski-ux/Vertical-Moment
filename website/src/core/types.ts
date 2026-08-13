@@ -4,6 +4,19 @@ export type LayoutMode = "explore" | "grid" | "presentation";
 
 export type ViewportMode = "desktop" | "tablet" | "mobile";
 
+/** The four fixed points in the Region -> Rock -> Sector -> Topo journey. */
+export type JourneyStation = "region" | "rock" | "sector" | "topo";
+
+export type ScrubStationPhase = "preview" | "arrived";
+export type ScrubStationSource = "button" | "wheel" | "drag" | "slider" | "static" | "skip";
+
+export interface ScrubStationEventDetail {
+  station: JourneyStation;
+  progress: number;
+  phase: ScrubStationPhase;
+  source: ScrubStationSource;
+}
+
 /**
  * "cinematic" runs the three scrub chapters. "static" holds the final frame and
  * shows the workspace immediately — used for reduced-motion visitors and for
