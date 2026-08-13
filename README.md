@@ -78,10 +78,12 @@ Build and publication are separate approval gates. `npm run build` generates `we
 
 ## Current recovery anchors
 
-- Current committed/deployed integration baseline recorded on 2026-08-13: `da6630cdcba8ed2d44015ed1cea9af47bdc99971`.
+- Current committed/deployed integration baseline recorded on 2026-08-13: `2eb49f402eeb6497042e3dccffd59513ae551efc`.
 - Active PWA capability branch recorded at: `5fb71fe0249d51f8759273c5e2e903fe3c59cf72`.
+- Preserved unmerged Jammerwandl workflow branch recorded at: `8f4b894953041b61d8c371b3f054551f4eec8195`.
 - Public V5 redesign: shipped through PR #33 at `3640c12e0cafe6947440a4f603f998a49f4aa66a`; logo, background, fonts and photography refinements remain future public-site work.
 - Contributor field beta: shipped through PR #34 at `da6630c`; `/contribute` is unlisted/noindex and keeps original evidence in device IndexedDB until ZIP export. It has no server upload, account gate or publication action yet.
 - EXP-02: preserved as a focused Master ZIP and as an uncommitted four-file review change on the active PWA branch.
+- Phase 2 branch cleanup: 30 exact merged heads removed; three remote branches remain. Recovery tags are listed in [`docs/repository/BRANCH_AUDIT_2026-08-13.md`](docs/repository/BRANCH_AUDIT_2026-08-13.md).
 
 See [`docs/recovery/CANONICAL_STATE.md`](docs/recovery/CANONICAL_STATE.md) for exact status and [`docs/repository/CLEANUP_RUNBOOK.md`](docs/repository/CLEANUP_RUNBOOK.md) before removing files or branches.

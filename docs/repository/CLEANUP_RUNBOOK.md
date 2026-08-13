@@ -24,18 +24,18 @@ Acceptance:
 
 After approval: commit, push and open a review PR. Merge only with explicit owner approval.
 
-## Phase 2 - preserve milestones and remove merged branch clutter
+## Phase 2 - preserve milestones and remove merged branch clutter (complete)
 
 After Phase 1 is on `main`:
 
 1. re-fetch the remote;
 2. confirm GitHub still reports no open PRs on cleanup candidates;
 3. create approved checkpoint tags for the integration baseline and PWA capability anchor;
-4. delete only the 31 merged PR heads still present and listed in `BRANCH_AUDIT_2026-08-13.md`;
-5. keep `main` and the active PWA capability branch;
+4. compare every remote tip with the exact head commit stored on its merged PR;
+5. delete only exact merged tips and preserve any branch that advanced after merge;
 6. verify the GitHub branch list and clone/fetch behavior afterward.
 
-Remote branch deletion is not bundled into the documentation PR. It requires a separate explicit branch list and approval immediately before deletion.
+Completed result: 30 exact merged PR branch pointers were deleted. `agent/jammerwandl-source-glb` was retained because three valuable commits followed PR #6, and it received its own recovery checkpoint. The final three-branch state and all tag targets are recorded in `BRANCH_AUDIT_2026-08-13.md`.
 
 ## Phase 3 - stabilize both product baselines
 
