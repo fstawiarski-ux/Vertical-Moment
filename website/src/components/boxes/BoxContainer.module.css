@@ -176,6 +176,20 @@
   transform: none !important;
 }
 
+/* Automatic station presentation is transient: it changes only what is
+   foregrounded during the journey and never rewrites the saved layout. */
+.journeyFocus {
+  position: fixed !important;
+  inset: max(76px, 8vh) max(28px, 8vw) max(78px, 8vh) !important;
+  width: auto !important;
+  height: auto !important;
+  transform: none !important;
+  z-index: 9450 !important;
+  animation: stationFocusIn 420ms cubic-bezier(.2,.8,.2,1) both;
+}
+
+.journeySupport { opacity: .45; filter: blur(2px); pointer-events: none; }
+
 .boxModeExpanded { z-index: 9450 !important; }
 .boxModeFullscreen { z-index: 9490 !important; }
 
@@ -248,6 +262,20 @@
   }
 
   .box[data-viewport="mobile"].boxModeFullscreen .controls button:nth-child(3) { display: grid; }
+
+  .box[data-viewport="mobile"].journeyFocus {
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100dvh !important;
+    min-height: 0;
+    border: 0;
+    border-radius: 0;
+  }
+}
+
+@keyframes stationFocusIn {
+  from { opacity: 0; transform: translateY(14px) scale(.985) !important; }
+  to { opacity: 1; transform: none !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {

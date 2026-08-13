@@ -9,12 +9,19 @@ import {
   type PointerEvent as ReactPointerEvent,
   type WheelEvent as ReactWheelEvent,
 } from "react";
-import type { IntroMode, ScrollScrubSequenceAsset } from "../../core/types";
+import type {
+  IntroMode,
+  JourneyStation,
+  ScrubStationEventDetail,
+  ScrubStationSource,
+  ScrollScrubSequenceAsset,
+} from "../../core/types";
+import { stationForProgress } from "../../core/stationPresentation";
 import styles from "./IntroScrubSequence.module.css";
 
 const clamp = (value: number) => Math.max(0, Math.min(1, value));
 const CHAPTER_BLEND_START = 0.86;
-const SCRUB_STATIONS = [
+export const SCRUB_STATIONS: ReadonlyArray<{ id: JourneyStation; label: string; progress: number }> = [
   { id: "topo", label: "Topo", progress: 1 },
   { id: "sector", label: "Sector", progress: 2 / 3 },
   { id: "rock", label: "Rock", progress: 1 / 3 },
@@ -39,6 +46,8 @@ export function IntroScrubSequence({ sequence, mode, onUnlock }: {
   const [progress, setProgress] = useState(0);
   const [unlocked, setUnlocked] = useState(false);
   const [loaded, setLoaded] = useState<Set<number>>(() => new Set([0, 1]));
+  const lastAnnouncedStationRef = useRef<JourneyStation>("region");
+  const suppressPreviewRef = useRef(false);
   const chapterCount = Math.max(1, sequence.chapters.length);
   const scaledProgress = Math.min(progress * chapterCount, chapterCount - 0.000001);
   const activeIndex = Math.floor(scaledProgress);
@@ -86,16 +95,27 @@ export function IntroScrubSequence({ sequence, mode, onUnlock }: {
     onUnlock(reason);
   }, [onUnlock]);
 
-  const moveTo = useCallback((value: number) => {
+  const announceStation = useCallback((station: JourneyStation, phase: ScrubStationEventDetail["phase"], source: ScrubStationSource, nextProgress: number) => {
+    const detail: ScrubStationEventDetail = { station, phase, source, progress: nextProgress };
+    window.dispatchEvent(new CustomEvent<ScrubStationEventDetail>("vm:scrub-station", { detail }));
+  }, []);
+
+  const moveTo = useCallback((value: number, source: ScrubStationSource) => {
     const next = clamp(value);
     progressRef.current = next;
     setProgress(next);
+    const station = stationForProgress(next);
+    if (!suppressPreviewRef.current && station !== lastAnnouncedStationRef.current) {
+      lastAnnouncedStationRef.current = station;
+      announceStation(station, "preview", source, next);
+    }
     if (next >= 0.995) unlock("completed");
-  }, [unlock]);
+  }, [announceStation, unlock]);
 
   const cancelFlight = useCallback(() => {
     if (flightFrameRef.current !== null) cancelAnimationFrame(flightFrameRef.current);
     flightFrameRef.current = null;
+    suppressPreviewRef.current = false;
   }, []);
 
   useEffect(() => cancelFlight, [cancelFlight]);
@@ -106,19 +126,24 @@ export function IntroScrubSequence({ sequence, mode, onUnlock }: {
     cancelFlight();
     progressRef.current = 1;
     setProgress(1);
+    lastAnnouncedStationRef.current = "topo";
+    announceStation("topo", "arrived", "static", 1);
     unlock("static");
-  }, [cancelFlight, mode, unlock]);
+  }, [announceStation, cancelFlight, mode, unlock]);
 
   const flyToStation = useCallback((station: ScrubStation) => {
     cancelFlight();
+    suppressPreviewRef.current = true;
     const from = progressRef.current;
     const distance = Math.abs(station.progress - from);
-    const announceArrival = () => window.dispatchEvent(new CustomEvent("vm:scrub-station", {
-      detail: { station: station.id, progress: station.progress },
-    }));
+    const announceArrival = () => {
+      suppressPreviewRef.current = false;
+      lastAnnouncedStationRef.current = station.id;
+      announceStation(station.id, "arrived", "button", station.progress);
+    };
 
     if (distance < 0.001 || !animateFlights) {
-      moveTo(station.progress);
+      moveTo(station.progress, "button");
       announceArrival();
       return;
     }
@@ -130,7 +155,7 @@ export function IntroScrubSequence({ sequence, mode, onUnlock }: {
       const eased = elapsed < 0.5
         ? 4 * elapsed * elapsed * elapsed
         : 1 - Math.pow(-2 * elapsed + 2, 3) / 2;
-      moveTo(from + (station.progress - from) * eased);
+      moveTo(from + (station.progress - from) * eased, "button");
       if (elapsed < 1) {
         flightFrameRef.current = requestAnimationFrame(tick);
       } else {
@@ -140,7 +165,7 @@ export function IntroScrubSequence({ sequence, mode, onUnlock }: {
     };
 
     flightFrameRef.current = requestAnimationFrame(tick);
-  }, [animateFlights, cancelFlight, moveTo]);
+  }, [animateFlights, announceStation, cancelFlight, moveTo]);
 
   const skip = useCallback(() => {
     cancelFlight();
@@ -148,13 +173,15 @@ export function IntroScrubSequence({ sequence, mode, onUnlock }: {
     unlock("skipped");
     progressRef.current = 1;
     setProgress(1);
-  }, [cancelFlight, unlock]);
+    lastAnnouncedStationRef.current = "topo";
+    announceStation("topo", "arrived", "skip", 1);
+  }, [announceStation, cancelFlight, unlock]);
 
   const onWheel = (event: ReactWheelEvent<HTMLDivElement>) => {
     if (unlocked) return;
     event.preventDefault();
     cancelFlight();
-    moveTo(progress + event.deltaY * 0.00065);
+    moveTo(progress + event.deltaY * 0.00065, "wheel");
   };
 
   const onPointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
@@ -167,7 +194,7 @@ export function IntroScrubSequence({ sequence, mode, onUnlock }: {
   const onPointerMove = (event: ReactPointerEvent<HTMLDivElement>) => {
     const drag = dragRef.current;
     if (!drag || drag.pointerId !== event.pointerId) return;
-    moveTo(drag.progress + (drag.x - event.clientX) / Math.max(320, window.innerWidth * 0.86));
+    moveTo(drag.progress + (drag.x - event.clientX) / Math.max(320, window.innerWidth * 0.86), "drag");
   };
 
   const onPointerUp = (event: ReactPointerEvent<HTMLDivElement>) => {
@@ -256,7 +283,7 @@ export function IntroScrubSequence({ sequence, mode, onUnlock }: {
               onPointerDown={cancelFlight}
               onChange={(event) => {
                 cancelFlight();
-                moveTo(Number(event.target.value) / 100);
+                moveTo(Number(event.target.value) / 100, "slider");
               }}
             />
             <output>{Math.round(progress * 100)}%</output>

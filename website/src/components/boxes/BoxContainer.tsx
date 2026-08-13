@@ -46,22 +46,28 @@ const controlLabel: Record<BoxMode, string> = {
   fullscreen: "Exit full screen",
 };
 
-export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
+export function BoxContainer({ box, title, eyebrow, viewportMode, children, journeyPresentation, onManualInteraction }: {
   box: BoxState;
   title: string;
   eyebrow: string;
   viewportMode: ViewportMode;
   children: ReactNode;
+  journeyPresentation?: "focus" | "support";
+  onManualInteraction?: () => void;
 }) {
   const dispatch = useLayoutState((state) => state.dispatch);
   const boxes = useLayoutState((state) => state.boxes);
   const dragRef = useRef<DragState | null>(null);
   const resizeRef = useRef<ResizeState | null>(null);
   const [dragging, setDragging] = useState(false);
-  const canFreeform = viewportMode === "desktop" && box.mode === "normal";
+  const presentationBox = journeyPresentation === "focus" ? { ...box, mode: "normal" as const } : box;
+  const canFreeform = viewportMode === "desktop" && presentationBox.mode === "normal" && !journeyPresentation;
 
   const focus = () => dispatch({ type: "SET_ACTIVE_BOX", id: box.id });
-  const setMode = (mode: BoxMode) => dispatch({ type: "UPDATE_BOX", id: box.id, patch: { mode } });
+  const setMode = (mode: BoxMode) => {
+    onManualInteraction?.();
+    dispatch({ type: "UPDATE_BOX", id: box.id, patch: { mode } });
+  };
 
   const isCollisionFree = (x: number, y: number, width: number, height: number) => boxes.every((other) => {
     if (other.id === box.id || other.mode !== "normal") return true;
@@ -144,18 +150,18 @@ export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
     if (resizeRef.current?.pointerId === event.pointerId) resizeRef.current = null;
   };
 
-  const width = box.width ?? 360;
-  const height = box.height ?? 280;
-  const contentScale = viewportMode === "desktop" && box.mode === "normal"
+  const width = presentationBox.width ?? 360;
+  const height = presentationBox.height ?? 280;
+  const contentScale = viewportMode === "desktop" && presentationBox.mode === "normal"
     ? clamp(Math.min(width / 360, height / 280), 0.58, 1)
     : 1;
   const contentInverse = 1 / contentScale;
   const inlineStyle = viewportMode === "desktop"
     ? {
-        transform: `translate3d(${box.x}px, ${box.y}px, 0)`,
-        width: box.width,
-        height: box.height,
-        zIndex: box.zIndex,
+        transform: `translate3d(${presentationBox.x}px, ${presentationBox.y}px, 0)`,
+        width: presentationBox.width,
+        height: presentationBox.height,
+        zIndex: presentationBox.zIndex,
         "--box-content-scale": contentScale,
         "--box-content-inverse": contentInverse,
       } as CSSProperties
@@ -163,7 +169,7 @@ export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
 
   return (
     <article
-      className={`${styles.box} ${styles[`boxMode${box.mode[0].toUpperCase()}${box.mode.slice(1)}`]} ${dragging ? styles.dragging : ""}`}
+      className={`${styles.box} ${styles[`boxMode${presentationBox.mode[0].toUpperCase()}${presentationBox.mode.slice(1)}`]} ${journeyPresentation ? styles[`journey${journeyPresentation[0].toUpperCase()}${journeyPresentation.slice(1)}`] : ""} ${dragging ? styles.dragging : ""}`}
       data-viewport={viewportMode}
       style={inlineStyle}
       onPointerDown={focus}

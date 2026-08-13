@@ -12,7 +12,17 @@ import { deepLinkFor, parseDeepLink, resolveDeepLink, writeDeepLinkToUrl } from 
 import { hasSeenIntro, prefersReducedMotion, rememberIntroSeen } from "./core/introPreferences";
 import { LayoutProvider, useLayoutState } from "./core/layoutState";
 import { buildContentEntries, type SearchEntry } from "./core/searchIndex";
-import type { BoxMode, BoxState, ExploreContentBox, ExploreContentRegistry, IntroMode, LayoutState } from "./core/types";
+import type {
+  BoxMode,
+  BoxState,
+  ExploreContentBox,
+  ExploreContentRegistry,
+  IntroMode,
+  JourneyStation,
+  LayoutState,
+  ScrubStationEventDetail,
+} from "./core/types";
+import { STATION_PRESENTATIONS } from "./core/stationPresentation";
 import { useViewportMode } from "./hooks/useViewportMode";
 import { ServiceWorkerRegistration } from "./pwa/sw-registration";
 import styles from "./ExploreApp.module.css";
@@ -163,10 +173,27 @@ function BoxContent({ content, isActive, priority = false }: { content: ExploreC
   );
 }
 
+function StationPreview({ station, visible }: { station: JourneyStation; visible: boolean }) {
+  const presentation = STATION_PRESENTATIONS[station];
+  if (!visible) return null;
+
+  return (
+    <aside className={styles.stationPreview} data-station={station} aria-live="polite" aria-label={`${presentation.label} journey preview`}>
+      <small>{presentation.label} · journey view</small>
+      <strong>{presentation.title}</strong>
+      <p>{presentation.description}</p>
+      <span>{presentation.nextLabel}</span>
+    </aside>
+  );
+}
+
 function Workspace({ registry }: { registry: ExploreContentRegistry }) {
   const viewportMode = useViewportMode();
   const [introMode, setIntroMode] = useState<IntroMode | null>(null);
   const [workspaceUnlocked, setWorkspaceUnlocked] = useState(false);
+  const [journeyStation, setJourneyStation] = useState<JourneyStation>("region");
+  const [stationPreviewVisible, setStationPreviewVisible] = useState(false);
+  const [followJourney, setFollowJourney] = useState(false);
   const [replayCount, setReplayCount] = useState(0);
   const [paletteOpen, setPaletteOpen] = useState(false);
   const [paletteQuery, setPaletteQuery] = useState("");
@@ -202,6 +229,9 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
 
   const replayIntro = useCallback(() => {
     setWorkspaceUnlocked(false);
+    setJourneyStation("region");
+    setStationPreviewVisible(false);
+    setFollowJourney(true);
     setIntroMode("cinematic");
     // Remounts the sequence so it restarts from Region rather than resuming.
     setReplayCount((current) => current + 1);
@@ -209,8 +239,28 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
 
   const handleUnlock = useCallback((reason: UnlockReason) => {
     setWorkspaceUnlocked(true);
+    setJourneyStation("topo");
+    setStationPreviewVisible(false);
+    setFollowJourney(reason === "completed");
     if (reason !== "static") void rememberIntroSeen();
   }, []);
+
+  useEffect(() => {
+    const onStation = (event: Event) => {
+      const detail = (event as CustomEvent<ScrubStationEventDetail>).detail;
+      if (!detail || !STATION_PRESENTATIONS[detail.station]) return;
+      setJourneyStation(detail.station);
+      if (detail.phase === "preview") {
+        if (!workspaceUnlocked) setStationPreviewVisible(true);
+        return;
+      }
+      setStationPreviewVisible(!workspaceUnlocked);
+      if (workspaceUnlocked) setFollowJourney(true);
+    };
+
+    window.addEventListener("vm:scrub-station", onStation);
+    return () => window.removeEventListener("vm:scrub-station", onStation);
+  }, [workspaceUnlocked]);
 
   /**
    * Decides how the journey opens. An explicit `?intro=` wins; otherwise a deep
@@ -263,7 +313,10 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
   useEffect(() => {
     const onFocusRequest = (event: Event) => {
       const detail = (event as CustomEvent<{ id?: string; mode?: BoxMode }>).detail;
-      if (detail?.id) focusBox(detail.id, detail.mode ?? "expanded");
+      if (detail?.id) {
+        setFollowJourney(false);
+        focusBox(detail.id, detail.mode ?? "expanded");
+      }
     };
     const onReplayRequest = () => replayIntro();
 
@@ -274,6 +327,8 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
       window.removeEventListener("vm:replay-intro", onReplayRequest);
     };
   }, [focusBox, replayIntro]);
+
+  const leaveJourney = useCallback(() => setFollowJourney(false), []);
 
   const openPalette = useCallback((query: string) => {
     setPaletteQuery(query);
@@ -371,12 +426,13 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
 
   const onPaletteSelect = useCallback((entry: SearchEntry) => {
     setPaletteOpen(false);
+    leaveJourney();
     if (entry.run) {
       entry.run();
       return;
     }
     if (entry.boxId) focusBox(entry.boxId, "expanded");
-  }, [focusBox]);
+  }, [focusBox, leaveJourney]);
 
   const onPaletteCopyLink = useCallback((entry: SearchEntry) => {
     const content = entry.boxId ? contentById.get(entry.boxId) : undefined;
@@ -386,7 +442,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
       .catch(() => { /* Clipboard access can be blocked; the URL bar still holds the link. */ });
   }, [contentById]);
 
-  const renderBox = (box: BoxState) => {
+  const renderBox = (box: BoxState, journeyPresentation?: "focus" | "support") => {
     const content = contentById.get(box.dataRef ?? box.id);
     if (!content) return null;
     return (
@@ -396,14 +452,23 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
         title={content.title}
         eyebrow={`${content.crag} · ${content.type === "nasenwand" ? "routes" : content.type === "wallreveal" ? "story" : content.type}`}
         viewportMode={viewportMode}
+        journeyPresentation={journeyPresentation}
+        onManualInteraction={journeyPresentation ? leaveJourney : undefined}
       >
-        <BoxContent content={content} isActive={activeBoxId === box.id} priority={content.id === registry.boxes[0]?.id} />
+        <BoxContent content={content} isActive={journeyPresentation === "focus" || activeBoxId === box.id} priority={content.id === registry.boxes[0]?.id} />
       </BoxContainer>
     );
   };
 
-  const visible = boxes.filter((box) => box.mode !== "minimized");
+  const stationFocusId = STATION_PRESENTATIONS[journeyStation].focusBoxId;
+  const journeyFocusBox = boxes.find((box) => box.id === stationFocusId) ?? boxes[0];
+  const journeyCompanions = boxes.filter((box) => box.id !== journeyFocusBox?.id);
+  const journeyActive = workspaceUnlocked && followJourney && Boolean(journeyFocusBox);
+  const visible = journeyActive
+    ? (journeyFocusBox ? [journeyFocusBox] : [])
+    : boxes.filter((box) => box.mode !== "minimized");
   const minimized = boxes.filter((box) => box.mode === "minimized");
+  const stationContent = contentById.get(stationFocusId) ?? null;
 
   return (
     <main className={styles.app} data-viewport={viewportMode}>
@@ -413,23 +478,46 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
         mode={introMode}
         onUnlock={handleUnlock}
       />
+      {!workspaceUnlocked && <StationPreview station={journeyStation} visible={stationPreviewVisible} />}
       <header className={styles.brand}>
         <span className={styles.mark} aria-hidden="true" />
         <div><small>Vertical Moment</small><strong>Explore Lab</strong></div>
-        {workspaceUnlocked && <ContextBreadcrumb box={activeContent} onNavigate={openPalette} />}
+        {workspaceUnlocked && <ContextBreadcrumb box={journeyActive ? stationContent : activeContent} onNavigate={openPalette} />}
       </header>
 
       {workspaceUnlocked && (viewportMode === "mobile" ? (
         <section className={styles.cardStack} aria-label="Explore cards">
-          {visible.map(renderBox)}
+          {visible.map((box) => renderBox(box, journeyActive ? "focus" : undefined))}
         </section>
       ) : (
         <section className={styles.boxLayer} data-layout={viewportMode} aria-label="Explore canvas">
-          {visible.map(renderBox)}
+          {visible.map((box) => renderBox(box, journeyActive ? "focus" : undefined))}
         </section>
       ))}
 
-      {workspaceUnlocked && minimized.length > 0 && (
+      {workspaceUnlocked && journeyActive && journeyCompanions.length > 0 && (
+        <aside className={styles.stationTray} aria-label="Other journey views">
+          <small>Other views</small>
+          {journeyCompanions.map((box) => {
+            const content = contentById.get(box.dataRef ?? box.id);
+            if (!content) return null;
+            return (
+              <button
+                key={box.id}
+                type="button"
+                title={`Open ${content.title} independently`}
+                aria-label={`Open ${content.title} independently`}
+                onClick={() => { leaveJourney(); focusBox(box.id, "expanded"); }}
+              >
+                <span>{content.title.slice(0, 1)}</span>
+                <strong>{content.title}</strong>
+              </button>
+            );
+          })}
+        </aside>
+      )}
+
+      {workspaceUnlocked && !journeyActive && minimized.length > 0 && (
         <aside className={styles.minimizedTray} aria-label="Minimized boxes">
           {minimized.map((box) => {
             const content = contentById.get(box.dataRef ?? box.id);
@@ -455,6 +543,8 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
           offlinePack={registry.offlinePack}
           onSearch={() => openPalette("")}
           onReplayIntro={replayIntro}
+          followJourney={followJourney}
+          onToggleFollowJourney={() => setFollowJourney((current) => !current)}
         />
       )}
 

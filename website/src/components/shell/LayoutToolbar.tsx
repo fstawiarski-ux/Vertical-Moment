@@ -111,11 +111,13 @@ function Panel({ id, title, children, onClose }: { id: string; title: string; ch
   );
 }
 
-export function LayoutToolbar({ viewportMode, offlinePack, onSearch, onReplayIntro }: {
+export function LayoutToolbar({ viewportMode, offlinePack, onSearch, onReplayIntro, followJourney, onToggleFollowJourney }: {
   viewportMode: ViewportMode;
   offlinePack: string[];
   onSearch: () => void;
   onReplayIntro: () => void;
+  followJourney: boolean;
+  onToggleFollowJourney: () => void;
 }) {
   const layoutMode = useLayoutState((state) => state.layoutMode);
   const canUndo = useLayoutState((state) => state.canUndo);
@@ -211,6 +213,13 @@ export function LayoutToolbar({ viewportMode, offlinePack, onSearch, onReplayInt
 
       {openPanel === "journey" && (
         <Panel id="explore-journey-panel" title="Journey" onClose={() => setOpenPanel(null)}>
+          <HudButton
+            icon="replay"
+            label={followJourney ? "Following" : "Follow"}
+            title={followJourney ? "Stop automatic station presentation" : "Follow Region, Rock, Sector and Topo with contextual boxes"}
+            pressed={followJourney}
+            onClick={onToggleFollowJourney}
+          />
           <HudButton icon="replay" label="Replay" title="Replay approach journey" onClick={() => closeAfter(onReplayIntro)} />
           <HudButton icon="contribute" label="Add" title="Open contributor field beta" href="/contribute?source=explore-app" />
           <div className={styles.offlineButton} title="Save the Explore workspace offline">
