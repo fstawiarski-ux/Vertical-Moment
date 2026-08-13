@@ -55,6 +55,8 @@ Never place credentials, API keys, private links or auth exports in this file.
 | Cursor Agent | Historical/optional | Previously observed; command not found on PATH in this audit |
 | Antigravity CLI | Historical/optional | Previously observed; command not found on PATH in this audit |
 
+For the owner-gated review workflow, see [AI control-tower review loop](AI_CONTROL_TOWER.md).
+
 ### Model routing policy
 
 - Tier 0: local models for bounded inventory, classification, reshaping and log summaries.
