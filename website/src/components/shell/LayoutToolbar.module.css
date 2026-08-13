@@ -31,7 +31,10 @@
   border-radius: 999px;
 }
 
-.toolbar button {
+.toolbar button,
+.toolbar a {
+  display: grid;
+  place-items: center;
   min-height: 38px;
   width: 100%;
   padding: 0 7px;
@@ -43,15 +46,32 @@
   letter-spacing: .025em;
   white-space: normal;
   cursor: pointer;
+  text-align: center;
+  text-decoration: none;
 }
 
 .toolbar button:hover,
 .toolbar button:focus-visible,
-.toolbar button[aria-pressed="true"] {
+.toolbar button[aria-pressed="true"],
+.toolbar a:hover,
+.toolbar a:focus-visible {
   color: #101611;
   outline: none;
   border-color: #d2bd87;
   background: #d2bd87;
+}
+
+.contribute,
+.compactContribute {
+  border-color: rgb(210 189 135 / 72%) !important;
+  background: rgb(210 189 135 / 12%) !important;
+}
+
+.compactContribute {
+  width: 44px !important;
+  height: 44px;
+  min-height: 44px !important;
+  font-size: 10px !important;
 }
 
 .toolbar button:disabled { opacity: .34; cursor: not-allowed; }
