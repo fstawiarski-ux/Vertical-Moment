@@ -5,6 +5,7 @@ import NasenwandFlagshipExplorer from '../components/nasenwand/nasenwand-flagshi
 export const metadata: Metadata = {
   title: 'Nasenwand — Vertical Moment Explorer',
   description: 'Explore Nasenwand from place to wall, sector and topo with drone scrub, panorama and route information.',
+  robots: { index: false, follow: false },
 };
 
 export default function NasenwandConceptsPage() {

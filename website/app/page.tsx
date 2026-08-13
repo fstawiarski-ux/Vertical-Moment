@@ -278,7 +278,7 @@ const publicSiteMarkup = String.raw`
                 </div>
               </article>
 
-              <article class="story-panel story-services" data-chapter="1" aria-labelledby="chapter-services">
+              <article id="services" class="story-panel story-services" data-chapter="1" aria-labelledby="chapter-services">
                 <div class="story-panel-inner shell">
                   <header class="chapter-heading">
                     <span class="chapter-number">02</span>
@@ -314,7 +314,7 @@ const publicSiteMarkup = String.raw`
                 </div>
               </article>
 
-              <article class="story-panel story-about" data-chapter="2" aria-labelledby="chapter-about">
+              <article id="about" class="story-panel story-about" data-chapter="2" aria-labelledby="chapter-about">
                 <div class="story-panel-inner shell about-editorial">
                   <figure>
                     <img src="/photography/gallery/vm-6242-portrait-after-the-send.webp" alt="Climbing portrait">

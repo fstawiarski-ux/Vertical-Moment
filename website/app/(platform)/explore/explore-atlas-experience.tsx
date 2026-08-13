@@ -549,9 +549,9 @@ export default function ExploreAtlasExperience() {
           <span>Vertical Moment</span>
         </a>
         <nav className={styles.nav} aria-label="Photography navigation">
-          <a href="/#stories">Stories</a>
-          <a href="/#films">Films</a>
-          <a href="/#photography">Photography</a>
+          <a href="/#story">Stories</a>
+          <a href="/#work">Photography</a>
+          <a href="/prints/panoramas">Panorama editions</a>
           <a href="/explore" aria-current="page">Explore</a>
           <a href="/#about">About</a>
         </nav>

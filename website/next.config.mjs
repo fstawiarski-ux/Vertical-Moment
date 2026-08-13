@@ -5,17 +5,10 @@ initOpenNextCloudflareForDev();
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   async redirects() {
-    // Leftover from when app/_platform was private-prefixed and none of
-    // these routes resolved. Commit 54a8e09 un-prefixed the folder to
-    // app/(platform) and activated them — this list should have shrunk
-    // then and didn't, so every one of these routes has actually kept
-    // 307-redirecting to "/" the whole time, contradicting PLATFORM.md's
-    // claim that they "all resolve." /explore now has a real page (the
-    // crag locator) so it comes out of the list. The rest are still
-    // redirected — /start and /review-preview are the two the brief
-    // flags for Filip to decide on gating. The owner-only contributor beta is
-    // now intentionally reachable at /contribute; /report forwards into it.
-    return ["/technology", "/review-preview", "/start"]
+    // /start remains a legacy entry point. Technology is public and the
+    // review preview is a direct, noindex internal draft surface, so neither
+    // should be silently redirected to the homepage.
+    return ["/start"]
       .map((source) => ({ source, destination: "/", permanent: false }));
   },
 };

@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import { SiteNav } from "../components/site-nav";
 import { SiteFooter } from "../components/site-footer";
+
+export const metadata: Metadata = {
+  title: "How Vertical Moment Is Built",
+  description: "A plain-language overview of the technology behind the Vertical Moment website and climbing tools.",
+  alternates: { canonical: "/technology" },
+};
 
 export default function TechnologyPage() {
   return (

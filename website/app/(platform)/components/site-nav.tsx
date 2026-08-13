@@ -41,8 +41,6 @@ export function SiteNav({ who: _who }: { who?: string | null }) {
         </Link>
         <nav className="nav">
           <Link href="/" className={is("/") ? "on" : ""}>Home</Link>
-          <Link href="/contribute" className={is("/contribute") ? "on" : ""}>Contribute</Link>
-          <Link href="/review-preview" className={is("/review-preview") ? "on" : ""}>Review data</Link>
         </nav>
         <div className="spacer" />
         <button
@@ -58,8 +56,6 @@ export function SiteNav({ who: _who }: { who?: string | null }) {
       </div>
       <nav className={`mobile-rail ${railVisible ? "show" : ""}`} aria-label="Main navigation">
         <Link href="/" className={is("/") ? "on rail-icon" : "rail-icon"} aria-label="Home">⌂</Link>
-        <Link href="/contribute" className={is("/contribute") ? "on rail-icon" : "rail-icon"} aria-label="Contribute">+</Link>
-        <Link href="/review-preview" className={is("/review-preview") ? "on rail-icon" : "rail-icon"} aria-label="Review data">R</Link>
         <button
           className="rail-theme rail-icon"
           onClick={toggle}
