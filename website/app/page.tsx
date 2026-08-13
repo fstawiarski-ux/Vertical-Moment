@@ -1,21 +1,10 @@
-/* eslint-disable @next/next/no-img-element */
-
 import type { Metadata } from 'next';
-import './photography-theme.css';
-import styles from './photography-home.module.css';
-import PhotographyNav from './components/photography-nav';
-import PhotographyHero from './components/photography-hero';
-import PhotographyGallery from './components/photography-gallery';
-import PhotographyRail from './components/photography-rail';
-import PhotographyReveal from './components/photography-reveal';
-import PhotographyLayered from './components/photography-layered';
-import PhotographyBackgroundCollage from './components/photography-background-collage';
-import { spareScene } from './data/layered-photos';
+import './public-site-v5.css';
 
 export const metadata: Metadata = {
   title: 'Vertical Moment — Climbing photography, Vienna',
   description:
-    'Climbing and outdoor photography from Vienna. Crag sessions, team days and commercial work, with the Vertical Moment Collective topo data underneath.',
+    'Climbing and outdoor photography from Vienna: documentary crag sessions, team days and commercial work.',
   alternates: { canonical: '/' },
   openGraph: {
     title: 'Vertical Moment — Climbing photography, Vienna',
@@ -33,583 +22,486 @@ export const metadata: Metadata = {
   },
 };
 
-const TICKER = [
-  'Peilstein',
-  'Helenental',
-  'Glocknergrat',
-  'Hohe Wand',
-  'Mödlinger Klause',
-  'Türkenloch',
-  'Dürre Wand',
-  'Wachau',
-];
+const publicSiteMarkup = String.raw`
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <a class="brand" href="#top" aria-label="Vertical Moment home">
+      <span class="brand-mark" aria-hidden="true">VM</span>
+      <span class="brand-copy">
+        <strong>Vertical Moment</strong>
+        <small>Climbing photography · Vienna</small>
+      </span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#approach">Approach</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-collective" href="/climbers-lounge">Climbers Lounge</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+        <span class="theme-toggle-track" aria-hidden="true"><span class="theme-toggle-dot"></span></span>
+        <span class="theme-label">Stone</span>
+      </button>
+
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="sr-only">Open menu</span>
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav aria-label="Mobile primary">
+      <a href="#work"><span>01</span>Work</a>
+      <a href="#approach"><span>02</span>Approach</a>
+      <a href="#services"><span>03</span>Services</a>
+      <a href="#about"><span>04</span>About</a>
+      <a href="#contact"><span>05</span>Contact</a>
+      <a href="/climbers-lounge"><span>→</span>Climbers Lounge</a>
+    </nav>
+  </div>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-media parallax-layer" data-parallax="0.12">
+        <img src="/photography/gallery/vm-6890-peilstein-main-face.webp"
+             alt="Climber on a limestone wall at Peilstein">
+      </div>
+      <div class="hero-shade" aria-hidden="true"></div>
+
+      <div class="hero-grid shell">
+        <div class="hero-copy">
+          <p class="eyebrow hero-kicker">Vertical Moment · climbing &amp; outdoor photography · Vienna</p>
+          <h1 id="hero-title">The second <em>before</em> the move.</h1>
+          <p class="hero-lead">Limestone, low light, and the people who read it. Shot on the crags around Vienna, in the Wachau and across the Eastern Alps.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">See selected work <span aria-hidden="true">↘</span></a>
+            <a class="text-link" href="#contact">Book a session <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+        <aside class="hero-index" aria-label="Photography profile">
+          <div><span>Est.</span><strong>2020</strong></div>
+          <div><span>Mode</span><strong>Documentary</strong></div>
+          <div><span>Access</span><strong>On rope</strong></div>
+          <div><span>Booking</span><strong>2026</strong></div>
+        </aside>
+      </div>
+
+      <a class="scroll-cue" href="#approach" aria-label="Scroll to approach">
+        <span>Scroll</span><i aria-hidden="true"></i>
+      </a>
+    </section>
+
+    <div class="location-ticker" aria-label="Areas photographed">
+      <div class="ticker-track">
+        <span>Peilstein</span><span>Helenental</span><span>Glocknergrat</span><span>Hohe Wand</span><span>Wachau</span><span>Türkenloch</span>
+        <span aria-hidden="true">Peilstein</span><span aria-hidden="true">Helenental</span><span aria-hidden="true">Glocknergrat</span><span aria-hidden="true">Hohe Wand</span><span aria-hidden="true">Wachau</span><span aria-hidden="true">Türkenloch</span>
+      </div>
+    </div>
+
+    <section class="manifesto section" id="approach">
+      <div class="shell manifesto-grid">
+        <div class="section-heading reveal">
+          <p class="eyebrow">What I shoot</p>
+          <h2>Climbing photography that keeps the effort in the frame — not just the summit.</h2>
+        </div>
+
+        <div class="manifesto-copy reveal">
+          <p>Most climbing images arrive after the fact: the grin on the ledge, the rope coiled, the story already told. I work in the minutes before that — the reading of a sequence, the breath held on a bad foot, the hand that finds chalk in the dark.</p>
+          <p>Documentary on the wall, editorial in the edit. Sessions run at your pace, on your project, with no staging and no re-climbs unless you want them. Everything here was shot on real attempts, at real grades, in the light the day gave us.</p>
+        </div>
+
+        <figure class="manifesto-image reveal">
+          <img src="/photography/gallery/vm-6965-topping-out.webp"
+               alt="Climber topping out on limestone">
+          <figcaption>Real attempts. Real light. No staging.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="stats-strip" aria-label="Vertical Moment statistics">
+      <div class="shell stats-grid">
+        <div class="stat reveal"><strong data-count="40" data-suffix="+">40+</strong><span>Crags photographed</span></div>
+        <div class="stat reveal"><strong data-count="6">6</strong><span>Years on rope</span></div>
+        <div class="stat reveal"><strong data-count="48" data-suffix="h">48h</strong><span>First edit turnaround</span></div>
+        <div class="stat reveal"><strong data-count="2026">2026</strong><span>Booking open</span></div>
+      </div>
+    </section>
+
+    <section class="portfolio section" id="work">
+      <div class="shell">
+        <div class="section-intro reveal">
+          <div>
+            <p class="eyebrow">Portfolio</p>
+            <h2>Selected work</h2>
+          </div>
+          <p>Every frame is filed against the crag it was shot at — the same crag, wall and route records that sit in the Collective database.</p>
+        </div>
+
+        <div class="portfolio-grid" id="portfolio-grid">
+          <button class="work-item work-item-a reveal" type="button"
+                  data-src="/photography/gallery/vm-6890-peilstein-main-face.webp"
+                  data-title="Peilstein · main face" data-meta="6b+ · Peilstein">
+            <img src="/photography/gallery/vm-6890-peilstein-main-face.webp" alt="Climber on Peilstein main face">
+            <span class="work-caption"><strong>Peilstein · main face</strong><small>6b+</small></span>
+            <span class="work-number">01</span>
+          </button>
+
+          <button class="work-item work-item-b reveal" type="button"
+                  data-src="/photography/gallery/vm-6242-portrait-after-the-send.webp"
+                  data-title="Portrait after the send" data-meta="Portrait · Vienna limestone">
+            <img src="/photography/gallery/vm-6242-portrait-after-the-send.webp" alt="Portrait after a climbing attempt">
+            <span class="work-caption"><strong>Portrait after the send</strong><small>Portrait</small></span>
+            <span class="work-number">02</span>
+          </button>
+
+          <button class="work-item work-item-c reveal" type="button"
+                  data-src="/photography/gallery/vm-6965-topping-out.webp"
+                  data-title="Topping out" data-meta="7a · limestone">
+            <img src="/photography/gallery/vm-6965-topping-out.webp" alt="Climber topping out">
+            <span class="work-caption"><strong>Topping out</strong><small>7a</small></span>
+            <span class="work-number">03</span>
+          </button>
+
+          <button class="work-item work-item-d reveal" type="button"
+                  data-src="/photography/gallery/vm-6913-traverse-morning-light.webp"
+                  data-title="Traverse · morning light" data-meta="Glocknergrat">
+            <img src="/photography/gallery/vm-6913-traverse-morning-light.webp" alt="Climber traversing in morning light">
+            <span class="work-caption"><strong>Traverse · morning light</strong><small>Glocknergrat</small></span>
+            <span class="work-number">04</span>
+          </button>
+
+          <button class="work-item work-item-e reveal" type="button"
+                  data-src="/photography/gallery/vm-6437-the-hold-that-matters.webp"
+                  data-title="The hold that matters" data-meta="Detail study">
+            <img src="/photography/gallery/vm-6437-the-hold-that-matters.webp" alt="Climbing detail on limestone">
+            <span class="work-caption"><strong>The hold that matters</strong><small>Detail</small></span>
+            <span class="work-number">05</span>
+          </button>
+        </div>
+
+        <div class="portfolio-footer reveal">
+          <p>Documentary climbing photography · portraits · crag atmosphere · technical detail</p>
+          <a class="button button-outline" href="#contact">Book a session <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="quote-section">
+      <div class="quote-media parallax-layer" data-parallax="0.08">
+        <img src="/photography/gallery/vm-6242-portrait-after-the-send.webp" alt="">
+      </div>
+      <div class="quote-overlay" aria-hidden="true"></div>
+      <div class="quote-lockup reveal">
+        <p class="eyebrow">The hour matters</p>
+        <blockquote>“Every crag has one hour when the rock gives the light back. I plan the day around it.”</blockquote>
+        <p class="quote-handoff">Keep scrolling — the page now moves sideways through the practical details.</p>
+      </div>
+    </section>
+
+    <section class="story-section" id="story" aria-labelledby="story-title">
+      <div class="story-sticky">
+
+        <div class="panorama-ribbon" aria-label="Wachau panorama scroll-scrub">
+          <div class="panorama-layer is-active" data-panorama="0" data-name="Wachau · long ridge">
+            <img src="/photography/panoramas/wachau/wachau-09-preview.webp" alt="Wide Wachau panorama">
+          </div>
+          <div class="panorama-layer" data-panorama="1" data-name="Wachau · limestone horizon">
+            <img src="/photography/panoramas/wachau/wachau-10-preview.webp" alt="Wide Wachau limestone panorama">
+          </div>
+          <div class="panorama-layer" data-panorama="2" data-name="Wachau · evening line">
+            <img src="/photography/panoramas/wachau/wachau-12-preview.webp" alt="Wide Wachau evening panorama">
+          </div>
+          <div class="panorama-layer" data-panorama="3" data-name="Wachau · valley study">
+            <img src="/photography/panoramas/wachau/wachau-14-preview.webp" alt="Wide Wachau valley panorama">
+          </div>
+          <div class="panorama-layer" data-panorama="4" data-name="Wachau · final horizon">
+            <img src="/photography/panoramas/wachau/wachau-16-preview.webp" alt="Wide Wachau horizon panorama">
+          </div>
+          <div class="panorama-shade" aria-hidden="true"></div>
+          <div class="panorama-caption shell">
+            <div>
+              <span class="panorama-kicker">Vertical Moment · Panorama Editions</span>
+              <strong id="panorama-name">Wachau · long ridge</strong>
+            </div>
+            <a href="/prints/panoramas">View panorama editions ↗</a>
+          </div>
+          <div class="panorama-progress" aria-hidden="true"><span id="panorama-progress"></span></div>
+        </div>
+
+        <div class="story-body">
+          <div class="story-bar shell">
+            <div>
+              <p class="eyebrow">Behind the photographs</p>
+              <h2 id="story-title">Everything useful, without another five screens down.</h2>
+            </div>
+          </div>
+
+          <div class="story-viewport" id="story-viewport" tabindex="0" aria-label="Photography information chapters. Use left and right arrow keys to navigate.">
+            <div class="story-track" id="story-track">
+
+              <article class="story-panel story-process" data-chapter="0" aria-labelledby="chapter-process">
+                <div class="story-panel-inner shell">
+                  <header class="chapter-heading">
+                    <span class="chapter-number">01</span>
+                    <div>
+                      <p class="eyebrow">How a session runs</p>
+                      <h3 id="chapter-process">Three steps, no production circus.</h3>
+                    </div>
+                  </header>
+                  <div class="process-editorial">
+                    <div>
+                      <span>01</span>
+                      <h4>Pick the route and the hour</h4>
+                      <p>You tell me the project; I check the aspect, the season and where the sun leaves the face. Light decides the call time.</p>
+                    </div>
+                    <div>
+                      <span>02</span>
+                      <h4>You climb, I move</h4>
+                      <p>Ground frames, a second line and detail work between burns. I stay out of your sequence — you never wait for the camera.</p>
+                    </div>
+                    <div>
+                      <span>03</span>
+                      <h4>Edit and deliver</h4>
+                      <p>A first selection within 48 hours, then web-ready, print-ready and social crops sized for actual use.</p>
+                    </div>
+                  </div>
+                  <p class="chapter-footnote">Half day · Full day · Multi-day</p>
+                </div>
+              </article>
+
+              <article class="story-panel story-services" data-chapter="1" aria-labelledby="chapter-services">
+                <div class="story-panel-inner shell">
+                  <header class="chapter-heading">
+                    <span class="chapter-number">02</span>
+                    <div>
+                      <p class="eyebrow">Work with me</p>
+                      <h3 id="chapter-services">Services</h3>
+                    </div>
+                  </header>
+                  <div class="services-editorial">
+                    <div class="service-mini">
+                      <figure><img src="/photography/gallery/vm-6965-topping-out.webp" alt="Climber topping out"></figure>
+                      <span>Half day</span>
+                      <h4>Project session</h4>
+                      <p>Your route, your pace, ground and on-rope angles.</p>
+                    </div>
+                    <div class="service-mini">
+                      <figure><img src="/photography/gallery/vm-6242-portrait-after-the-send.webp" alt="Climber portrait"></figure>
+                      <span>Full day</span>
+                      <h4>Crag &amp; team day</h4>
+                      <p>Groups, clubs and courses with portraits and a shared gallery.</p>
+                    </div>
+                    <div class="service-mini">
+                      <figure><img src="/photography/gallery/vm-6437-the-hold-that-matters.webp" alt="Climbing detail"></figure>
+                      <span>Commercial</span>
+                      <h4>Brand &amp; campaign</h4>
+                      <p>Gear, apparel and tourism work with licensing defined before the shoot.</p>
+                    </div>
+                  </div>
+                  <div class="chapter-cta-row">
+                    <span>Package details remain provisional in this design preview.</span>
+                    <a href="#contact">Ask for a quote →</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="story-panel story-about" data-chapter="2" aria-labelledby="chapter-about">
+                <div class="story-panel-inner shell about-editorial">
+                  <figure>
+                    <img src="/photography/gallery/vm-6242-portrait-after-the-send.webp" alt="Climbing portrait">
+                  </figure>
+                  <div>
+                    <header class="chapter-heading">
+                      <span class="chapter-number">03</span>
+                      <div>
+                        <p class="eyebrow">About</p>
+                        <h3 id="chapter-about">I climb the routes I photograph.</h3>
+                      </div>
+                    </header>
+                    <p class="about-lead">That is the whole method.</p>
+                    <p>Vertical Moment is the photography side of a longer project: mapping, documenting and photographing the climbing around Vienna. Being on the rock means I know where the light lands, where the crux is, and where to hang so the camera sees what the climber feels.</p>
+                    <p>Nothing is staged for the camera — if a move looks hard in a frame, it was hard.</p>
+                    <div class="about-inline-tags"><span>Available light</span><span>On-rope</span><span>Fixed lines</span><span>Photogrammetry</span></div>
+                    <div class="founder-inline">
+                      <span>Founder · Vienna</span>
+                      <strong>Filip Stawiarski</strong>
+                      <a href="mailto:f.stawiarski@gmail.com">Email ↗</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="story-panel story-notes" data-chapter="3" aria-labelledby="chapter-notes">
+                <div class="story-panel-inner shell">
+                  <header class="chapter-heading">
+                    <span class="chapter-number">04</span>
+                    <div>
+                      <p class="eyebrow">Archive + field notes</p>
+                      <h3 id="chapter-notes">Six years, one limestone belt.</h3>
+                    </div>
+                  </header>
+                  <div class="notes-editorial">
+                    <article><span>June · Peilstein</span><h4>Shooting a face that never gets sun</h4><p>Holding detail in cold north-facing limestone without lifting the shadows into mush.</p></article>
+                    <article><span>July · Helenental</span><h4>Why the hands tell the story</h4><p>The face shows effort, but the hands show the grade. More detail frames, fewer generic summit shots.</p></article>
+                    <article><span>September · Glocknergrat</span><h4>From photographs to a 3D wall</h4><p>Photogrammetry turns one face into a topo you can rotate — the bridge into the 3D Lab.</p></article>
+                  </div>
+                  <div class="archive-ribbon" aria-label="Archive frames">
+                    <img src="/photography/gallery/vm-6913-traverse-morning-light.webp" alt="Morning traverse">
+                    <img src="/photography/gallery/vm-6437-the-hold-that-matters.webp" alt="Limestone detail">
+                    <img src="/photography/gallery/vm-6965-topping-out.webp" alt="Climber topping out">
+                    <img src="/photography/gallery/vm-6890-peilstein-main-face.webp" alt="Peilstein main face">
+                  </div>
+                </div>
+              </article>
+
+              <article class="story-panel story-faq" data-chapter="4" aria-labelledby="chapter-faq">
+                <div class="story-panel-inner shell faq-editorial">
+                  <div>
+                    <header class="chapter-heading">
+                      <span class="chapter-number">05</span>
+                      <div>
+                        <p class="eyebrow">Practical</p>
+                        <h3 id="chapter-faq">Before you book</h3>
+                      </div>
+                    </header>
+                    <p class="faq-sidecopy">The useful questions live here instead of stretching the homepage downward.</p>
+                    <a class="button button-outline" href="#contact">Tell me about your route →</a>
+                  </div>
+                  <div class="story-faq-list">
+                    <details>
+                      <summary>Do I need to climb hard to be worth photographing?</summary>
+                      <p>No. Grade is not the subject — commitment is. A 4+ climbed with full attention can photograph better than a 7a climbed casually.</p>
+                    </details>
+                    <details>
+                      <summary>What happens if the weather turns?</summary>
+                      <p>We move the date, no fee. I watch the forecast from 72 hours out and we decide together the evening before.</p>
+                    </details>
+                    <details>
+                      <summary>How do I get the files?</summary>
+                      <p>A private gallery with full-resolution downloads plus web-sized and social crops. Commercial licensing is agreed separately.</p>
+                    </details>
+                    <details>
+                      <summary>Can you shoot indoors or at a competition?</summary>
+                      <p>Yes. Gyms and competitions need a different setup and permission from the organiser, so ask early.</p>
+                    </details>
+                    <details>
+                      <summary>First ascents and rebolting work?</summary>
+                      <p>Gladly, especially where the resulting frames can contribute to the open topo record.</p>
+                    </details>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+
+          <div class="story-controls shell" aria-label="Story navigation">
+            <button class="story-arrow" id="story-prev" type="button" aria-label="Previous chapter">←</button>
+            <div class="story-nav-cluster">
+              <div class="story-tabs" role="tablist" aria-label="Information chapters">
+                <button class="is-active" type="button" data-story-tab="0"><span>01</span>Process</button>
+                <button type="button" data-story-tab="1"><span>02</span>Services</button>
+                <button type="button" data-story-tab="2"><span>03</span>About</button>
+                <button type="button" data-story-tab="3"><span>04</span>Notes</button>
+                <button type="button" data-story-tab="4"><span>05</span>FAQ</button>
+              </div>
+              <div class="story-progress-readout">
+                <span class="story-progress-track" id="story-progress-track" role="progressbar" aria-label="Story progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="story-progress-fill"></i></span>
+                <span id="story-progress-label">01 / 05 · Process · 0%</span>
+              </div>
+            </div>
+            <button class="story-arrow" id="story-next" type="button" aria-label="Next chapter">→</button>
+            <a class="story-exit story-exit-down" href="#contact" aria-label="Continue to contact">Contact ↓</a>
+          </div>
+
+          <div class="story-side-scroll" id="story-side-scroll" aria-hidden="true">
+            <span id="story-side-thumb"></span>
+            <small>Scroll</small>
+          </div>
+          <div class="story-mobile-hint" aria-hidden="true">Swipe chapters ↔ · keep scrolling ↓</div>
+          <div class="sr-only" id="story-live" aria-live="polite">Chapter 1 of 5: Process</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact-media parallax-layer" data-parallax="0.07">
+        <img src="/photography/gallery/vm-6913-traverse-morning-light.webp" alt="">
+      </div>
+      <div class="contact-overlay" aria-hidden="true"></div>
+      <div class="shell contact-copy reveal">
+        <p class="eyebrow">Contact</p>
+        <h2>Tell me about the route.</h2>
+        <a class="contact-email" href="mailto:f.stawiarski@gmail.com">f.stawiarski@gmail.com</a>
+        <div class="contact-links">
+          <a href="https://www.youtube.com/@RoadToSomewhereWithYou">YouTube</a>
+          <a href="https://www.twitch.tv/ineedbooz">Twitch</a>
+          <a href="/climbers-lounge">Climbers Lounge</a>
+          <span>Vienna, AT</span>
+        </div>
+      </div>
+
+      <footer class="site-footer" aria-label="Site footer">
+        <div class="shell footer-grid">
+          <div class="footer-brand">
+            <strong>Vertical Moment</strong>
+            <p>Climbing and outdoor photography from Vienna. The Collective builds the topo data underneath.</p>
+          </div>
+          <div>
+            <p class="footer-label">Site</p>
+            <a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="/prints/panoramas">Panorama editions</a><a href="#contact">Contact</a>
+          </div>
+          <div>
+            <p class="footer-label">Elsewhere</p>
+            <a href="https://www.youtube.com/@RoadToSomewhereWithYou">YouTube</a><a href="https://www.twitch.tv/ineedbooz">Twitch</a><a href="mailto:f.stawiarski@gmail.com">Email</a>
+          </div>
+          <div>
+            <p class="footer-label">Collective</p>
+            <a href="/climbers-lounge">Climbers Lounge</a>
+          </div>
+        </div>
+        <div class="shell footer-bottom">
+          <span>© 2026 Vertical Moment · Vienna, AT</span>
+          <span>Photography · Collective · 3D Lab</span>
+        </div>
+      </footer>
+    </section>
+  </main>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Selected photograph" aria-hidden="true">
+    <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close image">×</button>
+    <button class="lightbox-nav lightbox-prev" id="lightbox-prev" type="button" aria-label="Previous image">←</button>
+    <figure>
+      <img id="lightbox-image" alt="">
+      <figcaption><strong id="lightbox-title"></strong><span id="lightbox-meta"></span></figcaption>
+    </figure>
+    <button class="lightbox-nav lightbox-next" id="lightbox-next" type="button" aria-label="Next image">→</button>
+  </div>`;
+
+const publicSiteThemeInit =
+  "(function(){try{var saved=localStorage.getItem('vm-theme');document.documentElement.dataset.theme=saved==='light'?'light':'dark';}catch(e){document.documentElement.dataset.theme='dark';}})();";
 
 export default function Page() {
   return (
-    <main className={styles.page}>
-      <PhotographyBackgroundCollage />
-      <PhotographyNav />
-      <PhotographyRail />
-      <PhotographyHero />
-
-      <div className={styles.ticker} aria-hidden="true">
-        <div className={styles.tickerRun}>
-          {[...TICKER, ...TICKER].map((crag, i) => (
-            <span key={`${crag}-${i}`}>
-              <i>&#9670;</i>
-              {crag}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* ------------------------------------------------------ statement */}
-      <section className={styles.statement}>
-        <div className={`${styles.wrap} ${styles.statementGrid}`}>
-          <PhotographyReveal>
-            <p className={styles.eyebrow}>What I shoot</p>
-            <h2>Climbing photography that keeps the effort in the frame — not just the summit.</h2>
-            <p className={styles.lead}>
-              Most climbing images arrive after the fact: the grin on the ledge, the rope coiled, the story already told.
-              I work in the minutes before that — the reading of a sequence, the breath held on a bad foot, the hand that
-              finds chalk in the dark.
-            </p>
-            <p>
-              Documentary on the wall, editorial in the edit. Sessions run at your pace, on your project, with no staging
-              and no re-climbs unless you want them. Everything here was shot on real attempts, at real grades, in the
-              light the day gave us.
-            </p>
-          </PhotographyReveal>
-
-          <PhotographyReveal>
-            <figure className={styles.stack}>
-              <div className={styles.stackTall}>
-                <PhotographyLayered scene={spareScene} variant="background" />
-              </div>
-              <div className={styles.stackInset}>
-                <img
-                  src="/photography/statement/statement-tall.webp"
-                  alt="Black and white frame of a climber on a steep limestone line"
-                  width={900}
-                  height={1350}
-                  loading="lazy"
-                />
-              </div>
-              <figcaption>Helenental · Ost face · 2025 — three depth planes, move the pointer</figcaption>
-            </figure>
-          </PhotographyReveal>
-        </div>
-      </section>
-
-      {/* ---------------------------------------------------------- stats */}
-      <div className={styles.nums}>
-        <div className={`${styles.wrap} ${styles.numsGrid}`}>
-          <div>
-            <b>40+</b>
-            <span>Crags photographed</span>
-          </div>
-          <div>
-            <b>6</b>
-            <span>Years on rope</span>
-          </div>
-          <div>
-            <b>48h</b>
-            <span>First edit turnaround</span>
-          </div>
-          <div>
-            <b>2026</b>
-            <span>Booking open</span>
-          </div>
-        </div>
-      </div>
-
-      <PhotographyGallery />
-
-      {/* ----------------------------------------------------------- band */}
-      <section className={styles.band}>
-        <img
-          src="/photography/banners/band-crag-1920x400.webp"
-          alt=""
-          width={1568}
-          height={392}
-          loading="lazy"
-          aria-hidden="true"
-        />
-        <div className={styles.bandVeil} />
-        <div className={styles.bandText}>
-          <p className={styles.bandQuote}>
-            Every crag has one hour when the rock gives the light back. I plan the day around it.
-          </p>
-        </div>
-      </section>
-
-      {/* ------------------------------------------------------- approach */}
-      <section className={styles.approach} id="approach">
-        <div className={styles.wrap}>
-          <div className={styles.sechead}>
-            <div>
-              <p className={styles.eyebrow}>How a session runs</p>
-              <h2>Three steps, no production circus</h2>
-            </div>
-            <div className={styles.side}>Half day · Full day · Multi-day</div>
-          </div>
-          <div className={styles.steps}>
-            <PhotographyReveal className={styles.step}>
-              <div className={styles.stepNum}>01</div>
-              <h3>We pick the route and the hour</h3>
-              <p>
-                You tell me the project; I check the aspect, the season and where the sun leaves the face. Light decides
-                the call time, not the calendar.
-              </p>
-            </PhotographyReveal>
-            <PhotographyReveal className={styles.step}>
-              <div className={styles.stepNum}>02</div>
-              <h3>You climb, I move around you</h3>
-              <p>
-                Ground frames, top rope on a second line, detail work between burns. I stay out of your sequence — you
-                never wait for the camera.
-              </p>
-            </PhotographyReveal>
-            <PhotographyReveal className={styles.step}>
-              <div className={styles.stepNum}>03</div>
-              <h3>Edit, deliver, size for use</h3>
-              <p>
-                A first selection within 48 hours, full edit inside a week. Every frame web-ready, print-ready, and
-                cropped for the formats you actually post.
-              </p>
-            </PhotographyReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* ------------------------------------------------------- services */}
-      <section className={styles.services} id="services">
-        <div className={styles.wrap}>
-          <div className={styles.sechead}>
-            <div>
-              <p className={styles.eyebrow}>Work with me</p>
-              <h2>Services</h2>
-            </div>
-            <div className={styles.side}>Vienna &amp; Lower Austria · travel on request</div>
-          </div>
-          <div className={styles.svc}>
-            <PhotographyReveal className={styles.card}>
-              <div className={styles.cardPhoto}>
-                <img
-                  src="/photography/services/session-half-day.webp"
-                  alt="Climber topping out on a slab during a half-day session"
-                  width={760}
-                  height={760}
-                  loading="lazy"
-                />
-              </div>
-              <div className={styles.cardBody}>
-                <p className={styles.eyebrow}>01 · Half day</p>
-                <h3>Project session</h3>
-                <p>Two to four hours on your route, at your pace, on the day the light works.</p>
-                <ul>
-                  <li>25 edited frames</li>
-                  <li>Ground and on-rope angles</li>
-                  <li>Web and print exports</li>
-                  <li>Personal usage included</li>
-                </ul>
-                <p className={`${styles.price} ${styles.priceSoon}`}>Coming soon</p>
-              </div>
-            </PhotographyReveal>
-
-            <PhotographyReveal className={styles.card}>
-              <div className={styles.cardPhoto}>
-                <img
-                  src="/photography/services/session-full-day.webp"
-                  alt="Climber clipping mid-route on a full crag day"
-                  width={760}
-                  height={760}
-                  loading="lazy"
-                />
-              </div>
-              <div className={styles.cardBody}>
-                <p className={styles.eyebrow}>02 · Full day</p>
-                <h3>Crag &amp; team day</h3>
-                <p>A full day with a group, club or course. Everyone climbs, everyone gets frames.</p>
-                <ul>
-                  <li>60+ edited frames</li>
-                  <li>Portraits of every climber</li>
-                  <li>Sector overviews for topos</li>
-                  <li>Shared gallery for the group</li>
-                </ul>
-                <p className={`${styles.price} ${styles.priceSoon}`}>Coming soon</p>
-              </div>
-            </PhotographyReveal>
-
-            <PhotographyReveal className={styles.card}>
-              <div className={styles.cardPhoto}>
-                <img
-                  src="/photography/services/session-commercial.webp"
-                  alt="Climber looking up at a line, used for commercial and campaign work"
-                  width={760}
-                  height={760}
-                  loading="lazy"
-                />
-              </div>
-              <div className={styles.cardBody}>
-                <p className={styles.eyebrow}>03 · Commercial</p>
-                <h3>Brand &amp; campaign</h3>
-                <p>Gear, apparel and tourism work, planned from a shot list agreed before we walk in.</p>
-                <ul>
-                  <li>Licensed usage, defined term</li>
-                  <li>Art direction and casting</li>
-                  <li>Banner, social and OG crops</li>
-                  <li>Optional 3D topo assets</li>
-                </ul>
-                <p className={`${styles.price} ${styles.priceSoon}`}>Coming soon</p>
-              </div>
-            </PhotographyReveal>
-          </div>
-          <p className={styles.priceNote}>
-            Full price list and package details go live shortly — write to me in the meantime and I&rsquo;ll quote your
-            session directly. <a href="#contact">Send an enquiry →</a>
-          </p>
-        </div>
-      </section>
-
-      {/* ---------------------------------------------------------- about */}
-      <section className={styles.about} id="about">
-        <div className={`${styles.wrap} ${styles.aboutGrid}`}>
-          <PhotographyReveal>
-            <figure className={styles.aboutPhoto}>
-              <img
-                src="/photography/about/portrait.webp"
-                alt="Portrait of the photographer at the base of a route"
-                width={900}
-                height={1350}
-                loading="lazy"
-              />
-            </figure>
-          </PhotographyReveal>
-          <PhotographyReveal>
-            <p className={styles.eyebrow}>About</p>
-            <h2>I climb the routes I photograph. That is the whole method.</h2>
-            <p className={styles.lead}>
-              Vertical Moment is the photography side of a longer project: mapping, documenting and photographing the
-              climbing around Vienna. Being on the rock means I know where the light lands, where the crux is, and where
-              to hang so the camera sees what the climber feels.
-            </p>
-            <p>
-              I shoot handheld and on rope, mostly available light, sometimes a single strobe when the face goes flat.
-              Nothing is staged for the camera — if a move looks hard in a frame, it was hard.
-            </p>
-            <div className={styles.kit}>
-              <span>Available light</span>
-              <span>On-rope work</span>
-              <span>Fixed lines</span>
-              <span>Full frame</span>
-              <span>24 / 35 / 85</span>
-              <span>Photogrammetry</span>
-            </div>
-
-            <div className={styles.founder}>
-              <img
-                src="/photography/about/founder-portrait.webp"
-                alt="Filip Stawiarski, founder of Vertical Moment"
-                width={720}
-                height={720}
-                loading="lazy"
-              />
-              <div>
-                <p className={styles.eyebrow}>Founder · Vienna</p>
-                <h3>Filip Stawiarski</h3>
-                <p>
-                  Alpinist and photographer, and the person behind the Collective database. Every crag in this archive
-                  has been walked, climbed and mapped in person.
-                </p>
-                <p className={styles.founderNote}>
-                  Before the camera: ten years of precision work — CNC machining for surgical instruments, then leading
-                  an eight-person aerospace assembly team at Bombardier, then five years running customer care teams in
-                  Vienna. It shows up in the way a shoot runs: rigging done properly, tolerances respected, safety not
-                  improvised, and clients who always know what happens next. Sessions in Polish, English or German.
-                </p>
-                <div className={styles.founderLinks}>
-                  <a href="mailto:f.stawiarski@gmail.com">f.stawiarski@gmail.com</a>
-                  <a href="https://www.youtube.com/@RoadToSomewhereWithYou" target="_blank" rel="noreferrer noopener">
-                    YouTube
-                  </a>
-                  <a href="https://www.twitch.tv/ineedbooz" target="_blank" rel="noreferrer noopener">
-                    Twitch
-                  </a>
-                </div>
-              </div>
-            </div>
-          </PhotographyReveal>
-        </div>
-      </section>
-
-      <section className={styles.notes} style={{ paddingTop: 0 }}>
-        <div className={styles.wrap}>
-          <div className={styles.sechead}>
-            <div>
-              <p className={styles.eyebrow}>From the archive</p>
-              <h2>Six years, one limestone belt</h2>
-            </div>
-            <div className={styles.side}>Earlier frames · 2020 — 2023</div>
-          </div>
-          <div className={styles.archive}>
-            <figure>
-              <img
-                src="/photography/gallery/vm-6537-two-on-the-wall.webp"
-                alt="Two climbers on a wall, early archive frame"
-                width={1100}
-                height={734}
-                loading="lazy"
-              />
-              <figcaption>First season on rope</figcaption>
-            </figure>
-            <figure>
-              <img
-                src="/photography/gallery/vm-6424-face-from-the-approach.webp"
-                alt="A crag seen from the approach path"
-                width={1500}
-                height={643}
-                loading="lazy"
-              />
-              <figcaption>Mapping the approach</figcaption>
-            </figure>
-            <figure>
-              <img
-                src="/photography/gallery/vm-6768-gear-on-the-ledge.webp"
-                alt="Climbing gear laid out on a ledge"
-                width={1100}
-                height={635}
-                loading="lazy"
-              />
-              <figcaption>The kit, back then</figcaption>
-            </figure>
-            <figure>
-              <img
-                src="/photography/gallery/vm-6522-the-crack.webp"
-                alt="A crack line in black and white"
-                width={800}
-                height={1198}
-                loading="lazy"
-              />
-              <figcaption>The line that started it</figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      {/* ----------------------------------------------------- field notes */}
-      <section className={styles.notes}>
-        <div className={styles.wrap}>
-          <div className={styles.sechead}>
-            <div>
-              <p className={styles.eyebrow}>Field notes</p>
-              <h2>From the last season</h2>
-            </div>
-            <div className={styles.side}>From the field</div>
-          </div>
-          <div className={styles.ngrid}>
-            <PhotographyReveal className={styles.note}>
-              <div className={styles.notePhoto}>
-                <img
-                  src="/photography/notes/note-north-face.webp"
-                  alt="Climbers on a shaded north-facing wall"
-                  width={820}
-                  height={473}
-                  loading="lazy"
-                />
-              </div>
-              <div className={styles.noteBody}>
-                <p className={styles.eyebrow}>June · Peilstein</p>
-                <h3>Shooting a face that never gets sun</h3>
-                <p>
-                  North-facing limestone stays green and cold until midday. How to hold detail in the rock without
-                  lifting the shadows into mush.
-                </p>
-              </div>
-            </PhotographyReveal>
-
-            <PhotographyReveal className={styles.note}>
-              <div className={styles.notePhoto}>
-                <img
-                  src="/photography/notes/note-hands.webp"
-                  alt="Close detail of hands on a wet limestone hold"
-                  width={820}
-                  height={473}
-                  loading="lazy"
-                />
-              </div>
-              <div className={styles.noteBody}>
-                <p className={styles.eyebrow}>July · Helenental</p>
-                <h3>Why the hands tell the story</h3>
-                <p>
-                  The face shows effort, but the hands show the grade. A short argument for more detail frames and fewer
-                  wide summit shots.
-                </p>
-              </div>
-            </PhotographyReveal>
-
-            <PhotographyReveal className={styles.note}>
-              <div className={styles.notePhoto}>
-                <img
-                  src="/photography/notes/note-photogrammetry.webp"
-                  alt="Limestone texture used as a photogrammetry test surface"
-                  width={820}
-                  height={820}
-                  loading="lazy"
-                />
-              </div>
-              <div className={styles.noteBody}>
-                <p className={styles.eyebrow}>September · Glocknergrat</p>
-                <h3>From photographs to a 3D wall</h3>
-                <p>
-                  Forty frames of one face, run through photogrammetry, become a topo you can rotate. The first test from
-                  the 3D Lab.
-                </p>
-              </div>
-            </PhotographyReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* ------------------------------------------------------------ faq */}
-      <section className={styles.faq}>
-        <div className={styles.wrap}>
-          <div className={styles.sechead}>
-            <div>
-              <p className={styles.eyebrow}>Practical</p>
-              <h2>Before you book</h2>
-            </div>
-            <div className={styles.side}>Ask anything else by mail</div>
-          </div>
-          <details open>
-            <summary>Do I need to climb hard to be worth photographing?</summary>
-            <p>
-              No. Grade is not the subject — commitment is. A 4+ climbed with full attention photographs better than a 7a
-              climbed casually.
-            </p>
-          </details>
-          <details>
-            <summary>What happens if the weather turns?</summary>
-            <p>
-              We move the date, no fee. Wet limestone is unsafe and photographs badly. I watch the forecast from 72 hours
-              out and we decide together the evening before.
-            </p>
-          </details>
-          <details>
-            <summary>How do I get the files, and what can I do with them?</summary>
-            <p>
-              A private gallery link with full-resolution downloads plus web-sized and square crops. Personal and social
-              use is included; commercial licensing is agreed separately.
-            </p>
-          </details>
-          <details>
-            <summary>Can you shoot indoors or at a competition?</summary>
-            <p>
-              Yes. Gyms and comps need a different setup — faster glass, higher ISO, and permission from the organiser.
-              Ask early so I can clear access.
-            </p>
-          </details>
-          <details>
-            <summary>Do you photograph first ascents and rebolting work?</summary>
-            <p>Gladly, and at a reduced rate if the frames can go into the open topo database with the route record.</p>
-          </details>
-        </div>
-      </section>
-
-      {/* -------------------------------------------------------- contact */}
-      <section className={styles.contact} id="contact">
-        <img
-          className={styles.contactBg}
-          src="/photography/contact/contact-bg.webp"
-          alt=""
-          width={1800}
-          height={1038}
-          loading="lazy"
-          aria-hidden="true"
-        />
-        <div className={styles.contactVeil} />
-        <div className={styles.contactIn}>
-          <p className={`${styles.eyebrow} ${styles.onDeep}`}>Contact</p>
-          <h2>Tell me about the route.</h2>
-          <a className={styles.mail} href="mailto:f.stawiarski@gmail.com">
-            f.stawiarski@gmail.com
-          </a>
-          <div className={styles.socials}>
-            <a href="https://www.youtube.com/@RoadToSomewhereWithYou" rel="noreferrer noopener" target="_blank">
-              YouTube
-            </a>
-            <a href="https://www.twitch.tv/ineedbooz" rel="noreferrer noopener" target="_blank">
-              Twitch
-            </a>
-            <a href="/climbers-lounge">Climbers Lounge</a>
-            <span>Vienna, AT</span>
-          </div>
-        </div>
-      </section>
-
-      {/* --------------------------------------------------------- footer */}
-      <footer className={styles.foot}>
-        <div className={styles.wrap}>
-          <div className={styles.footGrid}>
-            <div>
-              <span className={styles.footMark} aria-hidden="true" />
-              <p style={{ marginTop: 16, maxWidth: '34ch' }}>
-                Climbing and outdoor photography from Vienna. The Collective builds the topo data underneath.
-              </p>
-            </div>
-            <div>
-              <h4>Site</h4>
-              <ul>
-                <li>
-                  <a href="#work">Work</a>
-                </li>
-                <li>
-                  <a href="#services">Services</a>
-                </li>
-                <li>
-                  <a href="#about">About</a>
-                </li>
-                <li>
-                  <a href="/prints/panoramas">Panorama editions</a>
-                </li>
-                <li>
-                  <a href="#contact">Contact</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4>Elsewhere</h4>
-              <ul>
-                <li>
-                  <a href="https://www.youtube.com/@RoadToSomewhereWithYou" rel="noreferrer noopener" target="_blank">
-                    YouTube — Road To Somewhere With You
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.twitch.tv/ineedbooz" rel="noreferrer noopener" target="_blank">
-                    Twitch
-                  </a>
-                </li>
-                <li>
-                  <a href="mailto:f.stawiarski@gmail.com">f.stawiarski@gmail.com</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4>Collective</h4>
-              <ul>
-                <li>
-                  <a href="/climbers-lounge">Climbers Lounge</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className={styles.footBar}>
-            <span>© 2026 Vertical Moment · Vienna, AT</span>
-            <span>Filip Stawiarski · Photography · Collective · 3D Lab</span>
-          </div>
-        </div>
-      </footer>
-    </main>
+    <>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+      />
+      <script dangerouslySetInnerHTML={{ __html: publicSiteThemeInit }} />
+      <div className="public-site-v5-root" dangerouslySetInnerHTML={{ __html: publicSiteMarkup }} />
+      <script src="/public-site-v5.js" defer />
+    </>
   );
 }
