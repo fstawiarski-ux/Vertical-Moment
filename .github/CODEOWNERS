@@ -1,4 +1,14 @@
 * @fstawiarski-ux
+/products/ @fstawiarski-ux
+/docs/architecture/ @fstawiarski-ux
+/docs/recovery/ @fstawiarski-ux
+/docs/repository/ @fstawiarski-ux
+/website/ @fstawiarski-ux
+/website/src/ @fstawiarski-ux
+/website/app/explore-app/ @fstawiarski-ux
+/website/app/(platform)/explore/ @fstawiarski-ux
+/website/app/(platform)/contribute/ @fstawiarski-ux
+/website/app/(platform)/report/ @fstawiarski-ux
 /database/ @fstawiarski-ux
 /areas/ @fstawiarski-ux
 /models/ @fstawiarski-ux

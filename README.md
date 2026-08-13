@@ -1,82 +1,87 @@
 # Vertical Moment
 
-Vertical Moment is a phone-first climbing explorer and visual-technology workspace for photography, regional/crag/route data, panoramas, and provisional 3D studies.
+Vertical Moment is one repository with **two products** and a shared climbing-data, media and spatial-production foundation.
 
-The production site is a Next.js App Router application in `website/`, packaged for Cloudflare with OpenNext. The existing public explorer remains at `/explore`.
+## Choose the product before editing
 
-## Explore Lab PWA
+| Product | Purpose | Current routes | Start here | Branch prefix |
+|---|---|---|---|---|
+| **Public website** | Photography portfolio, gallery, business/contact, social presence, public SEO and conversion | `/` and explicitly public photography/print pages | [`products/public-site/README.md`](products/public-site/README.md) | `site/` |
+| **Climbers Lounge / Explore PWA** | One installable/offline climbing product: Explore Lab workspace, atlas, routes, panoramas, topo, field notes, contributor intake and 3D tools | `/explore-app`, `/explore`, `/climbers-lounge`, unlisted `/contribute` and protected climbing-experience routes | [`products/climbers-lounge-pwa/README.md`](products/climbers-lounge-pwa/README.md) | `pwa/` |
 
-`/explore-app` is an isolated, `noindex` experimental PWA workspace. It does not replace or modify the public `/explore` experience.
+The Brave shortcuts named **Vertical Moment Explore Lab** and **Vertical Moment Climbers Lounge** are installed versions of the same PWA product. They are not separate products or source repositories.
 
-Explore Lab is a locked visual canvas with floating, independently scrollable boxes:
+Read [`AGENTS.md`](AGENTS.md) and [`docs/PRODUCT_MAP.md`](docs/PRODUCT_MAP.md) before any write. Work that changes shared data, packages, Cloudflare, OpenNext, Serwist, GitHub Actions or common media must be declared `shared` and approved as cross-product work.
 
-- `explore`: freeform desktop positions with pointer dragging and resizing.
-- `grid`: snapped/organized layout; used automatically for tablet-sized screens.
-- `presentation`: a repeatable hero-and-column layout.
-- Mobile: vertical scroll-snap cards with large touch targets and no freeform dragging.
-- Box modes: normal, minimized, expanded, and fullscreen.
-- Any content box can become the locked hero; the default Nasenwand hero can be restored from the toolbar.
+## Repository model
 
-Layout state is managed by a typed Zustand store in `website/src/core/`, then persisted to versioned IndexedDB. Runtime content and asset references live in `website/public/explore-content.json`, so content can change without rewriting the layout engine.
+- `main` is the single canonical integration branch.
+- Product work uses short-lived `site/<task>` or `pwa/<task>` branches.
+- Long-lived product branches are not product storage. Product separation is expressed through paths, ownership files, scoped documentation and CI.
+- A branch, commit, installed PWA or local prototype is not automatically canonical. See [`docs/recovery/CANONICAL_STATE.md`](docs/recovery/CANONICAL_STATE.md).
+- No agent may push, merge, deploy, delete remote branches or rewrite history without explicit approval.
 
-### Scroll-scrub hero
+The runtime is still transitional: both products currently share the Next.js package under `website/`. Moving runtime code into separate app packages is intentionally deferred until the live Public V5 and current PWA have approved visual and behavior baselines.
 
-`website/src/components/animation/ScrollScrubHero.tsx` adapts the verified Nasenwand all-keyframe orbit to the locked app canvas. It preserves the existing `/nasenwand-concepts` implementation and media rather than deleting or replacing it. The poster is immediate; the MP4 is requested only when the user begins scrubbing.
+## Repository map
 
-### 3D model box
+| Path | Role |
+|---|---|
+| `products/` | Product contracts and agent entry points |
+| `website/` | Transitional combined Next.js/OpenNext runtime |
+| `database/` | Canonical and staged route-data sources; verification status must be preserved |
+| `areas/` | Area/sector context linked to stable route identities |
+| `assets/brand/` | Canonical brand masters and approved exports |
+| `media/`, `models/` | Media/3D manifests and reviewed source assets; heavy masters require LFS or external storage |
+| `workbench/` | Provisional intake; never silently promote it to canonical data |
+| `docs/` | Architecture, recovery, operations and product-boundary documentation |
 
-`website/src/components/boxes/Box3DModel.tsx` loads `@google/model-viewer` and `/models/nasenwand-topo.glb` only after the panel is active/visible or the user explicitly requests it. The viewer supports orbit, pan, and zoom. The 1.7 MB browser-ready GLB is treated as provisional visualization, not verified route or safety data.
+## Development stack
 
-### Offline behavior
+The active web runtime is Next.js 16, React 18, TypeScript, OpenNext for Cloudflare, Wrangler, Serwist, Vitest, Zustand, Three.js/model-viewer, Drizzle, IndexedDB helpers and `fflate` for local contribution ZIPs. CI uses Node 22; the verified workstation snapshot on 2026-08-13 used Node 24 and npm 11.
 
-- `manifest.webmanifest` and 192/512/maskable icons make the lab installable.
-- Serwist precaches the `/explore-app` app shell, offline fallback, manifest, icons, and required Next.js chunks (about 3.1 MB in the current build).
-- Images use bounded cache-first runtime storage.
-- GLB and scrub video have separate bounded cache-first stores; the video cache supports byte-range responses.
-- **Save offline** downloads the optimized normal-weight image pack on demand.
-- Service-worker registration is production-only, avoiding stale caches during `npm run dev`.
+The wider production stack includes GitHub/Git LFS, Cloudflare Workers and R2, Notion, Google Drive/Sheets, Canva, Affinity, Blender, RealityScan/RealityCapture source workflows, DaVinci Resolve, Adobe Acrobat, Google Earth Pro/Maps, Brave PWA testing, ShareX and Lovable. Availability and authority vary; consult the status table in [`docs/operations/SOFTWARE_STACK.md`](docs/operations/SOFTWARE_STACK.md).
 
-## Local development
+### AI and model stack snapshot
 
-Requirements: Node.js 20+ and npm. The validated local environment uses Node 24 and npm 11.
+Supervisor and worker surfaces observed in the Vertical Moment workflow include ChatGPT Work/Codex, Claude Code, GitHub Copilot CLI, Multica, OpenClaw, OpenCode, OpenWork/ModelStudio, LM Studio and Ollama. Cursor Agent and Antigravity are historical/optional until rediscovered on the current PATH.
 
-```bash
-cd website
+The wider cloud-model map also records Claude Sonnet/Opus, Gemini, Perplexity and candidate DeepSeek, Qwen, MiniMax and Kimi families, plus Groq, Cerebras, Hugging Face and OpenRouter routing surfaces. These are not all installed or currently authorized; their exact model, provider, privacy and quota must be rediscovered for every task.
+
+Locally observed models on 2026-08-13:
+
+- LM Studio LLMs: Qwen2.5-Coder 7B, Gemma 4 E4B, GPT-OSS 20B, Qwen3 30B A3B Thinking, Qwen3-Coder 30B A3B.
+- LM Studio embedding: Nomic Embed Text v1.5.
+- Ollama: `qwen2.5-coder:7b`.
+- Specialists under `D:\AI\models\specialists`: Florence-2-large, Phi-4-multimodal-instruct, Qwen3-VL-Embedding-2B, Qwen3-VL-Reranker-2B, Whisper-Large-V3-Turbo, SAM 2.1 Hiera Large and Depth Anything V2 Large.
+
+Model availability, provider quotas and authentication are time-sensitive. Future agents must rediscover them rather than assuming this snapshot is current. Large models, source scans and Atlas JSON must never be dumped wholesale into model context.
+
+## Quick start
+
+```powershell
+Set-Location "D:\VERTICALMOMENT\GITHUB REPOS\Vertical-Moment"
+git branch --show-current
+git rev-parse HEAD
+git status --short
+Set-Location "D:\VERTICALMOMENT\GITHUB REPOS\Vertical-Moment\website"
 npm install
 npm run dev
 ```
 
-Open `http://localhost:3000/explore-app` for the PWA lab. The public explorer remains at `http://localhost:3000/explore`.
+- Public website: `http://localhost:3000/`
+- Climbers Lounge / Explore PWA: `http://localhost:3000/explore-app`
+- Atlas route currently protected as part of the PWA stream: `http://localhost:3000/explore`
+- Unlisted local-first contributor beta: `http://localhost:3000/contribute`
 
-## Build and preview
+Build and publication are separate approval gates. `npm run build` generates `website/public/sw.js`; never edit or include that generated file in a source patch.
 
-```bash
-cd website
-npm run build
-npm start
-```
+## Current recovery anchors
 
-`npm run build` runs the Next.js production build and then creates `public/sw.js` from `src/pwa/service-worker.ts`.
+- Current committed/deployed integration baseline recorded on 2026-08-13: `da6630cdcba8ed2d44015ed1cea9af47bdc99971`.
+- Active PWA capability branch recorded at: `5fb71fe0249d51f8759273c5e2e903fe3c59cf72`.
+- Public V5 redesign: shipped through PR #33 at `3640c12e0cafe6947440a4f603f998a49f4aa66a`; logo, background, fonts and photography refinements remain future public-site work.
+- Contributor field beta: shipped through PR #34 at `da6630c`; `/contribute` is unlisted/noindex and keeps original evidence in device IndexedDB until ZIP export. It has no server upload, account gate or publication action yet.
+- EXP-02: preserved as a focused Master ZIP and as an uncommitted four-file review change on the active PWA branch.
 
-For the Cloudflare/OpenNext path:
-
-```bash
-npm run preview
-```
-
-This builds the Cloudflare bundle, ensures the generated service worker is present in `.open-next/assets`, and starts the local OpenNext preview. `npm run deploy` and `npm run upload` use the same verified build pipeline but should only be run with explicit deployment approval.
-
-## Key files
-
-- `website/src/App.tsx`: Explore Lab composition and content-registry loading.
-- `website/src/core/types.ts`: shared layout and registry contracts.
-- `website/src/core/layoutState.ts`: Zustand actions, z-index behavior, and IndexedDB persistence.
-- `website/src/core/layoutAlgorithms.ts`: explore, grid, and presentation algorithms.
-- `website/src/components/boxes/BoxContainer.tsx`: draggable/resizable box shell and modes.
-- `website/src/components/shell/LayoutToolbar.tsx`: layout, hero, minimize, and offline controls.
-- `website/src/pwa/service-worker.ts`: app-shell precache and bounded runtime caching.
-- `website/serwist.config.mjs`: Serwist build configuration and cache budget.
-
-## Data and attribution
-
-Crag names and coordinates include data derived from © OpenStreetMap contributors (ODbL 1.0). Route and media data should remain clearly marked as verified, provisional, or pending field review.
+See [`docs/recovery/CANONICAL_STATE.md`](docs/recovery/CANONICAL_STATE.md) for exact status and [`docs/repository/CLEANUP_RUNBOOK.md`](docs/repository/CLEANUP_RUNBOOK.md) before removing files or branches.
