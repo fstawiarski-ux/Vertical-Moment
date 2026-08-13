@@ -216,7 +216,7 @@ export function LayoutToolbar({ viewportMode, offlinePack, onSearch, onReplayInt
           <HudButton
             icon="replay"
             label={followJourney ? "Following" : "Follow"}
-            title={followJourney ? "Stop automatic station presentation" : "Follow Region, Rock, Sector and Topo with contextual boxes"}
+            title={followJourney ? "Hide the station recommendation" : "Show Region, Rock, Sector and Topo recommendations"}
             pressed={followJourney}
             onClick={onToggleFollowJourney}
           />

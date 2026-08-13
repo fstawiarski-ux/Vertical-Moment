@@ -8,6 +8,7 @@ import { ResponsiveImage } from "./components/media/ResponsiveImage";
 import { CommandPalette } from "./components/shell/CommandPalette";
 import { ContextBreadcrumb } from "./components/shell/ContextBreadcrumb";
 import { LayoutToolbar } from "./components/shell/LayoutToolbar";
+import { StationPeek } from "./components/shell/StationPeek";
 import { deepLinkFor, parseDeepLink, resolveDeepLink, writeDeepLinkToUrl } from "./core/deepLink";
 import { hasSeenIntro, prefersReducedMotion, rememberIntroSeen } from "./core/introPreferences";
 import { LayoutProvider, useLayoutState } from "./core/layoutState";
@@ -173,26 +174,12 @@ function BoxContent({ content, isActive, priority = false }: { content: ExploreC
   );
 }
 
-function StationPreview({ station, visible }: { station: JourneyStation; visible: boolean }) {
-  const presentation = STATION_PRESENTATIONS[station];
-  if (!visible) return null;
-
-  return (
-    <aside className={styles.stationPreview} data-station={station} aria-live="polite" aria-label={`${presentation.label} journey preview`}>
-      <small>{presentation.label} · journey view</small>
-      <strong>{presentation.title}</strong>
-      <p>{presentation.description}</p>
-      <span>{presentation.nextLabel}</span>
-    </aside>
-  );
-}
-
 function Workspace({ registry }: { registry: ExploreContentRegistry }) {
   const viewportMode = useViewportMode();
   const [introMode, setIntroMode] = useState<IntroMode | null>(null);
   const [workspaceUnlocked, setWorkspaceUnlocked] = useState(false);
   const [journeyStation, setJourneyStation] = useState<JourneyStation>("region");
-  const [stationPreviewVisible, setStationPreviewVisible] = useState(false);
+  const [stationPeekVisible, setStationPeekVisible] = useState(false);
   const [followJourney, setFollowJourney] = useState(false);
   const [replayCount, setReplayCount] = useState(0);
   const [paletteOpen, setPaletteOpen] = useState(false);
@@ -214,9 +201,9 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
   const boxesRef = useRef(boxes);
   useEffect(() => { boxesRef.current = boxes; }, [boxes]);
 
-  const focusBox = useCallback((id: string, mode: BoxMode = "expanded") => {
+  const focusBox = useCallback((id: string, mode: BoxMode = "expanded", normalizeSiblings = true) => {
     if (!contentById.has(id)) return;
-    if (mode !== "normal") {
+    if (mode !== "normal" && normalizeSiblings) {
       for (const box of boxesRef.current) {
         if (box.id !== id && (box.mode === "expanded" || box.mode === "fullscreen")) {
           dispatch({ type: "UPDATE_BOX", id: box.id, patch: { mode: "normal" } });
@@ -234,13 +221,13 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
         dispatch({ type: "UPDATE_BOX", id: other.id, patch: { mode: "minimized" } });
       }
     }
-    focusBox(id, mode);
+    focusBox(id, mode, false);
   }, [dispatch, focusBox]);
 
   const replayIntro = useCallback(() => {
     setWorkspaceUnlocked(false);
     setJourneyStation("region");
-    setStationPreviewVisible(false);
+    setStationPeekVisible(false);
     setFollowJourney(true);
     setIntroMode("cinematic");
     // Remounts the sequence so it restarts from Region rather than resuming.
@@ -252,10 +239,10 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
     const deepLinkTarget = resolveDeepLink(parseDeepLink(window.location.search), registry);
     const deepLinkStation = deepLinkTarget ? stationForFocusBoxId(deepLinkTarget.boxId) : null;
     setJourneyStation(deepLinkStation ?? "topo");
-    setStationPreviewVisible(false);
-    // Skip/static still land at a journey station; they should not expose all
-    // seven boxes underneath the arrival box.
-    setFollowJourney(deepLinkTarget ? Boolean(deepLinkStation) : true);
+    setStationPeekVisible(!deepLinkTarget);
+    // Keep the canvas hidden during the handoff. A deep link is opened by the
+    // effect below; a normal arrival keeps only the recommendation visible.
+    setFollowJourney(true);
     if (reason !== "static") void rememberIntroSeen();
   }, [registry]);
 
@@ -264,12 +251,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
       const detail = (event as CustomEvent<ScrubStationEventDetail>).detail;
       if (!detail || !STATION_PRESENTATIONS[detail.station]) return;
       setJourneyStation(detail.station);
-      if (detail.phase === "preview") {
-        if (!workspaceUnlocked) setStationPreviewVisible(true);
-        else setFollowJourney(true);
-        return;
-      }
-      setStationPreviewVisible(!workspaceUnlocked);
+      setStationPeekVisible(true);
       if (workspaceUnlocked) setFollowJourney(true);
     };
 
@@ -320,13 +302,13 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
       const station = stationForFocusBoxId(target.boxId);
       if (station) {
         setJourneyStation(station);
-        setFollowJourney(true);
-        focusBox(target.boxId, target.mode);
+        setStationPeekVisible(false);
+        openIndependentBox(target.boxId, target.mode);
       } else {
         openIndependentBox(target.boxId, target.mode);
       }
     }
-  }, [focusBox, openIndependentBox, registry, workspaceUnlocked]);
+  }, [openIndependentBox, registry, workspaceUnlocked]);
 
   // Keeps the address bar shareable: whatever is in focus is what a copied URL reopens.
   useEffect(() => {
@@ -351,7 +333,10 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
     };
   }, [openIndependentBox, replayIntro]);
 
-  const leaveJourney = useCallback(() => setFollowJourney(false), []);
+  const openStationBox = useCallback((id: string) => {
+    setStationPeekVisible(false);
+    openIndependentBox(id);
+  }, [openIndependentBox]);
 
   const openPalette = useCallback((query: string) => {
     setPaletteQuery(query);
@@ -464,7 +449,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
       .catch(() => { /* Clipboard access can be blocked; the URL bar still holds the link. */ });
   }, [contentById]);
 
-  const renderBox = (box: BoxState, journeyPresentation?: "focus" | "support") => {
+  const renderBox = (box: BoxState) => {
     const content = contentById.get(box.dataRef ?? box.id);
     if (!content) return null;
     return (
@@ -474,21 +459,15 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
         title={content.title}
         eyebrow={`${content.crag} · ${content.type === "nasenwand" ? "routes" : content.type === "wallreveal" ? "story" : content.type}`}
         viewportMode={viewportMode}
-        journeyPresentation={journeyPresentation}
-        onManualInteraction={journeyPresentation ? leaveJourney : undefined}
       >
-        <BoxContent content={content} isActive={journeyPresentation === "focus" || activeBoxId === box.id} priority={journeyPresentation === "focus" || content.id === registry.boxes[0]?.id} />
+        <BoxContent content={content} isActive={activeBoxId === box.id} priority={content.id === registry.boxes[0]?.id} />
       </BoxContainer>
     );
   };
 
   const stationFocusId = STATION_PRESENTATIONS[journeyStation].focusBoxId;
-  const journeyFocusBox = boxes.find((box) => box.id === stationFocusId) ?? boxes[0];
-  const journeyCompanions = boxes.filter((box) => box.id !== journeyFocusBox?.id);
-  const journeyActive = workspaceUnlocked && followJourney && Boolean(journeyFocusBox);
-  const visible = journeyActive
-    ? (journeyFocusBox ? [journeyFocusBox] : [])
-    : boxes.filter((box) => box.mode !== "minimized");
+  const journeyActive = workspaceUnlocked && followJourney;
+  const visible = journeyActive ? [] : boxes.filter((box) => box.mode !== "minimized");
   const minimized = boxes.filter((box) => box.mode === "minimized");
   const stationContent = contentById.get(stationFocusId) ?? null;
 
@@ -500,7 +479,13 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
         mode={introMode}
         onUnlock={handleUnlock}
       />
-      {!workspaceUnlocked && <StationPreview station={journeyStation} visible={stationPreviewVisible} />}
+      {stationPeekVisible && (
+        <StationPeek
+          station={journeyStation}
+          content={stationContent}
+          onOpen={workspaceUnlocked ? openStationBox : undefined}
+        />
+      )}
       <header className={styles.brand}>
         <span className={styles.mark} aria-hidden="true" />
         <div><small>Vertical Moment</small><strong>Explore Lab</strong></div>
@@ -509,35 +494,13 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
 
       {workspaceUnlocked && (viewportMode === "mobile" ? (
         <section className={styles.cardStack} aria-label="Explore cards">
-          {visible.map((box) => renderBox(box, journeyActive ? "focus" : undefined))}
+          {visible.map((box) => renderBox(box))}
         </section>
       ) : (
         <section className={styles.boxLayer} data-layout={viewportMode} aria-label="Explore canvas">
-          {visible.map((box) => renderBox(box, journeyActive ? "focus" : undefined))}
+          {visible.map((box) => renderBox(box))}
         </section>
       ))}
-
-      {workspaceUnlocked && journeyActive && journeyCompanions.length > 0 && (
-        <aside className={styles.stationTray} aria-label="Other journey views">
-          <small>Other views</small>
-          {journeyCompanions.map((box) => {
-            const content = contentById.get(box.dataRef ?? box.id);
-            if (!content) return null;
-            return (
-              <button
-                key={box.id}
-                type="button"
-                title={`Open ${content.title} independently`}
-                aria-label={`Open ${content.title} independently`}
-                onClick={() => openIndependentBox(box.id)}
-              >
-                <span>{content.title.slice(0, 1)}</span>
-                <strong>{content.title}</strong>
-              </button>
-            );
-          })}
-        </aside>
-      )}
 
       {workspaceUnlocked && !journeyActive && minimized.length > 0 && (
         <aside className={styles.minimizedTray} aria-label="Minimized boxes">
