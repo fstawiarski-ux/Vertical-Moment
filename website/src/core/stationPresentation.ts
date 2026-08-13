@@ -12,7 +12,7 @@ export interface StationPresentation {
 /**
  * Journey stations choose a presentation, not a new data source. The existing
  * boxes remain addressable from search and deep links; station mode only
- * decides which one is foregrounded while the cinematic journey is active.
+ * recommends which one to open while the cinematic journey is active.
  */
 export const STATION_PRESENTATIONS: Record<JourneyStation, StationPresentation> = {
   region: {
