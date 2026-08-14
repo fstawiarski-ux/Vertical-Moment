@@ -581,7 +581,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
       {workspaceUnlocked && (
         <LayoutToolbar
           viewportMode={viewportMode}
-          offlinePack={registry.offlinePack}
+          offlinePack={[...(registry.offlineData ?? []), ...registry.offlinePack]}
           onSearch={() => openPalette("")}
           onReplayIntro={replayIntro}
           followJourney={followJourney}

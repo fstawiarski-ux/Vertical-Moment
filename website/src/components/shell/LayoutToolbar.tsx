@@ -222,7 +222,7 @@ export function LayoutToolbar({ viewportMode, offlinePack, onSearch, onReplayInt
           />
           <HudButton icon="replay" label="Replay" title="Replay approach journey" onClick={() => closeAfter(onReplayIntro)} />
           <HudButton icon="contribute" label="Add" title="Open contributor field beta" href="/contribute?source=explore-app" />
-          <div className={styles.offlineButton} title="Save the Explore workspace offline">
+          <div className={styles.offlineButton} title="Save route data and selected media for offline use">
             <OfflinePackButton urls={offlinePack} />
           </div>
         </Panel>

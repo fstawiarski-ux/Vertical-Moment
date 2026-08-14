@@ -120,6 +120,8 @@ export interface ExploreContentRegistry {
   background: ExploreImageAsset;
   introScrubSequence: ScrollScrubSequenceAsset;
   boxes: ExploreContentBox[];
+  /** Small same-origin route indexes requested by the explicit offline pack. */
+  offlineData?: string[];
   offlinePack: string[];
   heavyAssets: string[];
 }

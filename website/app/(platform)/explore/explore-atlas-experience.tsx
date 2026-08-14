@@ -36,7 +36,6 @@ type AtlasWall = {
   lat: number | null;
   lon: number | null;
   gr: string[];
-  gpx: string | null;
   path: string;
 };
 
@@ -65,8 +64,6 @@ type AtlasData = {
     regionCount: number;
     wallCount: number;
     routeCount: number;
-    gpxCount: number;
-    matchedGpxCount?: number;
   };
 };
 
@@ -76,7 +73,7 @@ type SearchHit =
   | { kind: "route"; label: string; meta: string; region: string; wallId: string };
 
 type LatLon = [number, number];
-type BaseLayerKey = "terrain" | "satellite" | "streets" | "light" | "mapbox";
+type BaseLayerKey = "terrain" | "satellite" | "streets" | "light";
 
 declare global {
   interface Window {
@@ -87,14 +84,11 @@ declare global {
 const ATLAS = atlasJson as AtlasData;
 const VIENNA_BELT_CENTER: LatLon = [47.94, 16.08];
 const VIENNA_CITY_CENTER: LatLon = [48.2082, 16.3738];
-const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
-
 const BASE_LAYER_OPTIONS: Array<{ id: BaseLayerKey; label: string; hint: string }> = [
   { id: "terrain", label: "Terrain", hint: "Contours + trails" },
   { id: "satellite", label: "Satellite", hint: "Aerial context" },
   { id: "streets", label: "OSM Streets", hint: "Roads + places" },
   { id: "light", label: "Light", hint: "Clear labels" },
-  ...(MAPBOX_TOKEN ? [{ id: "mapbox" as const, label: "Mapbox", hint: "Mapbox Streets" }] : []),
 ];
 
 const REGION_COLORS = [
@@ -380,12 +374,6 @@ export default function ExploreAtlasExperience() {
           attribution: "© OpenStreetMap contributors · © CARTO",
         });
         const baseLayers: Record<string, any> = { terrain, satellite, streets, light };
-        if (MAPBOX_TOKEN) {
-          baseLayers.mapbox = L.tileLayer(
-            `https://api.mapbox.com/styles/v1/mapbox/streets-v12/tiles/256/{z}/{x}/{y}?access_token=${MAPBOX_TOKEN}`,
-            { maxZoom: 20, attribution: "© Mapbox · © OpenStreetMap contributors" },
-          );
-        }
         baseLayersRef.current = baseLayers;
         terrain.addTo(map);
         L.circleMarker([48.2082, 16.3738], { radius: 4, color: "#f2ece0", fillColor: "#f2ece0", fillOpacity: 1, weight: 1 })
@@ -522,7 +510,6 @@ export default function ExploreAtlasExperience() {
     satellite: styles.mapSatellite,
     streets: styles.mapStreets,
     light: styles.mapLight,
-    mapbox: styles.mapMapbox,
   }[activeBaseLayer];
 
   return (
@@ -593,11 +580,6 @@ export default function ExploreAtlasExperience() {
                     <small>{layer.hint}</small>
                   </button>
                 ))}
-                {!MAPBOX_TOKEN && (
-                  <a href="https://www.mapbox.com/maps/" target="_blank" rel="noreferrer">
-                    <span>Mapbox</span><small>Connect a public token</small><ArrowSquareOut size={15} aria-hidden="true" />
-                  </a>
-                )}
                 <div className={styles.externalMaps}>
                   <a href={googleMapsUrl} target="_blank" rel="noreferrer">Google Maps <ArrowSquareOut size={14} aria-hidden="true" /></a>
                   <a href={openStreetMapUrl} target="_blank" rel="noreferrer">OpenStreetMap <ArrowSquareOut size={14} aria-hidden="true" /></a>
@@ -703,7 +685,6 @@ export default function ExploreAtlasExperience() {
                           <div className={styles.wallActions}>
                             <button type="button" onClick={runFlyby}><NavigationArrow size={14} weight="fill" aria-hidden="true" />Flyby</button>
                             <a href={googleDirectionsUrl} target="_blank" rel="noreferrer"><ArrowSquareOut size={14} aria-hidden="true" />Directions</a>
-                            {activeWall.gpx && <a href={activeWall.gpx} download>GPX</a>}
                           </div>
                           <div className={styles.routeList} aria-label={`${activeWall.n} routes`}>
                             {routes.length ? routes.map((route, routeIndex) => (
@@ -722,7 +703,6 @@ export default function ExploreAtlasExperience() {
                               <small>
                                 {wall.ct} routes
                                 {wall.lat != null && wall.lon != null ? ` · ${distanceKm(VIENNA_CITY_CENTER, [wall.lat, wall.lon]).toFixed(0)} km` : ""}
-                                {wall.gpx ? " · GPX" : ""}
                               </small>
                             </button>
                           ))}

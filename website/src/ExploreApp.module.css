@@ -129,10 +129,13 @@
 .phoneHint { margin: 0; color: #a9a394; font: 600 10px/1.3 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .05em; text-transform: uppercase; }
 .phoneStage { min-height: 0; flex: 1; overflow: auto; overscroll-behavior: contain; }
 .phoneStage > article { position: relative !important; width: 100% !important; height: 100% !important; min-height: 0 !important; transform: none !important; }
-.phoneNav { display: flex; gap: 6px; overflow-x: auto; padding: 4px 0 max(4px, env(safe-area-inset-bottom)); scrollbar-width: thin; }
-.phoneNav button { flex: 0 0 auto; min-height: 44px; max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.phoneNav { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 5px; padding: 4px 0 max(4px, env(safe-area-inset-bottom)); }
+.phoneNav button { min-height: 44px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .phoneNav button[aria-current="page"],
 .phoneNav button[aria-pressed="true"] { color: #151a15; border-color: #d2bd87; background: #d2bd87; }
+.phoneMoreMenu { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; padding: 8px; border: 1px solid rgb(255 255 255 / 14%); border-radius: 14px; background: rgb(8 14 10 / 94%); box-shadow: 0 16px 35px rgb(0 0 0 / 34%); }
+.phoneMoreMenu button { min-height: 42px; padding: 8px 10px; color: #ddd7c8; border: 1px solid rgb(255 255 255 / 12%); border-radius: 10px; background: rgb(255 255 255 / 6%); font: 700 10px/1.1 Arial, sans-serif; cursor: pointer; }
+.phoneMoreMenu button[aria-current="page"] { color: #151a15; border-color: #d2bd87; background: #d2bd87; }
 .cardStack[data-exclusive-mode="expanded"] { z-index: 9450; overflow: visible; }
 .cardStack[data-exclusive-mode="fullscreen"] { z-index: 9500; overflow: visible; }
 .cardStack[data-exclusive-mode="expanded"],
@@ -286,5 +289,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .loading span { animation: none; }
+  .loading span,
+  .phoneShell,
+  .phoneMoreMenu { animation: none; }
 }

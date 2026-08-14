@@ -6,6 +6,7 @@ export function ServiceWorkerRegistration() {
   useEffect(() => {
     if (process.env.NODE_ENV !== "production" || !("serviceWorker" in navigator)) return;
     let disposed = false;
+    let removeUpdateListener: (() => void) | null = null;
     const register = async () => {
       try {
         const registration = await navigator.serviceWorker.register("/sw.js", {
@@ -20,6 +21,9 @@ export function ServiceWorkerRegistration() {
           const worker = registration.installing;
           worker?.addEventListener("statechange", announceUpdate);
         });
+        const applyUpdate = () => registration.waiting?.postMessage({ type: "SKIP_WAITING" });
+        window.addEventListener("vm:sw-apply-update", applyUpdate);
+        removeUpdateListener = () => window.removeEventListener("vm:sw-apply-update", applyUpdate);
         announceUpdate();
         void registration.update();
       } catch (error) {
@@ -27,7 +31,10 @@ export function ServiceWorkerRegistration() {
       }
     };
     void register();
-    return () => { disposed = true; };
+    return () => {
+      disposed = true;
+      removeUpdateListener?.();
+    };
   }, []);
 
   return null;

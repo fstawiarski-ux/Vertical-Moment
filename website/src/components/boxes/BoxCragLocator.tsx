@@ -50,8 +50,6 @@ type AtlasData = {
     regionCount: number;
     wallCount: number;
     routeCount: number;
-    gpxCount: number;
-    matchedGpxCount?: number;
   };
 };
 
@@ -454,7 +452,6 @@ export default function BoxCragLocator() {
               <div className={styles.detailActions}>
                 <button type="button" onClick={() => focusMap(selectedWall.rg, selectedWall)}>Focus map</button>
                 <a href={directionsUrl} target="_blank" rel="noreferrer">Open directions</a>
-                {selectedWall.gpx && <a href={selectedWall.gpx} download>GPX</a>}
               </div>
               <div className={styles.routeList} aria-label={`${selectedWall.n} route list`}>
                 {selectedRoutes.slice(0, 60).map((route, index) => (
@@ -483,7 +480,7 @@ export default function BoxCragLocator() {
                  {selectedWalls.map((wall) => (
                    <button type="button" key={wall.id} onClick={() => chooseWall(wall)}>
                     <span>{wall.n}</span>
-                    <small>{wall.ct} routes{wall.gpx ? " · GPX" : ""}</small>
+                    <small>{wall.ct} routes</small>
                    </button>
                  ))}
                </div>
@@ -500,7 +497,6 @@ export default function BoxCragLocator() {
         <span>{ATLAS.source.regionCount} regions</span>
         <span>{ATLAS.source.wallCount} crags</span>
         <span>{ATLAS.source.routeCount.toLocaleString("en")} routes</span>
-        <span>{ATLAS.source.gpxCount} GPX</span>
       </footer>
     </div>
   );

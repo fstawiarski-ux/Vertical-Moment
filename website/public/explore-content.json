@@ -1,6 +1,6 @@
 {
-  "version": 7,
-  "updatedAt": "2026-08-12",
+  "version": 8,
+  "updatedAt": "2026-08-14",
   "background": {
     "src": "/photography/explore-app/climbers-lounge-collage-45866ab7-1920.webp",
     "alt": "Vertical Moment climbers, hands, equipment and limestone",
@@ -170,6 +170,13 @@
       },
       "initialLayout": { "x": 282, "y": 272, "width": 280, "height": 168 }
     }
+  ],
+  "offlineData": [
+    "/data/v1/regions.json",
+    "/data/v1/crags.json",
+    "/data/v1/search-index.json",
+    "/data/v1/stats.json",
+    "/data/v1/facets.json"
   ],
   "offlinePack": [
     "/photography/explore-app/climbers-lounge-collage-45866ab7-960.avif",
