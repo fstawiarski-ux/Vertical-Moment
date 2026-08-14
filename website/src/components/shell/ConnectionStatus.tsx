@@ -25,9 +25,15 @@ export function ConnectionStatus() {
 
   return (
     <div className={styles.status} role="status" aria-live="polite">
-      {!online && <span>Offline · saved Explore content only</span>}
+      {!online && <span>Offline · cached route data + media only</span>}
       {updateReady && (
-        <button type="button" onClick={() => window.location.reload()}>
+        <button
+          type="button"
+          onClick={() => {
+            window.dispatchEvent(new Event("vm:sw-apply-update"));
+            window.setTimeout(() => window.location.reload(), 500);
+          }}
+        >
           Update ready · Reload
         </button>
       )}

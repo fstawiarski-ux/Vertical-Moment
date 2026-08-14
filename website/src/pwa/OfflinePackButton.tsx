@@ -41,10 +41,10 @@ export function OfflinePackButton({ urls }: { urls: string[] }) {
   const label = status === "saving"
     ? `Saving ${completed}/${urls.length}`
     : status === "saved"
-      ? "Saved offline"
+      ? "Data + media saved"
       : status === "partial"
         ? "Retry offline"
-        : "Save offline";
+        : "Save data + media";
 
   return <button type="button" onClick={() => void save()} disabled={status === "saving"}>{label}</button>;
 }

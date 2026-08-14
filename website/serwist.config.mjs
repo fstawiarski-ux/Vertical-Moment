@@ -1,4 +1,12 @@
+import { createHash } from "node:crypto";
+import { readFile } from "node:fs/promises";
 import { serwist } from "@serwist/next/config";
+
+const atlasDataFiles = ["regions.json", "crags.json", "search-index.json", "stats.json", "facets.json"];
+const atlasRevision = createHash("sha256")
+  .update(Buffer.concat(await Promise.all(atlasDataFiles.map((file) => readFile(new URL(`./public/data/v1/${file}`, import.meta.url))))))
+  .digest("hex")
+  .slice(0, 16);
 
 export default await serwist({
   swSrc: "src/pwa/service-worker.ts",
@@ -13,9 +21,10 @@ export default await serwist({
   // explore-content.json version bump, and the manifest revision whenever
   // manifest.webmanifest changes, or returning installs keep the old build.
   additionalPrecacheEntries: [
-    { url: "/explore-app", revision: "explore-app-v11" },
+    { url: "/explore-app", revision: "explore-app-v12" },
     { url: "/offline", revision: "offline-v1" },
-    { url: "/explore-content.json", revision: "registry-v7" },
+    { url: "/explore-content.json", revision: "registry-v8" },
+    ...atlasDataFiles.map((file) => ({ url: `/data/v1/${file}`, revision: atlasRevision })),
     { url: "/manifest.webmanifest", revision: "manifest-v2" },
     { url: "/icons/explore-app-192.png", revision: "icon-v1" },
     { url: "/icons/explore-app-512.png", revision: "icon-v1" },

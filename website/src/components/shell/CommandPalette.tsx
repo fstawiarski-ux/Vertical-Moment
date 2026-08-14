@@ -24,6 +24,8 @@ export function CommandPalette({ open, entries, initialQuery = "", onClose, onSe
 }) {
   const listId = useId();
   const inputRef = useRef<HTMLInputElement | null>(null);
+  const panelRef = useRef<HTMLDivElement | null>(null);
+  const restoreFocusRef = useRef<HTMLElement | null>(null);
   const [query, setQuery] = useState("");
   const [highlight, setHighlight] = useState(0);
   const [notice, setNotice] = useState<string | null>(null);
@@ -32,6 +34,7 @@ export function CommandPalette({ open, entries, initialQuery = "", onClose, onSe
 
   useEffect(() => {
     if (!open) return;
+    restoreFocusRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     setQuery(initialQuery);
     setHighlight(0);
     setNotice(null);
@@ -40,7 +43,10 @@ export function CommandPalette({ open, entries, initialQuery = "", onClose, onSe
       inputRef.current?.focus();
       inputRef.current?.select();
     });
-    return () => cancelAnimationFrame(frame);
+    return () => {
+      cancelAnimationFrame(frame);
+      restoreFocusRef.current?.focus();
+    };
   }, [initialQuery, open]);
 
   useEffect(() => {
@@ -81,14 +87,33 @@ export function CommandPalette({ open, entries, initialQuery = "", onClose, onSe
     }
   };
 
+  const onPanelKeyDown = (event: ReactKeyboardEvent<HTMLDivElement>) => {
+    if (event.key !== "Tab") return;
+    const focusable = Array.from(panelRef.current?.querySelectorAll<HTMLElement>(
+      'button, input, a[href], select, textarea, [tabindex]:not([tabindex="-1"])',
+    ) ?? []).filter((element) => !element.hasAttribute("disabled"));
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  };
+
   return (
     <div className={styles.scrim} role="presentation" onPointerDown={onClose}>
       <div
+        ref={panelRef}
         className={styles.panel}
         role="dialog"
         aria-modal="true"
         aria-label="Search the Climbers Lounge"
         onPointerDown={(event) => event.stopPropagation()}
+        onKeyDown={onPanelKeyDown}
       >
         <div className={styles.field}>
           <span className={styles.prompt} aria-hidden="true">⌕</span>

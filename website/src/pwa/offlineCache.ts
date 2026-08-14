@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * The cache the service worker's same-origin image route reads.
+ * The cache the service worker's same-origin image and atlas-data routes read.
  *
  * Offline packs are saved by the page, not by the worker, so they have to write
  * into this exact cache to be servable later. A programmatic `cache.add()` or

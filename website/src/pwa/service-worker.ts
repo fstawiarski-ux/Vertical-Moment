@@ -18,6 +18,10 @@ const isExploreAppNavigation = (pathname: string) => (
   pathname === "/explore-app" || pathname.startsWith("/explore-app/")
 );
 
+self.addEventListener("message", (event) => {
+  if (event.data?.type === "SKIP_WAITING") void self.skipWaiting();
+});
+
 const serwist = new Serwist({
   precacheEntries: self.__SW_MANIFEST,
   skipWaiting: true,
@@ -47,19 +51,13 @@ const serwist = new Serwist({
   },
   runtimeCaching: [
     {
-      matcher: ({ url, request }) => request.method === "GET" && (
-        url.hostname === "tile.openstreetmap.org"
-        || url.hostname.endsWith(".tile.opentopomap.org")
-        || url.hostname === "server.arcgisonline.com"
-        || url.hostname.endsWith(".basemaps.cartocdn.com")
-        || url.hostname === "api.mapbox.com"
-      ),
-      handler: new CacheFirst({
-        cacheName: "vm-map-tiles-v1",
-        plugins: [
-          new CacheableResponsePlugin({ statuses: [0, 200] }),
-          new ExpirationPlugin({ maxEntries: 160, maxAgeSeconds: 14 * 24 * 60 * 60, purgeOnQuotaError: true }),
-        ],
+      matcher: ({ url, request }) => isSameOrigin(url)
+        && request.method === "GET"
+        && url.pathname.startsWith("/data/v1/")
+        && url.pathname.endsWith(".json"),
+      handler: new StaleWhileRevalidate({
+        cacheName: "vm-images-v1",
+        plugins: [new CacheableResponsePlugin({ statuses: [200] })],
       }),
     },
     {
