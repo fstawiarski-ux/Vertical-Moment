@@ -4,6 +4,7 @@
 
 import { createElement, useEffect, useMemo, useRef, useState } from 'react';
 import { panoramas } from '../../data/panoramas';
+import { ensureModelViewer } from '../../components/model-viewer-loader';
 import styles from './wall-reveal.module.css';
 
 type StageId = 'place' | 'scrub' | 'topo' | 'model';
@@ -19,9 +20,6 @@ type Stage = {
   action: string;
   status: string;
 };
-
-const MODEL_VIEWER_SRC = 'https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js';
-const MODEL_VIEWER_ID = 'vm-wall-reveal-model-viewer';
 
 const stages: Stage[] = [
   {
@@ -74,28 +72,6 @@ const photographs = [
   ['/photography/gallery/vm-6693-high-on-the-pillar.webp', 'High on the pillar', 'Peilstein'],
   ['/photography/gallery/vm-7303-belay-talk.webp', 'Belay talk', 'Peilstein'],
 ] as const;
-
-function ensureModelViewer(): Promise<void> {
-  return new Promise((resolve, reject) => {
-    if (customElements.get('model-viewer')) {
-      resolve();
-      return;
-    }
-    const existing = document.getElementById(MODEL_VIEWER_ID) as HTMLScriptElement | null;
-    if (existing) {
-      existing.addEventListener('load', () => resolve(), { once: true });
-      existing.addEventListener('error', () => reject(new Error('The 3D viewer could not load.')), { once: true });
-      return;
-    }
-    const script = document.createElement('script');
-    script.id = MODEL_VIEWER_ID;
-    script.type = 'module';
-    script.src = MODEL_VIEWER_SRC;
-    script.onload = () => resolve();
-    script.onerror = () => reject(new Error('The 3D viewer needs a connection the first time it opens.'));
-    document.head.appendChild(script);
-  });
-}
 
 const timeLabel = (seconds: number) => {
   if (!Number.isFinite(seconds)) return '0:00';

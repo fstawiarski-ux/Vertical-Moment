@@ -1,26 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-
-const MODEL_VIEWER_JS = "https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js";
-
-function loadModelViewer(): Promise<void> {
-  return new Promise((resolve, reject) => {
-    if (customElements.get("model-viewer")) return resolve();
-    const existing = document.querySelector(`script[src="${MODEL_VIEWER_JS}"]`);
-    if (existing) {
-      existing.addEventListener("load", () => resolve());
-      existing.addEventListener("error", () => reject(new Error("model-viewer failed to load")));
-      return;
-    }
-    const s = document.createElement("script");
-    s.type = "module";
-    s.src = MODEL_VIEWER_JS;
-    s.onload = () => resolve();
-    s.onerror = () => reject(new Error("model-viewer failed to load — check your connection."));
-    document.head.appendChild(s);
-  });
-}
+import { ensureModelViewer } from "../../components/model-viewer-loader";
 
 export function Model3D({ glb, alt, webReady, note, height = 320, orientation, cameraOrbit, cameraTarget }: { glb: string; alt: string; webReady: boolean; note?: string; height?: number; orientation?: string; cameraOrbit?: string; cameraTarget?: string }) {
   const [ready, setReady] = useState(false);
@@ -31,7 +12,7 @@ export function Model3D({ glb, alt, webReady, note, height = 320, orientation, c
 
   useEffect(() => {
     let cancelled = false;
-    loadModelViewer().then(() => !cancelled && setReady(true)).catch(e => !cancelled && setErr(e.message));
+    ensureModelViewer().then(() => !cancelled && setReady(true)).catch(e => !cancelled && setErr(e.message));
     return () => { cancelled = true; };
   }, []);
 

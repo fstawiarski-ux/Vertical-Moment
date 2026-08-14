@@ -5,6 +5,7 @@
 import Link from 'next/link';
 import { createElement, useEffect, useMemo, useRef, useState } from 'react';
 import type { PanoramaExperienceModel, SectorViewId } from '../data/panorama-experiences';
+import { ensureModelViewer } from './model-viewer-loader';
 import styles from './panorama-experience.module.css';
 
 interface PanoramaExperienceProps {
@@ -28,8 +29,6 @@ interface GalleryDragState {
 
 const clamp = (value: number, min: number, max: number) => Math.min(max, Math.max(min, value));
 
-const MODEL_VIEWER_SRC = 'https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js';
-const MODEL_VIEWER_ID = 'vm-panorama-model-viewer';
 const SECTOR_VIEWS: Array<{ id: SectorViewId; label: string }> = [
   { id: 'photo', label: 'Photo' },
   { id: 'spatial', label: 'Spatial' },
@@ -37,28 +36,6 @@ const SECTOR_VIEWS: Array<{ id: SectorViewId; label: string }> = [
   { id: 'routes', label: 'Routes' },
   { id: 'model', label: '3D wall' },
 ];
-
-function ensureModelViewer(): Promise<void> {
-  return new Promise((resolve, reject) => {
-    if (customElements.get('model-viewer')) {
-      resolve();
-      return;
-    }
-    const existing = document.getElementById(MODEL_VIEWER_ID) as HTMLScriptElement | null;
-    if (existing) {
-      existing.addEventListener('load', () => resolve(), { once: true });
-      existing.addEventListener('error', () => reject(new Error('3D viewer unavailable')), { once: true });
-      return;
-    }
-    const script = document.createElement('script');
-    script.id = MODEL_VIEWER_ID;
-    script.type = 'module';
-    script.src = MODEL_VIEWER_SRC;
-    script.onload = () => resolve();
-    script.onerror = () => reject(new Error('3D viewer unavailable'));
-    document.head.appendChild(script);
-  });
-}
 
 export default function PanoramaExperience({ experience, backHref, routeFocus }: PanoramaExperienceProps) {
   const [chapterIndex, setChapterIndex] = useState(routeFocus ? 2 : 0);

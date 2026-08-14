@@ -5,9 +5,9 @@ Vertical Moment — API dataset builder (v1)
 Merges every route source into one canonical, versioned, API-shaped tree.
 
   INPUTS  (database/)
-    master/vertical_moment_master_routes_v1.xlsx   sheet "Routes"   (required)
+    master/vertical-moment-canonical.json           canonical route tree (required)
     sources/notion-export.csv                      Notion CSV export (optional)
-    sources/crags.geojson                          OSM crag features (optional)
+    master/vertical_moment_master_routes_v1.xlsx   preserved import baseline
 
   OUTPUT  (database/api/v1/)
     index.json            manifest: version, counts, every endpoint
@@ -211,7 +211,6 @@ def load_canonical_structural(path: Path) -> tuple[dict, dict]:
 
 SOURCES = [
     ("canonical", lambda d: load_canonical(d / "master" / "vertical-moment-canonical.json")),
-    ("notion", lambda d: load_notion_csv(d / "sources" / "notion-export.csv")),
 ]
 
 

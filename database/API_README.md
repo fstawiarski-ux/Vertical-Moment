@@ -44,23 +44,26 @@ Merged by `row_key`. Later sources fill gaps and override non-null fields;
 
 | Source | File | Required |
 |---|---|---|
-| master | `master/vertical_moment_master_routes_v1.xlsx` sheet `Routes` | yes |
-| notion | `sources/notion-export.csv` | no |
+| canonical | `master/vertical-moment-canonical.json` | yes |
+| notion | `sources/notion-export.csv` | review only; not auto-merged |
 
-### Resyncing from Notion
+The workbook at `master/vertical_moment_master_routes_v1.xlsx` is retained as
+an import/review baseline. It is not an active input when the canonical JSON
+exists.
 
-Notion is the editing workbench; this repo is what gets published. To pull
-Notion changes in:
+### Reviewing a Notion change
 
-1. Open the **Guidebook Routes** database in Notion
-2. `···` → Export → **CSV**, current view, no subpages
-3. Save as `database/sources/notion-export.csv`
-4. `python scripts/build_api.py`
-5. Commit the diff
+Notion is a review workbench; it is not an automatic publication source. To
+propose a change:
 
-Routes present in Notion but not in the master are **added**, not dropped, so
-this also captures the Österreich Ost multipitch set. Nothing is transcribed by
-hand and the export can be repeated any time.
+1. Export the **Guidebook Routes** database as a CSV for evidence.
+2. Review the proposed rows and provenance in a draft PR.
+3. Apply only the approved change to `master/vertical-moment-canonical.json`.
+4. Run `python scripts/build_api.py`, `npm run sync-data`, and `npm run verify-data`.
+5. Commit the canonical and generated API diff together.
+
+This keeps the canonical JSON, generated API, website mirror, and client atlas
+on one publication path with no silent source conflict.
 
 ## Adding a source
 
