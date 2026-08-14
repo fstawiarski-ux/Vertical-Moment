@@ -25,7 +25,9 @@ const MIN_WIDTH = 210;
 const MIN_HEIGHT = 130;
 const BOX_GAP = 10;
 const RIGHT_RAIL = 106;
-const BOTTOM_TIMELINE = 66;
+// The compact rail is taller than the pre-rail timeline; leave a small visual
+// gap so drag and resize clamps never place a box beneath its controls.
+const BOTTOM_TIMELINE = 96;
 const clamp = (value: number, min: number, max: number) => Math.min(max, Math.max(min, value));
 
 const resizeClass: Record<ResizeDirection, string> = {
@@ -116,7 +118,7 @@ export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
     event.currentTarget.setPointerCapture(event.pointerId);
   };
 
-  const moveResize = (event: ReactPointerEvent<HTMLButtonElement>) => {
+  const moveResize = (event: ReactPointerEvent<HTMLElement>) => {
     const resize = resizeRef.current;
     if (!resize || resize.pointerId !== event.pointerId) return;
     const dx = event.clientX - resize.startX;
@@ -142,12 +144,13 @@ export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
     }
   };
 
-  const endResize = (event: ReactPointerEvent<HTMLButtonElement>) => {
+  const endResize = (event: ReactPointerEvent<HTMLElement>) => {
     if (resizeRef.current?.pointerId === event.pointerId) resizeRef.current = null;
   };
 
   const width = box.width ?? 360;
   const height = box.height ?? 280;
+  const modeClass = styles[`boxMode${box.mode[0].toUpperCase()}${box.mode.slice(1)}`] ?? "";
   const contentScale = viewportMode === "desktop" && box.mode === "normal"
     ? clamp(Math.min(width / 360, height / 280), 0.58, 1)
     : 1;
@@ -165,20 +168,23 @@ export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
 
   return (
     <article
-      className={`${styles.box} ${styles[`boxMode${box.mode[0].toUpperCase()}${box.mode.slice(1)}`]} ${dragging ? styles.dragging : ""}`}
+      className={`${styles.box} ${modeClass} ${dragging ? styles.dragging : ""}`}
       data-viewport={viewportMode}
       style={inlineStyle}
       onPointerDown={focus}
+      onPointerMove={moveResize}
+      onPointerUp={endResize}
+      onPointerCancel={endResize}
     >
+      <div className={styles.windowControls} aria-label={`${title} window controls`}>
+        <button type="button" onClick={() => setMode(box.mode === "minimized" ? "normal" : "minimized")} aria-label={box.mode === "minimized" ? `Restore ${title}` : `Minimize ${title}`} title={controlLabel[box.mode]}>−</button>
+        <button type="button" onClick={() => setMode(box.mode === "expanded" ? "normal" : "expanded")} aria-label={box.mode === "expanded" ? `Close expanded ${title}` : `Expand ${title}`} title="Expand">□</button>
+        <button type="button" onClick={() => setMode(box.mode === "fullscreen" ? "normal" : "fullscreen")} aria-label={box.mode === "fullscreen" ? `Exit full screen ${title}` : `Open ${title} full screen`} title="Full screen">⛶</button>
+      </div>
       <div className={styles.chrome}>
         <div className={styles.header} onPointerDown={beginDrag} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag}>
           <span className={styles.handle} aria-hidden="true"><i /><i /><i /><i /><i /><i /></span>
           <div className={styles.heading}><small>{eyebrow}</small><h2>{title}</h2></div>
-          <div className={styles.controls}>
-            <button type="button" onClick={() => setMode(box.mode === "minimized" ? "normal" : "minimized")} aria-label={box.mode === "minimized" ? `Restore ${title}` : `Minimize ${title}`} title={controlLabel[box.mode]}>−</button>
-            <button type="button" onClick={() => setMode(box.mode === "expanded" ? "normal" : "expanded")} aria-label={box.mode === "expanded" ? `Close expanded ${title}` : `Expand ${title}`} title="Expand">□</button>
-            <button type="button" onClick={() => setMode(box.mode === "fullscreen" ? "normal" : "fullscreen")} aria-label={box.mode === "fullscreen" ? `Exit full screen ${title}` : `Open ${title} full screen`} title="Full screen">⛶</button>
-          </div>
         </div>
         {box.mode !== "minimized" && <div className={styles.body}>{children}</div>}
       </div>
@@ -189,9 +195,6 @@ export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
           className={`${styles.resizeHandle} ${resizeClass[direction]}`}
           aria-label={`Resize ${title} from ${direction}`}
           onPointerDown={beginResize(direction)}
-          onPointerMove={moveResize}
-          onPointerUp={endResize}
-          onPointerCancel={endResize}
         />
       ))}
     </article>

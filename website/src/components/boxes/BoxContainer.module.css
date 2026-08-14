@@ -3,7 +3,7 @@
   display: block;
   min-width: 210px;
   min-height: 130px;
-  overflow: hidden;
+  overflow: visible;
   color: #f4f1e8;
   border: 1px solid rgb(230 219 190 / 24%);
   border-radius: 18px;
@@ -19,6 +19,8 @@
   width: calc(100% * var(--box-content-inverse, 1));
   height: calc(100% * var(--box-content-inverse, 1));
   flex-direction: column;
+  overflow: hidden;
+  border-radius: inherit;
   transform: scale(var(--box-content-scale, 1));
   transform-origin: top left;
 }
@@ -32,7 +34,7 @@
 .header {
   display: grid;
   min-height: 54px;
-  grid-template-columns: 20px minmax(0, 1fr) auto;
+  grid-template-columns: 20px minmax(0, 1fr);
   align-items: center;
   gap: 10px;
   padding: 8px 10px 8px 14px;
@@ -80,8 +82,22 @@
   white-space: nowrap;
 }
 
-.controls { display: flex; gap: 4px; }
-.controls button {
+.windowControls {
+  position: absolute;
+  top: -12px;
+  right: 34px;
+  z-index: 12;
+  display: flex;
+  gap: 4px;
+  opacity: .74;
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.windowControls:hover,
+.windowControls:focus-within,
+.box:hover .windowControls { opacity: 1; }
+
+.windowControls button {
   display: grid;
   width: 32px;
   height: 32px;
@@ -94,8 +110,8 @@
   cursor: pointer;
 }
 
-.controls button:hover,
-.controls button:focus-visible {
+.windowControls button:hover,
+.windowControls button:focus-visible {
   color: #151b16;
   outline: none;
   border-color: #d1b97d;
@@ -109,7 +125,7 @@
   overscroll-behavior: contain;
 }
 
-.resizeHandle { position: absolute; z-index: 8; padding: 0; border: 0; background: transparent; touch-action: none; }
+.resizeHandle { position: absolute; z-index: 20; padding: 0; border: 0; background: transparent; pointer-events: auto; touch-action: none; }
 .resizeN,
 .resizeS { right: 18px; left: 18px; height: 10px; cursor: ns-resize; }
 .resizeN { top: 0; }
@@ -138,6 +154,19 @@
   border-bottom: 1px solid rgb(209 185 125 / 72%);
 }
 .resizeSw::after { right: auto; left: 4px; transform: rotate(90deg); }
+.resizeE::after,
+.resizeW::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 2px;
+  height: 34px;
+  border-radius: 2px;
+  background: rgb(209 185 125 / 46%);
+  transform: translateY(-50%);
+}
+.resizeE::after { right: 3px; }
+.resizeW::after { left: 3px; }
 
 .boxModeMinimized {
   width: 58px !important;
@@ -157,15 +186,21 @@
 
 .boxModeMinimized .handle,
 .boxModeMinimized .heading,
-.boxModeMinimized .controls button:not(:first-child) { display: none; }
+.boxModeMinimized .windowControls button:not(:first-child) { display: none; }
 
-.boxModeMinimized .controls button:first-child {
+.boxModeMinimized .windowControls {
+  top: 7px;
+  right: 7px;
+  opacity: 1;
+}
+
+.boxModeMinimized .windowControls button:first-child {
   width: 44px;
   height: 44px;
   font-size: 0;
 }
 
-.boxModeMinimized .controls button:first-child::after {
+.boxModeMinimized .windowControls button:first-child::after {
   content: "+";
   font-size: 20px;
 }
@@ -178,6 +213,8 @@
 
 .boxModeExpanded { z-index: 9450 !important; }
 .boxModeFullscreen { z-index: 9490 !important; }
+.boxModeExpanded .windowControls,
+.boxModeFullscreen .windowControls { top: 14px; right: 24px; opacity: .82; }
 
 .boxModeExpanded {
   inset: max(76px, 8vh) max(28px, 8vw) max(78px, 8vh);
@@ -221,9 +258,10 @@
 }
 
 @media (max-width: 767px) {
-  .controls button { width: 36px; height: 36px; }
-  .controls button:nth-child(3) { display: none; }
-  .header { grid-template-columns: 14px minmax(0, 1fr) auto; padding-left: 10px; }
+  .windowControls button { width: 36px; height: 36px; }
+  .windowControls button:nth-child(3) { display: none; }
+  .windowControls { top: -10px; right: 16px; }
+  .header { grid-template-columns: 14px minmax(0, 1fr); padding-left: 10px; }
 
   .box[data-viewport="mobile"].boxModeExpanded {
     position: fixed;
@@ -247,7 +285,7 @@
     border-radius: 0;
   }
 
-  .box[data-viewport="mobile"].boxModeFullscreen .controls button:nth-child(3) { display: grid; }
+  .box[data-viewport="mobile"].boxModeFullscreen .windowControls button:nth-child(3) { display: grid; }
 
 }
 
