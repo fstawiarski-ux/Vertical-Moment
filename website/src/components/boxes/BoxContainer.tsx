@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, type CSSProperties, type MouseEvent as ReactMouseEvent, type PointerEvent as ReactPointerEvent, type ReactNode } from "react";
 import { useLayoutState } from "../../core/layoutState";
+import { EXPLORE_SAFE_ZONE } from "../../core/layoutAlgorithms";
 import type { BoxMode, BoxState, ViewportMode } from "../../core/types";
 import styles from "./BoxContainer.module.css";
 
@@ -27,10 +28,6 @@ type ResizePoint = Pick<PointerEvent, "pointerId" | "clientX" | "clientY">;
 const MIN_WIDTH = 210;
 const MIN_HEIGHT = 130;
 const BOX_GAP = 10;
-const RIGHT_RAIL = 106;
-// The compact rail is taller than the pre-rail timeline; leave a small visual
-// gap so drag and resize clamps never place a box beneath its controls.
-const BOTTOM_TIMELINE = 96;
 const clamp = (value: number, min: number, max: number) => Math.min(max, Math.max(min, value));
 
 const resizeClass: Record<ResizeDirection, string> = {
@@ -93,8 +90,16 @@ export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
     if (!drag || drag.pointerId !== event.pointerId) return;
     const width = box.width ?? 360;
     const height = box.height ?? 280;
-    const x = clamp(drag.originX + event.clientX - drag.startX, 8, Math.max(8, window.innerWidth - width - RIGHT_RAIL));
-    const y = clamp(drag.originY + event.clientY - drag.startY, 72, Math.max(72, window.innerHeight - height - BOTTOM_TIMELINE));
+    const x = clamp(
+      drag.originX + event.clientX - drag.startX,
+      EXPLORE_SAFE_ZONE.left,
+      Math.max(EXPLORE_SAFE_ZONE.left, window.innerWidth - width - EXPLORE_SAFE_ZONE.right),
+    );
+    const y = clamp(
+      drag.originY + event.clientY - drag.startY,
+      EXPLORE_SAFE_ZONE.top,
+      Math.max(EXPLORE_SAFE_ZONE.top, window.innerHeight - height - EXPLORE_SAFE_ZONE.bottom),
+    );
     if (isCollisionFree(x, y, width, height)) dispatch({ type: "UPDATE_BOX", id: box.id, patch: { x, y } });
   };
 
@@ -178,14 +183,14 @@ export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
     let width = resize.originWidth;
     let height = resize.originHeight;
 
-    if (resize.direction.includes("e")) width = clamp(resize.originWidth + dx, MIN_WIDTH, window.innerWidth - resize.originX - RIGHT_RAIL);
-    if (resize.direction.includes("s")) height = clamp(resize.originHeight + dy, MIN_HEIGHT, window.innerHeight - resize.originY - BOTTOM_TIMELINE);
+    if (resize.direction.includes("e")) width = clamp(resize.originWidth + dx, MIN_WIDTH, window.innerWidth - resize.originX - EXPLORE_SAFE_ZONE.right);
+    if (resize.direction.includes("s")) height = clamp(resize.originHeight + dy, MIN_HEIGHT, window.innerHeight - resize.originY - EXPLORE_SAFE_ZONE.bottom);
     if (resize.direction.includes("w")) {
-      x = clamp(resize.originX + dx, 8, resize.originX + resize.originWidth - MIN_WIDTH);
+      x = clamp(resize.originX + dx, EXPLORE_SAFE_ZONE.left, resize.originX + resize.originWidth - MIN_WIDTH);
       width = resize.originWidth + resize.originX - x;
     }
     if (resize.direction.includes("n")) {
-      y = clamp(resize.originY + dy, 72, resize.originY + resize.originHeight - MIN_HEIGHT);
+      y = clamp(resize.originY + dy, EXPLORE_SAFE_ZONE.top, resize.originY + resize.originHeight - MIN_HEIGHT);
       height = resize.originHeight + resize.originY - y;
     }
 
@@ -225,15 +230,15 @@ export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
       style={inlineStyle}
       onPointerDown={focus}
     >
-      <div className={styles.windowControls} aria-label={`${title} window controls`}>
-        <button type="button" onClick={() => setMode(box.mode === "minimized" ? "normal" : "minimized")} aria-label={box.mode === "minimized" ? `Restore ${title}` : `Minimize ${title}`} title={controlLabel[box.mode]}>−</button>
-        <button type="button" onClick={() => setMode(box.mode === "expanded" ? "normal" : "expanded")} aria-label={box.mode === "expanded" ? `Close expanded ${title}` : `Expand ${title}`} title="Expand">□</button>
-        <button type="button" onClick={() => setMode(box.mode === "fullscreen" ? "normal" : "fullscreen")} aria-label={box.mode === "fullscreen" ? `Exit full screen ${title}` : `Open ${title} full screen`} title="Full screen">⛶</button>
-      </div>
       <div className={styles.chrome}>
         <div className={styles.header} onPointerDown={beginDrag} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag}>
           <span className={styles.handle} aria-hidden="true"><i /><i /><i /><i /><i /><i /></span>
           <div className={styles.heading}><small>{eyebrow}</small><h2>{title}</h2></div>
+          <div className={styles.windowControls} aria-label={`${title} window controls`}>
+            <button type="button" onClick={() => setMode(box.mode === "minimized" ? "normal" : "minimized")} aria-label={box.mode === "minimized" ? `Restore ${title}` : `Minimize ${title}`} title={controlLabel[box.mode]}>−</button>
+            <button type="button" onClick={() => setMode(box.mode === "expanded" ? "normal" : "expanded")} aria-label={box.mode === "expanded" ? `Close expanded ${title}` : `Expand ${title}`} title="Expand">□</button>
+            <button type="button" onClick={() => setMode(box.mode === "fullscreen" ? "normal" : "fullscreen")} aria-label={box.mode === "fullscreen" ? `Exit full screen ${title}` : `Open ${title} full screen`} title="Full screen">⛶</button>
+          </div>
         </div>
         {box.mode !== "minimized" && <div className={styles.body}>{children}</div>}
       </div>

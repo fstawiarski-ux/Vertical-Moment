@@ -5,6 +5,11 @@
   color: #f4f1e8;
   background: #0d1510;
   isolation: isolate;
+  --explore-safe-top: max(146px, calc(env(safe-area-inset-top) + 136px));
+  --explore-dock-top: max(82px, calc(env(safe-area-inset-top) + 72px));
+  --explore-safe-right: 106px;
+  --explore-safe-bottom: max(96px, calc(env(safe-area-inset-bottom) + 96px));
+  --explore-safe-left: max(8px, env(safe-area-inset-left));
 }
 
 .brand {
@@ -49,9 +54,10 @@
 .boxLayer { position: absolute; inset: 0; z-index: 10; pointer-events: none; animation: workspaceReveal 520ms cubic-bezier(.2,.8,.2,1) both; }
 .boxLayer > * { pointer-events: auto; }
 .boxLayer[data-layout="tablet"] {
-  top: 82px;
-  right: 76px;
-  bottom: 80px;
+  top: var(--explore-safe-top);
+  right: var(--explore-safe-right);
+  bottom: var(--explore-safe-bottom);
+  left: var(--explore-safe-left);
   display: grid;
   overflow-y: auto;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -63,7 +69,7 @@
 
 .cardStack {
   position: absolute;
-  inset: 82px 0 76px;
+  inset: var(--explore-safe-top) 0 var(--explore-safe-bottom);
   z-index: 10;
   display: flex;
   flex-direction: column;
@@ -77,41 +83,74 @@
   animation: workspaceReveal 520ms cubic-bezier(.2,.8,.2,1) both;
 }
 
-.minimizedTray {
+.workspaceDock {
   position: absolute;
-  top: max(76px, calc(env(safe-area-inset-top) + 72px));
-  right: 18px;
+  top: var(--explore-dock-top);
+  right: var(--explore-safe-right);
+  left: clamp(390px, 26vw, 520px);
   z-index: 9400;
   display: flex;
-  max-width: calc(100vw - 36px);
+  min-width: 0;
+  max-width: calc(100vw - var(--explore-safe-right) - clamp(390px, 26vw, 520px));
+  align-items: center;
   gap: 8px;
-  overflow-x: auto;
+  padding: 4px;
+  border: 1px solid rgb(255 255 255 / 13%);
+  border-radius: 14px;
+  background: rgb(8 14 10 / 62%);
+  box-shadow: 0 16px 46px rgb(0 0 0 / 24%);
+  backdrop-filter: blur(14px) saturate(1.1);
 }
 
-.minimizedTray button {
+.dockLabel {
   display: grid;
-  min-width: 116px;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  gap: 3px;
+  width: 86px;
+  min-width: 86px;
+  padding: 0 8px;
+  color: #d2bd87;
+  font: 700 9px/1 ui-monospace, SFMono-Regular, Consolas, monospace;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.dockLabel span { color: #a9a394; font-size: 8px; letter-spacing: .06em; }
+.dockItems { display: flex; min-width: 0; gap: 5px; overflow-x: auto; scrollbar-width: thin; }
+
+.workspaceDockButton {
+  display: grid;
+  box-sizing: border-box;
+  width: 108px;
+  min-width: 108px;
+  max-width: 108px;
+  min-height: 42px;
   height: 42px;
   flex: 0 0 auto;
-  place-items: center;
-  padding: 0 12px;
-  color: #121914;
-  border: 1px solid rgb(255 255 255 / 24%);
-  border-radius: 13px;
-  background: #d2bd87;
-  box-shadow: 0 12px 36px rgb(0 0 0 / 32%);
+  align-content: center;
+  gap: 3px;
+  padding: 0 11px;
+  color: #ddd7c8;
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 10px;
+  background: rgb(255 255 255 / 5%);
   cursor: pointer;
 }
 
-.minimizedTray button span {
+.workspaceDockButton span {
   overflow: hidden;
-  max-width: 18ch;
+  max-width: 12ch;
   font: 700 11px/1.1 Arial, sans-serif;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.minimizedTray button:hover,
-.minimizedTray button:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.workspaceDockButton small { color: #9f998b; font: 700 8px/1 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .08em; text-transform: uppercase; }
+.workspaceDockButton[data-current="true"] { color: #151a15; border-color: #d2bd87; background: #d2bd87; }
+.workspaceDockButton[data-current="true"] small { color: #4d4a39; }
+.workspaceDockButton:hover,
+.workspaceDockButton:focus-visible { outline: 2px solid #fff; outline-offset: 2px; border-color: #d2bd87; background: rgb(210 189 135 / 20%); }
+.workspaceDockButton[data-current="true"]:hover,
+.workspaceDockButton[data-current="true"]:focus-visible { background: #e2cf9a; }
 
 .boxContent { min-height: 100%; display: flex; flex-direction: column; }
 .boxContent picture { display: block; min-height: 0; flex: 1; overflow: hidden; }
@@ -180,12 +219,12 @@
 }
 @media (max-width: 767px) {
   .cardStack {
-    right: 0;
+    right: 72px;
     padding-right: 8px;
   }
   .cardStack[data-station-peek="true"] { top: 190px; }
   .boxLayer {
-    inset: 82px 0 76px 0;
+    inset: var(--explore-safe-top) 72px var(--explore-safe-bottom) 0;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -209,7 +248,12 @@
   }
   .brand { right: 16px; left: 16px; }
   .brand nav { top: 5px; left: 140px; }
-  .minimizedTray { top: max(126px, calc(env(safe-area-inset-top) + 120px)); right: 14px; left: 14px; }
+  .workspaceDock { top: max(76px, calc(env(safe-area-inset-top) + 70px)); right: 14px; left: 14px; max-width: none; }
+  .dockLabel { min-width: 90px; }
+  .workspaceDockButton { width: 116px; min-width: 116px; max-width: 116px; }
+  .app[data-station-peek="true"] .workspaceDock { top: max(188px, calc(env(safe-area-inset-top) + 182px)); }
+  .cardStack { top: 144px; }
+  .cardStack[data-station-peek="true"] { top: 256px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

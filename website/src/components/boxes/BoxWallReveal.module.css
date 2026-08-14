@@ -63,6 +63,7 @@
 .story p { max-width: 430px; margin: 0; color: #d3cdc0; font: 500 10px/1.48 Arial, sans-serif; }
 .storyActions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
 .storyActions button { color: #f0e5c4; border-color: rgb(211 183 111 / 36%); background: rgb(7 12 9 / 72%); backdrop-filter: blur(8px); }
+.storyActions .deliveryButton { color: #bdb6a8; border-color: rgb(255 255 255 / 13%); background: rgb(7 12 9 / 54%); }
 
 .sharedStage,
 .topoStage { position: absolute; inset: 0; }

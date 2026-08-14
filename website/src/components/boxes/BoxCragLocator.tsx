@@ -454,21 +454,34 @@ export default function BoxCragLocator() {
                 {!selectedRoutes.length && <p>No individual route rows supplied.</p>}
               </div>
             </>
-          ) : (
-            <>
-              <small>Region · {selectedWalls.length} crags</small>
-              <h3>{selectedRegion}</h3>
-              <p>{selectedRegionData.ct} routes · {selectedRegionData.ok} mapped · {selectedRegionData.tbf} pending</p>
-              <div className={styles.wallList}>
-                {selectedWalls.map((wall) => (
-                  <button type="button" key={wall.id} onClick={() => chooseWall(wall)}>
+           ) : (
+             <>
+               <small>Region summary · {selectedWalls.length} crags</small>
+               <h3>{selectedRegion}</h3>
+               <p>{selectedRegionData.ct} routes · {selectedRegionData.ok} mapped · {selectedRegionData.tbf} pending</p>
+               <dl className={styles.regionStats}>
+                 <div><dt>Crags</dt><dd>{selectedWalls.length}</dd></div>
+                 <div><dt>Mapped routes</dt><dd>{selectedRegionData.ok}</dd></div>
+                 <div><dt>Pending review</dt><dd>{selectedRegionData.tbf}</dd></div>
+               </dl>
+               <div className={styles.detailHeading}>
+                 <strong>Available crags</strong>
+                 <small>{selectedWalls.length ? "Select one to inspect" : "No crags listed"}</small>
+               </div>
+               <div className={styles.wallList}>
+                 {selectedWalls.map((wall) => (
+                   <button type="button" key={wall.id} onClick={() => chooseWall(wall)}>
                     <span>{wall.n}</span>
                     <small>{wall.ct} routes{wall.gpx ? " · GPX" : ""}</small>
-                  </button>
-                ))}
-              </div>
-            </>
-          )}
+                   </button>
+                 ))}
+               </div>
+               <div className={styles.detailNote}>
+                 <span>Field review status</span>
+                 <p>Route geometry and pending rows remain provisional until their source is reviewed.</p>
+               </div>
+             </>
+           )}
         </aside>
       </div>
 
