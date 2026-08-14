@@ -5,6 +5,7 @@ Owner: Vertical Moment / fstawiarski-ux
 Repository: `https://github.com/fstawiarski-ux/Vertical-Moment`
 Review branch: `pwa/explore-layout-2026-08-14`
 Base branch: `main`
+Draft PR: `https://github.com/fstawiarski-ux/Vertical-Moment/pull/45`
 Current code commit: `ca523cc318744b08889eb1e91979124f39f00e6d` (`fix(pwa): harden desktop box resizing`)
 
 ## Current state
