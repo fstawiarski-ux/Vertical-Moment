@@ -127,17 +127,17 @@
 
 .resizeHandle { position: absolute; z-index: 20; padding: 0; border: 0; background: transparent; pointer-events: auto; touch-action: none; }
 .resizeN,
-.resizeS { right: 18px; left: 18px; height: 10px; cursor: ns-resize; }
+.resizeS { right: 16px; left: 16px; height: 14px; cursor: ns-resize; }
 .resizeN { top: 0; }
 .resizeS { bottom: 0; }
 .resizeE,
-.resizeW { top: 18px; bottom: 18px; width: 10px; cursor: ew-resize; }
+.resizeW { top: 16px; bottom: 16px; width: 14px; cursor: ew-resize; }
 .resizeE { right: 0; }
 .resizeW { left: 0; }
 .resizeNe,
 .resizeSe,
 .resizeSw,
-.resizeNw { width: 20px; height: 20px; }
+.resizeNw { width: 26px; height: 26px; }
 .resizeNe { top: 0; right: 0; cursor: nesw-resize; }
 .resizeSe { right: 0; bottom: 0; cursor: nwse-resize; }
 .resizeSw { bottom: 0; left: 0; cursor: nesw-resize; }
