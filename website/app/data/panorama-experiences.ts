@@ -389,11 +389,32 @@ export function getPanoramaExperience(regionSlug: string, cragSlug?: string): Pa
   };
 }
 
+export function hasPanoramaRegion(regionSlug: string) {
+  return regionPanoramaCollections.some((item) => item.regionSlug === regionSlug);
+}
+
+export function hasPanoramaCrag(regionSlug: string, cragSlug: string) {
+  return panoramaExperienceDefinitions.some(
+    (item) => item.regionSlug === regionSlug && item.cragSlug === cragSlug,
+  );
+}
+
+export function getKnownPanoramaExperience(regionSlug: string, cragSlug?: string) {
+  if (cragSlug ? !hasPanoramaCrag(regionSlug, cragSlug) : !hasPanoramaRegion(regionSlug)) return null;
+  return getPanoramaExperience(regionSlug, cragSlug);
+}
+
 export function getCragPanoramaHref(region: string, crag: string, route?: string) {
-  const base = `/explore/${slugifyPanoramaSegment(region)}/${slugifyPanoramaSegment(crag)}/panorama`;
+  const base = `/panoramas/${slugifyPanoramaSegment(region)}/${slugifyPanoramaSegment(crag)}`;
   return route ? `${base}?route=${encodeURIComponent(route)}` : base;
 }
 
+export function getKnownCragPanoramaHref(region: string, crag: string, route?: string) {
+  const regionSlug = slugifyPanoramaSegment(region);
+  const cragSlug = slugifyPanoramaSegment(crag);
+  return hasPanoramaCrag(regionSlug, cragSlug) ? getCragPanoramaHref(regionSlug, cragSlug, route) : null;
+}
+
 export function getRegionPanoramaHref(region: string) {
-  return `/explore/${slugifyPanoramaSegment(region)}/panoramas`;
+  return `/panoramas/${slugifyPanoramaSegment(region)}`;
 }

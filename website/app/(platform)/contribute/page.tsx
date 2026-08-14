@@ -35,8 +35,8 @@ export default async function ContributePage() {
             <ContributeWorkspace />
             <section className="field-report-section" id="quick-report">
               <div className="eyebrow">Fast field action</div>
-              <h1>Report from the field</h1>
-              <p className="muted">GPS, photos, notes or parking details — send whatever you have, no account needed.</p>
+                <h1>Save a field note</h1>
+                <p className="muted">GPS, photos, notes or parking details — prepare whatever you have locally, no account needed.</p>
               <Suspense fallback={<div className="muted">Loading report form...</div>}>
                 <FieldReport />
               </Suspense>

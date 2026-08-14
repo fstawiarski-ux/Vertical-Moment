@@ -163,7 +163,7 @@ export function FieldReport() {
     return (
       <div className="card done">
         <div className="eyebrow">Ready on this device</div>
-        <h1>Your report is prepared.</h1>
+        <h1>Your field note is prepared.</h1>
         <p className="muted">
           {report.cragName ? `${report.cragName} - ` : ""}nothing has uploaded or published. Export the ZIP package to inspect, move or share it.
         </p>

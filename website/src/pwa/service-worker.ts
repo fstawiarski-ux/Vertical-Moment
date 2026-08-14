@@ -14,11 +14,8 @@ import {
 declare const self: ServiceWorkerGlobalScope & { __SW_MANIFEST: Array<PrecacheEntry | string> };
 
 const isSameOrigin = (url: URL) => url.origin === self.location.origin;
-const isPrivateSpatialNavigation = (pathname: string) => (
-  pathname === "/explore"
-  || pathname.startsWith("/explore/")
-  || pathname === "/nasenwand-concepts"
-  || pathname === "/vision/wall-reveal"
+const isExploreAppNavigation = (pathname: string) => (
+  pathname === "/explore-app" || pathname.startsWith("/explore-app/")
 );
 
 const serwist = new Serwist({
@@ -106,13 +103,7 @@ const serwist = new Serwist({
     {
       matcher: ({ url, request }) => isSameOrigin(url)
         && request.mode === "navigate"
-        && (
-          url.pathname.startsWith("/explore-app")
-          || isPrivateSpatialNavigation(url.pathname)
-          || url.pathname === "/contribute"
-          || url.pathname === "/report"
-          || url.pathname === "/offline"
-        ),
+        && isExploreAppNavigation(url.pathname),
       handler: new NetworkFirst({
         cacheName: "vm-explore-pages-v1",
         networkTimeoutSeconds: 3,

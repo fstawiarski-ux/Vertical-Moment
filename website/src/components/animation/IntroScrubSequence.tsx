@@ -291,7 +291,7 @@ export function IntroScrubSequence({ sequence, mode, onUnlock }: {
       </div>
 
       {resolved && (
-        <div className={styles.timeline}>
+        <div className={styles.timeline} data-unlocked={unlocked ? "true" : "false"}>
           <label className={styles.visuallyHidden} htmlFor="explore-intro-timeline">Move from Region on the left to Topo on the right</label>
           <span className={styles.chapterLabels} aria-label="Scrub stations, Region to Rock to Sector to Topo">
             {SCRUB_STATIONS.map((station) => (

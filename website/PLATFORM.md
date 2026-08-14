@@ -59,4 +59,4 @@ and are not included in the public sitemap.
 `/contribute` and `/report` are the unlisted local-first contributor beta and
 emit `noindex` metadata. `/review-preview` is a directly reachable internal
 draft review surface and also emits `noindex`; it is not exposed in shared
-navigation. `/start` remains a legacy redirect to `/`.
+navigation. `/start` remains a legacy redirect into `/explore-app?intro=skip`.

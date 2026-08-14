@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import { CragMap } from "../../../components/crag-map";
 import { Model3D } from "../../../components/model-3d";
@@ -25,6 +25,9 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
 
 export default async function CragPage({ params }: { params: Promise<{ region: string; crag: string }> }) {
   const { region, crag: cragSlug } = await params;
+  if (region === "wachau" && (cragSlug === "nasenwand" || cragSlug === "durnstein")) {
+    redirect(`/panoramas/${region}/${cragSlug}`);
+  }
   const crag = getCragDetail(region, cragSlug);
   if (!crag) notFound();
   const model = find3DModel(crag.name);

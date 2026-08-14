@@ -7,31 +7,19 @@ import type {
   WheelEvent as ReactWheelEvent,
 } from 'react';
 import { useEffect, useRef, useState } from 'react';
+import { NASENWAND_ROUTES, type NasenwandRoute } from '../../data/nasenwand-routes';
 import { PLACE_WALL_FRAMES } from './nasenwand-flagship-frames';
 import styles from './nasenwand-flagship.module.css';
 
 type Chapter = 0 | 1 | 2 | 3;
-type Route = { name: string; grade: string; length?: string; pitches?: string };
+type Route = NasenwandRoute;
 type Point = { x: number; y: number };
 type PanoState = { zoom: number; x: number; y: number };
 type Region = { name: string; meta: string; image: string };
 
 const ORBIT_DURATION = 110 / 30;
 
-const ROUTES: Route[] = [
-  { name: 'Hatschi!', grade: '5c' },
-  { name: 'Nasenbärli', grade: '—' },
-  { name: 'Nicht gesucht + doch gefunden', grade: '5+', length: '170 m', pitches: '8p' },
-  { name: 'Zwickolo', grade: '6' },
-  { name: 'Uhu und Kakadu', grade: '6+' },
-  { name: 'Aufwind', grade: '6' },
-  { name: 'Bergrettungsweg', grade: '6+', length: '140 m', pitches: '5p' },
-  { name: 'Tanz auf der Leiter', grade: '7-/7' },
-  { name: 'Ein bißchen unrund', grade: '7-/7' },
-  { name: 'Chaos im Westen', grade: '7+' },
-  { name: 'Die Prinzessin & das Prunkstück', grade: '8-' },
-  { name: 'Silberhochzeit', grade: '—' },
-];
+const ROUTES: Route[] = NASENWAND_ROUTES;
 
 const CHAPTERS = [
   { label: 'Place', kicker: 'Wachau · Place', title: 'Nasenwand', body: 'Move through the approach while region, panorama and route context stay fixed around the media window.' },

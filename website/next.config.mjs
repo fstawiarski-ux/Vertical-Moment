@@ -5,11 +5,10 @@ initOpenNextCloudflareForDev();
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   async redirects() {
-    // /start remains a legacy entry point. Technology is public and the
-    // review preview is a direct, noindex internal draft surface, so neither
-    // should be silently redirected to the homepage.
+    // /start remains a legacy entry point, but it should land in the current
+    // field-app journey rather than strand users on the marketing homepage.
     return ["/start"]
-      .map((source) => ({ source, destination: "/", permanent: false }));
+      .map((source) => ({ source, destination: "/explore-app?intro=skip", permanent: false }));
   },
 };
 

@@ -6,6 +6,7 @@ import styles from "./BoxCragLocator.module.css";
 
 type AtlasRegion = {
   n: string;
+  slug: string;
   ct: number;
   ok: number;
   tbf: number;
@@ -17,6 +18,8 @@ type AtlasWall = {
   id: string;
   n: string;
   rg: string;
+  regionSlug: string;
+  slug: string;
   ct: number;
   ok: number;
   tbf: number;
@@ -24,13 +27,18 @@ type AtlasWall = {
   lon: number | null;
   gr: string[];
   gpx: string | null;
+  path: string;
 };
 
 type AtlasRoute = {
+  id: string;
   n: string;
   g: string;
+  regionSlug: string;
   rg: string;
   w: string;
+  wallSlug: string;
+  path: string;
 };
 
 type AtlasData = {
@@ -43,6 +51,7 @@ type AtlasData = {
     wallCount: number;
     routeCount: number;
     gpxCount: number;
+    matchedGpxCount?: number;
   };
 };
 
@@ -143,11 +152,11 @@ export default function BoxCragLocator() {
   }, []);
 
   const routesByWall = useMemo(() => {
-    const wallByKey = new Map(ATLAS.walls.map((wall) => [`${wall.rg}\u0000${wall.n}`, wall]));
+    const wallByKey = new Map(ATLAS.walls.map((wall) => [`${wall.regionSlug}/${wall.slug}`, wall]));
     const grouped = new Map<string, AtlasRoute[]>();
     for (const wall of ATLAS.walls) grouped.set(wall.id, []);
     for (const route of ATLAS.routes) {
-      const wall = wallByKey.get(`${route.rg}\u0000${route.w}`);
+      const wall = wallByKey.get(`${route.regionSlug}/${route.wallSlug}`);
       if (wall) grouped.get(wall.id)?.push(route);
     }
     return grouped;
@@ -349,7 +358,7 @@ export default function BoxCragLocator() {
       .filter((route) => route.n.toLocaleLowerCase().includes(value))
       .slice(0, 4)
       .map((route) => {
-        const wall = ATLAS.walls.find((candidate) => candidate.rg === route.rg && candidate.n === route.w);
+        const wall = ATLAS.walls.find((candidate) => candidate.regionSlug === route.regionSlug && candidate.slug === route.wallSlug);
         return {
           kind: "route",
           label: route.n,
@@ -383,7 +392,7 @@ export default function BoxCragLocator() {
             type="search"
             value={query}
             onChange={(event) => setQuery(event.target.value)}
-            placeholder="Search 2,314 routes…"
+            placeholder={`Search ${ATLAS.source.routeCount.toLocaleString("en")} routes…`}
             autoComplete="off"
           />
         </label>
@@ -449,7 +458,9 @@ export default function BoxCragLocator() {
               </div>
               <div className={styles.routeList} aria-label={`${selectedWall.n} route list`}>
                 {selectedRoutes.slice(0, 60).map((route, index) => (
-                  <div key={`${route.n}-${index}`}><span>{route.n}</span><strong>{route.g || "—"}</strong></div>
+                  <a key={`${route.id}-${index}`} href={route.path}>
+                    <span>{route.n}</span><strong>{route.g || "—"}</strong>
+                  </a>
                 ))}
                 {!selectedRoutes.length && <p>No individual route rows supplied.</p>}
               </div>

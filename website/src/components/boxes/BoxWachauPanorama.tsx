@@ -9,6 +9,7 @@ import {
   type PointerEvent as ReactPointerEvent,
   type WheelEvent as ReactWheelEvent,
 } from "react";
+import { PanoramaGalleryStrip } from "../../../app/components/PanoramaGalleryStrip";
 import { panoramas, type Panorama } from "../../../app/data/panoramas";
 import { dropLegacyPackCaches, RUNTIME_IMAGE_CACHE } from "../../pwa/offlineCache";
 import styles from "./BoxWachauPanorama.module.css";
@@ -241,14 +242,13 @@ export default function BoxWachauPanorama() {
             </label>
           </div>
 
-          <div className={styles.gallery} aria-label="Wachau panorama studies">
-            {panoramas.map((panorama) => (
-              <button key={panorama.id} type="button" aria-pressed={panorama.id === selected.id} onClick={() => choosePanorama(panorama)}>
-                <img src={panorama.thumbnail} alt="" loading="lazy" draggable={false} />
-                <span>{panorama.title}</span>
-              </button>
-            ))}
-          </div>
+          <PanoramaGalleryStrip
+            className={styles.gallery}
+            items={panoramas}
+            selectedId={selected.id}
+            onSelect={choosePanorama}
+            ariaLabel="Wachau panorama studies"
+          />
           <footer>{selected.referenceNote}</footer>
         </>
       )}

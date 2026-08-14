@@ -72,8 +72,6 @@ function HudButton({ icon, label, title, onClick, disabled = false, pressed, hre
       <a
         className={styles.hudButton}
         href={href}
-        target="_blank"
-        rel="noreferrer"
         title={title}
         aria-label={title}
       >
@@ -160,6 +158,8 @@ export function LayoutToolbar({ viewportMode, offlinePack, onSearch, onReplayInt
   }));
 
   const setMode = (mode: LayoutMode) => closeAfter(() => dispatch({ type: "SET_LAYOUT_MODE", mode }));
+
+  if (viewportMode === "mobile") return null;
 
   return (
     <nav className={styles.toolbar} data-viewport={viewportMode} aria-label="Explore workspace controls">

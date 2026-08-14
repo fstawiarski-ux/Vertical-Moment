@@ -101,8 +101,8 @@ function Dashboard({ onOpen }: { onOpen: (id: string) => void }) {
         <span className="pill">{list.length} tasks</span>
       </div>
       <div className="card" style={{ padding: 16, margin: "0 0 20px", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
-        <span className="muted" style={{ fontSize: 13.5 }}>Not on this list? Prepare a quick GPS, photo or GPX report from any crag - no task or account required.</span>
-        <Link href="/contribute#quick-report" className="btn btn-ghost">Report from here</Link>
+        <span className="muted" style={{ fontSize: 13.5 }}>Not on this list? Prepare a quick GPS, photo or GPX field note from any crag - no task or account required.</span>
+        <Link href="/contribute#quick-report" className="btn btn-ghost">Create a field note</Link>
       </div>
       <div className="task-filters" aria-label="Filter tasks by where they can be done">
         <button className={`chip ${filter === "all" ? "on" : ""}`} onClick={() => setFilter("all")}>All</button>

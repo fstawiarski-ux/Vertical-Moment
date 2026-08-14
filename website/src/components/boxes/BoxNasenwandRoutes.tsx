@@ -1,33 +1,13 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { NASENWAND_ROUTES, NASENWAND_SECTORS, type NasenwandRoute } from "../../../app/data/nasenwand-routes";
 import styles from "./BoxNasenwandRoutes.module.css";
 
-type Route = { name: string; grade: string; length?: string; pitches?: string };
-type Sector = { name: string; count: number; integrated: boolean };
 type WallView = "photo" | "spatial";
 
-const ROUTES: Route[] = [
-  { name: "Hatschi!", grade: "5c" },
-  { name: "Nasenbärli", grade: "not supplied" },
-  { name: "Nicht gesucht + doch gefunden", grade: "5+", length: "170 m", pitches: "8 pitches" },
-  { name: "Zwickolo", grade: "6" },
-  { name: "Uhu und Kakadu", grade: "6+" },
-  { name: "Aufwind", grade: "6" },
-  { name: "Bergrettungsweg", grade: "6+", length: "140 m", pitches: "5 pitches" },
-  { name: "Tanz auf der Leiter", grade: "7-/7" },
-  { name: "Ein bißchen unrund", grade: "7-/7" },
-  { name: "Chaos im Westen", grade: "7+" },
-  { name: "Die Prinzessin & das Prunkstück", grade: "8-" },
-  { name: "Silberhochzeit", grade: "not supplied" },
-];
-
-const SECTORS: Sector[] = [
-  { name: "Upper", count: 12, integrated: true },
-  { name: "Central", count: 39, integrated: false },
-  { name: "Lower", count: 33, integrated: false },
-  { name: "Deeper", count: 23, integrated: false },
-];
+const ROUTES: NasenwandRoute[] = NASENWAND_ROUTES;
+const SECTORS = NASENWAND_SECTORS;
 
 const VIEWS: Record<WallView, { label: string; src: string; alt: string; note: string }> = {
   photo: {
