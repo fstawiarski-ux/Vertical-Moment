@@ -17,7 +17,7 @@
   top: max(14px, env(safe-area-inset-top));
   right: 20px;
   left: 20px;
-  z-index: 9400;
+  z-index: 9700;
   display: flex;
   height: 54px;
   align-items: center;
@@ -53,6 +53,10 @@
 
 .boxLayer { position: absolute; inset: 0; z-index: 10; pointer-events: none; animation: workspaceReveal 520ms cubic-bezier(.2,.8,.2,1) both; }
 .boxLayer > * { pointer-events: auto; }
+.boxLayer[data-exclusive-mode="expanded"] { z-index: 9450; pointer-events: auto; }
+.boxLayer[data-exclusive-mode="fullscreen"] { z-index: 9500; pointer-events: auto; }
+.boxLayer[data-exclusive-mode="expanded"],
+.boxLayer[data-exclusive-mode="fullscreen"] { animation: none; transform: none; }
 .boxLayer[data-layout="tablet"] {
   top: var(--explore-safe-top);
   right: var(--explore-safe-right);
@@ -82,13 +86,17 @@
   overscroll-behavior: contain;
   animation: workspaceReveal 520ms cubic-bezier(.2,.8,.2,1) both;
 }
+.cardStack[data-exclusive-mode="expanded"] { z-index: 9450; overflow: visible; }
+.cardStack[data-exclusive-mode="fullscreen"] { z-index: 9500; overflow: visible; }
+.cardStack[data-exclusive-mode="expanded"],
+.cardStack[data-exclusive-mode="fullscreen"] { animation: none; transform: none; }
 
 .workspaceDock {
   position: absolute;
   top: var(--explore-dock-top);
   right: var(--explore-safe-right);
   left: clamp(390px, 26vw, 520px);
-  z-index: 9400;
+  z-index: 9700;
   display: flex;
   min-width: 0;
   max-width: calc(100vw - var(--explore-safe-right) - clamp(390px, 26vw, 520px));

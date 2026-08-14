@@ -204,25 +204,25 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
     if (!contentById.has(id)) return;
     if (mode !== "normal" && normalizeSiblings) {
       for (const box of boxesRef.current) {
-        if (box.id !== id && (box.mode === "expanded" || box.mode === "fullscreen")) {
-          dispatch({ type: "UPDATE_BOX", id: box.id, patch: { mode: "normal" } });
+        if (box.id !== id && box.mode !== "minimized") {
+          dispatch({ type: "SET_BOX_MODE", id: box.id, mode: "minimized" });
         }
       }
     }
-    dispatch({ type: "UPDATE_BOX", id, patch: { mode } });
+    dispatch({ type: "SET_BOX_MODE", id, mode });
     dispatch({ type: "SET_ACTIVE_BOX", id });
   }, [contentById, dispatch]);
 
-  const openIndependentBox = useCallback((id: string, mode: BoxMode = "expanded") => {
+  const openIndependentBox = useCallback((id: string, mode: BoxMode = "expanded", resetFrame = mode === "normal") => {
     setFollowJourney(false);
     setStationPeekVisible(false);
-    if (mode === "normal" && viewportMode === "desktop") {
+    if (resetFrame && mode === "normal" && viewportMode === "desktop") {
       const frame = stationFrameForBox(id, { width: window.innerWidth, height: window.innerHeight });
       if (frame) dispatch({ type: "UPDATE_BOX", id, patch: frame });
     }
     for (const other of boxesRef.current) {
       if (other.id !== id && other.mode !== "minimized") {
-        dispatch({ type: "UPDATE_BOX", id: other.id, patch: { mode: "minimized" } });
+        dispatch({ type: "SET_BOX_MODE", id: other.id, mode: "minimized" });
       }
     }
     focusBox(id, mode, false);
@@ -338,7 +338,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
   }, [openIndependentBox, replayIntro]);
 
   const openStationBox = useCallback((id: string) => {
-    openIndependentBox(id, "normal");
+    openIndependentBox(id, "normal", true);
   }, [openIndependentBox]);
 
   const openPalette = useCallback((query: string) => {
@@ -470,12 +470,16 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
 
   const stationFocusId = STATION_PRESENTATIONS[journeyStation].focusBoxId;
   const journeyActive = workspaceUnlocked && followJourney;
+  const exclusiveBox = boxes.find((box) => box.mode === "fullscreen") ?? boxes.find((box) => box.mode === "expanded");
+  const exclusiveMode = exclusiveBox?.mode ?? "none";
   // Station-follow mode keeps the mapped box mounted as a normal canvas item.
   // The module remains lazy because it is not the active box until the visitor
   // explicitly opens it, while the box itself stays draggable and resizable.
-  const visible = journeyActive
-    ? boxes.filter((box) => box.id === stationFocusId && box.mode !== "minimized")
-    : boxes.filter((box) => box.mode !== "minimized");
+  const visible = exclusiveBox
+    ? boxes.filter((box) => box.id === exclusiveBox.id)
+    : journeyActive
+      ? boxes.filter((box) => box.id === stationFocusId && box.mode !== "minimized")
+      : boxes.filter((box) => box.mode !== "minimized");
   const boxesById = useMemo(() => new Map(boxes.map((box) => [box.id, box])), [boxes]);
   const stationContent = contentById.get(stationFocusId) ?? null;
 
@@ -501,11 +505,11 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
       </header>
 
       {workspaceUnlocked && (viewportMode === "mobile" ? (
-        <section className={styles.cardStack} data-station-peek={stationPeekVisible ? "true" : "false"} aria-label="Explore cards">
+        <section className={styles.cardStack} data-station-peek={stationPeekVisible ? "true" : "false"} data-exclusive-mode={exclusiveMode} aria-label="Explore cards">
           {visible.map((box) => renderBox(box))}
         </section>
       ) : (
-        <section className={styles.boxLayer} data-layout={viewportMode} aria-label="Explore canvas">
+        <section className={styles.boxLayer} data-layout={viewportMode} data-exclusive-mode={exclusiveMode} aria-label="Explore canvas">
           {visible.map((box) => renderBox(box))}
         </section>
       ))}
@@ -530,7 +534,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
                   aria-current={isCurrent ? "page" : undefined}
                   title={`${action} ${content.title}`}
                   aria-label={`${action} ${content.title}`}
-                  onClick={() => openIndependentBox(content.id, "normal")}
+                  onClick={() => openIndependentBox(content.id, "normal", box?.mode !== "minimized")}
                 >
                   <span>{content.title}</span>
                   <small>{action}</small>

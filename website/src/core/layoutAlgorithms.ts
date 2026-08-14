@@ -6,6 +6,15 @@ const DEFAULT_VIEWPORT: ViewportBounds = { width: 1440, height: 900 };
 const MIN_BOX_WIDTH = 210;
 const MIN_BOX_HEIGHT = 130;
 
+export type ResizeDirection = "n" | "ne" | "e" | "se" | "s" | "sw" | "w" | "nw";
+
+export interface BoxFrame {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+}
+
 /**
  * The desktop shell reserves the same lanes for every layout consumer:
  * brand/peek content above, the right toolbar, and the journey rail below.
@@ -34,6 +43,35 @@ function safeRect(viewport?: ViewportBounds) {
     width: Math.max(0, bounds.width - EXPLORE_SAFE_ZONE.left - EXPLORE_SAFE_ZONE.right),
     height: Math.max(0, bounds.height - EXPLORE_SAFE_ZONE.top - EXPLORE_SAFE_ZONE.bottom),
   };
+}
+
+/** Apply one of the eight resize directions inside the shared shell safe zone. */
+export function resizeBoxFrame(
+  origin: BoxFrame,
+  direction: ResizeDirection,
+  dx: number,
+  dy: number,
+  viewport?: ViewportBounds,
+): BoxFrame {
+  const bounds = usableBounds(viewport);
+  const safeRight = Math.max(EXPLORE_SAFE_ZONE.left + MIN_BOX_WIDTH, bounds.width - EXPLORE_SAFE_ZONE.right);
+  const safeBottom = Math.max(EXPLORE_SAFE_ZONE.top + MIN_BOX_HEIGHT, bounds.height - EXPLORE_SAFE_ZONE.bottom);
+  const originX = clamp(origin.x, EXPLORE_SAFE_ZONE.left, safeRight - MIN_BOX_WIDTH);
+  const originY = clamp(origin.y, EXPLORE_SAFE_ZONE.top, safeBottom - MIN_BOX_HEIGHT);
+  const originRight = clamp(origin.x + origin.width, originX + MIN_BOX_WIDTH, safeRight);
+  const originBottom = clamp(origin.y + origin.height, originY + MIN_BOX_HEIGHT, safeBottom);
+
+  let x = originX;
+  let y = originY;
+  let right = originRight;
+  let bottom = originBottom;
+
+  if (direction.includes("w")) x = clamp(originX + dx, EXPLORE_SAFE_ZONE.left, originRight - MIN_BOX_WIDTH);
+  if (direction.includes("e")) right = clamp(originRight + dx, originX + MIN_BOX_WIDTH, safeRight);
+  if (direction.includes("n")) y = clamp(originY + dy, EXPLORE_SAFE_ZONE.top, originBottom - MIN_BOX_HEIGHT);
+  if (direction.includes("s")) bottom = clamp(originBottom + dy, originY + MIN_BOX_HEIGHT, safeBottom);
+
+  return { x, y, width: Math.max(MIN_BOX_WIDTH, right - x), height: Math.max(MIN_BOX_HEIGHT, bottom - y) };
 }
 
 function centeredFrame(
@@ -93,6 +131,7 @@ export function applyExploreLayout(boxes: BoxState[], viewport?: ViewportBounds)
       width,
       height,
       mode: box.mode === "minimized" ? "minimized" : "normal",
+      restoreFrame: undefined,
     };
   });
 }
@@ -129,6 +168,7 @@ export function applyPresentationLayout(
       width: rect.width,
       height: index === 0 ? Math.min(390, Math.round(bounds.height * 0.42)) : 256,
       mode: "normal",
+      restoreFrame: undefined,
       stackIndex: index,
     }));
   }
@@ -144,7 +184,7 @@ export function applyPresentationLayout(
 
   return boxes.map((box) => {
     if (box.id === hero.id) {
-      return { ...box, x: rect.x, y: rect.y, width: heroWidth, height: heroHeight, mode: "normal" };
+      return { ...box, x: rect.x, y: rect.y, width: heroWidth, height: heroHeight, mode: "normal", restoreFrame: undefined };
     }
     const index = rest.findIndex((candidate) => candidate.id === box.id);
     const column = index % sideColumns;
@@ -156,6 +196,7 @@ export function applyPresentationLayout(
       width: cardWidth,
       height: cardHeight,
       mode: "normal",
+      restoreFrame: undefined,
     };
   });
 }

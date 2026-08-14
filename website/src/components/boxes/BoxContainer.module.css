@@ -83,6 +83,8 @@
 }
 
 .windowControls {
+  position: relative;
+  z-index: 30;
   display: flex;
   align-items: center;
   justify-self: end;
@@ -125,20 +127,20 @@
 .resizeHandle { position: absolute; z-index: 20; padding: 0; border: 0; background: transparent; pointer-events: auto; touch-action: none; }
 .resizeN,
 .resizeS { right: 16px; left: 16px; height: 14px; cursor: ns-resize; }
-.resizeN { top: 0; }
+.resizeN { top: -8px; height: 8px; }
 .resizeS { bottom: 0; }
 .resizeE,
 .resizeW { top: 16px; bottom: 16px; width: 14px; cursor: ew-resize; }
-.resizeE { right: 0; }
+.resizeE { top: 54px; right: 0; }
 .resizeW { left: 0; }
 .resizeNe,
 .resizeSe,
 .resizeSw,
 .resizeNw { width: 26px; height: 26px; }
-.resizeNe { top: 0; right: 0; cursor: nesw-resize; }
+.resizeNe { top: -8px; right: -20px; cursor: nesw-resize; }
 .resizeSe { right: 0; bottom: 0; cursor: nwse-resize; }
 .resizeSw { bottom: 0; left: 0; cursor: nesw-resize; }
-.resizeNw { top: 0; left: 0; cursor: nwse-resize; }
+.resizeNw { top: -8px; left: -8px; cursor: nwse-resize; }
 .resizeSe::after,
 .resizeSw::after {
   content: "";
@@ -223,6 +225,7 @@
   inset: 0;
   width: 100vw !important;
   height: 100dvh !important;
+  box-sizing: border-box;
   border: 0;
   border-radius: 0;
 }
@@ -236,6 +239,25 @@
 }
 
 .box[data-viewport="tablet"] { height: 360px; }
+
+.box[data-viewport="tablet"].boxModeExpanded,
+.box[data-viewport="tablet"].boxModeFullscreen {
+  position: fixed;
+  transform: none !important;
+  min-height: 0;
+}
+
+.box[data-viewport="tablet"].boxModeExpanded {
+  inset: var(--explore-safe-top, 146px) var(--explore-safe-right, 106px) var(--explore-safe-bottom, 96px) var(--explore-safe-left, 8px);
+  width: auto !important;
+  height: auto !important;
+}
+
+.box[data-viewport="tablet"].boxModeFullscreen {
+  inset: 0;
+  width: 100vw !important;
+  height: 100dvh !important;
+}
 
 .box[data-viewport="mobile"] {
   height: min(56dvh, 480px);
@@ -256,7 +278,6 @@
 
 @media (max-width: 767px) {
   .windowControls button { width: 40px; height: 40px; }
-  .windowControls button:nth-child(3) { display: none; }
   .header { grid-template-columns: 14px minmax(0, 1fr) auto; padding-left: 10px; }
 
   .box[data-viewport="mobile"].boxModeExpanded {
@@ -279,6 +300,11 @@
     min-height: 0;
     border: 0;
     border-radius: 0;
+  }
+
+  .box[data-viewport="mobile"].boxModeFullscreen .header {
+    min-height: calc(54px + env(safe-area-inset-top));
+    padding-top: max(6px, env(safe-area-inset-top));
   }
 
   .box[data-viewport="mobile"].boxModeFullscreen .windowControls button:nth-child(3) { display: grid; }
