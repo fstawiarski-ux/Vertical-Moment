@@ -13,9 +13,24 @@ The Brave shortcuts named **Vertical Moment Explore Lab** and **Vertical Moment 
 
 Read [`AGENTS.md`](AGENTS.md) and [`docs/PRODUCT_MAP.md`](docs/PRODUCT_MAP.md) before any write. Work that changes shared data, packages, Cloudflare, OpenNext, Serwist, GitHub Actions or common media must be declared `shared` and approved as cross-product work.
 
+## If you are lost
+
+Start with [`docs/repository/README.md`](docs/repository/README.md). It is the repository map and decision guide. Then read [`docs/repository/ROLES.md`](docs/repository/ROLES.md) to understand who may review, merge, deploy or change canonical data.
+
+The production truth is deliberately singular:
+
+```text
+database/master/vertical-moment-canonical.json
+  -> database/api/v1/
+  -> website/public/data/v1/
+  -> Cloudflare Workers at https://verticalmoment.com
+```
+
+The old GitHub Pages shadow site is retired. GPX and other unverified approach tracks are private review material and must not be placed under `website/public/`.
+
 ## Repository model
 
-- `main` is the single canonical integration branch.
+- `main` is the single canonical integration branch and accepts reviewed pull requests only.
 - Product work uses short-lived `site/<task>` or `pwa/<task>` branches.
 - Long-lived product branches are not product storage. Product separation is expressed through paths, ownership files, scoped documentation and CI.
 - A branch, commit, installed PWA or local prototype is not automatically canonical. See [`docs/recovery/CANONICAL_STATE.md`](docs/recovery/CANONICAL_STATE.md).
@@ -60,14 +75,16 @@ Model availability, provider quotas and authentication are time-sensitive. Futur
 ## Quick start
 
 ```powershell
-Set-Location "D:\VERTICALMOMENT\GITHUB REPOS\Vertical-Moment"
+Set-Location "D:\VERTICALMOMENT\GITHUB REPOS\Vertical-Moment-public-v5"
 git branch --show-current
 git rev-parse HEAD
 git status --short
-Set-Location "D:\VERTICALMOMENT\GITHUB REPOS\Vertical-Moment\website"
+Set-Location "D:\VERTICALMOMENT\GITHUB REPOS\Vertical-Moment-public-v5\website"
 npm install
 npm run dev
 ```
+
+The separate `D:\VERTICALMOMENT\GITHUB REPOS\Vertical-Moment` checkout is protected review material. Do not use it for normal publishing or cleanup.
 
 - Public website: `http://localhost:3000/`
 - Climbers Lounge / Explore PWA: `http://localhost:3000/explore-app`
@@ -78,12 +95,13 @@ Build and publication are separate approval gates. `npm run build` generates `we
 
 ## Current recovery anchors
 
-- Current product/deployment baseline merged through PR #35 on 2026-08-13: `2eb49f402eeb6497042e3dccffd59513ae551efc`.
+- Current product/deployment baseline merged through PR #50 on 2026-08-14: `6db06bb7fc519c5a0a224adc42ab22300fdf3bfc`.
+- This repository-operations patch is review-only until its pull request is approved, merged and deployed. Its private GPX preservation copy is outside the repository at `D:\VERTICALMOMENT\WEBSITE\private-assets\atlas-gpx-2026-08-14`.
 - Active PWA capability branch recorded at: `5fb71fe0249d51f8759273c5e2e903fe3c59cf72`.
 - Preserved unmerged Jammerwandl workflow branch recorded at: `8f4b894953041b61d8c371b3f054551f4eec8195`.
 - Public V5 redesign: shipped through PR #33 at `3640c12e0cafe6947440a4f603f998a49f4aa66a`; logo, background, fonts and photography refinements remain future public-site work.
 - Contributor field beta: shipped through PR #34 at `da6630c`; `/contribute` is unlisted/noindex and keeps original evidence in device IndexedDB until ZIP export. It has no server upload, account gate or publication action yet.
 - EXP-02: preserved as a focused Master ZIP and as an uncommitted four-file review change on the active PWA branch.
-- Phase 2 branch cleanup: 30 exact merged heads removed; three remote branches remain. Recovery tags are listed in [`docs/repository/BRANCH_AUDIT_2026-08-13.md`](docs/repository/BRANCH_AUDIT_2026-08-13.md).
+- Phase 2 branch cleanup: 30 exact merged heads removed; three remote branches remain. Recovery tags are listed in [`docs/repository/BRANCH_AUDIT_2026-08-13.md`](docs/repository/BRANCH_AUDIT_2026-08-13.md). GitHub Pages is now retired and `main` requires the documented pull-request checks.
 
-See [`docs/recovery/CANONICAL_STATE.md`](docs/recovery/CANONICAL_STATE.md) for exact status and [`docs/repository/CLEANUP_RUNBOOK.md`](docs/repository/CLEANUP_RUNBOOK.md) before removing files or branches.
+See [`docs/recovery/CANONICAL_STATE.md`](docs/recovery/CANONICAL_STATE.md) for exact status, [`docs/operations/RELEASE_RUNBOOK.md`](docs/operations/RELEASE_RUNBOOK.md) before publishing, and [`docs/repository/CLEANUP_RUNBOOK.md`](docs/repository/CLEANUP_RUNBOOK.md) before removing files or branches.

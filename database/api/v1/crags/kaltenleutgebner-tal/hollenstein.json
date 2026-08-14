@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T13:37:10+00:00",
+ "generated": "2026-08-14T18:25:11+00:00",
  "crag": {
   "id": "412db130-ed1a-509a-bdb6-f81bad42c1d3",
   "name": "Höllenstein",
@@ -77,7 +77,7 @@
     "kind": "search",
     "label": "komoot",
     "domain": "komoot.com",
-    "note": "Approach tracks and GPX.",
+    "note": "Approach data pending verification.",
     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+H%C3%B6llenstein+Kaltenleutgebner+Tal"
    }
   ],

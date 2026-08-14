@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T13:37:10+00:00",
+ "generated": "2026-08-14T18:25:11+00:00",
  "crag": {
   "id": "6a70bf25-5806-5612-b551-863791bda7e5",
   "name": "Sektor 4 - Links Aussen",
@@ -58,7 +58,7 @@
     "kind": "search",
     "label": "komoot",
     "domain": "komoot.com",
-    "note": "Approach tracks and GPX.",
+    "note": "Approach data pending verification.",
     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Sektor+4+-+Links+Aussen+Hirschw%C3%A4nde"
    }
   ],

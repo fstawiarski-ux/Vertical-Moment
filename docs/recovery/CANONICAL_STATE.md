@@ -1,6 +1,6 @@
 # Canonical state and recovered artifacts
 
-**Audit date:** 2026-08-13
+**Audit date:** 2026-08-14
 
 **Rule:** A local shortcut, installed PWA, prototype, branch or ZIP is evidence only until its role is explicitly classified here.
 
@@ -8,11 +8,16 @@
 
 | Item | Classification | Evidence |
 |---|---|---|
-| PR #35 at `2eb49f402eeb6497042e3dccffd59513ae551efc` | Current product and deployed integration baseline | Successful Cloudflare deployment run `31702587081` |
+| PR #50 at `6db06bb7fc519c5a0a224adc42ab22300fdf3bfc` | Current product and deployed integration baseline | Successful website test, structured-data validation, Cloudflare deployment and Pages deployment runs |
+| Repository-governance/privacy review branch | Pending review; not deployed | Removes public GPX exposure, retires Pages, adds boundary CI and documents roles/release controls |
+| Private GPX preservation copy | Private review material | `D:\VERTICALMOMENT\WEBSITE\private-assets\atlas-gpx-2026-08-14`; 186 files, byte/hash verification passed |
+| `main` branch controls | Enforced GitHub repository policy | Pull-request checks `test`, `validate-json`, `contract`; required conversation resolution; no force-push or branch deletion |
+| GitHub Pages | Retired | Pages API deletion verified; Cloudflare Workers is the only production deployment target |
+| PR #35 at `2eb49f402eeb6497042e3dccffd59513ae551efc` | Historical product/deployment baseline | Successful Cloudflare deployment run `31702587081` |
 | PR #36 at `4266d845e4456b6bc0e4d971f96fa2c3a03cc188` | Phase 2 cleanup record | Documentation-only merge after remote branch cleanup |
 | PR #33 at `3640c12e0cafe6947440a4f603f998a49f4aa66a` | Public V5 release checkpoint | Merged PR and successful Cloudflare deployment |
 | PR #34 at `da6630cdcba8ed2d44015ed1cea9af47bdc99971` | Contributor beta release checkpoint | Merged PR, successful deployment, live HTTP/browser verification |
-| `checkpoint/two-product-contract-2026-08-13` | Canonical repository-contract tag | Resolves to `2eb49f4` |
+| `checkpoint/two-product-contract-2026-08-13` | Historical repository-contract tag | Resolves to `2eb49f4` |
 
 ## Public website
 

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="Vertical Moment" xmlns="http://www.topografix.com/GPX/1/1">
-<metadata><name>Mödling | Ritterfels</name><desc>GPS data for Vertical Moment master v4. Coordinates derived from OSM (OpenStreetMap, (c) OSM contributors, ODbL 1.0), theCrag, climb.sk, outdooractive, Nominatim and legacy master coords.</desc></metadata>
-<wpt lat="48.080464" lon="16.266338"><name>Burggraben Direttissima</name><desc>Mödling | Ritterfels</desc></wpt>
-<wpt lat="48.080464" lon="16.266338"><name>Burgherr</name><desc>Mödling | Ritterfels</desc></wpt>
-<wpt lat="48.080464" lon="16.266338"><name>Hofnarr</name><desc>Mödling | Ritterfels</desc></wpt>
-<wpt lat="48.080464" lon="16.266338"><name>Raubritter</name><desc>Mödling | Ritterfels</desc></wpt>
-<wpt lat="48.080464" lon="16.266338"><name>Ritterfräulein</name><desc>Mödling | Ritterfels</desc></wpt>
-</gpx>

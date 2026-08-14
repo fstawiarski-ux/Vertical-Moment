@@ -56,7 +56,6 @@ function makeAtlasBridge({ generated, regions, crags, routes }) {
       lat: crag.latitude,
       lon: crag.longitude,
       gr: crag.grades ?? [],
-      gpx: null,
       path: `/explore/${crag.region_slug}/${crag.slug}`,
     };
   });
@@ -87,8 +86,6 @@ function makeAtlasBridge({ generated, regions, crags, routes }) {
       regionCount: regionsOut.length,
       wallCount: wallsOut.length,
       routeCount: routesOut.length,
-      gpxCount: 0,
-      matchedGpxCount: 0,
     },
   };
 }

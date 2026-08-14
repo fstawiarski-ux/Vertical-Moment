@@ -25,3 +25,6 @@ coverage/
 # Local source-media drops: catalog them before committing selected assets.
 _incoming/
 _exports/
+# Unverified approach tracks are preserved outside the repository and must not
+# re-enter the public Next.js asset tree before a rights/accuracy review.
+/website/public/atlas-gpx/
