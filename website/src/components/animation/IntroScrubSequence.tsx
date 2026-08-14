@@ -22,10 +22,10 @@ import styles from "./IntroScrubSequence.module.css";
 const clamp = (value: number) => Math.max(0, Math.min(1, value));
 const CHAPTER_BLEND_START = 0.86;
 export const SCRUB_STATIONS: ReadonlyArray<{ id: JourneyStation; label: string; progress: number }> = [
-  { id: "topo", label: "Topo", progress: 1 },
-  { id: "sector", label: "Sector", progress: 2 / 3 },
-  { id: "rock", label: "Rock", progress: 1 / 3 },
   { id: "region", label: "Region", progress: 0 },
+  { id: "rock", label: "Rock", progress: 1 / 3 },
+  { id: "sector", label: "Sector", progress: 2 / 3 },
+  { id: "topo", label: "Topo", progress: 1 },
 ] as const;
 
 type ScrubStation = (typeof SCRUB_STATIONS)[number];
@@ -292,8 +292,8 @@ export function IntroScrubSequence({ sequence, mode, onUnlock }: {
 
       {resolved && (
         <div className={styles.timeline}>
-          <label className={styles.visuallyHidden} htmlFor="explore-intro-timeline">Move from Region on the right to Topo on the left</label>
-          <span className={styles.chapterLabels} aria-label="Scrub stations">
+          <label className={styles.visuallyHidden} htmlFor="explore-intro-timeline">Move from Region on the left to Topo on the right</label>
+          <span className={styles.chapterLabels} aria-label="Scrub stations, Region to Rock to Sector to Topo">
             {SCRUB_STATIONS.map((station) => (
               <button
                 key={station.id}
@@ -307,9 +307,9 @@ export function IntroScrubSequence({ sequence, mode, onUnlock }: {
             ))}
           </span>
           <span className={styles.trackRow}>
-            <input
-              id="explore-intro-timeline"
-              aria-label="Move from Region on the right to Topo on the left"
+              <input
+                id="explore-intro-timeline"
+                aria-label="Move from Region on the left to Topo on the right"
               type="range"
               min="0"
               max="100"

@@ -12,6 +12,7 @@ import { StationPeek } from "./components/shell/StationPeek";
 import { deepLinkFor, parseDeepLink, resolveDeepLink, writeDeepLinkToUrl } from "./core/deepLink";
 import { hasSeenIntro, prefersReducedMotion, rememberIntroSeen } from "./core/introPreferences";
 import { LayoutProvider, useLayoutState } from "./core/layoutState";
+import { stationFrameForBox } from "./core/layoutAlgorithms";
 import { buildContentEntries, type SearchEntry } from "./core/searchIndex";
 import type {
   BoxMode,
@@ -33,15 +34,13 @@ const NasenwandRoutes = lazy(() => import("./components/boxes/BoxNasenwandRoutes
 const WachauPanorama = lazy(() => import("./components/boxes/BoxWachauPanorama"));
 const WallReveal = lazy(() => import("./components/boxes/BoxWallReveal"));
 
-function seedLayout(registry: ExploreContentRegistry): LayoutState {
+function seedLayout(registry: ExploreContentRegistry, viewport?: { width: number; height: number }): LayoutState {
   return {
     boxes: registry.boxes.map((box, index) => ({
       id: box.id,
       type: box.type,
-      x: box.initialLayout.x,
-      y: box.initialLayout.y,
-      width: box.initialLayout.width,
-      height: box.initialLayout.height,
+      ...box.initialLayout,
+      ...(stationFrameForBox(box.id, viewport) ?? {}),
       zIndex: index + 1,
       mode: "normal",
       pinned: false,
@@ -216,13 +215,18 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
 
   const openIndependentBox = useCallback((id: string, mode: BoxMode = "expanded") => {
     setFollowJourney(false);
+    setStationPeekVisible(false);
+    if (mode === "normal" && viewportMode === "desktop") {
+      const frame = stationFrameForBox(id, { width: window.innerWidth, height: window.innerHeight });
+      if (frame) dispatch({ type: "UPDATE_BOX", id, patch: frame });
+    }
     for (const other of boxesRef.current) {
       if (other.id !== id && other.mode !== "minimized") {
         dispatch({ type: "UPDATE_BOX", id: other.id, patch: { mode: "minimized" } });
       }
     }
     focusBox(id, mode, false);
-  }, [dispatch, focusBox]);
+  }, [dispatch, focusBox, viewportMode]);
 
   const replayIntro = useCallback(() => {
     setWorkspaceUnlocked(false);
@@ -334,8 +338,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
   }, [openIndependentBox, replayIntro]);
 
   const openStationBox = useCallback((id: string) => {
-    setStationPeekVisible(false);
-    openIndependentBox(id);
+    openIndependentBox(id, "normal");
   }, [openIndependentBox]);
 
   const openPalette = useCallback((query: string) => {
@@ -473,11 +476,11 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
   const visible = journeyActive
     ? boxes.filter((box) => box.id === stationFocusId && box.mode !== "minimized")
     : boxes.filter((box) => box.mode !== "minimized");
-  const minimized = boxes.filter((box) => box.mode === "minimized");
+  const boxesById = useMemo(() => new Map(boxes.map((box) => [box.id, box])), [boxes]);
   const stationContent = contentById.get(stationFocusId) ?? null;
 
   return (
-    <main className={styles.app} data-viewport={viewportMode}>
+    <main className={styles.app} data-viewport={viewportMode} data-station-peek={stationPeekVisible ? "true" : "false"}>
       <IntroScrubSequence
         key={replayCount}
         sequence={registry.introScrubSequence}
@@ -507,23 +510,34 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
         </section>
       ))}
 
-      {workspaceUnlocked && minimized.length > 0 && (
-        <aside className={styles.minimizedTray} aria-label="Minimized boxes">
-          {minimized.map((box) => {
-            const content = contentById.get(box.dataRef ?? box.id);
-            if (!content) return null;
-            return (
-              <button
-                key={box.id}
-                type="button"
-                title={`Restore ${content.title}`}
-                aria-label={`Restore ${content.title}`}
-                onClick={() => openIndependentBox(box.id, "normal")}
-              >
-                <span>{content.title}</span>
-              </button>
-            );
-          })}
+      {workspaceUnlocked && (
+        <aside className={styles.workspaceDock} aria-label="Open minimized workspaces">
+          <div className={styles.dockLabel}>
+            <strong>Workspace dock</strong>
+            <span>Open or restore</span>
+          </div>
+          <div className={styles.dockItems}>
+            {registry.boxes.map((content) => {
+              const box = boxesById.get(content.id);
+              const isCurrent = content.id === activeBoxId || (journeyActive && content.id === stationFocusId);
+              const action = box?.mode === "minimized" ? "Restore" : "Open";
+              return (
+                <button
+                  key={content.id}
+                  type="button"
+                  className={styles.workspaceDockButton}
+                  data-current={isCurrent ? "true" : "false"}
+                  aria-current={isCurrent ? "page" : undefined}
+                  title={`${action} ${content.title}`}
+                  aria-label={`${action} ${content.title}`}
+                  onClick={() => openIndependentBox(content.id, "normal")}
+                >
+                  <span>{content.title}</span>
+                  <small>{action}</small>
+                </button>
+              );
+            })}
+          </div>
         </aside>
       )}
 
@@ -553,7 +567,11 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
 export default function ExploreApp({ initialRegistry }: { initialRegistry?: ExploreContentRegistry }) {
   const [registry, setRegistry] = useState<ExploreContentRegistry | null>(initialRegistry ?? null);
   const [error, setError] = useState<string | null>(null);
-  const initialState = useMemo(() => registry ? seedLayout(registry) : null, [registry]);
+  const initialState = useMemo(() => {
+    if (!registry) return null;
+    const viewport = typeof window === "undefined" ? undefined : { width: window.innerWidth, height: window.innerHeight };
+    return seedLayout(registry, viewport);
+  }, [registry]);
 
   useEffect(() => {
     let cancelled = false;

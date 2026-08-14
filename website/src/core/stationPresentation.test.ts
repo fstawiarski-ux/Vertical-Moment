@@ -10,6 +10,12 @@ describe("station presentation", () => {
     expect(Object.keys(STATION_PRESENTATIONS)).toEqual(["region", "rock", "sector", "topo"]);
   });
 
+  it("keeps the visible journey order aligned with progress", async () => {
+    const { SCRUB_STATIONS } = await import("../components/animation/IntroScrubSequence");
+    expect(SCRUB_STATIONS.map((station) => station.id)).toEqual(["region", "rock", "sector", "topo"]);
+    expect(SCRUB_STATIONS.map((station) => station.progress)).toEqual([0, 1 / 3, 2 / 3, 1]);
+  });
+
   it("maps each station to an existing contextual box", () => {
     expect(Object.values(STATION_PRESENTATIONS).map((item) => item.focusBoxId)).toEqual([
       "crag-locator",

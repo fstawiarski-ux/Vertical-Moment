@@ -71,12 +71,11 @@ export default function BoxWallReveal() {
         {active === "gallery" && (
           <div className={styles.sharedStage}>
             <img className={styles.media} src="/photography/gallery/vm-7073-steep-ground.webp" alt="Climber moving through steep Peilstein limestone" />
-            <div className={styles.sharedCard}>
-              <small>Peilstein - gallery</small>
-              <strong>Steep Ground</strong>
-              <span>A field frame from the gallery, kept beside the wall story and light enough for the first view.</span>
-              <button type="button" onClick={() => focusBox("vm-7073")}>Open Steep Ground gallery</button>
-            </div>
+               <div className={styles.sharedCard}>
+                 <small>Peilstein - gallery</small>
+                 <strong>Steep Ground</strong>
+                 <span>A field frame from the gallery, kept beside the wall story and light enough for the first view.</span>
+               </div>
           </div>
         )}
 
@@ -106,7 +105,7 @@ export default function BoxWallReveal() {
             {active === "place" && <button type="button" onClick={() => focusBox("wachau-16")}>Open regional panoramas</button>}
             {active === "gallery" && <button type="button" onClick={() => focusBox("vm-7073")}>Open Steep Ground gallery</button>}
             {active === "topo" && <button type="button" onClick={() => focusBox("nasenwand-spatial")}>Open route workspace</button>}
-            <button type="button" onClick={() => setBudgetOpen((current) => !current)} aria-expanded={budgetOpen}>Media: {stage.status}</button>
+             <button className={styles.deliveryButton} type="button" onClick={() => setBudgetOpen((current) => !current)} aria-expanded={budgetOpen}>Media: {stage.status}</button>
           </div>
         </section>
       </div>

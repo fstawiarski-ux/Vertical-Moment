@@ -34,10 +34,10 @@
 .header {
   display: grid;
   min-height: 54px;
-  grid-template-columns: 20px minmax(0, 1fr);
+  grid-template-columns: 20px minmax(0, 1fr) auto;
   align-items: center;
   gap: 10px;
-  padding: 8px 10px 8px 14px;
+  padding: 6px 8px 6px 14px;
   border-bottom: 1px solid rgb(255 255 255 / 9%);
   background: rgb(10 16 12 / 52%);
   touch-action: none;
@@ -83,24 +83,21 @@
 }
 
 .windowControls {
-  position: absolute;
-  top: -12px;
-  right: 34px;
-  z-index: 12;
   display: flex;
+  align-items: center;
+  justify-self: end;
   gap: 4px;
-  opacity: .74;
-  transition: opacity 160ms ease, transform 160ms ease;
+  opacity: .86;
+  transition: opacity 160ms ease;
 }
 
 .windowControls:hover,
-.windowControls:focus-within,
-.box:hover .windowControls { opacity: 1; }
+.windowControls:focus-within { opacity: 1; }
 
 .windowControls button {
   display: grid;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   place-items: center;
   color: #f4f1e8;
   border: 1px solid rgb(255 255 255 / 10%);
@@ -189,8 +186,8 @@
 .boxModeMinimized .windowControls button:not(:first-child) { display: none; }
 
 .boxModeMinimized .windowControls {
-  top: 7px;
-  right: 7px;
+  position: static;
+  justify-self: center;
   opacity: 1;
 }
 
@@ -214,10 +211,10 @@
 .boxModeExpanded { z-index: 9450 !important; }
 .boxModeFullscreen { z-index: 9490 !important; }
 .boxModeExpanded .windowControls,
-.boxModeFullscreen .windowControls { top: 14px; right: 24px; opacity: .82; }
+.boxModeFullscreen .windowControls { opacity: .92; }
 
 .boxModeExpanded {
-  inset: max(76px, 8vh) max(28px, 8vw) max(78px, 8vh);
+  inset: var(--explore-safe-top, 146px) var(--explore-safe-right, 106px) var(--explore-safe-bottom, 96px) var(--explore-safe-left, 8px);
   width: auto !important;
   height: auto !important;
 }
@@ -258,10 +255,9 @@
 }
 
 @media (max-width: 767px) {
-  .windowControls button { width: 36px; height: 36px; }
+  .windowControls button { width: 40px; height: 40px; }
   .windowControls button:nth-child(3) { display: none; }
-  .windowControls { top: -10px; right: 16px; }
-  .header { grid-template-columns: 14px minmax(0, 1fr); padding-left: 10px; }
+  .header { grid-template-columns: 14px minmax(0, 1fr) auto; padding-left: 10px; }
 
   .box[data-viewport="mobile"].boxModeExpanded {
     position: fixed;

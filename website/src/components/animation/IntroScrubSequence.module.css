@@ -92,7 +92,7 @@
   background: rgb(9 15 11 / 48%);
 }
 .trackRow { display: flex; align-items: center; gap: 12px; }
-.trackRow input { width: 100%; height: 24px; margin: 0; direction: rtl; accent-color: #d2bd87; cursor: ew-resize; }
+.trackRow input { width: 100%; height: 24px; margin: 0; direction: ltr; accent-color: #d2bd87; cursor: ew-resize; }
 .trackRow output { min-width: 40px; color: #d2bd87; font: 700 11px/1 ui-monospace, SFMono-Regular, Consolas, monospace; text-align: right; }
 .visuallyHidden { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
