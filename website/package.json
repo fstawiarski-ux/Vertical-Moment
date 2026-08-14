@@ -8,6 +8,8 @@
     "verify-security": "node scripts/verify-security-boundaries.mjs",
     "predev": "npm run sync-data",
     "prebuild": "npm run sync-data",
+    "prebuild:next": "npm run sync-data",
+    "prebuild:cloudflare": "npm run sync-data",
     "build": "next build && serwist build serwist.config.mjs",
     "build:cloudflare": "opennextjs-cloudflare build && node scripts/copy-service-worker.mjs",
     "build:next": "next build",

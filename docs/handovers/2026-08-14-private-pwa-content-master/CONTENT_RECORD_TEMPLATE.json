@@ -1,0 +1,48 @@
+{
+  "id": "vm-example-content-id",
+  "status": "INBOX",
+  "kind": "box|region|crag|sector|route-set|panorama|media",
+  "title": "Replace with reviewed title",
+  "location": {
+    "region": "Replace only with a verified region",
+    "crag": "Replace only with a verified crag",
+    "sector": "Optional; omit until verified"
+  },
+  "description": "Short factual description; mark provisional or unverified material explicitly.",
+  "source": {
+    "owner": "Name or source reference",
+    "files": [
+      {
+        "path": "relative/path/in/private-intake",
+        "sha256": "record after intake",
+        "rightsState": "UNCONFIRMED|REVIEWED|APPROVED|RESTRICTED"
+      }
+    ],
+    "locationConfidence": "UNVERIFIED|PROVISIONAL|VERIFIED",
+    "notes": "Evidence, capture date, source URL, or field note reference"
+  },
+  "media": {
+    "primary": {
+      "src": "/photography/explore-app/example-960.webp",
+      "alt": "Specific, useful description",
+      "width": 960,
+      "height": 720,
+      "sizes": "(max-width: 767px) calc(100vw - 32px), 440px",
+      "sources": [
+        { "type": "image/avif", "srcSet": "...480.avif 480w, ...960.avif 960w" },
+        { "type": "image/webp", "srcSet": "...480.webp 480w, ...960.webp 960w" }
+      ]
+    },
+    "fallback": "/photography/explore-app/example-poster.webp"
+  },
+  "links": {
+    "parent": "/explore/region-slug",
+    "detail": "/explore/region-slug/crag-slug",
+    "related": []
+  },
+  "review": {
+    "ownerDecision": "PENDING|APPROVED|REJECTED",
+    "reviewPackage": "04-REVIEW-PACKAGES/example-content-id",
+    "notes": "Device screenshots, keyboard result, link result, and open questions"
+  }
+}

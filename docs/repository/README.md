@@ -47,7 +47,7 @@ Rules:
 | `website/` | Transitional combined Next.js/OpenNext runtime | The only deployable web runtime in this repository. |
 | `https://verticalmoment.com` | Canonical production | Cloudflare Workers is the production deploy target. |
 | `/explore` | Unlisted catalog experience | `noindex`; keep links intentional. |
-| `/explore-app` | Local development beta | Production returns 404; local development remains available. |
+| `/explore-app` | Private-by-link PWA beta | Direct link remains available with `noindex`; no public navigation or authentication boundary. |
 | `/review-preview` | Local development review tool | Production returns 404. |
 | GitHub Pages | Retired | Do not add content or use its old URL as a preview. |
 

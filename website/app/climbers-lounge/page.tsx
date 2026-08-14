@@ -42,10 +42,6 @@ export default function ClimbersLoungeComingSoonPage() {
           <span className={styles.statusDot} aria-hidden="true" />
           <span>Coming soon</span>
         </div>
-        <div className={styles.actions}>
-          <a className={styles.primaryAction} href="/explore-app?intro=skip">Open the Explore field app</a>
-          <a className={styles.secondaryAction} href="/explore">Browse the catalog</a>
-        </div>
       </section>
 
       <footer className={styles.footer}>

@@ -18,10 +18,10 @@ const nextConfig = {
     }];
   },
   async redirects() {
-    // /start remains a legacy entry point, but it should land in the current
-    // field-app journey rather than strand users on the marketing homepage.
+    // /start remains a legacy public entry point. Keep the private field app
+    // share-by-link only while its public release is still in development.
     return ["/start"]
-      .map((source) => ({ source, destination: "/explore-app?intro=skip", permanent: false }));
+      .map((source) => ({ source, destination: "/climbers-lounge", permanent: false }));
   },
 };
 

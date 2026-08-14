@@ -44,8 +44,8 @@ Do not merge a PR with unresolved review comments, stale data mirrors, public pr
 1. Merge the approved PR into `main`.
 2. Wait for the Cloudflare deployment workflow to complete successfully.
 3. Confirm the deployed commit is the merged `main` commit.
-4. Smoke-test `/`, `/explore-app`, `/review-preview`, `/robots.txt`, `/sitemap.xml`, and one representative panorama route.
-5. Confirm private surfaces remain private: `/explore-app` and `/review-preview` should be 404 in production; GPX assets should not resolve.
+4. Smoke-test `/`, `/climbers-lounge`, `/explore-app`, `/review-preview`, `/robots.txt`, `/sitemap.xml`, and one representative panorama route. `/start` must land on `/climbers-lounge`.
+5. Confirm private surfaces remain private: `/explore-app` must be direct-link/noindex only, with no public navigation or sensitive content; `/review-preview` may remain 404; GPX assets should not resolve.
 6. Record the commit, workflow URL, live checks and any residual issue in the handoff or release note.
 
 ## Rollback
