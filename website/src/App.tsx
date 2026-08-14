@@ -189,6 +189,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
 
   const boxes = useLayoutState((state) => state.boxes);
   const activeBoxId = useLayoutState((state) => state.activeBoxId);
+  const layoutHydrated = useLayoutState((state) => state.hydrated);
   const dispatch = useLayoutState((state) => state.dispatch);
   const undo = useLayoutState((state) => state.undo);
   const redo = useLayoutState((state) => state.redo);
@@ -197,6 +198,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
   const contentById = useMemo(() => new Map(registry.boxes.map((box) => [box.id, box])), [registry]);
   const activeContent = activeBoxId ? contentById.get(activeBoxId) ?? null : null;
   const deepLinkApplied = useRef(false);
+  const mobileLayoutNormalized = useRef(false);
 
   // Focus handling reads the live box list, but the window listener below must
   // not resubscribe on every drag frame — hence the ref rather than a dep.
@@ -300,16 +302,21 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
   }, [dispatch, viewportMode]);
 
   useEffect(() => {
-    if (viewportMode !== "mobile") return;
-    for (const box of boxes) {
+    if (viewportMode !== "mobile") {
+      mobileLayoutNormalized.current = false;
+      return;
+    }
+    if (!layoutHydrated || mobileLayoutNormalized.current) return;
+    mobileLayoutNormalized.current = true;
+    for (const box of boxesRef.current) {
       if (box.mode !== "normal") dispatch({ type: "SET_BOX_MODE", id: box.id, mode: "normal" });
     }
-  }, [boxes, dispatch, viewportMode]);
+  }, [dispatch, layoutHydrated, viewportMode]);
 
   // Deep links wait for the workspace so the opened box is not hidden behind
   // an intro that is still running.
   useEffect(() => {
-    if (!workspaceUnlocked || deepLinkApplied.current) return;
+    if (!workspaceUnlocked || !layoutHydrated || deepLinkApplied.current) return;
     deepLinkApplied.current = true;
     const target = resolveDeepLink(parseDeepLink(window.location.search), registry);
     if (target) {
@@ -322,7 +329,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
         openIndependentBox(target.boxId, target.mode);
       }
     }
-  }, [openIndependentBox, registry, workspaceUnlocked]);
+  }, [layoutHydrated, openIndependentBox, registry, workspaceUnlocked]);
 
   // Keeps the address bar shareable: whatever is in focus is what a copied URL reopens.
   useEffect(() => {
