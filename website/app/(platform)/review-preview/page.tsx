@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { SiteFooter } from "../components/site-footer";
 import { SiteNav } from "../components/site-nav";
 import { ReviewPreview } from "../components/review-preview";
@@ -11,6 +12,8 @@ export const metadata: Metadata = {
 };
 
 export default function ReviewPreviewPage() {
+  if (process.env.NODE_ENV === "production") notFound();
+
   return (
     <>
       <SiteNav />

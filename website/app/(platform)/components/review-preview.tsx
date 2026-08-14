@@ -74,9 +74,8 @@ export function ReviewPreview({ routes }: { routes: ReviewRoute[] }) {
           <h1>Review the approved source batch before a canonical import.</h1>
           <p>Every row keeps its guidebook page, source image, and deterministic reconciliation state. Approval covers this GitHub review package—not a master overwrite or production publication.</p>
         </div>
-        <div className="review-actions">
-          <a className="btn btn-forest" href="/review/Vertical_Moment_Reconciliation_Approved_2026-08-01.xlsx" download>Download reconciliation workbook</a>
-          <a className="btn btn-ghost" href="/review/website-review-routes.json" download>Download review JSON</a>
+        <div className="review-actions" role="note">
+          <span className="btn btn-ghost">Review files stay in the owner-controlled handoff bundle.</span>
         </div>
       </section>
 
@@ -94,8 +93,8 @@ export function ReviewPreview({ routes }: { routes: ReviewRoute[] }) {
         <button className="btn btn-ghost review-clear" onClick={() => { setQuery(""); setRegion("all"); setCrag("all"); setFilter("all"); }}>Clear</button>
       </section>
 
-      <div className="review-result-head"><div><b>{visible.length}</b> routes shown</div><span>Source approved · publication held</span></div>
-      <section className="review-list" aria-live="polite">
+      <div className="review-result-head" role="status" aria-live="polite"><div><b>{visible.length}</b> routes shown</div><span>Source approved · publication held</span></div>
+      <section className="review-list">
         {visible.map((route) => (
           <article className="card review-route" key={`${route.rowKey}-${route.number}`}>
             <div className="review-number">{route.number}</div>

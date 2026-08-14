@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - "website/**"
+      - "database/**"
+      - ".github/workflows/test.yml"
   push:
     branches: [main]
     paths:
@@ -18,11 +20,11 @@ jobs:
         working-directory: website
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         # No lfs: the unit tests never touch the scrub media.
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: "22"
           cache: "npm"
@@ -35,6 +37,9 @@ jobs:
       # the prebuild hook; a typecheck that never builds has to ask for it.
       - name: Sync data
         run: npm run sync-data
+
+      - name: Verify data mirror
+        run: npm run verify-data
 
       - name: Typecheck
         run: npx tsc --noEmit -p tsconfig.json

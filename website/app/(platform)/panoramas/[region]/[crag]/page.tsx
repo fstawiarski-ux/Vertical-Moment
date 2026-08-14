@@ -39,7 +39,7 @@ export default async function CragPanoramaPage({ params, searchParams }: PagePro
     <PanoramaExperience
       experience={experience}
       routeFocus={routeFocus}
-      backHref={`/explore/${region}`}
+      backHref={`/panoramas/${region}`}
     />
   );
 }

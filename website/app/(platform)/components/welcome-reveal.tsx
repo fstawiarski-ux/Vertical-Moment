@@ -1,20 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-
-const MODEL_VIEWER_JS = "https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js";
-
-function loadViewer() {
-  return new Promise<void>((resolve, reject) => {
-    if (customElements.get("model-viewer")) return resolve();
-    const existing = document.querySelector(`script[src="${MODEL_VIEWER_JS}"]`) as HTMLScriptElement | null;
-    if (existing) { existing.addEventListener("load", () => resolve(), { once: true }); existing.addEventListener("error", () => reject(), { once: true }); return; }
-    const script = document.createElement("script");
-    script.type = "module"; script.src = MODEL_VIEWER_JS;
-    script.onload = () => resolve(); script.onerror = () => reject();
-    document.head.appendChild(script);
-  });
-}
+import { ensureModelViewer } from "../../components/model-viewer-loader";
 
 export function WelcomeReveal() {
   const [visible, setVisible] = useState(false);
@@ -42,7 +29,7 @@ export function WelcomeReveal() {
     setShowOnLaunch(preference !== "false");
     if (!reduce && !slow && preference !== "false") {
       setVisible(true);
-      loadViewer().catch(() => close());
+      ensureModelViewer().catch(() => close());
       const safety = window.setTimeout(close, 6000);
       return () => { window.clearTimeout(safety); if (closeTimer.current) window.clearTimeout(closeTimer.current); if (orbitTimer.current) window.clearInterval(orbitTimer.current); };
     }

@@ -5,16 +5,13 @@
 import { createElement, useEffect, useRef, useState } from 'react';
 import styles from '../photography-home.module.css';
 import { cragModels } from '../data/crag-models';
+import { ensureModelViewer } from './model-viewer-loader';
 
 /**
- * model-viewer is a web component, so it is loaded as a module script rather
- * than an npm dependency — that keeps package.json and the Worker bundle
- * untouched, and the whole 3D stack (~150 KB) is only fetched once the section
- * actually scrolls into view. If the script never arrives, the poster stays put
- * and the section still reads correctly.
+ * The pinned model-viewer dependency is loaded lazily once the section enters
+ * the viewport. If it fails, the poster stays put and the section still reads
+ * correctly.
  */
-const VIEWER_SRC = 'https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js';
-const SCRIPT_ID = 'vm-model-viewer';
 
 type LoadState = 'idle' | 'loading' | 'ready' | 'failed';
 
@@ -31,18 +28,8 @@ export default function PhotographyModels() {
     }
 
     const load = () => {
-      if (document.getElementById(SCRIPT_ID)) {
-        setState('ready');
-        return;
-      }
       setState('loading');
-      const el = document.createElement('script');
-      el.id = SCRIPT_ID;
-      el.type = 'module';
-      el.src = VIEWER_SRC;
-      el.onload = () => setState('ready');
-      el.onerror = () => setState('failed');
-      document.head.appendChild(el);
+      void ensureModelViewer().then(() => setState('ready')).catch(() => setState('failed'));
     };
 
     const io = new IntersectionObserver(

@@ -76,7 +76,7 @@ Then open `http://localhost:3000/explore-app`. Use `http://localhost:3000/contri
 ## Data layers
 
 - `app/data/routes.json`: existing 632-route website snapshot.
-- `database/generated/routes_v1.json`: generated 2,416-route canonical export.
+- `database/api/v1/`: generated canonical route export served through the website mirror.
 - `app/data/review-routes.json`: separate 188-route guidebook reconciliation overlay.
 - `/review-preview`: filterable source-evidence and reconciliation review page.
 
