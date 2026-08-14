@@ -10,7 +10,7 @@ This is the practical baseline for the beta repository. It is not a penetration 
 - Secret scanning and push protection are enabled.
 - Dependabot security updates are enabled.
 - Public responses include baseline transport, framing, referrer, content-type and permissions headers.
-- `/review-preview` and `/explore-app` are local-development surfaces and return 404 in production.
+- `/review-preview` remains a local-development surface. `/explore-app` is a private-by-link, noindex PWA surface with no public navigation; an unlisted URL is not authentication.
 - GPX and other unverified approach files are kept outside the public runtime.
 - Canonical data and the website mirror are verified in CI.
 - CI verifies that public GPX files, public GPX URLs and unpinned repository actions do not reappear.
