@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T13:37:10+00:00",
+ "generated": "2026-08-14T18:25:11+00:00",
  "crag": {
   "id": "8a857a58-7816-55fe-ac91-ec4dbb6f1285",
   "name": "Turmstein",
@@ -60,7 +60,7 @@
     "kind": "search",
     "label": "komoot",
     "domain": "komoot.com",
-    "note": "Approach tracks and GPX.",
+    "note": "Approach data pending verification.",
     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Turmstein+H%C3%B6llental-Rax"
    }
   ],

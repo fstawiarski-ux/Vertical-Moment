@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T13:37:10+00:00",
+ "generated": "2026-08-14T18:25:11+00:00",
  "region": {
   "id": "6eafa243-d1d4-53ee-becc-3d100d97bf64",
   "name": "Alland",
@@ -55,7 +55,7 @@
     "kind": "search",
     "label": "komoot",
     "domain": "komoot.com",
-    "note": "Approach tracks and GPX.",
+    "note": "Approach data pending verification.",
     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Alland+Klettern"
    }
   ],
@@ -128,7 +128,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Arnsteinh%C3%B6hle+Alland"
     }
    ],
@@ -193,7 +193,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Arnsteinkamm+Alland"
     }
    ],
@@ -258,7 +258,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+B%C3%B6ses+Blut+Alland"
     }
    ],
@@ -323,7 +323,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Highway+Star+Alland"
     }
    ],
@@ -388,7 +388,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Mafiabloecke+Alland"
     }
    ],

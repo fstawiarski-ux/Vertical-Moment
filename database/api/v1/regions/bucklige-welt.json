@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T13:37:10+00:00",
+ "generated": "2026-08-14T18:25:11+00:00",
  "region": {
   "id": "af6de9ee-48b7-512d-a4b1-6444e4dd221f",
   "name": "Bucklige Welt",
@@ -55,7 +55,7 @@
     "kind": "search",
     "label": "komoot",
     "domain": "komoot.com",
-    "note": "Approach tracks and GPX.",
+    "note": "Approach data pending verification.",
     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Bucklige+Welt+Klettern"
    }
   ],
@@ -125,7 +125,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Black+Metal+Bucklige+Welt"
     }
    ],
@@ -190,7 +190,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+B%C3%A4renwand+Bucklige+Welt"
     }
    ],
@@ -255,7 +255,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Fuxbau+Bucklige+Welt"
     }
    ],
@@ -320,7 +320,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Gretlbl%C3%B6cke+Bucklige+Welt"
     }
    ],
@@ -385,7 +385,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Gretlwand+Bucklige+Welt"
     }
    ],
@@ -459,7 +459,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Gretlwandl+Bucklige+Welt"
     }
    ],
@@ -545,7 +545,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Grimmwand+Bucklige+Welt"
     }
    ],
@@ -610,7 +610,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Kulmriegel+Bucklige+Welt"
     }
    ],
@@ -675,7 +675,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Ofenberg+Bucklige+Welt"
     }
    ],
@@ -747,7 +747,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Parapluie+Wandl+Bucklige+Welt"
     }
    ],
@@ -812,7 +812,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Pauli%27s+Cave+Bucklige+Welt"
     }
    ],
@@ -877,7 +877,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Petersbaumgarten+Bucklige+Welt"
     }
    ],
@@ -942,7 +942,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Sauberwand+Bucklige+Welt"
     }
    ],
@@ -1022,7 +1022,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Scheiblingkirchner+Wandl+Bucklige+Welt"
     }
    ],
@@ -1089,7 +1089,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Scheiblingkirchner+Wandl+%28boulders%29+Bucklige+Welt"
     }
    ],
@@ -1154,7 +1154,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Wabenwand+Bucklige+Welt"
     }
    ],
@@ -1219,7 +1219,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Waldmark+Wandl+Bucklige+Welt"
     }
    ],
@@ -1284,7 +1284,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Zyklamwandl+Bucklige+Welt"
     }
    ],

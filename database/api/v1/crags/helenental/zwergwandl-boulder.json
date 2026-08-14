@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T13:37:10+00:00",
+ "generated": "2026-08-14T18:25:11+00:00",
  "crag": {
   "id": "f5c8a502-10d1-5716-9827-2d8d2d8b42ac",
   "name": "Zwergwandl (Boulder)",
@@ -53,7 +53,7 @@
     "kind": "search",
     "label": "komoot",
     "domain": "komoot.com",
-    "note": "Approach tracks and GPX.",
+    "note": "Approach data pending verification.",
     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Zwergwandl+%28Boulder%29+Helenental"
    }
   ],

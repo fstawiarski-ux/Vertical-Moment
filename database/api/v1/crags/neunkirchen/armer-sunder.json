@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T13:37:10+00:00",
+ "generated": "2026-08-14T18:25:11+00:00",
  "crag": {
   "id": "822db6ae-38ef-5507-83bf-9eac0d1d13bf",
   "name": "Armer Sünder",
@@ -60,7 +60,7 @@
     "kind": "search",
     "label": "komoot",
     "domain": "komoot.com",
-    "note": "Approach tracks and GPX.",
+    "note": "Approach data pending verification.",
     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Armer+S%C3%BCnder+Neunkirchen"
    }
   ],

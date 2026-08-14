@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T13:37:10+00:00",
+ "generated": "2026-08-14T18:25:11+00:00",
  "crag": {
   "id": "e7257a07-bf4e-5931-9849-f8b5940f2db4",
   "name": "Arnsteinhöhle Innen",
@@ -58,7 +58,7 @@
     "kind": "search",
     "label": "komoot",
     "domain": "komoot.com",
-    "note": "Approach tracks and GPX.",
+    "note": "Approach data pending verification.",
     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Arnsteinh%C3%B6hle+Innen+Arnstein"
    }
   ],

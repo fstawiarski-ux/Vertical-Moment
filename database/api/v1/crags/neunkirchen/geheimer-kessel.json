@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T13:37:10+00:00",
+ "generated": "2026-08-14T18:25:11+00:00",
  "crag": {
   "id": "c066afb5-4f68-5977-b141-f568752956d3",
   "name": "geheimer Kessel",
@@ -60,7 +60,7 @@
     "kind": "search",
     "label": "komoot",
     "domain": "komoot.com",
-    "note": "Approach tracks and GPX.",
+    "note": "Approach data pending verification.",
     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+geheimer+Kessel+Neunkirchen"
    }
   ],

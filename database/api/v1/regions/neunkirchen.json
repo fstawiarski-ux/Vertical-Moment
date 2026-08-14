@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T13:37:10+00:00",
+ "generated": "2026-08-14T18:25:11+00:00",
  "region": {
   "id": "7ea9bdfa-c61b-5d68-8b6c-b92236c0459c",
   "name": "Neunkirchen",
@@ -55,7 +55,7 @@
     "kind": "search",
     "label": "komoot",
     "domain": "komoot.com",
-    "note": "Approach tracks and GPX.",
+    "note": "Approach data pending verification.",
     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Neunkirchen+Klettern"
    }
   ],
@@ -121,7 +121,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Armer+S%C3%BCnder+Neunkirchen"
     }
    ],
@@ -186,7 +186,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Bierkessel+Neunkirchen"
     }
    ],
@@ -251,7 +251,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Die+F%C3%A4lle+Neunkirchen"
     }
    ],
@@ -316,7 +316,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Eibenwandln+Neunkirchen"
     }
    ],
@@ -381,7 +381,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Flatzer+Loch+Neunkirchen"
     }
    ],
@@ -453,7 +453,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Heanakr%C3%A4uln+Neunkirchen"
     }
    ],
@@ -518,7 +518,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Hintenburg+Neunkirchen"
     }
    ],
@@ -583,7 +583,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Kugelmugel+Neunkirchen"
     }
    ],
@@ -648,7 +648,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Lucky+Luke+Neunkirchen"
     }
    ],
@@ -713,7 +713,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+M%C3%BCslimann+Neunkirchen"
     }
    ],
@@ -778,7 +778,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Republikstein+Neunkirchen"
     }
    ],
@@ -843,7 +843,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Rumpelstilzchen+Neunkirchen"
     }
    ],
@@ -908,7 +908,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Schiebb%C3%B6gen+Neunkirchen"
     }
    ],
@@ -973,7 +973,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Sunshine+Neunkirchen"
     }
    ],
@@ -1038,7 +1038,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+S%C3%BC%C3%9Fes+Wandl+Neunkirchen"
     }
    ],
@@ -1103,7 +1103,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+T%C3%BCrkensturz+Neunkirchen"
     }
    ],
@@ -1168,7 +1168,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Uhus+Albtraum+Neunkirchen"
     }
    ],
@@ -1233,7 +1233,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Waldbauer+Neunkirchen"
     }
    ],
@@ -1298,7 +1298,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+geheimer+Kessel+Neunkirchen"
     }
    ],

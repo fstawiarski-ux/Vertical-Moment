@@ -22,21 +22,9 @@ const normalize = (value) =>
     .replace(/[^a-z0-9]+/g, "_")
     .replace(/^_+|_+$/g, "");
 
-const gpxFiles = fs
-  .readdirSync(path.join(sourceRoot, "gpx"))
-  .filter((file) => file.toLowerCase().endsWith(".gpx"));
-
-const gpxByKey = new Map(
-  gpxFiles.map((file) => [normalize(file.replace(/\.gpx$/i, "")), file]),
-);
-
-const walls = atlas.walls.map((wall) => {
-  const match = gpxByKey.get(normalize(`${wall.rg}__${wall.n}`));
-  return {
-    ...wall,
-    gpx: match ? `/atlas-gpx/${encodeURIComponent(match)}` : null,
-  };
-});
+// GPX source files are private review material. Never emit public URLs from
+// this importer; publication requires a separate rights and accuracy gate.
+const walls = atlas.walls.map((wall) => ({ ...wall }));
 
 const output = {
   generated: atlas.generated,
@@ -48,8 +36,6 @@ const output = {
     regionCount: atlas.regions.length,
     wallCount: atlas.walls.length,
     routeCount: atlas.routes.length,
-    gpxCount: gpxFiles.length,
-    matchedGpxCount: walls.filter((wall) => wall.gpx).length,
   },
 };
 

@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T13:37:10+00:00",
+ "generated": "2026-08-14T18:25:11+00:00",
  "region": {
   "id": "5cec0b41-7cb1-584b-adc1-d5f73f2c4d62",
   "name": "Hirschwände",
@@ -55,7 +55,7 @@
     "kind": "search",
     "label": "komoot",
     "domain": "komoot.com",
-    "note": "Approach tracks and GPX.",
+    "note": "Approach data pending verification.",
     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Hirschw%C3%A4nde+Klettern"
    }
   ],
@@ -122,7 +122,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Sektor+1+-+Calimero+Wall+Hirschw%C3%A4nde"
     }
    ],
@@ -180,7 +180,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Sektor+2+-+Messer+Hirschw%C3%A4nde"
     }
    ],
@@ -238,7 +238,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Sektor+3+-+Gamsh%C3%B6hlen+Hirschw%C3%A4nde"
     }
    ],
@@ -301,7 +301,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Sektor+4+-+Links+Aussen+Hirschw%C3%A4nde"
     }
    ],
@@ -374,7 +374,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Sektor+5+-+Kulisse+Hirschw%C3%A4nde"
     }
    ],
@@ -439,7 +439,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Sektor+6+-+Zentrum+Hirschw%C3%A4nde"
     }
    ],
@@ -496,7 +496,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Sektor+7+-+Rechtsaussen+Hirschw%C3%A4nde"
     }
    ],

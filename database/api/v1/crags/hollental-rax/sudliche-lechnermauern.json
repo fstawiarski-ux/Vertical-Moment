@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T13:37:10+00:00",
+ "generated": "2026-08-14T18:25:11+00:00",
  "crag": {
   "id": "8a734b24-9e43-5064-97cd-24df02e10312",
   "name": "Südliche Lechnermauern",
@@ -60,7 +60,7 @@
     "kind": "search",
     "label": "komoot",
     "domain": "komoot.com",
-    "note": "Approach tracks and GPX.",
+    "note": "Approach data pending verification.",
     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+S%C3%BCdliche+Lechnermauern+H%C3%B6llental-Rax"
    }
   ],

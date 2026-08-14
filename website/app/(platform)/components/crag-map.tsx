@@ -73,27 +73,6 @@ function loadLeaflet(): Promise<any> {
   });
 }
 
-/** Builds a one-waypoint GPX file from the crag's own verified coordinate —
- * generated from data already in hand, never a fetched/fabricated URL. */
-function cragGpx(c: CragSummary): string {
-  const lat = c.latitude, lon = c.longitude;
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="Vertical Moment" xmlns="http://www.topografix.com/GPX/1/1">
-  <wpt lat="${lat}" lon="${lon}">
-    <name>${c.name}</name>
-    <desc>${c.regionName} — ${c.routeCount} routes. Coordinate source: ${c.coordSource ?? "unknown"}. © OpenStreetMap contributors.</desc>
-  </wpt>
-</gpx>`;
-}
-function downloadGpx(c: CragSummary) {
-  const blob = new Blob([cragGpx(c)], { type: "application/gpx+xml" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url; a.download = `${c.slug}.gpx`;
-  document.body.appendChild(a); a.click(); a.remove();
-  URL.revokeObjectURL(url);
-}
-
 export function CragMap({ initialRegionSlug, initialCragSlug, showPanel = true }: { initialRegionSlug?: string; initialCragSlug?: string; showPanel?: boolean } = {}) {
   const mapEl = useRef<HTMLDivElement>(null);
   const map = useRef<any>(null);
@@ -599,9 +578,6 @@ function CragDetailPanel({ crag }: { crag: CragDetail }) {
       <div className="crag-actions" style={{ display: "flex", gap: 8, padding: "0 8px 10px", flexWrap: "wrap" }}>
         {crag.latitude != null && (
           <a className="btn btn-terra" href={`https://www.google.com/maps/search/?api=1&query=${crag.latitude},${crag.longitude}`} target="_blank" rel="noopener">Maps</a>
-        )}
-        {crag.latitude != null && (
-          <button className="btn btn-terra" type="button" onClick={() => downloadGpx(crag)}>GPX</button>
         )}
         <button className="btn btn-terra" type="button" disabled={!crag.media.photos} title={crag.media.photos ? undefined : "No photos catalogued for this crag yet"}>
           Photos

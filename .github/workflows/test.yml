@@ -2,15 +2,16 @@ name: Test website
 
 on:
   pull_request:
-    paths:
-      - "website/**"
-      - "database/**"
-      - ".github/workflows/test.yml"
   push:
     branches: [main]
     paths:
       - "website/**"
+      - "database/**"
+      - ".github/workflows/test.yml"
   workflow_dispatch: {}
+
+permissions:
+  contents: read
 
 jobs:
   test:
@@ -20,11 +21,11 @@ jobs:
         working-directory: website
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
         # No lfs: the unit tests never touch the scrub media.
 
       - name: Setup Node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
         with:
           node-version: "22"
           cache: "npm"
@@ -40,6 +41,9 @@ jobs:
 
       - name: Verify data mirror
         run: npm run verify-data
+
+      - name: Verify public security boundaries
+        run: npm run verify-security
 
       - name: Typecheck
         run: npx tsc --noEmit -p tsconfig.json

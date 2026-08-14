@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T13:37:10+00:00",
+ "generated": "2026-08-14T18:25:11+00:00",
  "region": {
   "id": "b729e172-7b3a-5fd9-97ce-899cf3d7c386",
   "name": "Peilstein",
@@ -69,7 +69,7 @@
     "kind": "search",
     "label": "komoot",
     "domain": "komoot.com",
-    "note": "Approach tracks and GPX.",
+    "note": "Approach data pending verification.",
     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Peilstein+Klettern"
    }
   ],
@@ -135,7 +135,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Bachwand+Peilstein"
     }
    ],
@@ -200,7 +200,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Fitze+Fatze+Peilstein"
     }
    ],
@@ -265,7 +265,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Hahnenkamm+Peilstein"
     }
    ],
@@ -330,7 +330,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Klapf+Peilstein"
     }
    ],
@@ -395,7 +395,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Rechter+Nordgrat+Peilstein"
     }
    ],
@@ -460,7 +460,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Spartastein+Peilstein"
     }
    ],
@@ -525,7 +525,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Spartat%C3%BCrme+Peilstein"
     }
    ],
@@ -590,7 +590,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Spartawand+Peilstein"
     }
    ],
@@ -655,7 +655,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Trinkzahn+Peilstein"
     }
    ],
@@ -720,7 +720,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Untere+Ostwand+Peilstein"
     }
    ],
@@ -785,7 +785,7 @@
      "kind": "search",
      "label": "komoot",
      "domain": "komoot.com",
-     "note": "Approach tracks and GPX.",
+     "note": "Approach data pending verification.",
      "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Vallyt%C3%BCrme+Peilstein"
     }
    ],

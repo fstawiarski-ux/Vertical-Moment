@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T13:37:10+00:00",
+ "generated": "2026-08-14T18:25:11+00:00",
  "crag": {
   "id": "0eab88bb-3b68-5c33-bc79-ef0f8a215f1d",
   "name": "Große Postlwand",
@@ -67,7 +67,7 @@
     "kind": "search",
     "label": "komoot",
     "domain": "komoot.com",
-    "note": "Approach tracks and GPX.",
+    "note": "Approach data pending verification.",
     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+Gro%C3%9Fe+Postlwand+Hohe+Wand"
    }
   ],

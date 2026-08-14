@@ -2,21 +2,6 @@ name: Validate repository product contract
 
 on:
   pull_request:
-    paths:
-      - "README.md"
-      - "AGENTS.md"
-      - "CONTRIBUTING.md"
-      - "products/**"
-      - "docs/PRODUCT_MAP.md"
-      - "docs/architecture/**"
-      - "docs/operations/**"
-      - "docs/recovery/**"
-      - "docs/repository/**"
-      - "website/**/AGENTS.md"
-      - ".github/CODEOWNERS"
-      - ".github/pull_request_template.md"
-      - ".github/workflows/repository-contract.yml"
-      - "scripts/verify-repository-contract.ps1"
   push:
     branches: [main]
     paths:
@@ -33,12 +18,15 @@ on:
       - "scripts/verify-repository-contract.ps1"
   workflow_dispatch: {}
 
+permissions:
+  contents: read
+
 jobs:
   contract:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
 
       - name: Validate product and agent contract
         shell: pwsh

@@ -2,7 +2,7 @@
 
 ## 1. Select the product
 
-Read `AGENTS.md` and `docs/PRODUCT_MAP.md` before opening files.
+Read `AGENTS.md`, `docs/PRODUCT_MAP.md`, and [`docs/repository/README.md`](docs/repository/README.md) before opening files.
 
 - Public photography/business website: branch from `main` as `site/<task>`.
 - Climbers Lounge / Explore PWA: branch from the approved PWA base as `pwa/<task>`.
@@ -35,3 +35,7 @@ Never commit personal location details, credentials, copyrighted scans without p
 ## 5. Review and publication
 
 Provide exact changed files, test/build results and browser/device evidence. Stop for review before push/PR unless publication was separately authorized. Do not merge automatically. Cloudflare deployment and live verification are separate approval gates.
+
+## 6. Repository roles and release path
+
+The role boundaries, CODEOWNERS expectations, required checks, and escalation path live in [`docs/repository/ROLES.md`](docs/repository/ROLES.md). The canonical deployment and rollback procedure lives in [`docs/operations/RELEASE_RUNBOOK.md`](docs/operations/RELEASE_RUNBOOK.md). Do not use the retired GitHub Pages URL as a production preview or source of truth.

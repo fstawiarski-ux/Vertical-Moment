@@ -26,7 +26,6 @@ type AtlasWall = {
   lat: number | null;
   lon: number | null;
   gr: string[];
-  gpx: string | null;
   path: string;
 };
 

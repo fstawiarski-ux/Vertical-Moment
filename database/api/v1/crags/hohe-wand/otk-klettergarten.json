@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-09T13:37:10+00:00",
+ "generated": "2026-08-14T18:25:11+00:00",
  "crag": {
   "id": "4322fbdd-4e2c-5a7d-9414-448fcf348b35",
   "name": "ÖTK Klettergarten",
@@ -96,7 +96,7 @@
     "kind": "search",
     "label": "komoot",
     "domain": "komoot.com",
-    "note": "Approach tracks and GPX.",
+    "note": "Approach data pending verification.",
     "url": "https://duckduckgo.com/?q=site%3Akomoot.com+%C3%96TK+Klettergarten+Hohe+Wand"
    }
   ],
