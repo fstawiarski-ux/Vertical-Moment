@@ -33,6 +33,14 @@ export interface BoxState {
   height?: number;
   zIndex: number;
   mode: BoxMode;
+  /** The last non-exclusive frame used when leaving expanded/fullscreen. */
+  restoreFrame?: {
+    mode: "normal" | "expanded";
+    x: number;
+    y: number;
+    width?: number;
+    height?: number;
+  };
   pinned: boolean;
   dataRef?: string;
   stackIndex?: number;

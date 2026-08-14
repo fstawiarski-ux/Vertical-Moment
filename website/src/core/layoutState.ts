@@ -3,7 +3,7 @@
 import { createContext, createElement, useContext, useEffect, useRef, type ReactNode } from "react";
 import { createStore, type StoreApi } from "zustand/vanilla";
 import { useStore } from "zustand";
-import { applyExploreLayout, applyGridLayout, applyPresentationLayout } from "./layoutAlgorithms";
+import { EXPLORE_SAFE_ZONE, applyExploreLayout, applyGridLayout, applyPresentationLayout } from "./layoutAlgorithms";
 import type { BoxState, LayoutMode, LayoutState, ViewportBounds } from "./types";
 
 const STORAGE_KEY = "vertical-moment:explore-app:layout";
@@ -20,6 +20,7 @@ export type LayoutAction =
   | { type: "ADD_BOX"; box: BoxState }
   | { type: "REMOVE_BOX"; id: string }
   | { type: "UPDATE_BOX"; id: string; patch: Partial<Omit<BoxState, "id">> }
+  | { type: "SET_BOX_MODE"; id: string; mode: BoxState["mode"] }
   | { type: "SET_ACTIVE_BOX"; id: string | null }
   | { type: "SET_LAYOUT_MODE"; mode: LayoutMode }
   | { type: "APPLY_AUTO_LAYOUT"; viewport?: ViewportBounds }
@@ -58,25 +59,96 @@ function isBoxState(value: unknown): value is BoxState {
   const box = value as Partial<BoxState>;
   return typeof box.id === "string"
     && typeof box.type === "string"
-    && typeof box.x === "number"
-    && typeof box.y === "number"
-    && typeof box.zIndex === "number"
+    && typeof box.x === "number" && Number.isFinite(box.x)
+    && typeof box.y === "number" && Number.isFinite(box.y)
+    && typeof box.zIndex === "number" && Number.isFinite(box.zIndex)
     && typeof box.mode === "string"
     && validModes.has(box.mode)
-    && typeof box.pinned === "boolean";
+    && typeof box.pinned === "boolean"
+    && (!box.restoreFrame || isRestoreFrame(box.restoreFrame));
+}
+
+function isRestoreFrame(value: unknown): value is NonNullable<BoxState["restoreFrame"]> {
+  if (!value || typeof value !== "object") return false;
+  const frame = value as Partial<NonNullable<BoxState["restoreFrame"]>>;
+  return (frame.mode === "normal" || frame.mode === "expanded")
+    && typeof frame.x === "number" && Number.isFinite(frame.x)
+    && typeof frame.y === "number" && Number.isFinite(frame.y)
+    && (frame.width === undefined || (typeof frame.width === "number" && Number.isFinite(frame.width)))
+    && (frame.height === undefined || (typeof frame.height === "number" && Number.isFinite(frame.height)));
 }
 
 function isLayoutState(value: unknown): value is LayoutState {
   if (!value || typeof value !== "object") return false;
   const state = value as Partial<LayoutState>;
   return Array.isArray(state.boxes)
+    && new Set(state.boxes.map((box) => box.id)).size === state.boxes.length
     && state.boxes.every(isBoxState)
     && (state.activeBoxId === null || typeof state.activeBoxId === "string")
     && typeof state.layoutMode === "string"
     && validLayouts.has(state.layoutMode);
 }
 
-function mergePersistedState(persisted: LayoutState, fallback: LayoutState): LayoutState {
+const MIN_BOX_WIDTH = 210;
+const MIN_BOX_HEIGHT = 130;
+
+function clampFrame(frame: NonNullable<BoxState["restoreFrame"]> | BoxState, viewport?: ViewportBounds) {
+  if (!viewport) return { x: frame.x, y: frame.y, width: frame.width, height: frame.height };
+
+  const safeRight = Math.max(EXPLORE_SAFE_ZONE.left + MIN_BOX_WIDTH, viewport.width - EXPLORE_SAFE_ZONE.right);
+  const safeBottom = Math.max(EXPLORE_SAFE_ZONE.top + MIN_BOX_HEIGHT, viewport.height - EXPLORE_SAFE_ZONE.bottom);
+  const maxWidth = Math.max(MIN_BOX_WIDTH, safeRight - EXPLORE_SAFE_ZONE.left);
+  const maxHeight = Math.max(MIN_BOX_HEIGHT, safeBottom - EXPLORE_SAFE_ZONE.top);
+  const width = Math.min(maxWidth, Math.max(MIN_BOX_WIDTH, frame.width ?? 360));
+  const height = Math.min(maxHeight, Math.max(MIN_BOX_HEIGHT, frame.height ?? 280));
+  return {
+    x: Math.min(safeRight - width, Math.max(EXPLORE_SAFE_ZONE.left, frame.x)),
+    y: Math.min(safeBottom - height, Math.max(EXPLORE_SAFE_ZONE.top, frame.y)),
+    width,
+    height,
+  };
+}
+
+function restoreGeometry(box: BoxState) {
+  if (!box.restoreFrame) return {};
+  return {
+    x: box.restoreFrame.x,
+    y: box.restoreFrame.y,
+    width: box.restoreFrame.width,
+    height: box.restoreFrame.height,
+  };
+}
+
+function demoteExclusiveBox(box: BoxState): BoxState {
+  return { ...box, ...restoreGeometry(box), mode: "normal", restoreFrame: undefined };
+}
+
+function exclusiveOwner(boxes: BoxState[], activeBoxId: string | null) {
+  const ranked = (mode: BoxState["mode"]) => boxes
+    .filter((box) => box.mode === mode)
+    .sort((a, b) => (a.id === activeBoxId ? 1 : 0) - (b.id === activeBoxId ? 1 : 0) || b.zIndex - a.zIndex);
+  return ranked("fullscreen")[0] ?? ranked("expanded")[0] ?? null;
+}
+
+export function normalizeLayoutState(state: LayoutState, viewport?: ViewportBounds): LayoutState {
+  const boxes = state.boxes.map((box) => {
+    const frame = clampFrame(box, viewport);
+    const restoreFrame = box.restoreFrame && isRestoreFrame(box.restoreFrame)
+      ? { ...box.restoreFrame, ...clampFrame(box.restoreFrame, viewport) }
+      : undefined;
+    return { ...box, ...frame, restoreFrame };
+  });
+  const owner = exclusiveOwner(boxes, state.activeBoxId);
+  const normalizedBoxes = owner
+    ? boxes.map((box) => box.id === owner.id ? box : (box.mode === "fullscreen" || box.mode === "expanded" ? demoteExclusiveBox(box) : box))
+    : boxes;
+  const ids = new Set(normalizedBoxes.map((box) => box.id));
+  const activeBoxId = owner?.id
+    ?? (state.activeBoxId && ids.has(state.activeBoxId) && normalizedBoxes.find((box) => box.id === state.activeBoxId)?.mode !== "minimized" ? state.activeBoxId : null);
+  return { ...state, boxes: normalizedBoxes, activeBoxId };
+}
+
+function mergePersistedState(persisted: LayoutState, fallback: LayoutState, viewport?: ViewportBounds): LayoutState {
   const persistedById = new Map(persisted.boxes.map((box) => [box.id, box]));
   const boxes = fallback.boxes.map((fallbackBox) => {
     const saved = persistedById.get(fallbackBox.id);
@@ -84,17 +156,70 @@ function mergePersistedState(persisted: LayoutState, fallback: LayoutState): Lay
     return {
       ...fallbackBox,
       ...saved,
+      ...clampFrame(saved, viewport),
       id: fallbackBox.id,
       type: fallbackBox.type,
       dataRef: fallbackBox.dataRef,
+      restoreFrame: saved.restoreFrame && isRestoreFrame(saved.restoreFrame)
+        ? { ...saved.restoreFrame, ...clampFrame(saved.restoreFrame, viewport) }
+        : undefined,
     };
   });
   const ids = new Set(boxes.map((box) => box.id));
 
-  return {
+  return normalizeLayoutState({
     boxes,
     activeBoxId: persisted.activeBoxId && ids.has(persisted.activeBoxId) ? persisted.activeBoxId : null,
     layoutMode: persisted.layoutMode,
+  }, viewport);
+}
+
+function transitionBoxMode(state: LayoutState, id: string, mode: BoxState["mode"]): LayoutState {
+  const current = state.boxes.find((box) => box.id === id);
+  if (!current) return state;
+
+  let next: BoxState;
+  if (mode === "fullscreen") {
+    next = {
+      ...current,
+      mode,
+      restoreFrame: current.mode === "fullscreen"
+        ? current.restoreFrame
+        : { mode: current.mode === "expanded" ? "expanded" : "normal", x: current.x, y: current.y, width: current.width, height: current.height },
+    };
+  } else if (mode === "expanded") {
+    if (current.mode === "expanded") {
+      next = { ...current, ...restoreGeometry(current), mode: "normal", restoreFrame: undefined };
+    } else {
+      next = {
+        ...current,
+        mode,
+        restoreFrame: current.mode === "fullscreen"
+          ? current.restoreFrame ?? { mode: "normal", x: current.x, y: current.y, width: current.width, height: current.height }
+          : { mode: "normal", x: current.x, y: current.y, width: current.width, height: current.height },
+      };
+    }
+  } else if (mode === "normal") {
+    if (current.mode === "fullscreen" && current.restoreFrame?.mode === "expanded") {
+      next = { ...current, ...restoreGeometry(current), mode: "expanded", restoreFrame: current.restoreFrame };
+    } else {
+      next = { ...current, ...restoreGeometry(current), mode, restoreFrame: undefined };
+    }
+  } else {
+    next = { ...current, ...restoreGeometry(current), mode, restoreFrame: undefined };
+  }
+
+  const boxes = state.boxes.map((box) => {
+    if (box.id === id) return next;
+    if ((mode === "expanded" || mode === "fullscreen") && (box.mode === "expanded" || box.mode === "fullscreen")) {
+      return demoteExclusiveBox(box);
+    }
+    return box;
+  });
+  return {
+    ...state,
+    boxes,
+    activeBoxId: mode === "minimized" ? (state.activeBoxId === id ? null : state.activeBoxId) : id,
   };
 }
 
@@ -117,11 +242,18 @@ export function layoutReducer(state: LayoutState, action: LayoutAction): LayoutS
         activeBoxId: state.activeBoxId === action.id ? null : state.activeBoxId,
       };
     }
-    case "UPDATE_BOX":
+    case "UPDATE_BOX": {
+      const current = state.boxes.find((box) => box.id === action.id);
+      if (!current) return state;
+      const { mode, ...patch } = action.patch;
+      const transitioned = mode ? transitionBoxMode(state, action.id, mode) : state;
       return {
-        ...state,
-        boxes: state.boxes.map((box) => box.id === action.id ? { ...box, ...action.patch, id: box.id } : box),
+        ...transitioned,
+        boxes: transitioned.boxes.map((box) => box.id === action.id ? { ...box, ...patch, id: box.id } : box),
       };
+    }
+    case "SET_BOX_MODE":
+      return transitionBoxMode(state, action.id, action.mode);
     case "SET_ACTIVE_BOX": {
       if (action.id === null) return { ...state, activeBoxId: null };
       if (!state.boxes.some((box) => box.id === action.id)) return state;
@@ -146,11 +278,11 @@ export function layoutReducer(state: LayoutState, action: LayoutAction): LayoutS
       return {
         ...state,
         activeBoxId: null,
-        boxes: state.boxes.map((box) => box.pinned ? box : { ...box, mode: "minimized" }),
+        boxes: state.boxes.map((box) => box.pinned ? box : { ...box, ...restoreGeometry(box), mode: "minimized", restoreFrame: undefined }),
       };
     case "RESET_LAYOUT":
     case "LOAD_STATE":
-      return action.state;
+      return normalizeLayoutState(action.state);
     default:
       return state;
   }
@@ -165,6 +297,8 @@ function historyKey(action: LayoutAction): string | null {
   switch (action.type) {
     case "UPDATE_BOX":
       return `UPDATE_BOX:${action.id}:${Object.keys(action.patch).sort().join(",")}`;
+    case "SET_BOX_MODE":
+      return `SET_BOX_MODE:${action.id}:${action.mode}`;
     case "ADD_BOX":
     case "REMOVE_BOX":
     case "SET_LAYOUT_MODE":
@@ -281,7 +415,7 @@ export function LayoutProvider({ children, initialState }: { children: ReactNode
         if (persisted?.version === STORAGE_VERSION && isLayoutState(persisted.state)) {
           layoutStore.getState().dispatch({
             type: "LOAD_STATE",
-            state: mergePersistedState(persisted.state, initialState),
+            state: mergePersistedState(persisted.state, initialState, { width: window.innerWidth, height: window.innerHeight }),
           });
         }
         layoutStore.getState().markHydrated();

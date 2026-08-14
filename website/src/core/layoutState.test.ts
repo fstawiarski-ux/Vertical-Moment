@@ -43,6 +43,48 @@ describe("layoutReducer", () => {
     expect(next.activeBoxId).toBeNull();
   });
 
+  it("keeps expanded and fullscreen ownership exclusive", () => {
+    const expanded = layoutReducer(seed(), { type: "SET_BOX_MODE", id: "a", mode: "expanded" });
+    const fullscreen = layoutReducer(expanded, { type: "SET_BOX_MODE", id: "b", mode: "fullscreen" });
+    expect(fullscreen.boxes.filter((box) => box.mode === "expanded" || box.mode === "fullscreen").map((box) => box.id)).toEqual(["b"]);
+    expect(fullscreen.boxes.find((box) => box.id === "a")?.mode).toBe("normal");
+  });
+
+  it("restores the prior geometry after leaving fullscreen", () => {
+    const entered = layoutReducer(seed(), { type: "SET_BOX_MODE", id: "a", mode: "fullscreen" });
+    const changed = layoutReducer(entered, { type: "UPDATE_BOX", id: "a", patch: { x: 700, y: 500 } });
+    const restored = layoutReducer(changed, { type: "SET_BOX_MODE", id: "a", mode: "normal" });
+    expect(restored.boxes.find((box) => box.id === "a")).toMatchObject({ mode: "normal", x: 10, y: 10, width: 200, height: 150 });
+  });
+
+  it("restores expanded mode when fullscreen was entered from expanded", () => {
+    const expanded = layoutReducer(seed(), { type: "SET_BOX_MODE", id: "a", mode: "expanded" });
+    const fullscreen = layoutReducer(expanded, { type: "SET_BOX_MODE", id: "a", mode: "fullscreen" });
+    const restored = layoutReducer(fullscreen, { type: "SET_BOX_MODE", id: "a", mode: "normal" });
+    expect(restored.boxes.find((box) => box.id === "a")?.mode).toBe("expanded");
+  });
+
+  it("clears an exclusive restore frame when auto layout returns a box to normal", () => {
+    const fullscreen = layoutReducer(seed(), { type: "SET_BOX_MODE", id: "a", mode: "fullscreen" });
+    const relaidOut = layoutReducer(fullscreen, { type: "APPLY_AUTO_LAYOUT", viewport: { width: 1440, height: 900 } });
+    expect(relaidOut.boxes.find((box) => box.id === "a")).toMatchObject({ mode: "normal", restoreFrame: undefined });
+  });
+
+  it("restores minimized boxes to their last valid frame", () => {
+    const moved = layoutReducer(seed(), { type: "UPDATE_BOX", id: "a", patch: { x: 420, y: 240 } });
+    const minimized = layoutReducer(moved, { type: "SET_BOX_MODE", id: "a", mode: "minimized" });
+    const restored = layoutReducer(minimized, { type: "SET_BOX_MODE", id: "a", mode: "normal" });
+    expect(restored.boxes.find((box) => box.id === "a")).toMatchObject({ mode: "normal", x: 420, y: 240 });
+  });
+
+  it("normalizes persisted layouts with multiple fullscreen owners", () => {
+    const persisted = seed();
+    persisted.boxes[0].mode = "fullscreen";
+    persisted.boxes[1].mode = "fullscreen";
+    const next = layoutReducer(seed(), { type: "LOAD_STATE", state: persisted });
+    expect(next.boxes.filter((box) => box.mode === "fullscreen")).toHaveLength(1);
+  });
+
   it("clears the active box when it is removed", () => {
     const focused = layoutReducer(seed(), { type: "SET_ACTIVE_BOX", id: "b" });
     const next = layoutReducer(focused, { type: "REMOVE_BOX", id: "b" });
@@ -50,10 +92,10 @@ describe("layoutReducer", () => {
     expect(next.boxes).toHaveLength(2);
   });
 
-  it("replaces state wholesale on RESET_LAYOUT and LOAD_STATE", () => {
+  it("normalizes RESET_LAYOUT and LOAD_STATE without changing valid content", () => {
     const replacement = seed();
-    expect(layoutReducer(seed(), { type: "RESET_LAYOUT", state: replacement })).toBe(replacement);
-    expect(layoutReducer(seed(), { type: "LOAD_STATE", state: replacement })).toBe(replacement);
+    expect(layoutReducer(seed(), { type: "RESET_LAYOUT", state: replacement })).toEqual(replacement);
+    expect(layoutReducer(seed(), { type: "LOAD_STATE", state: replacement })).toEqual(replacement);
   });
 });
 

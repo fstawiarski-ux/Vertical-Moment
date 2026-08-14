@@ -2,11 +2,9 @@
 
 import { useEffect, useRef, useState, type CSSProperties, type MouseEvent as ReactMouseEvent, type PointerEvent as ReactPointerEvent, type ReactNode } from "react";
 import { useLayoutState } from "../../core/layoutState";
-import { EXPLORE_SAFE_ZONE } from "../../core/layoutAlgorithms";
-import type { BoxMode, BoxState, ViewportMode } from "../../core/types";
+import { EXPLORE_SAFE_ZONE, resizeBoxFrame, type ResizeDirection } from "../../core/layoutAlgorithms";
+import type { BoxState, ViewportMode } from "../../core/types";
 import styles from "./BoxContainer.module.css";
-
-type ResizeDirection = "n" | "ne" | "e" | "se" | "s" | "sw" | "w" | "nw";
 
 interface DragState {
   pointerId: number;
@@ -14,6 +12,7 @@ interface DragState {
   startY: number;
   originX: number;
   originY: number;
+  captureTarget?: Element;
 }
 
 interface ResizeState extends DragState {
@@ -21,12 +20,11 @@ interface ResizeState extends DragState {
   originWidth: number;
   originHeight: number;
   cleanup?: () => void;
+  captureTarget?: Element;
 }
 
 type ResizePoint = Pick<PointerEvent, "pointerId" | "clientX" | "clientY">;
 
-const MIN_WIDTH = 210;
-const MIN_HEIGHT = 130;
 const BOX_GAP = 10;
 const clamp = (value: number, min: number, max: number) => Math.min(max, Math.max(min, value));
 
@@ -41,13 +39,6 @@ const resizeClass: Record<ResizeDirection, string> = {
   nw: styles.resizeNw,
 };
 
-const controlLabel: Record<BoxMode, string> = {
-  normal: "Normal size",
-  minimized: "Restore box",
-  expanded: "Exit expanded view",
-  fullscreen: "Exit full screen",
-};
-
 export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
   box: BoxState;
   title: string;
@@ -59,15 +50,18 @@ export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
   const boxes = useLayoutState((state) => state.boxes);
   const dragRef = useRef<DragState | null>(null);
   const resizeRef = useRef<ResizeState | null>(null);
+  const boxesRef = useRef(boxes);
   const [dragging, setDragging] = useState(false);
   const canFreeform = viewportMode === "desktop" && box.mode === "normal";
 
+  useEffect(() => { boxesRef.current = boxes; }, [boxes]);
+
   const focus = () => dispatch({ type: "SET_ACTIVE_BOX", id: box.id });
-  const setMode = (mode: BoxMode) => {
-    dispatch({ type: "UPDATE_BOX", id: box.id, patch: { mode } });
+  const setMode = (mode: BoxState["mode"]) => {
+    dispatch({ type: "SET_BOX_MODE", id: box.id, mode });
   };
 
-  const isCollisionFree = (x: number, y: number, width: number, height: number) => boxes.every((other) => {
+  const isCollisionFree = (x: number, y: number, width: number, height: number) => boxesRef.current.every((other) => {
     if (other.id === box.id || other.mode !== "normal") return true;
     const otherWidth = other.width ?? 360;
     const otherHeight = other.height ?? 280;
@@ -80,7 +74,7 @@ export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
   const beginDrag = (event: ReactPointerEvent<HTMLDivElement>) => {
     if (!canFreeform || (event.target as Element).closest("button")) return;
     focus();
-    dragRef.current = { pointerId: event.pointerId, startX: event.clientX, startY: event.clientY, originX: box.x, originY: box.y };
+    dragRef.current = { pointerId: event.pointerId, startX: event.clientX, startY: event.clientY, originX: box.x, originY: box.y, captureTarget: event.currentTarget };
     event.currentTarget.setPointerCapture(event.pointerId);
     setDragging(true);
   };
@@ -103,17 +97,17 @@ export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
     if (isCollisionFree(x, y, width, height)) dispatch({ type: "UPDATE_BOX", id: box.id, patch: { x, y } });
   };
 
-  const endDrag = (event: ReactPointerEvent<HTMLDivElement>) => {
-    if (dragRef.current?.pointerId !== event.pointerId) return;
+  const finishDrag = (pointerId?: number) => {
+    const drag = dragRef.current;
+    if (!drag || (pointerId !== undefined && drag.pointerId !== pointerId)) return;
+    if (drag.pointerId >= 0 && drag.captureTarget?.hasPointerCapture?.(drag.pointerId)) {
+      try { drag.captureTarget.releasePointerCapture(drag.pointerId); } catch { /* Pointer capture may already be gone. */ }
+    }
     dragRef.current = null;
     setDragging(false);
   };
 
-  useEffect(() => () => {
-    resizeRef.current?.cleanup?.();
-    resizeRef.current = null;
-    dragRef.current = null;
-  }, []);
+  const endDrag = (event: ReactPointerEvent<HTMLDivElement>) => finishDrag(event.pointerId);
 
   const beginResize = (direction: ResizeDirection) => (event: ReactPointerEvent<HTMLButtonElement>) => {
     if (!canFreeform || resizeRef.current) return;
@@ -129,6 +123,7 @@ export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
       originY: box.y,
       originWidth: box.width ?? 360,
       originHeight: box.height ?? 280,
+      captureTarget: event.currentTarget,
     };
     const onMove = (moveEvent: PointerEvent) => moveResize(moveEvent);
     const onEnd = (endEvent: PointerEvent) => {
@@ -138,6 +133,9 @@ export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
       window.removeEventListener("pointermove", onMove);
       window.removeEventListener("pointerup", onEnd);
       window.removeEventListener("pointercancel", onEnd);
+      if (resize.pointerId >= 0 && resize.captureTarget?.hasPointerCapture?.(resize.pointerId)) {
+        try { resize.captureTarget.releasePointerCapture(resize.pointerId); } catch { /* Pointer capture may already be gone. */ }
+      }
     };
     resizeRef.current = resize;
     window.addEventListener("pointermove", onMove);
@@ -176,26 +174,16 @@ export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
   const moveResize = (event: ResizePoint) => {
     const resize = resizeRef.current;
     if (!resize || resize.pointerId !== event.pointerId) return;
-    const dx = event.clientX - resize.startX;
-    const dy = event.clientY - resize.startY;
-    let x = resize.originX;
-    let y = resize.originY;
-    let width = resize.originWidth;
-    let height = resize.originHeight;
+    const frame = resizeBoxFrame(
+      { x: resize.originX, y: resize.originY, width: resize.originWidth, height: resize.originHeight },
+      resize.direction,
+      event.clientX - resize.startX,
+      event.clientY - resize.startY,
+      { width: window.innerWidth, height: window.innerHeight },
+    );
 
-    if (resize.direction.includes("e")) width = clamp(resize.originWidth + dx, MIN_WIDTH, window.innerWidth - resize.originX - EXPLORE_SAFE_ZONE.right);
-    if (resize.direction.includes("s")) height = clamp(resize.originHeight + dy, MIN_HEIGHT, window.innerHeight - resize.originY - EXPLORE_SAFE_ZONE.bottom);
-    if (resize.direction.includes("w")) {
-      x = clamp(resize.originX + dx, EXPLORE_SAFE_ZONE.left, resize.originX + resize.originWidth - MIN_WIDTH);
-      width = resize.originWidth + resize.originX - x;
-    }
-    if (resize.direction.includes("n")) {
-      y = clamp(resize.originY + dy, EXPLORE_SAFE_ZONE.top, resize.originY + resize.originHeight - MIN_HEIGHT);
-      height = resize.originHeight + resize.originY - y;
-    }
-
-    if (isCollisionFree(x, y, width, height)) {
-      dispatch({ type: "UPDATE_BOX", id: box.id, patch: { x, y, width, height } });
+    if (isCollisionFree(frame.x, frame.y, frame.width, frame.height)) {
+      dispatch({ type: "UPDATE_BOX", id: box.id, patch: frame });
     }
   };
 
@@ -204,6 +192,31 @@ export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
     resizeRef.current.cleanup?.();
     resizeRef.current = null;
   };
+
+  useEffect(() => {
+    const cancelInteraction = () => {
+      finishDrag();
+      if (resizeRef.current) {
+        resizeRef.current.cleanup?.();
+        resizeRef.current = null;
+      }
+    };
+    window.addEventListener("blur", cancelInteraction);
+    return () => {
+      window.removeEventListener("blur", cancelInteraction);
+      cancelInteraction();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (box.mode !== "normal") {
+      finishDrag();
+      if (resizeRef.current) {
+        resizeRef.current.cleanup?.();
+        resizeRef.current = null;
+      }
+    }
+  }, [box.mode]);
 
   const width = box.width ?? 360;
   const height = box.height ?? 280;
@@ -235,9 +248,9 @@ export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
           <span className={styles.handle} aria-hidden="true"><i /><i /><i /><i /><i /><i /></span>
           <div className={styles.heading}><small>{eyebrow}</small><h2>{title}</h2></div>
           <div className={styles.windowControls} aria-label={`${title} window controls`}>
-            <button type="button" onClick={() => setMode(box.mode === "minimized" ? "normal" : "minimized")} aria-label={box.mode === "minimized" ? `Restore ${title}` : `Minimize ${title}`} title={controlLabel[box.mode]}>−</button>
-            <button type="button" onClick={() => setMode(box.mode === "expanded" ? "normal" : "expanded")} aria-label={box.mode === "expanded" ? `Close expanded ${title}` : `Expand ${title}`} title="Expand">□</button>
-            <button type="button" onClick={() => setMode(box.mode === "fullscreen" ? "normal" : "fullscreen")} aria-label={box.mode === "fullscreen" ? `Exit full screen ${title}` : `Open ${title} full screen`} title="Full screen">⛶</button>
+            <button type="button" onClick={() => setMode(box.mode === "minimized" ? "normal" : "minimized")} aria-label={box.mode === "minimized" ? `Restore ${title}` : `Minimize ${title}`} title={box.mode === "minimized" ? `Restore ${title}` : `Minimize ${title}`}>−</button>
+            <button type="button" onClick={() => setMode(box.mode === "expanded" ? "normal" : "expanded")} aria-label={box.mode === "expanded" ? `Exit expanded view ${title}` : box.mode === "fullscreen" ? `Return to expanded view ${title}` : `Expand ${title}`} title={box.mode === "expanded" ? `Exit expanded view ${title}` : `Expand ${title}`}>□</button>
+            <button type="button" onClick={() => setMode(box.mode === "fullscreen" ? "normal" : "fullscreen")} aria-label={box.mode === "fullscreen" ? `Exit full screen ${title}` : `Open ${title} full screen`} title={box.mode === "fullscreen" ? `Exit full screen ${title}` : `Open ${title} full screen`}>⛶</button>
           </div>
         </div>
         {box.mode !== "minimized" && <div className={styles.body}>{children}</div>}
