@@ -17,6 +17,7 @@ This is an unlisted surface, not authentication. The URL must not be treated as 
 - Removed the production-host 404 guard from `/explore-app`; direct private review now works after deployment.
 - Removed the two public calls to action from `/climbers-lounge`.
 - Changed the legacy `/start` redirect to `/climbers-lounge`.
+- Bumped the explicit Explore app-shell cache revision from `v12` to `v13` so installed copies refresh after the route-boundary fix.
 - Kept the PWA manifest, offline registry, and service worker because they are part of the deliberate private-by-link experience.
 - Added build-time data synchronization to both named build commands so a clean checkout does not build against a missing `website/public/data/v1` mirror.
 - Added the content workflow, folder map, media matrix, record template, surface matrix, and QA gate in this handoff folder.
