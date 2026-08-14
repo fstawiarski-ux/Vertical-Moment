@@ -1,7 +1,8 @@
 import { notFound, redirect } from "next/navigation";
+import { isPublicProductionSurface } from "@/src/lib/runtime-surface";
 
-export default function StartPage() {
-  if (process.env.NODE_ENV === "production") {
+export default async function StartPage() {
+  if (await isPublicProductionSurface()) {
     notFound();
   }
 
