@@ -123,9 +123,13 @@ export default function PhotographyModels() {
           <span className={styles.modelStats}>
           {model.routes} · {model.captured}
           </span>
-          <a className={styles.modelPanoramaLink} href={model.panoramaHref}>
-            Open panorama
-          </a>
+          {model.panoramaHref ? (
+            <a className={styles.modelPanoramaLink} href={model.panoramaHref}>
+              Open panorama
+            </a>
+          ) : (
+            <span className={styles.modelPanoramaLink} aria-label="Panorama not available yet">Panorama pending</span>
+          )}
         </span>
       </p>
     </div>

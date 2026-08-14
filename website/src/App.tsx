@@ -6,9 +6,12 @@ import { Box3DModel } from "./components/boxes/Box3DModel";
 import { BoxContainer } from "./components/boxes/BoxContainer";
 import { ResponsiveImage } from "./components/media/ResponsiveImage";
 import { CommandPalette } from "./components/shell/CommandPalette";
+import { ConnectionStatus } from "./components/shell/ConnectionStatus";
 import { ContextBreadcrumb } from "./components/shell/ContextBreadcrumb";
 import { LayoutToolbar } from "./components/shell/LayoutToolbar";
+import { PhoneShell } from "./components/shell/PhoneShell";
 import { StationPeek } from "./components/shell/StationPeek";
+import { DesktopShell, TabletShell } from "./components/shell/WorkspaceShells";
 import { deepLinkFor, parseDeepLink, resolveDeepLink, writeDeepLinkToUrl } from "./core/deepLink";
 import { hasSeenIntro, prefersReducedMotion, rememberIntroSeen } from "./core/introPreferences";
 import { LayoutProvider, useLayoutState } from "./core/layoutState";
@@ -62,7 +65,7 @@ function AtlasModule({ isActive }: { isActive: boolean }) {
   if (!requested) {
     return (
       <div className={styles.moduleGate}>
-        <small>26 regions · 187 crags · 2,314 routes</small>
+        <small>20 regions · 330 crags · 2,402 routes</small>
         <strong>Crag Locator</strong>
         <p>The route data works offline. Live map tiles are cached as you explore.</p>
         <button type="button" onClick={() => setRequested(true)}>Open the Atlas</button>
@@ -186,6 +189,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
 
   const boxes = useLayoutState((state) => state.boxes);
   const activeBoxId = useLayoutState((state) => state.activeBoxId);
+  const layoutHydrated = useLayoutState((state) => state.hydrated);
   const dispatch = useLayoutState((state) => state.dispatch);
   const undo = useLayoutState((state) => state.undo);
   const redo = useLayoutState((state) => state.redo);
@@ -194,6 +198,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
   const contentById = useMemo(() => new Map(registry.boxes.map((box) => [box.id, box])), [registry]);
   const activeContent = activeBoxId ? contentById.get(activeBoxId) ?? null : null;
   const deepLinkApplied = useRef(false);
+  const mobileLayoutNormalized = useRef(false);
 
   // Focus handling reads the live box list, but the window listener below must
   // not resubscribe on every drag frame — hence the ref rather than a dep.
@@ -296,10 +301,22 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
     }
   }, [dispatch, viewportMode]);
 
+  useEffect(() => {
+    if (viewportMode !== "mobile") {
+      mobileLayoutNormalized.current = false;
+      return;
+    }
+    if (!layoutHydrated || mobileLayoutNormalized.current) return;
+    mobileLayoutNormalized.current = true;
+    for (const box of boxesRef.current) {
+      if (box.mode !== "normal") dispatch({ type: "SET_BOX_MODE", id: box.id, mode: "normal" });
+    }
+  }, [dispatch, layoutHydrated, viewportMode]);
+
   // Deep links wait for the workspace so the opened box is not hidden behind
   // an intro that is still running.
   useEffect(() => {
-    if (!workspaceUnlocked || deepLinkApplied.current) return;
+    if (!workspaceUnlocked || !layoutHydrated || deepLinkApplied.current) return;
     deepLinkApplied.current = true;
     const target = resolveDeepLink(parseDeepLink(window.location.search), registry);
     if (target) {
@@ -312,7 +329,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
         openIndependentBox(target.boxId, target.mode);
       }
     }
-  }, [openIndependentBox, registry, workspaceUnlocked]);
+  }, [layoutHydrated, openIndependentBox, registry, workspaceUnlocked]);
 
   // Keeps the address bar shareable: whatever is in focus is what a copied URL reopens.
   useEffect(() => {
@@ -482,6 +499,10 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
       : boxes.filter((box) => box.mode !== "minimized");
   const boxesById = useMemo(() => new Map(boxes.map((box) => [box.id, box])), [boxes]);
   const stationContent = contentById.get(stationFocusId) ?? null;
+  const openPhoneBox = useCallback((id: string) => openIndependentBox(id, "normal", true), [openIndependentBox]);
+  const openContributor = useCallback(() => {
+    window.location.assign("/contribute?source=explore-app");
+  }, []);
 
   return (
     <main className={styles.app} data-viewport={viewportMode} data-station-peek={stationPeekVisible ? "true" : "false"}>
@@ -503,16 +524,28 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
         <div><small>Vertical Moment</small><strong>Explore Lab</strong></div>
         {workspaceUnlocked && <ContextBreadcrumb box={journeyActive ? stationContent : activeContent} onNavigate={openPalette} />}
       </header>
+      <ConnectionStatus />
 
-      {workspaceUnlocked && (viewportMode === "mobile" ? (
-        <section className={styles.cardStack} data-station-peek={stationPeekVisible ? "true" : "false"} data-exclusive-mode={exclusiveMode} aria-label="Explore cards">
-          {visible.map((box) => renderBox(box))}
-        </section>
-      ) : (
-        <section className={styles.boxLayer} data-layout={viewportMode} data-exclusive-mode={exclusiveMode} aria-label="Explore canvas">
-          {visible.map((box) => renderBox(box))}
-        </section>
-      ))}
+      {workspaceUnlocked && viewportMode === "mobile" && (
+        <PhoneShell
+          registry={registry}
+          boxes={boxes}
+          activeBoxId={activeBoxId}
+          stationContent={stationContent}
+          renderBox={renderBox}
+          onOpenBox={openPhoneBox}
+          onSearch={() => openPalette("")}
+          onContribute={openContributor}
+          onToggleJourney={() => setFollowJourney((current) => !current)}
+          followJourney={followJourney}
+        />
+      )}
+      {workspaceUnlocked && viewportMode === "tablet" && (
+        <TabletShell visible={visible} renderBox={renderBox} exclusiveMode={exclusiveMode} />
+      )}
+      {workspaceUnlocked && viewportMode === "desktop" && (
+        <DesktopShell visible={visible} renderBox={renderBox} exclusiveMode={exclusiveMode} />
+      )}
 
       {workspaceUnlocked && (
         <aside className={styles.workspaceDock} aria-label="Open minimized workspaces">

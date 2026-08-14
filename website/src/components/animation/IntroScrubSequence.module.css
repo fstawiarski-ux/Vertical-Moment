@@ -65,6 +65,9 @@
   transform: translateX(-50%);
   pointer-events: auto;
 }
+.timeline[data-unlocked="true"] { opacity: .64; transform: translateX(-50%) scale(.88); transform-origin: center bottom; transition: opacity 180ms ease, transform 180ms ease; }
+.timeline[data-unlocked="true"]:hover,
+.timeline[data-unlocked="true"]:focus-within { opacity: 1; transform: translateX(-50%) scale(1); }
 .chapterLabels { display: grid; grid-template-columns: repeat(4, 1fr); color: #d5c28c; font: 700 11px/1 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .14em; text-transform: uppercase; }
 .chapterLabels button {
   min-height: 26px;
@@ -108,6 +111,9 @@
     border-radius: 12px;
     transform: none;
   }
+  .timeline[data-unlocked="true"] { transform: scale(.92); transform-origin: right bottom; }
+  .timeline[data-unlocked="true"]:hover,
+  .timeline[data-unlocked="true"]:focus-within { transform: scale(1); }
   .chapterLabels { font-size: 10px; letter-spacing: .08em; }
   .trackRow { gap: 7px; }
   .trackRow output { min-width: 34px; font-size: 10px; }

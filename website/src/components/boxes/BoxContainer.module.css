@@ -264,6 +264,9 @@
   min-height: 360px;
   scroll-snap-align: start;
 }
+.box[data-viewport="mobile"] .windowControls { display: none; }
+.box[data-viewport="mobile"] .header { grid-template-columns: minmax(0, 1fr); }
+.box[data-viewport="mobile"] .handle { display: none; }
 
 .box[data-viewport="tablet"] .header,
 .box[data-viewport="mobile"] .header { cursor: default; touch-action: auto; }

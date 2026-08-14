@@ -3,6 +3,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { PanoramaGalleryStrip } from '../../components/PanoramaGalleryStrip';
 import { panoramaCategories, panoramas, type PanoramaCategory } from '../../data/panoramas';
 import styles from './panorama-editions.module.css';
 
@@ -160,24 +161,20 @@ export default function PanoramaEditions() {
           ))}
         </div>
 
-        <div className={styles.grid}>
-          {visible.map((panorama) => (
-            <button
-              id={panorama.id}
-              key={panorama.id}
-              type="button"
-              className={panorama.id === active.id ? styles.selectedCard : undefined}
-              onClick={() => {
-                select(panorama.id);
-                document.querySelector(`.${styles.viewerSection}`)?.scrollIntoView({ behavior: 'smooth' });
-              }}
-              aria-label={`View ${panorama.title}`}
-            >
-              <img src={panorama.thumbnail} alt="" width={panorama.displayWidth} height={panorama.displayHeight} loading="lazy" />
-              <span><b>{panorama.title}</b><small>{panorama.category.replace('-', ' ')} · {panorama.location}</small></span>
-            </button>
-          ))}
-        </div>
+        <PanoramaGalleryStrip
+          className={styles.grid}
+          selectedClassName={styles.selectedCard}
+          items={visible}
+          selectedId={active.id}
+          onSelect={(panorama) => {
+            select(panorama.id);
+            document.querySelector(`.${styles.viewerSection}`)?.scrollIntoView({ behavior: 'smooth' });
+          }}
+          ariaLabel="Panorama print collection"
+          renderMeta={(panorama) => (
+            <span><b>{panorama.title}</b><small>{panorama.category.replace('-', ' ')} · {panorama.location}</small></span>
+          )}
+        />
       </section>
 
       <section className={styles.reference} id="reference">

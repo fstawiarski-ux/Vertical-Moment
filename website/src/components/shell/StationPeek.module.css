@@ -2,7 +2,7 @@
   position: absolute;
   top: max(78px, calc(env(safe-area-inset-top) + 72px));
   left: clamp(16px, 4vw, 72px);
-  z-index: 9300;
+  z-index: 9600;
   display: grid;
   width: min(324px, calc(100vw - 32px));
   gap: 10px;

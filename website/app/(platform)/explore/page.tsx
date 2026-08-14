@@ -3,7 +3,7 @@ import ExploreAtlasExperience from "./explore-atlas-experience";
 
 export const metadata: Metadata = {
   title: "Climbers Lounge — Vertical Moment",
-  description: "An interactive field guide to 26 climbing regions, 187 crags and 2,314 routes from the Vertical Moment review atlas.",
+  description: "An interactive catalog of the canonical Vertical Moment climbing regions, crags and route records.",
   alternates: { canonical: "/explore" },
 };
 

@@ -86,6 +86,53 @@
   overscroll-behavior: contain;
   animation: workspaceReveal 520ms cubic-bezier(.2,.8,.2,1) both;
 }
+
+.boxLayer[data-shell="desktop"] { animation: workspaceReveal 520ms cubic-bezier(.2,.8,.2,1) both; }
+.boxLayer[data-shell="tablet"] { background: rgb(4 9 6 / 18%); }
+
+.phoneShell {
+  position: absolute;
+  inset: var(--explore-safe-top) 0 var(--explore-safe-bottom);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: hidden;
+  padding: 0 14px 10px;
+  animation: workspaceReveal 420ms cubic-bezier(.2,.8,.2,1) both;
+}
+
+.phoneHeader {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 2px;
+}
+.phoneHeader div { display: grid; gap: 3px; min-width: 0; }
+.phoneHeader small { color: #ccb982; font: 700 9px/1 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .12em; text-transform: uppercase; }
+.phoneHeader strong { overflow: hidden; font: 600 18px/1.05 Arial, sans-serif; text-overflow: ellipsis; white-space: nowrap; }
+.phoneHeader button,
+.phoneNav button {
+  min-height: 40px;
+  padding: 0 12px;
+  color: #ddd7c8;
+  border: 1px solid rgb(255 255 255 / 16%);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 7%);
+  font: 700 10px/1 Arial, sans-serif;
+  cursor: pointer;
+}
+.phoneHeader button:focus-visible,
+.phoneNav button:focus-visible { outline: 2px solid #f4eedf; outline-offset: 2px; }
+.phoneHint { margin: 0; color: #a9a394; font: 600 10px/1.3 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .05em; text-transform: uppercase; }
+.phoneStage { min-height: 0; flex: 1; overflow: auto; overscroll-behavior: contain; }
+.phoneStage > article { position: relative !important; width: 100% !important; height: 100% !important; min-height: 0 !important; transform: none !important; }
+.phoneNav { display: flex; gap: 6px; overflow-x: auto; padding: 4px 0 max(4px, env(safe-area-inset-bottom)); scrollbar-width: thin; }
+.phoneNav button { flex: 0 0 auto; min-height: 44px; max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.phoneNav button[aria-current="page"],
+.phoneNav button[aria-pressed="true"] { color: #151a15; border-color: #d2bd87; background: #d2bd87; }
 .cardStack[data-exclusive-mode="expanded"] { z-index: 9450; overflow: visible; }
 .cardStack[data-exclusive-mode="fullscreen"] { z-index: 9500; overflow: visible; }
 .cardStack[data-exclusive-mode="expanded"],
@@ -231,37 +278,11 @@
     padding-right: 8px;
   }
   .cardStack[data-station-peek="true"] { top: 190px; }
-  .boxLayer {
-    inset: var(--explore-safe-top) 72px var(--explore-safe-bottom) 0;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    padding: 8px 16px 30dvh;
-    scroll-padding-top: 8px;
-    scroll-snap-type: y mandatory;
-    overscroll-behavior: contain;
-    pointer-events: auto;
-  }
-  .boxLayer > article {
-    position: relative !important;
-    width: 100% !important;
-    min-width: 0 !important;
-    height: min(66dvh, 620px) !important;
-    min-height: 420px !important;
-    flex: 0 0 auto;
-    transform: none !important;
-    scroll-snap-align: start;
-  }
+  .boxLayer { display: none; }
   .brand { right: 16px; left: 16px; }
   .brand nav { top: 5px; left: 140px; }
-  .workspaceDock { top: max(76px, calc(env(safe-area-inset-top) + 70px)); right: 14px; left: 14px; max-width: none; }
-  .dockLabel { min-width: 90px; }
-  .workspaceDockButton { width: 116px; min-width: 116px; max-width: 116px; }
-  .app[data-station-peek="true"] .workspaceDock { top: max(188px, calc(env(safe-area-inset-top) + 182px)); }
-  .cardStack { top: 144px; }
-  .cardStack[data-station-peek="true"] { top: 256px; }
+  .workspaceDock { display: none; }
+  .phoneShell { inset: 124px 0 max(86px, env(safe-area-inset-bottom)); padding-inline: 12px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

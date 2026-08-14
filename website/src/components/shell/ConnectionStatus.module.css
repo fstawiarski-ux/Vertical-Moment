@@ -1,0 +1,18 @@
+.status {
+  position: fixed;
+  right: max(14px, env(safe-area-inset-right));
+  bottom: max(14px, env(safe-area-inset-bottom));
+  z-index: 9800;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: min(92vw, 360px);
+  padding: 9px 12px;
+  color: #171c16;
+  border: 1px solid #d2bd87;
+  border-radius: 999px;
+  background: #d2bd87;
+  box-shadow: 0 12px 30px rgb(0 0 0 / 28%);
+  font: 700 10px/1.2 Arial, sans-serif;
+}
+.status button { padding: 0; color: inherit; border: 0; background: transparent; font: inherit; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }

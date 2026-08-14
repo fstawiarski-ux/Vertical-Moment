@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import { CragMap } from "../../components/crag-map";
 import { getAllRegionSlugs, getRegionDetail } from "../../lib/climbing-data";
@@ -19,7 +19,9 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
 }
 
 export default async function RegionPage({ params }: { params: Promise<{ region: string }> }) {
-  const region = getRegionDetail((await params).region);
+  const { region: regionSlug } = await params;
+  if (regionSlug === "wachau") redirect("/panoramas/wachau");
+  const region = getRegionDetail(regionSlug);
   if (!region) notFound();
 
   return (

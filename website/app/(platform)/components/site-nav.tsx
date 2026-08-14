@@ -41,6 +41,9 @@ export function SiteNav({ who: _who }: { who?: string | null }) {
         </Link>
         <nav className="nav">
           <Link href="/" className={is("/") ? "on" : ""}>Home</Link>
+          <Link href="/explore-app" className={is("/explore-app") ? "on" : ""}>Field app</Link>
+          <Link href="/explore" className={is("/explore") ? "on" : ""}>Catalog</Link>
+          <Link href="/contribute" className={is("/contribute") ? "on" : ""}>Contribute</Link>
         </nav>
         <div className="spacer" />
         <button

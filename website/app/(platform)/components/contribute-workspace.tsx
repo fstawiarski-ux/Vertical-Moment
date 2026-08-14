@@ -101,8 +101,8 @@ function Dashboard({ onOpen }: { onOpen: (id: string) => void }) {
         <span className="pill">{list.length} tasks</span>
       </div>
       <div className="card" style={{ padding: 16, margin: "0 0 20px", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
-        <span className="muted" style={{ fontSize: 13.5 }}>Not on this list? Prepare a quick GPS, photo or GPX report from any crag - no task or account required.</span>
-        <Link href="/contribute#quick-report" className="btn btn-ghost">Report from here</Link>
+        <span className="muted" style={{ fontSize: 13.5 }}>Not on this list? Prepare a quick GPS, photo or GPX field note from any crag - no task or account required.</span>
+        <Link href="/contribute#quick-report" className="btn btn-ghost">Create a field note</Link>
       </div>
       <div className="task-filters" aria-label="Filter tasks by where they can be done">
         <button className={`chip ${filter === "all" ? "on" : ""}`} onClick={() => setFilter("all")}>All</button>
@@ -134,14 +134,10 @@ function Dashboard({ onOpen }: { onOpen: (id: string) => void }) {
       <div className="card" style={{ padding: 18, marginTop: 28 }}>
         <div className="eyebrow">Data transparency</div>
         <h3 style={{ fontSize: 18, margin: "4px 0 6px" }}>See what we collect</h3>
-        <p className="muted" style={{ fontSize: 13.5, margin: "0 0 12px", maxWidth: 640 }}>
-          Reference copies of the underlying dataset - open to view, not for direct editing.
-          If something looks wrong, use &quot;Report from here&quot; instead of changing these files.
+        <p className="muted" style={{ fontSize: 13.5, margin: 0, maxWidth: 640 }}>
+          The canonical dataset stays owner-managed and is not packaged as public download files in this beta.
+          Browse the catalog and use &quot;Report from here&quot; instead of editing source data directly.
         </p>
-        <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-          <a className="btn btn-ghost" href="/data/vertical-moment-master-data.xlsx" download>Master data (.xlsx)</a>
-          <a className="btn btn-ghost" href="/data/vertical-moment-gpx-tracks.zip" download>GPX tracks (.zip)</a>
-        </div>
       </div>
     </div>
   );

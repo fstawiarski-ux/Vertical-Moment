@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import cragsData from "../data/crags.json";
-import { getCragPanoramaHref } from "../../data/panorama-experiences";
+import { getKnownCragPanoramaHref } from "../../data/panorama-experiences";
 
 type Route = { n: string; g: string };
 type Crag = { n: string; la: number; lo: number; r: string[]; db: boolean; gbr: number; rc: number; routes: Route[] };
@@ -62,8 +62,8 @@ export function BrowseCrags({ initialCrag = "" }: { initialCrag?: string }) {
 
   if (crag) {
     const panoramaRegion = region || crag.r[0] || "region";
-    const panoramaHref = getCragPanoramaHref(panoramaRegion, crag.n);
-    return <div className="card browse-crags drill-card"><div className="eyebrow">{region || "Search result"} / crag</div><h2>{crag.n}</h2><div className="drill-actions"><button className="tree-back" onClick={() => setCrag(null)}>Back to crags</button><Link className="tree-open-map" href={`/?crag=${encodeURIComponent(crag.n)}`}>Open on map</Link><Link className="tree-open-panorama" href={panoramaHref}>Panorama</Link></div><div className="route-list">{crag.routes.length ? crag.routes.map((r, i) => <div key={`${r.n}-${i}`} className="browse-row browse-route"><span>{r.n}</span><small>{r.g}</small><Link className="route-panorama-link" href={getCragPanoramaHref(panoramaRegion, crag.n, r.n)}>Panorama</Link></div>) : <p className="muted">Routes have not been catalogued for this crag yet.</p>}</div></div>;
+    const panoramaHref = getKnownCragPanoramaHref(panoramaRegion, crag.n);
+    return <div className="card browse-crags drill-card"><div className="eyebrow">{region || "Search result"} / crag</div><h2>{crag.n}</h2><div className="drill-actions"><button className="tree-back" onClick={() => setCrag(null)}>Back to crags</button><Link className="tree-open-map" href={`/?crag=${encodeURIComponent(crag.n)}`}>{"Open on map"}</Link>{panoramaHref ? <Link className="tree-open-panorama" href={panoramaHref}>Panorama</Link> : <span className="muted">Panorama pending</span>}</div><div className="route-list">{crag.routes.length ? crag.routes.map((r, i) => { const routePanoramaHref = getKnownCragPanoramaHref(panoramaRegion, crag.n, r.n); return <div key={`${r.n}-${i}`} className="browse-row browse-route"><span>{r.n}</span><small>{r.g}</small>{routePanoramaHref ? <Link className="route-panorama-link" href={routePanoramaHref}>Panorama</Link> : null}</div>; }) : <p className="muted">Routes have not been catalogued for this crag yet.</p>}</div></div>;
   }
 
   if (region || query.trim() || hasFilters) {

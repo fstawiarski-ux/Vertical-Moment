@@ -38,7 +38,7 @@ export function StationPeek({
       <div className={styles.footer}>
         <span className={styles.next}>{presentation.nextLabel}</span>
         {content && onOpen && (
-          <button type="button" className={styles.open} aria-label={`Open ${title}`} onClick={() => onOpen(content.id)}>
+          <button type="button" className={styles.open} aria-label={`Open ${title}`} onClick={() => onOpen(presentation.focusBoxId)}>
             Open
           </button>
         )}

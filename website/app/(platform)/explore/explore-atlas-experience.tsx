@@ -16,6 +16,7 @@ import styles from "./explore-atlas.module.css";
 
 type AtlasRegion = {
   n: string;
+  slug: string;
   ct: number;
   ok: number;
   tbf: number;
@@ -27,6 +28,8 @@ type AtlasWall = {
   id: string;
   n: string;
   rg: string;
+  regionSlug: string;
+  slug: string;
   ct: number;
   ok: number;
   tbf: number;
@@ -34,18 +37,23 @@ type AtlasWall = {
   lon: number | null;
   gr: string[];
   gpx: string | null;
+  path: string;
 };
 
 type AtlasRoute = {
+  id: string;
   n: string;
   g: string;
   b: string;
   rg: string;
+  regionSlug: string;
   w: string;
+  wallSlug: string;
   src: string;
   st: number;
   lat?: number;
   lon?: number;
+  path: string;
 };
 
 type AtlasData = {
@@ -58,7 +66,7 @@ type AtlasData = {
     wallCount: number;
     routeCount: number;
     gpxCount: number;
-    matchedGpxCount: number;
+    matchedGpxCount?: number;
   };
 };
 
@@ -87,25 +95,6 @@ const BASE_LAYER_OPTIONS: Array<{ id: BaseLayerKey; label: string; hint: string 
   { id: "streets", label: "OSM Streets", hint: "Roads + places" },
   { id: "light", label: "Light", hint: "Clear labels" },
   ...(MAPBOX_TOKEN ? [{ id: "mapbox" as const, label: "Mapbox", hint: "Mapbox Streets" }] : []),
-];
-
-const REGION_ORDER = [
-  "Hohe Wand",
-  "Mödling",
-  "Kaltenleutgebner Tal",
-  "Peilstein",
-  "Helenental",
-  "Fischauer Vorberge",
-  "Piestingtal",
-  "Puchberg",
-  "Puchberg Grünbach",
-  "Lindkogel",
-  "Bucklige Welt",
-  "Adlitzgraeben",
-  "Hoellental",
-  "Höllental-Rax",
-  "Rax i Schneeberg",
-  "Neunkirchen",
 ];
 
 const REGION_COLORS = [
@@ -285,19 +274,14 @@ export default function ExploreAtlasExperience() {
     const grouped = new Map<string, AtlasRoute[]>();
     for (const wall of ATLAS.walls) grouped.set(wall.id, []);
     for (const route of ATLAS.routes) {
-      const wall = ATLAS.walls.find((candidate) => candidate.rg === route.rg && candidate.n === route.w);
+      const wall = ATLAS.walls.find((candidate) => candidate.regionSlug === route.regionSlug && candidate.slug === route.wallSlug);
       if (wall) grouped.get(wall.id)?.push(route);
     }
     return grouped;
   }, []);
 
   const orderedRegions = useMemo(() => {
-    const rank = new Map(REGION_ORDER.map((name, index) => [name, index]));
-    return [...ATLAS.regions].sort((a, b) => {
-      const rankA = rank.get(a.n) ?? 100 + ATLAS.regions.indexOf(a);
-      const rankB = rank.get(b.n) ?? 100 + ATLAS.regions.indexOf(b);
-      return rankA - rankB;
-    });
+    return [...ATLAS.regions].sort((a, b) => b.ct - a.ct || a.n.localeCompare(b.n));
   }, []);
 
   const selectedWall = useMemo(
@@ -511,7 +495,7 @@ export default function ExploreAtlasExperience() {
       .filter((route) => route.n.toLocaleLowerCase().includes(value))
       .slice(0, 4)
       .map((route) => {
-        const wall = ATLAS.walls.find((candidate) => candidate.rg === route.rg && candidate.n === route.w);
+        const wall = ATLAS.walls.find((candidate) => candidate.regionSlug === route.regionSlug && candidate.slug === route.wallSlug);
         return { kind: "route", label: route.n, meta: `${route.g || "grade pending"} · ${route.w}`, region: route.rg, wallId: wall?.id ?? "" };
       });
     return [...regions, ...walls, ...routes].slice(0, 8);
@@ -723,10 +707,10 @@ export default function ExploreAtlasExperience() {
                           </div>
                           <div className={styles.routeList} aria-label={`${activeWall.n} routes`}>
                             {routes.length ? routes.map((route, routeIndex) => (
-                              <div key={`${route.n}-${routeIndex}`}>
+                              <a key={`${route.id}-${routeIndex}`} href={route.path}>
                                 <span>{route.n}</span>
                                 <small>{route.g || "—"}</small>
-                              </div>
+                              </a>
                             )) : <p>No individual route rows supplied.</p>}
                           </div>
                         </div>
@@ -764,7 +748,7 @@ export default function ExploreAtlasExperience() {
           <img src="/photography/gallery/vm-6424-face-from-the-approach.webp" alt="Climber on limestone in the Wall Reveal study" />
           <span><strong>Vision — Wall Reveal</strong><small>Computer-vision experiments testing how route lines can be read from real limestone photographs. The aim is a clear field aid that preserves the original image and keeps every suggested line reviewable.</small><em>Open experiment</em></span>
         </Link>
-        <Link href="/explore/wachau/panoramas" className={styles.experimentRow}>
+        <Link href="/panoramas/wachau" className={styles.experimentRow}>
           <img src="/photography/panoramas/wachau/wachau-16-preview.webp" alt="Wachau panorama above the Danube" />
           <span><strong>Panoramas — Wachau</strong><small>High-resolution stitched views of the Wachau and Danube corridor, prepared for the shared crag viewer. These studies explore orientation, sector context and a calmer way to understand a wall before the approach.</small><em>Open panorama</em></span>
         </Link>
