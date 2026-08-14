@@ -117,7 +117,18 @@
     right: 14px;
     left: 14px;
     width: auto;
+    gap: 6px;
+    padding: 8px;
   }
+
+  .main { grid-template-columns: 40px minmax(0, 1fr); gap: 8px; }
+  .media { width: 40px; height: 40px; }
+  .copy small { font-size: 8px; }
+  .copy strong { font-size: 12px; }
+  .copy p { margin-top: 3px; font-size: 10px; -webkit-line-clamp: 1; }
+  .next { display: none; }
+  .footer { justify-content: flex-end; }
+  .open { min-height: 28px; padding: 0 10px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

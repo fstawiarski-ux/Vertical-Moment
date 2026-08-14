@@ -138,9 +138,9 @@ function WallRevealModule({ isActive }: { isActive: boolean }) {
   if (!requested) {
     return (
       <div className={styles.moduleGate}>
-        <small>4-stage story - shared heavy media</small>
+        <small>3-stage story - shared media</small>
         <strong>Wall Reveal</strong>
-        <p>Move from place to motion, provisional topo and 3D without duplicating the scrub or model.</p>
+        <p>Move from place to the Peilstein gallery and provisional topo without duplicating heavy media.</p>
         <button type="button" onClick={() => setRequested(true)}>Open Wall Reveal</button>
       </div>
     );
@@ -467,7 +467,12 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
 
   const stationFocusId = STATION_PRESENTATIONS[journeyStation].focusBoxId;
   const journeyActive = workspaceUnlocked && followJourney;
-  const visible = journeyActive ? [] : boxes.filter((box) => box.mode !== "minimized");
+  // Station-follow mode keeps the mapped box mounted as a normal canvas item.
+  // The module remains lazy because it is not the active box until the visitor
+  // explicitly opens it, while the box itself stays draggable and resizable.
+  const visible = journeyActive
+    ? boxes.filter((box) => box.id === stationFocusId && box.mode !== "minimized")
+    : boxes.filter((box) => box.mode !== "minimized");
   const minimized = boxes.filter((box) => box.mode === "minimized");
   const stationContent = contentById.get(stationFocusId) ?? null;
 
@@ -493,7 +498,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
       </header>
 
       {workspaceUnlocked && (viewportMode === "mobile" ? (
-        <section className={styles.cardStack} aria-label="Explore cards">
+        <section className={styles.cardStack} data-station-peek={stationPeekVisible ? "true" : "false"} aria-label="Explore cards">
           {visible.map((box) => renderBox(box))}
         </section>
       ) : (
@@ -502,7 +507,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
         </section>
       ))}
 
-      {workspaceUnlocked && !journeyActive && minimized.length > 0 && (
+      {workspaceUnlocked && minimized.length > 0 && (
         <aside className={styles.minimizedTray} aria-label="Minimized boxes">
           {minimized.map((box) => {
             const content = contentById.get(box.dataRef ?? box.id);
@@ -513,9 +518,9 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
                 type="button"
                 title={`Restore ${content.title}`}
                 aria-label={`Restore ${content.title}`}
-                onClick={() => focusBox(box.id, "normal")}
+                onClick={() => openIndependentBox(box.id, "normal")}
               >
-                <span>{content.title.slice(0, 1)}</span>
+                <span>{content.title}</span>
               </button>
             );
           })}

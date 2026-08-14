@@ -37,9 +37,14 @@
 }
 .brand strong { margin-top: 4px; font: 600 18px/1 Arial, sans-serif; letter-spacing: -.02em; }
 
-/* The breadcrumb sits to the right of the wordmark and keeps clear of the
-   control rail, which owns the far right edge. */
-.brand nav { margin-left: auto; margin-right: 96px; }
+/* The context breadcrumb stays near the wordmark so the upper-right edge can
+   carry readable restored-box buttons without competing with the timeline. */
+.brand nav {
+  position: absolute;
+  top: 5px;
+  left: clamp(170px, 18vw, 220px);
+  margin: 0;
+}
 
 .boxLayer { position: absolute; inset: 0; z-index: 10; pointer-events: none; animation: workspaceReveal 520ms cubic-bezier(.2,.8,.2,1) both; }
 .boxLayer > * { pointer-events: auto; }
@@ -74,29 +79,37 @@
 
 .minimizedTray {
   position: absolute;
+  top: max(76px, calc(env(safe-area-inset-top) + 72px));
   right: 18px;
-  bottom: 78px;
   z-index: 9400;
   display: flex;
   max-width: calc(100vw - 36px);
   gap: 8px;
+  overflow-x: auto;
 }
 
 .minimizedTray button {
   display: grid;
-  width: 50px;
-  height: 50px;
-  flex: 0 0 50px;
+  min-width: 116px;
+  height: 42px;
+  flex: 0 0 auto;
   place-items: center;
+  padding: 0 12px;
   color: #121914;
   border: 1px solid rgb(255 255 255 / 24%);
-  border-radius: 15px;
+  border-radius: 13px;
   background: #d2bd87;
   box-shadow: 0 12px 36px rgb(0 0 0 / 32%);
   cursor: pointer;
 }
 
-.minimizedTray button span { font: 700 17px/1 Arial, sans-serif; }
+.minimizedTray button span {
+  overflow: hidden;
+  max-width: 18ch;
+  font: 700 11px/1.1 Arial, sans-serif;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .minimizedTray button:hover,
 .minimizedTray button:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
 
@@ -170,6 +183,7 @@
     right: 0;
     padding-right: 8px;
   }
+  .cardStack[data-station-peek="true"] { top: 190px; }
   .boxLayer {
     inset: 82px 0 76px 0;
     display: flex;
@@ -194,8 +208,8 @@
     scroll-snap-align: start;
   }
   .brand { right: 16px; left: 16px; }
-  .brand nav { margin-right: 76px; }
-  .minimizedTray { right: 14px; bottom: 72px; overflow-x: auto; }
+  .brand nav { top: 5px; left: 140px; }
+  .minimizedTray { top: max(126px, calc(env(safe-area-inset-top) + 120px)); right: 14px; left: 14px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

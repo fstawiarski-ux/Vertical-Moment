@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import styles from "./BoxWallReveal.module.css";
 
-type StageId = "place" | "scrub" | "topo" | "model";
+type StageId = "place" | "gallery" | "topo";
 
 const STAGES: Array<{
   id: StageId;
@@ -24,13 +24,13 @@ const STAGES: Array<{
     status: "183 KB - immediate",
   },
   {
-    id: "scrub",
+    id: "gallery",
     index: "02",
-    label: "Scrub",
-    eyebrow: "Shared app-shell motion",
-    title: "Move through the wall at your pace.",
-    body: "The Lab reuses its 3.1 MB background scrub. The older 17.7 MB prototype is deliberately not requested here.",
-    status: "3.1 MB shared - on demand",
+    label: "Gallery",
+    eyebrow: "Peilstein - gallery",
+    title: "Steep ground, close to the wall.",
+    body: "Keep the Peilstein gallery beside the story: a field frame that gives the route context a human scale.",
+    status: "Peilstein gallery - immediate",
   },
   {
     id: "topo",
@@ -41,23 +41,10 @@ const STAGES: Array<{
     body: "Crossfade from spatial relief to the registered topo study. Route geometry remains provisional until checked at the wall.",
     status: "844 KB layers - on demand",
   },
-  {
-    id: "model",
-    index: "04",
-    label: "3D",
-    eyebrow: "Shared optimized wall",
-    title: "Turn the same wall in your hands.",
-    body: "The browser-ready model lives in one shared box, so this story never downloads or initializes a duplicate viewer.",
-    status: "1.66 MB shared - on demand",
-  },
 ];
 
 function focusBox(id: string) {
   window.dispatchEvent(new CustomEvent("vm:focus-box", { detail: { id, mode: "expanded" } }));
-}
-
-function replayApproachJourney() {
-  window.dispatchEvent(new CustomEvent("vm:replay-intro"));
 }
 
 export default function BoxWallReveal() {
@@ -81,14 +68,14 @@ export default function BoxWallReveal() {
           <img className={styles.media} src="/photography/nasenwand/nasenwand-photo-1280.webp" alt="Drone photograph of the Nasenwand wall" />
         )}
 
-        {active === "scrub" && (
+        {active === "gallery" && (
           <div className={styles.sharedStage}>
-            <img className={styles.media} src="/photography/nasenwand/media/poster-1600.webp" alt="Nasenwand wall motion poster" />
+            <img className={styles.media} src="/photography/gallery/vm-7073-steep-ground.webp" alt="Climber moving through steep Peilstein limestone" />
             <div className={styles.sharedCard}>
-              <small>One scrub, shared by the whole workspace</small>
-              <strong>3.1 MB app-shell motion</strong>
-              <span>The 17.7 MB Wall Reveal prototype remains archived and unloaded.</span>
-              <button type="button" onClick={replayApproachJourney}>Replay the approach journey</button>
+              <small>Peilstein - gallery</small>
+              <strong>Steep Ground</strong>
+              <span>A field frame from the gallery, kept beside the wall story and light enough for the first view.</span>
+              <button type="button" onClick={() => focusBox("vm-7073")}>Open Steep Ground gallery</button>
             </div>
           </div>
         )}
@@ -110,18 +97,6 @@ export default function BoxWallReveal() {
           </div>
         )}
 
-        {active === "model" && (
-          <div className={styles.sharedStage}>
-            <img className={styles.media} src="/photography/nasenwand/nasenwand-spatial-1280.webp" alt="Preview of the Nasenwand spatial model" />
-            <div className={styles.sharedCard}>
-              <small>208k triangles - 1.66 MB</small>
-              <strong>Use the shared 3D wall</strong>
-              <span>Orbit, pan and zoom remain lazy until you open the dedicated box.</span>
-              <button type="button" onClick={() => focusBox("nasenwand-model")}>Open shared 3D</button>
-            </div>
-          </div>
-        )}
-
         <div className={styles.veil} aria-hidden="true" />
         <section className={styles.story} aria-live="polite">
           <small>{stage.index} / {stage.eyebrow}</small>
@@ -129,6 +104,7 @@ export default function BoxWallReveal() {
           <p>{stage.body}</p>
           <div className={styles.storyActions}>
             {active === "place" && <button type="button" onClick={() => focusBox("wachau-16")}>Open regional panoramas</button>}
+            {active === "gallery" && <button type="button" onClick={() => focusBox("vm-7073")}>Open Steep Ground gallery</button>}
             {active === "topo" && <button type="button" onClick={() => focusBox("nasenwand-spatial")}>Open route workspace</button>}
             <button type="button" onClick={() => setBudgetOpen((current) => !current)} aria-expanded={budgetOpen}>Media: {stage.status}</button>
           </div>
@@ -140,11 +116,9 @@ export default function BoxWallReveal() {
           <header><small>Delivery plan</small><button type="button" onClick={() => setBudgetOpen(false)}>Close</button></header>
           <dl>
             <div><dt>First view</dt><dd>183 KB photo</dd></div>
-            <div><dt>Shared scrub</dt><dd>3.1 MB on demand</dd></div>
+            <div><dt>Peilstein gallery</dt><dd>Immediate derivative</dd></div>
             <div><dt>Topo comparison</dt><dd>844 KB on demand</dd></div>
-            <div><dt>Shared 3D</dt><dd>1.66 MB on demand</dd></div>
             <div><dt>Wachau pack</dt><dd>10.3 MB opt-in</dd></div>
-            <div><dt>Legacy scrub</dt><dd>17.7 MB not loaded</dd></div>
           </dl>
           <p>Source scans and print masters stay outside the PWA shell. Heavy resources are requested once and reused.</p>
         </aside>

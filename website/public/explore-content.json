@@ -133,22 +133,6 @@
       "initialLayout": { "x": 20, "y": 632, "width": 542, "height": 220 }
     },
     {
-      "id": "note-north-face",
-      "type": "note",
-      "title": "A Face That Never Gets Sun",
-      "region": "Vienna Limestone Belt",
-      "crag": "Peilstein",
-      "description": "North-facing limestone stays cold until midday. This field note keeps the photographic decision beside the wall context.",
-      "image": {
-        "src": "/photography/notes/note-north-face.webp",
-        "alt": "Climbers on a shaded north-facing wall",
-        "width": 820,
-        "height": 473,
-        "sizes": "(max-width: 767px) calc(100vw - 32px), 360px"
-      },
-      "initialLayout": { "x": 20, "y": 452, "width": 250, "height": 168 }
-    },
-    {
       "id": "nasenwand-model",
       "type": "model3d",
       "title": "Nasenwand 3D",
@@ -176,7 +160,7 @@
       "region": "Wachau",
       "crag": "Nasenwand",
       "sector": "Upper",
-      "description": "A four-stage story that reuses the app-shell scrub, provisional topo layers and shared 3D box.",
+      "description": "A three-stage story that moves from place to the Peilstein gallery and provisional topo layers.",
       "image": {
         "src": "/photography/nasenwand/media/poster-1600.webp",
         "alt": "Nasenwand Wall Reveal poster",
@@ -194,8 +178,7 @@
     "/photography/explore-app/nasenwand-spatial-1b1849da-960.avif",
     "/photography/explore-app/nasenwand-spatial-1b1849da-960.webp",
     "/photography/explore-app/wachau-16-9a8f6f68-960.avif",
-    "/photography/explore-app/wachau-16-9a8f6f68-960.webp",
-    "/photography/notes/note-north-face.webp"
+    "/photography/explore-app/wachau-16-9a8f6f68-960.webp"
   ],
   "heavyAssets": [
     "/photography/explore-app/scrub/region-rock-pan-a.mp4",
