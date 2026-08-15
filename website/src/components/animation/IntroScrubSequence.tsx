@@ -200,6 +200,18 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
     flightFrameRef.current = requestAnimationFrame(tick);
   }, [animateFlights, announceStation, cancelFlight, moveTo]);
 
+  useEffect(() => {
+    const onStationRequest = (event: Event) => {
+      const detail = (event as CustomEvent<{ station?: JourneyStation }>).detail;
+      const target = detail?.station
+        ? SCRUB_STATIONS.find((candidate) => candidate.id === detail.station)
+        : null;
+      if (target) flyToStation(target);
+    };
+    window.addEventListener("vm:preview-station-request", onStationRequest);
+    return () => window.removeEventListener("vm:preview-station-request", onStationRequest);
+  }, [flyToStation]);
+
   const skip = useCallback(() => {
     cancelFlight();
     // Claim the unlock first so moveTo does not report this as a completed run.

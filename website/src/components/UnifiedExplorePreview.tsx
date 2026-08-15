@@ -142,7 +142,10 @@ export function UnifiedExplorePreview({ registry }: { registry: ExploreContentRe
   useEffect(() => {
     const onStation = (event: Event) => {
       const detail = (event as CustomEvent<ScrubStationEventDetail>).detail;
-      if (detail?.station) setStation(detail.station);
+      if (detail?.station) {
+        setStation(detail.station);
+        setActiveModule(MODULE_FOR_STATION[detail.station]);
+      }
     };
     const onFocus = (event: Event) => {
       const detail = (event as CustomEvent<{ id?: string }>).detail;
