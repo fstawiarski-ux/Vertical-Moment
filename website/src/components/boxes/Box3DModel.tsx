@@ -10,10 +10,13 @@ export function Box3DModel({
   model,
   poster,
   isActive,
+  intentOnly = false,
 }: {
   model: ExploreModelAsset;
   poster?: ExploreImageAsset;
   isActive: boolean;
+  /** Keep heavy geometry behind an explicit user action in focused previews. */
+  intentOnly?: boolean;
 }) {
   const rootRef = useRef<HTMLDivElement>(null);
   const modelRef = useRef<HTMLElement | null>(null);
@@ -23,7 +26,8 @@ export function Box3DModel({
   const [loaded, setLoaded] = useState(false);
   const [progress, setProgress] = useState(0);
   const [error, setError] = useState<string | null>(null);
-  const shouldLoad = requested || (isActive && visible);
+  const shouldLoad = requested || (!intentOnly && isActive && visible);
+  const modelSize = `${(model.bytes / (1024 * 1024)).toFixed(1)} MiB`;
 
   useEffect(() => {
     const node = rootRef.current;
@@ -73,7 +77,7 @@ export function Box3DModel({
       {!moduleReady && poster && <img src={poster.src} alt={poster.alt} className={styles.poster} />}
       {!shouldLoad && (
         <div className={styles.gate}>
-          <span>1.7 MB · cached after first use</span>
+          <span>{modelSize} · cached after first use</span>
           <button type="button" onClick={() => setRequested(true)}>Load interactive 3D</button>
         </div>
       )}
