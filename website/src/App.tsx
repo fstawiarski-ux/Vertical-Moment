@@ -226,16 +226,24 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
   const openIndependentBox = useCallback((id: string, mode: BoxMode = "expanded", resetFrame = mode === "normal") => {
     setFollowJourney(false);
     setStationPeekVisible(false);
-    if (resetFrame && mode === "normal" && viewportMode === "desktop") {
+    const target = boxesRef.current.find((box) => box.id === id);
+    const wasMinimized = target?.mode === "minimized";
+    const keepMultipleNormalBoxes = viewportMode !== "mobile" && mode === "normal";
+    if (resetFrame && mode === "normal" && viewportMode === "desktop" && wasMinimized) {
       const frame = stationFrameForBox(id, { width: window.innerWidth, height: window.innerHeight });
       if (frame) dispatch({ type: "UPDATE_BOX", id, patch: frame });
     }
-    for (const other of boxesRef.current) {
-      if (other.id !== id && other.mode !== "minimized") {
-        dispatch({ type: "SET_BOX_MODE", id: other.id, mode: "minimized" });
+    if (!keepMultipleNormalBoxes) {
+      for (const other of boxesRef.current) {
+        if (other.id !== id && other.mode !== "minimized") {
+          dispatch({ type: "SET_BOX_MODE", id: other.id, mode: "minimized" });
+        }
       }
     }
     focusBox(id, mode, false);
+    if (keepMultipleNormalBoxes && wasMinimized) {
+      dispatch({ type: "APPLY_AUTO_LAYOUT", viewport: { width: window.innerWidth, height: window.innerHeight } });
+    }
   }, [dispatch, focusBox, viewportMode]);
 
   const replayIntro = useCallback(() => {
@@ -342,8 +350,11 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
       // Journey focus may restore a card, but it never changes the visitor's
       // saved frame or size.
       dispatch({ type: "SET_BOX_MODE", id: focusedBox.id, mode: "normal" });
+      if (viewportMode !== "mobile") {
+        dispatch({ type: "APPLY_AUTO_LAYOUT", viewport: { width: window.innerWidth, height: window.innerHeight } });
+      }
     }
-  }, [dispatch, followJourney, journeyStation, boxes, workspaceUnlocked]);
+  }, [dispatch, followJourney, journeyStation, boxes, viewportMode, workspaceUnlocked]);
 
   // Deep links wait for the workspace so the opened box is not hidden behind
   // an intro that is still running.

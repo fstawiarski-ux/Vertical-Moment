@@ -155,7 +155,7 @@ describe("writeDeepLinkToUrl", () => {
   it("writes the focused box into the query string", () => {
     stubWindow("https://verticalmoment.com/explore-app");
     writeDeepLinkToUrl(registry.boxes[1]);
-    expect(replaceState).toHaveBeenCalledWith(null, "", "/explore-app?open=nasenwand-routes&crag=nasenwand&sector=upper");
+    expect(replaceState).toHaveBeenCalledWith(null, "", "/explore-app?open=nasenwand-routes&crag=nasenwand&sector=upper&mode=normal");
   });
 
   it("clears deep-link parameters when nothing is focused", () => {

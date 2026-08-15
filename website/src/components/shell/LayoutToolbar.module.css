@@ -82,6 +82,16 @@
   text-transform: uppercase;
 }
 
+.panelGroups { display: grid; gap: 11px; }
+.actionGroup { display: grid; gap: 5px; }
+.groupLabel {
+  padding: 0 6px;
+  color: #a9a394;
+  font: 700 8px/1 ui-monospace, SFMono-Regular, Consolas, monospace;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
 .close {
   display: grid;
   width: 32px;
@@ -140,6 +150,7 @@
 
 .hudButton:disabled,
 .offlineButton > button:disabled { opacity: .34; cursor: not-allowed; transform: none; }
+.offlineButton > button { grid-column: 1 / -1; }
 .offlineButton { display: contents; }
 
 @keyframes hudReveal {

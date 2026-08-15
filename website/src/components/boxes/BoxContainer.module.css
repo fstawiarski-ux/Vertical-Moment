@@ -263,7 +263,7 @@
   width: 100%;
 }
 
-.box[data-viewport="tablet"] { height: 360px; }
+.box[data-viewport="tablet"] { height: auto; min-height: 0; }
 
 .box[data-viewport="tablet"].boxModeExpanded,
 .box[data-viewport="tablet"].boxModeFullscreen {
