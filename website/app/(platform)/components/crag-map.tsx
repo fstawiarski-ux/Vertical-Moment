@@ -10,8 +10,8 @@ import { find3DModel } from "../lib/media";
 const VIENNA: [number, number] = [48.2082, 16.3738];
 const STEPHANSPLATZ: [number, number] = [48.2085, 16.3731];
 const JAMMERWANDL: [number, number] = [48.015385, 16.198357];
-const LEAFLET_CSS = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css";
-const LEAFLET_JS = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js";
+const LEAFLET_CSS = "/vendor/leaflet/leaflet.css";
+const LEAFLET_JS = "/vendor/leaflet/leaflet.js";
 const GOLD = "#D89A34", SAGE = "#93A382", TERRA = "#BF6B4F";
 
 function regionHue(index: number, total: number) {
