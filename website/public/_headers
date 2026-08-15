@@ -11,7 +11,8 @@
 
 /sw.js
   Cache-Control: no-cache,no-store,must-revalidate
-  Service-Worker-Allowed: /
+  Service-Worker-Allowed: /explore-app
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 /manifest.webmanifest
   Cache-Control: no-cache
