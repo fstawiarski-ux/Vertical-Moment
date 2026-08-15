@@ -50,17 +50,22 @@ function wheelDeltaInPixels(event: ReactWheelEvent<HTMLDivElement>) {
 
 export type UnlockReason = "completed" | "skipped" | "static";
 
-export function IntroScrubSequence({ sequence, mode, onUnlock }: {
+export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockScrub = false, onFirstMove }: {
   sequence: ScrollScrubSequenceAsset;
   /** null while the visitor's intro preference is still being read. */
   mode: IntroMode | null;
   onUnlock: (reason: UnlockReason) => void;
+  /** Lets a review shell keep the arrival footage alive behind its workspace. */
+  allowPostUnlockScrub?: boolean;
+  /** Fires once on the first meaningful scrub, drag, button or slider move. */
+  onFirstMove?: () => void;
 }) {
   const videoRefs = useRef<Array<HTMLVideoElement | null>>([]);
   const dragRef = useRef<DragState | null>(null);
   const progressRef = useRef(0);
   const flightFrameRef = useRef<number | null>(null);
   const unlockedRef = useRef(false);
+  const firstMoveRef = useRef(false);
   const [progress, setProgress] = useState(0);
   const [unlocked, setUnlocked] = useState(false);
   const [loaded, setLoaded] = useState<Set<number>>(() => new Set([0, 1]));
@@ -75,6 +80,12 @@ export function IntroScrubSequence({ sequence, mode, onUnlock }: {
   const cinematic = mode === "cinematic";
   // Reduced-motion visitors keep the timeline, but it jumps rather than flies.
   const animateFlights = mode !== "static";
+
+  const announceFirstMove = useCallback(() => {
+    if (firstMoveRef.current) return;
+    firstMoveRef.current = true;
+    onFirstMove?.();
+  }, [onFirstMove]);
 
   useEffect(() => {
     setLoaded((current) => {
@@ -119,6 +130,7 @@ export function IntroScrubSequence({ sequence, mode, onUnlock }: {
   }, []);
 
   const moveTo = useCallback((value: number, source: ScrubStationSource) => {
+    if (source !== "static") announceFirstMove();
     const next = clamp(value);
     progressRef.current = next;
     setProgress(next);
@@ -128,7 +140,7 @@ export function IntroScrubSequence({ sequence, mode, onUnlock }: {
       announceStation(station, "preview", source, next);
     }
     if (next >= 0.995) unlock("completed");
-  }, [announceStation, unlock]);
+  }, [announceFirstMove, announceStation, unlock]);
 
   const cancelFlight = useCallback(() => {
     if (flightFrameRef.current !== null) cancelAnimationFrame(flightFrameRef.current);
@@ -199,14 +211,14 @@ export function IntroScrubSequence({ sequence, mode, onUnlock }: {
   }, [announceStation, cancelFlight, unlock]);
 
   const onWheel = (event: ReactWheelEvent<HTMLDivElement>) => {
-    if (unlocked) return;
+    if (unlocked && !allowPostUnlockScrub) return;
     event.preventDefault();
     cancelFlight();
     moveTo(progressRef.current + wheelDeltaInPixels(event) * WHEEL_PROGRESS_SCALE, "wheel");
   };
 
   const onPointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
-    if (unlocked || (event.target as Element).closest("input, button")) return;
+    if ((unlocked && !allowPostUnlockScrub) || (event.target as Element).closest("input, button")) return;
     cancelFlight();
     dragRef.current = {
       pointerId: event.pointerId,
@@ -250,7 +262,12 @@ export function IntroScrubSequence({ sequence, mode, onUnlock }: {
   }), [activeIndex, activeLocalProgress, chapterCount, sequence.chapters]);
 
   return (
-    <section className={styles.sequence} data-unlocked={unlocked ? "true" : "false"} aria-label="Wachau approach scrub sequence">
+    <section
+      className={styles.sequence}
+      data-unlocked={unlocked ? "true" : "false"}
+      data-scrub-live={allowPostUnlockScrub ? "true" : "false"}
+      aria-label="Wachau approach scrub sequence"
+    >
       <div className={styles.media} aria-hidden="true">
         <img className={styles.poster} src={sequence.poster} alt="" />
         {sequence.chapters.map((chapter, index) => loaded.has(index) && (

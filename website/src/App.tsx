@@ -12,6 +12,7 @@ import { LayoutToolbar } from "./components/shell/LayoutToolbar";
 import { PhoneShell } from "./components/shell/PhoneShell";
 import { StationPeek } from "./components/shell/StationPeek";
 import { DesktopShell, TabletShell } from "./components/shell/WorkspaceShells";
+import { UnifiedExplorePreview } from "./components/UnifiedExplorePreview";
 import { deepLinkFor, parseDeepLink, resolveDeepLink, writeDeepLinkToUrl } from "./core/deepLink";
 import { hasSeenIntro, prefersReducedMotion, rememberIntroSeen } from "./core/introPreferences";
 import { LayoutProvider, useLayoutState } from "./core/layoutState";
@@ -604,6 +605,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
 export default function ExploreApp({ initialRegistry }: { initialRegistry?: ExploreContentRegistry }) {
   const [registry, setRegistry] = useState<ExploreContentRegistry | null>(initialRegistry ?? null);
   const [error, setError] = useState<string | null>(null);
+  const [unifiedPreview, setUnifiedPreview] = useState(false);
   const initialState = useMemo(() => {
     if (!registry) return null;
     const viewport = typeof window === "undefined" ? undefined : { width: window.innerWidth, height: window.innerHeight };
@@ -634,6 +636,10 @@ export default function ExploreApp({ initialRegistry }: { initialRegistry?: Expl
     return () => { cancelled = true; };
   }, []);
 
+  useEffect(() => {
+    setUnifiedPreview(new URLSearchParams(window.location.search).get("preview") === "unified");
+  }, []);
+
   if (error) return <main className={styles.loading}><h1>Explore Lab could not start.</h1><p>{error}</p></main>;
   if (!registry || !initialState) return <main className={styles.loading}><span /><p>Preparing Explore Lab…</p></main>;
 
@@ -641,7 +647,7 @@ export default function ExploreApp({ initialRegistry }: { initialRegistry?: Expl
     <>
       <ServiceWorkerRegistration />
       <LayoutProvider key={registry.version} initialState={initialState}>
-        <Workspace registry={registry} />
+        {unifiedPreview ? <UnifiedExplorePreview registry={registry} /> : <Workspace registry={registry} />}
       </LayoutProvider>
     </>
   );

@@ -16,6 +16,7 @@
 }
 .gestureLayer { z-index: 3; pointer-events: auto; touch-action: none; cursor: ew-resize; }
 .sequence[data-unlocked="true"] .gestureLayer { pointer-events: none; }
+.sequence[data-unlocked="true"][data-scrub-live="true"] .gestureLayer { pointer-events: auto; }
 .introCopy {
   position: absolute;
   right: clamp(26px, 5vw, 86px);
