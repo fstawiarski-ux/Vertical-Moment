@@ -19,7 +19,7 @@
   width: calc(100% * var(--box-content-inverse, 1));
   height: calc(100% * var(--box-content-inverse, 1));
   flex-direction: column;
-  overflow: hidden;
+  overflow: visible;
   border-radius: inherit;
   transform: scale(var(--box-content-scale, 1));
   transform-origin: top left;
@@ -32,14 +32,15 @@
 }
 
 .header {
+  position: relative;
   display: grid;
-  min-height: 54px;
-  grid-template-columns: 20px minmax(0, 1fr) auto;
+  min-height: 38px;
+  grid-template-columns: 16px minmax(0, 1fr);
   align-items: center;
-  gap: 10px;
-  padding: 6px 8px 6px 14px;
+  gap: 7px;
+  padding: 4px 10px 4px 12px;
   border-bottom: 1px solid rgb(255 255 255 / 9%);
-  background: rgb(10 16 12 / 52%);
+  background: linear-gradient(180deg, rgb(10 16 12 / 60%), rgb(10 16 12 / 28%));
   touch-action: none;
   user-select: none;
   cursor: grab;
@@ -62,12 +63,12 @@
   background: currentColor;
 }
 
-.heading { min-width: 0; }
+.heading { min-width: 0; padding-right: 42px; }
 .heading small {
   display: block;
   overflow: hidden;
   color: #cdbb8b;
-  font: 600 10px/1.2 ui-monospace, SFMono-Regular, Consolas, monospace;
+  font: 600 8px/1.1 ui-monospace, SFMono-Regular, Consolas, monospace;
   letter-spacing: .12em;
   text-overflow: ellipsis;
   text-transform: uppercase;
@@ -76,36 +77,49 @@
 
 .heading h2 {
   overflow: hidden;
-  margin: 2px 0 0;
-  font: 600 14px/1.2 Arial, sans-serif;
+  margin: 1px 0 0;
+  font: 600 12px/1.1 Arial, sans-serif;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .windowControls {
-  position: relative;
+  position: absolute;
+  top: 3px;
+  right: -13px;
   z-index: 30;
   display: flex;
   align-items: center;
-  justify-self: end;
-  gap: 4px;
-  opacity: .86;
-  transition: opacity 160ms ease;
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid rgb(255 255 255 / 13%);
+  border-radius: 999px;
+  background: rgb(8 14 10 / 58%);
+  box-shadow: 0 8px 20px rgb(0 0 0 / 22%);
+  opacity: .3;
+  transform: translateX(2px);
+  transition: opacity 160ms ease, transform 160ms ease, background 160ms ease;
 }
 
 .windowControls:hover,
-.windowControls:focus-within { opacity: 1; }
+.windowControls:focus-within,
+.box:hover .windowControls { opacity: .8; transform: translateX(0); }
+
+.windowControls:hover,
+.windowControls:focus-within { opacity: 1; background: rgb(8 14 10 / 82%); }
 
 .windowControls button {
   display: grid;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
   place-items: center;
   color: #f4f1e8;
-  border: 1px solid rgb(255 255 255 / 10%);
-  border-radius: 9px;
-  background: rgb(255 255 255 / 5%);
-  font: 600 16px/1 Arial, sans-serif;
+  border: 1px solid rgb(255 255 255 / 13%);
+  border-radius: 50%;
+  background: rgb(255 255 255 / 4%);
+  font: 600 14px/1 Arial, sans-serif;
   cursor: pointer;
 }
 
@@ -121,6 +135,7 @@
   min-height: 0;
   flex: 1;
   overflow: auto;
+  border-radius: 0 0 17px 17px;
   overscroll-behavior: contain;
 }
 
@@ -190,7 +205,13 @@
 .boxModeMinimized .windowControls {
   position: static;
   justify-self: center;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
   opacity: 1;
+  transform: none;
 }
 
 .boxModeMinimized .windowControls button:first-child {
@@ -213,21 +234,25 @@
 .boxModeExpanded { z-index: 9450 !important; }
 .boxModeFullscreen { z-index: 9490 !important; }
 .boxModeExpanded .windowControls,
-.boxModeFullscreen .windowControls { opacity: .92; }
+.boxModeFullscreen .windowControls {
+  top: 5px;
+  right: 10px;
+  opacity: .52;
+  transform: none;
+}
 
 .boxModeExpanded {
-  inset: var(--explore-safe-top, 112px) var(--explore-safe-right, 106px) var(--explore-safe-bottom, 96px) var(--explore-safe-left, 8px);
+  inset: var(--explore-safe-top, 112px) var(--explore-safe-right, 106px) var(--explore-content-bottom, 112px) var(--explore-safe-left, 8px);
   width: auto !important;
   height: auto !important;
 }
 
 .boxModeFullscreen {
-  inset: 0;
+  inset: var(--explore-safe-top, 112px) 0 var(--explore-content-bottom, 112px);
   width: 100vw !important;
-  height: 100dvh !important;
+  height: auto !important;
   box-sizing: border-box;
-  border: 0;
-  border-radius: 0;
+  border-radius: 0 0 18px 18px;
 }
 
 .box[data-viewport="tablet"],
@@ -248,15 +273,15 @@
 }
 
 .box[data-viewport="tablet"].boxModeExpanded {
-  inset: var(--explore-safe-top, 112px) var(--explore-safe-right, 106px) var(--explore-safe-bottom, 96px) var(--explore-safe-left, 8px);
+  inset: var(--explore-safe-top, 112px) var(--explore-safe-right, 106px) var(--explore-content-bottom, 112px) var(--explore-safe-left, 8px);
   width: auto !important;
   height: auto !important;
 }
 
 .box[data-viewport="tablet"].boxModeFullscreen {
-  inset: 0;
+  inset: var(--explore-safe-top, 112px) 0 var(--explore-content-bottom, 112px);
   width: 100vw !important;
-  height: 100dvh !important;
+  height: auto !important;
 }
 
 .box[data-viewport="mobile"] {
@@ -280,38 +305,44 @@
 }
 
 @media (max-width: 767px) {
-  .windowControls button { width: 40px; height: 40px; }
-  .header { grid-template-columns: 14px minmax(0, 1fr) auto; padding-left: 10px; }
+  .header { grid-template-columns: 14px minmax(0, 1fr); padding-left: 10px; }
 
   .box[data-viewport="mobile"].boxModeExpanded {
     position: fixed;
     z-index: 9450 !important;
-    inset: 0;
+    inset: var(--explore-safe-top, 112px) 0 var(--explore-content-bottom, 240px);
     width: 100vw !important;
-    height: 100dvh !important;
+    height: auto !important;
     min-height: 0;
-    border: 0;
-    border-radius: 0;
+    border-radius: 0 0 18px 18px;
   }
 
   .box[data-viewport="mobile"].boxModeFullscreen {
     position: fixed;
     z-index: 9490 !important;
-    inset: 0;
+    inset: var(--explore-safe-top, 112px) 0 var(--explore-content-bottom, 240px);
     width: 100vw !important;
-    height: 100dvh !important;
+    height: auto !important;
     min-height: 0;
-    border: 0;
-    border-radius: 0;
+    border-radius: 0 0 18px 18px;
   }
 
   .box[data-viewport="mobile"].boxModeFullscreen .header {
-    min-height: calc(54px + env(safe-area-inset-top));
+    min-height: calc(38px + env(safe-area-inset-top));
     padding-top: max(6px, env(safe-area-inset-top));
   }
 
   .box[data-viewport="mobile"].boxModeFullscreen .windowControls button:nth-child(3) { display: grid; }
 
+}
+
+@media (pointer: coarse) and (min-width: 768px) {
+  .windowControls button {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

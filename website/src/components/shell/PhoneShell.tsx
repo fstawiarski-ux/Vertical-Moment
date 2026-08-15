@@ -46,7 +46,7 @@ export function PhoneShell({
   };
 
   return (
-    <section className={styles.phoneShell} data-shell="phone" aria-label="Phone Explore workspace">
+    <section className={styles.phoneShell} data-shell="phone" data-active-box={selected?.id ?? "none"} aria-label="Phone Explore workspace">
       <header className={styles.phoneHeader}>
         <div>
           <small>Field workspace</small>
@@ -57,7 +57,7 @@ export function PhoneShell({
       <p className={styles.phoneHint}>
         {followJourney && stationContent ? `${stationContent.region} · ${stationContent.crag}` : "One focused task at a time"}
       </p>
-      <div className={styles.phoneStage}>
+      <div className={styles.phoneStage} data-active-box={selected?.id ?? "none"}>
         {selected ? renderBox(selected) : <p>Choose a workspace below.</p>}
       </div>
       <nav className={styles.phoneNav} aria-label="Phone workspace navigation">
@@ -69,7 +69,7 @@ export function PhoneShell({
             aria-current={content.id === selected?.id ? "page" : undefined}
             onClick={() => openContent(content.id)}
           >
-            {content.id === "crag-locator" ? "Atlas" : content.id === "nasenwand-spatial" ? "Routes" : "Panorama"}
+            {content.id === "crag-locator" ? "Atlas" : content.id === "nasenwand-spatial" ? "Routes" : "360"}
           </button>
         ))}
         <button
@@ -78,7 +78,7 @@ export function PhoneShell({
           aria-controls="phone-more-menu"
           onClick={() => setMoreOpen((value) => !value)}
         >
-          More
+          Modules
         </button>
       </nav>
       {moreOpen && (

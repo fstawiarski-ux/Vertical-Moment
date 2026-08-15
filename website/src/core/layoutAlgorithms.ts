@@ -17,13 +17,13 @@ export interface BoxFrame {
 
 /**
  * The desktop shell reserves the same lanes for every layout consumer:
- * brand/peek content above, the right toolbar, and the journey rail below.
+ * brand/peek content above, the right toolbar, and the fixed scrub rail below.
  * Keep these base values in step with the CSS variables in ExploreApp.module.css.
  */
 export const EXPLORE_SAFE_ZONE: Readonly<Record<"top" | "right" | "bottom" | "left", number>> = Object.freeze({
   top: 112,
   right: 106,
-  bottom: 96,
+  bottom: 112,
   left: 8,
 });
 
@@ -117,6 +117,10 @@ export function stationFrameForBox(boxId: string, viewport?: ViewportBounds) {
       // The final station keeps the fixed arrival composition on the left,
       // while desktop users may still drag or resize the freeform box.
       return leftDockedFrame(viewport);
+    case "wachau-16":
+      // Panorama controls need a readable restored frame instead of the small
+      // registry thumbnail used by the initial content preview.
+      return centeredFrame(viewport, 0.62, 0.52, 520, 360);
     default:
       return null;
   }

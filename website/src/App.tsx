@@ -7,7 +7,6 @@ import { BoxContainer } from "./components/boxes/BoxContainer";
 import { ResponsiveImage } from "./components/media/ResponsiveImage";
 import { CommandPalette } from "./components/shell/CommandPalette";
 import { ConnectionStatus } from "./components/shell/ConnectionStatus";
-import { ContextBreadcrumb } from "./components/shell/ContextBreadcrumb";
 import { LayoutToolbar } from "./components/shell/LayoutToolbar";
 import { PhoneShell } from "./components/shell/PhoneShell";
 import { StationPeek } from "./components/shell/StationPeek";
@@ -27,6 +26,7 @@ import type {
   JourneyStation,
   LayoutState,
   ScrubStationEventDetail,
+  ViewportMode,
 } from "./core/types";
 import { STATION_PRESENTATIONS, stationForFocusBoxId } from "./core/stationPresentation";
 import { useViewportMode } from "./hooks/useViewportMode";
@@ -46,7 +46,10 @@ function seedLayout(registry: ExploreContentRegistry, viewport?: { width: number
       ...box.initialLayout,
       ...(stationFrameForBox(box.id, viewport) ?? {}),
       zIndex: index + 1,
-      mode: "normal",
+      // Start with one readable focal module and keep the rest recoverable
+      // from the dock. Journey follow mode restores the station focus when it
+      // needs to surface a different recommendation.
+      mode: box.id === STATION_PRESENTATIONS.topo.focusBoxId ? "normal" : "minimized",
       pinned: false,
       dataRef: box.id,
       stackIndex: index,
@@ -200,6 +203,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
   const activeContent = activeBoxId ? contentById.get(activeBoxId) ?? null : null;
   const deepLinkApplied = useRef(false);
   const mobileLayoutNormalized = useRef(false);
+  const previousViewportMode = useRef<ViewportMode | null>(null);
 
   // Focus handling reads the live box list, but the window listener below must
   // not resubscribe on every drag frame — hence the ref rather than a dep.
@@ -298,9 +302,22 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
   }, []);
 
   useEffect(() => {
+    const previousMode = previousViewportMode.current;
+    previousViewportMode.current = viewportMode;
+
     if (viewportMode === "tablet") {
       dispatch({ type: "SET_LAYOUT_MODE", mode: "grid" });
       dispatch({ type: "APPLY_AUTO_LAYOUT", viewport: { width: window.innerWidth, height: window.innerHeight } });
+      return;
+    }
+
+    if (viewportMode === "desktop" && previousMode !== "desktop") {
+      dispatch({ type: "SET_LAYOUT_MODE", mode: "explore" });
+      for (const box of boxesRef.current) {
+        if (box.mode === "minimized") continue;
+        const frame = stationFrameForBox(box.id, { width: window.innerWidth, height: window.innerHeight });
+        if (frame) dispatch({ type: "UPDATE_BOX", id: box.id, patch: frame });
+      }
     }
   }, [dispatch, viewportMode]);
 
@@ -311,10 +328,12 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
     }
     if (!layoutHydrated || mobileLayoutNormalized.current) return;
     mobileLayoutNormalized.current = true;
+    const focusId = activeBoxId ?? STATION_PRESENTATIONS[journeyStation].focusBoxId;
     for (const box of boxesRef.current) {
-      if (box.mode !== "normal") dispatch({ type: "SET_BOX_MODE", id: box.id, mode: "normal" });
+      const targetMode = box.id === focusId ? "normal" : "minimized";
+      if (box.mode !== targetMode) dispatch({ type: "SET_BOX_MODE", id: box.id, mode: targetMode });
     }
-  }, [dispatch, layoutHydrated, viewportMode]);
+  }, [activeBoxId, dispatch, journeyStation, layoutHydrated, viewportMode]);
 
   useEffect(() => {
     if (!workspaceUnlocked || !followJourney) return;
@@ -538,11 +557,6 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
           onOpen={workspaceUnlocked ? openStationBox : undefined}
         />
       )}
-      <header className={styles.brand}>
-        <span className={styles.mark} aria-hidden="true" />
-        <div><small>Vertical Moment</small><strong>Explore Lab</strong></div>
-        {workspaceUnlocked && <ContextBreadcrumb box={journeyActive ? stationContent : activeContent} onNavigate={openPalette} />}
-      </header>
       <ConnectionStatus />
 
       {workspaceUnlocked && viewportMode === "mobile" && (
@@ -567,9 +581,9 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
       )}
 
       {workspaceUnlocked && (
-        <aside className={styles.workspaceDock} aria-label="Open minimized workspaces">
+        <aside className={styles.workspaceDock} aria-label="Open or restore Explore modules">
           <div className={styles.dockLabel}>
-            <strong>Workspace dock</strong>
+            <strong>Modules</strong>
             <span>Open or restore</span>
           </div>
           <div className={styles.dockItems}>
@@ -658,8 +672,8 @@ export default function ExploreApp({ initialRegistry }: { initialRegistry?: Expl
     setUnifiedPreview(new URLSearchParams(window.location.search).get("preview") === "unified");
   }, []);
 
-  if (error) return <main className={styles.loading}><h1>Explore Lab could not start.</h1><p>{error}</p></main>;
-  if (!registry || !initialState) return <main className={styles.loading}><span /><p>Preparing Explore Lab…</p></main>;
+  if (error) return <main className={styles.loading}><h1>Workspace could not start.</h1><p>{error}</p></main>;
+  if (!registry || !initialState) return <main className={styles.loading}><span /><p>Preparing workspace…</p></main>;
 
   return (
     <>
