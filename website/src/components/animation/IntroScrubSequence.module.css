@@ -1,4 +1,4 @@
-.sequence { position: absolute; inset: 0; pointer-events: none; }
+.sequence { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
 .media,
 .poster,
 .video,
@@ -124,5 +124,9 @@
 
 @media (prefers-reduced-motion: reduce) {
   .video,
-  .skip { transition: none; }
+  .skip,
+  .timeline,
+  .timeline[data-unlocked="true"],
+  .timeline[data-unlocked="true"]:hover,
+  .timeline[data-unlocked="true"]:focus-within { transition: none; }
 }

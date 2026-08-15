@@ -8,47 +8,9 @@
   --explore-safe-top: max(112px, calc(env(safe-area-inset-top) + 102px));
   --explore-dock-top: max(58px, calc(env(safe-area-inset-top) + 48px));
   --explore-safe-right: 106px;
-  --explore-safe-bottom: max(96px, calc(env(safe-area-inset-bottom) + 96px));
+  --explore-safe-bottom: max(112px, calc(env(safe-area-inset-bottom) + 112px));
+  --explore-content-bottom: var(--explore-safe-bottom);
   --explore-safe-left: max(8px, env(safe-area-inset-left));
-}
-
-.brand {
-  position: absolute;
-  top: max(14px, env(safe-area-inset-top));
-  right: 20px;
-  left: 20px;
-  z-index: 9700;
-  display: flex;
-  height: 54px;
-  align-items: center;
-  gap: 12px;
-  pointer-events: none;
-}
-
-.mark {
-  width: 10px;
-  height: 34px;
-  border-radius: 1px;
-  background: #d2bd87;
-  clip-path: polygon(0 0, 100% 10%, 70% 100%, 18% 88%);
-}
-
-.brand div { display: flex; flex-direction: column; flex: 0 0 auto; }
-.brand small {
-  color: #d2bd87;
-  font: 600 10px/1.1 ui-monospace, SFMono-Regular, Consolas, monospace;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-}
-.brand strong { margin-top: 4px; font: 600 18px/1 Arial, sans-serif; letter-spacing: -.02em; }
-
-/* The context breadcrumb stays near the wordmark so the upper-right edge can
-   carry readable restored-box buttons without competing with the timeline. */
-.brand nav {
-  position: absolute;
-  top: 5px;
-  left: clamp(170px, 18vw, 220px);
-  margin: 0;
 }
 
 .boxLayer { position: absolute; inset: 0; z-index: 10; pointer-events: none; animation: workspaceReveal 520ms cubic-bezier(.2,.8,.2,1) both; }
@@ -60,7 +22,7 @@
 .boxLayer[data-layout="tablet"] {
   top: var(--explore-safe-top);
   right: var(--explore-safe-right);
-  bottom: var(--explore-safe-bottom);
+  bottom: var(--explore-content-bottom);
   left: var(--explore-safe-left);
   display: grid;
   overflow-y: auto;
@@ -73,7 +35,7 @@
 
 .cardStack {
   position: absolute;
-  inset: var(--explore-safe-top) 0 var(--explore-safe-bottom);
+  inset: var(--explore-safe-top) 0 var(--explore-content-bottom);
   z-index: 10;
   display: flex;
   flex-direction: column;
@@ -92,7 +54,7 @@
 
 .phoneShell {
   position: absolute;
-  inset: var(--explore-safe-top) 0 var(--explore-safe-bottom);
+  inset: var(--explore-safe-top) 0 var(--explore-content-bottom);
   z-index: 20;
   display: flex;
   flex-direction: column;
@@ -104,7 +66,7 @@
 
 .phoneHeader {
   display: flex;
-  min-height: 44px;
+  min-height: 34px;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
@@ -112,10 +74,10 @@
 }
 .phoneHeader div { display: grid; gap: 3px; min-width: 0; }
 .phoneHeader small { color: #ccb982; font: 700 9px/1 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .12em; text-transform: uppercase; }
-.phoneHeader strong { overflow: hidden; font: 600 18px/1.05 Arial, sans-serif; text-overflow: ellipsis; white-space: nowrap; }
+.phoneHeader strong { overflow: hidden; font: 600 15px/1.05 Arial, sans-serif; text-overflow: ellipsis; white-space: nowrap; }
 .phoneHeader button,
 .phoneNav button {
-  min-height: 40px;
+  min-height: 36px;
   padding: 0 12px;
   color: #ddd7c8;
   border: 1px solid rgb(255 255 255 / 16%);
@@ -127,8 +89,19 @@
 .phoneHeader button:focus-visible,
 .phoneNav button:focus-visible { outline: 2px solid #f4eedf; outline-offset: 2px; }
 .phoneHint { margin: 0; color: #a9a394; font: 600 10px/1.3 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .05em; text-transform: uppercase; }
-.phoneStage { min-height: 0; flex: 1; overflow: auto; overscroll-behavior: contain; }
+.phoneStage { min-height: 0; flex: 0 0 min(42dvh, 320px); overflow: auto; overscroll-behavior: contain; }
 .phoneStage > article { position: relative !important; width: 100% !important; height: 100% !important; min-height: 0 !important; transform: none !important; }
+.phoneStage > article[data-viewport="mobile"][class*="boxModeExpanded"],
+.phoneStage > article[data-viewport="mobile"][class*="boxModeFullscreen"] { position: relative !important; inset: auto !important; width: 100% !important; height: 100% !important; min-height: 0 !important; }
+.phoneStage[data-active-box="nasenwand-model"] { flex: 0 0 min(27dvh, 220px); }
+.phoneStage[data-active-box="nasenwand-model"] > article { height: 100% !important; }
+.phoneStage[data-active-box="nasenwand-model"] > article [class*="header"] { display: none; }
+.phoneStage[data-active-box="nasenwand-model"] > article [class*="handle"],
+.phoneStage[data-active-box="nasenwand-model"] > article [class*="heading"],
+.phoneStage[data-active-box="nasenwand-model"] > article [class*="windowControls"] { display: none; }
+.phoneStage[data-active-box="nasenwand-model"] > article [class*="viewer"] { min-height: 0; }
+.phoneShell[data-active-box="nasenwand-model"] .phoneHeader strong,
+.phoneShell[data-active-box="nasenwand-model"] .phoneHint { display: none; }
 .phoneNav { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 5px; padding: 4px 0 max(4px, env(safe-area-inset-bottom)); }
 .phoneNav button { min-height: 44px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .phoneNav button[aria-current="page"],
@@ -276,16 +249,18 @@
   to { opacity: 1; transform: none; }
 }
 @media (max-width: 767px) {
+  .app {
+    --explore-content-bottom: max(240px, calc(env(safe-area-inset-bottom) + 240px));
+  }
+
   .cardStack {
     right: 72px;
     padding-right: 8px;
   }
   .cardStack[data-station-peek="true"] { top: 190px; }
   .boxLayer { display: none; }
-  .brand { right: 16px; left: 16px; }
-  .brand nav { display: none; }
   .workspaceDock { display: none; }
-  .phoneShell { inset: 124px 0 max(86px, env(safe-area-inset-bottom)); padding-inline: 12px; }
+  .phoneShell { inset: 72px 0 var(--explore-content-bottom); padding-inline: 12px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
