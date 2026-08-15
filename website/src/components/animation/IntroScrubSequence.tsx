@@ -16,7 +16,7 @@ import type {
   ScrubStationSource,
   ScrollScrubSequenceAsset,
 } from "../../core/types";
-import { stationForProgress } from "../../core/stationPresentation";
+import { stationFlightDuration, stationForProgress } from "../../core/stationPresentation";
 import styles from "./IntroScrubSequence.module.css";
 
 const clamp = (value: number) => Math.max(0, Math.min(1, value));
@@ -182,7 +182,7 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
     }
 
     const startedAt = performance.now();
-    const duration = 650 + distance * 1350;
+    const duration = stationFlightDuration(distance);
     const tick = (now: number) => {
       const elapsed = clamp((now - startedAt) / duration);
       const eased = elapsed < 0.5

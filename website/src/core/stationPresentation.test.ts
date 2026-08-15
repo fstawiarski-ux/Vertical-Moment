@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { STATION_PRESENTATIONS, stationForFocusBoxId, stationForProgress } from "./stationPresentation";
+import { STATION_PRESENTATIONS, stationFlightDuration, stationForFocusBoxId, stationForProgress } from "./stationPresentation";
 
 describe("station presentation", () => {
   it("keeps the journey in four stable presentation states", () => {
@@ -31,5 +31,12 @@ describe("station presentation", () => {
     expect(stationForFocusBoxId("nasenwand-spatial")).toBe("sector");
     expect(stationForFocusBoxId("nasenwand-model")).toBe("topo");
     expect(stationForFocusBoxId("wachau-panorama")).toBeNull();
+  });
+
+  it("uses a slower bounded flight for station button clicks", () => {
+    expect(stationFlightDuration(0)).toBe(900);
+    expect(stationFlightDuration(0.5)).toBe(1800);
+    expect(stationFlightDuration(1)).toBe(2700);
+    expect(stationFlightDuration(2)).toBe(2700);
   });
 });

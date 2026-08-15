@@ -20,11 +20,10 @@ const WallReveal = lazy(() => import("./boxes/BoxWallReveal"));
 
 const MODULES = [
   { id: "crag-locator", label: "Atlas", weight: "Core", hint: "The map and location spine" },
-  { id: "wall-reveal", label: "Wall Reveal", weight: "Story", hint: "Place, gallery and topo narrative" },
+  { id: "wall-reveal", label: "Wall Reveal", weight: "Story", hint: "Place and topo narrative" },
   { id: "nasenwand-spatial", label: "Routes", weight: "Working", hint: "Sector facts and route context" },
   { id: "nasenwand-model", label: "3D Wall", weight: "Heavy", hint: "Load interactive geometry on intent" },
   { id: "wachau-16", label: "Panorama", weight: "Heavy", hint: "Wachau studies and 360 view" },
-  { id: "vm-7073", label: "Gallery", weight: "Light", hint: "A quiet visual reference" },
 ] as const;
 
 type PreviewModuleId = (typeof MODULES)[number]["id"];
@@ -114,14 +113,6 @@ function ModuleBody({ id, registry }: { id: PreviewModuleId; registry: ExploreCo
   }
   if (id === "wachau-16") {
     return <Suspense fallback={<div className={styles.moduleLoading}>Preparing the panorama…</div>}><WachauPanorama /></Suspense>;
-  }
-  if (id === "vm-7073" && content?.image) {
-    return (
-      <figure className={styles.galleryModule}>
-        <img src={content.image.src} alt={content.image.alt} />
-        <figcaption><span>{content.region} · {content.crag}</span><strong>{content.title}</strong><small>{content.description}</small></figcaption>
-      </figure>
-    );
   }
   return <div className={styles.moduleLoading}>This layer is not present in the current registry.</div>;
 }
@@ -258,7 +249,7 @@ export function UnifiedExplorePreview({ registry }: { registry: ExploreContentRe
           </aside>
 
           <nav className={styles.moduleRail} aria-label="Explore layers">
-            <div className={styles.moduleRailLabel}><small>One tray</small><strong>Six layers</strong></div>
+            <div className={styles.moduleRailLabel}><small>One tray</small><strong>Five layers</strong></div>
             {MODULES.map((module) => (
               <button key={module.id} type="button" aria-pressed={module.id === activeModule} data-weight={module.weight.toLowerCase()} onClick={() => chooseModule(module.id)}>
                 <span>{module.label}</span><small>{module.weight}</small>

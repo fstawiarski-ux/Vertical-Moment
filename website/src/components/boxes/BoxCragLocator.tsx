@@ -379,6 +379,14 @@ export default function BoxCragLocator() {
   const directionsUrl = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(VIENNA.join(","))}&destination=${encodeURIComponent(selectedTarget.coordinates.join(","))}`;
   const selectedRoutes = selectedWall ? routesByWall.get(selectedWall.id) ?? [] : [];
   const selectedWalls = regionWalls.get(selectedRegion) ?? [];
+  const filteredWalls = useMemo(() => {
+    const value = query.trim().toLocaleLowerCase();
+    if (value.length < 2) return selectedWalls;
+    return selectedWalls.filter((wall) => {
+      if (wall.n.toLocaleLowerCase().includes(value) || wall.rg.toLocaleLowerCase().includes(value)) return true;
+      return (routesByWall.get(wall.id) ?? []).some((route) => route.n.toLocaleLowerCase().includes(value));
+    });
+  }, [query, regionWalls, routesByWall, selectedRegion]);
 
   return (
     <div ref={rootRef} className={styles.locator}>
@@ -413,19 +421,6 @@ export default function BoxCragLocator() {
         </div>
       )}
 
-      <nav className={styles.regionStrip} aria-label="Climbing regions">
-        {orderedRegions.map((region) => (
-          <button
-            type="button"
-            key={region.n}
-            aria-pressed={region.n === selectedRegion}
-            onClick={() => chooseRegion(region.n)}
-          >
-            <span>{region.n}</span><small>{region.ct}</small>
-          </button>
-        ))}
-      </nav>
-
       <div className={styles.workspace}>
         <div className={styles.mapPane}>
           <div ref={mapElementRef} className={styles.map} aria-label="Map of climbing regions and crags" />
@@ -438,6 +433,18 @@ export default function BoxCragLocator() {
         </div>
 
         <aside className={styles.detail} aria-label="Selected atlas content">
+          <nav className={styles.regionStrip} aria-label="Climbing regions">
+            {orderedRegions.map((region) => (
+              <button
+                type="button"
+                key={region.n}
+                aria-pressed={region.n === selectedRegion}
+                onClick={() => chooseRegion(region.n)}
+              >
+                <span>{region.n}</span><small>{region.ct}</small>
+              </button>
+            ))}
+          </nav>
           {selectedWall ? (
             <>
               <button className={styles.back} type="button" onClick={() => setSelectedWallId(null)}>← {selectedRegion} crags</button>
@@ -473,15 +480,16 @@ export default function BoxCragLocator() {
                </dl>
                <div className={styles.detailHeading}>
                  <strong>Available crags</strong>
-                 <small>{selectedWalls.length ? "Select one to inspect" : "No crags listed"}</small>
+                 <small>{query.trim().length >= 2 ? `${filteredWalls.length} of ${selectedWalls.length} shown` : selectedWalls.length ? "Select one to inspect" : "No crags listed"}</small>
                </div>
                <div className={styles.wallList}>
-                 {selectedWalls.map((wall) => (
+                 {filteredWalls.map((wall) => (
                    <button type="button" key={wall.id} onClick={() => chooseWall(wall)}>
                     <span>{wall.n}</span>
                     <small>{wall.ct} routes</small>
                    </button>
                  ))}
+                 {query.trim().length >= 2 && !filteredWalls.length && <p>No matching crags in this region.</p>}
                </div>
                <div className={styles.detailNote}>
                  <span>Field review status</span>

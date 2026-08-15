@@ -5,8 +5,8 @@
   color: #f4f1e8;
   background: #0d1510;
   isolation: isolate;
-  --explore-safe-top: max(146px, calc(env(safe-area-inset-top) + 136px));
-  --explore-dock-top: max(82px, calc(env(safe-area-inset-top) + 72px));
+  --explore-safe-top: max(112px, calc(env(safe-area-inset-top) + 102px));
+  --explore-dock-top: max(58px, calc(env(safe-area-inset-top) + 48px));
   --explore-safe-right: 106px;
   --explore-safe-bottom: max(96px, calc(env(safe-area-inset-bottom) + 96px));
   --explore-safe-left: max(8px, env(safe-area-inset-left));
@@ -134,7 +134,7 @@
 .phoneNav button[aria-current="page"],
 .phoneNav button[aria-pressed="true"] { color: #151a15; border-color: #d2bd87; background: #d2bd87; }
 .phoneMoreMenu { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; padding: 8px; border: 1px solid rgb(255 255 255 / 14%); border-radius: 14px; background: rgb(8 14 10 / 94%); box-shadow: 0 16px 35px rgb(0 0 0 / 34%); }
-.phoneMoreMenu button { min-height: 42px; padding: 8px 10px; color: #ddd7c8; border: 1px solid rgb(255 255 255 / 12%); border-radius: 10px; background: rgb(255 255 255 / 6%); font: 700 10px/1.1 Arial, sans-serif; cursor: pointer; }
+.phoneMoreMenu button { min-height: 44px; padding: 8px 10px; color: #ddd7c8; border: 1px solid rgb(255 255 255 / 12%); border-radius: 10px; background: rgb(255 255 255 / 6%); font: 700 10px/1.1 Arial, sans-serif; cursor: pointer; }
 .phoneMoreMenu button[aria-current="page"] { color: #151a15; border-color: #d2bd87; background: #d2bd87; }
 .cardStack[data-exclusive-mode="expanded"] { z-index: 9450; overflow: visible; }
 .cardStack[data-exclusive-mode="fullscreen"] { z-index: 9500; overflow: visible; }
@@ -182,8 +182,8 @@
   width: 108px;
   min-width: 108px;
   max-width: 108px;
-  min-height: 42px;
-  height: 42px;
+  min-height: 44px;
+  height: 44px;
   flex: 0 0 auto;
   align-content: center;
   gap: 3px;
@@ -283,7 +283,7 @@
   .cardStack[data-station-peek="true"] { top: 190px; }
   .boxLayer { display: none; }
   .brand { right: 16px; left: 16px; }
-  .brand nav { top: 5px; left: 140px; }
+  .brand nav { display: none; }
   .workspaceDock { display: none; }
   .phoneShell { inset: 124px 0 max(86px, env(safe-area-inset-bottom)); padding-inline: 12px; }
 }
