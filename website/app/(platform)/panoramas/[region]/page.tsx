@@ -29,5 +29,5 @@ export default async function RegionPanoramaPage({ params }: PageProps) {
   const { region } = await params;
   const experience = getKnownPanoramaExperience(region);
   if (!experience) notFound();
-  return <PanoramaExperience experience={experience} backHref="/explore" />;
+  return <PanoramaExperience experience={experience} backHref="/prints/panoramas" />;
 }

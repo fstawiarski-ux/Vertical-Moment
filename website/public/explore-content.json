@@ -148,8 +148,8 @@
         "sizes": "(max-width: 767px) calc(100vw - 32px), 440px"
       },
       "model": {
-        "src": "/models/nasenwand-topo.glb",
-        "bytes": 1745504
+        "src": "/models/nasenwand-bergsteiger-lod0.glb",
+        "bytes": 17577952
       },
       "initialLayout": { "x": 282, "y": 452, "width": 280, "height": 168 }
     },
@@ -191,6 +191,6 @@
     "/photography/explore-app/scrub/region-rock-pan-a.mp4",
     "/photography/explore-app/scrub/rock-sector-dji0058.mp4",
     "/photography/explore-app/scrub/sector-topo-pan-b.mp4",
-    "/models/nasenwand-topo.glb"
+    "/models/nasenwand-bergsteiger-lod0.glb"
   ]
 }

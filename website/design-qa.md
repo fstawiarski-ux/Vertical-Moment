@@ -43,7 +43,7 @@ No actionable P0, P1, or P2 difference remains.
 - All four stages opened from the stage rail and primary actions.
 - The scrub derivative loaded with duration 40.607 seconds, remained manually controllable, and exposed play/pause plus an accessible range input.
 - The topo blend range updated between spatial and registered images.
-- The real Nasenwand model rendered with orbit interaction from `/models/nasenwand-topo.glb`.
+- The real Nasenwand model rendered with orbit interaction from `/models/nasenwand-bergsteiger-lod0.glb`.
 - Menu, six-image gallery, and media-budget panel opened and closed correctly.
 - Production Next.js build and TypeScript passed; route was statically generated.
 - Production dependency audit: 0 vulnerabilities.
