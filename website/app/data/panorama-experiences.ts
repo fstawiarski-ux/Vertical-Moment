@@ -231,7 +231,7 @@ export const panoramaExperienceDefinitions: PanoramaExperienceDefinition[] = [
       spatialId: 'nasenwand-spatial',
       topoId: 'nasenwand-topo',
       routesId: 'nasenwand-routes',
-      modelSrc: '/models/nasenwand-topo.glb',
+      modelSrc: '/models/nasenwand-bergsteiger-lod0.glb',
       modelPosterId: 'nasenwand-spatial',
     },
     videoOptions: NASENWAND_VIDEOS,

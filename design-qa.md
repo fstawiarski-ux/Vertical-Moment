@@ -33,7 +33,7 @@ The left desktop rail, compact mobile header, focus frame, chapter controls, pan
 - Crag and Sector overview is 69 x 52 px on mobile, matching the supplied 4:3 media ratio and remaining aligned 16 px from the right edge.
 - The overview uses intrinsic media dimensions and `object-fit: cover`; switching chapters changes the box ratio without stretching the source.
 - Region supports the full-range slider, finger or mouse drag, mouse wheel, Arrow Left / Right, Home, End, click-to-jump, and a live cyan viewport marker.
-- Sector switches between Photo, Spatial, Topo, Routes, and the real `nasenwand-topo.glb` model.
+- Sector switches between Photo, Spatial, Topo, Routes, and the real `nasenwand-bergsteiger-lod0.glb` model.
 - The Bergsteigen topo, theCrag map, and Google 360 reference links are available from the Nasenwand experience.
 - Chapter 4 opens the supplied public Google Maps 360 sphere inside the page and retains an external-open action.
 - Chapter 5 defaults to a 290 KB still; Film, Scroll scrub, Ping-pong loop, and Portrait story load only after selection.
@@ -48,7 +48,7 @@ The left desktop rail, compact mobile header, focus frame, chapter controls, pan
 - The website uses prepared derivatives and does not ship those masks or source plates in the initial page.
 - Initial Nasenwand card media is `nasenwand-photo-1280.webp` at 182,900 bytes.
 - Sector previews are selected on demand: spatial 297,216 bytes, topo 547,172 bytes, and route overlay 144,746 bytes at 1280 resolution.
-- The real GLB is 1,745,504 bytes and is requested only after selecting 3D wall.
+- The real GLB is 17,577,952 bytes and is requested only after selecting 3D wall.
 - The default video chapter still is 289,658 bytes. Larger film, scrub, loop, and portrait files are absent from the initial document and requested only after explicit selection.
 - No source archive or print master was copied into a second public bundle.
 - Chrome performance-trace tooling was unavailable in this session, so this pass records verified DOM/resource timing behavior and file delivery sizes rather than estimated Core Web Vitals.

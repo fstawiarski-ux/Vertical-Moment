@@ -4,6 +4,8 @@
 
 `master/vertical-moment-canonical.json` is the active source of truth for the generated API tree at `api/v1/`. The workbook at `master/vertical_moment_master_routes_v1.xlsx` remains a preserved import baseline and is not read by the current API build when the canonical JSON exists.
 
+The decision record in [`docs/architecture/ADR-0002-canonical-route-source.md`](../docs/architecture/ADR-0002-canonical-route-source.md) records why the 2,402-route JSON is active and why the older 2,416-row and 2,314-row datasets remain staging/review material.
+
 `reconciliation/` contains review aids only. They must not be treated as automatic canonical imports. A reviewed change must update the canonical JSON first, then regenerate and validate the API tree.
 
 ## 2026-08-01 guidebook reconciliation

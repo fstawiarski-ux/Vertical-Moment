@@ -220,7 +220,7 @@ export default function WallRevealExperience() {
             {viewerState === 'ready'
               ? createElement('model-viewer', {
                   class: styles.model,
-                  src: '/models/nasenwand-topo.glb',
+                  src: '/models/nasenwand-bergsteiger-lod0.glb',
                   poster: '/photography/nasenwand/nasenwand-spatial-1280.webp',
                   alt: 'Interactive photogrammetry model of the Nasenwand climbing wall',
                   'camera-controls': true,

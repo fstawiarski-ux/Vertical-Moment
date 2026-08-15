@@ -75,6 +75,9 @@ Then open `http://localhost:3000/explore-app`. Use `http://localhost:3000/contri
 
 ## Data layers
 
+- `../database/master/vertical-moment-canonical.json`: active route source for the API, website mirror and Explore atlas. The 2,416-row Master v1 and 2,314-row Master v4 material remain preserved review/staging inputs; see [`../docs/architecture/ADR-0002-canonical-route-source.md`](../docs/architecture/ADR-0002-canonical-route-source.md).
+- `public/explore-content.json`: reviewed private PWA box registry and offline asset manifest. Validate it with `npm run verify-pwa-content` before connecting a new content batch.
+- `public/models/nasenwand-bergsteiger-lod0.glb`: verified 17,577,952-byte RealityScan LOD0 web model used by the Nasenwand 3D surfaces. SHA-256: `F574AD4B25E4B24F8BE11EEB05D610C679ECAB44315E5C8AFA5851344000D26D`.
 - `app/data/routes.json`: existing 632-route website snapshot.
 - `database/api/v1/`: generated canonical route export served through the website mirror.
 - `app/data/review-routes.json`: separate 188-route guidebook reconciliation overlay.
