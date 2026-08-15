@@ -6,6 +6,7 @@
   "start_url": "/explore-app?source=pwa",
   "scope": "/explore-app",
   "display": "standalone",
+  "prefer_related_applications": false,
   "orientation": "any",
   "background_color": "#0d1510",
   "theme_color": "#0d1510",

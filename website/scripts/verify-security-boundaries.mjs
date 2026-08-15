@@ -33,6 +33,16 @@ if (Object.hasOwn(atlas.source, "gpxCount") || Object.hasOwn(atlas.source, "matc
   errors.push("generated atlas-data.json still exposes GPX source counts");
 }
 
+const nextConfig = await readFile(path.join(websiteRoot, "next.config.mjs"), "utf8");
+for (const directive of ["Content-Security-Policy", "default-src 'self'", "object-src 'none'", "frame-ancestors 'self'"]) {
+  if (!nextConfig.includes(directive)) errors.push(`PWA security policy is missing ${directive}`);
+}
+
+const manifest = JSON.parse(await readFile(path.join(websiteRoot, "public", "manifest.webmanifest"), "utf8"));
+if (manifest.prefer_related_applications !== false) {
+  errors.push("PWA manifest must explicitly remain independent of related app stores");
+}
+
 for (const root of [path.join(websiteRoot, "app"), path.join(websiteRoot, "src"), path.join(websiteRoot, "scripts")]) {
   for (const file of await filesUnder(root)) {
     if (!/\.(?:ts|tsx|mjs|js)$/.test(file)) continue;
@@ -40,6 +50,9 @@ for (const root of [path.join(websiteRoot, "app"), path.join(websiteRoot, "src")
     const source = await readFile(file, "utf8");
     if (source.includes("/atlas-gpx/")) {
       errors.push(`public GPX URL reference found in ${path.relative(repoRoot, file)}`);
+    }
+    if (source.includes("cdnjs.cloudflare.com")) {
+      errors.push(`runtime CDN dependency found in ${path.relative(repoRoot, file)}`);
     }
   }
 }
