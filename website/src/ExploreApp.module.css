@@ -77,7 +77,7 @@
 .phoneHeader strong { overflow: hidden; font: 600 15px/1.05 Arial, sans-serif; text-overflow: ellipsis; white-space: nowrap; }
 .phoneHeader button,
 .phoneNav button {
-  min-height: 36px;
+  min-height: 44px;
   padding: 0 12px;
   color: #ddd7c8;
   border: 1px solid rgb(255 255 255 / 16%);
@@ -86,6 +86,7 @@
   font: 700 10px/1 Arial, sans-serif;
   cursor: pointer;
 }
+.phoneHeader button { min-width: 44px; padding: 0 10px; }
 .phoneHeader button:focus-visible,
 .phoneNav button:focus-visible { outline: 2px solid #f4eedf; outline-offset: 2px; }
 .phoneHint { margin: 0; color: #a9a394; font: 600 10px/1.3 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .05em; text-transform: uppercase; }

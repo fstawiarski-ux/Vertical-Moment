@@ -104,8 +104,17 @@ function Panel({ id, title, children, onClose }: { id: string; title: string; ch
           <Icon name="close" />
         </button>
       </header>
-      <div className={styles.actionGrid}>{children}</div>
+      <div className={styles.panelGroups}>{children}</div>
     </section>
+  );
+}
+
+function ActionGroup({ label, children }: { label: string; children: ReactNode }) {
+  return (
+    <div className={styles.actionGroup} role="group" aria-label={label}>
+      <span className={styles.groupLabel}>{label}</span>
+      <div className={styles.actionGrid}>{children}</div>
+    </div>
   );
 }
 
@@ -192,39 +201,47 @@ export function LayoutToolbar({ viewportMode, offlinePack, onSearch, onReplayInt
 
       {openPanel === "tools" && (
         <Panel id="explore-tools-panel" title="Tools" onClose={() => setOpenPanel(null)}>
-          <HudButton icon="search" label="Search" title={`Search the Lounge (${shortcut})`} onClick={() => closeAfter(onSearch)} />
-          {modes.map((mode) => (
-            <HudButton
-              key={mode.id}
-              icon={mode.id === "grid" ? "grid" : mode.id === "presentation" ? "play" : "layout"}
-              label={mode.label}
-              title={`Switch to ${mode.label} layout`}
-              pressed={layoutMode === mode.id}
-              onClick={() => setMode(mode.id)}
-            />
-          ))}
-          <HudButton icon="align" label="Align" title="Auto-align workspace" onClick={autoLayout} />
-          <HudButton icon="minus" label="Collapse" title="Minimize all boxes" onClick={() => closeAfter(() => dispatch({ type: "MINIMIZE_ALL" }))} />
-          <HudButton icon="undo" label="Undo" title="Undo layout change" onClick={() => closeAfter(undo)} disabled={!canUndo} />
-          <HudButton icon="redo" label="Redo" title="Redo layout change" onClick={() => closeAfter(redo)} disabled={!canRedo} />
-          <HudButton icon="replay" label="Reset" title="Reset layout" onClick={() => closeAfter(reset)} />
+          <ActionGroup label="View">
+            <HudButton icon="search" label="Search" title={`Search the Lounge (${shortcut})`} onClick={() => closeAfter(onSearch)} />
+            {modes.map((mode) => (
+              <HudButton
+                key={mode.id}
+                icon={mode.id === "grid" ? "grid" : mode.id === "presentation" ? "play" : "layout"}
+                label={mode.label}
+                title={`Switch to ${mode.label} layout`}
+                pressed={layoutMode === mode.id}
+                onClick={() => setMode(mode.id)}
+              />
+            ))}
+          </ActionGroup>
+          <ActionGroup label="Arrange">
+            <HudButton icon="align" label="Align" title="Auto-align workspace" onClick={autoLayout} />
+            <HudButton icon="minus" label="Collapse all" title="Minimize all boxes" onClick={() => closeAfter(() => dispatch({ type: "MINIMIZE_ALL" }))} />
+            <HudButton icon="undo" label="Undo" title="Undo layout change" onClick={() => closeAfter(undo)} disabled={!canUndo} />
+            <HudButton icon="redo" label="Redo" title="Redo layout change" onClick={() => closeAfter(redo)} disabled={!canRedo} />
+            <HudButton icon="replay" label="Reset" title="Reset layout" onClick={() => closeAfter(reset)} />
+          </ActionGroup>
         </Panel>
       )}
 
       {openPanel === "journey" && (
         <Panel id="explore-journey-panel" title="Journey" onClose={() => setOpenPanel(null)}>
-          <HudButton
-            icon="replay"
-            label={followJourney ? "Following" : "Follow"}
-            title={followJourney ? "Hide the station recommendation" : "Show Region, Rock, Sector and Topo recommendations"}
-            pressed={followJourney}
-            onClick={onToggleFollowJourney}
-          />
-          <HudButton icon="replay" label="Replay" title="Replay approach journey" onClick={() => closeAfter(onReplayIntro)} />
-          <HudButton icon="contribute" label="Add" title="Open contributor field beta" href="/contribute?source=explore-app" />
-          <div className={styles.offlineButton} title="Save route data and selected media for offline use">
-            <OfflinePackButton urls={offlinePack} />
-          </div>
+          <ActionGroup label="Journey">
+            <HudButton
+              icon="replay"
+              label={followJourney ? "Following" : "Follow"}
+              title={followJourney ? "Hide the station recommendation" : "Show Region, Rock, Sector and Topo recommendations"}
+              pressed={followJourney}
+              onClick={onToggleFollowJourney}
+            />
+            <HudButton icon="replay" label="Replay" title="Replay approach journey" onClick={() => closeAfter(onReplayIntro)} />
+            <HudButton icon="contribute" label="Create" title="Open contributor field beta" href="/contribute?source=explore-app" />
+          </ActionGroup>
+          <ActionGroup label="Offline">
+            <div className={styles.offlineButton} title="Save route data and selected media for offline use">
+              <OfflinePackButton urls={offlinePack} />
+            </div>
+          </ActionGroup>
         </Panel>
       )}
     </nav>
