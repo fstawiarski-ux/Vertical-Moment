@@ -44,10 +44,17 @@ export const STATION_PRESENTATIONS: Record<JourneyStation, StationPresentation> 
     focusBoxId: "nasenwand-model",
     title: "Inspect the topo",
     eyebrow: "Nasenwand · spatial",
-    description: "The journey arrives at the provisional topo and the shared 3D wall, loaded only when requested.",
+    description: "The journey arrives at the provisional topo and the shared 3D wall, ready for inspection.",
     nextLabel: "Workspace ready",
   },
 };
+
+export const STATION_FLIGHT_MIN_MS = 900;
+export const STATION_FLIGHT_DISTANCE_MS = 1800;
+
+export function stationFlightDuration(distance: number) {
+  return STATION_FLIGHT_MIN_MS + Math.max(0, Math.min(1, distance)) * STATION_FLIGHT_DISTANCE_MS;
+}
 
 /** Midpoints keep continuous finger/slider scrubbing from switching at a station edge. */
 export function stationForProgress(progress: number): JourneyStation {

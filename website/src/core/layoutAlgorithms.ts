@@ -21,7 +21,7 @@ export interface BoxFrame {
  * Keep these base values in step with the CSS variables in ExploreApp.module.css.
  */
 export const EXPLORE_SAFE_ZONE: Readonly<Record<"top" | "right" | "bottom" | "left", number>> = Object.freeze({
-  top: 146,
+  top: 112,
   right: 106,
   bottom: 96,
   left: 8,
@@ -92,6 +92,18 @@ function centeredFrame(
   };
 }
 
+function leftDockedFrame(viewport: ViewportBounds | undefined) {
+  const rect = safeRect(viewport);
+  const width = Math.min(rect.width, Math.max(400, Math.round(rect.width * 0.34)));
+  const height = Math.min(rect.height, Math.max(360, Math.round(rect.height * 0.64)));
+  return {
+    x: rect.x + 16,
+    y: rect.y + 16,
+    width,
+    height,
+  };
+}
+
 /** Station-specific starting frames for the four deliberate journey workspaces. */
 export function stationFrameForBox(boxId: string, viewport?: ViewportBounds) {
   switch (boxId) {
@@ -102,7 +114,9 @@ export function stationFrameForBox(boxId: string, viewport?: ViewportBounds) {
     case "nasenwand-spatial":
       return centeredFrame(viewport, 0.76, 0.74, 800, 450);
     case "nasenwand-model":
-      return centeredFrame(viewport, 0.72, 0.78, 760, 480);
+      // The final station keeps the fixed arrival composition on the left,
+      // while desktop users may still drag or resize the freeform box.
+      return leftDockedFrame(viewport);
     default:
       return null;
   }

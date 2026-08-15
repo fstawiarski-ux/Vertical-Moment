@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import styles from "./BoxWallReveal.module.css";
 
-type StageId = "place" | "gallery" | "topo";
+type StageId = "place" | "topo";
 
 const STAGES: Array<{
   id: StageId;
@@ -24,17 +24,8 @@ const STAGES: Array<{
     status: "183 KB - immediate",
   },
   {
-    id: "gallery",
-    index: "02",
-    label: "Gallery",
-    eyebrow: "Peilstein - gallery",
-    title: "Steep ground, close to the wall.",
-    body: "Keep the Peilstein gallery beside the story: a field frame that gives the route context a human scale.",
-    status: "Peilstein gallery - immediate",
-  },
-  {
     id: "topo",
-    index: "03",
+    index: "02",
     label: "Topo",
     eyebrow: "Provisional route reference",
     title: "Photography becomes a field layer.",
@@ -68,17 +59,6 @@ export default function BoxWallReveal() {
           <img className={styles.media} src="/photography/nasenwand/nasenwand-photo-1280.webp" alt="Drone photograph of the Nasenwand wall" />
         )}
 
-        {active === "gallery" && (
-          <div className={styles.sharedStage}>
-            <img className={styles.media} src="/photography/gallery/vm-7073-steep-ground.webp" alt="Climber moving through steep Peilstein limestone" />
-               <div className={styles.sharedCard}>
-                 <small>Peilstein - gallery</small>
-                 <strong>Steep Ground</strong>
-                 <span>A field frame from the gallery, kept beside the wall story and light enough for the first view.</span>
-               </div>
-          </div>
-        )}
-
         {active === "topo" && (
           <div className={styles.topoStage}>
             <img className={styles.media} src="/photography/nasenwand/nasenwand-spatial-1280.webp" alt="Nasenwand spatial relief study" />
@@ -103,7 +83,6 @@ export default function BoxWallReveal() {
           <p>{stage.body}</p>
           <div className={styles.storyActions}>
             {active === "place" && <button type="button" onClick={() => focusBox("wachau-16")}>Open regional panoramas</button>}
-            {active === "gallery" && <button type="button" onClick={() => focusBox("vm-7073")}>Open Steep Ground gallery</button>}
             {active === "topo" && <button type="button" onClick={() => focusBox("nasenwand-spatial")}>Open route workspace</button>}
              <button className={styles.deliveryButton} type="button" onClick={() => setBudgetOpen((current) => !current)} aria-expanded={budgetOpen}>Media: {stage.status}</button>
           </div>
@@ -115,7 +94,6 @@ export default function BoxWallReveal() {
           <header><small>Delivery plan</small><button type="button" onClick={() => setBudgetOpen(false)}>Close</button></header>
           <dl>
             <div><dt>First view</dt><dd>183 KB photo</dd></div>
-            <div><dt>Peilstein gallery</dt><dd>Immediate derivative</dd></div>
             <div><dt>Topo comparison</dt><dd>844 KB on demand</dd></div>
             <div><dt>Wachau pack</dt><dd>10.3 MB opt-in</dd></div>
           </dl>

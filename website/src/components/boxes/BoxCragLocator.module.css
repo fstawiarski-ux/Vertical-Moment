@@ -121,7 +121,7 @@
 
 .regionStrip button {
   display: inline-flex;
-  min-height: 30px;
+  min-height: 36px;
   flex: 0 0 auto;
   align-items: center;
   gap: 7px;
@@ -184,6 +184,13 @@
   border-left: 1px solid rgb(255 255 255 / 10%);
   background: linear-gradient(180deg, #101914, #0a100d);
 }
+.detail > .regionStrip {
+  flex: 0 0 auto;
+  margin: -8px 0 14px;
+  padding: 0 0 8px;
+  background: transparent;
+}
+.detail > .regionStrip button { min-height: 36px; }
 .detail > small { color: #cdbb8b; font: 700 8px/1 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .11em; text-transform: uppercase; }
 .detail h3 { margin: 5px 0 6px; font: 500 clamp(20px, 2.2vw, 30px)/1 Georgia, serif; }
 .detail > p { margin: 0 0 10px; color: #bcb7aa; font: 500 10px/1.45 Arial, sans-serif; }
@@ -208,7 +215,7 @@
 
 .detailActions { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 11px; }
 .detailActions a,
-.detailActions button { min-height: 30px; padding: 0 8px; font-size: 8px; }
+.detailActions button { min-height: 44px; padding: 0 8px; font-size: 8px; }
 
 .wallList,
 .routeList { display: grid; gap: 4px; }
@@ -226,6 +233,7 @@
   text-align: left;
 }
 .wallList button { cursor: pointer; }
+.wallList button { min-height: 44px; }
 .wallList button:hover,
 .wallList button:focus-visible { outline: none; border-color: rgb(211 183 111 / 50%); background: rgb(211 183 111 / 9%); }
 .wallList span,

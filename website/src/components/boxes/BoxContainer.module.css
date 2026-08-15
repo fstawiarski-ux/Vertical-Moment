@@ -216,7 +216,7 @@
 .boxModeFullscreen .windowControls { opacity: .92; }
 
 .boxModeExpanded {
-  inset: var(--explore-safe-top, 146px) var(--explore-safe-right, 106px) var(--explore-safe-bottom, 96px) var(--explore-safe-left, 8px);
+  inset: var(--explore-safe-top, 112px) var(--explore-safe-right, 106px) var(--explore-safe-bottom, 96px) var(--explore-safe-left, 8px);
   width: auto !important;
   height: auto !important;
 }
@@ -248,7 +248,7 @@
 }
 
 .box[data-viewport="tablet"].boxModeExpanded {
-  inset: var(--explore-safe-top, 146px) var(--explore-safe-right, 106px) var(--explore-safe-bottom, 96px) var(--explore-safe-left, 8px);
+  inset: var(--explore-safe-top, 112px) var(--explore-safe-right, 106px) var(--explore-safe-bottom, 96px) var(--explore-safe-left, 8px);
   width: auto !important;
   height: auto !important;
 }

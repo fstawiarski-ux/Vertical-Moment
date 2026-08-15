@@ -34,7 +34,7 @@
 .introCopy span { margin-top: 12px; color: #e2ddcf; font: 600 13px/1.4 Arial, sans-serif; }
 
 .skip {
-  min-height: 42px;
+  min-height: 44px;
   margin-top: 18px;
   padding: 0 20px;
   color: #151a15;
@@ -71,7 +71,7 @@
 .timeline[data-unlocked="true"]:focus-within { opacity: 1; transform: translateX(-50%) scale(1); }
 .chapterLabels { display: grid; grid-template-columns: repeat(4, 1fr); color: #d5c28c; font: 700 11px/1 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .14em; text-transform: uppercase; }
 .chapterLabels button {
-  min-height: 26px;
+  min-height: 40px;
   padding: 6px 3px;
   color: inherit;
   border: 1px solid transparent;
@@ -96,7 +96,7 @@
   background: rgb(9 15 11 / 48%);
 }
 .trackRow { display: flex; align-items: center; gap: 12px; }
-.trackRow input { width: 100%; height: 24px; margin: 0; direction: ltr; accent-color: #d2bd87; cursor: ew-resize; }
+.trackRow input { width: 100%; height: 32px; margin: 0; direction: ltr; accent-color: #d2bd87; cursor: ew-resize; }
 .trackRow output { min-width: 40px; color: #d2bd87; font: 700 11px/1 ui-monospace, SFMono-Regular, Consolas, monospace; text-align: right; }
 .visuallyHidden { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
@@ -113,6 +113,7 @@
     transform: none;
   }
   .timeline[data-unlocked="true"] { transform: scale(.92); transform-origin: right bottom; }
+  .timeline[data-unlocked="true"] { bottom: max(146px, calc(env(safe-area-inset-bottom) + 146px)); }
   .timeline[data-unlocked="true"]:hover,
   .timeline[data-unlocked="true"]:focus-within { transform: scale(1); }
   .chapterLabels { font-size: 10px; letter-spacing: .08em; }

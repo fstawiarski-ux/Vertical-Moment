@@ -143,7 +143,7 @@ function WallRevealModule({ isActive }: { isActive: boolean }) {
       <div className={styles.moduleGate}>
         <small>3-stage story - shared media</small>
         <strong>Wall Reveal</strong>
-        <p>Move from place to the Peilstein gallery and provisional topo without duplicating heavy media.</p>
+        <p>Move from place to provisional topo without duplicating heavy media.</p>
         <button type="button" onClick={() => setRequested(true)}>Open Wall Reveal</button>
       </div>
     );
@@ -249,7 +249,9 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
     const deepLinkTarget = resolveDeepLink(parseDeepLink(window.location.search), registry);
     const deepLinkStation = deepLinkTarget ? stationForFocusBoxId(deepLinkTarget.boxId) : null;
     setJourneyStation(deepLinkStation ?? "topo");
-    setStationPeekVisible(!deepLinkTarget);
+    // The canvas and its focused module carry the context; keep the floating
+    // recommendation card out of the map/3D safe area.
+    setStationPeekVisible(false);
     // Keep the canvas hidden during the handoff. A deep link is opened by the
     // effect below; a normal arrival keeps only the recommendation visible.
     setFollowJourney(true);
@@ -261,7 +263,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
       const detail = (event as CustomEvent<ScrubStationEventDetail>).detail;
       if (!detail || !STATION_PRESENTATIONS[detail.station]) return;
       setJourneyStation(detail.station);
-      setStationPeekVisible(true);
+      setStationPeekVisible(false);
       if (workspaceUnlocked) setFollowJourney(true);
     };
 
@@ -313,6 +315,16 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
       if (box.mode !== "normal") dispatch({ type: "SET_BOX_MODE", id: box.id, mode: "normal" });
     }
   }, [dispatch, layoutHydrated, viewportMode]);
+
+  useEffect(() => {
+    if (!workspaceUnlocked || !followJourney) return;
+    const focusedBox = boxesRef.current.find((box) => box.id === STATION_PRESENTATIONS[journeyStation].focusBoxId);
+    if (focusedBox?.mode === "minimized") {
+      // Journey focus may restore a card, but it never changes the visitor's
+      // saved frame or size.
+      dispatch({ type: "SET_BOX_MODE", id: focusedBox.id, mode: "normal" });
+    }
+  }, [dispatch, followJourney, journeyStation, boxes, workspaceUnlocked]);
 
   // Deep links wait for the workspace so the opened box is not hidden behind
   // an intro that is still running.
@@ -470,6 +482,9 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
       .catch(() => { /* Clipboard access can be blocked; the URL bar still holds the link. */ });
   }, [contentById]);
 
+  const stationFocusId = STATION_PRESENTATIONS[journeyStation].focusBoxId;
+  const journeyActive = workspaceUnlocked && followJourney;
+
   const renderBox = (box: BoxState) => {
     const content = contentById.get(box.dataRef ?? box.id);
     if (!content) return null;
@@ -481,13 +496,15 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
         eyebrow={`${content.crag} · ${content.type === "nasenwand" ? "routes" : content.type === "wallreveal" ? "story" : content.type}`}
         viewportMode={viewportMode}
       >
-        <BoxContent content={content} isActive={activeBoxId === box.id} priority={content.id === registry.boxes[0]?.id} />
+        <BoxContent
+          content={content}
+          isActive={activeBoxId === box.id || (journeyActive && stationFocusId === box.id)}
+          priority={content.id === registry.boxes[0]?.id}
+        />
       </BoxContainer>
     );
   };
 
-  const stationFocusId = STATION_PRESENTATIONS[journeyStation].focusBoxId;
-  const journeyActive = workspaceUnlocked && followJourney;
   const exclusiveBox = boxes.find((box) => box.mode === "fullscreen") ?? boxes.find((box) => box.mode === "expanded");
   const exclusiveMode = exclusiveBox?.mode ?? "none";
   // Station-follow mode keeps the mapped box mounted as a normal canvas item.
@@ -512,6 +529,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
         sequence={registry.introScrubSequence}
         mode={introMode}
         onUnlock={handleUnlock}
+        allowPostUnlockScrub={workspaceUnlocked}
       />
       {stationPeekVisible && (
         <StationPeek

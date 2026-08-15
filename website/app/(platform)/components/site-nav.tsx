@@ -40,8 +40,8 @@ export function SiteNav({ who: _who }: { who?: string | null }) {
           <span className="serif" style={{ fontWeight: 600, fontSize: 15 }}>VERTICAL MOMENT COLLECTIVE</span>
         </Link>
         <nav className="nav">
-          <Link href="/" className={is("/") ? "on" : ""}>Home</Link>
-          <Link href="/contribute" className={is("/contribute") ? "on" : ""}>Contribute</Link>
+          <Link href="/" className={is("/") ? "on" : ""} aria-current={is("/") ? "page" : undefined}>Home</Link>
+          <Link href="/contribute" className={is("/contribute") ? "on" : ""} aria-current={is("/contribute") ? "page" : undefined}>Contribute</Link>
         </nav>
         <div className="spacer" />
         <button
@@ -56,7 +56,7 @@ export function SiteNav({ who: _who }: { who?: string | null }) {
         </button>
       </div>
       <nav className={`mobile-rail ${railVisible ? "show" : ""}`} aria-label="Main navigation">
-        <Link href="/" className={is("/") ? "on rail-icon" : "rail-icon"} aria-label="Home">⌂</Link>
+        <Link href="/" className={is("/") ? "on rail-icon" : "rail-icon"} aria-label="Home" aria-current={is("/") ? "page" : undefined}>⌂</Link>
         <button
           className="rail-theme rail-icon"
           onClick={toggle}

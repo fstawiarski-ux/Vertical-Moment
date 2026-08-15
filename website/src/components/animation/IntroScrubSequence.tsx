@@ -16,7 +16,7 @@ import type {
   ScrubStationSource,
   ScrollScrubSequenceAsset,
 } from "../../core/types";
-import { stationForProgress } from "../../core/stationPresentation";
+import { stationFlightDuration, stationForProgress } from "../../core/stationPresentation";
 import styles from "./IntroScrubSequence.module.css";
 
 const clamp = (value: number) => Math.max(0, Math.min(1, value));
@@ -182,7 +182,7 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
     }
 
     const startedAt = performance.now();
-    const duration = 650 + distance * 1350;
+    const duration = stationFlightDuration(distance);
     const tick = (now: number) => {
       const elapsed = clamp((now - startedAt) / duration);
       const eased = elapsed < 0.5
@@ -199,6 +199,18 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
 
     flightFrameRef.current = requestAnimationFrame(tick);
   }, [animateFlights, announceStation, cancelFlight, moveTo]);
+
+  useEffect(() => {
+    const onStationRequest = (event: Event) => {
+      const detail = (event as CustomEvent<{ station?: JourneyStation }>).detail;
+      const target = detail?.station
+        ? SCRUB_STATIONS.find((candidate) => candidate.id === detail.station)
+        : null;
+      if (target) flyToStation(target);
+    };
+    window.addEventListener("vm:preview-station-request", onStationRequest);
+    return () => window.removeEventListener("vm:preview-station-request", onStationRequest);
+  }, [flyToStation]);
 
   const skip = useCallback(() => {
     cancelFlight();

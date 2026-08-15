@@ -1,6 +1,6 @@
 {
-  "version": 8,
-  "updatedAt": "2026-08-14",
+  "version": 9,
+  "updatedAt": "2026-08-15",
   "background": {
     "src": "/photography/explore-app/climbers-lounge-collage-45866ab7-1920.webp",
     "alt": "Vertical Moment climbers, hands, equipment and limestone",
@@ -54,22 +54,6 @@
     ]
   },
   "boxes": [
-    {
-      "id": "vm-7073",
-      "type": "gallery",
-      "title": "Steep Ground",
-      "region": "Vienna Limestone Belt",
-      "crag": "Peilstein",
-      "description": "A compact limestone field frame from the Vertical Moment gallery.",
-      "image": {
-        "src": "/photography/gallery/vm-7073-steep-ground.webp",
-        "alt": "Climber moving through steep limestone",
-        "width": 532,
-        "height": 532,
-        "sizes": "(max-width: 767px) calc(100vw - 32px), 360px"
-      },
-      "initialLayout": { "x": 20, "y": 92, "width": 250, "height": 168 }
-    },
     {
       "id": "nasenwand-spatial",
       "type": "nasenwand",
@@ -160,7 +144,7 @@
       "region": "Wachau",
       "crag": "Nasenwand",
       "sector": "Upper",
-      "description": "A three-stage story that moves from place to the Peilstein gallery and provisional topo layers.",
+      "description": "A two-stage story that moves from place to provisional topo layers.",
       "image": {
         "src": "/photography/nasenwand/media/poster-1600.webp",
         "alt": "Nasenwand Wall Reveal poster",
@@ -181,7 +165,6 @@
   "offlinePack": [
     "/photography/explore-app/climbers-lounge-collage-45866ab7-960.avif",
     "/photography/explore-app/climbers-lounge-collage-45866ab7-960.webp",
-    "/photography/gallery/vm-7073-steep-ground.webp",
     "/photography/explore-app/nasenwand-spatial-1b1849da-960.avif",
     "/photography/explore-app/nasenwand-spatial-1b1849da-960.webp",
     "/photography/explore-app/wachau-16-9a8f6f68-960.avif",
