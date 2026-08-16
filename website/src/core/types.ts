@@ -80,6 +80,8 @@ export interface ExploreContentBox {
   id: string;
   type: "gallery" | "spatial" | "panorama" | "note" | "model3d" | "atlas" | "nasenwand" | "wallreveal" | "info";
   title: string;
+  /** Compact label used by the phone module rail; the full title remains authoritative elsewhere. */
+  mobileLabel?: string;
   /** Region → crag → sector is the spatial spine the whole Lounge reads from. */
   region: string;
   crag: string;
@@ -96,6 +98,17 @@ export interface ExploreContentBox {
     width: number;
     height: number;
   };
+}
+
+export interface ExploreWorkspaceManifest {
+  /** Guardrail for the approved small-box workspace; richer content belongs inside these boxes. */
+  maxBoxes: number;
+  phone: {
+    singleActive: boolean;
+    primaryModuleIds: string[];
+  };
+  /** Reviewed station-to-module bindings; copy remains in the typed presentation layer for now. */
+  stationFocus?: Partial<Record<JourneyStation, string>>;
 }
 
 export interface ScrollScrubChapterAsset {
@@ -120,6 +133,7 @@ export interface ExploreContentRegistry {
   background: ExploreImageAsset;
   introScrubSequence: ScrollScrubSequenceAsset;
   boxes: ExploreContentBox[];
+  workspace?: ExploreWorkspaceManifest;
   /** Small same-origin route indexes requested by the explicit offline pack. */
   offlineData?: string[];
   offlinePack: string[];

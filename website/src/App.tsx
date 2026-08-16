@@ -28,7 +28,8 @@ import type {
   ScrubStationEventDetail,
   ViewportMode,
 } from "./core/types";
-import { STATION_PRESENTATIONS, stationForFocusBoxId } from "./core/stationPresentation";
+import { stationForFocusBoxId } from "./core/stationPresentation";
+import { resolveWorkspaceManifest, stationPresentationsFor } from "./core/workspaceManifest";
 import { useViewportMode } from "./hooks/useViewportMode";
 import { ServiceWorkerRegistration } from "./pwa/sw-registration";
 import styles from "./ExploreApp.module.css";
@@ -39,6 +40,7 @@ const WachauPanorama = lazy(() => import("./components/boxes/BoxWachauPanorama")
 const WallReveal = lazy(() => import("./components/boxes/BoxWallReveal"));
 
 function seedLayout(registry: ExploreContentRegistry, viewport?: { width: number; height: number }): LayoutState {
+  const stationPresentations = stationPresentationsFor(registry);
   return {
     boxes: registry.boxes.map((box, index) => ({
       id: box.id,
@@ -49,7 +51,7 @@ function seedLayout(registry: ExploreContentRegistry, viewport?: { width: number
       // Start with one readable focal module and keep the rest recoverable
       // from the dock. Journey follow mode restores the station focus when it
       // needs to surface a different recommendation.
-      mode: box.id === STATION_PRESENTATIONS.topo.focusBoxId ? "normal" : "minimized",
+      mode: box.id === stationPresentations.topo.focusBoxId ? "normal" : "minimized",
       pinned: false,
       dataRef: box.id,
       stackIndex: index,
@@ -182,6 +184,8 @@ function BoxContent({ content, isActive, priority = false }: { content: ExploreC
 
 function Workspace({ registry }: { registry: ExploreContentRegistry }) {
   const viewportMode = useViewportMode();
+  const workspaceManifest = useMemo(() => resolveWorkspaceManifest(registry), [registry]);
+  const stationPresentations = useMemo(() => stationPresentationsFor(registry), [registry]);
   const [introMode, setIntroMode] = useState<IntroMode | null>(null);
   const [workspaceUnlocked, setWorkspaceUnlocked] = useState(false);
   const [journeyStation, setJourneyStation] = useState<JourneyStation>("region");
@@ -259,7 +263,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
   const handleUnlock = useCallback((reason: UnlockReason) => {
     setWorkspaceUnlocked(true);
     const deepLinkTarget = resolveDeepLink(parseDeepLink(window.location.search), registry);
-    const deepLinkStation = deepLinkTarget ? stationForFocusBoxId(deepLinkTarget.boxId) : null;
+    const deepLinkStation = deepLinkTarget ? stationForFocusBoxId(deepLinkTarget.boxId, stationPresentations) : null;
     setJourneyStation(deepLinkStation ?? "topo");
     // The canvas and its focused module carry the context; keep the floating
     // recommendation card out of the map/3D safe area.
@@ -268,12 +272,12 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
     // effect below; a normal arrival keeps only the recommendation visible.
     setFollowJourney(true);
     if (reason !== "static") void rememberIntroSeen();
-  }, [registry]);
+  }, [registry, stationPresentations]);
 
   useEffect(() => {
     const onStation = (event: Event) => {
       const detail = (event as CustomEvent<ScrubStationEventDetail>).detail;
-      if (!detail || !STATION_PRESENTATIONS[detail.station]) return;
+      if (!detail || !stationPresentations[detail.station]) return;
       setJourneyStation(detail.station);
       setStationPeekVisible(false);
       if (workspaceUnlocked) setFollowJourney(true);
@@ -281,7 +285,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
 
     window.addEventListener("vm:scrub-station", onStation);
     return () => window.removeEventListener("vm:scrub-station", onStation);
-  }, [workspaceUnlocked]);
+  }, [stationPresentations, workspaceUnlocked]);
 
   /**
    * Decides how the journey opens. An explicit `?intro=` wins; otherwise a deep
@@ -336,16 +340,16 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
     }
     if (!layoutHydrated || mobileLayoutNormalized.current) return;
     mobileLayoutNormalized.current = true;
-    const focusId = activeBoxId ?? STATION_PRESENTATIONS[journeyStation].focusBoxId;
+    const focusId = activeBoxId ?? stationPresentations[journeyStation].focusBoxId;
     for (const box of boxesRef.current) {
       const targetMode = box.id === focusId ? "normal" : "minimized";
       if (box.mode !== targetMode) dispatch({ type: "SET_BOX_MODE", id: box.id, mode: targetMode });
     }
-  }, [activeBoxId, dispatch, journeyStation, layoutHydrated, viewportMode]);
+  }, [activeBoxId, dispatch, journeyStation, layoutHydrated, stationPresentations, viewportMode]);
 
   useEffect(() => {
     if (!workspaceUnlocked || !followJourney) return;
-    const focusedBox = boxesRef.current.find((box) => box.id === STATION_PRESENTATIONS[journeyStation].focusBoxId);
+    const focusedBox = boxesRef.current.find((box) => box.id === stationPresentations[journeyStation].focusBoxId);
     if (focusedBox?.mode === "minimized") {
       // Journey focus may restore a card, but it never changes the visitor's
       // saved frame or size.
@@ -354,7 +358,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
         dispatch({ type: "APPLY_AUTO_LAYOUT", viewport: { width: window.innerWidth, height: window.innerHeight } });
       }
     }
-  }, [dispatch, followJourney, journeyStation, boxes, viewportMode, workspaceUnlocked]);
+  }, [dispatch, followJourney, journeyStation, boxes, stationPresentations, viewportMode, workspaceUnlocked]);
 
   // Deep links wait for the workspace so the opened box is not hidden behind
   // an intro that is still running.
@@ -363,7 +367,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
     deepLinkApplied.current = true;
     const target = resolveDeepLink(parseDeepLink(window.location.search), registry);
     if (target) {
-      const station = stationForFocusBoxId(target.boxId);
+      const station = stationForFocusBoxId(target.boxId, stationPresentations);
       if (station) {
         setJourneyStation(station);
         setStationPeekVisible(false);
@@ -372,7 +376,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
         openIndependentBox(target.boxId, target.mode);
       }
     }
-  }, [layoutHydrated, openIndependentBox, registry, workspaceUnlocked]);
+  }, [layoutHydrated, openIndependentBox, registry, stationPresentations, workspaceUnlocked]);
 
   // Keeps the address bar shareable: whatever is in focus is what a copied URL reopens.
   useEffect(() => {
@@ -512,7 +516,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
       .catch(() => { /* Clipboard access can be blocked; the URL bar still holds the link. */ });
   }, [contentById]);
 
-  const stationFocusId = STATION_PRESENTATIONS[journeyStation].focusBoxId;
+  const stationFocusId = stationPresentations[journeyStation].focusBoxId;
   const journeyActive = workspaceUnlocked && followJourney;
 
   const renderBox = (box: BoxState) => {
@@ -564,6 +568,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
       {stationPeekVisible && (
         <StationPeek
           station={journeyStation}
+          presentation={stationPresentations[journeyStation]}
           content={stationContent}
           onOpen={workspaceUnlocked ? openStationBox : undefined}
         />
@@ -573,6 +578,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
       {workspaceUnlocked && viewportMode === "mobile" && (
         <PhoneShell
           registry={registry}
+          workspace={workspaceManifest}
           boxes={boxes}
           activeBoxId={activeBoxId}
           stationContent={stationContent}

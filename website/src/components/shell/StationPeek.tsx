@@ -1,18 +1,19 @@
 import type { ExploreContentBox, JourneyStation } from "../../core/types";
-import { STATION_PRESENTATIONS } from "../../core/stationPresentation";
+import type { StationPresentation } from "../../core/stationPresentation";
 import { ResponsiveImage } from "../media/ResponsiveImage";
 import styles from "./StationPeek.module.css";
 
 export function StationPeek({
   station,
+  presentation,
   content,
   onOpen,
 }: {
   station: JourneyStation;
+  presentation: StationPresentation;
   content: ExploreContentBox | null;
   onOpen?: (boxId: string) => void;
 }) {
-  const presentation = STATION_PRESENTATIONS[station];
   const title = content?.title ?? presentation.title;
 
   return (

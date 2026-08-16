@@ -65,9 +65,12 @@ export function stationForProgress(progress: number): JourneyStation {
 }
 
 /** Resolve a deep-linked station box back to the journey station it represents. */
-export function stationForFocusBoxId(boxId: string): JourneyStation | null {
+export function stationForFocusBoxId(
+  boxId: string,
+  presentations: Record<JourneyStation, StationPresentation> = STATION_PRESENTATIONS,
+): JourneyStation | null {
   for (const station of ["region", "rock", "sector", "topo"] as const) {
-    if (STATION_PRESENTATIONS[station].focusBoxId === boxId) return station;
+    if (presentations[station].focusBoxId === boxId) return station;
   }
   return null;
 }
