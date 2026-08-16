@@ -264,6 +264,256 @@
   .phoneShell { inset: 72px 0 var(--explore-content-bottom); padding-inline: 12px; }
 }
 
+/* Local phone-composition review variants. The baseline route is unchanged. */
+@media (max-width: 767px) {
+  .phoneShell[data-phone-preview="refined"] {
+    gap: 10px;
+    padding-inline: 16px;
+  }
+
+  .phoneShell[data-phone-preview="refined"] .phoneHeader strong,
+  .phoneShell[data-phone-preview="refined"] .phoneHint {
+    display: block;
+  }
+
+  .phoneShell[data-phone-preview="refined"] .phoneHeader strong {
+    color: #f0eadc;
+  }
+
+  .phoneShell[data-phone-preview="refined"] .phoneHint {
+    margin: -2px 2px 0;
+    color: #c4b990;
+  }
+
+  .phoneShell[data-phone-preview="refined"] .phoneStage {
+    flex-basis: min(28dvh, 236px);
+    margin-inline: 2px;
+  }
+
+  .phoneShell[data-phone-preview="refined"] .phoneStage > article {
+    border-color: rgb(210 189 135 / 26%);
+    box-shadow: 0 14px 34px rgb(0 0 0 / 27%), inset 0 1px rgb(255 255 255 / 7%);
+  }
+
+  .phoneShell[data-phone-preview="refined"] .phoneStage[data-active-box="nasenwand-model"] > article [class*="header"] {
+    display: grid;
+    min-height: 30px;
+    padding: 4px 10px;
+    background: rgb(8 14 10 / 58%);
+  }
+
+  .phoneShell[data-phone-preview="refined"] .phoneStage[data-active-box="nasenwand-model"] > article [class*="heading"] {
+    display: block;
+    padding-right: 0;
+  }
+
+  .phoneShell[data-phone-preview="refined"] .phoneStage[data-active-box="nasenwand-model"] > article [class*="handle"],
+  .phoneShell[data-phone-preview="refined"] .phoneStage[data-active-box="nasenwand-model"] > article [class*="windowControls"] {
+    display: none;
+  }
+
+  .phoneShell[data-phone-preview="minimal"] {
+    gap: 10px;
+    padding-inline: 16px;
+  }
+
+  .phoneShell[data-phone-preview="minimal"] .phoneHeader strong,
+  .phoneShell[data-phone-preview="minimal"] .phoneHint {
+    display: none;
+  }
+
+  .phoneShell[data-phone-preview="minimal"] .phoneStage {
+    flex-basis: min(30dvh, 248px);
+    margin-inline: 0;
+  }
+
+  .phoneShell[data-phone-preview="minimal"] .phoneStage > article {
+    border-color: transparent;
+    border-radius: 18px;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .phoneShell[data-phone-preview="minimal"] .phoneStage > article [class*="header"],
+  .phoneShell[data-phone-preview="minimal"] .phoneStage > article [class*="handle"],
+  .phoneShell[data-phone-preview="minimal"] .phoneStage > article [class*="heading"],
+  .phoneShell[data-phone-preview="minimal"] .phoneStage > article [class*="windowControls"] {
+    display: none;
+  }
+
+  .phoneShell[data-phone-preview="minimal"] .phoneStage > article [class*="body"] {
+    overflow: hidden;
+    border-radius: 18px;
+  }
+
+  .phoneShell[data-phone-preview="minimal"] .phoneStage > article [class*="viewer"] {
+    min-height: 0;
+    border-radius: 18px;
+  }
+
+  /* V2 composition: navigation above a small left-anchored 3D alternate angle. */
+  .phoneShell[data-phone-preview="improved"],
+  .phoneShell[data-phone-preview="improved-minimal"] {
+    gap: 8px;
+    padding-inline: 16px;
+  }
+
+  .phoneShell[data-phone-preview="improved"] .phoneHeader,
+  .phoneShell[data-phone-preview="improved-minimal"] .phoneHeader {
+    order: 1;
+  }
+
+  .phoneShell[data-phone-preview="improved"] .phoneHeader strong,
+  .phoneShell[data-phone-preview="improved-minimal"] .phoneHeader strong {
+    display: block;
+    color: #f0eadc;
+  }
+
+  .phoneShell[data-phone-preview="improved"] .phoneHint,
+  .phoneShell[data-phone-preview="improved-minimal"] .phoneHint {
+    display: none;
+  }
+
+  .phoneShell[data-phone-preview="improved"] .phoneNav,
+  .phoneShell[data-phone-preview="improved-minimal"] .phoneNav {
+    order: 2;
+    width: 100%;
+    padding-block: 0 2px;
+  }
+
+  .phoneShell[data-phone-preview="improved"] .phoneStage,
+  .phoneShell[data-phone-preview="improved-minimal"] .phoneStage {
+    order: 3;
+    align-self: flex-start;
+    width: min(78%, 292px);
+    flex: 0 0 min(23dvh, 194px);
+    margin: 0;
+  }
+
+  .phoneShell[data-phone-preview="improved"] .phoneMoreMenu,
+  .phoneShell[data-phone-preview="improved-minimal"] .phoneMoreMenu {
+    order: 4;
+  }
+
+  .phoneShell[data-phone-preview="improved"] .phoneStage > article {
+    border-color: rgb(210 189 135 / 26%);
+    box-shadow: 0 12px 28px rgb(0 0 0 / 28%), inset 0 1px rgb(255 255 255 / 7%);
+  }
+
+  .phoneShell[data-phone-preview="improved"] .phoneStage[data-active-box="nasenwand-model"] > article [class*="header"] {
+    display: grid;
+    min-height: 30px;
+    padding: 4px 10px;
+    background: rgb(8 14 10 / 58%);
+  }
+
+  .phoneShell[data-phone-preview="improved"] .phoneStage[data-active-box="nasenwand-model"] > article [class*="heading"] {
+    display: block;
+    padding-right: 0;
+  }
+
+  .phoneShell[data-phone-preview="improved"] .phoneStage[data-active-box="nasenwand-model"] > article [class*="handle"],
+  .phoneShell[data-phone-preview="improved"] .phoneStage[data-active-box="nasenwand-model"] > article [class*="windowControls"] {
+    display: none;
+  }
+
+  .phoneShell[data-phone-preview="improved-minimal"] .phoneStage > article {
+    border-color: transparent;
+    border-radius: 18px;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .phoneShell[data-phone-preview="improved-minimal"] .phoneStage > article [class*="header"],
+  .phoneShell[data-phone-preview="improved-minimal"] .phoneStage > article [class*="handle"],
+  .phoneShell[data-phone-preview="improved-minimal"] .phoneStage > article [class*="heading"],
+  .phoneShell[data-phone-preview="improved-minimal"] .phoneStage > article [class*="windowControls"] {
+    display: none;
+  }
+
+  .phoneShell[data-phone-preview="improved-minimal"] .phoneStage > article [class*="body"] {
+    overflow: hidden;
+    border-radius: 18px;
+  }
+
+  .phoneShell[data-phone-preview="improved-minimal"] .phoneStage > article [class*="viewer"] {
+    min-height: 0;
+    border-radius: 18px;
+  }
+
+  /* V3 minimal composition: top controls and the journey timeline own the viewport edges. */
+  .phoneShell[data-phone-preview="minimal-fixed"] {
+    position: fixed;
+    inset: 0;
+    gap: 8px;
+    padding: max(8px, env(safe-area-inset-top)) 16px max(8px, env(safe-area-inset-bottom));
+  }
+
+  .phoneShell[data-phone-preview="minimal-fixed"] .phoneHeader {
+    display: none;
+  }
+
+  .phoneShell[data-phone-preview="minimal-fixed"] .phoneHeader strong {
+    display: block;
+    color: #f0eadc;
+  }
+
+  .phoneShell[data-phone-preview="minimal-fixed"] .phoneHint {
+    display: none;
+  }
+
+  .phoneShell[data-phone-preview="minimal-fixed"] .phoneNav {
+    order: 1;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    padding-block: 0 2px;
+  }
+
+  .phoneShell[data-phone-preview="minimal-fixed"] .phoneNav button {
+    padding-inline: 4px;
+    font-size: 8px;
+    letter-spacing: 0;
+  }
+
+  .phoneShell[data-phone-preview="minimal-fixed"] .phoneStage {
+    order: 2;
+    align-self: flex-start;
+    width: min(78%, 292px);
+    flex: 0 0 min(23dvh, 194px);
+    margin: 0;
+  }
+
+  .phoneShell[data-phone-preview="minimal-fixed"] .phoneMoreMenu {
+    order: 3;
+  }
+
+  .phoneShell[data-phone-preview="minimal-fixed"] .phoneStage > article {
+    border-color: transparent;
+    border-radius: 18px;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .phoneShell[data-phone-preview="minimal-fixed"] .phoneStage > article [class*="header"],
+  .phoneShell[data-phone-preview="minimal-fixed"] .phoneStage > article [class*="handle"],
+  .phoneShell[data-phone-preview="minimal-fixed"] .phoneStage > article [class*="heading"],
+  .phoneShell[data-phone-preview="minimal-fixed"] .phoneStage > article [class*="windowControls"] {
+    display: none;
+  }
+
+  .phoneShell[data-phone-preview="minimal-fixed"] .phoneStage > article [class*="body"] {
+    overflow: hidden;
+    border-radius: 18px;
+  }
+
+  .phoneShell[data-phone-preview="minimal-fixed"] .phoneStage > article [class*="viewer"] {
+    min-height: 0;
+    border-radius: 18px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .loading span,
   .phoneShell,
