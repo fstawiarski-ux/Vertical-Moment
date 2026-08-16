@@ -232,6 +232,22 @@ try {
         // Unlock before proving that preserved desktop freeform drag/resize still works.
         const unlockLayout = page.locator('nav[aria-label="Explore workspace controls"] button[title="Unlock layout"]');
         if (await unlockLayout.count() === 1) await unlockLayout.click();
+        // The reviewed Topo arrival intentionally packs four normal modules.
+        // Isolate the 3D module before testing freeform movement so the
+        // collision-avoidance contract is not what prevents the drag.
+        const workspaceControls = page.getByRole("navigation", { name: "Explore workspace controls" });
+        await workspaceControls.getByRole("button", { name: "Tools", exact: true }).click();
+        const toolsPanel = page.locator('section[aria-label="Tools controls"]');
+        await toolsPanel.waitFor({ state: "visible" });
+        await toolsPanel.getByRole("button", { name: "Minimize all boxes", exact: true }).click();
+
+        const openModel = workspaceControls.getByRole("button", { name: "Open 3D module", exact: true });
+        await openModel.waitFor({ state: "visible" });
+        await openModel.click();
+        await page
+          .locator('[data-shell="desktop"] article[data-mode="normal"][data-box-id="nasenwand-model"]')
+          .waitFor({ state: "visible" });
+
         await assertDesktopDragResize(page);
       }
 
