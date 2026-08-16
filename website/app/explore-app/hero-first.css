@@ -320,3 +320,13 @@ section[data-shell="phone"] > [data-role="phone-stage"] > article[data-viewport=
     inset: 10px 82px 10px 10px !important;
   }
 }
+/* PHONE-EXPANDED-STATUS-CLEARANCE
+   Expanded/fullscreen module controls take precedence over passive status UI. */
+body:has(section[data-shell="phone"] article[data-mode="expanded"]) [role="status"],
+body:has(section[data-shell="phone"] article[data-mode="fullscreen"]) [role="status"] {
+  right: max(14px, env(safe-area-inset-right)) !important;
+  bottom: max(14px, env(safe-area-inset-bottom)) !important;
+  top: auto !important;
+  z-index: 9800 !important;
+  pointer-events: none !important;
+}

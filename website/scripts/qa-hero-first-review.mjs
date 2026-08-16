@@ -26,7 +26,7 @@ for (const test of cases) {
   let passed = true;
 
   try {
-    await page.goto(baseUrl, { waitUntil: "networkidle", timeout: 60000 });
+    await page.goto(baseUrl, { waitUntil: "domcontentloaded", timeout: 60000 });
     await page.waitForSelector(`[data-shell="${test.shell}"]`, { timeout: 30000 });
     await page.waitForTimeout(700);
 
