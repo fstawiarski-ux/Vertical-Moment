@@ -93,6 +93,7 @@ section[data-shell="phone"] > [data-role="phone-stage"] > article[data-mode="nor
 /* Restore compact, useful window controls without rebuilding the old chrome. */
 section[data-shell="phone"] article[data-mode="normal"] [data-drag-surface="true"],
 article[data-viewport="tablet"][data-mode="normal"] [data-drag-surface="true"] {
+  display: grid !important;
   min-height: 36px !important;
   height: 36px !important;
   padding: 0 6px 0 10px !important;
