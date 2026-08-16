@@ -8,7 +8,9 @@ const pwaContentSecurityPolicy = [
   "object-src 'none'",
   "frame-ancestors 'self'",
   "form-action 'self'",
-  "script-src 'self' 'unsafe-inline'",
+  // model-viewer's decoders compile WebAssembly for the reviewed PWA 3D asset.
+  // This grants WASM compilation without enabling general JavaScript eval.
+  "script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'",
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "img-src 'self' data: blob: https://tile.openstreetmap.org https://*.tile.openstreetmap.org https://*.tile.opentopomap.org https://server.arcgisonline.com https://*.basemaps.cartocdn.com",
   "font-src 'self' data: https://fonts.gstatic.com",

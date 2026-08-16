@@ -10,12 +10,13 @@ import { ConnectionStatus } from "./components/shell/ConnectionStatus";
 import { LayoutToolbar } from "./components/shell/LayoutToolbar";
 import { PhoneShell } from "./components/shell/PhoneShell";
 import { StationPeek } from "./components/shell/StationPeek";
+import { WorkspaceTopRail } from "./components/shell/WorkspaceTopRail";
 import { DesktopShell, TabletShell } from "./components/shell/WorkspaceShells";
 import { UnifiedExplorePreview } from "./components/UnifiedExplorePreview";
 import { deepLinkFor, parseDeepLink, resolveDeepLink, writeDeepLinkToUrl } from "./core/deepLink";
 import { hasSeenIntro, prefersReducedMotion, rememberIntroSeen } from "./core/introPreferences";
 import { LayoutProvider, useLayoutState } from "./core/layoutState";
-import { stationFrameForBox } from "./core/layoutAlgorithms";
+import { compactJourneyFrame, stationFrameForBox } from "./core/layoutAlgorithms";
 import { buildContentEntries, type SearchEntry } from "./core/searchIndex";
 import type {
   BoxMode,
@@ -194,6 +195,8 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
   const [replayCount, setReplayCount] = useState(0);
   const [paletteOpen, setPaletteOpen] = useState(false);
   const [paletteQuery, setPaletteQuery] = useState("");
+  const [responsivePreview, setResponsivePreview] = useState(false);
+  const unifiedHierarchy = responsivePreview && viewportMode !== "mobile";
 
   const boxes = useLayoutState((state) => state.boxes);
   const activeBoxId = useLayoutState((state) => state.activeBoxId);
@@ -293,6 +296,11 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
    * hand the visitor straight to the workspace.
    */
   useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    setResponsivePreview(params.get("responsivePreview") === "unified" || params.get("phonePreview") === "minimal-fixed");
+  }, []);
+
+  useEffect(() => {
     let cancelled = false;
     const request = parseDeepLink(window.location.search);
 
@@ -319,19 +327,23 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
 
     if (viewportMode === "tablet") {
       dispatch({ type: "SET_LAYOUT_MODE", mode: "grid" });
-      dispatch({ type: "APPLY_AUTO_LAYOUT", viewport: { width: window.innerWidth, height: window.innerHeight } });
+      if (!unifiedHierarchy) {
+        dispatch({ type: "APPLY_AUTO_LAYOUT", viewport: { width: window.innerWidth, height: window.innerHeight } });
+      }
       return;
     }
 
-    if (viewportMode === "desktop" && previousMode !== "desktop") {
+    if (viewportMode === "desktop" && (previousMode !== "desktop" || unifiedHierarchy)) {
       dispatch({ type: "SET_LAYOUT_MODE", mode: "explore" });
       for (const box of boxesRef.current) {
         if (box.mode === "minimized") continue;
-        const frame = stationFrameForBox(box.id, { width: window.innerWidth, height: window.innerHeight });
+        const frame = unifiedHierarchy
+          ? compactJourneyFrame({ width: window.innerWidth, height: window.innerHeight })
+          : stationFrameForBox(box.id, { width: window.innerWidth, height: window.innerHeight });
         if (frame) dispatch({ type: "UPDATE_BOX", id: box.id, patch: frame });
       }
     }
-  }, [dispatch, viewportMode]);
+  }, [dispatch, unifiedHierarchy, viewportMode]);
 
   useEffect(() => {
     if (viewportMode !== "mobile") {
@@ -350,15 +362,46 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
   useEffect(() => {
     if (!workspaceUnlocked || !followJourney) return;
     const focusedBox = boxesRef.current.find((box) => box.id === stationPresentations[journeyStation].focusBoxId);
+    if (viewportMode === "mobile") {
+      // Phone always presents one task. Station changes must retire the
+      // previous recommendation as well as restore the next one, otherwise a
+      // rapid timeline flight can leave the earlier card visually selected.
+      for (const box of boxesRef.current) {
+        const targetMode = box.id === focusedBox?.id ? "normal" : "minimized";
+        if (box.mode !== targetMode) {
+          dispatch({ type: "SET_BOX_MODE", id: box.id, mode: targetMode });
+        }
+      }
+      return;
+    }
+    if (unifiedHierarchy) {
+      for (const box of boxesRef.current) {
+        if (box.id !== focusedBox?.id && box.mode !== "minimized") {
+          dispatch({ type: "SET_BOX_MODE", id: box.id, mode: "minimized" });
+        }
+      }
+      if (focusedBox?.mode === "minimized") {
+        dispatch({ type: "SET_BOX_MODE", id: focusedBox.id, mode: "normal" });
+      }
+      if (focusedBox && viewportMode === "desktop") {
+        const frame = compactJourneyFrame({ width: window.innerWidth, height: window.innerHeight });
+        const frameChanged = focusedBox.x !== frame.x
+          || focusedBox.y !== frame.y
+          || focusedBox.width !== frame.width
+          || focusedBox.height !== frame.height;
+        if (frameChanged) {
+          dispatch({ type: "UPDATE_BOX", id: focusedBox.id, patch: frame });
+        }
+      }
+      return;
+    }
     if (focusedBox?.mode === "minimized") {
       // Journey focus may restore a card, but it never changes the visitor's
       // saved frame or size.
       dispatch({ type: "SET_BOX_MODE", id: focusedBox.id, mode: "normal" });
-      if (viewportMode !== "mobile") {
-        dispatch({ type: "APPLY_AUTO_LAYOUT", viewport: { width: window.innerWidth, height: window.innerHeight } });
-      }
+      dispatch({ type: "APPLY_AUTO_LAYOUT", viewport: { width: window.innerWidth, height: window.innerHeight } });
     }
-  }, [dispatch, followJourney, journeyStation, boxes, stationPresentations, viewportMode, workspaceUnlocked]);
+  }, [dispatch, followJourney, journeyStation, boxes, stationPresentations, unifiedHierarchy, viewportMode, workspaceUnlocked]);
 
   // Deep links wait for the workspace so the opened box is not hidden behind
   // an intro that is still running.
@@ -552,12 +595,26 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
   const boxesById = useMemo(() => new Map(boxes.map((box) => [box.id, box])), [boxes]);
   const stationContent = contentById.get(stationFocusId) ?? null;
   const openPhoneBox = useCallback((id: string) => openIndependentBox(id, "normal", true), [openIndependentBox]);
+  const openUnifiedBox = useCallback((id: string) => {
+    if (!contentById.has(id)) return;
+    setFollowJourney(false);
+    setStationPeekVisible(false);
+    for (const box of boxesRef.current) {
+      if (box.id !== id && box.mode !== "minimized") {
+        dispatch({ type: "SET_BOX_MODE", id: box.id, mode: "minimized" });
+      }
+    }
+    if (viewportMode === "desktop") {
+      dispatch({ type: "UPDATE_BOX", id, patch: compactJourneyFrame({ width: window.innerWidth, height: window.innerHeight }) });
+    }
+    focusBox(id, "normal", false);
+  }, [contentById, dispatch, focusBox, viewportMode]);
   const openContributor = useCallback(() => {
     window.location.assign("/contribute?source=explore-app");
   }, []);
 
   return (
-    <main className={styles.app} data-viewport={viewportMode} data-station-peek={stationPeekVisible ? "true" : "false"}>
+    <main className={styles.app} data-viewport={viewportMode} data-responsive-preview={responsivePreview ? "unified" : "baseline"} data-station-peek={stationPeekVisible ? "true" : "false"}>
       <IntroScrubSequence
         key={replayCount}
         sequence={registry.introScrubSequence}
@@ -590,14 +647,29 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
           followJourney={followJourney}
         />
       )}
+      {workspaceUnlocked && unifiedHierarchy && (
+        <WorkspaceTopRail
+          registry={registry}
+          workspace={workspaceManifest}
+          boxes={boxes}
+          activeBoxId={activeBoxId}
+          stationContent={stationContent}
+          viewportMode={viewportMode}
+          onOpenBox={openUnifiedBox}
+          onSearch={() => openPalette("")}
+          onContribute={openContributor}
+          onToggleJourney={() => setFollowJourney((current) => !current)}
+          followJourney={followJourney}
+        />
+      )}
       {workspaceUnlocked && viewportMode === "tablet" && (
-        <TabletShell visible={visible} renderBox={renderBox} exclusiveMode={exclusiveMode} />
+        <TabletShell visible={visible} renderBox={renderBox} exclusiveMode={exclusiveMode} unifiedHierarchy={unifiedHierarchy} journeyActive={journeyActive} />
       )}
       {workspaceUnlocked && viewportMode === "desktop" && (
-        <DesktopShell visible={visible} renderBox={renderBox} exclusiveMode={exclusiveMode} />
+        <DesktopShell visible={visible} renderBox={renderBox} exclusiveMode={exclusiveMode} unifiedHierarchy={unifiedHierarchy} journeyActive={journeyActive} />
       )}
 
-      {workspaceUnlocked && (
+      {workspaceUnlocked && !unifiedHierarchy && (
         <aside className={styles.workspaceDock} aria-label="Open or restore Explore modules">
           <div className={styles.dockLabel}>
             <strong>Modules</strong>
@@ -636,6 +708,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
           onReplayIntro={replayIntro}
           followJourney={followJourney}
           onToggleFollowJourney={() => setFollowJourney((current) => !current)}
+          unifiedChrome={unifiedHierarchy}
         />
       )}
 

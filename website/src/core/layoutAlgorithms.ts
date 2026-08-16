@@ -126,6 +126,24 @@ export function stationFrameForBox(boxId: string, viewport?: ViewportBounds) {
   }
 }
 
+/**
+ * The phone-inspired large-screen hierarchy keeps one intentional task on the
+ * left while leaving most of the scrub hero visible. The returned frame stays
+ * inside the same safe zone used by drag and resize, so desktop interaction can
+ * continue from this compact starting point without a geometry jump.
+ */
+export function compactJourneyFrame(viewport?: ViewportBounds): BoxFrame {
+  const rect = safeRect(viewport);
+  const width = Math.min(rect.width, Math.max(320, Math.min(480, Math.round(rect.width * 0.38))));
+  const height = Math.min(rect.height, Math.max(230, Math.min(340, Math.round(width / 1.43))));
+  return {
+    x: rect.x + Math.min(16, Math.max(0, rect.width - width)),
+    y: rect.y + Math.min(16, Math.max(0, rect.height - height)),
+    width,
+    height,
+  };
+}
+
 export function applyExploreLayout(boxes: BoxState[], viewport?: ViewportBounds): BoxState[] {
   const bounds = usableBounds(viewport);
   const rect = safeRect(viewport);

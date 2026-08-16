@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { EXPLORE_SAFE_ZONE, resizeBoxFrame, type ResizeDirection } from "./layoutAlgorithms";
+import { compactJourneyFrame, EXPLORE_SAFE_ZONE, resizeBoxFrame, type ResizeDirection } from "./layoutAlgorithms";
 
 const viewport = { width: 1440, height: 900 };
 const origin = { x: 320, y: 260, width: 420, height: 300 };
@@ -24,5 +24,24 @@ describe("resizeBoxFrame", () => {
   it("normalizes stale origin geometry before applying a minimum-size clamp", () => {
     const frame = resizeBoxFrame({ x: -900, y: -900, width: 4, height: 4 }, "se", -500, -500, viewport);
     expect(frame).toEqual({ x: EXPLORE_SAFE_ZONE.left, y: EXPLORE_SAFE_ZONE.top, width: 210, height: 130 });
+  });
+});
+
+describe("compactJourneyFrame", () => {
+  it("keeps a calm left-anchored frame inside the shared desktop safe zone", () => {
+    const frame = compactJourneyFrame(viewport);
+
+    expect(frame).toEqual({ x: 24, y: 128, width: 480, height: 336 });
+    expect(frame.x + frame.width).toBeLessThanOrEqual(viewport.width - EXPLORE_SAFE_ZONE.right);
+    expect(frame.y + frame.height).toBeLessThanOrEqual(viewport.height - EXPLORE_SAFE_ZONE.bottom);
+  });
+
+  it("scales down without leaving the safe zone on a tablet-sized landscape", () => {
+    const frame = compactJourneyFrame({ width: 1024, height: 768 });
+
+    expect(frame.width).toBeLessThan(480);
+    expect(frame.height).toBeGreaterThanOrEqual(230);
+    expect(frame.x).toBeGreaterThanOrEqual(EXPLORE_SAFE_ZONE.left);
+    expect(frame.y).toBeGreaterThanOrEqual(EXPLORE_SAFE_ZONE.top);
   });
 });

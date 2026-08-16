@@ -13,6 +13,12 @@
 
 .toolbar > * { pointer-events: auto; }
 
+.toolbar[data-unified="true"] .anchor {
+  width: 52px;
+  min-height: 50px;
+  border-radius: 16px;
+}
+
 .anchorStack {
   display: grid;
   gap: 8px;

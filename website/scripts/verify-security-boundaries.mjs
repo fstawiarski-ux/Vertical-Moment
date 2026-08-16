@@ -34,7 +34,7 @@ if (Object.hasOwn(atlas.source, "gpxCount") || Object.hasOwn(atlas.source, "matc
 }
 
 const nextConfig = await readFile(path.join(websiteRoot, "next.config.mjs"), "utf8");
-for (const directive of ["Content-Security-Policy", "default-src 'self'", "object-src 'none'", "frame-ancestors 'self'"]) {
+for (const directive of ["Content-Security-Policy", "default-src 'self'", "object-src 'none'", "frame-ancestors 'self'", "'wasm-unsafe-eval'"]) {
   if (!nextConfig.includes(directive)) errors.push(`PWA security policy is missing ${directive}`);
 }
 
