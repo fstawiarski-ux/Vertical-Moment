@@ -16,7 +16,7 @@ import { UnifiedExplorePreview } from "./components/UnifiedExplorePreview";
 import { deepLinkFor, parseDeepLink, resolveDeepLink, writeDeepLinkToUrl } from "./core/deepLink";
 import { hasSeenIntro, prefersReducedMotion, rememberIntroSeen } from "./core/introPreferences";
 import { LayoutProvider, useLayoutState } from "./core/layoutState";
-import { compactJourneyFrame, stationFrameForBox } from "./core/layoutAlgorithms";
+import { compactJourneyFrame, heroFirstFrameForBox, stationFrameForBox } from "./core/layoutAlgorithms";
 import { buildContentEntries, type SearchEntry } from "./core/searchIndex";
 import type {
   BoxMode,
@@ -47,7 +47,9 @@ function seedLayout(registry: ExploreContentRegistry, viewport?: { width: number
       id: box.id,
       type: box.type,
       ...box.initialLayout,
-      ...(stationFrameForBox(box.id, viewport) ?? {}),
+      ...(box.id === stationPresentations.topo.focusBoxId
+        ? compactJourneyFrame(viewport)
+        : (stationFrameForBox(box.id, viewport) ?? {})),
       zIndex: index + 1,
       // Start with one readable focal module and keep the rest recoverable
       // from the dock. Journey follow mode restores the station focus when it
@@ -237,7 +239,9 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
     const wasMinimized = target?.mode === "minimized";
     const keepMultipleNormalBoxes = viewportMode !== "mobile" && mode === "normal";
     if (resetFrame && mode === "normal" && viewportMode === "desktop" && wasMinimized) {
-      const frame = stationFrameForBox(id, { width: window.innerWidth, height: window.innerHeight });
+      const frame = unifiedHierarchy
+        ? heroFirstFrameForBox(id, { width: window.innerWidth, height: window.innerHeight })
+        : stationFrameForBox(id, { width: window.innerWidth, height: window.innerHeight });
       if (frame) dispatch({ type: "UPDATE_BOX", id, patch: frame });
     }
     if (!keepMultipleNormalBoxes) {
@@ -251,7 +255,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
     if (keepMultipleNormalBoxes && wasMinimized) {
       dispatch({ type: "APPLY_AUTO_LAYOUT", viewport: { width: window.innerWidth, height: window.innerHeight } });
     }
-  }, [dispatch, focusBox, viewportMode]);
+  }, [dispatch, focusBox, unifiedHierarchy, viewportMode]);
 
   const replayIntro = useCallback(() => {
     setWorkspaceUnlocked(false);
@@ -271,19 +275,18 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
     // The canvas and its focused module carry the context; keep the floating
     // recommendation card out of the map/3D safe area.
     setStationPeekVisible(false);
-    // Keep the canvas hidden during the handoff. A deep link is opened by the
-    // effect below; a normal arrival keeps only the recommendation visible.
-    setFollowJourney(true);
+    // Journey is onboarding only. Once the canvas unlocks, module geometry is
+    // user-owned until Replay Journey is explicitly requested.
+    setFollowJourney(false);
     if (reason !== "static") void rememberIntroSeen();
   }, [registry, stationPresentations]);
 
   useEffect(() => {
     const onStation = (event: Event) => {
       const detail = (event as CustomEvent<ScrubStationEventDetail>).detail;
-      if (!detail || !stationPresentations[detail.station]) return;
+      if (!detail || !stationPresentations[detail.station] || workspaceUnlocked) return;
       setJourneyStation(detail.station);
       setStationPeekVisible(false);
-      if (workspaceUnlocked) setFollowJourney(true);
     };
 
     window.addEventListener("vm:scrub-station", onStation);
@@ -333,14 +336,16 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
       return;
     }
 
-    if (viewportMode === "desktop" && (previousMode !== "desktop" || unifiedHierarchy)) {
+    if (viewportMode === "desktop" && previousMode !== "desktop") {
       dispatch({ type: "SET_LAYOUT_MODE", mode: "explore" });
-      for (const box of boxesRef.current) {
-        if (box.mode === "minimized") continue;
-        const frame = unifiedHierarchy
-          ? compactJourneyFrame({ width: window.innerWidth, height: window.innerHeight })
-          : stationFrameForBox(box.id, { width: window.innerWidth, height: window.innerHeight });
-        if (frame) dispatch({ type: "UPDATE_BOX", id: box.id, patch: frame });
+      // Unified/hero-first layouts preserve the user's saved desktop geometry.
+      // The baseline rollback keeps its historical station-frame normalization.
+      if (!unifiedHierarchy) {
+        for (const box of boxesRef.current) {
+          if (box.mode === "minimized") continue;
+          const frame = stationFrameForBox(box.id, { width: window.innerWidth, height: window.innerHeight });
+          if (frame) dispatch({ type: "UPDATE_BOX", id: box.id, patch: frame });
+        }
       }
     }
   }, [dispatch, unifiedHierarchy, viewportMode]);
@@ -431,7 +436,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
     const onFocusRequest = (event: Event) => {
       const detail = (event as CustomEvent<{ id?: string; mode?: BoxMode }>).detail;
       if (detail?.id) {
-        openIndependentBox(detail.id, detail.mode ?? "expanded");
+        openIndependentBox(detail.id, detail.mode ?? "normal", true);
       }
     };
     const onReplayRequest = () => replayIntro();
@@ -548,7 +553,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
       entry.run();
       return;
     }
-    if (entry.boxId) openIndependentBox(entry.boxId);
+    if (entry.boxId) openIndependentBox(entry.boxId, "normal", true);
   }, [openIndependentBox]);
 
   const onPaletteCopyLink = useCallback((entry: SearchEntry) => {
@@ -596,19 +601,8 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
   const stationContent = contentById.get(stationFocusId) ?? null;
   const openPhoneBox = useCallback((id: string) => openIndependentBox(id, "normal", true), [openIndependentBox]);
   const openUnifiedBox = useCallback((id: string) => {
-    if (!contentById.has(id)) return;
-    setFollowJourney(false);
-    setStationPeekVisible(false);
-    for (const box of boxesRef.current) {
-      if (box.id !== id && box.mode !== "minimized") {
-        dispatch({ type: "SET_BOX_MODE", id: box.id, mode: "minimized" });
-      }
-    }
-    if (viewportMode === "desktop") {
-      dispatch({ type: "UPDATE_BOX", id, patch: compactJourneyFrame({ width: window.innerWidth, height: window.innerHeight }) });
-    }
-    focusBox(id, "normal", false);
-  }, [contentById, dispatch, focusBox, viewportMode]);
+    openIndependentBox(id, "normal", true);
+  }, [openIndependentBox]);
   const openContributor = useCallback(() => {
     window.location.assign("/contribute?source=explore-app");
   }, []);
@@ -620,7 +614,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
         sequence={registry.introScrubSequence}
         mode={introMode}
         onUnlock={handleUnlock}
-        allowPostUnlockScrub={workspaceUnlocked}
+        allowPostUnlockScrub={false}
       />
       {stationPeekVisible && (
         <StationPeek
@@ -754,9 +748,15 @@ export default function ExploreApp({ initialRegistry }: { initialRegistry?: Expl
           });
         }
       })
-      .catch((reason: unknown) => { if (!cancelled) setError(reason instanceof Error ? reason.message : "Content registry unavailable"); });
+      .catch((reason: unknown) => {
+        // The server-rendered registry is already a usable offline fallback.
+        // A refresh failure must not replace it with a fatal screen.
+        if (!cancelled && !initialRegistry) {
+          setError(reason instanceof Error ? reason.message : "Content registry unavailable");
+        }
+      });
     return () => { cancelled = true; };
-  }, []);
+  }, [initialRegistry]);
 
   useEffect(() => {
     setUnifiedPreview(new URLSearchParams(window.location.search).get("preview") === "unified");

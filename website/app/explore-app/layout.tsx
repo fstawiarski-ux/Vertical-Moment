@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "./hero-first.css";
 
 export const metadata: Metadata = {
   title: "Climbers Lounge Lab",

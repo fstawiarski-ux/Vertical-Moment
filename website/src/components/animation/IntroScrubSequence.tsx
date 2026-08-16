@@ -202,6 +202,10 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
 
   useEffect(() => {
     const onStationRequest = (event: Event) => {
+      // Station-flight requests belong to onboarding. Once unlocked, the only
+      // supported way to make the hero move again is an explicit Replay, which
+      // remounts this sequence in its locked/cinematic phase.
+      if (unlockedRef.current && !allowPostUnlockScrub) return;
       const detail = (event as CustomEvent<{ station?: JourneyStation }>).detail;
       const target = detail?.station
         ? SCRUB_STATIONS.find((candidate) => candidate.id === detail.station)
@@ -210,7 +214,7 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
     };
     window.addEventListener("vm:preview-station-request", onStationRequest);
     return () => window.removeEventListener("vm:preview-station-request", onStationRequest);
-  }, [flyToStation]);
+  }, [allowPostUnlockScrub, flyToStation]);
 
   const skip = useCallback(() => {
     cancelFlight();
@@ -319,7 +323,7 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
         )}
       </div>
 
-      {resolved && (
+      {resolved && (!unlocked || allowPostUnlockScrub) && (
         <div className={styles.timeline} data-unlocked={unlocked ? "true" : "false"}>
           <label className={styles.visuallyHidden} htmlFor="explore-intro-timeline">Move from Region on the left to Topo on the right</label>
           <span className={styles.chapterLabels} aria-label="Scrub stations, Region to Rock to Sector to Topo">
