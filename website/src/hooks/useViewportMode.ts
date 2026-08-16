@@ -12,6 +12,10 @@ export function modeForViewport(width: number, height: number): ViewportMode {
   return "desktop";
 }
 
+export function usesUnifiedHierarchy(viewportMode: ViewportMode, responsivePreview: string | null): boolean {
+  return viewportMode !== "mobile" && responsivePreview !== "baseline";
+}
+
 export function useViewportMode(): ViewportMode {
   const [mode, setMode] = useState<ViewportMode>("desktop");
 

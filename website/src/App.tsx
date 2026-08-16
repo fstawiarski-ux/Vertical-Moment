@@ -31,7 +31,7 @@ import type {
 } from "./core/types";
 import { stationForFocusBoxId } from "./core/stationPresentation";
 import { resolveWorkspaceManifest, stationPresentationsFor } from "./core/workspaceManifest";
-import { useViewportMode } from "./hooks/useViewportMode";
+import { useViewportMode, usesUnifiedHierarchy } from "./hooks/useViewportMode";
 import { ServiceWorkerRegistration } from "./pwa/sw-registration";
 import styles from "./ExploreApp.module.css";
 
@@ -195,8 +195,8 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
   const [replayCount, setReplayCount] = useState(0);
   const [paletteOpen, setPaletteOpen] = useState(false);
   const [paletteQuery, setPaletteQuery] = useState("");
-  const [responsivePreview, setResponsivePreview] = useState(false);
-  const unifiedHierarchy = responsivePreview && viewportMode !== "mobile";
+  const [responsivePreview, setResponsivePreview] = useState<string | null>(null);
+  const unifiedHierarchy = usesUnifiedHierarchy(viewportMode, responsivePreview);
 
   const boxes = useLayoutState((state) => state.boxes);
   const activeBoxId = useLayoutState((state) => state.activeBoxId);
@@ -297,7 +297,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
    */
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    setResponsivePreview(params.get("responsivePreview") === "unified" || params.get("phonePreview") === "minimal-fixed");
+    setResponsivePreview(params.get("responsivePreview"));
   }, []);
 
   useEffect(() => {
@@ -614,7 +614,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
   }, []);
 
   return (
-    <main className={styles.app} data-viewport={viewportMode} data-responsive-preview={responsivePreview ? "unified" : "baseline"} data-station-peek={stationPeekVisible ? "true" : "false"}>
+    <main className={styles.app} data-viewport={viewportMode} data-responsive-preview={unifiedHierarchy ? "unified" : "baseline"} data-station-peek={stationPeekVisible ? "true" : "false"}>
       <IntroScrubSequence
         key={replayCount}
         sequence={registry.introScrubSequence}
