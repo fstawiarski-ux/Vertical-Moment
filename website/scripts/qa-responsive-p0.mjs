@@ -121,7 +121,8 @@ async function assertStation(page, viewport, station) {
     assert(await shell.locator('article[data-mode="normal"]').count() === 1, `${viewport.name}/${station.id}: unified journey must show one normal module`);
   }
 
-  const activeArticle = page.locator(`[data-shell="${viewport.mode}"] article[data-box-id="${station.moduleId}"]`);
+  const shellName = viewport.mode === "mobile" ? "phone" : viewport.mode;
+  const activeArticle = page.locator(`[data-shell="${shellName}"] article[data-box-id="${station.moduleId}"]`);
   assert(await activeArticle.getAttribute("data-module-chrome") === "minimal", `${viewport.name}/${station.id}: minimal module chrome contract missing`);
   assert(await activeArticle.locator('[data-module-handle="true"]').isHidden(), `${viewport.name}/${station.id}: upper-left drag ornament is visible`);
   assert(await activeArticle.locator('[data-module-heading="true"]').isHidden(), `${viewport.name}/${station.id}: upper-left module description is visible`);
