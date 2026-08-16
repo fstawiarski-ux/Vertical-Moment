@@ -241,17 +241,20 @@ export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
       className={`${styles.box} ${modeClass} ${dragging ? styles.dragging : ""}`}
       data-viewport={viewportMode}
       data-mode={box.mode}
+      data-box-id={box.id}
+      data-module-chrome="minimal"
+      aria-label={`${title} module`}
       style={inlineStyle}
       onPointerDown={focus}
     >
       <div className={styles.chrome}>
-        <div className={styles.header} onPointerDown={beginDrag} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag}>
-          <span className={styles.handle} aria-hidden="true"><i /><i /><i /><i /><i /><i /></span>
-          <div className={styles.heading}><small>{eyebrow}</small><h2>{title}</h2></div>
-          <div className={styles.windowControls} aria-label={`${title} window controls`}>
-            <button type="button" onClick={() => setMode(box.mode === "minimized" ? "normal" : "minimized")} aria-label={box.mode === "minimized" ? `Restore ${title}` : `Minimize ${title}`} title={box.mode === "minimized" ? `Restore ${title}` : `Minimize ${title}`}>−</button>
-            <button type="button" onClick={() => setMode(box.mode === "expanded" ? "normal" : "expanded")} aria-label={box.mode === "expanded" ? `Exit expanded view ${title}` : box.mode === "fullscreen" ? `Return to expanded view ${title}` : `Expand ${title}`} title={box.mode === "expanded" ? `Exit expanded view ${title}` : `Expand ${title}`}>□</button>
-            <button type="button" onClick={() => setMode(box.mode === "fullscreen" ? "normal" : "fullscreen")} aria-label={box.mode === "fullscreen" ? `Exit full screen ${title}` : `Open ${title} full screen`} title={box.mode === "fullscreen" ? `Exit full screen ${title}` : `Open ${title} full screen`}>⛶</button>
+        <div data-drag-surface="true" className={styles.header} onPointerDown={beginDrag} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag}>
+          <span data-module-handle="true" className={styles.handle} aria-hidden="true"><i /><i /><i /><i /><i /><i /></span>
+          <div data-module-heading="true" className={styles.heading}><small>{eyebrow}</small><h2>{title}</h2></div>
+          <div data-module-window-controls="true" className={styles.windowControls} aria-label={`${title} window controls`}>
+            <button type="button" onClick={() => setMode(box.mode === "minimized" ? "normal" : "minimized")} aria-label={box.mode === "minimized" ? `Restore ${title}` : `Minimize ${title}`} title={box.mode === "minimized" ? `Restore ${title}` : `Minimize ${title}`}>âˆ’</button>
+            <button type="button" onClick={() => setMode(box.mode === "expanded" ? "normal" : "expanded")} aria-label={box.mode === "expanded" ? `Exit expanded view ${title}` : box.mode === "fullscreen" ? `Return to expanded view ${title}` : `Expand ${title}`} title={box.mode === "expanded" ? `Exit expanded view ${title}` : `Expand ${title}`}>â–¡</button>
+            <button type="button" onClick={() => setMode(box.mode === "fullscreen" ? "normal" : "fullscreen")} aria-label={box.mode === "fullscreen" ? `Exit full screen ${title}` : `Open ${title} full screen`} title={box.mode === "fullscreen" ? `Exit full screen ${title}` : `Open ${title} full screen`}>â›¶</button>
           </div>
         </div>
         {box.mode !== "minimized" && <div className={styles.body}>{children}</div>}
