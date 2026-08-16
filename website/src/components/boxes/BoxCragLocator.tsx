@@ -58,6 +58,7 @@ type SearchHit =
   | { kind: "route"; label: string; meta: string; region: string; wallId: string };
 
 type BaseLayerKey = "terrain" | "streets" | "satellite" | "light";
+type PaneMode = "map" | "split" | "info";
 type LatLon = [number, number];
 
 declare global {
@@ -139,6 +140,7 @@ export default function BoxCragLocator() {
   const [selectedRegion, setSelectedRegion] = useState("Peilstein");
   const [selectedWallId, setSelectedWallId] = useState<string | null>(null);
   const [query, setQuery] = useState("");
+  const [paneMode, setPaneMode] = useState<PaneMode>("split");
 
   const regionWalls = useMemo(() => {
     const grouped = new Map<string, AtlasWall[]>();
@@ -409,6 +411,18 @@ export default function BoxCragLocator() {
         </label>
         <a href={directionsUrl} target="_blank" rel="noreferrer">Directions</a>
         <span className={online ? styles.online : styles.offline}>{online ? "Live tiles" : "Cached tiles"}</span>
+        <div className={styles.paneSwitch} role="group" aria-label="Atlas pane size">
+          {(["map", "split", "info"] as PaneMode[]).map((mode) => (
+            <button
+              key={mode}
+              type="button"
+              aria-pressed={paneMode === mode}
+              onClick={() => setPaneMode(mode)}
+            >
+              {mode === "map" ? "Map" : mode === "split" ? "Split" : "Info"}
+            </button>
+          ))}
+        </div>
       </div>
 
       {query.trim().length >= 2 && (
@@ -421,7 +435,7 @@ export default function BoxCragLocator() {
         </div>
       )}
 
-      <div className={styles.workspace}>
+      <div className={styles.workspace} data-pane={paneMode}>
         <div className={styles.mapPane}>
           <div ref={mapElementRef} className={styles.map} aria-label="Map of climbing regions and crags" />
           {!mapReady && !mapError && <div className={styles.mapStatus}>Preparing the atlas…</div>}

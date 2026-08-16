@@ -1,0 +1,174 @@
+.chrome {
+  position: fixed;
+  top: 0;
+  right: 88px;
+  left: 0;
+  z-index: 9720;
+  padding: max(4px, env(safe-area-inset-top)) 6px 5px max(6px, env(safe-area-inset-left));
+  pointer-events: none;
+}
+
+.chrome::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-bottom: 1px solid rgb(224 202 128 / 22%);
+  background:
+    linear-gradient(180deg, rgb(7 13 9 / 94%), rgb(8 15 10 / 86%)),
+    radial-gradient(circle at 50% -120%, rgb(224 202 128 / 14%), transparent 68%);
+  box-shadow: 0 10px 34px rgb(0 0 0 / 24%);
+  backdrop-filter: blur(16px) saturate(1.12);
+}
+
+.rail {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 4px;
+  width: 100%;
+  min-height: 54px;
+  pointer-events: auto;
+}
+
+.stage,
+.search {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  min-height: 48px;
+  grid-template-columns: auto minmax(0, auto);
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 5px 12px 6px;
+  overflow: hidden;
+  color: #d9d6cb;
+  border: 1px solid transparent;
+  border-radius: 13px;
+  background: rgb(255 255 255 / 1.5%);
+  cursor: pointer;
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 220ms ease,
+    transform 120ms ease;
+}
+
+.stage::after {
+  content: "";
+  position: absolute;
+  right: 14%;
+  bottom: 3px;
+  left: 14%;
+  height: 2px;
+  border-radius: 99px;
+  background: transparent;
+  transition: background 180ms ease, box-shadow 220ms ease;
+}
+
+.stage[data-passed="true"]::after { background: rgb(224 202 128 / 28%); }
+.stage[data-current="true"]::after {
+  background: #e0ca80;
+  box-shadow: 0 0 16px rgb(224 202 128 / 42%);
+}
+
+.stage:hover,
+.stage:focus-visible,
+.search:hover,
+.search:focus-visible {
+  color: #f4f0e4;
+  outline: none;
+  border-color: rgb(224 202 128 / 28%);
+  background: rgb(224 202 128 / 7%);
+}
+
+.stage[data-current="true"] {
+  color: #101713;
+  border-color: #e0ca80;
+  background: linear-gradient(180deg, #e7d38f, #d8bd70);
+  box-shadow: 0 0 0 1px rgb(255 249 216 / 24%) inset, 0 7px 22px rgb(224 202 128 / 15%);
+}
+
+.stage:active,
+.search:active { transform: scale(.975); }
+
+.icon,
+.searchIcon {
+  display: grid;
+  width: 18px;
+  height: 18px;
+  place-items: center;
+  font: 700 13px/1 ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+.copy {
+  display: grid;
+  min-width: 0;
+  align-content: center;
+  gap: 2px;
+  text-align: left;
+}
+
+.copy strong {
+  overflow: hidden;
+  font: 700 11px/1.05 Arial, sans-serif;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.copy small {
+  overflow: hidden;
+  color: currentColor;
+  font: 700 6.8px/1 ui-monospace, SFMono-Regular, Consolas, monospace;
+  letter-spacing: .12em;
+  opacity: .54;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.stage[data-current="true"] .copy small { opacity: .72; }
+
+/* Final approved large-screen safe zone: one merged top rail, thin scrub below,
+   and a persistent right-side workspace rail. */
+:global(main[data-viewport="desktop"]),
+:global(main[data-viewport="tablet"]) {
+  --explore-safe-top: max(68px, calc(env(safe-area-inset-top) + 62px));
+  --explore-dock-top: max(68px, calc(env(safe-area-inset-top) + 62px));
+  --explore-safe-right: 96px;
+  --explore-safe-bottom: max(48px, calc(env(safe-area-inset-bottom) + 42px));
+  --explore-content-bottom: var(--explore-safe-bottom);
+}
+
+@media (max-width: 980px) and (min-width: 768px) {
+  .chrome { right: 82px; }
+  .rail { min-height: 50px; }
+  .stage,
+  .search { min-height: 46px; gap: 5px; padding-inline: 7px; }
+  .copy strong { font-size: 9px; }
+  .copy small { font-size: 6px; letter-spacing: .07em; }
+  .icon,
+  .searchIcon { width: 15px; height: 15px; font-size: 11px; }
+}
+
+@media (max-width: 767px), (max-height: 539px) {
+  .chrome { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stage,
+  .search,
+  .stage::after { transition: none; }
+}
+
+/* Reclaim the duplicate navigation lanes for the unified desktop/tablet shell.
+   Core drag math remains conservative; expanded states and the responsive shell
+   use these visual safe zones. */
+:global(main[data-responsive-preview="unified"]) {
+  --explore-safe-top: max(68px, calc(env(safe-area-inset-top) + 62px));
+  --explore-dock-top: max(68px, calc(env(safe-area-inset-top) + 62px));
+  --explore-safe-right: 88px;
+  --explore-safe-bottom: max(44px, calc(env(safe-area-inset-bottom) + 44px));
+  --explore-content-bottom: var(--explore-safe-bottom);
+}

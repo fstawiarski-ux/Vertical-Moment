@@ -58,7 +58,7 @@ async function waitForWorkspace(page, viewport) {
     const shell = page.locator(`[data-shell="${viewport.mode}"]`);
     await shell.waitFor({ state: "visible" });
     assert(await shell.getAttribute("data-hierarchy") === "phone-inspired", `${viewport.name}: unified hierarchy is not default`);
-    const navName = `${viewport.mode === "tablet" ? "Tablet" : "Desktop"} Explore navigation`;
+    const navName = `${viewport.mode === "tablet" ? "Tablet" : "Desktop"} Explore journey`;
     await page.getByRole("navigation", { name: navName }).waitFor({ state: "visible" });
     await page.getByRole("navigation", { name: "Explore workspace controls" }).waitFor({ state: "visible" });
   }
@@ -74,23 +74,24 @@ async function assertChrome(page, viewport) {
     return;
   }
 
-  const navName = `${viewport.mode === "tablet" ? "Tablet" : "Desktop"} Explore navigation`;
+  const navName = `${viewport.mode === "tablet" ? "Tablet" : "Desktop"} Explore journey`;
   const topRail = page.getByRole("navigation", { name: navName });
   insideViewport(await topRail.boundingBox(), viewport, `${viewport.name}: top rail`);
   const topButtons = topRail.getByRole("button");
-  assert(await topButtons.count() === 6, `${viewport.name}: expected 6 top-rail controls`);
+  assert(await topButtons.count() === 5, `${viewport.name}: expected 5 V4 top-rail controls`);
 
-  const modules = topRail.getByRole("button", { name: "Modules" });
-  await modules.click();
-  const moduleTray = page.locator('section[aria-label="Explore modules"]');
-  await moduleTray.waitFor({ state: "visible" });
-  insideViewport(await moduleTray.boundingBox(), viewport, `${viewport.name}: Modules tray`);
-  for (const title of ["Atlas", "Wall Reveal", "Routes", "Nasenwand 3D", "360"]) {
-    assert(await moduleTray.getByText(title, { exact: true }).count() >= 1, `${viewport.name}: Modules tray missing ${title}`);
+  const workspaceControls = page.getByRole("navigation", { name: "Explore workspace controls" });
+  insideViewport(await workspaceControls.boundingBox(), viewport, `${viewport.name}: persistent workspace rail`);
+  const moduleButtons = workspaceControls.locator('button[aria-label$=" module"]');
+  assert(await moduleButtons.count() === 5, `${viewport.name}: expected 5 persistent module controls`);
+  for (const label of ["Atlas", "Routes", "360", "3D", "Wall"]) {
+    assert(
+      await workspaceControls.getByRole("button", { name: new RegExp(`${label} module$`) }).count() === 1,
+      `${viewport.name}: persistent module rail missing ${label}`,
+    );
   }
-  await page.getByRole("button", { name: "Close module menu" }).click();
 
-  const toolsButton = page.getByRole("button", { name: "Open workspace tools" });
+  const toolsButton = page.getByRole("button", { name: "Tools", exact: true });
   insideViewport(await toolsButton.boundingBox(), viewport, `${viewport.name}: Tools control`);
   await toolsButton.click();
   const toolsPanel = page.locator('section[aria-label="Tools controls"]');
@@ -101,7 +102,11 @@ async function assertChrome(page, viewport) {
 }
 
 async function assertStation(page, viewport, station) {
-  const stationButton = page.getByRole("button", { name: `Fly to ${station.label}` });
+  const stationButton = viewport.mode === "mobile"
+    ? page.getByRole("button", { name: `Fly to ${station.label}` })
+    : page
+        .getByRole("navigation", { name: `${viewport.mode === "tablet" ? "Tablet" : "Desktop"} Explore journey` })
+        .getByRole("button", { name: new RegExp(`^${station.label}\\b`) });
   await stationButton.click();
   await page.waitForFunction(
     ({ label }) => document.querySelector(`button[aria-label="Fly to ${label}"]`)?.getAttribute("aria-current") === "step",
@@ -118,7 +123,20 @@ async function assertStation(page, viewport, station) {
   } else {
     const shell = page.locator(`[data-shell="${viewport.mode}"]`);
     await shell.locator(`article[data-mode="normal"][data-box-id="${station.moduleId}"]`).waitFor({ state: "visible" });
-    assert(await shell.locator('article[data-mode="normal"]').count() === 1, `${viewport.name}/${station.id}: unified journey must show one normal module`);
+    if (viewport.mode === "desktop" && station.id === "topo") {
+      for (const moduleId of ["nasenwand-model", "wachau-16", "crag-locator", "nasenwand-spatial"]) {
+        await shell.locator(`article[data-mode="normal"][data-box-id="${moduleId}"]`).waitFor({ state: "visible" });
+      }
+      assert(
+        await shell.locator('article[data-mode="normal"]').count() === 4,
+        `${viewport.name}/${station.id}: reviewed Topo arrival must show four normal modules`,
+      );
+    } else {
+      assert(
+        await shell.locator('article[data-mode="normal"]').count() === 1,
+        `${viewport.name}/${station.id}: journey stage must show one normal module`,
+      );
+    }
   }
 
   const shellName = viewport.mode === "mobile" ? "phone" : viewport.mode;
@@ -132,11 +150,12 @@ async function assertStation(page, viewport, station) {
   await assertChrome(page, viewport);
 
   if (viewport.mode !== "mobile") {
-    const article = page.locator(`[data-shell="${viewport.mode}"] article[data-mode="normal"]`);
+    const article = activeArticle;
     const articleBox = await article.boundingBox();
-    const navName = `${viewport.mode === "tablet" ? "Tablet" : "Desktop"} Explore navigation`;
+    const navName = `${viewport.mode === "tablet" ? "Tablet" : "Desktop"} Explore journey`;
     const topRailBox = await page.getByRole("navigation", { name: navName }).boundingBox();
-    const toolsBox = await page.getByRole("button", { name: "Open workspace tools" }).boundingBox();
+    const workspaceControls = page.getByRole("navigation", { name: "Explore workspace controls" });
+    const toolsBox = await workspaceControls.boundingBox();
     const sliderBox = await page.getByRole("slider", { name: "Move from Region on the left to Topo on the right" }).boundingBox();
     assert(articleBox && topRailBox && toolsBox && sliderBox, `${viewport.name}: model safe-zone geometry unavailable`);
     assert(articleBox.y >= topRailBox.y + topRailBox.height, `${viewport.name}: model overlaps top rail`);
@@ -150,7 +169,7 @@ async function assertStation(page, viewport, station) {
 }
 
 async function assertDesktopDragResize(page) {
-  const article = page.locator('[data-shell="desktop"] article[data-mode="normal"]');
+  const article = page.locator('[data-shell="desktop"] article[data-mode="normal"][data-box-id="nasenwand-model"]');
   const title = "Nasenwand 3D";
   const beforeDrag = await article.boundingBox();
   assert(beforeDrag, "desktop: active module has no initial geometry");
@@ -209,10 +228,26 @@ try {
       // Normal module chrome intentionally exposes no expand/fullscreen entry bar.
       // Exceptional persisted states retain a single escape control in the UI.
       if (viewport.mode === "desktop") {
-        // Journey follow intentionally owns the compact safe-zone frame. Turn it
-        // off before proving the preserved freeform desktop drag/resize contract.
-        const desktopNav = page.getByRole("navigation", { name: "Desktop Explore navigation" });
-        await desktopNav.getByRole("button", { name: "Journey" }).click();
+        // Spatial Focus V4 intentionally locks the reviewed Topo arrival.
+        // Unlock before proving that preserved desktop freeform drag/resize still works.
+        const unlockLayout = page.locator('nav[aria-label="Explore workspace controls"] button[title="Unlock layout"]');
+        if (await unlockLayout.count() === 1) await unlockLayout.click();
+        // The reviewed Topo arrival intentionally packs four normal modules.
+        // Isolate the 3D module before testing freeform movement so the
+        // collision-avoidance contract is not what prevents the drag.
+        const workspaceControls = page.getByRole("navigation", { name: "Explore workspace controls" });
+        await workspaceControls.getByRole("button", { name: "Tools", exact: true }).click();
+        const toolsPanel = page.locator('section[aria-label="Tools controls"]');
+        await toolsPanel.waitFor({ state: "visible" });
+        await toolsPanel.getByRole("button", { name: "Minimize all boxes", exact: true }).click();
+
+        const openModel = workspaceControls.getByRole("button", { name: "Open 3D module", exact: true });
+        await openModel.waitFor({ state: "visible" });
+        await openModel.click();
+        await page
+          .locator('[data-shell="desktop"] article[data-mode="normal"][data-box-id="nasenwand-model"]')
+          .waitFor({ state: "visible" });
+
         await assertDesktopDragResize(page);
       }
 
@@ -232,7 +267,7 @@ try {
   await rollbackPage.goto(`${baseURL}/explore-app?intro=skip&responsivePreview=baseline`, { waitUntil: "domcontentloaded" });
   await rollbackPage.locator('main[data-viewport="desktop"]').waitFor({ state: "visible" });
   await rollbackPage.locator('[data-shell="desktop"][data-hierarchy="baseline"]').waitFor({ state: "visible" });
-  assert(await rollbackPage.getByRole("navigation", { name: "Desktop Explore navigation" }).count() === 0, "rollback: unified top rail still rendered");
+  assert(await rollbackPage.getByRole("navigation", { name: "Desktop Explore journey" }).count() === 0, "rollback: unified top rail still rendered");
   await rollbackPage.locator('aside[aria-label="Open or restore Explore modules"]').waitFor({ state: "visible" });
   await rollbackContext.close();
 
