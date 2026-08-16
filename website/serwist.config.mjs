@@ -26,6 +26,7 @@ export default await serwist({
   // manifest.webmanifest changes, or returning installs keep the old build.
   additionalPrecacheEntries: [
     { url: "/explore-app", revision: "explore-app-v13" },
+    { url: "/explore-app/field", revision: "field-ops-shell-v1" },
     { url: "/offline", revision: "offline-v1" },
     { url: "/explore-content.json", revision: `registry-v${registryRevision}` },
     ...atlasDataFiles.map((file) => ({ url: `/data/v1/${file}`, revision: atlasRevision })),
