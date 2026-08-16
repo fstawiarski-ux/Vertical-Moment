@@ -7,6 +7,10 @@ const atlasRevision = createHash("sha256")
   .update(Buffer.concat(await Promise.all(atlasDataFiles.map((file) => readFile(new URL(`./public/data/v1/${file}`, import.meta.url))))))
   .digest("hex")
   .slice(0, 16);
+const registryRevision = createHash("sha256")
+  .update(await readFile(new URL("./public/explore-content.json", import.meta.url)))
+  .digest("hex")
+  .slice(0, 16);
 
 export default await serwist({
   swSrc: "src/pwa/service-worker.ts",
@@ -23,7 +27,7 @@ export default await serwist({
   additionalPrecacheEntries: [
     { url: "/explore-app", revision: "explore-app-v13" },
     { url: "/offline", revision: "offline-v1" },
-    { url: "/explore-content.json", revision: "registry-v8" },
+    { url: "/explore-content.json", revision: `registry-v${registryRevision}` },
     ...atlasDataFiles.map((file) => ({ url: `/data/v1/${file}`, revision: atlasRevision })),
     { url: "/manifest.webmanifest", revision: "manifest-v2" },
     { url: "/icons/explore-app-192.png", revision: "icon-v1" },

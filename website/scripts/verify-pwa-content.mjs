@@ -79,6 +79,18 @@ function validateLayout(label, layout) {
 
 requiredPositiveNumber("version", registry.version);
 requiredString("updatedAt", registry.updatedAt);
+if (!registry.workspace || typeof registry.workspace !== "object") {
+  failures.push("workspace: reviewed workspace manifest is required");
+} else {
+  requiredPositiveNumber("workspace.maxBoxes", registry.workspace.maxBoxes);
+  if (registry.workspace.maxBoxes > 5) failures.push("workspace.maxBoxes: must remain at or below five");
+  if (!registry.workspace.phone || typeof registry.workspace.phone !== "object") {
+    failures.push("workspace.phone: reviewed phone policy is required");
+  } else {
+    if (registry.workspace.phone.singleActive !== true) failures.push("workspace.phone.singleActive: must remain true");
+    if (!Array.isArray(registry.workspace.phone.primaryModuleIds)) failures.push("workspace.phone.primaryModuleIds: required array");
+  }
+}
 validateImage("background", registry.background);
 
 const scrub = registry.introScrubSequence;
@@ -108,6 +120,16 @@ for (const [index, box] of (registry.boxes ?? []).entries()) {
     collectAsset(`${label}.model.src`, box.model.src);
     requiredPositiveNumber(`${label}.model.bytes`, box.model.bytes);
   }
+}
+
+if (registry.workspace?.maxBoxes && registry.boxes.length > registry.workspace.maxBoxes) {
+  failures.push(`boxes: ${registry.boxes.length} boxes exceed workspace.maxBoxes ${registry.workspace.maxBoxes}`);
+}
+for (const [index, id] of (registry.workspace?.phone?.primaryModuleIds ?? []).entries()) {
+  if (!boxIds.has(id)) failures.push(`workspace.phone.primaryModuleIds[${index}]: unknown box ${id}`);
+}
+for (const [station, id] of Object.entries(registry.workspace?.stationFocus ?? {})) {
+  if (!boxIds.has(id)) failures.push(`workspace.stationFocus.${station}: unknown box ${id}`);
 }
 
 for (const field of ["offlineData", "offlinePack", "heavyAssets"]) {

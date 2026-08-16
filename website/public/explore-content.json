@@ -53,11 +53,25 @@
       }
     ]
   },
+  "workspace": {
+    "maxBoxes": 5,
+    "phone": {
+      "singleActive": true,
+      "primaryModuleIds": ["crag-locator", "nasenwand-spatial", "wachau-16"]
+    },
+    "stationFocus": {
+      "region": "crag-locator",
+      "rock": "wall-reveal",
+      "sector": "nasenwand-spatial",
+      "topo": "nasenwand-model"
+    }
+  },
   "boxes": [
     {
       "id": "nasenwand-spatial",
       "type": "nasenwand",
       "title": "Nasenwand Routes",
+      "mobileLabel": "Routes",
       "region": "Wachau",
       "crag": "Nasenwand",
       "sector": "Upper",
@@ -85,6 +99,7 @@
       "id": "wachau-16",
       "type": "panorama",
       "title": "Wachau Panorama",
+      "mobileLabel": "360",
       "region": "Wachau",
       "crag": "Wachau",
       "description": "Nine Wachau studies with region, crag, sector and Google 360 degree views.",
@@ -111,6 +126,7 @@
       "id": "crag-locator",
       "type": "atlas",
       "title": "Crag Locator",
+      "mobileLabel": "Atlas",
       "region": "Vienna Limestone Belt",
       "crag": "Vienna Limestone Belt",
       "description": "Search and browse the working atlas without the Explore page navigation or prototype footer.",

@@ -2,10 +2,12 @@
 
 import { useState, type ReactNode } from "react";
 import type { BoxState, ExploreContentBox, ExploreContentRegistry } from "../../core/types";
+import type { ResolvedWorkspaceManifest } from "../../core/workspaceManifest";
 import styles from "../../ExploreApp.module.css";
 
 export function PhoneShell({
   registry,
+  workspace,
   boxes,
   activeBoxId,
   stationContent,
@@ -17,6 +19,7 @@ export function PhoneShell({
   followJourney,
 }: {
   registry: ExploreContentRegistry;
+  workspace: ResolvedWorkspaceManifest;
   boxes: BoxState[];
   activeBoxId: string | null;
   stationContent: ExploreContentBox | null;
@@ -34,11 +37,11 @@ export function PhoneShell({
   const selectedContent = selected
     ? registry.boxes.find((content) => content.id === selected.id) ?? stationContent
     : stationContent;
-  const primaryIds = ["crag-locator", "nasenwand-spatial", "wachau-16"];
-  const primary = primaryIds
+  const primary = workspace.phone.primaryModuleIds
     .map((id) => registry.boxes.find((content) => content.id === id))
     .filter((content): content is ExploreContentBox => Boolean(content));
-  const additional = registry.boxes.filter((content) => !primaryIds.includes(content.id));
+  const primaryIds = new Set(workspace.phone.primaryModuleIds);
+  const additional = registry.boxes.filter((content) => !primaryIds.has(content.id));
 
   const openContent = (id: string) => {
     setMoreOpen(false);
@@ -46,7 +49,7 @@ export function PhoneShell({
   };
 
   return (
-    <section className={styles.phoneShell} data-shell="phone" data-active-box={selected?.id ?? "none"} aria-label="Phone Explore workspace">
+    <section className={styles.phoneShell} data-shell="phone" data-active-box={selected?.id ?? "none"} data-single-active={workspace.phone.singleActive ? "true" : "false"} aria-label="Phone Explore workspace">
       <header className={styles.phoneHeader}>
         <div>
           <small>Field workspace</small>
@@ -69,7 +72,7 @@ export function PhoneShell({
             aria-current={content.id === selected?.id ? "page" : undefined}
             onClick={() => openContent(content.id)}
           >
-            {content.id === "crag-locator" ? "Atlas" : content.id === "nasenwand-spatial" ? "Routes" : "360"}
+            {content.mobileLabel ?? content.title}
           </button>
         ))}
         <button
