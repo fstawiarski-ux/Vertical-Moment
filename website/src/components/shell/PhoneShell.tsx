@@ -1,9 +1,23 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import type { BoxState, ExploreContentBox, ExploreContentRegistry } from "../../core/types";
 import type { ResolvedWorkspaceManifest } from "../../core/workspaceManifest";
 import styles from "../../ExploreApp.module.css";
+
+type PhonePreviewVariant = "baseline" | "refined" | "minimal" | "improved" | "improved-minimal" | "minimal-fixed";
+
+function resolvePhonePreview(): PhonePreviewVariant {
+  if (typeof window === "undefined") return "baseline";
+  const requested = new URLSearchParams(window.location.search).get("phonePreview");
+  return requested === "refined"
+    || requested === "minimal"
+    || requested === "improved"
+    || requested === "improved-minimal"
+    || requested === "minimal-fixed"
+    ? requested
+    : "baseline";
+}
 
 export function PhoneShell({
   registry,
@@ -31,6 +45,12 @@ export function PhoneShell({
   followJourney: boolean;
 }) {
   const [moreOpen, setMoreOpen] = useState(false);
+  const [phonePreview, setPhonePreview] = useState<PhonePreviewVariant>("baseline");
+
+  useEffect(() => {
+    setPhonePreview(resolvePhonePreview());
+  }, []);
+
   const selected = boxes.find((box) => box.id === activeBoxId && box.mode !== "minimized")
     ?? boxes.find((box) => box.mode !== "minimized")
     ?? boxes[0];
@@ -49,7 +69,7 @@ export function PhoneShell({
   };
 
   return (
-    <section className={styles.phoneShell} data-shell="phone" data-active-box={selected?.id ?? "none"} data-single-active={workspace.phone.singleActive ? "true" : "false"} aria-label="Phone Explore workspace">
+    <section className={styles.phoneShell} data-shell="phone" data-phone-preview={phonePreview} data-active-box={selected?.id ?? "none"} data-single-active={workspace.phone.singleActive ? "true" : "false"} aria-label="Phone Explore workspace">
       <header className={styles.phoneHeader}>
         <div>
           <small>Field workspace</small>

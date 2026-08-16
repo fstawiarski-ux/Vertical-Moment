@@ -130,3 +130,27 @@
   .timeline[data-unlocked="true"]:hover,
   .timeline[data-unlocked="true"]:focus-within { transition: none; }
 }
+
+/* V3 phone composition: the Region / Rock / Sector / Topo rail is viewport-locked. */
+.sequence:has(~ [data-shell="phone"][data-phone-preview="minimal-fixed"]) .timeline,
+.sequence:has(~ [data-shell="phone"][data-phone-preview="minimal-fixed"]) .timeline[data-unlocked="true"],
+.sequence:has(~ [data-shell="phone"][data-phone-preview="minimal-fixed"]) .timeline[data-unlocked="true"]:hover,
+.sequence:has(~ [data-shell="phone"][data-phone-preview="minimal-fixed"]) .timeline[data-unlocked="true"]:focus-within {
+  right: max(10px, env(safe-area-inset-right));
+  bottom: max(8px, env(safe-area-inset-bottom));
+  left: max(10px, env(safe-area-inset-left));
+  width: auto;
+  opacity: 1;
+  transform: none;
+  transform-origin: center bottom;
+}
+
+@media (max-width: 767px) {
+  .sequence:has(~ [data-shell="phone"][data-phone-preview="minimal-fixed"]) .timeline,
+  .sequence:has(~ [data-shell="phone"][data-phone-preview="minimal-fixed"]) .timeline[data-unlocked="true"],
+  .sequence:has(~ [data-shell="phone"][data-phone-preview="minimal-fixed"]) .timeline[data-unlocked="true"]:hover,
+  .sequence:has(~ [data-shell="phone"][data-phone-preview="minimal-fixed"]) .timeline[data-unlocked="true"]:focus-within {
+    padding: 5px 6px 6px;
+    border-radius: 12px;
+  }
+}
