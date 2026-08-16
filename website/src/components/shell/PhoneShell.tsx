@@ -62,6 +62,7 @@ export function PhoneShell({
     .filter((content): content is ExploreContentBox => Boolean(content));
   const primaryIds = new Set(workspace.phone.primaryModuleIds);
   const additional = registry.boxes.filter((content) => !primaryIds.has(content.id));
+  const minimalFixed = phonePreview === "minimal-fixed";
 
   const openContent = (id: string) => {
     setMoreOpen(false);
@@ -71,11 +72,15 @@ export function PhoneShell({
   return (
     <section className={styles.phoneShell} data-shell="phone" data-phone-preview={phonePreview} data-active-box={selected?.id ?? "none"} data-single-active={workspace.phone.singleActive ? "true" : "false"} aria-label="Phone Explore workspace">
       <header className={styles.phoneHeader}>
-        <div>
-          <small>Field workspace</small>
-          <strong>{selectedContent?.title ?? "Explore"}</strong>
-        </div>
-        <button type="button" onClick={onSearch} aria-label="Search the Explore workspace">Search</button>
+        {!minimalFixed && (
+          <>
+            <div>
+              <small>Field workspace</small>
+              <strong>{selectedContent?.title ?? "Explore"}</strong>
+            </div>
+            <button type="button" onClick={onSearch} aria-label="Search the Explore workspace">Search</button>
+          </>
+        )}
       </header>
       <p className={styles.phoneHint}>
         {followJourney && stationContent ? `${stationContent.region} · ${stationContent.crag}` : "One focused task at a time"}
@@ -103,6 +108,9 @@ export function PhoneShell({
         >
           Modules
         </button>
+        {minimalFixed && (
+          <button type="button" onClick={onSearch} aria-label="Search the Explore workspace">Search</button>
+        )}
       </nav>
       {moreOpen && (
         <div className={styles.phoneMoreMenu} id="phone-more-menu" aria-label="More workspace destinations">

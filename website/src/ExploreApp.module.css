@@ -450,9 +450,7 @@
   }
 
   .phoneShell[data-phone-preview="minimal-fixed"] .phoneHeader {
-    order: 1;
-    position: relative;
-    z-index: 2;
+    display: none;
   }
 
   .phoneShell[data-phone-preview="minimal-fixed"] .phoneHeader strong {
@@ -465,15 +463,22 @@
   }
 
   .phoneShell[data-phone-preview="minimal-fixed"] .phoneNav {
-    order: 2;
+    order: 1;
     position: relative;
     z-index: 2;
     width: 100%;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     padding-block: 0 2px;
   }
 
+  .phoneShell[data-phone-preview="minimal-fixed"] .phoneNav button {
+    padding-inline: 4px;
+    font-size: 8px;
+    letter-spacing: 0;
+  }
+
   .phoneShell[data-phone-preview="minimal-fixed"] .phoneStage {
-    order: 3;
+    order: 2;
     align-self: flex-start;
     width: min(78%, 292px);
     flex: 0 0 min(23dvh, 194px);
@@ -481,7 +486,7 @@
   }
 
   .phoneShell[data-phone-preview="minimal-fixed"] .phoneMoreMenu {
-    order: 4;
+    order: 3;
   }
 
   .phoneShell[data-phone-preview="minimal-fixed"] .phoneStage > article {
