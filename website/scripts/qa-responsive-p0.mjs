@@ -148,29 +148,6 @@ async function assertStation(page, viewport, station) {
   return filename;
 }
 
-async function assertExpandedFullscreen(page, viewport) {
-  if (viewport.mode === "mobile") return;
-  const title = "Nasenwand 3D";
-  const article = page.locator(`[data-shell="${viewport.mode}"] article`).filter({ has: page.getByRole("heading", { name: title }) });
-  await page.getByRole("button", { name: `Expand ${title}` }).click();
-  await page.locator(`[data-shell="${viewport.mode}"] article[data-mode="expanded"]`).waitFor({ state: "visible" });
-  await assertNoHorizontalOverflow(page, viewport);
-  insideViewport(await article.boundingBox(), viewport, `${viewport.name}: expanded module`);
-
-  await page.getByRole("button", { name: `Open ${title} full screen` }).click();
-  await page.locator(`[data-shell="${viewport.mode}"] article[data-mode="fullscreen"]`).waitFor({ state: "visible" });
-  await assertNoHorizontalOverflow(page, viewport);
-  insideViewport(await article.boundingBox(), viewport, `${viewport.name}: fullscreen module`);
-
-  await page.getByRole("button", { name: `Exit full screen ${title}` }).click();
-  await page.locator(`[data-shell="${viewport.mode}"] article[data-mode="expanded"]`).waitFor({ state: "visible" });
-
-  // Fullscreen opened from expanded must restore the previous expanded state.
-  // Exit expanded explicitly before continuing normal/freeform QA.
-  await page.getByRole("button", { name: `Exit expanded view ${title}` }).click();
-  await page.locator(`[data-shell="${viewport.mode}"] article[data-mode="normal"]`).waitFor({ state: "visible" });
-}
-
 async function assertDesktopDragResize(page) {
   const article = page.locator('[data-shell="desktop"] article[data-mode="normal"]');
   const title = "Nasenwand 3D";
@@ -264,7 +241,9 @@ try {
   const deepLinkPage = await deepLinkContext.newPage();
   await deepLinkPage.goto(`${baseURL}/explore-app?intro=skip&mode=normal&open=wall-reveal`, { waitUntil: "domcontentloaded" });
   await deepLinkPage.locator('main[data-viewport="desktop"]').waitFor({ state: "visible" });
-  await deepLinkPage.getByRole("heading", { name: "Wall Reveal" }).waitFor({ state: "visible" });
+  const deepLinkedModule = deepLinkPage.locator('[data-shell="desktop"] article[data-box-id="wall-reveal"][data-mode="normal"]');
+  await deepLinkedModule.waitFor({ state: "visible" });
+  assert(await deepLinkedModule.getAttribute("data-module-chrome") === "minimal", "deep link: minimal module chrome contract missing");
   assert(new URL(deepLinkPage.url()).searchParams.get("open") === "wall-reveal", "deep link: open target changed unexpectedly");
   await deepLinkContext.close();
 } finally {
