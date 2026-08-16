@@ -23,7 +23,7 @@ const MODULES = [
 const REVIEWED_TOPO_IDS = ["nasenwand-model", "wachau-16", "crag-locator", "nasenwand-spatial"] as const;
 
 type HudPanel = "tools" | "journey";
-type IconName = "align" | "close" | "contribute" | "download" | "grid" | "layout" | "lock" | "minus" | "play" | "redo" | "replay" | "search" | "sliders" | "undo";
+type IconName = "align" | "close" | "contribute" | "download" | "field" | "grid" | "layout" | "lock" | "minus" | "play" | "redo" | "replay" | "search" | "sliders" | "undo";
 
 function Icon({ name }: { name: IconName }) {
   const common = {
@@ -45,6 +45,8 @@ function Icon({ name }: { name: IconName }) {
       return <svg {...common}><circle cx="12" cy="12" r="8" /><path d="M12 8v8M8 12h8" /></svg>;
     case "download":
       return <svg {...common}><path d="M12 4v10M8 10l4 4 4-4M5 19h14" /></svg>;
+    case "field":
+      return <svg {...common}><path d="M4 7h16v12H4z" /><path d="M8 7V5h8v2M8 12h8M12 9v6" /></svg>;
     case "grid":
       return <svg {...common}><rect x="4" y="4" width="6" height="6" rx="1" /><rect x="14" y="4" width="6" height="6" rx="1" /><rect x="4" y="14" width="6" height="6" rx="1" /><rect x="14" y="14" width="6" height="6" rx="1" /></svg>;
     case "layout":
@@ -176,10 +178,28 @@ export function LayoutToolbar({ viewportMode, offlinePack, onSearch, onReplayInt
   const [openPanel, setOpenPanel] = useState<HudPanel | null>(null);
   const [shortcut, setShortcut] = useState("Ctrl K");
   const [layoutLocked, setLayoutLocked] = useState(false);
+  const [fieldOpsAvailable, setFieldOpsAvailable] = useState(false);
   const reviewedTopoApplied = useRef(false);
 
   useEffect(() => {
     if (/mac|iphone|ipad/i.test(navigator.platform || navigator.userAgent)) setShortcut("⌘K");
+  }, []);
+
+  useEffect(() => {
+    const syncFieldOps = () => {
+      try {
+        setFieldOpsAvailable(window.localStorage.getItem("vm-field-ops-authorized") === "1");
+      } catch {
+        setFieldOpsAvailable(false);
+      }
+    };
+    syncFieldOps();
+    window.addEventListener("storage", syncFieldOps);
+    window.addEventListener("vm:field-ops-auth", syncFieldOps);
+    return () => {
+      window.removeEventListener("storage", syncFieldOps);
+      window.removeEventListener("vm:field-ops-auth", syncFieldOps);
+    };
   }, []);
 
   useEffect(() => {
@@ -366,6 +386,7 @@ export function LayoutToolbar({ viewportMode, offlinePack, onSearch, onReplayInt
                 />
                 <HudButton icon="replay" label="Replay" title="Replay approach journey" onClick={() => closeAfter(onReplayIntro)} />
                 <HudButton icon="contribute" label="Create" title="Open contributor field beta" href="/contribute?source=explore-app" />
+                {fieldOpsAvailable && <HudButton icon="field" label="Field Ops" title="Open private Field Ops" href="/explore-app/field" />}
               </ActionGroup>
               <ActionGroup label="Offline">
                 <div className={styles.offlineButton} title="Save route data and selected media for offline use">

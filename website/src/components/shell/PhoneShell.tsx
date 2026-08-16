@@ -46,9 +46,27 @@ export function PhoneShell({
 }) {
   const [moreOpen, setMoreOpen] = useState(false);
   const [phonePreview, setPhonePreview] = useState<PhonePreviewVariant>("baseline");
+  const [fieldOpsAvailable, setFieldOpsAvailable] = useState(false);
 
   useEffect(() => {
     setPhonePreview(resolvePhonePreview());
+  }, []);
+
+  useEffect(() => {
+    const syncFieldOps = () => {
+      try {
+        setFieldOpsAvailable(window.localStorage.getItem("vm-field-ops-authorized") === "1");
+      } catch {
+        setFieldOpsAvailable(false);
+      }
+    };
+    syncFieldOps();
+    window.addEventListener("storage", syncFieldOps);
+    window.addEventListener("vm:field-ops-auth", syncFieldOps);
+    return () => {
+      window.removeEventListener("storage", syncFieldOps);
+      window.removeEventListener("vm:field-ops-auth", syncFieldOps);
+    };
   }, []);
 
   const selected = boxes.find((box) => box.id === activeBoxId && box.mode !== "minimized")
@@ -120,6 +138,9 @@ export function PhoneShell({
             </button>
           ))}
           <button type="button" onClick={() => { setMoreOpen(false); onContribute(); }}>Add contribution</button>
+          {fieldOpsAvailable && (
+            <button type="button" onClick={() => window.location.assign("/explore-app/field")}>Field Ops · private</button>
+          )}
         </div>
       )}
     </section>
