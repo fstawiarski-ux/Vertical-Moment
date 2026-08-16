@@ -5,18 +5,20 @@ import type { BoxState, ExploreContentBox, ExploreContentRegistry } from "../../
 import type { ResolvedWorkspaceManifest } from "../../core/workspaceManifest";
 import styles from "../../ExploreApp.module.css";
 
-type PhonePreviewVariant = "baseline" | "refined" | "minimal" | "improved" | "improved-minimal" | "minimal-fixed";
+type PhonePreviewVariant = "baseline" | "refined" | "minimal" | "improved" | "improved-minimal" | "minimal-fixed" | "hero-first";
 
 function resolvePhonePreview(): PhonePreviewVariant {
-  if (typeof window === "undefined") return "baseline";
+  if (typeof window === "undefined") return "hero-first";
   const requested = new URLSearchParams(window.location.search).get("phonePreview");
-  return requested === "refined"
+  return requested === "baseline"
+    || requested === "refined"
     || requested === "minimal"
     || requested === "improved"
     || requested === "improved-minimal"
     || requested === "minimal-fixed"
+    || requested === "hero-first"
     ? requested
-    : "baseline";
+    : "hero-first";
 }
 
 export function PhoneShell({
@@ -45,8 +47,10 @@ export function PhoneShell({
   followJourney: boolean;
 }) {
   const [moreOpen, setMoreOpen] = useState(false);
-  const [phonePreview, setPhonePreview] = useState<PhonePreviewVariant>("baseline");
+  const [phonePreview, setPhonePreview] = useState<PhonePreviewVariant>("hero-first");
   const [fieldOpsAvailable, setFieldOpsAvailable] = useState(false);
+  void onToggleJourney;
+  void followJourney;
 
   useEffect(() => {
     setPhonePreview(resolvePhonePreview());
@@ -80,7 +84,6 @@ export function PhoneShell({
     .filter((content): content is ExploreContentBox => Boolean(content));
   const primaryIds = new Set(workspace.phone.primaryModuleIds);
   const additional = registry.boxes.filter((content) => !primaryIds.has(content.id));
-  const minimalFixed = phonePreview === "minimal-fixed";
 
   const openContent = (id: string) => {
     setMoreOpen(false);
@@ -88,26 +91,24 @@ export function PhoneShell({
   };
 
   return (
-    <section className={styles.phoneShell} data-shell="phone" data-phone-preview={phonePreview} data-active-box={selected?.id ?? "none"} data-single-active={workspace.phone.singleActive ? "true" : "false"} aria-label="Phone Explore workspace">
-      <header className={styles.phoneHeader}>
-        {!minimalFixed && (
-          <>
-            <div>
-              <small>Field workspace</small>
-              <strong>{selectedContent?.title ?? "Explore"}</strong>
-            </div>
-            <button type="button" onClick={onSearch} aria-label="Search the Explore workspace">Search</button>
-          </>
-        )}
+    <section
+      className={styles.phoneShell}
+      data-shell="phone"
+      data-phone-preview={phonePreview}
+      data-active-box={selected?.id ?? "none"}
+      data-single-active={workspace.phone.singleActive ? "true" : "false"}
+      aria-label="Phone Explore workspace"
+    >
+      <header className={styles.phoneHeader} aria-hidden="true">
+        <div><small>Hero-first workspace</small><strong>{selectedContent?.title ?? "Explore"}</strong></div>
       </header>
-      <p className={styles.phoneHint}>
-        {followJourney && stationContent ? `${stationContent.region} · ${stationContent.crag}` : "One focused task at a time"}
-      </p>
-      <div className={styles.phoneStage} data-active-box={selected?.id ?? "none"}>
-        {selected ? renderBox(selected) : <p>Choose a workspace below.</p>}
+      <p className={styles.phoneHint}>Hero first · tools expand on request</p>
+
+      <div className={styles.phoneStage} data-role="phone-stage" data-active-box={selected?.id ?? "none"}>
+        {selected ? renderBox(selected) : <p>Choose a workspace module.</p>}
       </div>
-      <nav className={styles.phoneNav} aria-label="Phone workspace navigation">
-        <button type="button" aria-pressed={followJourney} onClick={onToggleJourney}>Journey</button>
+
+      <nav className={styles.phoneNav} data-role="phone-nav" aria-label="Phone workspace navigation">
         {primary.map((content) => (
           <button
             key={content.id}
@@ -126,12 +127,11 @@ export function PhoneShell({
         >
           Modules
         </button>
-        {minimalFixed && (
-          <button type="button" onClick={onSearch} aria-label="Search the Explore workspace">Search</button>
-        )}
+        <button type="button" onClick={onSearch} aria-label="Search the Explore workspace">Search</button>
       </nav>
+
       {moreOpen && (
-        <div className={styles.phoneMoreMenu} id="phone-more-menu" aria-label="More workspace destinations">
+        <div className={styles.phoneMoreMenu} data-role="phone-more" id="phone-more-menu" aria-label="More workspace destinations">
           {additional.map((content) => (
             <button key={content.id} type="button" aria-current={content.id === selected?.id ? "page" : undefined} onClick={() => openContent(content.id)}>
               {content.title}

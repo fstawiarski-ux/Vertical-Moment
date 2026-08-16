@@ -3,8 +3,9 @@ name: Explore responsive visual QA
 on:
   pull_request:
     paths:
+      - "website/app/explore-app/**"
       - "website/src/**"
-      - "website/scripts/qa-responsive-p0.mjs"
+      - "website/scripts/qa-hero-first-review.mjs"
       - ".github/workflows/explore-responsive-qa.yml"
   workflow_dispatch: {}
 
@@ -17,6 +18,7 @@ jobs:
     defaults:
       run:
         working-directory: website
+
     steps:
       - name: Checkout
         uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
@@ -55,18 +57,22 @@ jobs:
           cat "$RUNNER_TEMP/vertical-moment-next.log"
           exit 1
 
-      - name: Capture 20-shot responsive matrix
-        run: node scripts/qa-responsive-p0.mjs
+      - name: Run Hero-First responsive contract
+        env:
+          VM_PREVIEW_URL: "http://127.0.0.1:3000/explore-app?intro=skip"
+        run: node scripts/qa-hero-first-review.mjs
 
       - name: Preserve server log
         if: always()
-        run: cp "$RUNNER_TEMP/vertical-moment-next.log" review-artifacts/p0-responsive/server.log || true
+        run: |
+          mkdir -p review-artifacts/hero-first
+          cp "$RUNNER_TEMP/vertical-moment-next.log" review-artifacts/hero-first/server.log || true
 
       - name: Upload responsive QA evidence
         if: always()
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
-          name: explore-responsive-p0-${{ github.sha }}
-          path: website/review-artifacts/p0-responsive/
+          name: explore-responsive-hero-first-${{ github.sha }}
+          path: website/review-artifacts/hero-first/
           if-no-files-found: error
           retention-days: 14
