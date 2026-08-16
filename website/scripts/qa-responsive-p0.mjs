@@ -165,6 +165,11 @@ async function assertExpandedFullscreen(page, viewport) {
   insideViewport(await article.boundingBox(), viewport, `${viewport.name}: fullscreen module`);
 
   await page.getByRole("button", { name: `Exit full screen ${title}` }).click();
+  await page.locator(`[data-shell="${viewport.mode}"] article[data-mode="expanded"]`).waitFor({ state: "visible" });
+
+  // Fullscreen opened from expanded must restore the previous expanded state.
+  // Exit expanded explicitly before continuing normal/freeform QA.
+  await page.getByRole("button", { name: `Exit expanded view ${title}` }).click();
   await page.locator(`[data-shell="${viewport.mode}"] article[data-mode="normal"]`).waitFor({ state: "visible" });
 }
 
