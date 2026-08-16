@@ -304,7 +304,7 @@
   min-height: 58px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px), (max-height: 539px) {
   .header { grid-template-columns: 14px minmax(0, 1fr); padding-left: 10px; }
 
   .box[data-viewport="mobile"].boxModeExpanded {

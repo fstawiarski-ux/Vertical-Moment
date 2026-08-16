@@ -240,6 +240,7 @@ export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
     <article
       className={`${styles.box} ${modeClass} ${dragging ? styles.dragging : ""}`}
       data-viewport={viewportMode}
+      data-mode={box.mode}
       style={inlineStyle}
       onPointerDown={focus}
     >

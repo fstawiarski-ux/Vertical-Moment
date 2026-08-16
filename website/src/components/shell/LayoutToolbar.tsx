@@ -118,13 +118,14 @@ function ActionGroup({ label, children }: { label: string; children: ReactNode }
   );
 }
 
-export function LayoutToolbar({ viewportMode, offlinePack, onSearch, onReplayIntro, followJourney, onToggleFollowJourney }: {
+export function LayoutToolbar({ viewportMode, offlinePack, onSearch, onReplayIntro, followJourney, onToggleFollowJourney, unifiedChrome = false }: {
   viewportMode: ViewportMode;
   offlinePack: string[];
   onSearch: () => void;
   onReplayIntro: () => void;
   followJourney: boolean;
   onToggleFollowJourney: () => void;
+  unifiedChrome?: boolean;
 }) {
   const layoutMode = useLayoutState((state) => state.layoutMode);
   const canUndo = useLayoutState((state) => state.canUndo);
@@ -171,7 +172,7 @@ export function LayoutToolbar({ viewportMode, offlinePack, onSearch, onReplayInt
   if (viewportMode === "mobile") return null;
 
   return (
-    <nav className={styles.toolbar} data-viewport={viewportMode} aria-label="Explore workspace controls">
+    <nav className={styles.toolbar} data-viewport={viewportMode} data-unified={unifiedChrome ? "true" : "false"} aria-label="Explore workspace controls">
       <div className={styles.anchorStack}>
         <button
           type="button"
@@ -185,18 +186,20 @@ export function LayoutToolbar({ viewportMode, offlinePack, onSearch, onReplayInt
           <Icon name="sliders" />
           <span>Tools</span>
         </button>
-        <button
-          type="button"
-          className={styles.anchor}
-          aria-expanded={openPanel === "journey"}
-          aria-controls="explore-journey-panel"
-          aria-label="Open journey controls"
-          title="Journey"
-          onClick={() => setOpenPanel((current) => current === "journey" ? null : "journey")}
-        >
-          <Icon name="replay" />
-          <span>Journey</span>
-        </button>
+        {!unifiedChrome && (
+          <button
+            type="button"
+            className={styles.anchor}
+            aria-expanded={openPanel === "journey"}
+            aria-controls="explore-journey-panel"
+            aria-label="Open journey controls"
+            title="Journey"
+            onClick={() => setOpenPanel((current) => current === "journey" ? null : "journey")}
+          >
+            <Icon name="replay" />
+            <span>Journey</span>
+          </button>
+        )}
       </div>
 
       {openPanel === "tools" && (
@@ -221,6 +224,26 @@ export function LayoutToolbar({ viewportMode, offlinePack, onSearch, onReplayInt
             <HudButton icon="redo" label="Redo" title="Redo layout change" onClick={() => closeAfter(redo)} disabled={!canRedo} />
             <HudButton icon="replay" label="Reset" title="Reset layout" onClick={() => closeAfter(reset)} />
           </ActionGroup>
+          {unifiedChrome && (
+            <>
+              <ActionGroup label="Journey">
+                <HudButton
+                  icon="replay"
+                  label={followJourney ? "Following" : "Follow"}
+                  title={followJourney ? "Hide the station recommendation" : "Show Region, Rock, Sector and Topo recommendations"}
+                  pressed={followJourney}
+                  onClick={onToggleFollowJourney}
+                />
+                <HudButton icon="replay" label="Replay" title="Replay approach journey" onClick={() => closeAfter(onReplayIntro)} />
+                <HudButton icon="contribute" label="Create" title="Open contributor field beta" href="/contribute?source=explore-app" />
+              </ActionGroup>
+              <ActionGroup label="Offline">
+                <div className={styles.offlineButton} title="Save route data and selected media for offline use">
+                  <OfflinePackButton urls={offlinePack} />
+                </div>
+              </ActionGroup>
+            </>
+          )}
         </Panel>
       )}
 
