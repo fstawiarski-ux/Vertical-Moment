@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import { useLayoutState } from "../../core/layoutState";
-import type { LayoutMode, ViewportMode } from "../../core/types";
+import type { LayoutMode, ScrubStationEventDetail, ViewportMode } from "../../core/types";
 import { OfflinePackButton } from "../../pwa/OfflinePackButton";
 import styles from "./LayoutToolbar.module.css";
 
@@ -12,8 +12,18 @@ const modes: Array<{ id: LayoutMode; label: string }> = [
   { id: "presentation", label: "Present" },
 ];
 
+const MODULES = [
+  { id: "crag-locator", label: "Atlas", short: "A" },
+  { id: "nasenwand-spatial", label: "Routes", short: "R" },
+  { id: "wachau-16", label: "360", short: "360" },
+  { id: "nasenwand-model", label: "3D", short: "3D" },
+  { id: "wall-reveal", label: "Wall", short: "W" },
+] as const;
+
+const REVIEWED_TOPO_IDS = ["nasenwand-model", "wachau-16", "crag-locator", "nasenwand-spatial"] as const;
+
 type HudPanel = "tools" | "journey";
-type IconName = "align" | "close" | "contribute" | "download" | "grid" | "layout" | "minus" | "play" | "redo" | "replay" | "search" | "sliders" | "undo";
+type IconName = "align" | "close" | "contribute" | "download" | "grid" | "layout" | "lock" | "minus" | "play" | "redo" | "replay" | "search" | "sliders" | "undo";
 
 function Icon({ name }: { name: IconName }) {
   const common = {
@@ -39,6 +49,8 @@ function Icon({ name }: { name: IconName }) {
       return <svg {...common}><rect x="4" y="4" width="6" height="6" rx="1" /><rect x="14" y="4" width="6" height="6" rx="1" /><rect x="4" y="14" width="6" height="6" rx="1" /><rect x="14" y="14" width="6" height="6" rx="1" /></svg>;
     case "layout":
       return <svg {...common}><rect x="4" y="4" width="6" height="16" rx="1" /><rect x="14" y="4" width="6" height="7" rx="1" /><rect x="14" y="14" width="6" height="6" rx="1" /></svg>;
+    case "lock":
+      return <svg {...common}><rect x="5" y="10" width="14" height="10" rx="2" /><path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg>;
     case "minus":
       return <svg {...common}><path d="M5 12h14" /></svg>;
     case "play":
@@ -68,16 +80,7 @@ function HudButton({ icon, label, title, onClick, disabled = false, pressed, hre
   const content = <><Icon name={icon} /><span>{label}</span></>;
 
   if (href) {
-    return (
-      <a
-        className={styles.hudButton}
-        href={href}
-        title={title}
-        aria-label={title}
-      >
-        {content}
-      </a>
-    );
+    return <a className={styles.hudButton} href={href} title={title} aria-label={title}>{content}</a>;
   }
 
   return (
@@ -118,6 +121,40 @@ function ActionGroup({ label, children }: { label: string; children: ReactNode }
   );
 }
 
+function reviewedTopoFrames(width: number, height: number) {
+  const safe = { top: 68, right: 96, bottom: 48, left: 8 };
+  const usableWidth = Math.max(760, width - safe.left - safe.right);
+  const usableHeight = Math.max(480, height - safe.top - safe.bottom);
+  const edge = 8;
+  const gap = 10;
+  const modelWidth = Math.round(Math.max(230, Math.min(280, usableWidth * 0.18)));
+  const topHeight = Math.round(Math.max(130, Math.min(178, usableHeight * 0.235)));
+  const lowerY = safe.top + topHeight + 18;
+  const lowerHeight = Math.max(230, height - safe.bottom - lowerY - edge);
+  const atlasWidth = Math.round(Math.max(330, Math.min(430, usableWidth * 0.29)));
+  const routesWidth = Math.round(Math.max(320, Math.min(410, usableWidth * 0.275)));
+  const rightEdge = width - safe.right;
+  const modelX = safe.left + edge;
+  const panoramaX = modelX + modelWidth + gap;
+
+  return {
+    "nasenwand-model": { x: modelX, y: safe.top + edge, width: modelWidth, height: topHeight },
+    "wachau-16": {
+      x: panoramaX,
+      y: safe.top + edge,
+      width: Math.max(360, rightEdge - panoramaX - edge),
+      height: topHeight,
+    },
+    "crag-locator": { x: safe.left + edge, y: lowerY, width: atlasWidth, height: lowerHeight },
+    "nasenwand-spatial": {
+      x: Math.max(safe.left + edge, rightEdge - routesWidth - edge),
+      y: lowerY,
+      width: routesWidth,
+      height: lowerHeight,
+    },
+  } as const;
+}
+
 export function LayoutToolbar({ viewportMode, offlinePack, onSearch, onReplayIntro, followJourney, onToggleFollowJourney, unifiedChrome = false }: {
   viewportMode: ViewportMode;
   offlinePack: string[];
@@ -128,6 +165,8 @@ export function LayoutToolbar({ viewportMode, offlinePack, onSearch, onReplayInt
   unifiedChrome?: boolean;
 }) {
   const layoutMode = useLayoutState((state) => state.layoutMode);
+  const boxes = useLayoutState((state) => state.boxes);
+  const activeBoxId = useLayoutState((state) => state.activeBoxId);
   const canUndo = useLayoutState((state) => state.canUndo);
   const canRedo = useLayoutState((state) => state.canRedo);
   const dispatch = useLayoutState((state) => state.dispatch);
@@ -136,10 +175,23 @@ export function LayoutToolbar({ viewportMode, offlinePack, onSearch, onReplayInt
   const reset = useLayoutState((state) => state.reset);
   const [openPanel, setOpenPanel] = useState<HudPanel | null>(null);
   const [shortcut, setShortcut] = useState("Ctrl K");
+  const [layoutLocked, setLayoutLocked] = useState(false);
+  const reviewedTopoApplied = useRef(false);
 
   useEffect(() => {
     if (/mac|iphone|ipad/i.test(navigator.platform || navigator.userAgent)) setShortcut("⌘K");
   }, []);
+
+  useEffect(() => {
+    document.documentElement.dataset.vmLayoutLocked = layoutLocked ? "true" : "false";
+    return () => { delete document.documentElement.dataset.vmLayoutLocked; };
+  }, [layoutLocked]);
+
+  useEffect(() => {
+    if (activeBoxId) document.documentElement.dataset.vmActiveBox = activeBoxId;
+    else delete document.documentElement.dataset.vmActiveBox;
+    return () => { delete document.documentElement.dataset.vmActiveBox; };
+  }, [activeBoxId]);
 
   useEffect(() => {
     if (!openPanel) return;
@@ -157,6 +209,54 @@ export function LayoutToolbar({ viewportMode, offlinePack, onSearch, onReplayInt
     };
   }, [openPanel]);
 
+  const setLock = useCallback((locked: boolean) => {
+    setLayoutLocked(locked);
+    document.documentElement.dataset.vmLayoutLocked = locked ? "true" : "false";
+  }, []);
+
+  const applyReviewedTopoLayout = useCallback(() => {
+    if (viewportMode !== "desktop" || !unifiedChrome) return;
+    const frames = reviewedTopoFrames(window.innerWidth, window.innerHeight);
+    dispatch({ type: "SET_LAYOUT_MODE", mode: "explore" });
+    for (const id of REVIEWED_TOPO_IDS) {
+      dispatch({ type: "SET_BOX_MODE", id, mode: "normal" });
+      dispatch({ type: "UPDATE_BOX", id, patch: frames[id] });
+    }
+    dispatch({ type: "SET_BOX_MODE", id: "wall-reveal", mode: "minimized" });
+    dispatch({ type: "SET_ACTIVE_BOX", id: "nasenwand-model" });
+    if (followJourney) onToggleFollowJourney();
+    setLock(true);
+    reviewedTopoApplied.current = true;
+  }, [dispatch, followJourney, onToggleFollowJourney, setLock, unifiedChrome, viewportMode]);
+
+  useEffect(() => {
+    const onStation = (event: Event) => {
+      const detail = (event as CustomEvent<ScrubStationEventDetail>).detail;
+      if (!detail?.station) return;
+      if (detail.station !== "topo") {
+        reviewedTopoApplied.current = false;
+        setLock(false);
+        return;
+      }
+      if (detail.phase === "arrived" && viewportMode === "desktop" && unifiedChrome) {
+        window.requestAnimationFrame(() => applyReviewedTopoLayout());
+      }
+    };
+    window.addEventListener("vm:scrub-station", onStation);
+    return () => window.removeEventListener("vm:scrub-station", onStation);
+  }, [applyReviewedTopoLayout, setLock, unifiedChrome, viewportMode]);
+
+  /* Static/reduced-motion arrivals emit their Topo event before this toolbar is
+     mounted. Detect the canonical one-box Topo handoff once and promote it to
+     the reviewed four-box arrival composition. */
+  useEffect(() => {
+    if (viewportMode !== "desktop" || !unifiedChrome || !followJourney || reviewedTopoApplied.current) return;
+    const visible = boxes.filter((box) => box.mode !== "minimized");
+    if (visible.length !== 1 || visible[0]?.id !== "nasenwand-model") return;
+    const timer = window.setTimeout(() => applyReviewedTopoLayout(), 180);
+    return () => window.clearTimeout(timer);
+  }, [applyReviewedTopoLayout, boxes, followJourney, unifiedChrome, viewportMode]);
+
   const closeAfter = (run: () => void) => {
     run();
     setOpenPanel(null);
@@ -167,39 +267,68 @@ export function LayoutToolbar({ viewportMode, offlinePack, onSearch, onReplayInt
     viewport: { width: window.innerWidth, height: window.innerHeight },
   }));
 
-  const setMode = (mode: LayoutMode) => closeAfter(() => dispatch({ type: "SET_LAYOUT_MODE", mode }));
+  const setMode = (mode: LayoutMode) => closeAfter(() => {
+    setLock(false);
+    dispatch({ type: "SET_LAYOUT_MODE", mode });
+  });
+
+  const openModule = (id: string) => {
+    setLock(false);
+    window.dispatchEvent(new CustomEvent("vm:focus-box", { detail: { id, mode: "normal" } }));
+  };
+
+  const toggleLock = () => setLock(!layoutLocked);
 
   if (viewportMode === "mobile") return null;
 
   return (
     <nav className={styles.toolbar} data-viewport={viewportMode} data-unified={unifiedChrome ? "true" : "false"} aria-label="Explore workspace controls">
-      <div className={styles.anchorStack}>
+      <div className={styles.rail} aria-label="Persistent workspace rail">
+        <button type="button" className={styles.railButton} data-active={layoutLocked ? "true" : "false"} onClick={toggleLock} title={layoutLocked ? "Unlock layout" : "Lock layout"} aria-pressed={layoutLocked}>
+          <Icon name="lock" /><span>{layoutLocked ? "Locked" : "Lock"}</span>
+        </button>
+        <button type="button" className={styles.railButton} data-active={layoutMode === "explore" ? "true" : "false"} onClick={() => setMode("explore")} title="Explore layout"><Icon name="layout" /><span>Explore</span></button>
+        <button type="button" className={styles.railButton} data-active={layoutMode === "grid" ? "true" : "false"} onClick={() => setMode("grid")} title="Grid layout"><Icon name="grid" /><span>Grid</span></button>
+        <button type="button" className={styles.railButton} data-active={layoutMode === "presentation" ? "true" : "false"} onClick={() => setMode("presentation")} title="Presentation layout"><Icon name="play" /><span>Present</span></button>
+        <button type="button" className={styles.railButton} onClick={() => { setLock(false); autoLayout(); }} title="Auto-align workspace"><Icon name="align" /><span>Align</span></button>
+
+        <span className={styles.divider} aria-hidden="true" />
+        <span className={styles.railLabel}>Modules</span>
+        {MODULES.map((module) => {
+          const box = boxes.find((candidate) => candidate.id === module.id);
+          const open = Boolean(box && box.mode !== "minimized");
+          const active = activeBoxId === module.id;
+          return (
+            <button
+              key={module.id}
+              type="button"
+              className={styles.moduleButton}
+              data-open={open ? "true" : "false"}
+              data-active={active ? "true" : "false"}
+              onClick={() => openModule(module.id)}
+              title={`${open ? "Focus" : "Open"} ${module.label}`}
+              aria-label={`${open ? "Focus" : "Open"} ${module.label} module`}
+              aria-pressed={active}
+            >
+              <strong>{module.short}</strong><span>{module.label}</span>
+            </button>
+          );
+        })}
+
+        <span className={styles.divider} aria-hidden="true" />
         <button
           type="button"
-          className={styles.anchor}
+          className={styles.railButton}
+          data-active={openPanel === "tools" ? "true" : "false"}
           aria-expanded={openPanel === "tools"}
           aria-controls="explore-tools-panel"
-          aria-label="Open workspace tools"
-          title="Tools"
           onClick={() => setOpenPanel((current) => current === "tools" ? null : "tools")}
+          title="More tools"
         >
-          <Icon name="sliders" />
-          <span>Tools</span>
+          <Icon name="sliders" /><span>Tools</span>
         </button>
-        {!unifiedChrome && (
-          <button
-            type="button"
-            className={styles.anchor}
-            aria-expanded={openPanel === "journey"}
-            aria-controls="explore-journey-panel"
-            aria-label="Open journey controls"
-            title="Journey"
-            onClick={() => setOpenPanel((current) => current === "journey" ? null : "journey")}
-          >
-            <Icon name="replay" />
-            <span>Journey</span>
-          </button>
-        )}
+        <button type="button" className={styles.railButton} onClick={undo} disabled={!canUndo} title="Undo layout change"><Icon name="undo" /><span>Undo</span></button>
+        <button type="button" className={styles.railButton} onClick={redo} disabled={!canRedo} title="Redo layout change"><Icon name="redo" /><span>Redo</span></button>
       </div>
 
       {openPanel === "tools" && (
@@ -218,11 +347,12 @@ export function LayoutToolbar({ viewportMode, offlinePack, onSearch, onReplayInt
             ))}
           </ActionGroup>
           <ActionGroup label="Arrange">
-            <HudButton icon="align" label="Align" title="Auto-align workspace" onClick={autoLayout} />
+            <HudButton icon="lock" label={layoutLocked ? "Unlock" : "Lock"} title={layoutLocked ? "Unlock freeform layout" : "Lock freeform layout"} pressed={layoutLocked} onClick={toggleLock} />
+            <HudButton icon="align" label="Align" title="Auto-align workspace" onClick={() => { setLock(false); autoLayout(); }} />
             <HudButton icon="minus" label="Collapse all" title="Minimize all boxes" onClick={() => closeAfter(() => dispatch({ type: "MINIMIZE_ALL" }))} />
             <HudButton icon="undo" label="Undo" title="Undo layout change" onClick={() => closeAfter(undo)} disabled={!canUndo} />
             <HudButton icon="redo" label="Redo" title="Redo layout change" onClick={() => closeAfter(redo)} disabled={!canRedo} />
-            <HudButton icon="replay" label="Reset" title="Reset layout" onClick={() => closeAfter(reset)} />
+            <HudButton icon="replay" label="Reset" title="Reset layout" onClick={() => closeAfter(() => { setLock(false); reset(); })} />
           </ActionGroup>
           {unifiedChrome && (
             <>
@@ -230,7 +360,7 @@ export function LayoutToolbar({ viewportMode, offlinePack, onSearch, onReplayInt
                 <HudButton
                   icon="replay"
                   label={followJourney ? "Following" : "Follow"}
-                  title={followJourney ? "Hide the station recommendation" : "Show Region, Rock, Sector and Topo recommendations"}
+                  title={followJourney ? "Journey is controlling the current station" : "Follow Region, Rock, Sector and Topo recommendations"}
                   pressed={followJourney}
                   onClick={onToggleFollowJourney}
                 />
@@ -244,27 +374,6 @@ export function LayoutToolbar({ viewportMode, offlinePack, onSearch, onReplayInt
               </ActionGroup>
             </>
           )}
-        </Panel>
-      )}
-
-      {openPanel === "journey" && (
-        <Panel id="explore-journey-panel" title="Journey" onClose={() => setOpenPanel(null)}>
-          <ActionGroup label="Journey">
-            <HudButton
-              icon="replay"
-              label={followJourney ? "Following" : "Follow"}
-              title={followJourney ? "Hide the station recommendation" : "Show Region, Rock, Sector and Topo recommendations"}
-              pressed={followJourney}
-              onClick={onToggleFollowJourney}
-            />
-            <HudButton icon="replay" label="Replay" title="Replay approach journey" onClick={() => closeAfter(onReplayIntro)} />
-            <HudButton icon="contribute" label="Create" title="Open contributor field beta" href="/contribute?source=explore-app" />
-          </ActionGroup>
-          <ActionGroup label="Offline">
-            <div className={styles.offlineButton} title="Save route data and selected media for offline use">
-              <OfflinePackButton urls={offlinePack} />
-            </div>
-          </ActionGroup>
         </Panel>
       )}
     </nav>

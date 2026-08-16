@@ -1,20 +1,37 @@
 "use client";
 
-import { useState } from "react";
-import type { BoxState, ExploreContentBox, ExploreContentRegistry, ViewportMode } from "../../core/types";
+import type { BoxState, ExploreContentBox, ExploreContentRegistry, JourneyStation, ViewportMode } from "../../core/types";
 import type { ResolvedWorkspaceManifest } from "../../core/workspaceManifest";
-import styles from "../../ExploreApp.module.css";
+import styles from "./WorkspaceTopRail.module.css";
+
+const STAGES: ReadonlyArray<{ id: JourneyStation; label: string; detail: string; icon: string }> = [
+  { id: "region", label: "Region", detail: "Atlas", icon: "⌖" },
+  { id: "rock", label: "Rock", detail: "Panorama", icon: "◔" },
+  { id: "sector", label: "Sector", detail: "Routes", icon: "⌁" },
+  { id: "topo", label: "Topo", detail: "Route detail", icon: "M" },
+] as const;
+
+const STATION_BY_BOX_ID: Record<string, JourneyStation> = {
+  "crag-locator": "region",
+  "wall-reveal": "rock",
+  "nasenwand-spatial": "sector",
+  "nasenwand-model": "topo",
+};
+
+function requestStation(station: JourneyStation) {
+  window.dispatchEvent(new CustomEvent("vm:preview-station-request", { detail: { station } }));
+}
 
 export function WorkspaceTopRail({
-  registry,
-  workspace,
-  boxes,
-  activeBoxId,
+  registry: _registry,
+  workspace: _workspace,
+  boxes: _boxes,
+  activeBoxId: _activeBoxId,
   stationContent,
   viewportMode,
-  onOpenBox,
+  onOpenBox: _onOpenBox,
   onSearch,
-  onContribute,
+  onContribute: _onContribute,
   onToggleJourney,
   followJourney,
 }: {
@@ -30,76 +47,42 @@ export function WorkspaceTopRail({
   onToggleJourney: () => void;
   followJourney: boolean;
 }) {
-  const [modulesOpen, setModulesOpen] = useState(false);
-  const selected = boxes.find((box) => box.id === activeBoxId && box.mode !== "minimized")
-    ?? boxes.find((box) => box.mode !== "minimized")
-    ?? boxes[0];
-  const primary = workspace.phone.primaryModuleIds
-    .map((id) => registry.boxes.find((content) => content.id === id))
-    .filter((content): content is ExploreContentBox => Boolean(content));
+  const station = stationContent ? STATION_BY_BOX_ID[stationContent.id] ?? "region" : "region";
+  const stationIndex = STAGES.findIndex((candidate) => candidate.id === station);
 
-  const openContent = (id: string) => {
-    setModulesOpen(false);
-    onOpenBox(id);
+  const flyTo = (next: JourneyStation) => {
+    if (!followJourney) onToggleJourney();
+    requestStation(next);
   };
 
   return (
-    <header className={styles.workspaceTopChrome} data-viewport={viewportMode}>
-      <nav className={styles.workspaceTopRail} aria-label={`${viewportMode === "tablet" ? "Tablet" : "Desktop"} Explore navigation`}>
-        <button type="button" aria-pressed={followJourney} onClick={onToggleJourney}>Journey</button>
-        {primary.map((content) => (
+    <header className={styles.chrome} data-viewport={viewportMode}>
+      <nav className={styles.rail} aria-label={`${viewportMode === "tablet" ? "Tablet" : "Desktop"} Explore journey`}>
+        {STAGES.map((candidate, index) => (
           <button
-            key={content.id}
+            key={candidate.id}
             type="button"
-            aria-current={!followJourney && content.id === selected?.id ? "page" : undefined}
-            onClick={() => openContent(content.id)}
+            className={styles.stage}
+            data-current={candidate.id === station ? "true" : "false"}
+            data-passed={index < stationIndex ? "true" : "false"}
+            aria-current={candidate.id === station ? "step" : undefined}
+            onClick={() => flyTo(candidate.id)}
           >
-            {content.mobileLabel ?? content.title}
+            <span className={styles.icon} aria-hidden="true">{candidate.icon}</span>
+            <span className={styles.copy}>
+              <strong>{candidate.label}</strong>
+              <small>{candidate.detail}</small>
+            </span>
           </button>
         ))}
-        <button
-          type="button"
-          aria-expanded={modulesOpen}
-          aria-controls="large-screen-module-menu"
-          onClick={() => setModulesOpen((value) => !value)}
-        >
-          Modules
+        <button type="button" className={styles.search} onClick={onSearch} aria-label="Search the Explore workspace">
+          <span className={styles.searchIcon} aria-hidden="true">⌕</span>
+          <span className={styles.copy}>
+            <strong>Search</strong>
+            <small>Ctrl K</small>
+          </span>
         </button>
-        <button type="button" onClick={onSearch} aria-label="Search the Explore workspace">Search</button>
       </nav>
-
-      {modulesOpen && (
-        <section className={styles.workspaceModuleMenu} id="large-screen-module-menu" aria-label="Explore modules">
-          <header>
-            <div>
-              <small>Open intentionally</small>
-              <strong>{stationContent?.title ?? "Explore modules"}</strong>
-            </div>
-            <button type="button" onClick={() => setModulesOpen(false)} aria-label="Close module menu">Close</button>
-          </header>
-          <div>
-            {registry.boxes.map((content) => {
-              const box = boxes.find((candidate) => candidate.id === content.id);
-              const isCurrent = content.id === selected?.id;
-              return (
-                <button
-                  key={content.id}
-                  type="button"
-                  aria-current={isCurrent ? "page" : undefined}
-                  onClick={() => openContent(content.id)}
-                >
-                  <span>{content.mobileLabel ?? content.title}</span>
-                  <small>{box?.mode === "minimized" ? "Open" : "Current"}</small>
-                </button>
-              );
-            })}
-            <button type="button" onClick={() => { setModulesOpen(false); onContribute(); }}>
-              <span>Add contribution</span>
-              <small>Field beta</small>
-            </button>
-          </div>
-        </section>
-      )}
     </header>
   );
 }

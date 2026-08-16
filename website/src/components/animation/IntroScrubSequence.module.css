@@ -46,9 +46,9 @@
   cursor: pointer;
   transition: background 160ms ease, transform 160ms ease;
 }
-
 .skip:hover,
 .skip:focus-visible { outline: 2px solid #f4eedf; outline-offset: 3px; background: #e2cf9a; }
+
 .timeline {
   position: absolute;
   bottom: max(16px, env(safe-area-inset-bottom));
@@ -100,6 +100,31 @@
 .trackRow output { min-width: 40px; color: #d2bd87; font: 700 11px/1 ui-monospace, SFMono-Regular, Consolas, monospace; text-align: right; }
 .visuallyHidden { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
+/* Spatial Focus V4: once the workspace is unlocked, Region/Rock/Sector/Topo
+   move to the fixed top rail. The lower control becomes a thin, uninterrupted
+   0–100% scrub only. The input and its event logic are unchanged. */
+@media (min-width: 768px) and (min-height: 540px) {
+  .timeline[data-unlocked="true"],
+  .timeline[data-unlocked="true"]:hover,
+  .timeline[data-unlocked="true"]:focus-within {
+    right: 88px;
+    bottom: max(4px, env(safe-area-inset-bottom));
+    left: max(6px, env(safe-area-inset-left));
+    width: auto;
+    gap: 0;
+    padding: 2px 8px 3px;
+    opacity: 1;
+    border-radius: 10px 0 0 10px;
+    background: rgb(7 13 9 / 82%);
+    transform: none;
+    transform-origin: center bottom;
+  }
+  .timeline[data-unlocked="true"] .chapterLabels { display: none; }
+  .timeline[data-unlocked="true"] .trackRow { gap: 8px; }
+  .timeline[data-unlocked="true"] .trackRow input { height: 26px; }
+  .timeline[data-unlocked="true"] .trackRow output { min-width: 34px; font-size: 8px; }
+}
+
 @media (max-width: 767px), (max-height: 539px) {
   .video { object-position: 52% center !important; }
   .introCopy { right: 18px; bottom: 108px; left: 18px; align-items: flex-start; text-align: left; }
@@ -131,7 +156,8 @@
   .timeline[data-unlocked="true"]:focus-within { transition: none; }
 }
 
-/* V3 phone composition: the Region / Rock / Sector / Topo rail is viewport-locked. */
+/* V3 phone composition remains intact: phone is still a single-active-card
+   shell and keeps its own reachable station labels. */
 .sequence:has(~ [data-shell="phone"][data-phone-preview="minimal-fixed"]) .timeline,
 .sequence:has(~ [data-shell="phone"][data-phone-preview="minimal-fixed"]) .timeline[data-unlocked="true"],
 .sequence:has(~ [data-shell="phone"][data-phone-preview="minimal-fixed"]) .timeline[data-unlocked="true"]:hover,
