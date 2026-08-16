@@ -348,3 +348,45 @@
 @media (prefers-reduced-motion: reduce) {
   .box { transition: none; }
 }
+/* MODULE-CHROME-CONTRACT
+   The global Explore navigation owns the northern visual layer.
+   Normal modules must not paint a handle, title/eyebrow, or three-button
+   window bar on phone, tablet, or desktop. */
+.box[data-mode="normal"] .handle,
+.box[data-mode="normal"] .heading,
+.box[data-mode="normal"] .windowControls,
+.boxModeExpanded .handle,
+.boxModeExpanded .heading,
+.boxModeFullscreen .handle,
+.boxModeFullscreen .heading {
+  display: none;
+}
+
+/* Keep a narrow invisible desktop drag surface without consuming visual space. */
+.box[data-mode="normal"] .header {
+  min-height: 12px;
+  grid-template-columns: 1fr;
+  gap: 0;
+  padding: 0;
+  border-bottom: 0;
+  background: transparent;
+}
+
+/* Tablet and phone do not need a freeform drag strip. */
+.box[data-viewport="tablet"][data-mode="normal"] .header,
+.box[data-viewport="mobile"][data-mode="normal"] .header {
+  height: 0;
+  min-height: 0;
+}
+
+/* Never restore the old three-button bar.
+   Exceptional states expose only the control required to escape that state. */
+.boxModeExpanded .windowControls button,
+.boxModeFullscreen .windowControls button {
+  display: none;
+}
+
+.boxModeExpanded .windowControls button:nth-child(2),
+.boxModeFullscreen .windowControls button:nth-child(3) {
+  display: grid;
+}

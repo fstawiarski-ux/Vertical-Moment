@@ -117,22 +117,20 @@ async function assertStation(page, viewport, station) {
     assert(await phone.locator("article").count() === 1, `${viewport.name}/${station.id}: phone must render exactly one article`);
   } else {
     const shell = page.locator(`[data-shell="${viewport.mode}"]`);
-    await page.waitForFunction(
-      ({ mode, title }) => {
-        const root = document.querySelector(`[data-shell="${mode}"]`);
-        if (!root) return false;
-        const articles = [...root.querySelectorAll('article[data-mode="normal"]')];
-        return articles.length === 1 && articles[0]?.querySelector("h2")?.textContent?.trim() === title;
-      },
-      { mode: viewport.mode, title: station.title },
-    );
+    await shell.locator(`article[data-mode="normal"][data-box-id="${station.moduleId}"]`).waitFor({ state: "visible" });
     assert(await shell.locator('article[data-mode="normal"]').count() === 1, `${viewport.name}/${station.id}: unified journey must show one normal module`);
   }
+
+  const activeArticle = page.locator(`[data-shell="${viewport.mode}"] article[data-box-id="${station.moduleId}"]`);
+  assert(await activeArticle.getAttribute("data-module-chrome") === "minimal", `${viewport.name}/${station.id}: minimal module chrome contract missing`);
+  assert(await activeArticle.locator('[data-module-handle="true"]').isHidden(), `${viewport.name}/${station.id}: upper-left drag ornament is visible`);
+  assert(await activeArticle.locator('[data-module-heading="true"]').isHidden(), `${viewport.name}/${station.id}: upper-left module description is visible`);
+  assert(await activeArticle.locator('[data-module-window-controls="true"]').isHidden(), `${viewport.name}/${station.id}: normal three-button window bar is visible`);
 
   await assertNoHorizontalOverflow(page, viewport);
   await assertChrome(page, viewport);
 
-  if (station.id === "topo" && viewport.mode !== "mobile") {
+  if (viewport.mode !== "mobile") {
     const article = page.locator(`[data-shell="${viewport.mode}"] article[data-mode="normal"]`);
     const articleBox = await article.boundingBox();
     const navName = `${viewport.mode === "tablet" ? "Tablet" : "Desktop"} Explore navigation`;
@@ -178,22 +176,22 @@ async function assertDesktopDragResize(page) {
   const title = "Nasenwand 3D";
   const beforeDrag = await article.boundingBox();
   assert(beforeDrag, "desktop: active module has no initial geometry");
-  const heading = page.getByRole("heading", { name: title });
-  const headingBox = await heading.boundingBox();
-  assert(headingBox, "desktop: draggable heading has no geometry");
-  await page.mouse.move(headingBox.x + headingBox.width / 2, headingBox.y + headingBox.height / 2);
+  const dragSurface = article.locator('[data-drag-surface="true"]');
+  const dragBox = await dragSurface.boundingBox();
+  assert(dragBox, "desktop: invisible drag surface has no geometry");
+  await page.mouse.move(dragBox.x + Math.min(80, dragBox.width / 2), dragBox.y + Math.max(2, dragBox.height / 2));
   await page.mouse.down();
-  await page.mouse.move(headingBox.x + headingBox.width / 2 + 48, headingBox.y + headingBox.height / 2 + 24, { steps: 5 });
+  await page.mouse.move(dragBox.x + Math.min(80, dragBox.width / 2) + 48, dragBox.y + Math.max(2, dragBox.height / 2) + 24, { steps: 5 });
   await page.mouse.up();
   const afterDrag = await article.boundingBox();
   assert(afterDrag, "desktop: active module geometry missing after drag");
   assert(Math.abs(afterDrag.x - beforeDrag.x) >= 10 || Math.abs(afterDrag.y - beforeDrag.y) >= 10, "desktop: drag did not move module");
 
   for (const direction of ["n", "ne", "e", "se", "s", "sw", "w", "nw"]) {
-    assert(await page.getByRole("button", { name: `Resize ${title} from ${direction}` }).count() === 1, `desktop: missing ${direction} resize handle`);
+    assert(await page.getByRole("button", { name: `Resize ${title} from ${direction}`, exact: true }).count() === 1, `desktop: missing ${direction} resize handle`);
   }
 
-  const resize = page.getByRole("button", { name: `Resize ${title} from se` });
+  const resize = page.getByRole("button", { name: `Resize ${title} from se`, exact: true });
   const resizeBox = await resize.boundingBox();
   assert(resizeBox, "desktop: southeast resize handle missing");
   await page.mouse.move(resizeBox.x + resizeBox.width / 2, resizeBox.y + resizeBox.height / 2);
@@ -230,7 +228,8 @@ try {
         results.push({ viewport: viewport.name, width: viewport.width, height: viewport.height, mode: viewport.mode, station: station.id, module: station.moduleId, screenshot: filename, status: "pass" });
       }
 
-      await assertExpandedFullscreen(page, viewport);
+      // Normal module chrome intentionally exposes no expand/fullscreen entry bar.
+      // Exceptional persisted states retain a single escape control in the UI.
       if (viewport.mode === "desktop") {
         // Journey follow intentionally owns the compact safe-zone frame. Turn it
         // off before proving the preserved freeform desktop drag/resize contract.
