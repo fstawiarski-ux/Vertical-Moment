@@ -261,3 +261,62 @@ body:has(section[aria-label="Wachau approach scrub sequence"]) [role="status"] {
   section[data-shell="phone"] > [data-role="phone-stage"],
   section[data-shell="phone"] > [data-role="phone-nav"] { animation: none !important; transition: none !important; }
 }
+/* PHONE-EXPANDED-STATE-HOTFIX
+   Escape the compact phone-stage sizing for explicit expanded/fullscreen states.
+   These selectors intentionally outrank the legacy phone-stage module rules. */
+
+section[data-shell="phone"] > [data-role="phone-stage"]:has(> article[data-mode="expanded"]) {
+  z-index: 9850 !important;
+}
+
+section[data-shell="phone"] > [data-role="phone-stage"]:has(> article[data-mode="fullscreen"]) {
+  z-index: 9900 !important;
+}
+
+section[data-shell="phone"] > [data-role="phone-stage"] > article[data-viewport="mobile"][data-mode="expanded"] {
+  position: fixed !important;
+  inset: 66px 12px 12px !important;
+  z-index: 9850 !important;
+  width: auto !important;
+  height: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  transform: none !important;
+}
+
+section[data-shell="phone"] > [data-role="phone-stage"] > article[data-viewport="mobile"][data-mode="fullscreen"] {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 9900 !important;
+  width: 100vw !important;
+  height: 100dvh !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  transform: none !important;
+  border-radius: 0 !important;
+}
+
+section[data-shell="phone"] > [data-role="phone-stage"] > article[data-viewport="mobile"][data-mode="expanded"] [data-drag-surface="true"],
+section[data-shell="phone"] > [data-role="phone-stage"] > article[data-viewport="mobile"][data-mode="fullscreen"] [data-drag-surface="true"] {
+  display: grid !important;
+  min-height: 38px !important;
+  height: 38px !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  padding: 0 8px 0 10px !important;
+  border-bottom: 1px solid rgb(255 255 255 / 8%) !important;
+  background: linear-gradient(180deg, rgb(7 13 9 / 72%), rgb(7 13 9 / 32%)) !important;
+}
+
+section[data-shell="phone"] > [data-role="phone-stage"] > article[data-viewport="mobile"][data-mode="expanded"] [data-module-window-controls="true"],
+section[data-shell="phone"] > [data-role="phone-stage"] > article[data-viewport="mobile"][data-mode="fullscreen"] [data-module-window-controls="true"] {
+  display: flex !important;
+  right: 8px !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+@media (min-width: 768px) and (max-height: 539px) {
+  section[data-shell="phone"] > [data-role="phone-stage"] > article[data-viewport="mobile"][data-mode="expanded"] {
+    inset: 10px 82px 10px 10px !important;
+  }
+}
