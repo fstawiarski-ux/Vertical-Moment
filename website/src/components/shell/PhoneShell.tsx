@@ -31,8 +31,7 @@ export function PhoneShell({
   onOpenBox,
   onSearch,
   onContribute,
-  onToggleJourney,
-  followJourney,
+  onReplayJourney,
 }: {
   registry: ExploreContentRegistry;
   workspace: ResolvedWorkspaceManifest;
@@ -43,14 +42,11 @@ export function PhoneShell({
   onOpenBox: (id: string) => void;
   onSearch: () => void;
   onContribute: () => void;
-  onToggleJourney: () => void;
-  followJourney: boolean;
+  onReplayJourney: () => void;
 }) {
   const [moreOpen, setMoreOpen] = useState(false);
   const [phonePreview, setPhonePreview] = useState<PhonePreviewVariant>("hero-first");
   const [fieldOpsAvailable, setFieldOpsAvailable] = useState(false);
-  void onToggleJourney;
-  void followJourney;
 
   useEffect(() => {
     setPhonePreview(resolvePhonePreview());
@@ -137,6 +133,7 @@ export function PhoneShell({
               {content.title}
             </button>
           ))}
+          <button type="button" aria-label="Replay the Region to Topo journey" onClick={() => { setMoreOpen(false); onReplayJourney(); }}>Replay Journey</button>
           <button type="button" onClick={() => { setMoreOpen(false); onContribute(); }}>Add contribution</button>
           {fieldOpsAvailable && (
             <button type="button" onClick={() => window.location.assign("/explore-app/field")}>Field Ops · private</button>

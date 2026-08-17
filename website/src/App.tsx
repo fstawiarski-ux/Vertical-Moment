@@ -614,7 +614,8 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
         sequence={registry.introScrubSequence}
         mode={introMode}
         onUnlock={handleUnlock}
-        allowPostUnlockScrub={false}
+        allowPostUnlockScrub={true}
+        allowPostUnlockStationRequests={false}
       />
       {stationPeekVisible && (
         <StationPeek
@@ -637,8 +638,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
           onOpenBox={openPhoneBox}
           onSearch={() => openPalette("")}
           onContribute={openContributor}
-          onToggleJourney={() => setFollowJourney((current) => !current)}
-          followJourney={followJourney}
+          onReplayJourney={replayIntro}
         />
       )}
       {workspaceUnlocked && unifiedHierarchy && (

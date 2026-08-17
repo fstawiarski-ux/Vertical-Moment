@@ -50,13 +50,15 @@ function wheelDeltaInPixels(event: ReactWheelEvent<HTMLDivElement>) {
 
 export type UnlockReason = "completed" | "skipped" | "static";
 
-export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockScrub = false, onFirstMove }: {
+export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockScrub = false, allowPostUnlockStationRequests = false, onFirstMove }: {
   sequence: ScrollScrubSequenceAsset;
   /** null while the visitor's intro preference is still being read. */
   mode: IntroMode | null;
   onUnlock: (reason: UnlockReason) => void;
-  /** Lets a review shell keep the arrival footage alive behind its workspace. */
+  /** Keeps the compact media scrub available after workspace unlock. */
   allowPostUnlockScrub?: boolean;
+  /** Explicit escape hatch for shells that intentionally want post-unlock choreography. */
+  allowPostUnlockStationRequests?: boolean;
   /** Fires once on the first meaningful scrub, drag, button or slider move. */
   onFirstMove?: () => void;
 }) {
@@ -135,7 +137,7 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
     progressRef.current = next;
     setProgress(next);
     const station = stationForProgress(next);
-    if (!suppressPreviewRef.current && station !== lastAnnouncedStationRef.current) {
+    if (!unlockedRef.current && !suppressPreviewRef.current && station !== lastAnnouncedStationRef.current) {
       lastAnnouncedStationRef.current = station;
       announceStation(station, "preview", source, next);
     }
@@ -200,12 +202,23 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
     flightFrameRef.current = requestAnimationFrame(tick);
   }, [animateFlights, announceStation, cancelFlight, moveTo]);
 
+  const moveToStation = useCallback((station: ScrubStation) => {
+    if (!unlockedRef.current) {
+      flyToStation(station);
+      return;
+    }
+    // After unlock, station labels are media bookmarks only. They must never
+    // emit journey events or regain ownership of module state/geometry.
+    cancelFlight();
+    moveTo(station.progress, "button");
+  }, [cancelFlight, flyToStation, moveTo]);
+
   useEffect(() => {
     const onStationRequest = (event: Event) => {
-      // Station-flight requests belong to onboarding. Once unlocked, the only
-      // supported way to make the hero move again is an explicit Replay, which
-      // remounts this sequence in its locked/cinematic phase.
-      if (unlockedRef.current && !allowPostUnlockScrub) return;
+      // Station-flight requests and media scrubbing are separate permissions.
+      // Replay remounts this sequence locked/cinematic, so normal post-unlock
+      // navigation cannot silently restart module choreography.
+      if (unlockedRef.current && !allowPostUnlockStationRequests) return;
       const detail = (event as CustomEvent<{ station?: JourneyStation }>).detail;
       const target = detail?.station
         ? SCRUB_STATIONS.find((candidate) => candidate.id === detail.station)
@@ -214,7 +227,7 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
     };
     window.addEventListener("vm:preview-station-request", onStationRequest);
     return () => window.removeEventListener("vm:preview-station-request", onStationRequest);
-  }, [allowPostUnlockScrub, flyToStation]);
+  }, [allowPostUnlockStationRequests, flyToStation]);
 
   const skip = useCallback(() => {
     cancelFlight();
@@ -333,7 +346,7 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
                 type="button"
                 aria-label={`Fly to ${station.label}`}
                 aria-current={Math.abs(progress - station.progress) < 0.015 ? "step" : undefined}
-                onClick={() => flyToStation(station)}
+                onClick={() => moveToStation(station)}
               >
                 {station.label}
               </button>

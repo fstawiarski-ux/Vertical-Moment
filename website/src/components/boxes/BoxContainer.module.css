@@ -78,7 +78,10 @@
 .heading h2 {
   overflow: hidden;
   margin: 1px 0 0;
-  font: 600 12px/1.1 Arial, sans-serif;
+  font-family: var(--disp, Georgia, serif);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.1;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -221,8 +224,7 @@
 }
 
 .boxModeMinimized .windowControls button:first-child::after {
-  content: "+";
-  font-size: 20px;
+  content: none;
 }
 
 .boxModeExpanded,
@@ -389,4 +391,9 @@
 .boxModeExpanded .windowControls button:nth-child(2),
 .boxModeFullscreen .windowControls button:nth-child(3) {
   display: grid;
+}
+
+/* Keep desktop fullscreen window controls clear of the persistent right rail. */
+.box[data-viewport="desktop"].boxModeFullscreen .windowControls {
+  right: var(--explore-safe-right, 106px);
 }

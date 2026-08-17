@@ -1,15 +1,14 @@
 /*
  * HERO-FIRST REVIEW CONTRACT
  * --------------------------
- * The scrub sequence is onboarding. Once unlocked it becomes a static hero
- * canvas until the visitor explicitly chooses Replay Journey. Normal modules
- * start as compact inspectors; maximize/fullscreen are opt-in.
+ * The journey choreography is onboarding. Once unlocked, module geometry is
+ * user-owned, while the hero media remains independently scrub-able. Replay
+ * Journey is the only operation that reconnects journey choreography to the
+ * modules. Normal modules start compact; maximize/fullscreen are opt-in.
  */
 
-/* Once onboarding has unlocked, remove the scrub UI and all gesture capture. */
-section[aria-label="Wachau approach scrub sequence"][data-unlocked="true"] > div:has(#explore-intro-timeline) {
-  display: none !important;
-}
+/* After unlock the compact timeline remains live, but the full-screen gesture
+   layer stays passive so it cannot steal pointer input from workspace modules. */
 section[aria-label="Wachau approach scrub sequence"][data-unlocked="true"] > div[class*="gestureLayer"] {
   pointer-events: none !important;
   cursor: default !important;
@@ -55,7 +54,11 @@ section[data-shell="phone"] > [data-role="phone-nav"] button {
   border: 1px solid transparent;
   border-radius: 10px;
   background: transparent;
-  font: 700 8px/1 Arial, sans-serif;
+  font-family: inherit;
+  font-size: clamp(.72rem, 2.55vw, .84rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: .015em;
   text-overflow: ellipsis;
   white-space: nowrap;
 }

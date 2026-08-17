@@ -137,13 +137,22 @@
     border-radius: 12px;
     transform: none;
   }
-  .timeline[data-unlocked="true"] { transform: scale(.92); transform-origin: right bottom; }
-  .timeline[data-unlocked="true"] { bottom: max(146px, calc(env(safe-area-inset-bottom) + 146px)); }
+  .timeline[data-unlocked="true"],
   .timeline[data-unlocked="true"]:hover,
-  .timeline[data-unlocked="true"]:focus-within { transform: scale(1); }
+  .timeline[data-unlocked="true"]:focus-within {
+    bottom: max(220px, calc(env(safe-area-inset-bottom) + 220px));
+    gap: 0;
+    padding: 3px 7px 4px;
+    opacity: .82;
+    transform: none;
+  }
+  .timeline[data-unlocked="true"]:hover,
+  .timeline[data-unlocked="true"]:focus-within { opacity: 1; }
+  .timeline[data-unlocked="true"] .chapterLabels { display: none; }
+  .timeline[data-unlocked="true"] .trackRow { gap: 7px; }
+  .timeline[data-unlocked="true"] .trackRow input { height: 28px; }
+  .timeline[data-unlocked="true"] .trackRow output { min-width: 34px; font-size: 9px; }
   .chapterLabels { font-size: 10px; letter-spacing: .08em; }
-  .trackRow { gap: 7px; }
-  .trackRow output { min-width: 34px; font-size: 10px; }
   .skip { margin-top: 14px; width: 100%; }
 }
 
