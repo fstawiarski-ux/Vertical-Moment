@@ -124,9 +124,37 @@ for (const test of cases) {
     const returningSlider = page.locator("#explore-intro-timeline");
     await returningSlider.waitFor({ state: "visible", timeout: 10000 });
     if (Number(await returningSlider.inputValue()) < 98) throw new Error("Returning visitor did not enter at the Topo arrival state.");
-    const returningGeometry = await geometry(page);
+    let returningGeometry = await geometry(page);
+    let stableSamples = 0;
+
+    for (let attempt = 0; attempt < 32 && stableSamples < 4; attempt += 1) {
+      await page.waitForTimeout(250);
+      const candidateGeometry = await geometry(page);
+
+      if (JSON.stringify(candidateGeometry) === JSON.stringify(returningGeometry)) {
+        stableSamples += 1;
+      } else {
+        returningGeometry = candidateGeometry;
+        stableSamples = 0;
+      }
+    }
+
+    if (stableSamples < 4) {
+      throw new Error(
+        `Returning-user module geometry did not stabilize before scrub assertion. Last geometry: ${JSON.stringify(returningGeometry)}`
+      );
+    }
+
     await assertMediaMoved(page, returningSlider, 54);
-    if (JSON.stringify(returningGeometry) !== JSON.stringify(await geometry(page))) throw new Error("Returning-user hero scrub changed module geometry.");
+
+    const returningAfterGeometry = await geometry(page);
+
+    if (JSON.stringify(returningGeometry) !== JSON.stringify(returningAfterGeometry)) {
+      throw new Error(
+        `Returning-user hero scrub changed module geometry. Before: ${JSON.stringify(returningGeometry)} After: ${JSON.stringify(returningAfterGeometry)}`
+      );
+    }
+
     notes.push("returning visitor skips onboarding but keeps a live media-only Hero");
 
     await page.screenshot({ path: path.join(outDir, `${test.id}-returning.png`), fullPage: true });
