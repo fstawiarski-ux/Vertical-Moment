@@ -38,23 +38,62 @@ for (const test of cases) {
     if (ratio > test.maxArea) throw new Error(`Default module uses ${(ratio * 100).toFixed(1)}% of viewport area; limit is ${(test.maxArea * 100).toFixed(0)}%.`);
     notes.push(`default module ${(ratio * 100).toFixed(1)}% viewport area`);
 
-    const timelineVisible = await page.locator('#explore-intro-timeline').isVisible().catch(() => false);
-    if (timelineVisible) throw new Error("Journey timeline is still visible after unlock.");
-    notes.push("journey controls detached after unlock");
+    const bodyText = await page.locator("body").innerText();
+    if (/âˆ|â–|â›|Ã|�/.test(bodyText)) throw new Error("Visible mojibake/corrupt glyph text remains in the Explore shell.");
+    notes.push("visible shell text is free of known mojibake signatures");
+
+    const timeline = page.locator('#explore-intro-timeline');
+    const timelineVisible = await timeline.isVisible().catch(() => false);
+    if (!timelineVisible) throw new Error("Hero scrub is missing after workspace unlock.");
+    notes.push("compact hero scrub remains reachable after unlock");
+
+    const controlButtons = page.locator('[data-module-window-controls="true"] button:visible');
+    if (await controlButtons.count() < 1) throw new Error("Visible module window controls are missing.");
+    const controlsUseSvg = await controlButtons.evaluateAll((nodes) => nodes.every((node) => Boolean(node.querySelector("svg")) && !(node.textContent ?? "").trim()));
+    if (!controlsUseSvg) throw new Error("A visible module window control still relies on text glyph content instead of SVG.");
+    notes.push("visible module controls use SVG icons");
+
+    const visibleHeadingFamilies = await page.locator('[data-module-heading="true"] h2:visible').evaluateAll((nodes) => nodes.map((node) => getComputedStyle(node).fontFamily));
+    if (visibleHeadingFamilies.some((family) => /Arial/i.test(family))) throw new Error("A visible module heading still uses the legacy Arial override.");
+    if (test.shell === "phone") {
+      const navFont = await page.locator('[data-role="phone-nav"] button').first().evaluate((node) => ({ family: getComputedStyle(node).fontFamily, size: parseFloat(getComputedStyle(node).fontSize) }));
+      if (/Arial/i.test(navFont.family) || navFont.size < 11) throw new Error(`Phone navigation typography is invalid: ${navFont.family} at ${navFont.size}px.`);
+      notes.push(`phone navigation typography ${navFont.family} at ${navFont.size.toFixed(1)}px`);
+    }
 
     const before = await page.locator('article').evaluateAll((nodes) => nodes.map((node) => ({
       id: node.getAttribute('data-box-id'),
       mode: node.getAttribute('data-mode'),
       rect: (() => { const r = node.getBoundingClientRect(); return [Math.round(r.x), Math.round(r.y), Math.round(r.width), Math.round(r.height)]; })(),
     })));
-    await page.evaluate(() => window.dispatchEvent(new CustomEvent("vm:preview-station-request", { detail: { station: "region" } })));
-    await page.waitForTimeout(450);
-    const after = await page.locator('article').evaluateAll((nodes) => nodes.map((node) => ({
+    await page.waitForFunction(() => Array.from(document.querySelectorAll("video")).some((video) => video.readyState >= 1), { timeout: 20000 }).catch(() => {});
+    const videoTimesBefore = await page.locator("video").evaluateAll((nodes) => nodes.map((node) => node.currentTime));
+    await timeline.evaluate((node) => {
+      const setter = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "value")?.set;
+      if (!setter) throw new Error("Range value setter unavailable.");
+      setter.call(node, "37");
+      node.dispatchEvent(new Event("input", { bubbles: true }));
+      node.dispatchEvent(new Event("change", { bubbles: true }));
+    });
+    await page.waitForTimeout(350);
+    const videoTimesAfter = await page.locator("video").evaluateAll((nodes) => nodes.map((node) => node.currentTime));
+    if (!videoTimesAfter.some((value, index) => Math.abs(value - (videoTimesBefore[index] ?? value)) > 0.04)) throw new Error("Post-unlock hero slider did not move scrub media.");
+    const afterScrub = await page.locator('article').evaluateAll((nodes) => nodes.map((node) => ({
       id: node.getAttribute('data-box-id'),
       mode: node.getAttribute('data-mode'),
       rect: (() => { const r = node.getBoundingClientRect(); return [Math.round(r.x), Math.round(r.y), Math.round(r.width), Math.round(r.height)]; })(),
     })));
-    if (JSON.stringify(before) !== JSON.stringify(after)) throw new Error("A post-unlock journey station request changed module state/geometry.");
+    if (JSON.stringify(before) !== JSON.stringify(afterScrub)) throw new Error("Post-unlock hero scrub changed module state/geometry.");
+    notes.push("post-unlock scrub moves media without reflowing modules");
+
+    await page.evaluate(() => window.dispatchEvent(new CustomEvent("vm:preview-station-request", { detail: { station: "region" } })));
+    await page.waitForTimeout(450);
+    const afterStationRequest = await page.locator('article').evaluateAll((nodes) => nodes.map((node) => ({
+      id: node.getAttribute('data-box-id'),
+      mode: node.getAttribute('data-mode'),
+      rect: (() => { const r = node.getBoundingClientRect(); return [Math.round(r.x), Math.round(r.y), Math.round(r.width), Math.round(r.height)]; })(),
+    })));
+    if (JSON.stringify(afterScrub) !== JSON.stringify(afterStationRequest)) throw new Error("A post-unlock journey station request changed module state/geometry.");
     notes.push("post-unlock station event cannot reflow modules");
 
     const expand = page.locator('article[data-mode="normal"] button[aria-label^="Expand "]').first();

@@ -6,6 +6,7 @@ on:
       - "website/app/explore-app/**"
       - "website/src/**"
       - "website/scripts/qa-hero-first-review.mjs"
+      - "website/scripts/qa-cinematic-regression.mjs"
       - ".github/workflows/explore-responsive-qa.yml"
   workflow_dispatch: {}
 
@@ -62,6 +63,11 @@ jobs:
           VM_PREVIEW_URL: "http://127.0.0.1:3000/explore-app?intro=skip"
         run: node scripts/qa-hero-first-review.mjs
 
+      - name: Run first-visit and returning-visit cinematic contract
+        env:
+          VM_PREVIEW_ORIGIN: "http://127.0.0.1:3000"
+        run: node scripts/qa-cinematic-regression.mjs
+
       - name: Preserve server log
         if: always()
         run: |
@@ -73,6 +79,8 @@ jobs:
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: explore-responsive-hero-first-${{ github.sha }}
-          path: website/review-artifacts/hero-first/
+          path: |
+            website/review-artifacts/hero-first/
+            website/review-artifacts/cinematic/
           if-no-files-found: error
           retention-days: 14
