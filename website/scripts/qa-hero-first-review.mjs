@@ -18,6 +18,11 @@ const browser = await chromium.launch({ headless: true });
 const results = [];
 
 const overlaps = (a, b, gap = 1) => !(a.x + a.width + gap <= b.x || b.x + b.width + gap <= a.x || a.y + a.height + gap <= b.y || b.y + b.height + gap <= a.y);
+const clickAtCenter = async (page, locator) => {
+  const rect = await locator.boundingBox();
+  if (!rect) throw new Error("Control has no measurable hit area.");
+  await page.mouse.click(rect.x + rect.width / 2, rect.y + rect.height / 2);
+};
 
 for (const test of cases) {
   const context = await browser.newContext({ viewport: { width: test.width, height: test.height }, reducedMotion: "reduce" });
@@ -48,10 +53,18 @@ for (const test of cases) {
     notes.push("compact hero scrub remains reachable after unlock");
 
     const controlButtons = page.locator('[data-module-window-controls="true"] button:visible');
-    if (await controlButtons.count() < 1) throw new Error("Visible module window controls are missing.");
+    if (await controlButtons.count() < 3) throw new Error("The three-action module window control contract is incomplete.");
     const controlsUseSvg = await controlButtons.evaluateAll((nodes) => nodes.every((node) => Boolean(node.querySelector("svg")) && !(node.textContent ?? "").trim()));
     if (!controlsUseSvg) throw new Error("A visible module window control still relies on text glyph content instead of SVG.");
     notes.push("visible module controls use SVG icons");
+
+    const controlLabels = await controlButtons.evaluateAll((nodes) => nodes.map((node) => node.getAttribute("aria-label")));
+    if (!controlLabels.some((label) => label?.startsWith("Hide ")) || !controlLabels.some((label) => label?.endsWith(" full screen")) || !controlLabels.some((label) => label?.startsWith("Move "))) {
+      throw new Error(`Visible module controls do not expose Hide, Full screen, and Move: ${controlLabels.join(", ")}`);
+    }
+    if (test.shell !== "desktop" && !(await page.locator('[data-module-window-controls="true"] button[aria-label^="Move "]').first().isDisabled())) {
+      throw new Error("Phone/tablet Move control must remain disabled while the shell owns geometry.");
+    }
 
     const visibleHeadingFamilies = await page.locator('[data-module-heading="true"] h2:visible').evaluateAll((nodes) => nodes.map((node) => getComputedStyle(node).fontFamily));
     if (visibleHeadingFamilies.some((family) => /Arial/i.test(family))) throw new Error("A visible module heading still uses the legacy Arial override.");
@@ -96,18 +109,20 @@ for (const test of cases) {
     if (JSON.stringify(afterScrub) !== JSON.stringify(afterStationRequest)) throw new Error("A post-unlock journey station request changed module state/geometry.");
     notes.push("post-unlock station event cannot reflow modules");
 
-    const expand = page.locator('article[data-mode="normal"] button[aria-label^="Expand "]').first();
-    if (await expand.count()) {
-      await expand.click();
-      await page.waitForSelector('article[data-mode="expanded"]', { timeout: 5000 });
-      const expanded = await page.locator('article[data-mode="expanded"]').boundingBox();
-      if (!expanded || expanded.width * expanded.height <= box.width * box.height * 1.7) throw new Error("Maximize did not materially enlarge the module.");
-      const restore = page.locator('article[data-mode="expanded"] button[aria-label^="Exit expanded view"]').first();
-      await restore.click();
-      await page.waitForSelector('article[data-mode="normal"]', { timeout: 5000 });
-      notes.push("maximize / restore works");
+    if (test.shell === "desktop") {
+      const controlTarget = page.locator('article[data-mode="normal"]').first();
+      const controlTargetId = await controlTarget.getAttribute("data-box-id");
+      await controlTarget.hover();
+      await page.waitForTimeout(120);
+      const hide = controlTarget.locator('button[aria-label^="Hide "]').first();
+      if (!controlTargetId || !(await hide.count())) throw new Error("Hide control is missing on the active module.");
+      await clickAtCenter(page, hide);
+      await page.waitForFunction((id) => !document.querySelector(`article[data-box-id="${id}"][data-mode="normal"]`), controlTargetId, { timeout: 5000 });
+      await page.evaluate((id) => window.dispatchEvent(new CustomEvent("vm:focus-box", { detail: { id, mode: "normal" } })), controlTargetId);
+      await page.locator(`article[data-box-id="${controlTargetId}"][data-mode="normal"]`).waitFor({ state: "attached", timeout: 5000 });
+      notes.push("Hide / restore through workspace focus works and the old Expand action is absent");
     } else {
-      throw new Error("Normal module does not expose an Expand control.");
+      notes.push("touch shells expose the three-action contract while shell navigation owns mode transitions");
     }
 
     if (test.shell === "desktop") {
