@@ -107,14 +107,14 @@
   .timeline[data-unlocked="true"],
   .timeline[data-unlocked="true"]:hover,
   .timeline[data-unlocked="true"]:focus-within {
-    right: 88px;
-    bottom: max(4px, env(safe-area-inset-bottom));
-    left: max(6px, env(safe-area-inset-left));
+    right: 0;
+    bottom: 0;
+    left: 0;
     width: auto;
     gap: 0;
-    padding: 2px 8px 3px;
+    padding: 2px max(8px, env(safe-area-inset-left)) max(3px, env(safe-area-inset-bottom)) max(8px, env(safe-area-inset-right));
     opacity: 1;
-    border-radius: 10px 0 0 10px;
+    border-radius: 0;
     background: rgb(7 13 9 / 82%);
     transform: none;
     transform-origin: center bottom;
@@ -140,9 +140,13 @@
   .timeline[data-unlocked="true"],
   .timeline[data-unlocked="true"]:hover,
   .timeline[data-unlocked="true"]:focus-within {
-    bottom: max(220px, calc(env(safe-area-inset-bottom) + 220px));
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: auto;
     gap: 0;
-    padding: 3px 7px 4px;
+    padding: 3px max(8px, env(safe-area-inset-right)) max(4px, env(safe-area-inset-bottom)) max(8px, env(safe-area-inset-left));
+    border-radius: 0;
     opacity: .82;
     transform: none;
   }
@@ -171,10 +175,12 @@
 .sequence:has(~ [data-shell="phone"][data-phone-preview="minimal-fixed"]) .timeline[data-unlocked="true"],
 .sequence:has(~ [data-shell="phone"][data-phone-preview="minimal-fixed"]) .timeline[data-unlocked="true"]:hover,
 .sequence:has(~ [data-shell="phone"][data-phone-preview="minimal-fixed"]) .timeline[data-unlocked="true"]:focus-within {
-  right: max(10px, env(safe-area-inset-right));
-  bottom: max(8px, env(safe-area-inset-bottom));
-  left: max(10px, env(safe-area-inset-left));
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: auto;
+  padding-right: max(8px, env(safe-area-inset-right));
+  padding-left: max(8px, env(safe-area-inset-left));
   opacity: 1;
   transform: none;
   transform-origin: center bottom;
@@ -186,6 +192,6 @@
   .sequence:has(~ [data-shell="phone"][data-phone-preview="minimal-fixed"]) .timeline[data-unlocked="true"]:hover,
   .sequence:has(~ [data-shell="phone"][data-phone-preview="minimal-fixed"]) .timeline[data-unlocked="true"]:focus-within {
     padding: 5px 6px 6px;
-    border-radius: 12px;
+    border-radius: 0;
   }
 }

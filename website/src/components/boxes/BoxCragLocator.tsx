@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent } from "react";
 import atlasJson from "../../../app/(platform)/explore/atlas-data.json";
 import styles from "./BoxCragLocator.module.css";
 
@@ -57,9 +57,10 @@ type SearchHit =
   | { kind: "wall"; label: string; meta: string; region: string; wallId: string }
   | { kind: "route"; label: string; meta: string; region: string; wallId: string };
 
-type BaseLayerKey = "terrain" | "streets" | "satellite" | "light";
+type BaseLayerKey = "terrain" | "satellite" | "leaflet" | "google";
 type PaneMode = "map" | "split" | "info";
 type LatLon = [number, number];
+type SplitResizeState = { axis: "x" | "y"; bounds: DOMRect };
 
 declare global {
   interface Window {
@@ -77,10 +78,12 @@ const REGION_COLORS = [
 
 const BASE_LAYERS: Array<{ id: BaseLayerKey; label: string }> = [
   { id: "terrain", label: "Terrain" },
-  { id: "streets", label: "Streets" },
   { id: "satellite", label: "Satellite" },
-  { id: "light", label: "Light" },
+  { id: "leaflet", label: "Leaflet" },
+  { id: "google", label: "Google Maps" },
 ];
+
+const clamp = (value: number, min: number, max: number) => Math.min(max, Math.max(min, value));
 
 function loadLeaflet() {
   if (window.L) return Promise.resolve(window.L);
@@ -141,6 +144,10 @@ export default function BoxCragLocator() {
   const [selectedWallId, setSelectedWallId] = useState<string | null>(null);
   const [query, setQuery] = useState("");
   const [paneMode, setPaneMode] = useState<PaneMode>("split");
+  const [inspectorSize, setInspectorSize] = useState(30);
+  const [mapSize, setMapSize] = useState(58);
+  const splitResizeRef = useRef<SplitResizeState | null>(null);
+  const splitResizeCleanupRef = useRef<(() => void) | null>(null);
 
   const regionWalls = useMemo(() => {
     const grouped = new Map<string, AtlasWall[]>();
@@ -216,6 +223,41 @@ export default function BoxCragLocator() {
     window.setTimeout(() => focusMap(wall.rg, wall), 0);
   }, [focusMap]);
 
+  const beginSplitResize = useCallback((event: ReactPointerEvent<HTMLButtonElement>) => {
+    const root = rootRef.current;
+    if (!root) return;
+    event.preventDefault();
+    splitResizeCleanupRef.current?.();
+    const bounds = root.getBoundingClientRect();
+    const axis = window.matchMedia("(max-width: 767px)").matches ? "y" : "x";
+    splitResizeRef.current = { axis, bounds };
+
+    const onMove = (moveEvent: PointerEvent) => {
+      const resize = splitResizeRef.current;
+      if (!resize) return;
+      if (resize.axis === "x") {
+        const next = ((resize.bounds.right - moveEvent.clientX) / resize.bounds.width) * 100;
+        setInspectorSize(clamp(next, 24, 52));
+      } else {
+        const next = ((moveEvent.clientY - resize.bounds.top) / resize.bounds.height) * 100;
+        setMapSize(clamp(next, 45, 72));
+      }
+    };
+    const onEnd = () => {
+      window.removeEventListener("pointermove", onMove);
+      window.removeEventListener("pointerup", onEnd);
+      window.removeEventListener("pointercancel", onEnd);
+      splitResizeRef.current = null;
+      splitResizeCleanupRef.current = null;
+    };
+    splitResizeCleanupRef.current = onEnd;
+    window.addEventListener("pointermove", onMove);
+    window.addEventListener("pointerup", onEnd);
+    window.addEventListener("pointercancel", onEnd);
+  }, []);
+
+  useEffect(() => () => splitResizeCleanupRef.current?.(), []);
+
   useEffect(() => {
     const updateNetworkState = () => setOnline(navigator.onLine);
     updateNetworkState();
@@ -243,18 +285,17 @@ export default function BoxCragLocator() {
             maxZoom: 17,
             attribution: "OpenStreetMap / OpenTopoMap",
           }),
-          streets: L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-            maxZoom: 19,
-            attribution: "OpenStreetMap",
-          }),
           satellite: L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
             maxZoom: 19,
             attribution: "Esri",
           }),
-          light: L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+          leaflet: L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            maxZoom: 19,
+            attribution: "OpenStreetMap / Leaflet",
+          }),
+          google: L.tileLayer("https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}", {
             maxZoom: 20,
-            subdomains: "abcd",
-            attribution: "OpenStreetMap / CARTO",
+            attribution: "Google Maps",
           }),
         };
         layers.terrain.addTo(map);
@@ -389,20 +430,14 @@ export default function BoxCragLocator() {
       return (routesByWall.get(wall.id) ?? []).some((route) => route.n.toLocaleLowerCase().includes(value));
     });
   }, [query, regionWalls, routesByWall, selectedRegion]);
+  const workspaceStyle = {
+    "--atlas-inspector-size": `${inspectorSize}%`,
+    "--atlas-map-size": `${mapSize}%`,
+  } as CSSProperties;
 
   return (
     <div ref={rootRef} className={styles.locator}>
       <div className={styles.toolbar}>
-        <label className={styles.search}>
-          <span>Find a region, crag or route</span>
-          <input
-            type="search"
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            placeholder={`Search ${ATLAS.source.routeCount.toLocaleString("en")} routes…`}
-            autoComplete="off"
-          />
-        </label>
         <label className={styles.layerPicker}>
           <span>Map</span>
           <select value={activeLayer} onChange={(event) => setActiveLayer(event.target.value as BaseLayerKey)}>
@@ -425,17 +460,7 @@ export default function BoxCragLocator() {
         </div>
       </div>
 
-      {query.trim().length >= 2 && (
-        <div className={styles.searchResults} role="listbox" aria-label="Atlas search results">
-          {searchHits.length ? searchHits.map((hit, index) => (
-            <button key={`${hit.kind}-${hit.label}-${index}`} type="button" onClick={() => openSearchHit(hit)}>
-              <strong>{hit.label}</strong><small>{hit.meta}</small>
-            </button>
-          )) : <p>No matching region, crag or route.</p>}
-        </div>
-      )}
-
-      <div className={styles.workspace} data-pane={paneMode}>
+      <div className={styles.workspace} data-pane={paneMode} style={workspaceStyle}>
         <div className={styles.mapPane}>
           <div ref={mapElementRef} className={styles.map} aria-label="Map of climbing regions and crags" />
           {!mapReady && !mapError && <div className={styles.mapStatus}>Preparing the atlas…</div>}
@@ -446,7 +471,60 @@ export default function BoxCragLocator() {
           </div>
         </div>
 
+        {paneMode === "split" && (
+          <button
+            type="button"
+            className={styles.splitter}
+            role="separator"
+            aria-label="Resize Atlas map and inspector"
+            aria-orientation="vertical"
+            aria-valuemin={24}
+            aria-valuemax={52}
+            aria-valuenow={inspectorSize}
+            onPointerDown={beginSplitResize}
+            onKeyDown={(event) => {
+              if (event.key === "ArrowLeft") {
+                event.preventDefault();
+                setInspectorSize((value) => clamp(value + 2, 24, 52));
+              }
+              if (event.key === "ArrowRight") {
+                event.preventDefault();
+                setInspectorSize((value) => clamp(value - 2, 24, 52));
+              }
+              if (event.key === "ArrowUp") {
+                event.preventDefault();
+                setMapSize((value) => clamp(value - 2, 45, 72));
+              }
+              if (event.key === "ArrowDown") {
+                event.preventDefault();
+                setMapSize((value) => clamp(value + 2, 45, 72));
+              }
+            }}
+          >
+            <span aria-hidden="true" />
+          </button>
+        )}
+
         <aside className={styles.detail} aria-label="Selected atlas content">
+          <label className={`${styles.search} ${styles.detailSearch}`}>
+            <span>Find a region, crag or route</span>
+            <input
+              type="search"
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+              placeholder={`Search ${ATLAS.source.routeCount.toLocaleString("en")} routes…`}
+              autoComplete="off"
+            />
+          </label>
+          {query.trim().length >= 2 && (
+            <div className={styles.searchResults} role="listbox" aria-label="Atlas search results">
+              {searchHits.length ? searchHits.map((hit, index) => (
+                <button key={`${hit.kind}-${hit.label}-${index}`} type="button" onClick={() => openSearchHit(hit)}>
+                  <strong>{hit.label}</strong><small>{hit.meta}</small>
+                </button>
+              )) : <p>No matching region, crag or route.</p>}
+            </div>
+          )}
           <nav className={styles.regionStrip} aria-label="Climbing regions">
             {orderedRegions.map((region) => (
               <button

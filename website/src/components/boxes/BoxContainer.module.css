@@ -89,7 +89,7 @@
 .windowControls {
   position: absolute;
   top: 3px;
-  right: -13px;
+  right: -44px;
   z-index: 30;
   display: flex;
   align-items: center;
@@ -99,14 +99,21 @@
   border-radius: 999px;
   background: rgb(8 14 10 / 58%);
   box-shadow: 0 8px 20px rgb(0 0 0 / 22%);
-  opacity: .3;
-  transform: translateX(2px);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-8px) scale(.92);
   transition: opacity 160ms ease, transform 160ms ease, background 160ms ease;
 }
 
 .windowControls:hover,
 .windowControls:focus-within,
-.box:hover .windowControls { opacity: .8; transform: translateX(0); }
+.box:hover .windowControls,
+.box:focus-within .windowControls,
+.box[data-controls-visible="true"] .windowControls {
+  opacity: .96;
+  pointer-events: auto;
+  transform: translateX(0) scale(1);
+}
 
 .windowControls:hover,
 .windowControls:focus-within { opacity: 1; background: rgb(8 14 10 / 82%); }
@@ -214,6 +221,7 @@
   background: transparent;
   box-shadow: none;
   opacity: 1;
+  pointer-events: auto;
   transform: none;
 }
 
@@ -238,9 +246,15 @@
 .boxModeExpanded .windowControls,
 .boxModeFullscreen .windowControls {
   top: 5px;
-  right: 10px;
-  opacity: .52;
-  transform: none;
+}
+
+.boxModeExpanded .windowControls { right: -44px; }
+.boxModeFullscreen .windowControls { right: var(--explore-safe-right, 106px); }
+
+.box[data-mode="normal"]:hover .windowControls button,
+.box[data-mode="normal"]:focus-within .windowControls button,
+.box[data-mode="normal"][data-controls-visible="true"] .windowControls button {
+  display: grid;
 }
 
 .boxModeExpanded {
@@ -255,6 +269,18 @@
   height: auto !important;
   box-sizing: border-box;
   border-radius: 0 0 18px 18px;
+}
+
+/* Expanded Atlas/content views do not need an empty title band. Keep the
+   interaction-revealed window actions positioned over the content. */
+.boxModeExpanded .header,
+.boxModeFullscreen .header {
+  min-height: 0;
+  height: 0;
+  padding: 0;
+  border-bottom: 0;
+  background: transparent;
+  overflow: visible;
 }
 
 .box[data-viewport="tablet"],
@@ -291,7 +317,10 @@
   min-height: 360px;
   scroll-snap-align: start;
 }
-.box[data-viewport="mobile"] .windowControls { display: none; }
+.box[data-viewport="mobile"] .windowControls {
+  top: 8px;
+  right: 8px;
+}
 .box[data-viewport="mobile"] .header { grid-template-columns: minmax(0, 1fr); }
 .box[data-viewport="mobile"] .handle { display: none; }
 
@@ -347,16 +376,44 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .box { transition: none; }
+@keyframes boxNormalIn {
+  from { opacity: 0; translate: 18px 0; scale: .96; }
+  to { opacity: 1; translate: 0 0; scale: 1; }
 }
+
+@keyframes boxMinimizedIn {
+  from { opacity: 0; translate: 12px 0; scale: .72; }
+  to { opacity: 1; translate: 0 0; scale: 1; }
+}
+
+@keyframes boxExpandedIn {
+  from { opacity: 0; translate: 0 14px; scale: .985; clip-path: inset(3% 0 0 round 18px); }
+  to { opacity: 1; translate: 0 0; scale: 1; clip-path: inset(0 round 18px); }
+}
+
+.box[data-mode="normal"] { animation: boxNormalIn 240ms cubic-bezier(.2, .8, .2, 1) both; }
+.boxModeMinimized { animation: boxMinimizedIn 220ms cubic-bezier(.2, .8, .2, 1) both; }
+.boxModeExpanded,
+.boxModeFullscreen { animation: boxExpandedIn 280ms cubic-bezier(.2, .8, .2, 1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .box,
+  .boxModeMinimized,
+  .boxModeExpanded,
+  .boxModeFullscreen {
+    animation: none;
+    transition: none;
+    translate: none;
+    scale: none;
+  }
+}
+
 /* MODULE-CHROME-CONTRACT
    The global Explore navigation owns the northern visual layer.
    Normal modules must not paint a handle, title/eyebrow, or three-button
    window bar on phone, tablet, or desktop. */
 .box[data-mode="normal"] .handle,
 .box[data-mode="normal"] .heading,
-.box[data-mode="normal"] .windowControls,
 .boxModeExpanded .handle,
 .boxModeExpanded .heading,
 .boxModeFullscreen .handle,
@@ -389,11 +446,14 @@
 }
 
 .boxModeExpanded .windowControls button:nth-child(2),
+.boxModeExpanded .windowControls button:nth-child(3),
+.boxModeFullscreen .windowControls button:nth-child(2),
 .boxModeFullscreen .windowControls button:nth-child(3) {
   display: grid;
 }
 
-/* Keep desktop fullscreen window controls clear of the persistent right rail. */
+/* Keep large-screen fullscreen controls clear of the persistent right rail. */
+.box[data-viewport="tablet"].boxModeFullscreen .windowControls,
 .box[data-viewport="desktop"].boxModeFullscreen .windowControls {
   right: var(--explore-safe-right, 106px);
 }

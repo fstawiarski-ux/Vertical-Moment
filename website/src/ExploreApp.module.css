@@ -86,7 +86,7 @@
   font: 700 10px/1 Arial, sans-serif;
   cursor: pointer;
 }
-.phoneHeader button { min-width: 44px; padding: 0 10px; }
+.phoneHeader button { min-width: 44px; padding: 0 10px; font-size: 18px; }
 .phoneHeader button:focus-visible,
 .phoneNav button:focus-visible { outline: 2px solid #f4eedf; outline-offset: 2px; }
 .phoneHint { margin: 0; color: #a9a394; font: 600 10px/1.3 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .05em; text-transform: uppercase; }
@@ -675,4 +675,14 @@
   .phoneMoreMenu,
   .workspaceModuleMenu { animation: none; }
   .workspaceTopRail button { transition: none; }
+}
+
+/* Window actions stay out of the way until the active box is touched or focused. */
+.phoneStage > article[data-controls-visible="true"] [class*="windowControls"] {
+  top: 8px;
+  right: 8px;
+  display: flex;
+  opacity: .96;
+  pointer-events: auto;
+  transform: none;
 }
