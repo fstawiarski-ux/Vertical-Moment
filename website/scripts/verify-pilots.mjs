@@ -25,6 +25,13 @@ function publicFileFor(src) {
   return path.join(publicRoot, ...src.slice(1).split("/"));
 }
 
+async function resolvedAssetSize(assetFile, details) {
+  if (details.size > 256) return details.size;
+  const contents = await readFile(assetFile, "utf8");
+  const lfsSize = contents.match(/^version https:\/\/git-lfs\.github\.com\/spec\/v1\r?\n(?:oid sha256:[a-f0-9]{64}\r?\n)size (\d+)\r?\n?$/)?.[1];
+  return lfsSize ? Number(lfsSize) : details.size;
+}
+
 if (catalog.schemaVersion !== 1) failures.push("index.schemaVersion: expected 1");
 if (!Array.isArray(catalog.pilots) || !catalog.pilots.length) failures.push("index.pilots: at least one pilot is required");
 
@@ -95,7 +102,8 @@ for (const [catalogIndex, entry] of (catalog.pilots ?? []).entries()) {
         try {
           const details = await stat(assetFile);
           if (!details.isFile() || details.size === 0) failures.push(`${slotLabel}.src: missing or empty ${slot.src}`);
-          if (slot.bytes && slot.bytes !== details.size) failures.push(`${slotLabel}.bytes: expected ${details.size}, found ${slot.bytes}`);
+          const assetSize = await resolvedAssetSize(assetFile, details);
+          if (slot.bytes && slot.bytes !== assetSize) failures.push(`${slotLabel}.bytes: expected ${assetSize}, found ${slot.bytes}`);
         } catch {
           failures.push(`${slotLabel}.src: missing public asset ${slot.src}`);
         }
