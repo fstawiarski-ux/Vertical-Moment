@@ -28,7 +28,7 @@ type ResizePoint = Pick<PointerEvent, "pointerId" | "clientX" | "clientY">;
 const BOX_GAP = 10;
 const clamp = (value: number, min: number, max: number) => Math.min(max, Math.max(min, value));
 
-type WindowControlIconName = "restore" | "minimize" | "expand" | "fullscreen";
+type WindowControlIconName = "restore" | "close" | "fullscreen" | "move";
 
 function WindowControlIcon({ name }: { name: WindowControlIconName }) {
   if (name === "restore") {
@@ -38,17 +38,18 @@ function WindowControlIcon({ name }: { name: WindowControlIconName }) {
       </svg>
     );
   }
-  if (name === "minimize") {
+  if (name === "close") {
     return (
       <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
-        <path d="M5 12h14" />
+        <path d="m6 6 12 12M18 6 6 18" />
       </svg>
     );
   }
-  if (name === "expand") {
+  if (name === "move") {
     return (
-      <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-        <rect x="5" y="5" width="14" height="14" rx="1.5" />
+      <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 3v18M3 12h18" />
+        <path d="m8 6 4-3 4 3M8 18l4 3 4-3M6 8l-3 4 3 4M18 8l3 4-3 4" />
       </svg>
     );
   }
@@ -121,7 +122,7 @@ export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
       || other.y + otherHeight + BOX_GAP <= y;
   });
 
-  const beginDrag = (event: ReactPointerEvent<HTMLDivElement>) => {
+  const beginDrag = (event: ReactPointerEvent<HTMLElement>) => {
     if (!canFreeform || (event.target as Element).closest("button")) return;
     focus();
     dragRef.current = { pointerId: event.pointerId, startX: event.clientX, startY: event.clientY, originX: box.x, originY: box.y, captureTarget: event.currentTarget };
@@ -129,7 +130,17 @@ export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
     setDragging(true);
   };
 
-  const moveDrag = (event: ReactPointerEvent<HTMLDivElement>) => {
+  const beginControlDrag = (event: ReactPointerEvent<HTMLButtonElement>) => {
+    if (!canFreeform) return;
+    event.preventDefault();
+    event.stopPropagation();
+    focus();
+    dragRef.current = { pointerId: event.pointerId, startX: event.clientX, startY: event.clientY, originX: box.x, originY: box.y, captureTarget: event.currentTarget };
+    event.currentTarget.setPointerCapture(event.pointerId);
+    setDragging(true);
+  };
+
+  const moveDrag = (event: ReactPointerEvent<HTMLElement>) => {
     const drag = dragRef.current;
     if (!drag || drag.pointerId !== event.pointerId) return;
     const width = box.width ?? 360;
@@ -157,7 +168,7 @@ export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
     setDragging(false);
   };
 
-  const endDrag = (event: ReactPointerEvent<HTMLDivElement>) => finishDrag(event.pointerId);
+  const endDrag = (event: ReactPointerEvent<HTMLElement>) => finishDrag(event.pointerId);
 
   const beginResize = (direction: ResizeDirection) => (event: ReactPointerEvent<HTMLButtonElement>) => {
     if (!canFreeform || resizeRef.current) return;
@@ -309,9 +320,9 @@ export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
           <span data-module-handle="true" className={styles.handle} aria-hidden="true"><i /><i /><i /><i /><i /><i /></span>
           <div data-module-heading="true" className={styles.heading}><small>{eyebrow}</small><h2>{title}</h2></div>
           <div data-module-window-controls="true" className={styles.windowControls} aria-label={`${title} window controls`}>
-            <button type="button" onClick={() => setMode(box.mode === "minimized" ? "normal" : "minimized")} aria-label={box.mode === "minimized" ? `Restore ${title}` : `Minimize ${title}`} title={box.mode === "minimized" ? `Restore ${title}` : `Minimize ${title}`}><WindowControlIcon name={box.mode === "minimized" ? "restore" : "minimize"} /></button>
-            <button type="button" onClick={() => setMode(box.mode === "expanded" ? "normal" : "expanded")} aria-label={box.mode === "expanded" ? `Exit expanded view ${title}` : box.mode === "fullscreen" ? `Return to expanded view ${title}` : `Expand ${title}`} title={box.mode === "expanded" ? `Exit expanded view ${title}` : box.mode === "fullscreen" ? `Return to expanded view ${title}` : `Expand ${title}`}><WindowControlIcon name="expand" /></button>
+            <button type="button" onClick={() => setMode(box.mode === "minimized" ? "normal" : "minimized")} aria-label={box.mode === "minimized" ? `Restore ${title}` : `Hide ${title}`} title={box.mode === "minimized" ? `Restore ${title}` : `Hide ${title}`}><WindowControlIcon name={box.mode === "minimized" ? "restore" : "close"} /></button>
             <button type="button" onClick={() => setMode(box.mode === "fullscreen" ? "normal" : "fullscreen")} aria-label={box.mode === "fullscreen" ? `Exit full screen ${title}` : `Open ${title} full screen`} title={box.mode === "fullscreen" ? `Exit full screen ${title}` : `Open ${title} full screen`}><WindowControlIcon name="fullscreen" /></button>
+            <button type="button" className={styles.moveButton} disabled={!canFreeform} onPointerDown={beginControlDrag} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag} aria-label={`Move ${title}`} title={canFreeform ? `Move ${title}` : `Move ${title} (desktop only)`}><WindowControlIcon name="move" /></button>
           </div>
         </div>
         {box.mode !== "minimized" && <div className={styles.body}>{children}</div>}

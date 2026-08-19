@@ -4,34 +4,16 @@ import { useMemo, useState } from "react";
 import { NASENWAND_ROUTES, NASENWAND_SECTORS, type NasenwandRoute } from "../../../app/data/nasenwand-routes";
 import styles from "./BoxNasenwandRoutes.module.css";
 
-type WallView = "photo" | "spatial";
-
 const ROUTES: NasenwandRoute[] = NASENWAND_ROUTES;
 const SECTORS = NASENWAND_SECTORS;
 
-const VIEWS: Record<WallView, { label: string; src: string; alt: string; note: string }> = {
-  photo: {
-    label: "Photo",
-    src: "/photography/nasenwand/nasenwand-photo-1280.webp",
-    alt: "Drone photograph of the Nasenwand rock face in the Wachau",
-    note: "Source wall photograph",
-  },
-  spatial: {
-    label: "Spatial",
-    src: "/photography/nasenwand/nasenwand-spatial-1280.webp",
-    alt: "Monochrome spatial-relief study derived from the Nasenwand drone photograph",
-    note: "Derived spatial study - geometry remains provisional",
-  },
-};
-
 function focusBox(id: string) {
-  window.dispatchEvent(new CustomEvent("vm:focus-box", { detail: { id, mode: "expanded" } }));
+  window.dispatchEvent(new CustomEvent("vm:focus-box", { detail: { id, mode: "normal" } }));
 }
 
 export default function BoxNasenwandRoutes() {
   const [sectorName, setSectorName] = useState("Upper");
   const [selectedName, setSelectedName] = useState("Aufwind");
-  const [view, setView] = useState<WallView>("photo");
 
   const sector = useMemo(
     () => SECTORS.find((candidate) => candidate.name === sectorName) ?? SECTORS[0],
@@ -41,11 +23,15 @@ export default function BoxNasenwandRoutes() {
     () => ROUTES.find((route) => route.name === selectedName) ?? ROUTES[0],
     [selectedName],
   );
-  const wallView = VIEWS[view];
+  const routeOptions = sector.integrated ? ROUTES : [];
 
   return (
     <div className={styles.workspace}>
       <header className={styles.toolbar}>
+        <div>
+          <small className={styles.eyebrow}>Nasenwand · Wachau</small>
+          <strong>Quick sector routes</strong>
+        </div>
         <nav aria-label="Nasenwand sectors">
           {SECTORS.map((candidate) => (
             <button
@@ -58,65 +44,55 @@ export default function BoxNasenwandRoutes() {
             </button>
           ))}
         </nav>
-        <div className={styles.viewSwitch} aria-label="Wall view">
-          {(Object.keys(VIEWS) as WallView[]).map((id) => (
-            <button key={id} type="button" aria-pressed={id === view} onClick={() => setView(id)}>{VIEWS[id].label}</button>
-          ))}
-        </div>
       </header>
 
-      <div className={styles.routeRail} aria-label={`${sector.name} sector routes`}>
-        {sector.integrated ? ROUTES.map((route) => (
-          <button key={route.name} type="button" aria-pressed={route.name === selected.name} onClick={() => setSelectedName(route.name)}>
-            <strong>{route.name}</strong><small>{route.grade}</small>
-          </button>
-        )) : (
-          <div className={styles.pendingRail}>
-            <strong>{sector.count} routes identified</strong>
-            <span>Individual route rows are not integrated yet.</span>
-          </div>
-        )}
-      </div>
-
       <div className={styles.main}>
-        <section className={styles.wall} aria-label="Nasenwand wall study">
-          <img key={view} src={wallView.src} alt={wallView.alt} draggable={false} />
+        <section className={styles.wall} aria-label="Nasenwand wall photograph">
+          <img src="/photography/nasenwand/nasenwand-photo-1280.webp" alt="Drone photograph of the Nasenwand rock face in the Wachau" draggable={false} />
           <div className={styles.wallShade} aria-hidden="true" />
           <div className={styles.wallCaption}>
-            <small>Wachau - Nasenwand - {sector.name} sector</small>
-            <strong>{sector.integrated ? selected.name : `${sector.name} catalogue`}</strong>
-            <span>{wallView.note}</span>
+            <small>{sector.name} sector · source wall photograph</small>
+            <strong>Aufwind</strong>
+            <span>Photo and spatial study live in the Wall workspace.</span>
           </div>
           <div className={styles.wallActions}>
             <button type="button" onClick={() => focusBox("wachau-16")}>Open panorama</button>
-            <button type="button" onClick={() => focusBox("nasenwand-model")}>Open shared 3D</button>
+            <button type="button" onClick={() => focusBox("nasenwand-model")}>Open topo workspace</button>
           </div>
         </section>
 
-        <aside className={styles.details} aria-label="Selected route details">
+        <aside className={styles.details} aria-label={`${sector.name} sector quick route list`}>
+          <div className={styles.detailHeading}>
+            <div><small>Sector</small><h3>{sector.name}</h3></div>
+            <span>{sector.count} routes</span>
+          </div>
           {sector.integrated ? (
             <>
-              <small>Upper Sector - working reference</small>
-              <h3>{selected.name}</h3>
-              <dl>
-                <div><dt>Grade</dt><dd>{selected.grade}</dd></div>
-                {selected.length && <div><dt>Length</dt><dd>{selected.length}</dd></div>}
-                {selected.pitches && <div><dt>Line</dt><dd>{selected.pitches}</dd></div>}
-              </dl>
-              <p>Route geometry is deliberately not drawn here. Names and supplied facts remain a working reference until field registration is approved.</p>
+              <div className={styles.routeList} aria-label={`${sector.name} quick route list`}>
+                {routeOptions.map((route) => (
+                  <button key={route.name} type="button" aria-pressed={route.name === selected.name} onClick={() => setSelectedName(route.name)}>
+                    <span>{route.name}</span><strong>{route.grade}</strong>
+                  </button>
+                ))}
+              </div>
+              <div className={styles.selectedRoute}>
+                <small>Selected route</small>
+                <h4>{selected.name}</h4>
+                <dl>
+                  <div><dt>Grade</dt><dd>{selected.grade}</dd></div>
+                  {selected.length && <div><dt>Length</dt><dd>{selected.length}</dd></div>}
+                  {selected.pitches && <div><dt>Line</dt><dd>{selected.pitches}</dd></div>}
+                </dl>
+              </div>
             </>
           ) : (
-            <>
-              <small>{sector.name} Sector</small>
-              <h3>{sector.count} route records</h3>
-              <p>This sector count is preserved from the concept. Names, grades and route geometry will appear only after their source data is integrated and reviewed.</p>
-            </>
+            <div className={styles.pending}>
+              <strong>{sector.count} route records identified</strong>
+              <p>Quick names and grades are not integrated for this sector yet. Open the Topo workspace for the reviewed route layer.</p>
+              <button type="button" onClick={() => focusBox("nasenwand-model")}>Open Topo workspace</button>
+            </div>
           )}
-          <div className={styles.references}>
-            <a href="https://www.bergsteigen.com/touren/klettergarten/nasenwand-duernstein-wachau/" target="_blank" rel="noreferrer">Bergsteigen reference</a>
-            <a href="https://www.thecrag.com/climbing/wachau/maps#48.402022,15.518068,18.0,,auto" target="_blank" rel="noreferrer">theCrag map</a>
-          </div>
-          <footer>Provisional climbing reference - not a safety or navigation product.</footer>
+          <footer>Provisional climbing reference · not a safety or navigation product.</footer>
         </aside>
       </div>
     </div>

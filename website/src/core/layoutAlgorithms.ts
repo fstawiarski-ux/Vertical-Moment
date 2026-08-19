@@ -16,14 +16,14 @@ export interface BoxFrame {
 }
 
 /**
- * The desktop shell reserves lanes for the top chrome, right toolbar and the
+ * The desktop shell reserves lanes for the top chrome, left toolbar and the
  * bottom system affordances. Hero-first layouts stay inside this same frame.
  */
 export const EXPLORE_SAFE_ZONE: Readonly<Record<"top" | "right" | "bottom" | "left", number>> = Object.freeze({
   top: 112,
-  right: 106,
+  right: 8,
   bottom: 112,
-  left: 8,
+  left: 96,
 });
 
 const snap = (value: number, grid: number) => Math.round(value / grid) * grid;
@@ -145,20 +145,28 @@ export function compactJourneyFrame(viewport?: ViewportBounds): BoxFrame {
 export function heroFirstFrameForBox(boxId: string, viewport?: ViewportBounds): BoxFrame {
   const rect = safeRect(viewport);
   const base = compactJourneyFrame(viewport);
+  const slotGap = 12;
+  const slotHeight = Math.max(
+    MIN_BOX_HEIGHT,
+    Math.min(base.height - 46, Math.floor((rect.height - 32 - slotGap * 2) / 3)),
+  );
   const inset = Math.min(16, Math.max(0, rect.width - base.width));
   const left = rect.x + inset;
   const right = rect.x + Math.max(inset, rect.width - base.width - inset);
-  const top = rect.y + Math.min(16, Math.max(0, rect.height - base.height));
-  const bottom = rect.y + Math.max(16, rect.height - base.height - 16);
-  const middle = rect.y + Math.max(16, Math.round((rect.height - base.height) / 2));
+  const top = rect.y + 16;
+  // Leave room for the initial compact focal card even if the visitor opens
+  // another module before that card has been normalized into an edge slot.
+  const middle = top + base.height + slotGap;
+  const bottom = middle + slotHeight + slotGap;
+  const slot = (x: number, y: number): BoxFrame => ({ ...base, x, y, height: slotHeight });
 
   switch (boxId) {
-    case "nasenwand-spatial": return { ...base, x: right, y: top };
-    case "wachau-16": return { ...base, x: left, y: bottom };
-    case "nasenwand-model": return { ...base, x: right, y: bottom };
-    case "wall-reveal": return { ...base, x: left, y: middle };
+    case "nasenwand-spatial": return slot(right, top);
+    case "wachau-16": return slot(left, bottom);
+    case "nasenwand-model": return slot(right, bottom);
+    case "wall-reveal": return slot(left, middle);
     case "crag-locator":
-    default: return { ...base, x: left, y: top };
+    default: return slot(left, top);
   }
 }
 
