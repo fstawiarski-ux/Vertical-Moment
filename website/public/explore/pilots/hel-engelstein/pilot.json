@@ -1,0 +1,36 @@
+{
+  "$schema": "../pilot.schema.json",
+  "schemaVersion": 1,
+  "id": "hel-engelstein",
+  "label": "Pilot 007 — Helenental / Engelstein — LOCAL MOTION PROXY",
+  "releaseState": "assembly",
+  "identity": { "region": "Helenental", "regionSlug": "helenental", "crag": "Engelstein", "cragSlug": "engelstein", "sector": "Engelstein", "canonicalCragId": null },
+  "provenance": { "notionUrl": "https://app.notion.com/p/3c1214135351812bb249d8a8d1a99887", "dataPath": "database/api/v1/crags/helenental/engelstein.json", "confidence": "imported-unverified", "lastReviewed": "2026-08-19" },
+  "summary": { "routeCount": 17, "gradeSystem": "UIAA", "gradeRange": null, "discipline": "sport" },
+  "journey": {
+    "posterSlot": "hero",
+    "chapters": [
+      { "id": "region-rock", "from": "Region", "to": "Rock", "asset": "scrubRegionRock", "duration": 3, "direction": "reverse", "objectPosition": "52% center" },
+      { "id": "rock-sector", "from": "Rock", "to": "Sector", "asset": "scrubRockSector", "duration": 12.012, "direction": "forward", "objectPosition": "50% center" },
+      { "id": "sector-topo", "from": "Sector", "to": "Topo", "asset": "scrubSectorTopo", "duration": 3.666667, "direction": "forward", "objectPosition": "50% center" }
+    ]
+  },
+  "modules": {
+    "locator": { "title": "Helenental Regional Locator", "mobileLabel": "Atlas", "description": "GPS-linked core-cluster context for Engelstein, Beethovenwand and Jammerwandl.", "primarySlots": [] },
+    "panorama": { "title": "Engelstein Context", "mobileLabel": "Context", "description": "Reserved for an approved Engelstein poster or panorama; current regional motion is a labelled proxy.", "primarySlots": ["panoramaPoster", "panorama360"] },
+    "routes": { "title": "Engelstein Routes", "mobileLabel": "Routes", "description": "Seventeen imported route records remain separate from access, gear and geometry claims.", "primarySlots": ["hero"] },
+    "wall": { "title": "Engelstein Wall Reveal", "mobileLabel": "Wall", "description": "RealityCapture projects exist, but no approved web wall derivative is attached.", "primarySlots": ["hero", "spatial"] },
+    "topo": { "title": "Engelstein Topo + 3D", "mobileLabel": "Topo", "description": "Topo and web-ready 3D remain missing; access, equipment and biosphere cautions stay visible blockers.", "primarySlots": ["topo", "model"] }
+  },
+  "assets": {
+    "hero": { "kind": "image", "status": "missing", "targetPath": "/explore/pilots/hel-engelstein/hero/hero-1280.webp", "src": null, "alt": "Engelstein hero photograph" },
+    "spatial": { "kind": "image", "status": "missing", "targetPath": "/explore/pilots/hel-engelstein/wall/spatial-1280.webp", "src": null, "alt": "Engelstein spatial wall study" },
+    "topo": { "kind": "image", "status": "missing", "targetPath": "/explore/pilots/hel-engelstein/topo/topo-1280.webp", "src": null, "alt": "Engelstein topo" },
+    "model": { "kind": "model", "status": "missing", "targetPath": "/explore/pilots/hel-engelstein/model/model.glb", "src": null, "alt": "Engelstein 3D model", "note": "Project files are inventory evidence, not a browser-ready model." },
+    "panoramaPoster": { "kind": "panorama", "status": "missing", "targetPath": "/explore/pilots/hel-engelstein/panorama/poster-1600.webp", "src": null, "alt": "Helenental panorama near Engelstein" },
+    "panorama360": { "kind": "link", "status": "missing", "targetPath": "/explore/pilots/hel-engelstein/panorama/360-link.txt", "src": null, "alt": "Interactive 360 view of Engelstein" },
+    "scrubRegionRock": { "kind": "video", "status": "missing", "targetPath": "/explore/pilots/hel-engelstein/scrub/region-rock.mp4", "src": null, "alt": "Test-only Nasenwand Region to Rock proxy for Engelstein", "note": "No Engelstein Region-to-Rock derivative is verified; private proxy only.", "preview": { "adapter": "same-origin", "src": "/photography/explore-app/scrub/region-rock-pan-a.mp4", "provenance": "Nasenwand reference media; not Engelstein evidence", "verifiedForPilot": false, "replaceable": true } },
+    "scrubRockSector": { "kind": "video", "status": "missing", "targetPath": "/explore/pilots/hel-engelstein/scrub/rock-sector.mp4", "src": null, "alt": "Test-only Nasenwand Rock to Sector proxy for Engelstein", "note": "No Engelstein Rock-to-Sector derivative is verified; private proxy only.", "preview": { "adapter": "same-origin", "src": "/photography/nasenwand/media/loop-pingpong-1080.mp4", "provenance": "Nasenwand reference media; not Engelstein evidence", "verifiedForPilot": false, "replaceable": true } },
+    "scrubSectorTopo": { "kind": "video", "status": "missing", "targetPath": "/explore/pilots/hel-engelstein/scrub/sector-topo.mp4", "src": null, "alt": "Test-only Nasenwand Sector to Topo proxy for Engelstein", "note": "No Engelstein Sector-to-Topo derivative is verified; private proxy only.", "preview": { "adapter": "same-origin", "src": "/photography/nasenwand/media/nasenwand-orbit-scrub-allkey.mp4", "provenance": "Nasenwand reference media; not Engelstein evidence", "verifiedForPilot": false, "replaceable": true } }
+  }
+}

@@ -11,6 +11,8 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const src = path.resolve(here, "..", "..", "database", "api", "v1");
 const dest = path.resolve(here, "..", "public", "data", "v1");
 const atlasBridge = path.resolve(here, "..", "app", "(platform)", "explore", "atlas-data.json");
+const dracoSrc = path.resolve(here, "..", "node_modules", "three", "examples", "jsm", "libs", "draco", "gltf");
+const dracoDest = path.resolve(here, "..", "public", "vendor", "model-viewer", "draco");
 
 function countBy(items, key) {
   const counts = new Map();
@@ -116,8 +118,12 @@ async function main() {
   });
   await mkdir(path.dirname(atlasBridge), { recursive: true });
   await writeFile(atlasBridge, `${JSON.stringify(atlas)}\n`, "utf8");
+  await rm(dracoDest, { recursive: true, force: true });
+  await mkdir(dracoDest, { recursive: true });
+  await Promise.all(["draco_decoder.js", "draco_decoder.wasm", "draco_wasm_wrapper.js"].map((file) => cp(path.join(dracoSrc, file), path.join(dracoDest, file))));
   console.log(`sync-data: ${src} -> ${dest}`);
   console.log(`sync-data: generated canonical atlas bridge -> ${atlasBridge}`);
+  console.log(`sync-data: self-hosted Draco decoder -> ${dracoDest}`);
 }
 
 main();

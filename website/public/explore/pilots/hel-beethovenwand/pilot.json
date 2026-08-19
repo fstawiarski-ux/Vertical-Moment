@@ -1,0 +1,184 @@
+{
+  "$schema": "../pilot.schema.json",
+  "schemaVersion": 1,
+  "id": "hel-beethovenwand",
+  "label": "Pilot 006 — Helenental / Beethovenwand — LOCAL MOTION PROXY",
+  "releaseState": "assembly",
+  "identity": {
+    "region": "Helenental",
+    "regionSlug": "helenental",
+    "crag": "Beethovenwand",
+    "cragSlug": "beethovenwand",
+    "sector": "Beethovenwand",
+    "canonicalCragId": "577112b7-72ce-5e44-b6f2-1f4507d1bbf7"
+  },
+  "provenance": {
+    "notionUrl": "https://app.notion.com/p/3c121413535181b8a7b8c1de1d44b9fe",
+    "dataPath": "database/api/v1/crags/helenental/beethovenwand.json",
+    "confidence": "imported-unverified",
+    "lastReviewed": "2026-08-19"
+  },
+  "summary": {
+    "routeCount": 24,
+    "gradeSystem": "UIAA",
+    "gradeRange": "6- to 10+/11-",
+    "discipline": "sport"
+  },
+  "journey": {
+    "posterSlot": "hero",
+    "chapters": [
+      {
+        "id": "region-rock",
+        "from": "Region",
+        "to": "Rock",
+        "asset": "scrubRegionRock",
+        "duration": 12.012,
+        "direction": "forward",
+        "objectPosition": "50% center"
+      },
+      {
+        "id": "rock-sector",
+        "from": "Rock",
+        "to": "Sector",
+        "asset": "scrubRockSector",
+        "duration": 6.006,
+        "direction": "forward",
+        "objectPosition": "50% center"
+      },
+      {
+        "id": "sector-topo",
+        "from": "Sector",
+        "to": "Topo",
+        "asset": "scrubSectorTopo",
+        "duration": 3.666667,
+        "direction": "forward",
+        "objectPosition": "50% center"
+      }
+    ]
+  },
+  "modules": {
+    "locator": {
+      "title": "Helenental Locator",
+      "mobileLabel": "Atlas",
+      "description": "Shared canonical context for Helenental and Beethovenwand; imported coordinates remain unverified.",
+      "primarySlots": []
+    },
+    "panorama": {
+      "title": "Helenental Panorama",
+      "mobileLabel": "360",
+      "description": "Reserved for an approved Beethovenwand panorama poster and optional 360 source.",
+      "primarySlots": ["panoramaPoster", "panorama360"]
+    },
+    "routes": {
+      "title": "Beethovenwand Routes",
+      "mobileLabel": "Routes",
+      "description": "Twenty-four imported-unverified canonical route records remain separate from topo and geometry claims.",
+      "primarySlots": ["hero"]
+    },
+    "wall": {
+      "title": "Beethovenwand Wall Reveal",
+      "mobileLabel": "Wall",
+      "description": "The wall media slots remain empty until Beethovenwand-specific approved derivatives exist.",
+      "primarySlots": ["hero", "spatial"]
+    },
+    "topo": {
+      "title": "Beethovenwand Topo + 3D",
+      "mobileLabel": "Topo",
+      "description": "A large private RealityScan source is verified in place; no public model or topo derivative is authorized. The motion backdrop is a Nasenwand-only local test proxy.",
+      "primarySlots": ["topo", "model"]
+    }
+  },
+  "assets": {
+    "hero": {
+      "kind": "image",
+      "status": "missing",
+      "targetPath": "/explore/pilots/hel-beethovenwand/hero/hero-1280.webp",
+      "src": null,
+      "alt": "Beethovenwand hero photograph",
+      "note": "No approved Beethovenwand hero derivative exists."
+    },
+    "spatial": {
+      "kind": "image",
+      "status": "missing",
+      "targetPath": "/explore/pilots/hel-beethovenwand/wall/spatial-1280.webp",
+      "src": null,
+      "alt": "Beethovenwand spatial wall study",
+      "note": "The model texture is private source evidence, not an approved spatial image derivative."
+    },
+    "topo": {
+      "kind": "image",
+      "status": "missing",
+      "targetPath": "/explore/pilots/hel-beethovenwand/topo/topo-1280.webp",
+      "src": null,
+      "alt": "Beethovenwand topo",
+      "note": "No verified topo source or derivative is registered."
+    },
+    "model": {
+      "kind": "model",
+      "status": "missing",
+      "targetPath": "/explore/pilots/hel-beethovenwand/model/model.glb",
+      "src": null,
+      "alt": "Beethovenwand 3D model",
+      "note": "Private 566.8 MB GLB plus external 86.3 MB texture verified in place; derivative rights and a web-ready export are missing."
+    },
+    "panoramaPoster": {
+      "kind": "panorama",
+      "status": "missing",
+      "targetPath": "/explore/pilots/hel-beethovenwand/panorama/poster-1600.webp",
+      "src": null,
+      "alt": "Helenental panorama near Beethovenwand"
+    },
+    "panorama360": {
+      "kind": "link",
+      "status": "missing",
+      "targetPath": "/explore/pilots/hel-beethovenwand/panorama/360-link.txt",
+      "src": null,
+      "alt": "Interactive 360 view of Beethovenwand"
+    },
+    "scrubRegionRock": {
+      "kind": "video",
+      "status": "missing",
+      "targetPath": "/explore/pilots/hel-beethovenwand/scrub/region-rock.mp4",
+      "src": null,
+      "alt": "Test-only Nasenwand motion proxy for the Region to Rock interaction",
+      "note": "No Beethovenwand Region-to-Rock derivative is verified; the private preview adapter below earns no release-readiness credit.",
+      "preview": {
+        "adapter": "same-origin",
+        "src": "/photography/nasenwand/media/loop-pingpong-1080.mp4",
+        "provenance": "Nasenwand reference media; borrowed for local interaction testing only",
+        "verifiedForPilot": false,
+        "replaceable": true
+      }
+    },
+    "scrubRockSector": {
+      "kind": "video",
+      "status": "missing",
+      "targetPath": "/explore/pilots/hel-beethovenwand/scrub/rock-sector.mp4",
+      "src": null,
+      "alt": "Test-only Nasenwand motion proxy for the Rock to Sector interaction",
+      "note": "No Beethovenwand Rock-to-Sector derivative is verified; the private preview adapter below earns no release-readiness credit.",
+      "preview": {
+        "adapter": "same-origin",
+        "src": "/photography/nasenwand/media/loop-story-1080x1920.mp4",
+        "provenance": "Nasenwand reference media; borrowed for local interaction testing only",
+        "verifiedForPilot": false,
+        "replaceable": true
+      }
+    },
+    "scrubSectorTopo": {
+      "kind": "video",
+      "status": "missing",
+      "targetPath": "/explore/pilots/hel-beethovenwand/scrub/sector-topo.mp4",
+      "src": null,
+      "alt": "Test-only Nasenwand orbit proxy for the Sector to Topo interaction",
+      "note": "No Beethovenwand Sector-to-Topo derivative is verified; the private preview adapter below earns no release-readiness credit.",
+      "preview": {
+        "adapter": "same-origin",
+        "src": "/photography/nasenwand/media/nasenwand-orbit-scrub-allkey.mp4",
+        "provenance": "Nasenwand reference media; borrowed for local interaction testing only",
+        "verifiedForPilot": false,
+        "replaceable": true
+      }
+    }
+  }
+}

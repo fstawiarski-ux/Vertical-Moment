@@ -1,0 +1,36 @@
+{
+  "$schema": "../pilot.schema.json",
+  "schemaVersion": 1,
+  "id": "nasenwand",
+  "label": "Pilot 001 — Nasenwand",
+  "releaseState": "ready",
+  "identity": { "region": "Wachau", "regionSlug": "wachau", "crag": "Nasenwand", "cragSlug": "nasenwand", "sector": "Upper", "canonicalCragId": null },
+  "provenance": { "notionUrl": "https://www.notion.so/3be21413535181c08556e350b3a881ae", "dataPath": "website/app/data/nasenwand-routes.ts", "confidence": "owner-reviewed", "lastReviewed": "2026-08-19" },
+  "summary": { "routeCount": 12, "gradeSystem": "UIAA", "gradeRange": "4 to 8-", "discipline": "sport" },
+  "journey": {
+    "posterSlot": "hero",
+    "chapters": [
+      { "id": "region-rock", "from": "Region", "to": "Rock", "asset": "scrubRegionRock", "duration": 3, "direction": "reverse", "objectPosition": "52% center" },
+      { "id": "rock-sector", "from": "Rock", "to": "Sector", "asset": "scrubRockSector", "duration": 20.52, "direction": "reverse", "objectPosition": "50% center" },
+      { "id": "sector-topo", "from": "Sector", "to": "Topo", "asset": "scrubSectorTopo", "duration": 2.4, "direction": "reverse", "objectPosition": "48% center" }
+    ]
+  },
+  "modules": {
+    "locator": { "title": "Crag Locator", "mobileLabel": "Atlas", "description": "Search and browse the shared climbing atlas.", "primarySlots": [] },
+    "panorama": { "title": "Wachau Panorama", "mobileLabel": "360", "description": "Wachau studies with region, crag, sector and public 360 views.", "primarySlots": ["panoramaPoster", "panorama360"] },
+    "routes": { "title": "Nasenwand Routes", "mobileLabel": "Routes", "description": "Supplied route facts beside the wall photo and spatial study.", "primarySlots": ["hero"] },
+    "wall": { "title": "Nasenwand Wall Reveal", "mobileLabel": "Wall", "description": "A two-stage story from wall photograph to spatial study.", "primarySlots": ["hero", "spatial"] },
+    "topo": { "title": "Nasenwand Topo + 3D", "mobileLabel": "Topo", "description": "Route facts, provisional topo and intent-loaded 3D model.", "primarySlots": ["topo", "model"] }
+  },
+  "assets": {
+    "hero": { "kind": "image", "status": "ready", "targetPath": "/explore/pilots/nasenwand/hero/hero-1280.webp", "src": "/photography/nasenwand/nasenwand-photo-1280.webp", "alt": "Drone photograph of the Nasenwand wall" },
+    "spatial": { "kind": "image", "status": "ready", "targetPath": "/explore/pilots/nasenwand/wall/spatial-1280.webp", "src": "/photography/nasenwand/nasenwand-spatial-1280.webp", "alt": "Nasenwand spatial relief study" },
+    "topo": { "kind": "image", "status": "ready", "targetPath": "/explore/pilots/nasenwand/topo/topo-1280.webp", "src": "/photography/nasenwand/nasenwand-topo-1280.webp", "alt": "Provisional Nasenwand topo study" },
+    "model": { "kind": "model", "status": "ready", "targetPath": "/explore/pilots/nasenwand/model/model.glb", "src": "/models/nasenwand-bergsteiger-lod0.glb", "alt": "Provisional 3D model of Nasenwand", "bytes": 17577952 },
+    "panoramaPoster": { "kind": "panorama", "status": "ready", "targetPath": "/explore/pilots/nasenwand/panorama/poster-1600.webp", "src": "/photography/panoramas/wachau/wachau-09-preview.webp", "alt": "Ultra-wide aerial panorama of the Wachau and Danube" },
+    "panorama360": { "kind": "link", "status": "ready", "targetPath": "/explore/pilots/nasenwand/panorama/360-link.txt", "src": "https://maps.app.goo.gl/eXBK67PMrUGCVvsS7", "alt": "Public 360 view near Nasenwand" },
+    "scrubRegionRock": { "kind": "video", "status": "ready", "targetPath": "/explore/pilots/nasenwand/scrub/region-rock.mp4", "src": "/photography/explore-app/scrub/region-rock-pan-a.mp4", "alt": "Drone approach from the Wachau to Nasenwand" },
+    "scrubRockSector": { "kind": "video", "status": "ready", "targetPath": "/explore/pilots/nasenwand/scrub/rock-sector.mp4", "src": "/photography/explore-app/scrub/rock-sector-dji0058.mp4", "alt": "Drone move from the rock to the climbing sector" },
+    "scrubSectorTopo": { "kind": "video", "status": "ready", "targetPath": "/explore/pilots/nasenwand/scrub/sector-topo.mp4", "src": "/photography/explore-app/scrub/sector-topo-pan-b.mp4", "alt": "Drone move from sector overview to wall detail" }
+  }
+}

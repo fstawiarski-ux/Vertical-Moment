@@ -1,0 +1,36 @@
+{
+  "$schema": "../pilot.schema.json",
+  "schemaVersion": 1,
+  "id": "wachau-duernstein",
+  "label": "Pilot 002 — Wachau / Dürnstein / Däumling — LOCAL MOTION PROXY",
+  "releaseState": "assembly",
+  "identity": { "region": "Wachau", "regionSlug": "wachau", "crag": "Dürnstein", "cragSlug": "duernstein", "sector": "Däumling", "canonicalCragId": null },
+  "provenance": { "notionUrl": "https://app.notion.com/p/3be21413535181e9a3f3c9c16c68fe91", "dataPath": null, "confidence": "provisional", "lastReviewed": "2026-08-19" },
+  "summary": { "routeCount": 32, "gradeSystem": "UIAA", "gradeRange": "3- to 9", "discipline": "sport" },
+  "journey": {
+    "posterSlot": "hero",
+    "chapters": [
+      { "id": "region-rock", "from": "Region", "to": "Rock", "asset": "scrubRegionRock", "duration": 3, "direction": "reverse", "objectPosition": "52% center" },
+      { "id": "rock-sector", "from": "Rock", "to": "Sector", "asset": "scrubRockSector", "duration": 40.607233, "direction": "forward", "objectPosition": "50% center" },
+      { "id": "sector-topo", "from": "Sector", "to": "Topo", "asset": "scrubSectorTopo", "duration": 3.666667, "direction": "forward", "objectPosition": "50% center" }
+    ]
+  },
+  "modules": {
+    "locator": { "title": "Wachau Regional Locator", "mobileLabel": "Atlas", "description": "Terrain-camera context linking Däumling, Nasenwand and the optional ridge extension.", "primarySlots": [] },
+    "panorama": { "title": "Dürnstein Regional Context", "mobileLabel": "Context", "description": "Danube and Dürnstein context remains separate from wall-specific media and route claims.", "primarySlots": ["panoramaPoster", "panorama360"] },
+    "routes": { "title": "Däumling Routes", "mobileLabel": "Routes", "description": "Thirty-two dataset routes; Nähmaschinenkante remains a provisional hero-route selection.", "primarySlots": ["hero"] },
+    "wall": { "title": "Däumling Wall Reveal", "mobileLabel": "Wall", "description": "The owner reports Dürnstein animation exists, but no exact source path or approved wall derivative is attached.", "primarySlots": ["hero", "spatial"] },
+    "topo": { "title": "Däumling Topo + 3D", "mobileLabel": "Topo", "description": "The heavy private model stays intent-gated and outside the PWA; route geometry is not inferred.", "primarySlots": ["topo", "model"] }
+  },
+  "assets": {
+    "hero": { "kind": "image", "status": "missing", "targetPath": "/explore/pilots/wachau-duernstein/hero/hero-1280.webp", "src": null, "alt": "Däumling hero photograph" },
+    "spatial": { "kind": "image", "status": "missing", "targetPath": "/explore/pilots/wachau-duernstein/wall/spatial-1280.webp", "src": null, "alt": "Däumling spatial wall study" },
+    "topo": { "kind": "image", "status": "missing", "targetPath": "/explore/pilots/wachau-duernstein/topo/topo-1280.webp", "src": null, "alt": "Däumling topo" },
+    "model": { "kind": "model", "status": "missing", "targetPath": "/explore/pilots/wachau-duernstein/model/model.glb", "src": null, "alt": "Däumling 3D model", "note": "Approximately 461 MB source is not a web-ready or authorized PWA derivative." },
+    "panoramaPoster": { "kind": "panorama", "status": "review", "targetPath": "/explore/pilots/wachau-duernstein/panorama/poster-1600.webp", "src": null, "alt": "Wachau panorama near Dürnstein", "note": "Regional imagery exists, but a Dürnstein-specific approved poster is not assigned." },
+    "panorama360": { "kind": "link", "status": "missing", "targetPath": "/explore/pilots/wachau-duernstein/panorama/360-link.txt", "src": null, "alt": "Interactive 360 view of Däumling" },
+    "scrubRegionRock": { "kind": "video", "status": "missing", "targetPath": "/explore/pilots/wachau-duernstein/scrub/region-rock.mp4", "src": null, "alt": "Test-only Nasenwand Region to Rock proxy for Dürnstein", "note": "No Dürnstein Region-to-Rock derivative is verified; private proxy only.", "preview": { "adapter": "same-origin", "src": "/photography/explore-app/scrub/region-rock-pan-a.mp4", "provenance": "Nasenwand reference media; not Dürnstein or Däumling evidence", "verifiedForPilot": false, "replaceable": true } },
+    "scrubRockSector": { "kind": "video", "status": "missing", "targetPath": "/explore/pilots/wachau-duernstein/scrub/rock-sector.mp4", "src": null, "alt": "Test-only Nasenwand Rock to Sector proxy for Däumling", "note": "No Däumling Rock-to-Sector derivative is verified; private proxy only.", "preview": { "adapter": "same-origin", "src": "/photography/nasenwand/media/hero-720.mp4", "provenance": "Nasenwand reference media; not Dürnstein or Däumling evidence", "verifiedForPilot": false, "replaceable": true } },
+    "scrubSectorTopo": { "kind": "video", "status": "missing", "targetPath": "/explore/pilots/wachau-duernstein/scrub/sector-topo.mp4", "src": null, "alt": "Test-only Nasenwand Sector to Topo proxy for Däumling", "note": "No Däumling Sector-to-Topo derivative is verified; private proxy only.", "preview": { "adapter": "same-origin", "src": "/photography/nasenwand/media/nasenwand-orbit-scrub-allkey.mp4", "provenance": "Nasenwand reference media; not Dürnstein or Däumling evidence", "verifiedForPilot": false, "replaceable": true } }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "$schema": "../region.schema.json",
+  "schemaVersion": 1,
+  "id": "wachau",
+  "label": "Wachau / Dürnstein",
+  "eyebrow": "Private regional prototype · verified reference plus active recon",
+  "summary": "Move by terrain camera between Däumling, Nasenwand and the optional Civetta and Wachauergrat extensions. Media, route data and wall geometry remain node-specific.",
+  "defaultNode": "daeumling",
+  "notionUrl": "https://app.notion.com/p/3be2141353518178aa7bf084b95e9471",
+  "releaseState": "private-preview",
+  "nodes": [
+    {
+      "id": "daeumling",
+      "label": "Däumling / Dürnstein",
+      "shortLabel": "Däumling",
+      "pilotId": "wachau-duernstein",
+      "role": "hero",
+      "coordinate": { "latitude": 48.39812, "longitude": 15.52384, "source": "Wachau climbing dataset SEC_001_20", "confidence": "authoritative" },
+      "relationship": "Hero rock inside the Dürnstein cluster, approximately 14 m from the cluster centre and 646 m from Nasenwand.",
+      "routeCount": 32,
+      "media": {
+        "state": "proxy-local",
+        "availability": "owner-reported",
+        "label": "Nasenwand responsive hero proxy for Däumling",
+        "poster": "/photography/nasenwand/media/poster-1600.webp",
+        "video": "/photography/nasenwand/media/hero-720.mp4",
+        "duration": 40.607233,
+        "sourcePilot": "nasenwand",
+        "note": "LOCAL PROXY — Dürnstein/Däumling animation is owner-reported, but its exact manifest is absent. This remains labelled Nasenwand media."
+      }
+    },
+    {
+      "id": "nasenwand",
+      "label": "Nasenwand",
+      "shortLabel": "Nasenwand",
+      "pilotId": "nasenwand",
+      "role": "reference",
+      "coordinate": { "latitude": 48.40271, "longitude": 15.51847, "source": "Wachau climbing dataset WAC-2-28", "confidence": "corroborated" },
+      "relationship": "Verified reference wall, approximately 646 m from Däumling. Its media and route anatomy remain Nasenwand-specific.",
+      "routeCount": 80,
+      "media": {
+        "state": "verified",
+        "availability": "verified",
+        "label": "Verified Nasenwand Region-to-Rock scrub",
+        "poster": "/photography/explore-app/scrub/region-poster.jpg",
+        "video": "/photography/explore-app/scrub/region-rock-pan-a.mp4",
+        "duration": 3,
+        "sourcePilot": "nasenwand",
+        "note": "VERIFIED REFERENCE — source paths and mechanical QA map this media to Nasenwand; editorial crop approval remains a separate gate."
+      }
+    },
+    {
+      "id": "civetta",
+      "label": "Civetta cluster",
+      "shortLabel": "Civetta",
+      "pilotId": null,
+      "role": "extension",
+      "coordinate": { "latitude": 48.40230, "longitude": 15.52169, "source": "Wachau integration plan", "confidence": "corroborated" },
+      "relationship": "Optional supporting node inside the wider Dürnstein cluster; exact media identity and permissions are not confirmed.",
+      "routeCount": null,
+      "media": {
+        "state": "planned",
+        "availability": "not-available",
+        "label": "Civetta poster-only placeholder",
+        "poster": "/photography/panoramas/wachau/wachau-09-preview.webp",
+        "video": null,
+        "duration": null,
+        "sourcePilot": null,
+        "note": "PLANNED NODE — no clip is assigned by visual similarity; attach exact source identity and permissions first."
+      }
+    },
+    {
+      "id": "wachauergrat",
+      "label": "Wachauergrat",
+      "shortLabel": "Wachauergrat",
+      "pilotId": null,
+      "role": "extension",
+      "coordinate": { "latitude": 48.40695, "longitude": 15.52088, "source": "Wachau dataset and waypoint POI", "confidence": "authoritative" },
+      "relationship": "Optional ridge extension, approximately 1 km from Däumling. Current evidence contains flight plans, not finished footage.",
+      "routeCount": null,
+      "media": {
+        "state": "planned",
+        "availability": "not-available",
+        "label": "Wachauergrat poster-only mission node",
+        "poster": "/photography/panoramas/wachau/wachau-16-preview.webp",
+        "video": null,
+        "duration": null,
+        "sourcePilot": null,
+        "note": "PLANNED NODE — Litchi/DJI waypoint missions are not video. A real approved capture is required before scroll-scrub activation."
+      }
+    }
+  ]
+}

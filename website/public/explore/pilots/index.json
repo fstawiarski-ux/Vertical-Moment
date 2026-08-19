@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "defaultPilot": "nasenwand",
+  "pilots": [
+    { "id": "nasenwand", "cragSlug": "nasenwand", "manifest": "/explore/pilots/nasenwand/pilot.json", "releaseState": "ready" },
+    { "id": "hel-jammerwandl", "cragSlug": "jammerwandl", "manifest": "/explore/pilots/hel-jammerwandl/pilot.json", "releaseState": "assembly" },
+    { "id": "hel-beethovenwand", "cragSlug": "beethovenwand", "manifest": "/explore/pilots/hel-beethovenwand/pilot.json", "releaseState": "assembly" },
+    { "id": "hel-engelstein", "cragSlug": "engelstein", "manifest": "/explore/pilots/hel-engelstein/pilot.json", "releaseState": "assembly" },
+    { "id": "hel-siegenfelder-steinbruch", "cragSlug": "siegenfelder-steinbruch", "manifest": "/explore/pilots/hel-siegenfelder-steinbruch/pilot.json", "releaseState": "assembly" },
+    { "id": "hel-breite-wand", "cragSlug": "breite-wand", "manifest": "/explore/pilots/hel-breite-wand/pilot.json", "releaseState": "assembly" },
+    { "id": "wachau-duernstein", "cragSlug": "duernstein", "manifest": "/explore/pilots/wachau-duernstein/pilot.json", "releaseState": "assembly" }
+  ]
+}

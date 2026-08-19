@@ -1,0 +1,36 @@
+{
+  "$schema": "../pilot.schema.json",
+  "schemaVersion": 1,
+  "id": "hel-breite-wand",
+  "label": "Pilot 011 — Helenental / Breite Wand — LOCAL MOTION PROXY",
+  "releaseState": "assembly",
+  "identity": { "region": "Helenental", "regionSlug": "helenental", "crag": "Breite Wand", "cragSlug": "breite-wand", "sector": "Badener Kletterschule", "canonicalCragId": null },
+  "provenance": { "notionUrl": "https://app.notion.com/p/3c1214135351819c942dfb63dc58a285", "dataPath": "database/api/v1/crags/helenental/breite-wand.json", "confidence": "imported-unverified", "lastReviewed": "2026-08-19" },
+  "summary": { "routeCount": 50, "gradeSystem": "UIAA", "gradeRange": null, "discipline": "sport" },
+  "journey": {
+    "posterSlot": "hero",
+    "chapters": [
+      { "id": "region-rock", "from": "Region", "to": "Rock", "asset": "scrubRegionRock", "duration": 3, "direction": "reverse", "objectPosition": "52% center" },
+      { "id": "rock-sector", "from": "Rock", "to": "Sector", "asset": "scrubRockSector", "duration": 40.607233, "direction": "forward", "objectPosition": "50% center" },
+      { "id": "sector-topo", "from": "Sector", "to": "Topo", "asset": "scrubSectorTopo", "duration": 3.666667, "direction": "forward", "objectPosition": "50% center" }
+    ]
+  },
+  "modules": {
+    "locator": { "title": "Helenental Regional Locator", "mobileLabel": "Atlas", "description": "Western-spoke context for the Badener Kletterschule formation and the Helenental core.", "primarySlots": [] },
+    "panorama": { "title": "Badener Kletterschule Context", "mobileLabel": "Context", "description": "Formation-level context for Breite Wand with future Efeufelsen and Trenkerwand child clips.", "primarySlots": ["panoramaPoster", "panorama360"] },
+    "routes": { "title": "Breite Wand Routes", "mobileLabel": "Routes", "description": "Fifty Breite-Wand routes stay distinct from the 108-route three-face formation total.", "primarySlots": ["hero"] },
+    "wall": { "title": "Breite Wand Reveal", "mobileLabel": "Wall", "description": "No face-specific web imagery is attached; the current motion remains an explicit local proxy.", "primarySlots": ["hero", "spatial"] },
+    "topo": { "title": "Breite Wand Topo + 3D", "mobileLabel": "Topo", "description": "Topo, 3D and face-level media remain missing until the formation scope is owner-reviewed.", "primarySlots": ["topo", "model"] }
+  },
+  "assets": {
+    "hero": { "kind": "image", "status": "missing", "targetPath": "/explore/pilots/hel-breite-wand/hero/hero-1280.webp", "src": null, "alt": "Breite Wand hero photograph" },
+    "spatial": { "kind": "image", "status": "missing", "targetPath": "/explore/pilots/hel-breite-wand/wall/spatial-1280.webp", "src": null, "alt": "Breite Wand spatial wall study" },
+    "topo": { "kind": "image", "status": "missing", "targetPath": "/explore/pilots/hel-breite-wand/topo/topo-1280.webp", "src": null, "alt": "Breite Wand topo" },
+    "model": { "kind": "model", "status": "missing", "targetPath": "/explore/pilots/hel-breite-wand/model/model.glb", "src": null, "alt": "Breite Wand 3D model" },
+    "panoramaPoster": { "kind": "panorama", "status": "missing", "targetPath": "/explore/pilots/hel-breite-wand/panorama/poster-1600.webp", "src": null, "alt": "Badener Kletterschule panorama" },
+    "panorama360": { "kind": "link", "status": "missing", "targetPath": "/explore/pilots/hel-breite-wand/panorama/360-link.txt", "src": null, "alt": "Interactive 360 view of Breite Wand" },
+    "scrubRegionRock": { "kind": "video", "status": "missing", "targetPath": "/explore/pilots/hel-breite-wand/scrub/region-rock.mp4", "src": null, "alt": "Test-only Nasenwand Region to Rock proxy for Breite Wand", "note": "No Breite Wand Region-to-Rock derivative is verified; private proxy only.", "preview": { "adapter": "same-origin", "src": "/photography/explore-app/scrub/region-rock-pan-a.mp4", "provenance": "Nasenwand reference media; not Breite Wand evidence", "verifiedForPilot": false, "replaceable": true } },
+    "scrubRockSector": { "kind": "video", "status": "missing", "targetPath": "/explore/pilots/hel-breite-wand/scrub/rock-sector.mp4", "src": null, "alt": "Test-only Nasenwand Rock to Sector proxy for Breite Wand", "note": "No Breite Wand Rock-to-Sector derivative is verified; private proxy only.", "preview": { "adapter": "same-origin", "src": "/photography/nasenwand/media/hero-720.mp4", "provenance": "Nasenwand reference media; not Breite Wand evidence", "verifiedForPilot": false, "replaceable": true } },
+    "scrubSectorTopo": { "kind": "video", "status": "missing", "targetPath": "/explore/pilots/hel-breite-wand/scrub/sector-topo.mp4", "src": null, "alt": "Test-only Nasenwand Sector to Topo proxy for Breite Wand", "note": "No Breite Wand Sector-to-Topo derivative is verified; private proxy only.", "preview": { "adapter": "same-origin", "src": "/photography/nasenwand/media/nasenwand-orbit-scrub-allkey.mp4", "provenance": "Nasenwand reference media; not Breite Wand evidence", "verifiedForPilot": false, "replaceable": true } }
+  }
+}

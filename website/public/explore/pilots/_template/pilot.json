@@ -1,0 +1,36 @@
+{
+  "$schema": "../pilot.schema.json",
+  "schemaVersion": 1,
+  "id": "pilot-id",
+  "label": "Pilot label",
+  "releaseState": "assembly",
+  "identity": { "region": "Region", "regionSlug": "region", "crag": "Crag", "cragSlug": "crag", "sector": null, "canonicalCragId": null },
+  "provenance": { "notionUrl": null, "dataPath": null, "confidence": "provisional", "lastReviewed": null },
+  "summary": { "routeCount": null, "gradeSystem": null, "gradeRange": null, "discipline": null },
+  "journey": {
+    "posterSlot": "hero",
+    "chapters": [
+      { "id": "region-rock", "from": "Region", "to": "Rock", "asset": "scrubRegionRock", "duration": null, "direction": "forward", "objectPosition": "50% center" },
+      { "id": "rock-sector", "from": "Rock", "to": "Sector", "asset": "scrubRockSector", "duration": null, "direction": "forward", "objectPosition": "50% center" },
+      { "id": "sector-topo", "from": "Sector", "to": "Topo", "asset": "scrubSectorTopo", "duration": null, "direction": "forward", "objectPosition": "50% center" }
+    ]
+  },
+  "modules": {
+    "locator": { "title": "Region locator", "mobileLabel": "Atlas", "description": "Shared region and crag locator.", "primarySlots": [] },
+    "panorama": { "title": "Region panorama", "mobileLabel": "360", "description": "Regional panorama and optional 360 view.", "primarySlots": ["panoramaPoster", "panorama360"] },
+    "routes": { "title": "Crag routes", "mobileLabel": "Routes", "description": "Canonical route facts and sector context.", "primarySlots": ["hero"] },
+    "wall": { "title": "Wall reveal", "mobileLabel": "Wall", "description": "Photo-to-spatial wall story.", "primarySlots": ["hero", "spatial"] },
+    "topo": { "title": "Topo + 3D", "mobileLabel": "Topo", "description": "Topo and intent-loaded 3D workspace.", "primarySlots": ["topo", "model"] }
+  },
+  "assets": {
+    "hero": { "kind": "image", "status": "missing", "targetPath": "/explore/pilots/pilot-id/hero/hero-1280.webp", "src": null, "alt": "Crag hero photograph" },
+    "spatial": { "kind": "image", "status": "missing", "targetPath": "/explore/pilots/pilot-id/wall/spatial-1280.webp", "src": null, "alt": "Crag spatial wall study" },
+    "topo": { "kind": "image", "status": "missing", "targetPath": "/explore/pilots/pilot-id/topo/topo-1280.webp", "src": null, "alt": "Crag topo" },
+    "model": { "kind": "model", "status": "missing", "targetPath": "/explore/pilots/pilot-id/model/model.glb", "src": null, "alt": "Crag 3D model" },
+    "panoramaPoster": { "kind": "panorama", "status": "missing", "targetPath": "/explore/pilots/pilot-id/panorama/poster-1600.webp", "src": null, "alt": "Regional panorama" },
+    "panorama360": { "kind": "link", "status": "missing", "targetPath": "/explore/pilots/pilot-id/panorama/360-link.txt", "src": null, "alt": "Interactive 360 view" },
+    "scrubRegionRock": { "kind": "video", "status": "missing", "targetPath": "/explore/pilots/pilot-id/scrub/region-rock.mp4", "src": null, "alt": "Journey from region to rock" },
+    "scrubRockSector": { "kind": "video", "status": "missing", "targetPath": "/explore/pilots/pilot-id/scrub/rock-sector.mp4", "src": null, "alt": "Journey from rock to sector" },
+    "scrubSectorTopo": { "kind": "video", "status": "missing", "targetPath": "/explore/pilots/pilot-id/scrub/sector-topo.mp4", "src": null, "alt": "Journey from sector to topo" }
+  }
+}

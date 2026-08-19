@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://verticalmoment.com/explore/regions/region.schema.json",
+  "title": "Vertical Moment private regional preview",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "id", "label", "eyebrow", "summary", "defaultNode", "notionUrl", "releaseState", "nodes"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schemaVersion": { "const": 1 },
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "label": { "type": "string", "minLength": 1 },
+    "eyebrow": { "type": "string", "minLength": 1 },
+    "summary": { "type": "string", "minLength": 1 },
+    "defaultNode": { "type": "string", "minLength": 1 },
+    "notionUrl": { "type": "string", "format": "uri" },
+    "releaseState": { "const": "private-preview" },
+    "nodes": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label", "shortLabel", "pilotId", "role", "coordinate", "relationship", "routeCount", "media"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+          "label": { "type": "string", "minLength": 1 },
+          "shortLabel": { "type": "string", "minLength": 1 },
+          "pilotId": { "type": ["string", "null"] },
+          "role": { "enum": ["core", "spoke", "reference", "hero", "extension"] },
+          "coordinate": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["latitude", "longitude", "source", "confidence"],
+            "properties": {
+              "latitude": { "type": "number", "minimum": -90, "maximum": 90 },
+              "longitude": { "type": "number", "minimum": -180, "maximum": 180 },
+              "source": { "type": "string", "minLength": 1 },
+              "confidence": { "enum": ["authoritative", "corroborated", "provisional"] }
+            }
+          },
+          "relationship": { "type": "string", "minLength": 1 },
+          "routeCount": { "type": ["integer", "null"], "minimum": 0 },
+          "media": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["state", "availability", "label", "poster", "video", "duration", "sourcePilot", "note"],
+            "properties": {
+              "state": { "enum": ["verified", "proxy-local", "owner-reported", "planned"] },
+              "availability": { "enum": ["verified", "owner-reported", "not-available"] },
+              "label": { "type": "string", "minLength": 1 },
+              "poster": {
+                "type": "string",
+                "anyOf": [
+                  { "pattern": "^/(?!/)" },
+                  { "pattern": "^https://" }
+                ]
+              },
+              "video": {
+                "anyOf": [
+                  { "type": "null" },
+                  { "type": "string", "pattern": "^/(?!/)" },
+                  { "type": "string", "pattern": "^https://" }
+                ]
+              },
+              "duration": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+              "sourcePilot": { "type": ["string", "null"] },
+              "note": { "type": "string", "minLength": 1 }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -17,6 +17,25 @@
 .gestureLayer { z-index: 3; pointer-events: auto; touch-action: none; cursor: ew-resize; }
 .sequence[data-unlocked="true"] .gestureLayer { pointer-events: none; }
 .sequence[data-unlocked="true"][data-scrub-live="true"] .gestureLayer { pointer-events: auto; }
+.previewNotice {
+  position: absolute;
+  top: max(72px, calc(env(safe-area-inset-top) + 56px));
+  left: max(14px, env(safe-area-inset-left));
+  z-index: 5;
+  max-width: min(520px, calc(100vw - 28px));
+  margin: 0;
+  padding: 8px 11px;
+  color: #ffe2a0;
+  border: 1px solid rgb(255 219 137 / 42%);
+  border-radius: 999px;
+  background: rgb(21 16 7 / 82%);
+  font: 800 9px/1.25 ui-monospace, SFMono-Regular, Consolas, monospace;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  box-shadow: 0 9px 30px rgb(0 0 0 / 28%);
+  backdrop-filter: blur(12px);
+  pointer-events: none;
+}
 .introCopy {
   position: absolute;
   right: clamp(26px, 5vw, 86px);

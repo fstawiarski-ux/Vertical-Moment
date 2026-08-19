@@ -4,6 +4,7 @@ import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } fro
 import { IntroScrubSequence, type UnlockReason } from "./components/animation/IntroScrubSequence";
 import { BoxTopoWorkspace } from "./components/boxes/BoxTopoWorkspace";
 import { BoxContainer } from "./components/boxes/BoxContainer";
+import { BoxPilotAssembly } from "./components/boxes/BoxPilotAssembly";
 import { ResponsiveImage } from "./components/media/ResponsiveImage";
 import { CommandPalette } from "./components/shell/CommandPalette";
 import { ConnectionStatus } from "./components/shell/ConnectionStatus";
@@ -12,6 +13,7 @@ import { PhoneShell } from "./components/shell/PhoneShell";
 import { StationPeek } from "./components/shell/StationPeek";
 import { WorkspaceTopRail } from "./components/shell/WorkspaceTopRail";
 import { DesktopShell, TabletShell } from "./components/shell/WorkspaceShells";
+import { RegionalFlyover } from "./components/regions/RegionalFlyover";
 import { UnifiedExplorePreview } from "./components/UnifiedExplorePreview";
 import { OfficialMark } from "./brand/OfficialMark";
 import { deepLinkFor, parseDeepLink, resolveDeepLink, writeDeepLinkToUrl } from "./core/deepLink";
@@ -19,6 +21,8 @@ import { hasSeenIntro, prefersReducedMotion, rememberIntroSeen } from "./core/in
 import { LayoutProvider, useLayoutState } from "./core/layoutState";
 import { compactJourneyFrame, heroFirstFrameForBox, stationFrameForBox } from "./core/layoutAlgorithms";
 import { buildContentEntries, type SearchEntry } from "./core/searchIndex";
+import { applyPilotToRegistry, moduleKeyForContent, pilotJourneyPreviewable, pilotUsesPreviewMedia, selectedPilotId } from "./core/pilotManifest";
+import type { ExplorePilotManifest, PilotCatalog, RegionalPreviewManifest } from "./core/pilotTypes";
 import type {
   BoxMode,
   BoxState,
@@ -165,7 +169,11 @@ function WallRevealModule({ isActive }: { isActive: boolean }) {
   );
 }
 
-function BoxContent({ content, isActive, priority = false }: { content: ExploreContentBox; isActive: boolean; priority?: boolean }) {
+function BoxContent({ content, isActive, priority = false, pilot }: { content: ExploreContentBox; isActive: boolean; priority?: boolean; pilot?: ExplorePilotManifest | null }) {
+  const pilotModule = moduleKeyForContent(content);
+  if (pilot && pilotModule && pilotModule !== "locator") {
+    return <BoxPilotAssembly pilot={pilot} moduleKey={pilotModule} isActive={isActive} />;
+  }
   if (content.type === "atlas") return <AtlasModule isActive={isActive} />;
   if (content.type === "panorama") return <PanoramaModule isActive={isActive} />;
   if (content.type === "nasenwand") return <NasenwandModule isActive={isActive} />;
@@ -186,7 +194,7 @@ function BoxContent({ content, isActive, priority = false }: { content: ExploreC
   );
 }
 
-function Workspace({ registry }: { registry: ExploreContentRegistry }) {
+function Workspace({ registry, pilot }: { registry: ExploreContentRegistry; pilot?: ExplorePilotManifest | null }) {
   const viewportMode = useViewportMode();
   const workspaceManifest = useMemo(() => resolveWorkspaceManifest(registry), [registry]);
   const stationPresentations = useMemo(() => stationPresentationsFor(registry), [registry]);
@@ -320,6 +328,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
       }
       const goStraightIn = request.intro === "skip"
         || Boolean(request.open || request.crag)
+        || new URLSearchParams(window.location.search).has("pilot")
         || seen
         || prefersReducedMotion();
       setIntroMode(goStraightIn ? "static" : "cinematic");
@@ -563,10 +572,12 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
   const onPaletteCopyLink = useCallback((entry: SearchEntry) => {
     const content = entry.boxId ? contentById.get(entry.boxId) : undefined;
     if (!content || !navigator.clipboard) return;
+    const link = new URL(deepLinkFor(content), window.location.origin);
+    if (pilot) link.searchParams.set("pilot", pilot.id);
     void navigator.clipboard
-      .writeText(`${window.location.origin}${deepLinkFor(content)}`)
+      .writeText(link.toString())
       .catch(() => { /* Clipboard access can be blocked; the URL bar still holds the link. */ });
-  }, [contentById]);
+  }, [contentById, pilot]);
 
   const stationFocusId = stationPresentations[journeyStation].focusBoxId;
   const journeyActive = workspaceUnlocked && followJourney;
@@ -586,6 +597,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
           content={content}
           isActive={activeBoxId === box.id || (journeyActive && stationFocusId === box.id)}
           priority={content.id === registry.boxes[0]?.id}
+          pilot={pilot}
         />
       </BoxContainer>
     );
@@ -624,6 +636,11 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
         onUnlock={handleUnlock}
         allowPostUnlockScrub={true}
         allowPostUnlockStationRequests={true}
+        posterOnly={Boolean(pilot && !pilotJourneyPreviewable(pilot))}
+        label={pilot ? `${pilot.identity.region} to ${pilot.identity.crag} journey` : "Wachau approach scrub sequence"}
+        notice={pilot && pilotUsesPreviewMedia(pilot)
+          ? `LOCAL PROXY · ${pilot.identity.crag} footage is not verified · replace before release`
+          : undefined}
       />
       {stationPeekVisible && (
         <StationPeek
@@ -729,13 +746,21 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
 
 export default function ExploreApp({ initialRegistry }: { initialRegistry?: ExploreContentRegistry }) {
   const [registry, setRegistry] = useState<ExploreContentRegistry | null>(initialRegistry ?? null);
+  const [pilot, setPilot] = useState<ExplorePilotManifest | null>(null);
+  const [pilotCatalog, setPilotCatalog] = useState<PilotCatalog | null>(null);
+  const [activePilotId, setActivePilotId] = useState<string | null>(null);
+  const [regionalPreview, setRegionalPreview] = useState<RegionalPreviewManifest | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [unifiedPreview, setUnifiedPreview] = useState(false);
+  const displayRegistry = useMemo(
+    () => registry && pilot ? applyPilotToRegistry(registry, pilot) : registry,
+    [pilot, registry],
+  );
   const initialState = useMemo(() => {
-    if (!registry) return null;
+    if (!displayRegistry) return null;
     const viewport = typeof window === "undefined" ? undefined : { width: window.innerWidth, height: window.innerHeight };
-    return seedLayout(registry, viewport);
-  }, [registry]);
+    return seedLayout(displayRegistry, viewport);
+  }, [displayRegistry]);
 
   useEffect(() => {
     let cancelled = false;
@@ -771,8 +796,71 @@ export default function ExploreApp({ initialRegistry }: { initialRegistry?: Expl
     setUnifiedPreview(new URLSearchParams(window.location.search).get("preview") === "unified");
   }, []);
 
+  const loadPilot = useCallback(async (catalog: PilotCatalog, id: string) => {
+    const entry = catalog.pilots.find((candidate) => candidate.id === id);
+    if (!entry) return;
+    setActivePilotId(id);
+    if (id === catalog.defaultPilot) {
+      setPilot(null);
+      return;
+    }
+    const response = await fetch(entry.manifest, { cache: "no-cache" });
+    if (!response.ok) throw new Error(`Pilot manifest returned ${response.status}`);
+    setPilot(await response.json() as ExplorePilotManifest);
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    void fetch("/explore/pilots/index.json", { cache: "no-cache" })
+      .then((response) => {
+        if (!response.ok) throw new Error(`Pilot catalog returned ${response.status}`);
+        return response.json() as Promise<PilotCatalog>;
+      })
+      .then(async (catalog) => {
+        if (cancelled) return;
+        setPilotCatalog(catalog);
+        const id = selectedPilotId(window.location.search, catalog);
+        await loadPilot(catalog, id);
+      })
+      .catch((reason: unknown) => {
+        // A missing optional catalog must never prevent the reference pilot
+        // from opening. Explicit pilot previews fall back to Nasenwand.
+        if (!cancelled) console.warn(reason instanceof Error ? reason.message : "Pilot manifest unavailable");
+      });
+    return () => { cancelled = true; };
+  }, [loadPilot]);
+
+  useEffect(() => {
+    const id = new URLSearchParams(window.location.search).get("regionPreview");
+    if (!id) return;
+    let cancelled = false;
+    void fetch(`/explore/regions/${id}/region.json`, { cache: "no-cache" })
+      .then((response) => {
+        if (!response.ok) throw new Error(`Regional preview returned ${response.status}`);
+        return response.json() as Promise<RegionalPreviewManifest>;
+      })
+      .then((content) => { if (!cancelled) setRegionalPreview(content); })
+      .catch((reason: unknown) => {
+        if (!cancelled) console.warn(reason instanceof Error ? reason.message : "Regional preview unavailable");
+      });
+    return () => { cancelled = true; };
+  }, []);
+
+  const selectRegionalPilot = useCallback((id: string) => {
+    if (!pilotCatalog) return;
+    const entry = pilotCatalog.pilots.find((candidate) => candidate.id === id);
+    if (!entry) return;
+    const url = new URL(window.location.href);
+    url.searchParams.set("pilot", id);
+    url.searchParams.set("crag", entry.cragSlug);
+    window.history.replaceState({}, "", url);
+    void loadPilot(pilotCatalog, id).catch((reason: unknown) => {
+      console.warn(reason instanceof Error ? reason.message : "Pilot manifest unavailable");
+    });
+  }, [loadPilot, pilotCatalog]);
+
   if (error) return <main className={styles.loading}><h1>Workspace could not start.</h1><p>{error}</p></main>;
-  if (!registry || !initialState) {
+  if (!displayRegistry || !initialState) {
     return (
       <main className={styles.loading}>
         <OfficialMark variant="iridescent-vm" size={72} animated decorative priority />
@@ -784,8 +872,15 @@ export default function ExploreApp({ initialRegistry }: { initialRegistry?: Expl
   return (
     <>
       <ServiceWorkerRegistration />
-      <LayoutProvider key={registry.version} initialState={initialState}>
-        {unifiedPreview ? <UnifiedExplorePreview registry={registry} /> : <Workspace registry={registry} />}
+      {regionalPreview && (
+        <RegionalFlyover
+          manifest={regionalPreview}
+          activePilotId={activePilotId}
+          onSelectPilot={selectRegionalPilot}
+        />
+      )}
+      <LayoutProvider key={`${displayRegistry.version}:${pilot?.id ?? "nasenwand"}`} initialState={initialState}>
+        {unifiedPreview ? <UnifiedExplorePreview registry={displayRegistry} /> : <Workspace registry={displayRegistry} pilot={pilot} />}
       </LayoutProvider>
     </>
   );

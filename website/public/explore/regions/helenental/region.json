@@ -1,0 +1,113 @@
+{
+  "$schema": "../region.schema.json",
+  "schemaVersion": 1,
+  "id": "helenental",
+  "label": "Helenental Corridor",
+  "eyebrow": "Private regional prototype · five linked pilots",
+  "summary": "Fly the map between the true Jammerwandl–Beethovenwand–Engelstein core and the Breite Wand and Siegenfelder regional spokes. Each node keeps its own media and provenance.",
+  "defaultNode": "jammerwandl",
+  "notionUrl": "https://app.notion.com/p/3ab21413535181fe9132db7bc87bd1ac",
+  "releaseState": "private-preview",
+  "nodes": [
+    {
+      "id": "jammerwandl",
+      "label": "Jammerwandl",
+      "shortLabel": "Jammerwandl",
+      "pilotId": "hel-jammerwandl",
+      "role": "core",
+      "coordinate": { "latitude": 48.015336, "longitude": 16.198289, "source": "Vertical Moment canonical atlas", "confidence": "authoritative" },
+      "relationship": "Core-cluster anchor, approximately 138 m from Engelstein and 209 m from Beethovenwand.",
+      "routeCount": 37,
+      "media": {
+        "state": "proxy-local",
+        "availability": "owner-reported",
+        "label": "Nasenwand map-motion proxy for Jammerwandl",
+        "poster": "/photography/explore-app/scrub/region-poster.jpg",
+        "video": "/photography/explore-app/scrub/region-rock-pan-a.mp4",
+        "duration": 3,
+        "sourcePilot": "nasenwand",
+        "note": "LOCAL PROXY — the owner reports Jammerwandl animation exists, but its exact path is not attached. This visible motion remains Nasenwand provenance."
+      }
+    },
+    {
+      "id": "beethovenwand",
+      "label": "Beethovenwand",
+      "shortLabel": "Beethovenwand",
+      "pilotId": "hel-beethovenwand",
+      "role": "core",
+      "coordinate": { "latitude": 48.015792, "longitude": 16.195563, "source": "Vertical Moment canonical atlas", "confidence": "authoritative" },
+      "relationship": "Central core node, approximately 82 m from Engelstein and 209 m from Jammerwandl.",
+      "routeCount": 24,
+      "media": {
+        "state": "proxy-local",
+        "availability": "owner-reported",
+        "label": "Nasenwand local motion proxy for Beethovenwand",
+        "poster": "/photography/nasenwand/media/poster-1600.webp",
+        "video": "/photography/nasenwand/media/loop-pingpong-1080.mp4",
+        "duration": 12.012,
+        "sourcePilot": "nasenwand",
+        "note": "LOCAL PROXY — explicitly borrowed for this test. It is not Beethovenwand evidence and cannot pass the publication gate."
+      }
+    },
+    {
+      "id": "engelstein",
+      "label": "Engelstein",
+      "shortLabel": "Engelstein",
+      "pilotId": "hel-engelstein",
+      "role": "core",
+      "coordinate": { "latitude": 48.015914, "longitude": 16.196654, "source": "Vertical Moment canonical atlas", "confidence": "authoritative" },
+      "relationship": "Core node between Beethovenwand and Jammerwandl; access, gear and biosphere cautions remain unresolved.",
+      "routeCount": 17,
+      "media": {
+        "state": "proxy-local",
+        "availability": "owner-reported",
+        "label": "Nasenwand orbit proxy for Engelstein",
+        "poster": "/photography/nasenwand/media/poster-1600.webp",
+        "video": "/photography/nasenwand/media/nasenwand-orbit-scrub-allkey.mp4",
+        "duration": 3.666667,
+        "sourcePilot": "nasenwand",
+        "note": "LOCAL PROXY — Engelstein animation is owner-reported only; exact source mapping, crop and QA remain open."
+      }
+    },
+    {
+      "id": "breite-wand",
+      "label": "Breite Wand / Badener Kletterschule",
+      "shortLabel": "Breite Wand",
+      "pilotId": "hel-breite-wand",
+      "role": "spoke",
+      "coordinate": { "latitude": 48.019512, "longitude": 16.190224, "source": "Vertical Moment canonical atlas", "confidence": "authoritative" },
+      "relationship": "Western spoke, 573–759 m from the core. Efeufelsen and Trenkerwand remain future child clips under this formation.",
+      "routeCount": 50,
+      "media": {
+        "state": "proxy-local",
+        "availability": "owner-reported",
+        "label": "Nasenwand landscape proxy for Breite Wand",
+        "poster": "/photography/nasenwand/media/poster-1600.webp",
+        "video": "/photography/nasenwand/media/hero-720.mp4",
+        "duration": 40.607233,
+        "sourcePilot": "nasenwand",
+        "note": "LOCAL PROXY — formation animation is owner-reported; face-level identities and exact source paths are not attached."
+      }
+    },
+    {
+      "id": "siegenfelder-steinbruch",
+      "label": "Siegenfelder Steinbruch",
+      "shortLabel": "Steinbruch",
+      "pilotId": "hel-siegenfelder-steinbruch",
+      "role": "spoke",
+      "coordinate": { "latitude": 48.022607, "longitude": 16.192024, "source": "Vertical Moment canonical atlas", "confidence": "authoritative" },
+      "relationship": "Northern spoke, 802–933 m from the core and approximately 369 m from Breite Wand.",
+      "routeCount": 12,
+      "media": {
+        "state": "proxy-local",
+        "availability": "owner-reported",
+        "label": "Nasenwand close-wall proxy for Siegenfelder Steinbruch",
+        "poster": "/photography/nasenwand/media/poster-1600.webp",
+        "video": "/photography/nasenwand/media/close-wall-loop-lite.mp4",
+        "duration": 5.75,
+        "sourcePilot": "nasenwand",
+        "note": "LOCAL PROXY — Steinbruch animation is owner-reported; exact source, route-count reconciliation and crop approval remain open."
+      }
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "pilotKey": "hel-beethovenwand",
+  "runAt": "2026-08-19T23:03:58+02:00",
+  "releaseStateBefore": "intake",
+  "releaseStateAfter": "assembly",
+  "readinessPercent": 71,
+  "calculation": {
+    "method": "Seven equal preflight checks: pass=1, warning=0.5, blocker/not-run=0; round 100 times earned points divided by 7.",
+    "earnedPoints": 5,
+    "possiblePoints": 7,
+    "unroundedPercent": 71.4285714286,
+    "note": "This measures smoke-test workflow readiness. It does not measure asset completeness and never overrides a blocker or owner gate."
+  },
+  "validation": "blocked",
+  "checks": [
+    {
+      "id": "manifest-schema",
+      "result": "pass",
+      "blocking": true,
+      "evidence": "Private intake and public pilot JSON parsed; npm run verify-pilots inspected 7 pilot manifests, 63 asset slots, 15 private preview adapters, 2 regional manifests and 9 regional nodes."
+    },
+    {
+      "id": "source-paths-hashes",
+      "result": "pass",
+      "blocking": true,
+      "evidence": "Read-only enumeration found 17 Beethoven-labeled files under the Notion Intake root. SHA-256 was calculated for every file without moving or modifying a source master."
+    },
+    {
+      "id": "canonical-data-provenance",
+      "result": "pass",
+      "blocking": true,
+      "evidence": "Identity, 24-route count, UIAA grade range, sport discipline and canonical crag ID come from database/api/v1/crags/helenental/beethovenwand.json and remain imported-unverified. No Notion/Google coordinates or model-derived geometry were promoted."
+    },
+    {
+      "id": "media-technical-qa",
+      "result": "blocker",
+      "blocking": true,
+      "evidence": "The 566,824,908-byte glTF 2.0 source has matching declared/actual length but references an external 86,346,775-byte texture. Ownership and derivative permission are unresolved, no web model exists, and Beethoven-specific hero/topo/panorama/scrub media is absent. Three Nasenwand videos play through explicit replaceable preview adapters while the release asset slots remain status=missing and src=null; they receive no Beethovenwand readiness credit."
+    },
+    {
+      "id": "five-box-contract",
+      "result": "pass",
+      "blocking": true,
+      "evidence": "Locator, Panorama, Routes, Wall and Topo + 3D remain the five permanent modules; Region to Rock to Sector to Topo remains a three-chapter journey; missing slots fail closed."
+    },
+    {
+      "id": "responsive-reduced-motion",
+      "result": "warning",
+      "blocking": true,
+      "evidence": "The local production preview rendered the regional map, proxy labels, permanent five-box journey and missing-asset fallbacks without runtime warnings/errors. The browser viewport override did not yield conclusive phone dimensions in this session; physical phone/tablet touch, drag and reduced-motion checks remain pending."
+    },
+    {
+      "id": "offline-weak-signal",
+      "result": "warning",
+      "blocking": true,
+      "evidence": "The production build generated the Serwist service worker and all proxy media was served from same-origin local paths. Offline, cache-clear and weak-signal behavior were not rerun in this session and remain release-checklist items."
+    }
+  ],
+  "sourceInventory": [
+    { "name": "Beethoweeniphone.zep", "bytes": 1009, "sha256": "0366628198f01894eee233cda67bdff3aef4616bee9039836e99dfa2c105e06f" },
+    { "name": "betovennowy_u0_v0_diffuse.png", "bytes": 30931611, "sha256": "f43ec27f8e300b3f5b7b0cf65bf3b71e25440d00ff02d600b4faff76b6c1ea2d" },
+    { "name": "betovennowy.mtl", "bytes": 191, "sha256": "39e69636b465915d02b761f8d5ef7c80b187ef4c2b3a538a04480ef237fb7c01" },
+    { "name": "betovennowy.obj", "bytes": 2129822544, "sha256": "03a684a3139e753bd979bfc0ef08696d263da2d7525815b69d6bff1bedce7e48" },
+    { "name": "betovennowy.obj.rsInfo", "bytes": 2019, "sha256": "0c746fc807f7d04c6c362ff2d44f65702a231c7eb66dc05f6536d804883cdd99" },
+    { "name": "goodbetoven_Model_15GLB_u0_v0_diffuse.png", "bytes": 86346775, "sha256": "9233e3652dc8b7bbf70577764c4092b53f034367dcab935d055fac41c50f329a" },
+    { "name": "goodbetoven_Model_15GLB.glb", "bytes": 566824908, "sha256": "931ed19e91f8f9bf88fd38d1b2305c7468ee934e69626db6f8ee57b4930e1b2c" },
+    { "name": "goodbetoven_Model_15GLB.glb.rsInfo", "bytes": 2019, "sha256": "ea6baf7127c55ec3483aaec132134148d02b806e5e96297701251a5978d75e5f" },
+    { "name": "goodbetoven_Model_15OBJ_u0_v0_diffuse.png", "bytes": 30931611, "sha256": "f43ec27f8e300b3f5b7b0cf65bf3b71e25440d00ff02d600b4faff76b6c1ea2d" },
+    { "name": "goodbetoven_Model_15OBJ.mtl", "bytes": 215, "sha256": "0c0bd5a1c5eafb07a23c2248b4fe8651a9efdbb9cd85fff625d2a1e194c41e05" },
+    { "name": "goodbetoven_Model_15OBJ.obj", "bytes": 1978025981, "sha256": "cb099a3fc0f5c23d72863a3481d8d681bbe65fa44a500e70194448620d2b3f9a" },
+    { "name": "goodbetoven_Model_15OBJ.obj.rsInfo", "bytes": 2019, "sha256": "0c746fc807f7d04c6c362ff2d44f65702a231c7eb66dc05f6536d804883cdd99" },
+    { "name": "goodbetoven_Model_15PLY_u1_v1_diffuse.png", "bytes": 86346775, "sha256": "9233e3652dc8b7bbf70577764c4092b53f034367dcab935d055fac41c50f329a" },
+    { "name": "goodbetoven_Model_15PLY.ply", "bytes": 585959160, "sha256": "05a2f513055fd72db33d278571f929f2b239fb55380efeee82494a7f5c3cbe1e" },
+    { "name": "goodbetoven_Model_15PLY.ply.rsInfo", "bytes": 2019, "sha256": "88115fb714c0836115f8e2b201eb981606984ee53511a9b15acd8971c097923c" },
+    { "name": "goodbetoven.rsproj", "bytes": 23427, "sha256": "4963545bb3868fed466f985c819df95039d78e187fd26c34790a808f687b3abc" },
+    { "name": "NEWBETOVEN.rsproj", "bytes": 24417, "sha256": "6ada5c38c0001ccaa9c495110d1175152f7e60601719a8ba2c8c7b97f526d4e2" }
+  ],
+  "borrowedPreviewMedia": [
+    {
+      "pilot": "nasenwand",
+      "path": "website/public/photography/nasenwand/media/loop-pingpong-1080.mp4",
+      "durationSeconds": 12.012,
+      "sha256": "698d9ab5ac9bf8ee976b400ef1e10a81971e7beb7739cdb9191510ec729111b1"
+    },
+    {
+      "pilot": "nasenwand",
+      "path": "website/public/photography/nasenwand/media/loop-story-1080x1920.mp4",
+      "durationSeconds": 6.006,
+      "sha256": "f7d710a242c12c9ba2ce3c0f7609e9bf097f02b04f01274d8e7368483cf9112c"
+    },
+    {
+      "pilot": "nasenwand",
+      "path": "website/public/photography/nasenwand/media/nasenwand-orbit-scrub-allkey.mp4",
+      "durationSeconds": 3.666667,
+      "sha256": "4155fc08f0fcd8be616a9eb3e2e6a8eacb1f990859086146fb37e602bcfec141"
+    }
+  ],
+  "preview": {
+    "url": "http://127.0.0.1:3001/explore-app?regionPreview=helenental&pilot=hel-beethovenwand&open=beethovenwand-routes&crag=beethovenwand&sector=beethovenwand&mode=normal",
+    "server": "Local production build on port 3001. No public deployment was performed.",
+    "devices": [
+      { "surface": "desktop", "result": "pass-browser-automation" },
+      { "surface": "phone", "viewport": "390x844 requested", "result": "warning-viewport-override-inconclusive" },
+      { "surface": "tablet", "result": "not-run" },
+      { "surface": "reduced-motion", "result": "not-run" },
+      { "surface": "offline-returning", "result": "not-run" },
+      { "surface": "weak-signal-returning", "result": "not-run" }
+    ]
+  },
+  "blockers": [
+    "The named owner and usage rights for the GLB, external diffuse texture and related reconstruction files are not recorded.",
+    "Derivative creation, optimization, conversion and public/private-PWA copying are not authorized for the Beethovenwand model sources.",
+    "No web-ready Beethovenwand model, hero, topo, panorama or Beethovenwand-provenance scroll scrub exists.",
+    "The three active scrub videos are Nasenwand-only local-preview proxies and must be removed or replaced before release review.",
+    "Helenental and Däumling footage identity is owner-reported, not visually verified; exact source path, SHA-256, owner, permissions, timecodes, crops and posters remain pending where unresolved."
+  ],
+  "warnings": [
+    "Notion correctly names the GLB but should be backfilled with the 16 additional exact Beethoven-labeled paths and hashes from this report.",
+    "Private preview adapters intentionally do not count as ready assets. Their release slots remain status=missing and src=null until approved media is supplied.",
+    "Physical phone/tablet touch and drag, reduced motion, fresh-origin installation, cache-clear offline behavior and weak-signal behavior remain untested in this session."
+  ],
+  "nextOwnerDecision": "Decide whether Filip / Vertical Moment owns or controls goodbetoven_Model_15GLB.glb and goodbetoven_Model_15GLB_u0_v0_diffuse.png and explicitly authorizes creation of an optimized local/private-PWA derivative. Until that answer is yes, keep the public model slot missing.",
+  "filesChangedBySmokeTest": [
+    "workbench/pilot-factory/hel-beethovenwand/private-intake.json",
+    "workbench/pilot-factory/hel-beethovenwand/readiness-report.json",
+    "workbench/pilot-factory/PRIVATE_PREVIEW_RELEASE_CHECKLIST.md",
+    "website/public/explore/pilots/hel-beethovenwand/pilot.json",
+    "website/public/explore/pilots/index.json",
+    "website/public/explore/pilots/pilot.schema.json",
+    "website/public/explore/regions/region.schema.json",
+    "website/scripts/verify-pilots.mjs",
+    "website/src/App.tsx",
+    "website/src/components/animation/IntroScrubSequence.tsx",
+    "website/src/components/animation/IntroScrubSequence.module.css",
+    "website/src/core/pilotManifest.ts",
+    "website/src/core/pilotManifest.test.ts",
+    "website/src/core/pilotTypes.ts"
+  ],
+  "validationCommands": [
+    "npm run verify-pilots",
+    "npm test",
+    "npm run sync-data",
+    "npm run verify-canonical",
+    "npm run verify-data",
+    "npm run verify-pwa-content",
+    "npm run verify-security",
+    "npm run build"
+  ],
+  "publicationActionsTaken": []
+}

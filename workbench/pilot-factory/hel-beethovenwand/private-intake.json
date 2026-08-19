@@ -1,0 +1,74 @@
+{
+  "$schema": "https://verticalmoment.com/schemas/private-pilot-intake-v1.json",
+  "schemaVersion": 1,
+  "pilotKey": "hel-beethovenwand",
+  "notionUrl": "https://app.notion.com/p/3c121413535181b8a7b8c1de1d44b9fe",
+  "intakeOwner": "Filip / Vertical Moment",
+  "intakeRoot": "D:\\VERTICALMOMENT\\3D AI WORKBENCH\\READYCONTENT\\3D FILES\\",
+  "rights": "private-review",
+  "assets": {
+    "hero": {
+      "sourceType": "local",
+      "sourceLocator": null,
+      "sha256": null,
+      "state": "missing",
+      "note": "No verified Beethovenwand hero or poster source is recorded."
+    },
+    "spatial": {
+      "sourceType": "local",
+      "sourceLocator": "D:\\VERTICALMOMENT\\3D AI WORKBENCH\\READYCONTENT\\3D FILES\\goodbetoven_Model_15GLB_u0_v0_diffuse.png",
+      "sha256": "9233e3652dc8b7bbf70577764c4092b53f034367dcab935d055fac41c50f329a",
+      "state": "verified",
+      "note": "86,346,775-byte external GLB texture, not a hero/spatial derivative. Ownership and derivative permission remain unresolved; inventory evidence only."
+    },
+    "topo": {
+      "sourceType": "local",
+      "sourceLocator": null,
+      "sha256": null,
+      "state": "missing",
+      "note": "No verified Beethovenwand topo source or public derivative is recorded."
+    },
+    "model": {
+      "sourceType": "local",
+      "sourceLocator": "D:\\VERTICALMOMENT\\3D AI WORKBENCH\\READYCONTENT\\3D FILES\\goodbetoven_Model_15GLB.glb",
+      "sha256": "931ed19e91f8f9bf88fd38d1b2305c7468ee934e69626db6f8ee57b4930e1b2c",
+      "state": "verified",
+      "note": "566,824,908-byte RealityScan glTF 2.0 source. Header and declared length pass; it references goodbetoven_Model_15GLB_u0_v0_diffuse.png externally. Do not copy, optimize, convert, or publish until ownership and derivative permission are explicit. Related OBJ/PLY/project evidence is recorded in the readiness report."
+    },
+    "panoramaPoster": {
+      "sourceType": "local",
+      "sourceLocator": null,
+      "sha256": null,
+      "state": "missing",
+      "note": "No verified Beethovenwand panorama poster is recorded."
+    },
+    "panorama360": {
+      "sourceType": "local",
+      "sourceLocator": null,
+      "sha256": null,
+      "state": "missing",
+      "note": "No approved Beethovenwand 360 source is recorded. Third-party recon links are not intake assets."
+    },
+    "scrubRegionRock": {
+      "sourceType": "github",
+      "sourceLocator": "website/public/photography/nasenwand/media/loop-pingpong-1080.mp4",
+      "sha256": "698d9ab5ac9bf8ee976b400ef1e10a81971e7beb7739cdb9191510ec729111b1",
+      "state": "verified",
+      "note": "Nasenwand media, 12.012 s. Owner-authorized local Smoke Test 1 proxy only; it is not Beethovenwand provenance and earns no Beethovenwand media-readiness credit."
+    },
+    "scrubRockSector": {
+      "sourceType": "github",
+      "sourceLocator": "website/public/photography/nasenwand/media/loop-story-1080x1920.mp4",
+      "sha256": "f7d710a242c12c9ba2ce3c0f7609e9bf097f02b04f01274d8e7368483cf9112c",
+      "state": "verified",
+      "note": "Nasenwand media, 6.006 s. Owner-authorized local Smoke Test 1 proxy only; it is not Beethovenwand provenance and earns no Beethovenwand media-readiness credit."
+    },
+    "scrubSectorTopo": {
+      "sourceType": "github",
+      "sourceLocator": "website/public/photography/nasenwand/media/nasenwand-orbit-scrub-allkey.mp4",
+      "sha256": "4155fc08f0fcd8be616a9eb3e2e6a8eacb1f990859086146fb37e602bcfec141",
+      "state": "verified",
+      "note": "Nasenwand media, 3.666667 s. Owner-authorized local Smoke Test 1 proxy only; it is not Beethovenwand provenance and earns no Beethovenwand media-readiness credit."
+    }
+  }
+}

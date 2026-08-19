@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://verticalmoment.com/explore/pilots/pilot.schema.json",
+  "title": "Vertical Moment Explore pilot",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "id", "label", "releaseState", "identity", "provenance", "summary", "journey", "modules", "assets"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schemaVersion": { "const": 1 },
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "label": { "type": "string", "minLength": 1 },
+    "releaseState": { "enum": ["assembly", "review", "ready"] },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["region", "regionSlug", "crag", "cragSlug", "sector", "canonicalCragId"],
+      "properties": {
+        "region": { "type": "string", "minLength": 1 },
+        "regionSlug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+        "crag": { "type": "string", "minLength": 1 },
+        "cragSlug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+        "sector": { "type": ["string", "null"] },
+        "canonicalCragId": { "type": ["string", "null"] }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["notionUrl", "dataPath", "confidence", "lastReviewed"],
+      "properties": {
+        "notionUrl": { "type": ["string", "null"] },
+        "dataPath": { "type": ["string", "null"] },
+        "confidence": { "enum": ["provisional", "imported-unverified", "owner-reviewed"] },
+        "lastReviewed": { "type": ["string", "null"] }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["routeCount", "gradeSystem", "gradeRange", "discipline"],
+      "properties": {
+        "routeCount": { "type": ["integer", "null"], "minimum": 0 },
+        "gradeSystem": { "type": ["string", "null"] },
+        "gradeRange": { "type": ["string", "null"] },
+        "discipline": { "type": ["string", "null"] }
+      }
+    },
+    "journey": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["posterSlot", "chapters"],
+      "properties": {
+        "posterSlot": { "$ref": "#/$defs/assetKey" },
+        "chapters": { "type": "array", "minItems": 3, "maxItems": 3, "items": { "$ref": "#/$defs/chapter" } }
+      }
+    },
+    "modules": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["locator", "panorama", "routes", "wall", "topo"],
+      "properties": {
+        "locator": { "$ref": "#/$defs/module" },
+        "panorama": { "$ref": "#/$defs/module" },
+        "routes": { "$ref": "#/$defs/module" },
+        "wall": { "$ref": "#/$defs/module" },
+        "topo": { "$ref": "#/$defs/module" }
+      }
+    },
+    "assets": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["hero", "spatial", "topo", "model", "panoramaPoster", "panorama360", "scrubRegionRock", "scrubRockSector", "scrubSectorTopo"],
+      "properties": {
+        "hero": { "$ref": "#/$defs/slot" },
+        "spatial": { "$ref": "#/$defs/slot" },
+        "topo": { "$ref": "#/$defs/slot" },
+        "model": { "$ref": "#/$defs/slot" },
+        "panoramaPoster": { "$ref": "#/$defs/slot" },
+        "panorama360": { "$ref": "#/$defs/slot" },
+        "scrubRegionRock": { "$ref": "#/$defs/slot" },
+        "scrubRockSector": { "$ref": "#/$defs/slot" },
+        "scrubSectorTopo": { "$ref": "#/$defs/slot" }
+      }
+    }
+  },
+  "$defs": {
+    "assetKey": { "enum": ["hero", "spatial", "topo", "model", "panoramaPoster", "panorama360", "scrubRegionRock", "scrubRockSector", "scrubSectorTopo"] },
+    "chapter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "from", "to", "asset", "duration", "direction"],
+      "properties": {
+        "id": { "enum": ["region-rock", "rock-sector", "sector-topo"] },
+        "from": { "type": "string", "minLength": 1 },
+        "to": { "type": "string", "minLength": 1 },
+        "asset": { "enum": ["scrubRegionRock", "scrubRockSector", "scrubSectorTopo"] },
+        "duration": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+        "direction": { "enum": ["forward", "reverse"] },
+        "objectPosition": { "type": "string" }
+      }
+    },
+    "module": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "mobileLabel", "description", "primarySlots"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "mobileLabel": { "type": "string", "minLength": 1, "maxLength": 16 },
+        "description": { "type": "string", "minLength": 1 },
+        "primarySlots": { "type": "array", "items": { "$ref": "#/$defs/assetKey" }, "uniqueItems": true }
+      }
+    },
+    "slot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "status", "targetPath", "src", "alt"],
+      "properties": {
+        "kind": { "enum": ["image", "video", "model", "panorama", "link"] },
+        "status": { "enum": ["missing", "review", "ready"] },
+        "targetPath": { "type": "string", "minLength": 1 },
+        "src": { "type": ["string", "null"] },
+        "alt": { "type": "string", "minLength": 1 },
+        "bytes": { "type": "integer", "minimum": 1 },
+        "note": { "type": "string" },
+        "preview": { "$ref": "#/$defs/preview" }
+      },
+      "allOf": [
+        { "if": { "properties": { "status": { "const": "ready" } } }, "then": { "properties": { "src": { "type": "string", "minLength": 1 } }, "required": ["src"] } },
+        { "if": { "properties": { "kind": { "const": "model" }, "status": { "const": "ready" } }, "required": ["kind", "status"] }, "then": { "required": ["bytes"] } }
+      ]
+    },
+    "preview": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["adapter", "src", "provenance", "verifiedForPilot", "replaceable"],
+      "properties": {
+        "adapter": { "enum": ["same-origin", "hosted"] },
+        "src": {
+          "type": "string",
+          "minLength": 1,
+          "anyOf": [
+            { "pattern": "^/(?!/)" },
+            { "pattern": "^https://" }
+          ]
+        },
+        "provenance": { "type": "string", "minLength": 1 },
+        "verifiedForPilot": { "const": false },
+        "replaceable": { "const": true }
+      }
+    }
+  }
+}
