@@ -1,7 +1,7 @@
 .toolbar {
   position: fixed;
   top: 66px;
-  right: max(5px, env(safe-area-inset-right));
+  left: max(5px, env(safe-area-inset-left));
   bottom: 42px;
   z-index: 9750;
   display: flex;
@@ -96,7 +96,7 @@
 .panel {
   position: absolute;
   top: 50%;
-  right: 86px;
+  left: 86px;
   width: min(326px, calc(100vw - 112px));
   max-height: calc(100dvh - 150px);
   overflow-y: auto;
@@ -154,17 +154,10 @@
 :global(html[data-vm-active-box="wall-reveal"] article[data-box-id="wall-reveal"]) {
   border-color: rgb(238 215 151 / 70%) !important;
   box-shadow: 0 0 0 1px rgb(224 202 128 / 18%), 0 22px 70px rgb(0 0 0 / 38%), 0 0 24px rgb(224 202 128 / 12%) !important;
-  animation: vmFocusFrame 520ms cubic-bezier(.2,.8,.2,1) both;
 }
 
 :global(html[data-vm-layout-locked="true"] article[data-mode="normal"] [data-drag-surface="true"]) { pointer-events:none !important; cursor:default !important; }
 :global(html[data-vm-layout-locked="true"] article[data-mode="normal"] button[aria-label^="Resize "]) { display:none !important; }
-
-@keyframes vmFocusFrame {
-  0% { filter:brightness(1); }
-  38% { filter:brightness(1.12); }
-  100% { filter:brightness(1); }
-}
 
 @media (max-height: 720px) and (min-width: 768px) {
   .toolbar { top:60px; bottom:36px; }

@@ -88,7 +88,7 @@
 
 .windowControls {
   position: absolute;
-  top: 3px;
+  top: -46px;
   right: -44px;
   z-index: 30;
   display: flex;
@@ -101,7 +101,7 @@
   box-shadow: 0 8px 20px rgb(0 0 0 / 22%);
   opacity: 0;
   pointer-events: none;
-  transform: translateX(-8px) scale(.92);
+  transform: translateY(8px) scale(.92);
   transition: opacity 160ms ease, transform 160ms ease, background 160ms ease;
 }
 
@@ -112,7 +112,7 @@
 .box[data-controls-visible="true"] .windowControls {
   opacity: .96;
   pointer-events: auto;
-  transform: translateX(0) scale(1);
+  transform: translateY(0) scale(1);
 }
 
 .windowControls:hover,
@@ -141,10 +141,17 @@
   background: #d1b97d;
 }
 
-/* Normal-state controls stay inside their own box so a neighboring module
-   cannot intercept the first hover/click used to reveal them. They remain
-   visually hidden until the box is hovered or focused. */
-.box[data-mode="normal"] .windowControls { right: 8px; }
+.windowControls button:disabled {
+  cursor: not-allowed;
+  opacity: .42;
+}
+
+.moveButton { cursor: grab !important; }
+.moveButton:active { cursor: grabbing !important; }
+
+/* Every normal box gets the same low-capacity chrome: hide/restore,
+   fullscreen, and an explicit desktop move affordance. */
+.box[data-mode="normal"] .windowControls { top: -46px; right: 8px; }
 
 .body {
   min-height: 0;
@@ -257,7 +264,7 @@
 }
 
 .boxModeExpanded .windowControls { right: 8px; }
-.boxModeFullscreen .windowControls { right: var(--explore-safe-right, 106px); }
+.boxModeFullscreen .windowControls { right: var(--explore-safe-right, 8px); }
 
 .box[data-mode="normal"]:hover .windowControls button,
 .box[data-mode="normal"]:focus-within .windowControls button,
@@ -266,7 +273,7 @@
 }
 
 .boxModeExpanded {
-  inset: var(--explore-safe-top, 112px) var(--explore-safe-right, 106px) var(--explore-content-bottom, 112px) var(--explore-safe-left, 8px);
+  inset: var(--explore-safe-top, 112px) var(--explore-safe-right, 8px) var(--explore-content-bottom, 112px) var(--explore-safe-left, 96px);
   width: auto !important;
   height: auto !important;
 }
@@ -309,7 +316,7 @@
 }
 
 .box[data-viewport="tablet"].boxModeExpanded {
-  inset: var(--explore-safe-top, 112px) var(--explore-safe-right, 106px) var(--explore-content-bottom, 112px) var(--explore-safe-left, 8px);
+  inset: var(--explore-safe-top, 112px) var(--explore-safe-right, 8px) var(--explore-content-bottom, 112px) var(--explore-safe-left, 96px);
   width: auto !important;
   height: auto !important;
 }
@@ -326,7 +333,7 @@
   scroll-snap-align: start;
 }
 .box[data-viewport="mobile"] .windowControls {
-  top: 8px;
+  top: -46px;
   right: 8px;
 }
 .box[data-viewport="mobile"] .header { grid-template-columns: minmax(0, 1fr); }
@@ -384,25 +391,12 @@
   }
 }
 
-@keyframes boxNormalIn {
-  from { opacity: 0; translate: 18px 0; scale: .96; }
-  to { opacity: 1; translate: 0 0; scale: 1; }
-}
-
-@keyframes boxMinimizedIn {
-  from { opacity: 0; translate: 12px 0; scale: .72; }
-  to { opacity: 1; translate: 0 0; scale: 1; }
-}
-
-@keyframes boxExpandedIn {
-  from { opacity: 0; translate: 0 14px; scale: .985; clip-path: inset(3% 0 0 round 18px); }
-  to { opacity: 1; translate: 0 0; scale: 1; clip-path: inset(0 round 18px); }
-}
-
-.box[data-mode="normal"] { animation: boxNormalIn 240ms cubic-bezier(.2, .8, .2, 1) both; }
-.boxModeMinimized { animation: boxMinimizedIn 220ms cubic-bezier(.2, .8, .2, 1) both; }
+/* Structural box entrances caused a distracting flash whenever a station or
+   module changed. The journey media supplies the motion; boxes stay settled. */
+.box,
+.boxModeMinimized,
 .boxModeExpanded,
-.boxModeFullscreen { animation: boxExpandedIn 280ms cubic-bezier(.2, .8, .2, 1) both; }
+.boxModeFullscreen { animation: none; }
 
 @media (prefers-reduced-motion: reduce) {
   .box,
@@ -431,12 +425,22 @@
 
 /* Keep a narrow invisible desktop drag surface without consuming visual space. */
 .box[data-mode="normal"] .header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 25;
+  height: 12px;
   min-height: 12px;
   grid-template-columns: 1fr;
   gap: 0;
   padding: 0;
   border-bottom: 0;
   background: transparent;
+}
+.box[data-mode="normal"] .body {
+  height: 100%;
+  border-radius: inherit;
 }
 
 /* Tablet and phone do not need a freeform drag strip. */
@@ -446,15 +450,17 @@
   min-height: 0;
 }
 
-/* Never restore the old three-button bar.
-   Exceptional states expose only the control required to escape that state. */
+/* Keep the three-action contract visible in exceptional states as well;
+   Move is disabled there because the shell owns the frame. */
 .boxModeExpanded .windowControls button,
 .boxModeFullscreen .windowControls button {
   display: none;
 }
 
+.boxModeExpanded .windowControls button:nth-child(1),
 .boxModeExpanded .windowControls button:nth-child(2),
 .boxModeExpanded .windowControls button:nth-child(3),
+.boxModeFullscreen .windowControls button:nth-child(1),
 .boxModeFullscreen .windowControls button:nth-child(2),
 .boxModeFullscreen .windowControls button:nth-child(3) {
   display: grid;
@@ -463,5 +469,5 @@
 /* Keep large-screen fullscreen controls clear of the persistent right rail. */
 .box[data-viewport="tablet"].boxModeFullscreen .windowControls,
 .box[data-viewport="desktop"].boxModeFullscreen .windowControls {
-  right: var(--explore-safe-right, 106px);
+  right: var(--explore-safe-right, 8px);
 }

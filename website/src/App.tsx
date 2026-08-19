@@ -2,7 +2,7 @@
 
 import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { IntroScrubSequence, type UnlockReason } from "./components/animation/IntroScrubSequence";
-import { Box3DModel } from "./components/boxes/Box3DModel";
+import { BoxTopoWorkspace } from "./components/boxes/BoxTopoWorkspace";
 import { BoxContainer } from "./components/boxes/BoxContainer";
 import { ResponsiveImage } from "./components/media/ResponsiveImage";
 import { CommandPalette } from "./components/shell/CommandPalette";
@@ -171,7 +171,7 @@ function BoxContent({ content, isActive, priority = false }: { content: ExploreC
   if (content.type === "wallreveal") return <WallRevealModule isActive={isActive} />;
 
   if (content.type === "model3d" && content.model) {
-    return <Box3DModel model={content.model} poster={content.image} isActive={isActive} />;
+    return <BoxTopoWorkspace model={content.model} poster={content.image} isActive={isActive} />;
   }
 
   return (
@@ -235,6 +235,8 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
   const openIndependentBox = useCallback((id: string, mode: BoxMode = "expanded", resetFrame = mode === "normal") => {
     setFollowJourney(false);
     setStationPeekVisible(false);
+    const station = stationForFocusBoxId(id, stationPresentations);
+    if (station) setJourneyStation(station);
     const target = boxesRef.current.find((box) => box.id === id);
     const wasMinimized = target?.mode === "minimized";
     const keepMultipleNormalBoxes = viewportMode !== "mobile" && mode === "normal";
@@ -252,10 +254,10 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
       }
     }
     focusBox(id, mode, false);
-    if (keepMultipleNormalBoxes && wasMinimized) {
+    if (keepMultipleNormalBoxes && wasMinimized && !unifiedHierarchy) {
       dispatch({ type: "APPLY_AUTO_LAYOUT", viewport: { width: window.innerWidth, height: window.innerHeight } });
     }
-  }, [dispatch, focusBox, unifiedHierarchy, viewportMode]);
+  }, [dispatch, focusBox, stationPresentations, unifiedHierarchy, viewportMode]);
 
   const replayIntro = useCallback(() => {
     setWorkspaceUnlocked(false);
@@ -284,8 +286,9 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
   useEffect(() => {
     const onStation = (event: Event) => {
       const detail = (event as CustomEvent<ScrubStationEventDetail>).detail;
-      if (!detail || !stationPresentations[detail.station] || workspaceUnlocked) return;
+      if (!detail || !stationPresentations[detail.station]) return;
       setJourneyStation(detail.station);
+      if (workspaceUnlocked) return;
       setStationPeekVisible(false);
     };
 
@@ -602,7 +605,11 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
   const openPhoneBox = useCallback((id: string) => openIndependentBox(id, "normal", true), [openIndependentBox]);
   const openUnifiedBox = useCallback((id: string) => {
     openIndependentBox(id, "normal", true);
-  }, [openIndependentBox]);
+    const station = stationForFocusBoxId(id, stationPresentations);
+    if (station) {
+      window.dispatchEvent(new CustomEvent("vm:preview-station-request", { detail: { station } }));
+    }
+  }, [openIndependentBox, stationPresentations]);
   const openContributor = useCallback(() => {
     window.location.assign("/contribute?source=explore-app");
   }, []);
@@ -615,7 +622,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
         mode={introMode}
         onUnlock={handleUnlock}
         allowPostUnlockScrub={true}
-        allowPostUnlockStationRequests={false}
+        allowPostUnlockStationRequests={true}
       />
       {stationPeekVisible && (
         <StationPeek
@@ -648,6 +655,7 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
           boxes={boxes}
           activeBoxId={activeBoxId}
           stationContent={stationContent}
+          journeyStation={journeyStation}
           viewportMode={viewportMode}
           onOpenBox={openUnifiedBox}
           onSearch={() => openPalette("")}

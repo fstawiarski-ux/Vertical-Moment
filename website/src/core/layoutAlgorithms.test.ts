@@ -60,7 +60,7 @@ describe("hero-first compact frames", () => {
   it("starts with a genuinely compact inspector inside the desktop safe zone", () => {
     const frame = compactJourneyFrame(viewport);
 
-    expect(frame).toEqual({ x: 24, y: 128, width: 338, height: 238 });
+    expect(frame).toEqual({ x: 112, y: 128, width: 341, height: 240 });
     expect((frame.width * frame.height) / (viewport.width * viewport.height)).toBeLessThan(0.08);
     expect(frame.x + frame.width).toBeLessThanOrEqual(viewport.width - EXPLORE_SAFE_ZONE.right);
     expect(frame.y + frame.height).toBeLessThanOrEqual(viewport.height - EXPLORE_SAFE_ZONE.bottom);

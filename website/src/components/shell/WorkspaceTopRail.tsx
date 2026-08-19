@@ -19,6 +19,7 @@ export function WorkspaceTopRail({
   boxes,
   activeBoxId,
   stationContent,
+  journeyStation,
   viewportMode,
   onOpenBox,
   onSearch,
@@ -31,6 +32,7 @@ export function WorkspaceTopRail({
   boxes: BoxState[];
   activeBoxId: string | null;
   stationContent: ExploreContentBox | null;
+  journeyStation: JourneyStation;
   viewportMode: ViewportMode;
   onOpenBox: (id: string) => void;
   onSearch: () => void;
@@ -45,8 +47,9 @@ export function WorkspaceTopRail({
   void onToggleJourney;
   void followJourney;
 
-  const currentBoxId = activeBoxId ?? stationContent?.id ?? "crag-locator";
-  const station = STATION_BY_BOX_ID[currentBoxId] ?? "region";
+  void activeBoxId;
+  void stationContent;
+  const station = journeyStation ?? STATION_BY_BOX_ID[activeBoxId ?? ""] ?? "region";
   const stationIndex = STAGES.findIndex((candidate) => candidate.id === station);
 
   return (

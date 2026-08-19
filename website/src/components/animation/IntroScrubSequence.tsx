@@ -80,8 +80,11 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
 
   const resolved = mode !== null;
   const cinematic = mode === "cinematic";
-  // Reduced-motion visitors keep the timeline, but it jumps rather than flies.
-  const animateFlights = mode !== "static";
+  // Skipping the onboarding intro does not disable deliberate landmark flights.
+  // Only the user's reduced-motion preference should turn those flights into
+  // immediate jumps.
+  const animateFlights = typeof window === "undefined"
+    || !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   const announceFirstMove = useCallback(() => {
     if (firstMoveRef.current) return;
@@ -137,9 +140,11 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
     progressRef.current = next;
     setProgress(next);
     const station = stationForProgress(next);
-    if (!unlockedRef.current && !suppressPreviewRef.current && station !== lastAnnouncedStationRef.current) {
+    if (station !== lastAnnouncedStationRef.current) {
       lastAnnouncedStationRef.current = station;
-      announceStation(station, "preview", source, next);
+      if (!suppressPreviewRef.current) {
+        announceStation(station, unlockedRef.current ? "arrived" : "preview", source, next);
+      }
     }
     if (next >= 0.995) unlock("completed");
   }, [announceFirstMove, announceStation, unlock]);
