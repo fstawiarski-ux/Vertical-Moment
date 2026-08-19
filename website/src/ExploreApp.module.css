@@ -7,13 +7,13 @@
   isolation: isolate;
   --explore-safe-top: max(112px, calc(env(safe-area-inset-top) + 102px));
   --explore-dock-top: max(58px, calc(env(safe-area-inset-top) + 48px));
-  --explore-safe-right: 106px;
+  --explore-safe-right: max(8px, env(safe-area-inset-right));
   --explore-safe-bottom: max(112px, calc(env(safe-area-inset-bottom) + 112px));
   --explore-content-bottom: var(--explore-safe-bottom);
-  --explore-safe-left: max(8px, env(safe-area-inset-left));
+  --explore-safe-left: max(96px, calc(env(safe-area-inset-left) + 88px));
 }
 
-.boxLayer { position: absolute; inset: 0; z-index: 10; pointer-events: none; animation: workspaceReveal 520ms cubic-bezier(.2,.8,.2,1) both; }
+.boxLayer { position: absolute; inset: 0; z-index: 10; pointer-events: none; animation: none; }
 .boxLayer > * { pointer-events: auto; }
 .boxLayer[data-exclusive-mode="expanded"] { z-index: 9450; pointer-events: auto; }
 .boxLayer[data-exclusive-mode="fullscreen"] { z-index: 9500; pointer-events: auto; }
@@ -46,10 +46,10 @@
   scroll-padding-top: 8px;
   scroll-snap-type: y mandatory;
   overscroll-behavior: contain;
-  animation: workspaceReveal 520ms cubic-bezier(.2,.8,.2,1) both;
+  animation: none;
 }
 
-.boxLayer[data-shell="desktop"] { animation: workspaceReveal 520ms cubic-bezier(.2,.8,.2,1) both; }
+.boxLayer[data-shell="desktop"] { animation: none; }
 .boxLayer[data-shell="tablet"] { background: rgb(4 9 6 / 18%); }
 
 .phoneShell {
@@ -61,7 +61,7 @@
   gap: 8px;
   overflow: hidden;
   padding: 0 14px 10px;
-  animation: workspaceReveal 420ms cubic-bezier(.2,.8,.2,1) both;
+  animation: none;
 }
 
 .phoneHeader {
@@ -96,10 +96,9 @@
 .phoneStage > article[data-viewport="mobile"][class*="boxModeFullscreen"] { position: relative !important; inset: auto !important; width: 100% !important; height: 100% !important; min-height: 0 !important; }
 .phoneStage[data-active-box="nasenwand-model"] { flex: 0 0 min(27dvh, 220px); }
 .phoneStage[data-active-box="nasenwand-model"] > article { height: 100% !important; }
-.phoneStage[data-active-box="nasenwand-model"] > article [class*="header"] { display: none; }
+.phoneStage[data-active-box="nasenwand-model"] > article [class*="header"] { display: block; }
 .phoneStage[data-active-box="nasenwand-model"] > article [class*="handle"],
-.phoneStage[data-active-box="nasenwand-model"] > article [class*="heading"],
-.phoneStage[data-active-box="nasenwand-model"] > article [class*="windowControls"] { display: none; }
+.phoneStage[data-active-box="nasenwand-model"] > article [class*="heading"] { display: none; }
 .phoneStage[data-active-box="nasenwand-model"] > article [class*="viewer"] { min-height: 0; }
 .phoneShell[data-active-box="nasenwand-model"] .phoneHeader strong,
 .phoneShell[data-active-box="nasenwand-model"] .phoneHint { display: none; }
@@ -175,7 +174,7 @@
   background: rgb(8 14 10 / 92%);
   box-shadow: 0 22px 70px rgb(0 0 0 / 38%);
   backdrop-filter: blur(18px) saturate(1.1);
-  animation: workspaceReveal 180ms cubic-bezier(.2,.8,.2,1) both;
+  animation: none;
 }
 
 .workspaceModuleMenu > header {
@@ -372,10 +371,6 @@
 .moduleLoading { color: #d8d1c1; font: 600 12px/1.4 Arial, sans-serif; }
 
 @keyframes spin { to { transform: rotate(360deg); } }
-@keyframes workspaceReveal {
-  from { opacity: 0; transform: translateY(18px) scale(.985); }
-  to { opacity: 1; transform: none; }
-}
 @media (max-width: 767px), (max-height: 539px) {
   .app {
     --explore-content-bottom: max(240px, calc(env(safe-area-inset-bottom) + 240px));
@@ -434,8 +429,7 @@
     padding-right: 0;
   }
 
-  .phoneShell[data-phone-preview="refined"] .phoneStage[data-active-box="nasenwand-model"] > article [class*="handle"],
-  .phoneShell[data-phone-preview="refined"] .phoneStage[data-active-box="nasenwand-model"] > article [class*="windowControls"] {
+  .phoneShell[data-phone-preview="refined"] .phoneStage[data-active-box="nasenwand-model"] > article [class*="handle"] {
     display: none;
   }
 
@@ -463,8 +457,7 @@
 
   .phoneShell[data-phone-preview="minimal"] .phoneStage > article [class*="header"],
   .phoneShell[data-phone-preview="minimal"] .phoneStage > article [class*="handle"],
-  .phoneShell[data-phone-preview="minimal"] .phoneStage > article [class*="heading"],
-  .phoneShell[data-phone-preview="minimal"] .phoneStage > article [class*="windowControls"] {
+  .phoneShell[data-phone-preview="minimal"] .phoneStage > article [class*="heading"] {
     display: none;
   }
 
@@ -539,8 +532,7 @@
     padding-right: 0;
   }
 
-  .phoneShell[data-phone-preview="improved"] .phoneStage[data-active-box="nasenwand-model"] > article [class*="handle"],
-  .phoneShell[data-phone-preview="improved"] .phoneStage[data-active-box="nasenwand-model"] > article [class*="windowControls"] {
+  .phoneShell[data-phone-preview="improved"] .phoneStage[data-active-box="nasenwand-model"] > article [class*="handle"] {
     display: none;
   }
 
@@ -553,8 +545,7 @@
 
   .phoneShell[data-phone-preview="improved-minimal"] .phoneStage > article [class*="header"],
   .phoneShell[data-phone-preview="improved-minimal"] .phoneStage > article [class*="handle"],
-  .phoneShell[data-phone-preview="improved-minimal"] .phoneStage > article [class*="heading"],
-  .phoneShell[data-phone-preview="improved-minimal"] .phoneStage > article [class*="windowControls"] {
+  .phoneShell[data-phone-preview="improved-minimal"] .phoneStage > article [class*="heading"] {
     display: none;
   }
 
@@ -634,8 +625,7 @@
 
   .phoneShell[data-phone-preview="minimal-fixed"] .phoneStage > article [class*="header"],
   .phoneShell[data-phone-preview="minimal-fixed"] .phoneStage > article [class*="handle"],
-  .phoneShell[data-phone-preview="minimal-fixed"] .phoneStage > article [class*="heading"],
-  .phoneShell[data-phone-preview="minimal-fixed"] .phoneStage > article [class*="windowControls"] {
+  .phoneShell[data-phone-preview="minimal-fixed"] .phoneStage > article [class*="heading"] {
     display: none;
   }
 
@@ -679,7 +669,7 @@
 
 /* Window actions stay out of the way until the active box is touched or focused. */
 .phoneStage > article[data-controls-visible="true"] [class*="windowControls"] {
-  top: 8px;
+  top: -46px;
   right: 8px;
   display: flex;
   opacity: .96;

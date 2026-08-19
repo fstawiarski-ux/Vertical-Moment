@@ -93,41 +93,8 @@ section[data-shell="phone"] > [data-role="phone-stage"] > article[data-mode="nor
   border-radius: 12px !important;
 }
 
-/* Keep the normal-state chrome compact but discoverable on touch layouts.
-   The actions stay inside the module so the neighboring canvas cannot steal
-   the first tap; desktop keeps the same actions contextual on hover/focus. */
-section[data-shell="phone"] article[data-mode="normal"] [data-drag-surface="true"],
-article[data-viewport="tablet"][data-mode="normal"] [data-drag-surface="true"] {
-  display: grid !important;
-  min-height: 36px !important;
-  height: 36px !important;
-  padding: 0 6px 0 10px !important;
-  border-bottom: 1px solid rgb(255 255 255 / 8%) !important;
-  background: linear-gradient(180deg, rgb(7 13 9 / 72%), rgb(7 13 9 / 32%)) !important;
-}
-section[data-shell="phone"] article[data-mode="normal"] [data-module-heading="true"],
-article[data-viewport="tablet"][data-mode="normal"] [data-module-heading="true"] {
-  display: block !important;
-  padding-right: 104px !important;
-}
-section[data-shell="phone"] article[data-mode="normal"] [data-module-handle="true"],
-article[data-viewport="tablet"][data-mode="normal"] [data-module-handle="true"] { display: none !important; }
-section[data-shell="phone"] article[data-mode="normal"] [data-module-window-controls="true"],
-article[data-viewport="tablet"][data-mode="normal"] [data-module-window-controls="true"] {
-  display: flex !important;
-  top: 2px !important;
-  right: 4px !important;
-  opacity: .72 !important;
-  pointer-events: auto !important;
-  transform: none !important;
-}
-article[data-viewport="desktop"][data-mode="normal"] [data-module-window-controls="true"] {
-  opacity: .18 !important;
-  pointer-events: auto !important;
-}
-article[data-viewport="desktop"][data-mode="normal"]:hover [data-module-window-controls="true"],
-article[data-viewport="desktop"][data-mode="normal"]:focus-within [data-module-window-controls="true"] { opacity: .92 !important; }
-
+/* Normal boxes share one contextual control contract on every viewport. The
+   controls reveal after focus/touch or movement and float above the frame. */
 /* Expanded = deliberate large work view. Fullscreen = true takeover. */
 section[data-shell="phone"] article[data-mode="expanded"] {
   position: fixed !important;
@@ -213,9 +180,9 @@ section[data-shell="phone"] > [data-role="phone-more"] button {
 /* ---------- TABLET: compact edge tools, not page-sized cards ---------- */
 [data-layout="tablet"][data-hierarchy="phone-inspired"] {
   top: 82px !important;
-  right: 78px !important;
+  right: 12px !important;
   bottom: 32px !important;
-  left: 12px !important;
+  left: 90px !important;
   display: grid !important;
   grid-template-columns: repeat(2, minmax(240px, 38vw)) !important;
   grid-template-rows: none !important;

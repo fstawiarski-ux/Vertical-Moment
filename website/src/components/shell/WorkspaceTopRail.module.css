@@ -146,7 +146,8 @@
 :global(main[data-viewport="tablet"]) {
   --explore-safe-top: max(68px, calc(env(safe-area-inset-top) + 62px));
   --explore-dock-top: max(68px, calc(env(safe-area-inset-top) + 62px));
-  --explore-safe-right: 96px;
+  --explore-safe-right: max(8px, env(safe-area-inset-right));
+  --explore-safe-left: max(96px, calc(env(safe-area-inset-left) + 88px));
   --explore-safe-bottom: max(48px, calc(env(safe-area-inset-bottom) + 42px));
   --explore-content-bottom: var(--explore-safe-bottom);
 }
@@ -179,7 +180,8 @@
 :global(main[data-responsive-preview="unified"]) {
   --explore-safe-top: max(68px, calc(env(safe-area-inset-top) + 62px));
   --explore-dock-top: max(68px, calc(env(safe-area-inset-top) + 62px));
-  --explore-safe-right: 88px;
+  --explore-safe-right: max(8px, env(safe-area-inset-right));
+  --explore-safe-left: max(96px, calc(env(safe-area-inset-left) + 88px));
   --explore-safe-bottom: max(44px, calc(env(safe-area-inset-bottom) + 44px));
   --explore-content-bottom: var(--explore-safe-bottom);
 }

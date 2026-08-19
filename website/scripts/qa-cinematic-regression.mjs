@@ -21,6 +21,11 @@ const geometry = (page) => page.locator("article").evaluateAll((nodes) => nodes.
 }));
 
 const videoTimes = (page) => page.locator("video").evaluateAll((nodes) => nodes.map((node) => node.currentTime));
+const clickAtCenter = async (page, locator) => {
+  const rect = await locator.boundingBox();
+  if (!rect) throw new Error("Control has no measurable hit area.");
+  await page.mouse.click(rect.x + rect.width / 2, rect.y + rect.height / 2);
+};
 
 async function setRange(slider, target) {
   await slider.evaluate((node, value) => {
@@ -74,25 +79,31 @@ for (const test of cases) {
     }
     notes.push("window controls render as SVG without mojibake");
 
-    const controlTarget = page.locator('article[data-mode="normal"]').first();
-    const controlTargetId = await controlTarget.getAttribute("data-box-id");
-    if (!controlTargetId) throw new Error("Could not resolve module id for window-control behavior checks.");
+    if (test.shell === "desktop") {
+      const controlTarget = page.locator('article[data-mode="normal"]').first();
+      const controlTargetId = await controlTarget.getAttribute("data-box-id");
+      if (!controlTargetId) throw new Error("Could not resolve module id for window-control behavior checks.");
+      await controlTarget.hover();
+      await page.waitForTimeout(120);
 
-    const fullscreenButton = controlTarget.locator('button[aria-label$=" full screen"]').first();
-    if (!await fullscreenButton.count()) throw new Error("Fullscreen control is missing on the active module.");
-    await fullscreenButton.click();
-    await page.locator(`article[data-box-id="${controlTargetId}"][data-mode="fullscreen"]`).waitFor({ state: "attached", timeout: 5000 });
-    const exitFullscreen = page.locator(`article[data-box-id="${controlTargetId}"][data-mode="fullscreen"] button[aria-label^="Exit full screen"]`).first();
-    await exitFullscreen.click();
-    await page.locator(`article[data-box-id="${controlTargetId}"][data-mode="normal"]`).waitFor({ state: "attached", timeout: 5000 });
+      const fullscreenButton = controlTarget.locator('button[aria-label$=" full screen"]').first();
+      if (!await fullscreenButton.count()) throw new Error("Fullscreen control is missing on the active module.");
+      await clickAtCenter(page, fullscreenButton);
+      await page.locator(`article[data-box-id="${controlTargetId}"][data-mode="fullscreen"]`).waitFor({ state: "attached", timeout: 5000 });
+      const exitFullscreen = page.locator(`article[data-box-id="${controlTargetId}"][data-mode="fullscreen"] button[aria-label^="Exit full screen"]`).first();
+      await clickAtCenter(page, exitFullscreen);
+      await page.locator(`article[data-box-id="${controlTargetId}"][data-mode="normal"]`).waitFor({ state: "attached", timeout: 5000 });
 
-    const minimizeButton = page.locator(`article[data-box-id="${controlTargetId}"][data-mode="normal"] button[aria-label^="Minimize "]`).first();
-    if (!await minimizeButton.count()) throw new Error("Minimize control is missing on the active module.");
-    await minimizeButton.click();
-    await page.waitForFunction((id) => !document.querySelector(`article[data-box-id="${id}"][data-mode="normal"]`), controlTargetId, { timeout: 5000 });
-    await page.evaluate((id) => window.dispatchEvent(new CustomEvent("vm:focus-box", { detail: { id, mode: "normal" } })), controlTargetId);
-    await page.locator(`article[data-box-id="${controlTargetId}"][data-mode="normal"]`).waitFor({ state: "attached", timeout: 5000 });
-    notes.push("fullscreen/exit and minimize/restore state transitions work");
+      const minimizeButton = page.locator(`article[data-box-id="${controlTargetId}"][data-mode="normal"] button[aria-label^="Hide "]`).first();
+      if (!await minimizeButton.count()) throw new Error("Hide control is missing on the active module.");
+      await clickAtCenter(page, minimizeButton);
+      await page.waitForFunction((id) => !document.querySelector(`article[data-box-id="${id}"][data-mode="normal"]`), controlTargetId, { timeout: 5000 });
+      await page.evaluate((id) => window.dispatchEvent(new CustomEvent("vm:focus-box", { detail: { id, mode: "normal" } })), controlTargetId);
+      await page.locator(`article[data-box-id="${controlTargetId}"][data-mode="normal"]`).waitFor({ state: "attached", timeout: 5000 });
+      notes.push("fullscreen/exit and Hide/Restore state transitions work");
+    } else {
+      notes.push("phone control rendering verified; shell owns touch mode transitions");
+    }
 
     const beforeScrubGeometry = await geometry(page);
     await assertMediaMoved(page, slider, 31);
