@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b120e">
+<meta name="robots" content="noindex,nofollow,noarchive,nocache">
+<title>Marcin Job OS — interaktywny preview PL</title>
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#08100b; --bg2:#0d1710; --panel:#101b13; --panel2:#142019;
+  --line:#2a3d2f; --line2:#3c5944; --text:#eef5ef; --muted:#92a697;
+  --gold:#d7bf78; --gold2:#8e7a43; --green:#8fc38f; --red:#e69a84; --blue:#91b8d5;
+  --shadow:0 22px 70px rgba(0,0,0,.42); --radius:18px;
+  --phone-w:390px; --phone-h:844px;
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box} html,body{margin:0;min-height:100%;background:#050907;color:var(--text)}
+button,input,select,textarea{font:inherit} button{cursor:pointer}
+body{
+  background:
+    radial-gradient(circle at 12% 4%, rgba(89,124,89,.26), transparent 30rem),
+    radial-gradient(circle at 85% 15%, rgba(137,111,53,.12), transparent 30rem),
+    linear-gradient(160deg,#050907,#0a120d 55%,#070b08);
+}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;background-image:
+  repeating-radial-gradient(circle at 30% 40%,transparent 0 22px,rgba(216,191,120,.12) 23px 24px,transparent 25px 46px);
+  mask-image:linear-gradient(to bottom,rgba(0,0,0,.7),transparent 78%)}
+
+.stage{min-height:100vh;display:grid;grid-template-rows:auto 1fr;padding:16px;gap:12px}
+.demo-toolbar{width:min(1160px,100%);margin:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border:1px solid #27372c;background:#0b120ed9;border-radius:14px;backdrop-filter:blur(16px);box-shadow:var(--shadow)}
+.demo-toolbar .title{display:flex;align-items:center;gap:9px;min-width:0}.demo-toolbar strong{font-size:13px;white-space:nowrap}.demo-toolbar .hint{font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.demo-actions{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}.demo-actions button{min-height:34px;padding:0 10px;border-radius:9px;border:1px solid #2d4033;background:#111c15;color:#dce8df;font-size:11px}.demo-actions button.active{border-color:var(--gold2);background:#2b291d;color:#fff2c8}
+
+.device-wrap{display:grid;place-items:center;min-height:calc(100vh - 86px)}
+.device{width:var(--phone-w);height:var(--phone-h);background:#060a07;border:1px solid #415546;border-radius:34px;padding:10px;box-shadow:0 32px 90px rgba(0,0,0,.62), inset 0 0 0 1px rgba(255,255,255,.035);position:relative;transition:.28s ease;overflow:hidden}
+.device.landscape{width:844px;height:390px;border-radius:28px}.device.desktop{width:min(1180px,95vw);height:min(780px,82vh);border-radius:22px}.device:before{content:"";position:absolute;z-index:8;top:8px;left:50%;transform:translateX(-50%);width:90px;height:18px;border-radius:999px;background:#020403;border:1px solid #182019;pointer-events:none}.device.landscape:before,.device.desktop:before{display:none}
+.screen{height:100%;border-radius:25px;overflow:hidden;background:var(--bg);position:relative}.device.landscape .screen{border-radius:20px}.device.desktop .screen{border-radius:16px}
+
+.screen:before{content:"";position:absolute;left:-18px;top:92px;width:150px;height:240px;background:url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20320%20520%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20x2%3D%220%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23e2cd8f%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23d1b671%22%20stop-opacity%3D%220.25%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Cpath%20d%3D%22M0%20470%20C65%20405%20110%20398%20158%20342%20C186%20309%20200%20273%20198%20219%20C197%20179%20186%20145%20177%20115%20C198%20143%20226%20196%20237%20242%20C251%20304%20247%20357%20232%20399%20C216%20443%20187%20472%20152%20494%20C97%20501%2050%20491%200%20470%20Z%22%20fill%3D%22url%28%23g%29%22%20opacity%3D%220.52%22/%3E%0A%20%20%3Cpath%20d%3D%22M188%20105%20C178%2088%20169%2076%20156%2063%20C182%2079%20205%2099%20218%20126%20C229%20148%20236%20171%20241%20196%20C233%20181%20224%20162%20213%20145%20C205%20132%20197%20118%20188%20105%20Z%22%20fill%3D%22%23edd89c%22%20opacity%3D%220.45%22/%3E%0A%20%20%3Crect%20x%3D%22216%22%20y%3D%2294%22%20width%3D%225%22%20height%3D%22157%22%20rx%3D%222%22%20fill%3D%22%23f3e0ad%22%20opacity%3D%220.6%22/%3E%0A%20%20%3Ccircle%20cx%3D%22154%22%20cy%3D%2250%22%20r%3D%2232%22%20fill%3D%22none%22%20stroke%3D%22%23e9d08f%22%20stroke-width%3D%225%22%20opacity%3D%220.35%22/%3E%0A%20%20%3Ccircle%20cx%3D%22154%22%20cy%3D%2250%22%20r%3D%2244%22%20fill%3D%22none%22%20stroke%3D%22%23e9d08f%22%20stroke-width%3D%222%22%20opacity%3D%220.18%22/%3E%0A%20%20%3Cpath%20d%3D%22M0%20450%20C54%20420%2087%20381%20114%20338%20C134%20306%20155%20281%20178%20261%20C156%20297%20145%20331%20142%20365%20C139%20407%20152%20445%20172%20488%20C114%20496%2060%20484%200%20450%20Z%22%20fill%3D%22%23efdca2%22%20opacity%3D%220.08%22/%3E%0A%3C/svg%3E") center/contain no-repeat;opacity:.18;pointer-events:none;z-index:0;filter:drop-shadow(0 10px 18px rgba(0,0,0,.28))}
+.screen:after{content:"";position:absolute;right:-12px;bottom:96px;width:135px;height:220px;background:url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20320%20520%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22g2%22%20x1%3D%220%22%20x2%3D%220%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23eed79a%22%20stop-opacity%3D%220.75%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23d3b56a%22%20stop-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Cpath%20d%3D%22M251%20355%20C242%20331%20227%20313%20206%20301%20C183%20288%20158%20285%20126%20281%20C111%20279%2097%20274%2084%20264%20C89%20282%20101%20297%20117%20307%20C89%20314%2068%20327%2056%20348%20C42%20373%2043%20402%2048%20430%20C55%20398%2072%20381%20103%20376%20C129%20372%20161%20382%20184%20396%20C211%20412%20228%20438%20236%20474%20C247%20440%20257%20394%20251%20355%20Z%22%20fill%3D%22url%28%23g2%29%22%20opacity%3D%220.5%22/%3E%0A%20%20%3Ccircle%20cx%3D%2288%22%20cy%3D%22149%22%20r%3D%2234%22%20fill%3D%22none%22%20stroke%3D%22%23efd89d%22%20stroke-width%3D%225%22%20opacity%3D%220.28%22/%3E%0A%20%20%3Ccircle%20cx%3D%2288%22%20cy%3D%22149%22%20r%3D%2248%22%20fill%3D%22none%22%20stroke%3D%22%23efd89d%22%20stroke-width%3D%222%22%20opacity%3D%220.16%22/%3E%0A%20%20%3Cellipse%20cx%3D%22128%22%20cy%3D%22245%22%20rx%3D%2216%22%20ry%3D%229%22%20fill%3D%22%23f5e4b5%22%20opacity%3D%220.38%22/%3E%0A%20%20%3Ccircle%20cx%3D%22122%22%20cy%3D%22245%22%20r%3D%223.2%22%20fill%3D%22%233c3220%22%20opacity%3D%220.75%22/%3E%0A%20%20%3Ccircle%20cx%3D%22134%22%20cy%3D%22245%22%20r%3D%223.2%22%20fill%3D%22%233c3220%22%20opacity%3D%220.75%22/%3E%0A%20%20%3Cpath%20d%3D%22M193%2080%20C221%20115%20247%20146%20283%20171%22%20fill%3D%22none%22%20stroke%3D%22%23f0d792%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20opacity%3D%220.24%22/%3E%0A%20%20%3Cpath%20d%3D%22M276%20162%20C282%20164%20287%20169%20289%20175%20C284%20171%20279%20170%20272%20170%20Z%22%20fill%3D%22%23f0d792%22%20opacity%3D%220.24%22/%3E%0A%3C/svg%3E") center/contain no-repeat;opacity:.15;pointer-events:none;z-index:0;filter:drop-shadow(0 10px 18px rgba(0,0,0,.28))}
+.device.landscape .screen:before,.device.desktop .screen:before{left:10px;top:72px;width:170px;height:270px;opacity:.16}
+.device.landscape .screen:after,.device.desktop .screen:after{right:14px;bottom:82px;width:155px;height:245px;opacity:.13}
+.content,.app-head,.app-foot{position:relative;z-index:1}
+.hero-card:before{content:"";position:absolute;left:14px;bottom:-12px;width:78px;height:78px;border-radius:50%;border:1px solid rgba(215,191,120,.08);box-shadow:0 0 0 14px rgba(215,191,120,.025),0 0 0 28px rgba(215,191,120,.015)}
+.ring.glow-quest{box-shadow:0 0 0 1px rgba(255,240,180,.2),0 0 26px rgba(215,191,120,.42),inset 0 0 16px rgba(215,191,120,.16)}
+.lotr-whisper{font-size:9px;color:#cdb376;letter-spacing:.08em;text-transform:uppercase;opacity:.9}
+.view-banner{margin-top:8px;font-size:10px;color:#a8b9ab;display:flex;justify-content:space-between;gap:8px;align-items:center}
+@media (max-width: 520px){
+  .screen:before{left:-26px;top:102px;width:118px;height:188px;opacity:.12}
+  .screen:after{right:-18px;bottom:112px;width:106px;height:170px;opacity:.11}
+}
+
+
+.app-shell{height:100%;display:grid;grid-template-rows:auto 1fr auto;background:
+  radial-gradient(circle at 15% -10%,rgba(95,140,100,.17),transparent 28rem),
+  linear-gradient(180deg,#0a120d,#08100b 50%,#070d09)}
+.app-head{padding:22px 16px 10px;border-bottom:1px solid rgba(54,80,61,.65);display:flex;justify-content:space-between;align-items:center;gap:10px;background:#0b130fda;backdrop-filter:blur(14px);z-index:4}
+.device.landscape .app-head,.device.desktop .app-head{padding:12px 18px 9px}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}.ring{width:35px;height:35px;border:3px solid var(--gold);border-radius:50%;box-shadow:0 0 0 1px rgba(255,240,180,.16),0 0 18px rgba(215,191,120,.28),inset 0 0 12px rgba(215,191,120,.12);position:relative;flex:0 0 auto;transform:rotate(-12deg)}
+.ring:after{content:"";position:absolute;inset:6px;border:1px solid rgba(255,234,169,.42);border-radius:50%}.brand-copy{min-width:0}.eyebrow{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:750}.brand h1{font-size:18px;line-height:1;margin:3px 0 2px;white-space:nowrap}.brand small{font-size:10px;color:var(--muted);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.head-actions{display:flex;align-items:center;gap:6px}.status-dot{width:8px;height:8px;border-radius:50%;background:#77c181;box-shadow:0 0 10px #77c18188}.icon-btn{width:36px;height:36px;border:1px solid var(--line);border-radius:10px;background:#0f1912;color:var(--text);display:grid;place-items:center;font-size:15px}.icon-btn:hover{border-color:var(--gold2)}
+
+.content{overflow:auto;padding:12px 12px 94px;scrollbar-width:thin;scrollbar-color:#324638 transparent}.device.landscape .content,.device.desktop .content{padding:14px 18px 82px}.content::-webkit-scrollbar{width:6px}.content::-webkit-scrollbar-thumb{background:#324638;border-radius:999px}
+.view{display:none;animation:fade .18s ease}.view.active{display:block}@keyframes fade{from{opacity:.55;transform:translateY(3px)}to{opacity:1;transform:none}}
+.section-title{display:flex;justify-content:space-between;align-items:end;gap:10px;margin-bottom:10px}.section-title h2{font-size:24px;line-height:1;margin:0}.section-title p{font-size:11px;color:var(--muted);margin:4px 0 0}.section-title .mini{font-size:10px;color:var(--gold);text-align:right}
+.hero-card{border:1px solid var(--line);border-radius:16px;padding:14px;background:linear-gradient(135deg,#15241a,#0e1711);box-shadow:inset 0 1px rgba(255,255,255,.025);position:relative;overflow:hidden}.hero-card:after{content:"";position:absolute;right:-20px;top:-24px;width:120px;height:120px;border:1px solid rgba(215,191,120,.13);border-radius:50%;box-shadow:0 0 0 18px rgba(215,191,120,.03),0 0 0 36px rgba(215,191,120,.02)}
+.hero-row{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.hero-card h3{font-size:20px;margin:3px 0}.hero-card p{font-size:11px;color:var(--muted);margin:0;line-height:1.4}.pill{display:inline-flex;align-items:center;gap:5px;min-height:26px;padding:0 8px;border:1px solid var(--line2);border-radius:999px;font-size:9px;color:#c8dacb;background:#102018;white-space:nowrap}.pill.gold{border-color:#8d7a45;background:#272418;color:#f2deb0}.pill.red{border-color:#704a40;background:#2a1815;color:#efb6a8}.pill.blue{border-color:#405f73;background:#13212b;color:#bcd7e9}.pill.green{border-color:#416d4a;background:#132619;color:#bce3c0}
+.progress-route{margin-top:13px;display:flex;gap:5px;align-items:center;overflow:auto;padding-bottom:2px}.route-node{flex:0 0 auto;display:flex;align-items:center;gap:5px}.route-node button{height:28px;border-radius:999px;padding:0 9px;border:1px solid var(--line);background:#0c150f;color:#97aa9b;font-size:9px}.route-node button.done{border-color:#497354;color:#b8debf;background:#13251a}.route-node button.current{border-color:#9a8348;color:#f2deb0;background:#292419}.route-node i{display:block;width:12px;height:1px;background:#3a4d3f}
+
+.stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin-top:8px}.stat{border:1px solid var(--line);border-radius:13px;padding:10px;background:#0e1711}.stat b{display:block;font-size:21px}.stat span{display:block;font-size:9px;letter-spacing:.05em;color:var(--muted);margin-top:2px}.stat.attention b{color:#f0c49b}.stat.money b{color:#d9c37f}
+.cards{display:grid;gap:8px;margin-top:8px}.job-card{width:100%;text-align:left;border:1px solid var(--line);border-radius:15px;background:#0f1912;padding:12px;color:var(--text);display:grid;grid-template-columns:1fr auto;gap:8px}.job-card:hover,.job-card.active{border-color:#766b45;background:#181b13}.job-card h4{margin:0 0 4px;font-size:13px}.job-card p{margin:0;font-size:10px;color:var(--muted);line-height:1.35}.job-card .amount{font-size:11px;color:var(--gold);font-weight:700;text-align:right}.job-card .meta{display:flex;gap:5px;flex-wrap:wrap;margin-top:7px}.job-card .meta span{font-size:8px;border:1px solid #314235;padding:3px 6px;border-radius:999px;color:#a8b9ab}
+
+.quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:9px}.quick{border:1px solid var(--line);border-radius:14px;background:#101a13;min-height:74px;color:#e7efe8;padding:9px 6px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;font-size:9px}.quick strong{font-size:20px;font-weight:400}.quick:hover{border-color:var(--gold2);background:#171b13}.quick.primary{border-color:#847440;background:#242216}
+
+.subhead{display:flex;justify-content:space-between;align-items:center;margin:14px 0 7px}.subhead h3{font-size:12px;margin:0;text-transform:uppercase;letter-spacing:.09em;color:#d8e5da}.subhead button{border:0;background:none;color:var(--gold);font-size:10px;padding:0}
+.timeline{display:grid;gap:7px}.timeline-item{display:grid;grid-template-columns:34px 1fr;gap:8px;padding:10px;border:1px solid var(--line);border-radius:13px;background:#0d1610}.timeline-icon{width:32px;height:32px;border-radius:9px;border:1px solid #304236;display:grid;place-items:center;background:#121e16}.timeline-item b{font-size:11px}.timeline-item p{margin:2px 0 0;font-size:9px;color:var(--muted);line-height:1.4}.timeline-item small{font-size:8px;color:#6f8775;display:block;margin-top:4px}
+
+.search-row{display:grid;grid-template-columns:1fr auto;gap:6px;margin-bottom:9px}.input,select,textarea{width:100%;border:1px solid var(--line);background:#0b140e;color:#edf5ef;border-radius:10px;min-height:40px;padding:9px 10px;outline:none}.input:focus,select:focus,textarea:focus{border-color:#8c7944;box-shadow:0 0 0 2px rgba(215,191,120,.06)} textarea{min-height:90px;resize:vertical}.filter-btn{border:1px solid var(--line);border-radius:10px;background:#0f1912;color:var(--text);padding:0 12px}
+
+.job-detail-head{display:flex;align-items:center;gap:8px;margin-bottom:8px}.back{width:34px;height:34px;border:1px solid var(--line);border-radius:10px;background:#0e1711;color:var(--text)}.job-title{min-width:0;flex:1}.job-title h2{font-size:18px;margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.job-title p{font-size:9px;color:var(--muted);margin:3px 0 0}.job-actions{display:flex;gap:5px}.action-mini{height:34px;border:1px solid var(--line);background:#0f1912;color:var(--text);border-radius:10px;padding:0 9px;font-size:10px}
+.detail-grid{display:grid;gap:8px}.info-card{border:1px solid var(--line);border-radius:14px;background:#0e1711;padding:11px}.info-card h3{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);margin:0 0 8px}.kv{display:grid;grid-template-columns:1fr auto;gap:5px 8px;font-size:10px}.kv span:nth-child(odd){color:var(--muted)}.kv span:nth-child(even){text-align:right;color:#dce9df}.warning{padding:10px;border:1px solid #6d4a3e;border-radius:12px;background:#261713;color:#e9b6a7;font-size:10px;line-height:1.4}.success{padding:10px;border:1px solid #3f6948;border-radius:12px;background:#122319;color:#bde0c1;font-size:10px;line-height:1.4}
+
+.money-row{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;padding:10px;border-bottom:1px solid #223127}.money-row:last-child{border:0}.money-row b{font-size:11px}.money-row p{margin:3px 0 0;font-size:9px;color:var(--muted)}.money-row .sum{color:var(--gold);font-weight:800;font-size:12px}.money-row button{border:1px solid var(--line);background:#101b13;color:var(--text);border-radius:9px;min-height:30px;font-size:9px}
+
+.gap{display:grid;grid-template-columns:30px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:13px;padding:10px;background:#0e1711;margin-bottom:7px}.gap .gicon{width:30px;height:30px;border-radius:9px;background:#241b14;border:1px solid #614a38;display:grid;place-items:center}.gap b{font-size:10px}.gap p{margin:2px 0 0;font-size:9px;color:var(--muted)}.gap button{border:1px solid #5e5032;background:#201d13;color:#ead7a5;border-radius:9px;min-height:30px;font-size:9px;padding:0 8px}
+
+.bottom-nav{position:absolute;z-index:5;left:0;right:0;bottom:0;height:72px;padding:7px max(8px,env(safe-area-inset-right)) calc(7px + env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left));border-top:1px solid rgba(57,80,63,.82);background:#09110cde;backdrop-filter:blur(18px);display:grid;grid-template-columns:repeat(5,1fr);gap:4px}.nav-btn{border:0;background:transparent;color:#829486;border-radius:12px;font-size:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px}.nav-btn span:first-child{font-size:17px}.nav-btn.active{color:#f0dfb1;background:#1b1e16}.nav-btn.capture{transform:translateY(-14px);width:52px;height:52px;border-radius:50%;justify-self:center;background:radial-gradient(circle,#4d4225,#252016);border:1px solid #907c46;color:#fff0c4;box-shadow:0 8px 24px #0008}.nav-btn.capture span:first-child{font-size:24px}.nav-btn.capture em{display:none}
+
+.modal-backdrop{position:absolute;inset:0;background:#030604ba;backdrop-filter:blur(7px);z-index:20;display:none;align-items:flex-end}.modal-backdrop.open{display:flex}.modal{width:100%;max-height:88%;overflow:auto;background:#101914;border:1px solid #354a3a;border-radius:22px 22px 0 0;padding:14px 14px 20px;box-shadow:0 -30px 70px #0009}.modal-handle{width:46px;height:4px;background:#3c4d40;border-radius:999px;margin:0 auto 10px}.modal-head{display:flex;justify-content:space-between;gap:8px;align-items:center}.modal-head h3{margin:0;font-size:17px}.close{width:34px;height:34px;border:1px solid var(--line);border-radius:10px;background:#0c140f;color:#dfe9e1}.field{margin-top:10px}.field label{display:block;font-size:9px;color:#9aafa0;margin-bottom:5px;text-transform:uppercase;letter-spacing:.08em}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}.btn-row{display:flex;gap:7px;margin-top:12px}.primary-btn,.secondary-btn,.danger-btn{min-height:42px;border-radius:11px;padding:0 13px;font-weight:700;font-size:10px}.primary-btn{flex:1;border:1px solid #8f7d48;background:#2a2618;color:#f4e3b7}.secondary-btn{border:1px solid var(--line);background:#101a13;color:#dbe7de}.danger-btn{border:1px solid #72493e;background:#2b1714;color:#f0b9a8}.file-preview{margin-top:8px;display:none;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#08100b}.file-preview img{display:block;width:100%;max-height:230px;object-fit:cover}.record-box{padding:12px;border:1px dashed #455c49;border-radius:12px;text-align:center;color:var(--muted);font-size:10px}.record-dot{width:12px;height:12px;border-radius:50%;background:#a43f34;display:inline-block;margin-right:6px;box-shadow:0 0 0 4px #a43f3422}
+
+.toast{position:absolute;z-index:40;left:50%;bottom:88px;transform:translate(-50%,16px);opacity:0;pointer-events:none;background:#1f2419;border:1px solid #776a42;color:#f0dfb1;padding:9px 12px;border-radius:999px;font-size:9px;transition:.2s;white-space:nowrap;max-width:88%;overflow:hidden;text-overflow:ellipsis}.toast.show{opacity:1;transform:translate(-50%,0)}
+
+.portal-card{border:1px solid #3a4e3f;border-radius:16px;background:linear-gradient(135deg,#f0efe7,#d9ddcf);color:#182018;padding:14px}.portal-card .eyebrow{color:#5d684f}.portal-card h3{font-size:18px;margin:4px 0}.portal-card p{font-size:10px;color:#526054;line-height:1.45}.portal-stage{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin:12px 0}.portal-stage span{height:5px;border-radius:999px;background:#b9c1b5}.portal-stage span.on{background:#7c8056}.portal-card button{border:1px solid #73795e;background:#f3f2e7;color:#2c3229;border-radius:9px;min-height:34px;font-size:9px;padding:0 10px}
+
+.website-demo{background:#e9ebe4;color:#172019;border-radius:16px;padding:14px;border:1px solid #aeb9ae}.website-demo h3{font-size:22px;margin:4px 0}.website-demo p{font-size:10px;color:#59645c;line-height:1.45}.website-demo .web-nav{display:flex;justify-content:space-between;align-items:center;font-size:9px;margin-bottom:14px}.website-demo .web-hero{padding:14px 0;border-top:1px solid #c8d0c8;border-bottom:1px solid #c8d0c8}.website-demo .web-cta{display:inline-flex;min-height:36px;padding:0 12px;align-items:center;border:1px solid #646d62;background:#1e2a22;color:#f3f5f0;border-radius:8px;margin-top:8px;font-size:9px}
+
+.hidden{display:none!important}
+@media(min-width:760px){
+  .device.desktop .app-shell{grid-template-columns:190px 1fr;grid-template-rows:auto 1fr}.device.desktop .app-head{grid-column:1/-1}.device.desktop .content{grid-column:2;grid-row:2;padding-bottom:24px}.device.desktop .bottom-nav{position:static;grid-column:1;grid-row:2;height:auto;border-top:0;border-right:1px solid #2a3d2f;display:flex;flex-direction:column;padding:14px 10px;background:#0a120e}.device.desktop .nav-btn{min-height:52px;display:grid;grid-template-columns:28px 1fr;justify-items:start;text-align:left;padding:0 10px;font-size:10px}.device.desktop .nav-btn span:first-child{font-size:16px}.device.desktop .nav-btn.capture{order:-1;transform:none;width:auto;height:46px;border-radius:12px;justify-self:stretch;display:grid;grid-template-columns:28px 1fr}.device.desktop .nav-btn.capture em{display:block;font-style:normal}.device.desktop .quick-grid{grid-template-columns:repeat(6,1fr)}.device.desktop .stat-grid{grid-template-columns:repeat(4,1fr)}.device.desktop .detail-grid{grid-template-columns:1.15fr .85fr}.device.desktop .modal-backdrop{align-items:center;justify-content:center}.device.desktop .modal{width:520px;max-height:84%;border-radius:20px}
+}
+@media(max-width:700px){
+  .stage{padding:0;display:block}.demo-toolbar{display:none}.device-wrap{display:block;min-height:100vh}.device,.device.landscape,.device.desktop{width:100vw;height:100dvh;border:0;border-radius:0;padding:0;box-shadow:none}.screen,.device.landscape .screen,.device.desktop .screen{border-radius:0}.device:before{display:none}.app-head{padding-top:calc(13px + env(safe-area-inset-top))}
+}
+@media(max-height:520px) and (orientation:landscape){
+  .app-head{padding:8px 12px}.brand h1{font-size:14px}.ring{width:29px;height:29px}.brand small{display:none}.content{padding:8px 10px 66px}.section-title h2{font-size:20px}.hero-card{padding:10px}.stat-grid{grid-template-columns:repeat(4,1fr)}.quick-grid{grid-template-columns:repeat(6,1fr)}.bottom-nav{height:58px}.nav-btn.capture{width:46px;height:46px}.modal{max-height:95%}
+}
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="demo-toolbar">
+    <div class="title"><div class="ring" style="width:24px;height:24px;border-width:2px"></div><div><strong>Marcin Job OS · interaktywny prototyp</strong><div class="hint">Otwórz na PC i przełącz urządzenie; na telefonie interfejs dopasuje się automatycznie.</div></div></div>
+    <div class="demo-actions">
+      <button class="device-toggle active" data-device="portrait">Telefon · pion</button>
+      <button class="device-toggle" data-device="landscape">Telefon · poziom</button>
+      <button class="device-toggle" data-device="desktop">PC</button>
+      <button id="resetDemo">Reset demo</button>
+    </div>
+  </div>
+  <div class="device-wrap">
+    <div class="device" id="device">
+      <div class="screen">
+        <div class="app-shell">
+          <header class="app-head">
+            <div class="brand">
+              <button class="ring" id="ringEaster" aria-label="Logo / easter egg" title="Kliknij kilka razy"></button>
+              <div class="brand-copy"><div class="eyebrow">PILOT 001 · PRYWATNE</div><h1>MARCIN · JOB OS</h1><small id="headContext">Dzisiaj · system pracy w terenie</small></div>
+            </div>
+            <div class="head-actions"><span class="status-dot"></span><button class="icon-btn" id="openGaps" title="Braki">⚠</button></div>
+          </header>
+
+          <main class="content" id="content">
+            <section class="view active" id="view-today">
+              <div class="section-title"><div><h2>Dzisiaj</h2><p>Najważniejsze rzeczy bez szukania po pięciu aplikacjach.</p></div><div class="mini">WTO · 18 SIE</div></div>
+              <div class="hero-card">
+                <div class="hero-row"><div><div class="eyebrow">AKTYWNE ZLECENIE</div><h3>Łazienka · Müller</h3><p>Wiedeń 12 · realizacja · dzień 3/5</p></div><span class="pill gold">W TRAKCIE</span></div>
+                <div class="progress-route" id="todayRoute"></div>
+              </div>
+              <div class="stat-grid">
+                <div class="stat"><b id="statLeads">3</b><span>NOWE LEADY</span></div>
+                <div class="stat attention"><b id="statQuotes">2</b><span>OFERTY CZEKAJĄ</span></div>
+                <div class="stat money"><b id="statInvoice">1</b><span>DO FAKTURY</span></div>
+                <div class="stat"><b id="statOpen">€4.250</b><span>NIEZAPŁACONE</span></div>
+              </div>
+              <div class="subhead"><h3>Szybki zapis z budowy</h3><button data-action="capture">+ dodaj</button></div>
+              <div class="quick-grid">
+                <button class="quick primary" data-capture="photo"><strong>📷</strong>Zdjęcie</button>
+                <button class="quick" data-capture="measurement"><strong>📏</strong>Pomiar</button>
+                <button class="quick" data-capture="voice"><strong>🎙</strong>Głos</button>
+                <button class="quick" data-capture="note"><strong>✍</strong>Notatka</button>
+                <button class="quick" data-capture="document"><strong>📄</strong>Dokument</button>
+                <button class="quick" data-capture="change"><strong>⚒</strong>Dodatkowa praca</button>
+              </div>
+              <div class="subhead"><h3>Dzisiejsze zlecenia</h3><button data-nav="jobs">wszystkie →</button></div>
+              <div class="cards" id="todayJobs"></div>
+              <div class="subhead"><h3>Dziennik wyprawy</h3><button data-nav="log">pełny dziennik →</button></div>
+              <div class="timeline" id="todayTimeline"></div>
+            </section>
+
+            <section class="view" id="view-jobs">
+              <div class="section-title"><div><h2>Zlecenia</h2><p>Jedna lista od pierwszego kontaktu aż do zapłaty.</p></div><div class="mini">MAPA SZLAKU</div></div>
+              <div class="search-row"><input class="input" id="jobSearch" placeholder="Szukaj klienta, adresu, etapu…"><button class="filter-btn" id="filterActive">Aktywne</button></div>
+              <div class="cards" id="jobList"></div>
+            </section>
+
+            <section class="view" id="view-job">
+              <div class="job-detail-head"><button class="back" data-nav="jobs">←</button><div class="job-title"><h2 id="jobName">Zlecenie</h2><p id="jobSub">—</p></div><div class="job-actions"><button class="action-mini" data-capture="note">+ notatka</button></div></div>
+              <div class="hero-card"><div class="hero-row"><div><div class="eyebrow">SZLAK ZLECENIA</div><h3 id="jobHeroTitle">—</h3><p id="jobHeroMeta">—</p></div><span class="pill gold" id="jobStatusPill">—</span></div><div class="progress-route" id="jobRoute"></div></div>
+              <div class="quick-grid">
+                <button class="quick primary" data-capture="photo"><strong>📷</strong>Zdjęcie</button><button class="quick" data-capture="measurement"><strong>📏</strong>Pomiar</button><button class="quick" data-capture="voice"><strong>🎙</strong>Głos</button><button class="quick" data-capture="change"><strong>⚒</strong>Zmiana</button><button class="quick" id="openQuote"><strong>🧾</strong>Oferta</button><button class="quick" id="openPortal"><strong>👤</strong>Klient</button>
+              </div>
+              <div class="detail-grid" style="margin-top:8px">
+                <div>
+                  <div class="info-card"><h3>Stan zlecenia</h3><div class="kv" id="jobKV"></div></div>
+                  <div class="subhead"><h3>Ostatnie wpisy</h3><button data-capture="note">+ wpis</button></div><div class="timeline" id="jobTimeline"></div>
+                </div>
+                <div>
+                  <div id="jobAlerts"></div>
+                  <div class="info-card" style="margin-top:8px"><h3>Następny krok</h3><div id="nextAction"></div></div>
+                  <div class="info-card" style="margin-top:8px"><h3>Pieniądze</h3><div class="kv" id="jobMoney"></div></div>
+                </div>
+              </div>
+            </section>
+
+            <section class="view" id="view-money">
+              <div class="section-title"><div><h2>Pieniądze</h2><p>Faktura jest skutkiem zakończonego zlecenia, nie osobną historią.</p></div><div class="mini">KUŹNIA ROZLICZEŃ</div></div>
+              <div class="hero-card"><div class="hero-row"><div><div class="eyebrow">DO UWAGI</div><h3>1 zlecenie gotowe do faktury</h3><p>System pokazuje moment fakturowania, ale Marcin zatwierdza dokument i kwoty.</p></div><span class="pill red">1 ALERT</span></div></div>
+              <div class="cards" id="moneyList"></div>
+            </section>
+
+            <section class="view" id="view-gaps">
+              <div class="section-title"><div><h2>Braki</h2><p>Rzeczy, które zwykle wychodzą dopiero wieczorem albo przy fakturze.</p></div><div class="mini">STRAŻNIK BRAKÓW</div></div>
+              <div id="gapList"></div>
+            </section>
+
+            <section class="view" id="view-log">
+              <div class="section-title"><div><h2>Dziennik</h2><p>Chronologiczna historia wszystkich zapisów terenowych.</p></div><div class="mini">DZIENNIK WYPRAWY</div></div>
+              <div class="timeline" id="fullTimeline"></div>
+            </section>
+
+            <section class="view" id="view-website">
+              <div class="section-title"><div><h2>Strona klienta</h2><p>Przyszły publiczny front: zaufanie → zapytanie → lead w systemie.</p></div><div class="mini">PREVIEW</div></div>
+              <div class="website-demo"><div class="web-nav"><strong>LOS!K · RENOVATION</strong><span>Realizacje · Usługi · Kontakt</span></div><div class="web-hero"><div class="eyebrow">REMONTY · WYKOŃCZENIA · WIEDEŃ</div><h3>Porządna robota.<br>Dokumentowana od początku.</h3><p>Zdjęcia realizacji, jasny zakres pracy i prosty kontakt. Klient może opisać problem i dodać zdjęcia jeszcze przed oględzinami.</p><button class="web-cta" id="newLeadDemo">Wyślij zapytanie →</button></div></div>
+              <div class="portal-card" style="margin-top:9px"><div class="eyebrow">PRYWATNY PODGLĄD KLIENTA</div><h3>Łazienka · Müller</h3><p>Klient może widzieć prosty status, zatwierdzone zmiany i wybrane zdjęcia — tylko jeśli Marcin uzna, że to naprawdę pomaga.</p><div class="portal-stage"><span class="on"></span><span class="on"></span><span class="on"></span><span></span></div><button id="clientPortalDemo">Otwórz demo statusu</button></div>
+            </section>
+          </main>
+
+          <nav class="bottom-nav">
+            <button class="nav-btn active" data-nav="today"><span>⌂</span><span>Dzisiaj</span></button>
+            <button class="nav-btn" data-nav="jobs"><span>▤</span><span>Zlecenia</span></button>
+            <button class="nav-btn capture" data-action="capture"><span>＋</span><em>Dodaj zapis</em></button>
+            <button class="nav-btn" data-nav="money"><span>€</span><span>Pieniądze</span></button>
+            <button class="nav-btn" data-nav="website"><span>◈</span><span>Strona</span></button>
+          </nav>
+        </div>
+
+        <div class="modal-backdrop" id="captureModal"><div class="modal"><div class="modal-handle"></div><div class="modal-head"><div><div class="eyebrow">SZYBKI ZAPIS</div><h3 id="captureTitle">Dodaj</h3></div><button class="close" data-close="captureModal">×</button></div><div id="captureBody"></div></div></div>
+        <div class="modal-backdrop" id="quoteModal"><div class="modal"><div class="modal-handle"></div><div class="modal-head"><div><div class="eyebrow">KUŹNIA OFERTY</div><h3>Oferta · Müller</h3></div><button class="close" data-close="quoteModal">×</button></div><div class="info-card" style="margin-top:10px"><h3>Zakres</h3><div class="money-row"><div><b>Demontaż + przygotowanie</b><p>Pakiet</p></div><div class="sum">€1.100</div></div><div class="money-row"><div><b>Zabudowa / płyty</b><p>Zakres główny</p></div><div class="sum">€2.400</div></div><div class="money-row"><div><b>Wykończenie</b><p>Szpachla + przygotowanie</p></div><div class="sum">€1.650</div></div><div class="money-row"><div><b>Dodatkowa ściana</b><p class="red">Wymaga potwierdzenia</p></div><div class="sum">€320</div></div></div><div class="warning" style="margin-top:8px">AI może ułożyć szkic zakresu z notatek, ale cena i finalna oferta wymagają zatwierdzenia Marcina.</div><div class="btn-row"><button class="primary-btn" id="approveChange">Zatwierdź zmianę €320</button><button class="secondary-btn" data-close="quoteModal">Zamknij</button></div></div></div>
+        <div class="modal-backdrop" id="portalModal"><div class="modal"><div class="modal-handle"></div><div class="modal-head"><div><div class="eyebrow">PODGLĄD KLIENTA</div><h3>Twoja realizacja</h3></div><button class="close" data-close="portalModal">×</button></div><div class="portal-card" style="margin-top:10px"><div class="eyebrow">MÜLLER · ŁAZIENKA</div><h3>Prace w toku</h3><p>✓ Oględziny<br>✓ Oferta zaakceptowana<br>✓ Rozpoczęcie prac<br>● Wykończenie<br>○ Odbiór<br>○ Faktura</p><div class="portal-stage"><span class="on"></span><span class="on"></span><span class="on"></span><span></span></div><button data-close="portalModal">Rozumiem</button></div></div></div>
+        <div class="modal-backdrop" id="leadModal"><div class="modal"><div class="modal-handle"></div><div class="modal-head"><div><div class="eyebrow">PUBLICZNY FORMULARZ</div><h3>Nowe zapytanie</h3></div><button class="close" data-close="leadModal">×</button></div><div class="field"><label>Imię / firma</label><input class="input" id="leadName" value="Anna Nowak"></div><div class="field"><label>Rodzaj pracy</label><select id="leadType"><option>Remont łazienki</option><option>Ścianki / zabudowa</option><option>Naprawa</option><option>Inne</option></select></div><div class="field"><label>Opis</label><textarea id="leadText">Łazienka około 7 m², wymiana zabudowy i wykończenie ścian.</textarea></div><div class="field"><label>Zdjęcia od klienta</label><input class="input" type="file" accept="image/*" multiple></div><div class="btn-row"><button class="primary-btn" id="createLead">Utwórz lead w Job OS</button><button class="secondary-btn" data-close="leadModal">Anuluj</button></div></div></div>
+        <div class="toast" id="toast"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+const STATUS = ['Lead','Oględziny','Oferta','Akceptacja','Plan','W trakcie','Kontrola','Gotowe','Faktura','Zapłacone'];
+const statusPL = {Lead:'Lead','Oględziny':'Oględziny','Oferta':'Oferta','Akceptacja':'Akceptacja','Plan':'Plan','W trakcie':'W trakcie','Kontrola':'Kontrola','Gotowe':'Gotowe','Faktura':'Faktura','Zapłacone':'Zapłacone'};
+const captureLabels={photo:'Zdjęcie',measurement:'Pomiar',voice:'Notatka głosowa',note:'Notatka',document:'Dokument',change:'Dodatkowa praca'};
+const defaultState={
+ selectedJob:'J-041',
+ jobs:[
+  {id:'J-041',client:'Müller',name:'Łazienka',address:'Wiedeń 12',status:'W trakcie',amount:5470,paid:false,direct:true,next:'Jutro 07:00 · zabudowa + wykończenie',invoice:'nie',approvalMissing:true,completion:false},
+  {id:'J-042',client:'Novak',name:'Biuro · ścianka',address:'Wiedeń 3',status:'Oferta',amount:2800,paid:false,direct:true,next:'Czeka na odpowiedź klienta',invoice:'nie',approvalMissing:false,completion:false},
+  {id:'J-038',client:'Exklusiv B&G',name:'Naprawa / fit-out',address:'Wiedeń 10',status:'Gotowe',amount:1920,paid:false,direct:false,next:'Wystawić fakturę',invoice:'do',approvalMissing:false,completion:true},
+  {id:'J-035',client:'Sulowski',name:'Naprawy',address:'Wiedeń 22',status:'Faktura',amount:4250,paid:false,direct:false,next:'Sprawdzić płatność',invoice:'wysłana',approvalMissing:false,completion:true},
+  {id:'J-031',client:'Kowalski',name:'Kuchnia',address:'Wiedeń 16',status:'Zapłacone',amount:3100,paid:true,direct:true,next:'Poprosić o referencję',invoice:'zapłacona',approvalMissing:false,completion:true}
+ ],
+ entries:[
+  {id:1,job:'J-041',type:'photo',title:'Zdjęcie · ściana północna',text:'Postęp zabudowy. Kategoria: W TRAKCIE.',time:'17:04'},
+  {id:2,job:'J-041',type:'measurement',title:'Pomiar · 238 × 172 cm',text:'Łazienka · ściana północna.',time:'16:58'},
+  {id:3,job:'J-041',type:'voice',title:'Głos · wymaganie klienta',text:'Klient chce białe płytki i dodatkową ścianę. Do potwierdzenia ceny.',time:'16:51'},
+  {id:4,job:'J-041',type:'change',title:'Dodatkowa praca · ściana',text:'Szacunek €320 · brak zatwierdzonej akceptacji.',time:'14:20'},
+  {id:5,job:'J-038',type:'photo',title:'Zdjęcia końcowe',text:'Pakiet 8 zdjęć · GOTOWE.',time:'11:42'}
+ ],
+ leads:3
+};
+let state=loadState(); let captureType='note'; let filterActive=false; let easterClicks=0;
+function loadState(){try{return JSON.parse(localStorage.getItem('marcin-job-os-demo'))||structuredClone(defaultState)}catch(e){return structuredClone(defaultState)}}
+function save(){try{localStorage.setItem('marcin-job-os-demo',JSON.stringify(state))}catch(e){}}
+function job(){return state.jobs.find(j=>j.id===state.selectedJob)||state.jobs[0]}
+function euro(v){return '€'+Number(v).toLocaleString('de-AT')}
+function now(){return new Date().toLocaleTimeString('pl-PL',{hour:'2-digit',minute:'2-digit'})}
+function typeIcon(t){return {photo:'📷',measurement:'📏',voice:'🎙',note:'✍',document:'📄',change:'⚒'}[t]||'•'}
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(t._to);t._to=setTimeout(()=>t.classList.remove('show'),2100)}
+function openModal(id){document.getElementById(id).classList.add('open')}
+function closeModal(id){document.getElementById(id).classList.remove('open')}
+function routeHTML(status,clickable=false){const idx=Math.max(0,STATUS.indexOf(status));return STATUS.map((s,i)=>`<div class="route-node"><button class="${i<idx?'done':i===idx?'current':''}" ${clickable?`data-status="${s}"`:''}>${statusPL[s]}</button>${i<STATUS.length-1?'<i></i>':''}</div>`).join('')}
+function jobCard(j){return `<button class="job-card ${j.id===state.selectedJob?'active':''}" data-job="${j.id}"><div><h4>${j.name} · ${j.client}</h4><p>${j.address} · ${j.next}</p><div class="meta"><span>${j.status}</span><span>${j.direct?'bezpośredni':'B2B'}</span><span>${j.id}</span></div></div><div><div class="amount">${euro(j.amount)}</div>${j.approvalMissing?'<span class="pill red" style="margin-top:7px">BRAK AKCEPTACJI</span>':''}</div></button>`}
+function timelineItem(e){return `<div class="timeline-item"><div class="timeline-icon">${typeIcon(e.type)}</div><div><b>${e.title}</b><p>${e.text}</p><small>${e.time} · ${e.job}</small></div></div>`}
+function render(){
+ document.getElementById('todayRoute').innerHTML=routeHTML('W trakcie');
+ document.getElementById('todayJobs').innerHTML=state.jobs.filter(j=>['W trakcie','Oferta','Gotowe'].includes(j.status)).slice(0,3).map(jobCard).join('');
+ document.getElementById('todayTimeline').innerHTML=state.entries.slice(0,4).map(timelineItem).join('');
+ document.getElementById('statLeads').textContent=state.leads;
+ document.getElementById('statQuotes').textContent=state.jobs.filter(j=>j.status==='Oferta').length;
+ document.getElementById('statInvoice').textContent=state.jobs.filter(j=>j.invoice==='do').length;
+ document.getElementById('statOpen').textContent=euro(state.jobs.filter(j=>!j.paid&&['Faktura'].includes(j.status)).reduce((a,j)=>a+j.amount,0));
+ renderJobs(); renderJob(); renderMoney(); renderGaps(); renderLog(); bindDynamic();
+}
+function renderJobs(){const q=(document.getElementById('jobSearch')?.value||'').toLowerCase();let arr=state.jobs.filter(j=>!q||`${j.client} ${j.name} ${j.address} ${j.status}`.toLowerCase().includes(q));if(filterActive)arr=arr.filter(j=>j.status!=='Zapłacone');document.getElementById('jobList').innerHTML=arr.map(jobCard).join('')||'<div class="info-card">Brak wyników.</div>'}
+function renderJob(){const j=job();document.getElementById('jobName').textContent=`${j.name} · ${j.client}`;document.getElementById('jobSub').textContent=`${j.id} · ${j.address}`;document.getElementById('jobHeroTitle').textContent=`${j.name} · ${j.client}`;document.getElementById('jobHeroMeta').textContent=`${j.address} · ${j.direct?'klient bezpośredni':'B2B / podwykonawstwo'}`;document.getElementById('jobStatusPill').textContent=j.status;document.getElementById('jobRoute').innerHTML=routeHTML(j.status,true);document.getElementById('jobKV').innerHTML=`<span>Klient</span><span>${j.client}</span><span>Adres</span><span>${j.address}</span><span>Etap</span><span>${j.status}</span><span>Typ</span><span>${j.direct?'Bezpośredni':'B2B'}</span>`;const entries=state.entries.filter(e=>e.job===j.id);document.getElementById('jobTimeline').innerHTML=entries.map(timelineItem).join('')||'<div class="info-card">Brak wpisów.</div>';document.getElementById('jobAlerts').innerHTML=j.approvalMissing?'<div class="warning">⚠ Dodatkowa praca ma wycenę, ale brakuje potwierdzonej akceptacji klienta.</div>':j.completion&&j.invoice==='do'?'<div class="warning">⚠ Zlecenie oznaczone jako gotowe. Następny krok: przygotować fakturę.</div>':'<div class="success">✓ Brak krytycznych braków w tym zleceniu.</div>';document.getElementById('nextAction').innerHTML=`<b style="font-size:12px">${j.next}</b><div class="btn-row"><button class="primary-btn" data-advance="1">Przesuń do następnego etapu</button></div>`;document.getElementById('jobMoney').innerHTML=`<span>Wartość</span><span>${euro(j.amount)}</span><span>Faktura</span><span>${j.invoice}</span><span>Płatność</span><span>${j.paid?'zapłacona':'otwarta / nieznana'}</span>`}
+function renderMoney(){document.getElementById('moneyList').innerHTML=state.jobs.filter(j=>['Gotowe','Faktura','Zapłacone'].includes(j.status)).map(j=>`<div class="info-card"><div class="money-row"><div><b>${j.name} · ${j.client}</b><p>${j.status} · ${j.invoice}</p></div><div class="sum">${euro(j.amount)}</div></div><div class="btn-row">${j.status==='Gotowe'?`<button class="primary-btn" data-invoice="${j.id}">Oznacz: faktura wysłana</button>`:''}${j.status==='Faktura'&&!j.paid?`<button class="primary-btn" data-paid="${j.id}">Oznacz: zapłacone</button>`:''}<button class="secondary-btn" data-job="${j.id}">Otwórz zlecenie</button></div></div>`).join('')}
+function getGaps(){const gaps=[];state.jobs.forEach(j=>{if(j.approvalMissing)gaps.push({job:j.id,icon:'⚠',title:`${j.client}: dodatkowa praca bez akceptacji`,text:'Cena istnieje, ale źródło akceptacji klienta nie jest zapisane.',action:'Otwórz ofertę'});if(j.invoice==='do')gaps.push({job:j.id,icon:'€',title:`${j.client}: gotowe → do faktury`,text:'Zakończenie jest znane. Brakuje faktury / statusu wysyłki.',action:'Rozlicz'});});return gaps}
+function renderGaps(){const gaps=getGaps();document.getElementById('gapList').innerHTML=gaps.map(g=>`<div class="gap"><div class="gicon">${g.icon}</div><div><b>${g.title}</b><p>${g.text}</p></div><button data-gapjob="${g.job}">${g.action}</button></div>`).join('')||'<div class="success">✓ Brak krytycznych braków.</div>'}
+function renderLog(){document.getElementById('fullTimeline').innerHTML=state.entries.map(timelineItem).join('')}
+function bindDynamic(){document.querySelectorAll('[data-job]').forEach(el=>el.onclick=()=>{state.selectedJob=el.dataset.job;save();showView('job');renderJob();bindDynamic()});document.querySelectorAll('[data-status]').forEach(el=>el.onclick=()=>{job().status=el.dataset.status;job().completion=['Gotowe','Faktura','Zapłacone'].includes(job().status);if(job().status==='Gotowe'&&job().invoice==='nie')job().invoice='do';if(job().status==='Faktura')job().invoice='wysłana';if(job().status==='Zapłacone'){job().invoice='zapłacona';job().paid=true}save();render();toast('Etap zlecenia zmieniony')});document.querySelectorAll('[data-advance]').forEach(el=>el.onclick=()=>{const j=job();const i=STATUS.indexOf(j.status);if(i<STATUS.length-1){j.status=STATUS[i+1];j.completion=['Gotowe','Faktura','Zapłacone'].includes(j.status);if(j.status==='Gotowe'&&j.invoice==='nie')j.invoice='do';save();render();toast('Przesunięto do następnego etapu')}});document.querySelectorAll('[data-invoice]').forEach(el=>el.onclick=()=>{const j=state.jobs.find(x=>x.id===el.dataset.invoice);j.status='Faktura';j.invoice='wysłana';save();render();toast('Faktura oznaczona jako wysłana')});document.querySelectorAll('[data-paid]').forEach(el=>el.onclick=()=>{const j=state.jobs.find(x=>x.id===el.dataset.paid);j.status='Zapłacone';j.invoice='zapłacona';j.paid=true;save();render();toast('Płatność oznaczona jako zapłacona')});document.querySelectorAll('[data-gapjob]').forEach(el=>el.onclick=()=>{state.selectedJob=el.dataset.gapjob;save();showView('job');renderJob();bindDynamic()})}
+function showView(name){document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===`view-${name}`));document.querySelectorAll('.nav-btn[data-nav]').forEach(b=>b.classList.toggle('active',b.dataset.nav===name||(name==='job'&&b.dataset.nav==='jobs')));document.getElementById('content').scrollTop=0;document.getElementById('headContext').textContent={today:'Dzisiaj · system pracy w terenie',jobs:'Zlecenia · jedna lista całej firmy',job:'Zlecenie · wszystkie fakty w jednym miejscu',money:'Pieniądze · faktury i płatności',gaps:'Braki · rzeczy do domknięcia',log:'Dziennik · historia zapisów',website:'Strona + portal klienta'}[name]||'Job OS'}
+function captureForm(type){captureType=type;document.getElementById('captureTitle').textContent=captureLabels[type]||'Dodaj';const j=job();let html=`<div class="field"><label>Zlecenie</label><select id="capJob">${state.jobs.filter(x=>x.status!=='Zapłacone').map(x=>`<option value="${x.id}" ${x.id===j.id?'selected':''}>${x.id} · ${x.client} · ${x.name}</option>`).join('')}</select></div>`;
+ if(type==='photo')html+=`<div class="field"><label>Kategoria</label><select id="photoCat"><option>W TRAKCIE</option><option>PRZED</option><option>PROBLEM</option><option>ZMIANA</option><option>GOTOWE</option></select></div><div class="field"><label>Zrób lub wybierz zdjęcie</label><input class="input" id="photoFile" type="file" accept="image/*" capture="environment"><div class="file-preview" id="filePreview"><img id="previewImage"></div></div><div class="field"><label>Krótki opis</label><input class="input" id="photoText" placeholder="np. ściana północna po montażu"></div>`;
+ if(type==='measurement')html+=`<div class="form-grid"><div class="field"><label>Wartość</label><input class="input" id="measureValue" value="238"></div><div class="field"><label>Jednostka</label><select id="measureUnit"><option>cm</option><option>mm</option><option>m</option><option>m²</option></select></div></div><div class="field"><label>Miejsce</label><input class="input" id="measurePlace" value="Łazienka · ściana północna"></div><div class="field"><label>Notatka</label><input class="input" id="measureText" placeholder="opcjonalnie"></div>`;
+ if(type==='voice')html+=`<div class="record-box"><span class="record-dot"></span><b>Demo notatki głosowej</b><p>Na prawdziwej PWA: jedno dotknięcie → nagranie → transkrypcja → propozycja uporządkowania.</p></div><div class="field"><label>Treść / transkrypcja demo</label><textarea id="voiceText">Klient chce dodatkową półkę przy lewej ścianie. Trzeba potwierdzić zakres i cenę.</textarea></div>`;
+ if(type==='note')html+=`<div class="field"><label>Notatka</label><textarea id="noteText" placeholder="Co trzeba zapamiętać?"></textarea></div>`;
+ if(type==='document')html+=`<div class="field"><label>Typ dokumentu</label><select id="docType"><option>Oferta</option><option>Faktura</option><option>Potwierdzenie</option><option>Inne</option></select></div><div class="field"><label>Plik</label><input class="input" id="docFile" type="file"></div><div class="field"><label>Opis</label><input class="input" id="docText" placeholder="np. akceptacja klienta PDF"></div>`;
+ if(type==='change')html+=`<div class="field"><label>Dodatkowa praca / zmiana</label><textarea id="changeText">Dodatkowa ściana przy wejściu</textarea></div><div class="form-grid"><div class="field"><label>Cena / szacunek €</label><input class="input" id="changePrice" type="number" value="320"></div><div class="field"><label>Akceptacja</label><select id="changeApproval"><option value="missing">Brak potwierdzenia</option><option value="verbal">Ustna</option><option value="message">Wiadomość</option><option value="signed">Podpis</option></select></div></div>`;
+ html+=`<div class="btn-row"><button class="primary-btn" id="saveCapture">Zapisz do zlecenia</button><button class="secondary-btn" data-close="captureModal">Anuluj</button></div>`;document.getElementById('captureBody').innerHTML=html;openModal('captureModal');document.getElementById('saveCapture').onclick=saveCapture;document.querySelectorAll('[data-close="captureModal"]').forEach(b=>b.onclick=()=>closeModal('captureModal'));const pf=document.getElementById('photoFile');if(pf)pf.onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{document.getElementById('previewImage').src=r.result;document.getElementById('filePreview').style.display='block'};r.readAsDataURL(f)}}
+function saveCapture(){const jid=document.getElementById('capJob').value;let e={id:Date.now(),job:jid,type:captureType,time:now(),title:captureLabels[captureType],text:''};const j=state.jobs.find(x=>x.id===jid);if(captureType==='photo'){const cat=document.getElementById('photoCat').value;const desc=document.getElementById('photoText').value||'Zdjęcie z budowy';e.title=`Zdjęcie · ${cat}`;e.text=desc}
+ if(captureType==='measurement'){const v=document.getElementById('measureValue').value,u=document.getElementById('measureUnit').value,p=document.getElementById('measurePlace').value,n=document.getElementById('measureText').value;e.title=`Pomiar · ${v} ${u}`;e.text=`${p}${n?' · '+n:''}`}
+ if(captureType==='voice'){e.title='Notatka głosowa · transkrypcja';e.text=document.getElementById('voiceText').value}
+ if(captureType==='note'){e.title='Notatka';e.text=document.getElementById('noteText').value||'Krótka notatka z pracy.'}
+ if(captureType==='document'){const f=document.getElementById('docFile').files[0];e.title=`Dokument · ${document.getElementById('docType').value}`;e.text=f?`${f.name} · ${document.getElementById('docText').value}`:(document.getElementById('docText').value||'Dokument zapisany w zleceniu')}
+ if(captureType==='change'){const txt=document.getElementById('changeText').value,price=document.getElementById('changePrice').value,ap=document.getElementById('changeApproval').value;e.title='Dodatkowa praca · zmiana';e.text=`${txt} · €${price} · ${ap==='missing'?'BRAK AKCEPTACJI':'akceptacja: '+ap}`;j.approvalMissing=ap==='missing'}
+ state.entries.unshift(e);state.selectedJob=jid;save();closeModal('captureModal');render();toast('Zapis dodany do zlecenia')}
+
+document.addEventListener('click',e=>{const nav=e.target.closest('[data-nav]');if(nav){showView(nav.dataset.nav);if(nav.dataset.nav==='jobs')renderJobs();return}const cap=e.target.closest('[data-capture]');if(cap){captureForm(cap.dataset.capture);return}const action=e.target.closest('[data-action="capture"]');if(action){captureForm('note');return}const close=e.target.closest('[data-close]');if(close){closeModal(close.dataset.close);return}});
+document.getElementById('openGaps').onclick=()=>showView('gaps');document.getElementById('openQuote').onclick=()=>openModal('quoteModal');document.getElementById('openPortal').onclick=()=>openModal('portalModal');document.getElementById('clientPortalDemo').onclick=()=>openModal('portalModal');document.getElementById('newLeadDemo').onclick=()=>openModal('leadModal');document.getElementById('createLead').onclick=()=>{const name=document.getElementById('leadName').value||'Nowy klient';state.leads++;state.jobs.unshift({id:'L-'+String(Date.now()).slice(-4),client:name,name:document.getElementById('leadType').value,address:'Do ustalenia',status:'Lead',amount:0,paid:false,direct:true,next:'Skontaktować się i kwalifikować lead',invoice:'nie',approvalMissing:false,completion:false});save();closeModal('leadModal');render();showView('jobs');toast('Nowy lead trafił do Job OS')};document.getElementById('approveChange').onclick=()=>{const j=state.jobs.find(x=>x.id==='J-041');j.approvalMissing=false;state.entries.unshift({id:Date.now(),job:'J-041',type:'change',title:'Akceptacja dodatkowej pracy',text:'Dodatkowa ściana · €320 · zatwierdzone przez Marcina w demo.',time:now()});save();closeModal('quoteModal');render();toast('Zmiana oznaczona jako zatwierdzona')};document.getElementById('jobSearch').oninput=renderJobs;document.getElementById('filterActive').onclick=()=>{filterActive=!filterActive;document.getElementById('filterActive').classList.toggle('gold',filterActive);renderJobs();bindDynamic()};document.getElementById('resetDemo').onclick=()=>{localStorage.removeItem('marcin-job-os-demo');state=structuredClone(defaultState);render();showView('today');toast('Demo zresetowane')};
+document.querySelectorAll('.device-toggle').forEach(b=>b.onclick=()=>{document.querySelectorAll('.device-toggle').forEach(x=>x.classList.remove('active'));b.classList.add('active');const d=document.getElementById('device');d.classList.remove('landscape','desktop');if(b.dataset.device==='landscape')d.classList.add('landscape');if(b.dataset.device==='desktop')d.classList.add('desktop')});
+document.getElementById('ringEaster').onclick=()=>{easterClicks++;if(easterClicks===1)toast('Złoty pierścień = tylko mały znak rozpoznawczy 😉');if(easterClicks===4){document.documentElement.style.setProperty('--gold','#ead18a');document.documentElement.style.setProperty('--green','#a7cf9e');toast('Easter egg dla fana Śródziemia odblokowany. Bez orków w produkcji.');easterClicks=0}};
+render();
+</script>
+</body>
+</html>
