@@ -51,7 +51,7 @@ export function WorkspaceTopRail({
 
   return (
     <header className={styles.chrome} data-viewport={viewportMode}>
-      <nav className={styles.rail} aria-label={`${viewportMode === "tablet" ? "Tablet" : "Desktop"} Explore modules`}>
+      <nav className={styles.rail} aria-label={`${viewportMode === "tablet" ? "Tablet" : "Desktop"} Explore journey`}>
         {STAGES.map((candidate, index) => (
           <button
             key={candidate.id}
