@@ -260,7 +260,7 @@ export default function NasenwandFlagshipExplorer() {
         <header className={styles.topbar}>
           <div className={styles.headerIdentity}>
             <a href="/" className={styles.brand} aria-label="Vertical Moment home">
-              <span className={`vm-static-logo ${styles.brandLogo}`} aria-hidden="true" />
+              <span className={`vm-static-logo vm-static-logo--technical ${styles.brandLogo}`} aria-hidden="true" />
               <span>Vertical Moment</span>
             </a>
             <nav className={styles.primaryNav} aria-label="Primary navigation">

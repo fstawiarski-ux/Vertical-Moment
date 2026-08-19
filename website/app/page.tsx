@@ -12,13 +12,13 @@ export const metadata: Metadata = {
     url: '/',
     type: 'website',
     siteName: 'Vertical Moment',
-    images: ['/photography/banners/og-1200x630-sample.webp'],
+    images: ['/brand/official-v2/social/forest-og-1200x630.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Vertical Moment — Climbing photography, Vienna',
     description: 'Climbing and outdoor photography from Vienna.',
-    images: ['/photography/banners/og-1200x630-sample.webp'],
+    images: ['/brand/official-v2/social/forest-og-1200x630.png'],
   },
 };
 

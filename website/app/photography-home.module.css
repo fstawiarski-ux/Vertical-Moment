@@ -178,7 +178,7 @@
   width: 52px;
   height: 52px;
   flex-shrink: 0;
-  background-image: var(--vm-mono, url('/brand/monogram/vm-mono-forest-gold.webp'));
+  background-image: var(--vm-mono, url('/brand/official-v2/marks/forest-green-vm.webp'));
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

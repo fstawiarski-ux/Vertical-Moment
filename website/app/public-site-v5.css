@@ -95,7 +95,11 @@ h2{font-size:clamp(38px,5vw,66px);line-height:1.02;margin-bottom:0}
   width:34px;height:34px;border:1px solid var(--line-strong);display:grid;place-items:center;
   font-family:var(--serif);font-size:15px;letter-spacing:-.08em;color:var(--accent)
 }
-.public-site-v5-root .brand-mark{width:34px;height:34px;background:none}
+.public-site-v5-root .brand-mark{
+  width:34px;height:34px;border:0;background:url('/brand/official-v2/marks/forest-green-vm.webp') center/contain no-repeat;
+  font-size:0;
+}
+html[data-theme="dark"] .public-site-v5-root .brand-mark{background-image:url('/brand/official-v2/utility/vm-mono-white.svg')}
 .public-site-v5-root .brand{gap:12px}
 .brand-copy{display:flex;flex-direction:column;line-height:1.12}
 .brand-copy strong{

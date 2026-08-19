@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { OfficialMark } from "@/src/brand/OfficialMark";
 
 export function SiteNav({ who: _who }: { who?: string | null }) {
   const path = usePathname();
@@ -36,7 +37,13 @@ export function SiteNav({ who: _who }: { who?: string | null }) {
     <header className="site-head">
       <div className="wrap row desktop-nav">
         <Link href="/" className="brand">
-          <span className="brand-mark" aria-hidden="true" />
+          <OfficialMark
+            variant={dark ? "utility-vm" : "forest-green-vm"}
+            mode={dark ? "dark" : "light"}
+            size={32}
+            decorative
+            priority
+          />
           <span className="serif" style={{ fontWeight: 600, fontSize: 15 }}>VERTICAL MOMENT COLLECTIVE</span>
         </Link>
         <nav className="nav">

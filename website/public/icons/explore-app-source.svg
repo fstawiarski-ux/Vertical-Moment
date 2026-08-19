@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
-  <title id="title">Vertical Moment Explore Lab</title>
-  <rect width="512" height="512" rx="112" fill="#0d1510"/>
-  <path d="M146 96 286 126 246 420 174 386Z" fill="#d2bd87"/>
-  <path d="M286 126 374 166 320 390 246 420Z" fill="#f2eee1" opacity=".92"/>
-  <circle cx="319" cy="226" r="32" fill="#0d1510"/>
-  <path d="m309 226 8 8 15-19" fill="none" stroke="#d2bd87" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>

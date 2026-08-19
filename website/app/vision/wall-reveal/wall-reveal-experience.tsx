@@ -240,7 +240,7 @@ export default function WallRevealExperience() {
 
       <header className={styles.header}>
         <a className={styles.brand} href="/" aria-label="Vertical Moment home">
-          <span className={`vm-static-logo ${styles.mark}`} aria-hidden="true" />
+          <span className={`vm-static-logo vm-static-logo--digital ${styles.mark}`} aria-hidden="true" />
           <span>Vertical Moment</span>
         </a>
         <div className={styles.headerActions}>

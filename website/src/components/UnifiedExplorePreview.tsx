@@ -3,6 +3,7 @@
 import { lazy, Suspense, useCallback, useEffect, useMemo, useState } from "react";
 import { Box3DModel } from "./boxes/Box3DModel";
 import { IntroScrubSequence } from "./animation/IntroScrubSequence";
+import { OfficialMark } from "../brand/OfficialMark";
 import { prefersReducedMotion } from "../core/introPreferences";
 import type {
   ExploreContentBox,
@@ -202,7 +203,7 @@ export function UnifiedExplorePreview({ registry }: { registry: ExploreContentRe
         <section className={styles.unifiedShell} aria-label="Unified Explore workspace">
           <header className={styles.header}>
             <div className={styles.wordmark}>
-              <span className={styles.mark} aria-hidden="true" />
+              <OfficialMark variant="iridescent-vm" size={34} decorative priority />
               <div><small>Vertical Moment</small><strong>Explore / Unified</strong></div>
             </div>
             <div className={styles.context}>

@@ -13,6 +13,7 @@ import { StationPeek } from "./components/shell/StationPeek";
 import { WorkspaceTopRail } from "./components/shell/WorkspaceTopRail";
 import { DesktopShell, TabletShell } from "./components/shell/WorkspaceShells";
 import { UnifiedExplorePreview } from "./components/UnifiedExplorePreview";
+import { OfficialMark } from "./brand/OfficialMark";
 import { deepLinkFor, parseDeepLink, resolveDeepLink, writeDeepLinkToUrl } from "./core/deepLink";
 import { hasSeenIntro, prefersReducedMotion, rememberIntroSeen } from "./core/introPreferences";
 import { LayoutProvider, useLayoutState } from "./core/layoutState";
@@ -771,7 +772,14 @@ export default function ExploreApp({ initialRegistry }: { initialRegistry?: Expl
   }, []);
 
   if (error) return <main className={styles.loading}><h1>Workspace could not start.</h1><p>{error}</p></main>;
-  if (!registry || !initialState) return <main className={styles.loading}><span /><p>Preparing workspace…</p></main>;
+  if (!registry || !initialState) {
+    return (
+      <main className={styles.loading}>
+        <OfficialMark variant="iridescent-vm" size={72} animated decorative priority />
+        <p>Preparing workspace…</p>
+      </main>
+    );
+  }
 
   return (
     <>
