@@ -47,6 +47,8 @@ const serwist = new Serwist({
       /^sector$/,
       /^intro$/,
       /^mode$/,
+      /^pilot$/,
+      /^regionPreview$/,
     ],
   },
   runtimeCaching: [

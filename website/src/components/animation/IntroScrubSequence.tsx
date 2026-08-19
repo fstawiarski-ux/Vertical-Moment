@@ -50,7 +50,7 @@ function wheelDeltaInPixels(event: ReactWheelEvent<HTMLDivElement>) {
 
 export type UnlockReason = "completed" | "skipped" | "static";
 
-export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockScrub = false, allowPostUnlockStationRequests = false, onFirstMove }: {
+export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockScrub = false, allowPostUnlockStationRequests = false, onFirstMove, posterOnly = false, label = "Wachau approach scrub sequence", notice }: {
   sequence: ScrollScrubSequenceAsset;
   /** null while the visitor's intro preference is still being read. */
   mode: IntroMode | null;
@@ -61,6 +61,11 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
   allowPostUnlockStationRequests?: boolean;
   /** Fires once on the first meaningful scrub, drag, button or slider move. */
   onFirstMove?: () => void;
+  /** Assembly pilots without their own scrub proxies show only the pilot poster. */
+  posterOnly?: boolean;
+  label?: string;
+  /** Visible provenance boundary for borrowed private-preview media. */
+  notice?: string;
 }) {
   const videoRefs = useRef<Array<HTMLVideoElement | null>>([]);
   const dragRef = useRef<DragState | null>(null);
@@ -300,11 +305,11 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
       className={styles.sequence}
       data-unlocked={unlocked ? "true" : "false"}
       data-scrub-live={allowPostUnlockScrub ? "true" : "false"}
-      aria-label="Wachau approach scrub sequence"
+      aria-label={label}
     >
       <div className={styles.media} aria-hidden="true">
         <img className={styles.poster} src={sequence.poster} alt="" />
-        {sequence.chapters.map((chapter, index) => loaded.has(index) && (
+        {!posterOnly && sequence.chapters.map((chapter, index) => loaded.has(index) && (
           <video
             key={chapter.id}
             ref={(node) => { videoRefs.current[index] = node; }}
@@ -320,6 +325,8 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
         ))}
         <div className={styles.veil} />
       </div>
+
+      {notice && <p className={styles.previewNotice} role="status">{notice}</p>}
 
       <div
         className={styles.gestureLayer}

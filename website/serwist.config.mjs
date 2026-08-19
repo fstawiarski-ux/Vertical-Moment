@@ -11,6 +11,24 @@ const registryRevision = createHash("sha256")
   .update(await readFile(new URL("./public/explore-content.json", import.meta.url)))
   .digest("hex")
   .slice(0, 16);
+const pilotCatalog = JSON.parse(await readFile(new URL("./public/explore/pilots/index.json", import.meta.url), "utf8"));
+const pilotFiles = [
+  "explore/pilots/index.json",
+  ...pilotCatalog.pilots.map((pilot) => pilot.manifest.replace(/^\//, "")),
+];
+const pilotPrecacheEntries = await Promise.all(pilotFiles.map(async (file) => ({
+  url: `/${file}`,
+  revision: createHash("sha256").update(await readFile(new URL(`./public/${file}`, import.meta.url))).digest("hex").slice(0, 16),
+})));
+const regionCatalog = JSON.parse(await readFile(new URL("./public/explore/regions/index.json", import.meta.url), "utf8"));
+const regionFiles = [
+  "explore/regions/index.json",
+  ...regionCatalog.regions.map((region) => region.manifest.replace(/^\//, "")),
+];
+const regionPrecacheEntries = await Promise.all(regionFiles.map(async (file) => ({
+  url: `/${file}`,
+  revision: createHash("sha256").update(await readFile(new URL(`./public/${file}`, import.meta.url))).digest("hex").slice(0, 16),
+})));
 
 export default await serwist({
   swSrc: "src/pwa/service-worker.ts",
@@ -29,6 +47,8 @@ export default await serwist({
     { url: "/explore-app/field", revision: "field-ops-shell-v1" },
     { url: "/offline", revision: "offline-v1" },
     { url: "/explore-content.json", revision: `registry-v${registryRevision}` },
+    ...pilotPrecacheEntries,
+    ...regionPrecacheEntries,
     ...atlasDataFiles.map((file) => ({ url: `/data/v1/${file}`, revision: atlasRevision })),
     { url: "/manifest.webmanifest", revision: "manifest-v3-brand-v2" },
     { url: "/brand/official-v2/icons/forest-180.png", revision: "official-brand-v2" },
@@ -41,6 +61,9 @@ export default await serwist({
     { url: "/brand/official-v2/utility/vm-mono-white.svg", revision: "official-brand-v2" },
     { url: "/vendor/leaflet/leaflet.js", revision: "leaflet-v1" },
     { url: "/vendor/leaflet/leaflet.css", revision: "leaflet-v1" },
+    { url: "/vendor/model-viewer/draco/draco_decoder.js", revision: "three-0.183.2" },
+    { url: "/vendor/model-viewer/draco/draco_decoder.wasm", revision: "three-0.183.2" },
+    { url: "/vendor/model-viewer/draco/draco_wasm_wrapper.js", revision: "three-0.183.2" },
   ],
   globIgnores: [
     "**/node_modules/**/*",

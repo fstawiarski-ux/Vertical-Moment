@@ -11,12 +11,15 @@ export function Box3DModel({
   poster,
   isActive,
   intentOnly = false,
+  label = "climbing wall",
 }: {
   model: ExploreModelAsset;
   poster?: ExploreImageAsset;
   isActive: boolean;
   /** Keep heavy geometry behind an explicit user action in focused previews. */
   intentOnly?: boolean;
+  /** Human-readable crag name used by accessible copy and load errors. */
+  label?: string;
 }) {
   const rootRef = useRef<HTMLDivElement>(null);
   const modelRef = useRef<HTMLElement | null>(null);
@@ -40,8 +43,17 @@ export function Box3DModel({
   useEffect(() => {
     if (!shouldLoad || moduleReady) return;
     let cancelled = false;
+    const decoderPath = "/vendor/model-viewer/draco/";
+    const viewerGlobal = globalThis as typeof globalThis & { ModelViewerElement?: { dracoDecoderLocation?: string } };
+    if (viewerGlobal.ModelViewerElement) viewerGlobal.ModelViewerElement.dracoDecoderLocation = decoderPath;
+    else viewerGlobal.ModelViewerElement = { dracoDecoderLocation: decoderPath };
     import("@google/model-viewer")
-      .then(() => { if (!cancelled) setModuleReady(true); })
+      .then(({ ModelViewerElement }) => {
+        ModelViewerElement.dracoDecoderLocation = decoderPath;
+        const registeredViewer = customElements.get("model-viewer") as typeof ModelViewerElement | undefined;
+        if (registeredViewer) registeredViewer.dracoDecoderLocation = decoderPath;
+        if (!cancelled) setModuleReady(true);
+      })
       .catch(() => { if (!cancelled) setError("The 3D viewer could not start."); });
     return () => { cancelled = true; };
   }, [moduleReady, shouldLoad]);
@@ -50,14 +62,14 @@ export function Box3DModel({
     const node = modelRef.current;
     if (!node || !moduleReady) return;
     const onLoad = () => { setLoaded(true); setProgress(1); };
-    const onError = () => setError("The Nasenwand model could not be loaded.");
+    const onError = () => setError(`The ${label} model could not be loaded.`);
     const onProgress = (event: Event) => setProgress((event as ModelProgressEvent).detail?.totalProgress ?? 0);
     node.addEventListener("load", onLoad);
     node.addEventListener("error", onError);
     node.addEventListener("progress", onProgress);
     node.setAttribute("src", model.src);
     if (poster) node.setAttribute("poster", poster.src);
-    node.setAttribute("alt", "Provisional 3D model of the Nasenwand climbing wall");
+    node.setAttribute("alt", `Provisional 3D model of ${label}`);
     node.setAttribute("camera-controls", "");
     node.setAttribute("touch-action", "pan-y");
     node.setAttribute("shadow-intensity", "1");
@@ -70,7 +82,7 @@ export function Box3DModel({
       node.removeEventListener("error", onError);
       node.removeEventListener("progress", onProgress);
     };
-  }, [model.src, moduleReady, poster]);
+  }, [label, model.src, moduleReady, poster]);
 
   return (
     <div ref={rootRef} className={styles.viewer}>
@@ -86,7 +98,7 @@ export function Box3DModel({
         ref: (node: HTMLElement | null) => { modelRef.current = node; },
         src: model.src,
         poster: poster?.src,
-        alt: "Provisional 3D model of the Nasenwand climbing wall",
+        alt: `Provisional 3D model of ${label}`,
         "camera-controls": true,
         "touch-action": "pan-y",
         "shadow-intensity": "1",

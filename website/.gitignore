@@ -29,6 +29,10 @@ out/
 # predev/prebuild — the generated tree, not a second copy of the dataset.
 public/data/v1/
 
+# Generated from the pinned Three.js dependency by scripts/sync-data.mjs so
+# Draco-compressed GLBs remain same-origin and offline-capable.
+public/vendor/model-viewer/draco/
+
 # OpenNext
 .open-next
 

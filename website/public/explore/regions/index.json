@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "regions": [
+    { "id": "helenental", "manifest": "/explore/regions/helenental/region.json" },
+    { "id": "wachau", "manifest": "/explore/regions/wachau/region.json" }
+  ]
+}

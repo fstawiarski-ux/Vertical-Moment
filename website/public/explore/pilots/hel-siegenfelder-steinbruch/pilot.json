@@ -1,0 +1,36 @@
+{
+  "$schema": "../pilot.schema.json",
+  "schemaVersion": 1,
+  "id": "hel-siegenfelder-steinbruch",
+  "label": "Pilot 008 — Helenental / Siegenfelder Steinbruch — LOCAL MOTION PROXY",
+  "releaseState": "assembly",
+  "identity": { "region": "Helenental", "regionSlug": "helenental", "crag": "Siegenfelder Steinbruch", "cragSlug": "siegenfelder-steinbruch", "sector": "Siegenfelder Steinbruch", "canonicalCragId": null },
+  "provenance": { "notionUrl": "https://app.notion.com/p/3c121413535181faa0b1eadd3e787020", "dataPath": "database/api/v1/crags/helenental/siegenfelder-steinbruch.json", "confidence": "imported-unverified", "lastReviewed": "2026-08-19" },
+  "summary": { "routeCount": 12, "gradeSystem": "UIAA", "gradeRange": null, "discipline": "sport" },
+  "journey": {
+    "posterSlot": "hero",
+    "chapters": [
+      { "id": "region-rock", "from": "Region", "to": "Rock", "asset": "scrubRegionRock", "duration": 3, "direction": "reverse", "objectPosition": "52% center" },
+      { "id": "rock-sector", "from": "Rock", "to": "Sector", "asset": "scrubRockSector", "duration": 5.75, "direction": "forward", "objectPosition": "50% center" },
+      { "id": "sector-topo", "from": "Sector", "to": "Topo", "asset": "scrubSectorTopo", "duration": 3.666667, "direction": "forward", "objectPosition": "50% center" }
+    ]
+  },
+  "modules": {
+    "locator": { "title": "Helenental Regional Locator", "mobileLabel": "Atlas", "description": "Northern-spoke context linking Siegenfelder Steinbruch back to Breite Wand and the central cluster.", "primarySlots": [] },
+    "panorama": { "title": "Steinbruch Context", "mobileLabel": "Context", "description": "Reserved for an approved quarry poster or panorama; regional motion is a labelled proxy.", "primarySlots": ["panoramaPoster", "panorama360"] },
+    "routes": { "title": "Steinbruch Routes", "mobileLabel": "Routes", "description": "Twelve atlas routes remain visibly unreconciled with the ten-route supplied topo.", "primarySlots": ["hero"] },
+    "wall": { "title": "Steinbruch Wall Reveal", "mobileLabel": "Wall", "description": "Photo, topo and reconstruction evidence exists outside the PWA; no web derivative is promoted here.", "primarySlots": ["hero", "spatial"] },
+    "topo": { "title": "Steinbruch Topo + 3D", "mobileLabel": "Topo", "description": "The topo count discrepancy and browser-ready GLB remain explicit review gates.", "primarySlots": ["topo", "model"] }
+  },
+  "assets": {
+    "hero": { "kind": "image", "status": "missing", "targetPath": "/explore/pilots/hel-siegenfelder-steinbruch/hero/hero-1280.webp", "src": null, "alt": "Siegenfelder Steinbruch hero photograph" },
+    "spatial": { "kind": "image", "status": "missing", "targetPath": "/explore/pilots/hel-siegenfelder-steinbruch/wall/spatial-1280.webp", "src": null, "alt": "Siegenfelder Steinbruch spatial wall study" },
+    "topo": { "kind": "image", "status": "review", "targetPath": "/explore/pilots/hel-siegenfelder-steinbruch/topo/topo-1280.webp", "src": null, "alt": "Siegenfelder Steinbruch topo", "note": "A source topo exists, but route-count reconciliation and an approved web derivative are missing." },
+    "model": { "kind": "model", "status": "missing", "targetPath": "/explore/pilots/hel-siegenfelder-steinbruch/model/model.glb", "src": null, "alt": "Siegenfelder Steinbruch 3D model" },
+    "panoramaPoster": { "kind": "panorama", "status": "missing", "targetPath": "/explore/pilots/hel-siegenfelder-steinbruch/panorama/poster-1600.webp", "src": null, "alt": "Helenental panorama near Siegenfelder Steinbruch" },
+    "panorama360": { "kind": "link", "status": "missing", "targetPath": "/explore/pilots/hel-siegenfelder-steinbruch/panorama/360-link.txt", "src": null, "alt": "Interactive 360 view of Siegenfelder Steinbruch" },
+    "scrubRegionRock": { "kind": "video", "status": "missing", "targetPath": "/explore/pilots/hel-siegenfelder-steinbruch/scrub/region-rock.mp4", "src": null, "alt": "Test-only Nasenwand Region to Rock proxy for Siegenfelder Steinbruch", "note": "No Steinbruch Region-to-Rock derivative is verified; private proxy only.", "preview": { "adapter": "same-origin", "src": "/photography/explore-app/scrub/region-rock-pan-a.mp4", "provenance": "Nasenwand reference media; not Steinbruch evidence", "verifiedForPilot": false, "replaceable": true } },
+    "scrubRockSector": { "kind": "video", "status": "missing", "targetPath": "/explore/pilots/hel-siegenfelder-steinbruch/scrub/rock-sector.mp4", "src": null, "alt": "Test-only Nasenwand Rock to Sector proxy for Siegenfelder Steinbruch", "note": "No Steinbruch Rock-to-Sector derivative is verified; private proxy only.", "preview": { "adapter": "same-origin", "src": "/photography/nasenwand/media/close-wall-loop-lite.mp4", "provenance": "Nasenwand reference media; not Steinbruch evidence", "verifiedForPilot": false, "replaceable": true } },
+    "scrubSectorTopo": { "kind": "video", "status": "missing", "targetPath": "/explore/pilots/hel-siegenfelder-steinbruch/scrub/sector-topo.mp4", "src": null, "alt": "Test-only Nasenwand Sector to Topo proxy for Siegenfelder Steinbruch", "note": "No Steinbruch Sector-to-Topo derivative is verified; private proxy only.", "preview": { "adapter": "same-origin", "src": "/photography/nasenwand/media/nasenwand-orbit-scrub-allkey.mp4", "provenance": "Nasenwand reference media; not Steinbruch evidence", "verifiedForPilot": false, "replaceable": true } }
+  }
+}

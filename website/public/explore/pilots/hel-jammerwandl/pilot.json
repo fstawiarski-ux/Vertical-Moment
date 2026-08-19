@@ -1,0 +1,36 @@
+{
+  "$schema": "../pilot.schema.json",
+  "schemaVersion": 1,
+  "id": "hel-jammerwandl",
+  "label": "Pilot 005 — Helenental / Jammerwandl",
+  "releaseState": "assembly",
+  "identity": { "region": "Helenental", "regionSlug": "helenental", "crag": "Jammerwandl", "cragSlug": "jammerwandl", "sector": "Jammerwandl", "canonicalCragId": "hel-jammerwandl" },
+  "provenance": { "notionUrl": "https://www.notion.so/3c12141353518160884ec0116bc6bea7", "dataPath": "database/api/v1/crags/helenental/jammerwandl.json", "confidence": "imported-unverified", "lastReviewed": "2026-08-19" },
+  "summary": { "routeCount": 37, "gradeSystem": "UIAA", "gradeRange": "4 to 9-", "discipline": "sport" },
+  "journey": {
+    "posterSlot": "hero",
+    "chapters": [
+      { "id": "region-rock", "from": "Region", "to": "Rock", "asset": "scrubRegionRock", "duration": null, "direction": "forward", "objectPosition": "50% center" },
+      { "id": "rock-sector", "from": "Rock", "to": "Sector", "asset": "scrubRockSector", "duration": null, "direction": "forward", "objectPosition": "50% center" },
+      { "id": "sector-topo", "from": "Sector", "to": "Topo", "asset": "scrubSectorTopo", "duration": null, "direction": "forward", "objectPosition": "50% center" }
+    ]
+  },
+  "modules": {
+    "locator": { "title": "Helenental Locator", "mobileLabel": "Atlas", "description": "Shared atlas context for Helenental and Jammerwandl.", "primarySlots": [] },
+    "panorama": { "title": "Helenental Panorama", "mobileLabel": "360", "description": "Reserved panorama and 360 workspace for the incoming pilot media.", "primarySlots": ["panoramaPoster", "panorama360"] },
+    "routes": { "title": "Jammerwandl Routes", "mobileLabel": "Routes", "description": "Canonical imported route facts stay visible while wall media and geometry await review.", "primarySlots": ["hero"] },
+    "wall": { "title": "Jammerwandl Wall Reveal", "mobileLabel": "Wall", "description": "The photo and spatial stages have stable upload destinations but no fake placeholder files.", "primarySlots": ["hero", "spatial"] },
+    "topo": { "title": "Jammerwandl Topo + 3D", "mobileLabel": "Topo", "description": "The compact RealityScan derivative can be tested now; the topo remains an explicit review slot.", "primarySlots": ["topo", "model"] }
+  },
+  "assets": {
+    "hero": { "kind": "image", "status": "missing", "targetPath": "/explore/pilots/hel-jammerwandl/hero/hero-1280.webp", "src": null, "alt": "Jammerwandl wall photograph", "note": "Upload an optimized derivative when the visual treatment is approved." },
+    "spatial": { "kind": "image", "status": "missing", "targetPath": "/explore/pilots/hel-jammerwandl/wall/spatial-1280.webp", "src": null, "alt": "Jammerwandl spatial wall study" },
+    "topo": { "kind": "image", "status": "review", "targetPath": "/explore/pilots/hel-jammerwandl/topo/topo-1280.webp", "src": null, "alt": "Jammerwandl topo", "note": "Source work exists, but no owner-reviewed web derivative is registered yet." },
+    "model": { "kind": "model", "status": "ready", "targetPath": "/explore/pilots/hel-jammerwandl/model/model.glb", "src": "/models/jammerwandl-web-v1.glb", "alt": "Provisional 3D scan of Jammerwandl", "bytes": 830224, "note": "Web-ready demo derivative; production delivery can later move to R2." },
+    "panoramaPoster": { "kind": "panorama", "status": "missing", "targetPath": "/explore/pilots/hel-jammerwandl/panorama/poster-1600.webp", "src": null, "alt": "Helenental regional panorama" },
+    "panorama360": { "kind": "link", "status": "missing", "targetPath": "/explore/pilots/hel-jammerwandl/panorama/360-link.txt", "src": null, "alt": "Interactive 360 view of Jammerwandl" },
+    "scrubRegionRock": { "kind": "video", "status": "missing", "targetPath": "/explore/pilots/hel-jammerwandl/scrub/region-rock.mp4", "src": null, "alt": "Journey from Helenental to Jammerwandl" },
+    "scrubRockSector": { "kind": "video", "status": "missing", "targetPath": "/explore/pilots/hel-jammerwandl/scrub/rock-sector.mp4", "src": null, "alt": "Journey from Jammerwandl to the sector" },
+    "scrubSectorTopo": { "kind": "video", "status": "missing", "targetPath": "/explore/pilots/hel-jammerwandl/scrub/sector-topo.mp4", "src": null, "alt": "Journey from the sector to the topo" }
+  }
+}
