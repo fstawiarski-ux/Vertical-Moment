@@ -8,6 +8,8 @@
     { "id": "hel-engelstein", "cragSlug": "engelstein", "manifest": "/explore/pilots/hel-engelstein/pilot.json", "releaseState": "assembly" },
     { "id": "hel-siegenfelder-steinbruch", "cragSlug": "siegenfelder-steinbruch", "manifest": "/explore/pilots/hel-siegenfelder-steinbruch/pilot.json", "releaseState": "assembly" },
     { "id": "hel-breite-wand", "cragSlug": "breite-wand", "manifest": "/explore/pilots/hel-breite-wand/pilot.json", "releaseState": "assembly" },
-    { "id": "wachau-duernstein", "cragSlug": "duernstein", "manifest": "/explore/pilots/wachau-duernstein/pilot.json", "releaseState": "assembly" }
+    { "id": "wachau-duernstein", "cragSlug": "duernstein", "manifest": "/explore/pilots/wachau-duernstein/pilot.json", "releaseState": "assembly" },
+    { "id": "wachau-west-provisional", "cragSlug": "wachau-west-provisional", "manifest": "/explore/pilots/wachau-west-provisional/pilot.json", "releaseState": "assembly" },
+    { "id": "arnstein", "cragSlug": "arnstein", "manifest": "/explore/pilots/arnstein/pilot.json", "releaseState": "assembly" }
   ]
 }

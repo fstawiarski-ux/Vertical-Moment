@@ -37,7 +37,7 @@ export function applyPilotToRegistry(
     };
   });
   const posterSlot = pilot.assets[pilot.journey.posterSlot];
-  const poster = posterSlot?.status === "ready" && posterSlot.src ? posterSlot.src : registry.background.src;
+  const poster = posterSlot ? pilotAssetPreviewSource(posterSlot) ?? registry.background.src : registry.background.src;
   const journeyPreviewable = pilotJourneyPreviewable(pilot);
   const introScrubSequence = journeyPreviewable
     ? {
