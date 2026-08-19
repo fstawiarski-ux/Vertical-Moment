@@ -148,18 +148,29 @@ async function assertStation(page, viewport, station) {
   const activeArticle = page.locator(`[data-shell="${shellName}"] article[data-box-id="${station.moduleId}"]`);
   assert(await activeArticle.getAttribute("data-module-chrome") === "minimal", `${viewport.name}/${station.id}: minimal module chrome contract missing`);
   assert(await activeArticle.locator('[data-module-handle="true"]').isHidden(), `${viewport.name}/${station.id}: upper-left drag ornament is visible`);
-  assert(await activeArticle.locator('[data-module-heading="true"]').isHidden(), `${viewport.name}/${station.id}: upper-left module description is visible`);
+  const headingVisible = await activeArticle.locator('[data-module-heading="true"]').isVisible();
+  if (viewport.mode === "desktop") {
+    assert(!headingVisible, `${viewport.name}/${station.id}: upper-left module description is visible`);
+  } else {
+    assert(headingVisible, `${viewport.name}/${station.id}: compact touch module heading is missing`);
+  }
   const controlsState = await activeArticle.evaluate((node) => {
     const controls = node.querySelector('[data-module-window-controls="true"]');
     if (!controls) return null;
     const style = getComputedStyle(controls);
     return { display: style.display, opacity: style.opacity, pointerEvents: style.pointerEvents };
   });
-  const controlsRevealed = await activeArticle.getAttribute("data-controls-visible") === "true";
-  assert(
-    controlsState && (controlsRevealed || controlsState.display === "none" || controlsState.opacity === "0" || controlsState.pointerEvents === "none"),
-    `${viewport.name}/${station.id}: normal window controls are not interaction-revealed`,
-  );
+  if (viewport.mode === "desktop") {
+    assert(
+      controlsState && controlsState.display !== "none" && controlsState.pointerEvents === "auto",
+      `${viewport.name}/${station.id}: desktop window controls are not available`,
+    );
+  } else {
+    assert(
+      controlsState && controlsState.display !== "none" && controlsState.pointerEvents === "auto",
+      `${viewport.name}/${station.id}: touch window controls are not available`,
+    );
+  }
 
   if (viewport.mode !== "mobile") {
     await activeArticle.hover();
