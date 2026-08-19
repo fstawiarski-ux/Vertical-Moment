@@ -28,6 +28,37 @@ type ResizePoint = Pick<PointerEvent, "pointerId" | "clientX" | "clientY">;
 const BOX_GAP = 10;
 const clamp = (value: number, min: number, max: number) => Math.min(max, Math.max(min, value));
 
+type WindowControlIconName = "restore" | "minimize" | "expand" | "fullscreen";
+
+function WindowControlIcon({ name }: { name: WindowControlIconName }) {
+  if (name === "restore") {
+    return (
+      <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+        <path d="M12 5v14M5 12h14" />
+      </svg>
+    );
+  }
+  if (name === "minimize") {
+    return (
+      <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+        <path d="M5 12h14" />
+      </svg>
+    );
+  }
+  if (name === "expand") {
+    return (
+      <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+        <rect x="5" y="5" width="14" height="14" rx="1.5" />
+      </svg>
+    );
+  }
+  return (
+    <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M9 5H5v4M15 5h4v4M9 19H5v-4M15 19h4v-4" />
+    </svg>
+  );
+}
+
 const resizeClass: Record<ResizeDirection, string> = {
   n: styles.resizeN,
   ne: styles.resizeNe,
@@ -52,11 +83,30 @@ export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
   const resizeRef = useRef<ResizeState | null>(null);
   const boxesRef = useRef(boxes);
   const [dragging, setDragging] = useState(false);
+  const [controlsVisible, setControlsVisible] = useState(false);
+  const controlsHideRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const canFreeform = viewportMode === "desktop" && box.mode === "normal";
 
   useEffect(() => { boxesRef.current = boxes; }, [boxes]);
 
-  const focus = () => dispatch({ type: "SET_ACTIVE_BOX", id: box.id });
+  const revealControls = () => {
+    if (controlsHideRef.current) clearTimeout(controlsHideRef.current);
+    setControlsVisible(true);
+  };
+
+  const hideControlsSoon = () => {
+    if (controlsHideRef.current) clearTimeout(controlsHideRef.current);
+    controlsHideRef.current = setTimeout(() => setControlsVisible(false), 1600);
+  };
+
+  useEffect(() => () => {
+    if (controlsHideRef.current) clearTimeout(controlsHideRef.current);
+  }, []);
+
+  const focus = () => {
+    dispatch({ type: "SET_ACTIVE_BOX", id: box.id });
+    revealControls();
+  };
   const setMode = (mode: BoxState["mode"]) => {
     dispatch({ type: "SET_BOX_MODE", id: box.id, mode });
   };
@@ -243,18 +293,25 @@ export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
       data-mode={box.mode}
       data-box-id={box.id}
       data-module-chrome="minimal"
+      data-controls-visible={controlsVisible ? "true" : "false"}
       aria-label={`${title} module`}
       style={inlineStyle}
       onPointerDown={focus}
+      onPointerUp={hideControlsSoon}
+      onPointerCancel={hideControlsSoon}
+      onMouseEnter={revealControls}
+      onMouseLeave={hideControlsSoon}
+      onFocusCapture={revealControls}
+      onBlurCapture={hideControlsSoon}
     >
       <div className={styles.chrome}>
         <div data-drag-surface="true" className={styles.header} onPointerDown={beginDrag} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag}>
           <span data-module-handle="true" className={styles.handle} aria-hidden="true"><i /><i /><i /><i /><i /><i /></span>
           <div data-module-heading="true" className={styles.heading}><small>{eyebrow}</small><h2>{title}</h2></div>
           <div data-module-window-controls="true" className={styles.windowControls} aria-label={`${title} window controls`}>
-            <button type="button" onClick={() => setMode(box.mode === "minimized" ? "normal" : "minimized")} aria-label={box.mode === "minimized" ? `Restore ${title}` : `Minimize ${title}`} title={box.mode === "minimized" ? `Restore ${title}` : `Minimize ${title}`}>âˆ’</button>
-            <button type="button" onClick={() => setMode(box.mode === "expanded" ? "normal" : "expanded")} aria-label={box.mode === "expanded" ? `Exit expanded view ${title}` : box.mode === "fullscreen" ? `Return to expanded view ${title}` : `Expand ${title}`} title={box.mode === "expanded" ? `Exit expanded view ${title}` : `Expand ${title}`}>â–¡</button>
-            <button type="button" onClick={() => setMode(box.mode === "fullscreen" ? "normal" : "fullscreen")} aria-label={box.mode === "fullscreen" ? `Exit full screen ${title}` : `Open ${title} full screen`} title={box.mode === "fullscreen" ? `Exit full screen ${title}` : `Open ${title} full screen`}>â›¶</button>
+            <button type="button" onClick={() => setMode(box.mode === "minimized" ? "normal" : "minimized")} aria-label={box.mode === "minimized" ? `Restore ${title}` : `Minimize ${title}`} title={box.mode === "minimized" ? `Restore ${title}` : `Minimize ${title}`}><WindowControlIcon name={box.mode === "minimized" ? "restore" : "minimize"} /></button>
+            <button type="button" onClick={() => setMode(box.mode === "expanded" ? "normal" : "expanded")} aria-label={box.mode === "expanded" ? `Exit expanded view ${title}` : box.mode === "fullscreen" ? `Return to expanded view ${title}` : `Expand ${title}`} title={box.mode === "expanded" ? `Exit expanded view ${title}` : box.mode === "fullscreen" ? `Return to expanded view ${title}` : `Expand ${title}`}><WindowControlIcon name="expand" /></button>
+            <button type="button" onClick={() => setMode(box.mode === "fullscreen" ? "normal" : "fullscreen")} aria-label={box.mode === "fullscreen" ? `Exit full screen ${title}` : `Open ${title} full screen`} title={box.mode === "fullscreen" ? `Exit full screen ${title}` : `Open ${title} full screen`}><WindowControlIcon name="fullscreen" /></button>
           </div>
         </div>
         {box.mode !== "minimized" && <div className={styles.body}>{children}</div>}

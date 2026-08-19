@@ -271,9 +271,10 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
     // The canvas and its focused module carry the context; keep the floating
     // recommendation card out of the map/3D safe area.
     setStationPeekVisible(false);
-    // Keep the canvas hidden during the handoff. A deep link is opened by the
-    // effect below; a normal arrival keeps only the recommendation visible.
-    setFollowJourney(true);
+    // The cinematic owns box choreography only until the first unlock. After
+    // that, the hero remains a live context layer while the visitor owns the
+    // workspace layout. The explicit Journey control remains a manual opt-in.
+    setFollowJourney(false);
     if (reason !== "static") void rememberIntroSeen();
   }, [registry, stationPresentations]);
 
@@ -283,7 +284,6 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
       if (!detail || !stationPresentations[detail.station]) return;
       setJourneyStation(detail.station);
       setStationPeekVisible(false);
-      if (workspaceUnlocked) setFollowJourney(true);
     };
 
     window.addEventListener("vm:scrub-station", onStation);
@@ -658,8 +658,6 @@ function Workspace({ registry }: { registry: ExploreContentRegistry }) {
           onOpenBox={openUnifiedBox}
           onSearch={() => openPalette("")}
           onContribute={openContributor}
-          onToggleJourney={() => setFollowJourney((current) => !current)}
-          followJourney={followJourney}
         />
       )}
       {workspaceUnlocked && viewportMode === "tablet" && (

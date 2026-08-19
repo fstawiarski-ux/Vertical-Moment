@@ -32,8 +32,6 @@ export function WorkspaceTopRail({
   onOpenBox: _onOpenBox,
   onSearch,
   onContribute: _onContribute,
-  onToggleJourney,
-  followJourney,
 }: {
   registry: ExploreContentRegistry;
   workspace: ResolvedWorkspaceManifest;
@@ -44,14 +42,13 @@ export function WorkspaceTopRail({
   onOpenBox: (id: string) => void;
   onSearch: () => void;
   onContribute: () => void;
-  onToggleJourney: () => void;
-  followJourney: boolean;
 }) {
   const station = stationContent ? STATION_BY_BOX_ID[stationContent.id] ?? "region" : "region";
   const stationIndex = STAGES.findIndex((candidate) => candidate.id === station);
 
   const flyTo = (next: JourneyStation) => {
-    if (!followJourney) onToggleJourney();
+    // Top-rail stages scrub the live hero context. They do not opt the
+    // workspace back into intro choreography after the first unlock.
     requestStation(next);
   };
 
@@ -75,7 +72,13 @@ export function WorkspaceTopRail({
             </span>
           </button>
         ))}
-        <button type="button" className={styles.search} onClick={onSearch} aria-label="Search the Explore workspace">
+        <button
+          type="button"
+          className={styles.search}
+          onClick={onSearch}
+          aria-label="Search commands, boxes, regions, routes, and options"
+          title="Global search"
+        >
           <span className={styles.searchIcon} aria-hidden="true">⌕</span>
           <span className={styles.copy}>
             <strong>Search</strong>

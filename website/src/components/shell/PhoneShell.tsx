@@ -96,7 +96,7 @@ export function PhoneShell({
               <small>Field workspace</small>
               <strong>{selectedContent?.title ?? "Explore"}</strong>
             </div>
-            <button type="button" onClick={onSearch} aria-label="Search the Explore workspace">Search</button>
+            <button type="button" onClick={onSearch} aria-label="Search commands, boxes, regions, routes, and options" title="Global search">⌕</button>
           </>
         )}
       </header>
@@ -127,7 +127,7 @@ export function PhoneShell({
           Modules
         </button>
         {minimalFixed && (
-          <button type="button" onClick={onSearch} aria-label="Search the Explore workspace">Search</button>
+          <button type="button" onClick={onSearch} aria-label="Search commands, boxes, regions, routes, and options" title="Global search">⌕</button>
         )}
       </nav>
       {moreOpen && (
