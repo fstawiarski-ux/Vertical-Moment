@@ -234,7 +234,7 @@
 
 .boxLayer[data-layout="tablet"][data-hierarchy="phone-inspired"] > article[data-mode="normal"] {
   width: min(56vw, 460px) !important;
-  height: min(39dvh, 330px) !important;
+  height: min(30dvh, 260px) !important;
 }
 
 .cardStack[data-exclusive-mode="expanded"] { z-index: 9450; overflow: visible; }
