@@ -516,7 +516,7 @@ export default function ExploreAtlasExperience() {
     <main className={styles.page} style={qaScale ? { width: 1440, transform: "scale(.525)", transformOrigin: "top left" } : undefined}>
       <header className={styles.topbar}>
         <a className={styles.brand} href="/" aria-label="Vertical Moment home">
-          <span className={`vm-static-logo ${styles.brandLogo}`} aria-hidden="true" />
+          <span className={`vm-static-logo vm-static-logo--technical ${styles.brandLogo}`} aria-hidden="true" />
           <span>Vertical Moment</span>
         </a>
         <nav className={styles.nav} aria-label="Photography navigation">
@@ -735,7 +735,7 @@ export default function ExploreAtlasExperience() {
       </section>
 
       <footer className={styles.footer}>
-        <span className={`vm-static-logo ${styles.brandLogo}`} aria-hidden="true" />
+        <span className={`vm-static-logo vm-static-logo--technical ${styles.brandLogo}`} aria-hidden="true" />
         <span>Vertical Moment · Explore preview · source atlas {ATLAS.generated}</span>
       </footer>
     </main>

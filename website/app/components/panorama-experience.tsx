@@ -300,7 +300,7 @@ export default function PanoramaExperience({ experience, backHref, routeFocus }:
       <div className={styles.shell}>
         <aside className={styles.contextRail} aria-label={`${experience.crag} context`}>
           <Link className={styles.brand} href="/" aria-label="Vertical Moment home">
-            <span className={`vm-static-logo ${styles.brandLogo}`} aria-hidden="true" />
+            <span className={`vm-static-logo vm-static-logo--technical ${styles.brandLogo}`} aria-hidden="true" />
             <span>Vertical<br />Moment</span>
           </Link>
 

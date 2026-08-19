@@ -11,8 +11,8 @@ export const metadata: Metadata = {
     title: "Climbers Lounge",
   },
   icons: {
-    icon: "/icons/explore-app-192.png",
-    apple: "/icons/explore-app-192.png",
+    icon: "/brand/official-v2/icons/forest-192.png",
+    apple: "/brand/official-v2/icons/forest-180.png",
   },
   robots: { index: false, follow: false },
 };

@@ -2,6 +2,7 @@
 
 import type { BoxState, ExploreContentBox, ExploreContentRegistry, JourneyStation, ViewportMode } from "../../core/types";
 import type { ResolvedWorkspaceManifest } from "../../core/workspaceManifest";
+import { OfficialMark } from "../../brand/OfficialMark";
 import styles from "./WorkspaceTopRail.module.css";
 
 const STAGES: ReadonlyArray<{ id: JourneyStation; boxId: string; label: string; detail: string; icon: string }> = [
@@ -55,6 +56,9 @@ export function WorkspaceTopRail({
   return (
     <header className={styles.chrome} data-viewport={viewportMode}>
       <nav className={styles.rail} aria-label={`${viewportMode === "tablet" ? "Tablet" : "Desktop"} Explore journey`}>
+        <span className={styles.identity} aria-hidden="true">
+          <OfficialMark variant="utility-vm" mode="dark" size={27} decorative priority />
+        </span>
         {STAGES.map((candidate, index) => (
           <button
             key={candidate.id}

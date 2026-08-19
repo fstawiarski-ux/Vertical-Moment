@@ -14,13 +14,17 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "Vertical Moment",
     url: "/",
-    images: ["/photography/banners/og-1200x630-sample.webp"],
+    images: ["/brand/official-v2/social/forest-og-1200x630.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Vertical Moment — Climbing Photography",
     description: "Photography from where the movement happens — climbing, portraits and visual technology.",
-    images: ["/photography/banners/og-1200x630-sample.webp"],
+    images: ["/brand/official-v2/social/forest-og-1200x630.png"],
+  },
+  icons: {
+    icon: "/brand/official-v2/icons/forest-favicon.ico",
+    apple: "/brand/official-v2/icons/forest-180.png",
   },
 };
 

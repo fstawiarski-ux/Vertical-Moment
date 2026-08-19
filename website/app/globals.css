@@ -8,14 +8,14 @@
   --shadow:0 22px 60px rgba(20,32,24,.10);
   --disp:"Fraunces","Iowan Old Style",Georgia,serif;
   --body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-  --vm-site-logo:url('/brand/monogram/vm-mono-forest-gold.webp');
+  --vm-site-logo:url('/brand/official-v2/marks/forest-green-vm.webp');
 }
 [data-theme="dark"]{
   --paper:#141A12; --surface:rgba(32,44,33,.82); --surface-strong:#1B251E;
   --ink:#EDF2E7; --forest:#1B251E; --muted:#A8B3AA; --line:rgba(255,255,255,.12);
   --terra:#D98A63; --gold:#E4B45A; --sage:#A8B3AA; --chalk:#F2ECE0;
   --shadow:0 24px 64px rgba(0,0,0,.30);
-  --vm-site-logo:url('/brand/monogram/vm-mono-bright-silver.webp');
+  --vm-site-logo:url('/brand/official-v2/utility/vm-mono-white.svg');
 }
 *{box-sizing:border-box}
 html,body{padding:0;margin:0}
@@ -44,6 +44,13 @@ button{cursor:pointer}
 .site-head .row{display:flex;align-items:center;gap:16px;min-height:64px}
 .brand{display:flex;align-items:center;gap:11px}
 .brand-mark,.vm-static-logo{display:inline-block;flex:none;background:var(--vm-site-logo) center/contain no-repeat;animation:none!important;filter:none!important;transform:none!important;transition:none!important}
+.vm-static-logo--technical{background-image:url('/brand/official-v2/marks/brushed-dark-silver-vm.webp')!important}
+.vm-static-logo--digital{background-image:url('/brand/official-v2/marks/iridescent-vm.webp')!important}
+.vm-static-logo--collective{background-image:url('/brand/official-v2/marks/gold-c-frame-cvm.webp')!important}
+.vm-official-mark{display:block;flex:none;object-fit:contain}
+.vm-official-mark--animated{transform-origin:50% 50%;animation:vm-official-mark-reveal 900ms cubic-bezier(.2,.8,.2,1) both}
+@keyframes vm-official-mark-reveal{from{opacity:0;transform:translateY(8px) scale(.94);filter:brightness(.7)}to{opacity:1;transform:translateY(0) scale(1);filter:brightness(1)}}
+@media (prefers-reduced-motion:reduce){.vm-official-mark--animated{animation:none}}
 .brand-mark{width:32px;height:32px}
 .nav{display:flex;gap:4px;margin-left:6px}
 .nav a{color:var(--ink);font-weight:600;padding:8px 13px;border-radius:999px;font-size:14px}

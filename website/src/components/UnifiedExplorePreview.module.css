@@ -76,7 +76,6 @@
 }
 
 .wordmark { display: flex; align-items: center; gap: 11px; }
-.mark { width: 10px; height: 34px; border-radius: 1px; background: #d2bd87; clip-path: polygon(0 0, 100% 10%, 70% 100%, 18% 88%); }
 .wordmark div { display: grid; gap: 4px; }
 .wordmark small { font-size: 9px; }
 .wordmark strong { font: 600 18px/1 Arial, sans-serif; letter-spacing: -.02em; }

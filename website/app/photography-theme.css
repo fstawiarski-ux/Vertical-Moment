@@ -33,7 +33,7 @@ html[data-theme='light'] {
   --vm-veil-3: rgba(10, 14, 12, 0.92);
   --vm-photo: grayscale(0.16) contrast(1.02);
   --vm-photo-hi: grayscale(0) contrast(1.04);
-  --vm-mono: url('/brand/monogram/vm-mono-forest-gold.webp');
+  --vm-mono: url('/brand/official-v2/marks/forest-green-vm.webp');
   --vm-tint: transparent;
 }
 
@@ -54,7 +54,7 @@ html[data-theme='dark'] {
   --vm-veil-3: rgba(0, 0, 0, 0.96);
   --vm-photo: grayscale(0.72) contrast(1.14) brightness(0.86);
   --vm-photo-hi: grayscale(0.08) contrast(1.1) brightness(0.98);
-  --vm-mono: url('/brand/monogram/vm-mono-bright-silver.webp');
+  --vm-mono: url('/brand/official-v2/marks/brushed-dark-silver-vm.webp');
   --vm-tint: transparent;
 }
 
