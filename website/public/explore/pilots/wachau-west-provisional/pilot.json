@@ -1,0 +1,48 @@
+{
+  "$schema": "../pilot.schema.json",
+  "schemaVersion": 1,
+  "id": "wachau-west-provisional",
+  "label": "Pilot 009 — Wachau West — PROVISIONAL PRIVATE BETA",
+  "releaseState": "assembly",
+  "identity": {
+    "region": "Wachau",
+    "regionSlug": "wachau",
+    "crag": "Wachau West — provisional beta",
+    "cragSlug": "wachau-west-provisional",
+    "sector": null,
+    "canonicalCragId": null
+  },
+  "provenance": {
+    "notionUrl": "https://app.notion.com/p/3c121413535181298915f2145fb65226",
+    "dataPath": null,
+    "confidence": "provisional",
+    "lastReviewed": "2026-08-20"
+  },
+  "summary": { "routeCount": null, "gradeSystem": null, "gradeRange": null, "discipline": null },
+  "journey": {
+    "posterSlot": "hero",
+    "chapters": [
+      { "id": "region-rock", "from": "Region", "to": "Rock", "asset": "scrubRegionRock", "duration": 3, "direction": "forward", "objectPosition": "50% center" },
+      { "id": "rock-sector", "from": "Rock", "to": "Sector", "asset": "scrubRockSector", "duration": 20.5205, "direction": "forward", "objectPosition": "50% center" },
+      { "id": "sector-topo", "from": "Sector", "to": "Topo", "asset": "scrubSectorTopo", "duration": 2.4, "direction": "forward", "objectPosition": "50% center" }
+    ]
+  },
+  "modules": {
+    "locator": { "title": "Wachau West Locator", "mobileLabel": "Atlas", "description": "West of Dürnstein toward Melk; GPS and exact wall identity intentionally remain pending.", "primarySlots": [] },
+    "panorama": { "title": "Wachau West Context", "mobileLabel": "Context", "description": "Regional Wachau context only; no wall-specific panorama is claimed.", "primarySlots": ["panoramaPoster", "panorama360"] },
+    "routes": { "title": "Wachau West Routes", "mobileLabel": "Routes", "description": "Route count, grades and canonical wall spelling remain pending.", "primarySlots": ["hero"] },
+    "wall": { "title": "Wachau West Wall Reveal", "mobileLabel": "Wall", "description": "DJI_0793 and DJI_0799 are owner-authorized for private-beta derivatives, but their binaries are not mounted in this checkout.", "primarySlots": ["hero", "spatial"] },
+    "topo": { "title": "Wachau West Topo + 3D", "mobileLabel": "Topo", "description": "GPS, route geometry, topo and 3D remain missing rather than inferred.", "primarySlots": ["topo", "model"] }
+  },
+  "assets": {
+    "hero": { "kind": "image", "status": "missing", "targetPath": "/explore/pilots/wachau-west-provisional/hero/hero-1280.webp", "src": null, "alt": "Wachau West provisional beta poster", "note": "DJI_0793/0799 poster selection is pending; this private card uses a replaceable regional proxy.", "preview": { "adapter": "same-origin", "src": "/photography/explore-app/scrub/region-poster.jpg", "provenance": "Existing regional proxy; not verified as Wachau West", "verifiedForPilot": false, "replaceable": true } },
+    "spatial": { "kind": "image", "status": "missing", "targetPath": "/explore/pilots/wachau-west-provisional/wall/spatial-1280.webp", "src": null, "alt": "Wachau West spatial wall study" },
+    "topo": { "kind": "image", "status": "missing", "targetPath": "/explore/pilots/wachau-west-provisional/topo/topo-1280.webp", "src": null, "alt": "Wachau West topo", "note": "No geometry is inferred." },
+    "model": { "kind": "model", "status": "missing", "targetPath": "/explore/pilots/wachau-west-provisional/model/model.glb", "src": null, "alt": "Wachau West 3D model" },
+    "panoramaPoster": { "kind": "panorama", "status": "review", "targetPath": "/explore/pilots/wachau-west-provisional/panorama/poster-1600.webp", "src": null, "alt": "Wachau regional panorama", "note": "Regional context only; wall identity pending." },
+    "panorama360": { "kind": "link", "status": "missing", "targetPath": "/explore/pilots/wachau-west-provisional/panorama/360-link.txt", "src": null, "alt": "Interactive 360 view of Wachau West" },
+    "scrubRegionRock": { "kind": "video", "status": "missing", "targetPath": "/explore/pilots/wachau-west-provisional/scrub/region-rock.mp4", "src": null, "alt": "Private regional motion proxy for Wachau West", "note": "Planned source DJI_0793 SHA-256 b6c0c935fb9348ec278794b2cfeb35b3ea58949c57bb6dbec0e1b76f4c2f4cb4; binary unavailable in this Windows session.", "preview": { "adapter": "same-origin", "src": "/photography/explore-app/scrub/region-rock-pan-a.mp4", "provenance": "Existing reference proxy; not Wachau West evidence", "verifiedForPilot": false, "replaceable": true } },
+    "scrubRockSector": { "kind": "video", "status": "missing", "targetPath": "/explore/pilots/wachau-west-provisional/scrub/rock-sector.mp4", "src": null, "alt": "Private motion proxy for Wachau West Rock to Sector", "note": "Planned source DJI_0799 SHA-256 266883f6e4d57ae80cfae088c015c2c342d40c03cc095a33e0b6c33c08076bd6; approved private range 00:21.000 to source end (29.9299 s selected), binary unavailable here.", "preview": { "adapter": "same-origin", "src": "/photography/explore-app/scrub/rock-sector-dji0058.mp4", "provenance": "Existing DJI_0058 Arnstein-mapped proxy; not Wachau West evidence", "verifiedForPilot": false, "replaceable": true } },
+    "scrubSectorTopo": { "kind": "video", "status": "missing", "targetPath": "/explore/pilots/wachau-west-provisional/scrub/sector-topo.mp4", "src": null, "alt": "Private motion proxy for Wachau West Sector to Topo", "note": "Exact wall, crop, poster, GPS and topo remain pending.", "preview": { "adapter": "same-origin", "src": "/photography/explore-app/scrub/sector-topo-pan-b.mp4", "provenance": "Existing reference proxy; not Wachau West evidence", "verifiedForPilot": false, "replaceable": true } }
+  }
+}

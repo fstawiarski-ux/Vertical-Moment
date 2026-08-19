@@ -1,0 +1,53 @@
+{
+  "$schema": "../pilot.schema.json",
+  "schemaVersion": 1,
+  "id": "arnstein",
+  "label": "Pilot 004 — Arnstein — PRIVATE BETA MOTION PROXY",
+  "releaseState": "assembly",
+  "identity": {
+    "region": "Arnstein",
+    "regionSlug": "arnstein",
+    "crag": "Arnstein",
+    "cragSlug": "arnstein",
+    "sector": null,
+    "canonicalCragId": null
+  },
+  "provenance": {
+    "notionUrl": "https://app.notion.com/p/3be214135351816082a5c132119bc215",
+    "dataPath": "database/api/v1/regions/arnstein.json",
+    "confidence": "imported-unverified",
+    "lastReviewed": "2026-08-20"
+  },
+  "summary": {
+    "routeCount": 143,
+    "gradeSystem": "UIAA",
+    "gradeRange": null,
+    "discipline": null
+  },
+  "journey": {
+    "posterSlot": "hero",
+    "chapters": [
+      { "id": "region-rock", "from": "Region", "to": "Rock", "asset": "scrubRegionRock", "duration": 21.388033, "direction": "forward", "objectPosition": "50% center" },
+      { "id": "rock-sector", "from": "Rock", "to": "Sector", "asset": "scrubRockSector", "duration": 21.388033, "direction": "forward", "objectPosition": "50% center" },
+      { "id": "sector-topo", "from": "Sector", "to": "Topo", "asset": "scrubSectorTopo", "duration": 21.388033, "direction": "forward", "objectPosition": "50% center" }
+    ]
+  },
+  "modules": {
+    "locator": { "title": "Arnstein Regional Locator", "mobileLabel": "Atlas", "description": "Canonical Arnstein cluster context; the supplied ruins pin is not promoted to wall GPS.", "primarySlots": [] },
+    "panorama": { "title": "Arnstein Context", "mobileLabel": "Context", "description": "Reserved for an approved Arnstein panorama and wall-specific 360 source.", "primarySlots": ["panoramaPoster", "panorama360"] },
+    "routes": { "title": "Arnstein Routes", "mobileLabel": "Routes", "description": "One hundred forty-three imported route records across the Arnstein cluster; exact hero wall remains unresolved.", "primarySlots": ["hero"] },
+    "wall": { "title": "Arnstein Wall Reveal", "mobileLabel": "Wall", "description": "DJI_0064 powers this private interaction preview. Hauptwand and child-wall identity remain unverified.", "primarySlots": ["hero", "spatial"] },
+    "topo": { "title": "Arnstein Topo + 3D", "mobileLabel": "Topo", "description": "Topo, geometry and model slots remain empty until an exact wall is confirmed.", "primarySlots": ["topo", "model"] }
+  },
+  "assets": {
+    "hero": { "kind": "image", "status": "review", "targetPath": "/explore/pilots/arnstein/hero/hero-1280.webp", "src": null, "alt": "Unverified Arnstein cluster drone preview", "note": "Poster is private-beta evidence from DJI_0064; public release and exact wall identity remain pending.", "preview": { "adapter": "same-origin", "src": "/photography/explore-app/scrub/arnstein/dji0064-private-preview-poster.webp", "provenance": "DJI_0064 source SHA-256 fe1b63ff9f0af0e0f8c41b1b0c96d75f9804cf00df6b23000435a224cf7342b7; full-source private derivative; exact wall unverified", "verifiedForPilot": false, "replaceable": true } },
+    "spatial": { "kind": "image", "status": "missing", "targetPath": "/explore/pilots/arnstein/wall/spatial-1280.webp", "src": null, "alt": "Arnstein spatial wall study", "note": "Exact wall identity is pending." },
+    "topo": { "kind": "image", "status": "missing", "targetPath": "/explore/pilots/arnstein/topo/topo-1280.webp", "src": null, "alt": "Arnstein topo", "note": "No route geometry is inferred." },
+    "model": { "kind": "model", "status": "missing", "targetPath": "/explore/pilots/arnstein/model/model.glb", "src": null, "alt": "Arnstein 3D model" },
+    "panoramaPoster": { "kind": "panorama", "status": "missing", "targetPath": "/explore/pilots/arnstein/panorama/poster-1600.webp", "src": null, "alt": "Arnstein panorama poster" },
+    "panorama360": { "kind": "link", "status": "missing", "targetPath": "/explore/pilots/arnstein/panorama/360-link.txt", "src": null, "alt": "Interactive 360 view of Arnstein" },
+    "scrubRegionRock": { "kind": "video", "status": "review", "targetPath": "/explore/pilots/arnstein/scrub/region-rock.mp4", "src": null, "alt": "Private DJI_0064 Arnstein Region to Rock preview", "note": "Full 21.388 s technical preview; approved range, crop, poster and wall identity remain pending.", "preview": { "adapter": "same-origin", "src": "/photography/explore-app/scrub/arnstein/dji0064-private-preview-960-allkey.mp4", "provenance": "DJI_0064 source SHA-256 fe1b63ff9f0af0e0f8c41b1b0c96d75f9804cf00df6b23000435a224cf7342b7; private beta derivative", "verifiedForPilot": false, "replaceable": true } },
+    "scrubRockSector": { "kind": "video", "status": "review", "targetPath": "/explore/pilots/arnstein/scrub/rock-sector.mp4", "src": null, "alt": "Private DJI_0064 Arnstein Rock to Sector preview", "note": "Same technical preview reused for interaction QA; it does not identify a sector.", "preview": { "adapter": "same-origin", "src": "/photography/explore-app/scrub/arnstein/dji0064-private-preview-960-allkey.mp4", "provenance": "DJI_0064 source SHA-256 fe1b63ff9f0af0e0f8c41b1b0c96d75f9804cf00df6b23000435a224cf7342b7; private beta derivative", "verifiedForPilot": false, "replaceable": true } },
+    "scrubSectorTopo": { "kind": "video", "status": "review", "targetPath": "/explore/pilots/arnstein/scrub/sector-topo.mp4", "src": null, "alt": "Private DJI_0064 Arnstein Sector to Topo preview", "note": "Same technical preview reused for interaction QA; no topo or route geometry is claimed.", "preview": { "adapter": "same-origin", "src": "/photography/explore-app/scrub/arnstein/dji0064-private-preview-960-allkey.mp4", "provenance": "DJI_0064 source SHA-256 fe1b63ff9f0af0e0f8c41b1b0c96d75f9804cf00df6b23000435a224cf7342b7; private beta derivative", "verifiedForPilot": false, "replaceable": true } }
+  }
+}

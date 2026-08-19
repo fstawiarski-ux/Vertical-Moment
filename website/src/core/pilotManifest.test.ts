@@ -88,7 +88,16 @@ describe("pilot registry projection", () => {
     expect(pilotJourneyReady(proxyPilot)).toBe(false);
     expect(pilotJourneyPreviewable(proxyPilot)).toBe(true);
     expect(pilotUsesPreviewMedia(proxyPilot)).toBe(true);
-    expect(applyPilotToRegistry(registry, proxyPilot).introScrubSequence.chapters.map((chapter) => chapter.video)).toEqual([
+    proxyPilot.assets.hero.preview = {
+      adapter: "same-origin",
+      src: "/proxies/poster.webp",
+      provenance: "Private preview poster",
+      verifiedForPilot: false,
+      replaceable: true,
+    };
+    const projected = applyPilotToRegistry(registry, proxyPilot);
+    expect(projected.introScrubSequence.poster).toBe("/proxies/poster.webp");
+    expect(projected.introScrubSequence.chapters.map((chapter) => chapter.video)).toEqual([
       "/proxies/region-rock.mp4",
       "/proxies/rock-sector.mp4",
       "/proxies/sector-topo.mp4",
