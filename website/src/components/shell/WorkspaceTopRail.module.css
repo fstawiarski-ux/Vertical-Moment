@@ -1,10 +1,10 @@
 .chrome {
   position: fixed;
   top: 0;
-  right: 88px;
+  right: 0;
   left: 0;
   z-index: 9720;
-  padding: max(4px, env(safe-area-inset-top)) 6px 5px max(6px, env(safe-area-inset-left));
+  padding: max(4px, env(safe-area-inset-top)) 0 5px;
   pointer-events: none;
 }
 
@@ -23,7 +23,7 @@
 
 .rail {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
   gap: 4px;
   width: 100%;
   min-height: 54px;
@@ -54,6 +54,16 @@
     box-shadow 220ms ease,
     transform 120ms ease;
 }
+
+.search {
+  width: 54px;
+  min-width: 54px;
+  grid-template-columns: 1fr;
+  padding-inline: 5px;
+}
+
+.search .copy { display: none; }
+.search .searchIcon { width: 22px; height: 22px; font-size: 16px; }
 
 .stage::after {
   content: "";
@@ -142,10 +152,11 @@
 }
 
 @media (max-width: 980px) and (min-width: 768px) {
-  .chrome { right: 82px; }
+  .chrome { right: 0; }
   .rail { min-height: 50px; }
   .stage,
   .search { min-height: 46px; gap: 5px; padding-inline: 7px; }
+  .search { width: 48px; min-width: 48px; }
   .copy strong { font-size: 9px; }
   .copy small { font-size: 6px; letter-spacing: .07em; }
   .icon,

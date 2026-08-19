@@ -83,11 +83,30 @@ export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
   const resizeRef = useRef<ResizeState | null>(null);
   const boxesRef = useRef(boxes);
   const [dragging, setDragging] = useState(false);
+  const [controlsVisible, setControlsVisible] = useState(false);
+  const controlsHideRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const canFreeform = viewportMode === "desktop" && box.mode === "normal";
 
   useEffect(() => { boxesRef.current = boxes; }, [boxes]);
 
-  const focus = () => dispatch({ type: "SET_ACTIVE_BOX", id: box.id });
+  const revealControls = () => {
+    if (controlsHideRef.current) clearTimeout(controlsHideRef.current);
+    setControlsVisible(true);
+  };
+
+  const hideControlsSoon = () => {
+    if (controlsHideRef.current) clearTimeout(controlsHideRef.current);
+    controlsHideRef.current = setTimeout(() => setControlsVisible(false), 1600);
+  };
+
+  useEffect(() => () => {
+    if (controlsHideRef.current) clearTimeout(controlsHideRef.current);
+  }, []);
+
+  const focus = () => {
+    dispatch({ type: "SET_ACTIVE_BOX", id: box.id });
+    revealControls();
+  };
   const setMode = (mode: BoxState["mode"]) => {
     dispatch({ type: "SET_BOX_MODE", id: box.id, mode });
   };
@@ -274,9 +293,16 @@ export function BoxContainer({ box, title, eyebrow, viewportMode, children }: {
       data-mode={box.mode}
       data-box-id={box.id}
       data-module-chrome="minimal"
+      data-controls-visible={controlsVisible ? "true" : "false"}
       aria-label={`${title} module`}
       style={inlineStyle}
       onPointerDown={focus}
+      onPointerUp={hideControlsSoon}
+      onPointerCancel={hideControlsSoon}
+      onMouseEnter={revealControls}
+      onMouseLeave={hideControlsSoon}
+      onFocusCapture={revealControls}
+      onBlurCapture={hideControlsSoon}
     >
       <div className={styles.chrome}>
         <div data-drag-surface="true" className={styles.header} onPointerDown={beginDrag} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag}>

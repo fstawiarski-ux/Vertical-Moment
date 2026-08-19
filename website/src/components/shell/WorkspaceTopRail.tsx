@@ -51,7 +51,7 @@ export function WorkspaceTopRail({
 
   return (
     <header className={styles.chrome} data-viewport={viewportMode}>
-      <nav className={styles.rail} aria-label={`${viewportMode === "tablet" ? "Tablet" : "Desktop"} Explore modules`}>
+      <nav className={styles.rail} aria-label={`${viewportMode === "tablet" ? "Tablet" : "Desktop"} Explore journey`}>
         {STAGES.map((candidate, index) => (
           <button
             key={candidate.id}
@@ -70,7 +70,13 @@ export function WorkspaceTopRail({
             </span>
           </button>
         ))}
-        <button type="button" className={styles.search} onClick={onSearch} aria-label="Search the Explore workspace">
+        <button
+          type="button"
+          className={styles.search}
+          onClick={onSearch}
+          aria-label="Search commands, boxes, regions, routes, and options"
+          title="Global search"
+        >
           <span className={styles.searchIcon} aria-hidden="true">⌕</span>
           <span className={styles.copy}>
             <strong>Search</strong>
