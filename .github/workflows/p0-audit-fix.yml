@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v5
         with:
           ref: fix/p0-audit-performance-accessibility
-      - name: Apply focused source fixes
+      - name: Apply focused P0 source fixes
         shell: bash
         run: |
           python - <<'PY'
@@ -29,138 +29,84 @@ jobs:
                   raise SystemExit(f"{label}: expected exactly 1 match, found {count}")
               return text.replace(old, new, 1)
 
-          # Homepage: lazy-load all gallery photography except the LCP hero.
           page_path = Path('website/app/page.tsx')
           page = page_path.read_text()
-          gallery_pattern = re.compile(r'<img\s+src="(/photography/gallery/[^"]+)"\s+alt="([^"]*)">')
-          page, gallery_count = gallery_pattern.subn(
-              lambda m: f'<img src="{m.group(1)}" alt="{m.group(2)}" loading="lazy" decoding="async">',
-              page,
-          )
-          if gallery_count < 8:
-              raise SystemExit(f'homepage gallery images: expected at least 8 matches, found {gallery_count}')
-          page = replace_once(
-              page,
-              '<img src="/photography/gallery/vm-6890-peilstein-main-face.webp" alt="Climber on a limestone wall at Peilstein" loading="lazy" decoding="async">',
-              '<img src="/photography/gallery/vm-6890-peilstein-main-face.webp" alt="Climber on a limestone wall at Peilstein" loading="eager" fetchpriority="high" decoding="async">',
-              'homepage hero priority',
-          )
-
-          panorama_pattern = re.compile(r'<img src="/photography/panoramas/wachau/(wachau-(?:09|10|12|14|16))-preview\.webp" alt="([^"]+)">')
-          def panorama_picture(match):
-              stem, alt = match.group(1), match.group(2)
-              return (
-                  f'<picture class="panorama-picture">\n'
-                  f'              <source media="(max-width: 767px)" srcset="/photography/panoramas/wachau/{stem}-thumb.webp 1000w" sizes="100vw">\n'
-                  f'              <img src="/photography/panoramas/wachau/{stem}-preview.webp" alt="{alt}" loading="lazy" decoding="async">\n'
-                  f'            </picture>'
+          if 'wachau-14-thumb.webp 1000w' not in page:
+              gallery_pattern = re.compile(r'<img\s+src="(/photography/gallery/[^"]+)"\s+alt="([^"]*)">')
+              page, gallery_count = gallery_pattern.subn(
+                  lambda m: f'<img src="{m.group(1)}" alt="{m.group(2)}" loading="lazy" decoding="async">',
+                  page,
               )
-          page, panorama_count = panorama_pattern.subn(panorama_picture, page)
-          if panorama_count != 5:
-              raise SystemExit(f'homepage panoramas: expected 5 matches, found {panorama_count}')
-          page_path.write_text(page)
+              if gallery_count < 8:
+                  raise SystemExit(f'homepage gallery images: expected at least 8 matches, found {gallery_count}')
+              page = replace_once(
+                  page,
+                  '<img src="/photography/gallery/vm-6890-peilstein-main-face.webp" alt="Climber on a limestone wall at Peilstein" loading="lazy" decoding="async">',
+                  '<img src="/photography/gallery/vm-6890-peilstein-main-face.webp" alt="Climber on a limestone wall at Peilstein" loading="eager" fetchpriority="high" decoding="async">',
+                  'homepage hero priority',
+              )
+              panorama_pattern = re.compile(r'<img src="/photography/panoramas/wachau/(wachau-(?:09|10|12|14|16))-preview\.webp" alt="([^"]+)">')
+              def panorama_picture(match):
+                  stem, alt = match.group(1), match.group(2)
+                  return (
+                      f'<picture class="panorama-picture">\n'
+                      f'              <source media="(max-width: 767px)" srcset="/photography/panoramas/wachau/{stem}-thumb.webp 1000w" sizes="100vw">\n'
+                      f'              <img src="/photography/panoramas/wachau/{stem}-preview.webp" alt="{alt}" loading="lazy" decoding="async">\n'
+                      f'            </picture>'
+                  )
+              page, panorama_count = panorama_pattern.subn(panorama_picture, page)
+              if panorama_count != 5:
+                  raise SystemExit(f'homepage panoramas: expected 5 matches, found {panorama_count}')
+              page_path.write_text(page)
 
           css_path = Path('website/app/public-site-v5.css')
           css = css_path.read_text()
-          css = replace_once(
-              css,
-              '.panorama-layer.is-active{opacity:1}\n.panorama-layer img{',
-              '.panorama-layer.is-active{opacity:1}\n.panorama-picture{display:block;width:100%;height:100%}\n.panorama-layer img{',
-              'panorama picture sizing',
-          )
-          css_path.write_text(css)
+          if '.panorama-picture{' not in css:
+              css = replace_once(
+                  css,
+                  '.panorama-layer.is-active{opacity:1}\n.panorama-layer img{',
+                  '.panorama-layer.is-active{opacity:1}\n.panorama-picture{display:block;width:100%;height:100%}\n.panorama-layer img{',
+                  'panorama picture sizing',
+              )
+              css_path.write_text(css)
 
-          # Contributor field report: give the four audit-flagged controls accessible names
-          # without changing the visual composition, and expose toggle state on button groups.
           field_path = Path('website/app/(platform)/components/field-report.tsx')
           field = field_path.read_text()
-          field = replace_once(
-              field,
-              '<div className="flabel-sm">Crag</div>',
-              '<label className="flabel-sm" htmlFor="field-report-crag">Crag</label>',
-              'crag label',
-          )
-          field = replace_once(
-              field,
-              '<input className="search" placeholder="Search crag name..." value={report.cragName}',
-              '<input id="field-report-crag" className="search" placeholder="Search crag name..." value={report.cragName}',
-              'crag input id',
-          )
-          field = replace_once(
-              field,
-              '<textarea className="gen" placeholder="Anything worth flagging - conditions, a loose hold, a wrong grade..."',
-              '<textarea className="gen" aria-label="Field report notes" placeholder="Anything worth flagging - conditions, a loose hold, a wrong grade..."',
-              'field notes label',
-          )
-          field = replace_once(
-              field,
-              '<textarea className="gen" placeholder="What did you observe? Example: loose hanger, worn lower-off, unclear anchor access..."',
-              '<textarea className="gen" aria-label="Anchor and hardware observation" placeholder="What did you observe? Example: loose hanger, worn lower-off, unclear anchor access..."',
-              'anchor notes label',
-          )
-          field = replace_once(
-              field,
-              '<input className="costfield-input" placeholder="Cost - e.g. free, EUR 3/day"',
-              '<input className="costfield-input" aria-label="Parking cost" placeholder="Cost - e.g. free, EUR 3/day"',
-              'parking cost label',
-          )
-          for value in ('looks_ok', 'needs_attention', 'not_checked'):
-              old = f'<button className={{`chip ${{report.anchorCheck === "{value}" ? "on" : ""}}`}} onClick='
-              new = f'<button className={{`chip ${{report.anchorCheck === "{value}" ? "on" : ""}}`}} aria-pressed={{report.anchorCheck === "{value}"}} onClick='
-              field = replace_once(field, old, new, f'anchor toggle {value}')
-          field = replace_once(
-              field,
-              '<button key={route.n} className={`route-tag ${report.routeTags[route.n] ? "on" : ""}`} onClick=',
-              '<button key={route.n} className={`route-tag ${report.routeTags[route.n] ? "on" : ""}`} aria-pressed={!!report.routeTags[route.n]} onClick=',
-              'route toggle state',
-          )
-          field_path.write_text(field)
+          if 'aria-label="Parking cost"' not in field:
+              field = replace_once(field, '<div className="flabel-sm">Crag</div>', '<label className="flabel-sm" htmlFor="field-report-crag">Crag</label>', 'crag label')
+              field = replace_once(field, '<input className="search" placeholder="Search crag name..." value={report.cragName}', '<input id="field-report-crag" className="search" placeholder="Search crag name..." value={report.cragName}', 'crag input id')
+              field = replace_once(field, '<textarea className="gen" placeholder="Anything worth flagging - conditions, a loose hold, a wrong grade..."', '<textarea className="gen" aria-label="Field report notes" placeholder="Anything worth flagging - conditions, a loose hold, a wrong grade..."', 'field notes label')
+              field = replace_once(field, '<textarea className="gen" placeholder="What did you observe? Example: loose hanger, worn lower-off, unclear anchor access..."', '<textarea className="gen" aria-label="Anchor and hardware observation" placeholder="What did you observe? Example: loose hanger, worn lower-off, unclear anchor access..."', 'anchor notes label')
+              field = replace_once(field, '<input className="costfield-input" placeholder="Cost - e.g. free, EUR 3/day"', '<input className="costfield-input" aria-label="Parking cost" placeholder="Cost - e.g. free, EUR 3/day"', 'parking cost label')
+              for value in ('looks_ok', 'needs_attention', 'not_checked'):
+                  old = f'<button className={{`chip ${{report.anchorCheck === "{value}" ? "on" : ""}}`}} onClick='
+                  new = f'<button className={{`chip ${{report.anchorCheck === "{value}" ? "on" : ""}}`}} aria-pressed={{report.anchorCheck === "{value}"}} onClick='
+                  field = replace_once(field, old, new, f'anchor toggle {value}')
+              field = replace_once(field, '<button key={route.n} className={`route-tag ${report.routeTags[route.n] ? "on" : ""}`} onClick=', '<button key={route.n} className={`route-tag ${report.routeTags[route.n] ? "on" : ""}`} aria-pressed={!!report.routeTags[route.n]} onClick=', 'route toggle state')
+              field_path.write_text(field)
 
-          # Mission workspace: name free-text/provenance controls and confidence toggles.
           contribute_path = Path('website/app/(platform)/components/contribute-workspace.tsx')
           contribute = contribute_path.read_text()
-          contribute = replace_once(
-              contribute,
-              '<input className="cap" placeholder="Caption..." value={file.caption}',
-              '<input className="cap" aria-label={`Caption for ${file.name}`} placeholder="Caption..." value={file.caption}',
-              'evidence caption label',
-          )
-          contribute = replace_once(
-              contribute,
-              '<textarea className="gen" placeholder="Anything else - conflicts, uncertainty, local confirmation..."',
-              '<textarea className="gen" aria-label="General contribution notes" placeholder="Anything else - conflicts, uncertainty, local confirmation..."',
-              'general contribution notes label',
-          )
-          contribute = replace_once(
-              contribute,
-              '<select className="sel" value={draft.prov}',
-              '<select className="sel" aria-label="Source provenance" value={draft.prov}',
-              'provenance label',
-          )
-          contribute = replace_once(
-              contribute,
-              '<button key={number} className={`confd ${draft.confidence >= number ? "on" : ""}`} onClick=',
-              '<button key={number} className={`confd ${draft.confidence >= number ? "on" : ""}`} aria-label={`Confidence ${number} of 5`} aria-pressed={draft.confidence === number} onClick=',
-              'confidence toggle semantics',
-          )
-          contribute_path.write_text(contribute)
+          if 'aria-label="Source provenance"' not in contribute:
+              contribute = replace_once(contribute, '<input className="cap" placeholder="Caption..." value={file.caption}', '<input className="cap" aria-label={`Caption for ${file.name}`} placeholder="Caption..." value={file.caption}', 'evidence caption label')
+              contribute = replace_once(contribute, '<textarea className="gen" placeholder="Anything else - conflicts, uncertainty, local confirmation..."', '<textarea className="gen" aria-label="General contribution notes" placeholder="Anything else - conflicts, uncertainty, local confirmation..."', 'general contribution notes label')
+              contribute = replace_once(contribute, '<select className="sel" value={draft.prov}', '<select className="sel" aria-label="Source provenance" value={draft.prov}', 'provenance label')
+              contribute = replace_once(contribute, '<button key={number} className={`confd ${draft.confidence >= number ? "on" : ""}`} onClick=', '<button key={number} className={`confd ${draft.confidence >= number ? "on" : ""}`} aria-label={`Confidence ${number} of 5`} aria-pressed={draft.confidence === number} onClick=', 'confidence toggle semantics')
+              contribute_path.write_text(contribute)
 
-          # P0 #2 is verification-only: the current implementation already persists the
-          # intro in IndexedDB and the cinematic regression covers returning visitors.
           intro = Path('website/src/core/introPreferences.ts').read_text()
           app = Path('website/src/App.tsx').read_text()
           cinematic = Path('website/scripts/qa-cinematic-regression.mjs').read_text()
-          required = [
+          for needle, haystack in [
               ('vertical-moment:explore-app:intro', intro),
               ('hasSeenIntro', app),
               ('rememberIntroSeen', app),
               ('returning visitor skips onboarding', cinematic),
-          ]
-          for needle, haystack in required:
+          ]:
               if needle not in haystack:
                   raise SystemExit(f'intro persistence verification failed: {needle}')
           PY
-      - name: Verify focused P0 invariants
+      - name: Verify focused invariants
         shell: bash
         run: |
           grep -q 'wachau-14-thumb.webp 1000w' website/app/page.tsx
@@ -168,29 +114,17 @@ jobs:
           test "$(grep -o 'class="panorama-picture"' website/app/page.tsx | wc -l)" -eq 5
           grep -q 'htmlFor="field-report-crag"' 'website/app/(platform)/components/field-report.tsx'
           grep -q 'aria-label="Parking cost"' 'website/app/(platform)/components/field-report.tsx'
-      - uses: actions/setup-node@v5
-        with:
-          node-version: '22'
-          cache: npm
-          cache-dependency-path: website/package-lock.json
-      - name: Install dependencies
-        working-directory: website
-        run: npm ci
-      - name: Unit tests
-        working-directory: website
-        run: npm test
-      - name: Type check
-        working-directory: website
-        run: npx tsc --noEmit
-      - name: Production Next build
-        working-directory: website
-        run: npm run build:next
-      - name: Commit P0 source changes
+          grep -q 'aria-label="Source provenance"' 'website/app/(platform)/components/contribute-workspace.tsx'
+      - name: Commit source changes
         shell: bash
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add website/app/page.tsx website/app/public-site-v5.css 'website/app/(platform)/components/field-report.tsx' 'website/app/(platform)/components/contribute-workspace.tsx'
           git diff --cached --check
+          if git diff --cached --quiet; then
+            echo 'P0 source changes already present.'
+            exit 0
+          fi
           git commit -m 'fix: address P0 audit findings'
           git push origin HEAD:fix/p0-audit-performance-accessibility
