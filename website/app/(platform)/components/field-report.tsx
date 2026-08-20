@@ -198,7 +198,7 @@ export function FieldReport() {
                 </div>
               ) : (
                 <>
-                  <input className="search" placeholder="Search crag name..." value={report.cragName} onChange={(event) => patch({ cragName: event.target.value })} />
+                  <input className="search" aria-label="Crag name" placeholder="Search crag name..." value={report.cragName} onChange={(event) => patch({ cragName: event.target.value })} />
                   {matches.length > 0 && (
                     <div className="nearby" style={{ marginTop: 8 }}>
                       {matches.map((match) => (
@@ -235,7 +235,7 @@ export function FieldReport() {
             <p className="hint">Optional - tag the routes this report is about.</p>
             <div className="route-tag-row">
               {crag.routes.map((route) => (
-                <button key={route.n} className={`route-tag ${report.routeTags[route.n] ? "on" : ""}`} onClick={() => patch({ routeTags: { ...report.routeTags, [route.n]: !report.routeTags[route.n] } })}>
+                <button key={route.n} className={`route-tag ${report.routeTags[route.n] ? "on" : ""}`} aria-pressed={!!report.routeTags[route.n]} onClick={() => patch({ routeTags: { ...report.routeTags, [route.n]: !report.routeTags[route.n] } })}>
                   {route.n}
                 </button>
               ))}
@@ -276,18 +276,18 @@ export function FieldReport() {
 
         <div className="card report-box">
           <h2>Notes</h2>
-          <textarea className="gen" placeholder="Anything worth flagging - conditions, a loose hold, a wrong grade..." value={report.comment} onChange={(event) => patch({ comment: event.target.value })} />
+          <textarea className="gen" aria-label="Field report notes" placeholder="Anything worth flagging - conditions, a loose hold, a wrong grade..." value={report.comment} onChange={(event) => patch({ comment: event.target.value })} />
         </div>
 
         <div className="card report-box report-box-compact">
           <h2>Top anchors &amp; hardware <span className="hint" style={{ fontWeight: 400 }}>- optional observation only</span></h2>
           <p className="hint">Do not test, alter or certify equipment. Only report what you can clearly see from a safe place.</p>
           <div className="anchor-row">
-            <button className={`chip ${report.anchorCheck === "looks_ok" ? "on" : ""}`} onClick={() => patch({ anchorCheck: "looks_ok" })}>Looks normal</button>
-            <button className={`chip ${report.anchorCheck === "needs_attention" ? "on" : ""}`} onClick={() => patch({ anchorCheck: "needs_attention" })}>Needs attention</button>
-            <button className={`chip ${report.anchorCheck === "not_checked" ? "on" : ""}`} onClick={() => patch({ anchorCheck: "not_checked" })}>Not checked</button>
+            <button className={`chip ${report.anchorCheck === "looks_ok" ? "on" : ""}`} aria-pressed={report.anchorCheck === "looks_ok"} onClick={() => patch({ anchorCheck: "looks_ok" })}>Looks normal</button>
+            <button className={`chip ${report.anchorCheck === "needs_attention" ? "on" : ""}`} aria-pressed={report.anchorCheck === "needs_attention"} onClick={() => patch({ anchorCheck: "needs_attention" })}>Needs attention</button>
+            <button className={`chip ${report.anchorCheck === "not_checked" ? "on" : ""}`} aria-pressed={report.anchorCheck === "not_checked"} onClick={() => patch({ anchorCheck: "not_checked" })}>Not checked</button>
           </div>
-          <textarea className="gen" placeholder="What did you observe? Example: loose hanger, worn lower-off, unclear anchor access..." value={report.anchorNotes} onChange={(event) => patch({ anchorNotes: event.target.value })} />
+          <textarea className="gen" aria-label="Anchor and hardware observation" placeholder="What did you observe? Example: loose hanger, worn lower-off, unclear anchor access..." value={report.anchorNotes} onChange={(event) => patch({ anchorNotes: event.target.value })} />
         </div>
 
         <div className="card report-box report-box-compact">
@@ -307,7 +307,7 @@ export function FieldReport() {
               {report.parkingPhoto ? "Photo added" : "Add photo"}
               <input type="file" accept="image/*" hidden onChange={(event) => { if (event.target.files) addFiles(event.target.files, "parking"); event.target.value = ""; }} />
             </label>
-            <input className="costfield-input" placeholder="Cost - e.g. free, EUR 3/day" value={report.parkingCost} onChange={(event) => patch({ parkingCost: event.target.value })} />
+            <input className="costfield-input" aria-label="Parking cost" placeholder="Cost - e.g. free, EUR 3/day" value={report.parkingCost} onChange={(event) => patch({ parkingCost: event.target.value })} />
           </div>
         </div>
 

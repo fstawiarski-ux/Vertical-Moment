@@ -105,9 +105,9 @@ function Dashboard({ onOpen }: { onOpen: (id: string) => void }) {
         <Link href="/contribute#quick-report" className="btn btn-ghost">Create a field note</Link>
       </div>
       <div className="task-filters" aria-label="Filter tasks by where they can be done">
-        <button className={`chip ${filter === "all" ? "on" : ""}`} onClick={() => setFilter("all")}>All</button>
-        <button className={`chip ${filter === "field" ? "on" : ""}`} onClick={() => setFilter("field")}>Open field tasks</button>
-        <button className={`chip ${filter === "home" ? "on" : ""}`} onClick={() => setFilter("home")}>Home / phone tasks</button>
+        <button className={`chip ${filter === "all" ? "on" : ""}`} aria-pressed={filter === "all"} onClick={() => setFilter("all")}>All</button>
+        <button className={`chip ${filter === "field" ? "on" : ""}`} aria-pressed={filter === "field"} onClick={() => setFilter("field")}>Open field tasks</button>
+        <button className={`chip ${filter === "home" ? "on" : ""}`} aria-pressed={filter === "home"} onClick={() => setFilter("home")}>Home / phone tasks</button>
       </div>
       <div className="mgrid">
         {list.map((mission) => {
@@ -294,7 +294,7 @@ function MissionDetail({ mission, onBack }: { mission: Mission; onBack: () => vo
               <strong>{item.title}{item.required && <span className="req"> *</span>}</strong><br />
               <small className="muted">{item.help}</small>
               {item.evidence === "note" && (
-                <textarea placeholder="Type your note..." value={draft.notes[item.id] || ""} onChange={(event) => patch({ notes: { ...draft.notes, [item.id]: event.target.value } })} />
+                <textarea aria-label={`Note for ${item.title}`} placeholder="Type your note..." value={draft.notes[item.id] || ""} onChange={(event) => patch({ notes: { ...draft.notes, [item.id]: event.target.value } })} />
               )}
             </div>
             <span className="pill">{item.evidence === "none" ? "confirm" : item.evidence}</span>
@@ -316,23 +316,23 @@ function MissionDetail({ mission, onBack }: { mission: Mission; onBack: () => vo
                 <EvidencePreview file={file} />
                 <div className="fm">
                   <div className="fn" title={file.name}>{file.name}</div>
-                  <input className="cap" placeholder="Caption..." value={file.caption} onChange={(event) => patch({ files: draft.files.map((entry) => entry.id === file.id ? { ...entry, caption: event.target.value } : entry) })} />
+                  <input className="cap" aria-label={`Caption for ${file.name}`} placeholder="Caption..." value={file.caption} onChange={(event) => patch({ files: draft.files.map((entry) => entry.id === file.id ? { ...entry, caption: event.target.value } : entry) })} />
                 </div>
                 <button className="rm" aria-label="Remove" onClick={() => patch({ files: draft.files.filter((entry) => entry.id !== file.id) })}>x</button>
               </div>
             ))}
           </div>
         )}
-        <textarea className="gen" placeholder="Anything else - conflicts, uncertainty, local confirmation..." value={draft.general} onChange={(event) => patch({ general: event.target.value })} />
+        <textarea className="gen" aria-label="General contribution notes" placeholder="Anything else - conflicts, uncertainty, local confirmation..." value={draft.general} onChange={(event) => patch({ general: event.target.value })} />
       </div>
 
       <div className="card trust">
         <div className="field"><span className="flabel">How sure are you?</span>
           <div className="conf">{[1, 2, 3, 4, 5].map((number) => (
-            <button key={number} className={`confd ${draft.confidence >= number ? "on" : ""}`} onClick={() => patch({ confidence: number })}>{number}</button>
+            <button key={number} className={`confd ${draft.confidence >= number ? "on" : ""}`} aria-label={`Confidence ${number} of 5`} aria-pressed={draft.confidence === number} onClick={() => patch({ confidence: number })}>{number}</button>
           ))}</div></div>
         <div className="field"><span className="flabel">Where does this come from?</span>
-          <select className="sel" value={draft.prov} onChange={(event) => patch({ prov: event.target.value })}>
+          <select className="sel" aria-label="Source provenance" value={draft.prov} onChange={(event) => patch({ prov: event.target.value })}>
             {PROV.map(([value, label]) => <option key={value} value={value}>{label}</option>)}
           </select></div>
         <label className="safety">
