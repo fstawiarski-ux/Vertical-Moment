@@ -145,8 +145,12 @@ section[data-shell="phone"] article[data-mode="fullscreen"] {
 section[data-shell="phone"] article[data-mode="expanded"] [data-module-window-controls="true"],
 section[data-shell="phone"] article[data-mode="fullscreen"] [data-module-window-controls="true"] {
   display: flex !important;
+  top: max(8px, env(safe-area-inset-top)) !important;
   right: 8px !important;
+  z-index: 60 !important;
   opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: none !important;
 }
 
 section[data-shell="phone"] > [data-role="phone-more"] {
@@ -318,8 +322,11 @@ section[data-shell="phone"] > [data-role="phone-stage"] > article[data-viewport=
 section[data-shell="phone"] > [data-role="phone-stage"] > article[data-viewport="mobile"][data-mode="expanded"] [data-module-window-controls="true"],
 section[data-shell="phone"] > [data-role="phone-stage"] > article[data-viewport="mobile"][data-mode="fullscreen"] [data-module-window-controls="true"] {
   display: flex !important;
+  top: max(8px, env(safe-area-inset-top)) !important;
   right: 8px !important;
+  z-index: 60 !important;
   opacity: 1 !important;
+  pointer-events: auto !important;
   transform: none !important;
 }
 
@@ -330,8 +337,8 @@ section[data-shell="phone"] > [data-role="phone-stage"] > article[data-viewport=
 }
 /* PHONE-EXPANDED-STATUS-CLEARANCE
    Expanded/fullscreen module controls take precedence over passive status UI. */
-body:has(section[data-shell="phone"] article[data-mode="expanded"]) [role="status"],
-body:has(section[data-shell="phone"] article[data-mode="fullscreen"]) [role="status"] {
+body:has(section[data-shell="phone"] article[data-mode="expanded"])[role="status"],
+body:has(section[data-shell="phone"] article[data-mode="fullscreen"])[role="status"] {
   right: max(14px, env(safe-area-inset-right)) !important;
   bottom: max(14px, env(safe-area-inset-bottom)) !important;
   top: auto !important;
