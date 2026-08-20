@@ -26,7 +26,9 @@ export default async function ContributePage() {
           <div className="wrap">
             <section className="card" style={{ padding: 18, marginBottom: 20 }} aria-label="Contributor beta status">
               <div className="eyebrow">Unlisted field beta</div>
-              <h1 style={{ fontSize: "clamp(24px,4vw,36px)", margin: "6px 0" }}>Test freely. Nothing publishes automatically.</h1>
+              <p style={{ fontFamily: "var(--disp)", fontSize: "clamp(24px,4vw,36px)", fontWeight: 600, lineHeight: 1.1, margin: "6px 0" }}>
+                Test freely. Nothing publishes automatically.
+              </p>
               <p className="muted" style={{ margin: 0, maxWidth: 760 }}>
                 Drafts and original files stay on this device. Export a review package when you want to inspect or move them.
                 This URL is unlisted, but it is not an authenticated private area yet.
@@ -35,8 +37,8 @@ export default async function ContributePage() {
             <ContributeWorkspace />
             <section className="field-report-section" id="quick-report">
               <div className="eyebrow">Fast field action</div>
-                <h1>Save a field note</h1>
-                <p className="muted">GPS, photos, notes or parking details — prepare whatever you have locally, no account needed.</p>
+              <h2>Save a field note</h2>
+              <p className="muted">GPS, photos, notes or parking details — prepare whatever you have locally, no account needed.</p>
               <Suspense fallback={<div className="muted">Loading report form...</div>}>
                 <FieldReport />
               </Suspense>

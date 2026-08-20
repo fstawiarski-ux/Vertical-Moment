@@ -1,0 +1,28 @@
+/* P2 accessibility polish: targeted semantics and coarse-pointer hit areas.
+   Keep desktop density intact while giving phone/touch controls a 44px floor. */
+
+.field-report-section h2 {
+  margin: 4px 0 8px;
+  font-size: clamp(27px, 4vw, 40px);
+}
+
+@media (pointer: coarse), (max-width: 860px) {
+  .task-filters .chip {
+    min-height: 44px;
+    padding-inline: .9rem;
+  }
+
+  nav[aria-label="Panorama exit controls"] a,
+  nav[aria-label$=" external references"] a,
+  nav[aria-label="Open external topo references"] a,
+  nav[aria-label="Nasenwand sector media"] button,
+  nav[aria-label="Choose a Nasenwand video mode"] button,
+  aside[aria-label="Panorama chapter navigation"] button,
+  nav[aria-label="Step through panorama chapters"] button,
+  button[aria-controls="region-panorama-grid"],
+  input[aria-label="Move from the beginning to the end of the panorama"],
+  input[aria-label="Move from the beginning to the end of the panorama"] + button,
+  section[role="dialog"] > header > button {
+    min-height: 44px;
+  }
+}
