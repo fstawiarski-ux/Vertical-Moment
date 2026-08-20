@@ -35,6 +35,10 @@ section[data-shell="phone"] article[data-box-id="crag-locator"][data-mode="norma
   min-height: 44px !important;
 }
 
+section[data-shell="phone"] article[data-box-id="crag-locator"][data-mode="normal"] [role="group"][aria-label="Atlas pane size"] button {
+  min-width: 44px !important;
+}
+
 section[data-shell="phone"] article[data-box-id="crag-locator"][data-mode="normal"] nav[aria-label="Climbing regions"] {
   margin-bottom: 8px !important;
 }
