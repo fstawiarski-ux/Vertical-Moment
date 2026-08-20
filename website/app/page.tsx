@@ -71,7 +71,8 @@ const publicSiteMarkup = String.raw`
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero-media parallax-layer" data-parallax="0.12">
         <img src="/photography/gallery/vm-6890-peilstein-main-face.webp"
-             alt="Climber on a limestone wall at Peilstein">
+             alt="Climber on a limestone wall at Peilstein"
+             loading="eager" fetchpriority="high" decoding="async">
       </div>
       <div class="hero-shade" aria-hidden="true"></div>
 
@@ -120,7 +121,7 @@ const publicSiteMarkup = String.raw`
 
         <figure class="manifesto-image reveal">
           <img src="/photography/gallery/vm-6965-topping-out.webp"
-               alt="Climber topping out on limestone">
+               alt="Climber topping out on limestone" loading="lazy" decoding="async">
           <figcaption>Real attempts. Real light. No staging.</figcaption>
         </figure>
       </div>
@@ -149,7 +150,7 @@ const publicSiteMarkup = String.raw`
           <button class="work-item work-item-a reveal" type="button"
                   data-src="/photography/gallery/vm-6890-peilstein-main-face.webp"
                   data-title="Peilstein · main face" data-meta="6b+ · Peilstein">
-            <img src="/photography/gallery/vm-6890-peilstein-main-face.webp" alt="Climber on Peilstein main face">
+            <img src="/photography/gallery/vm-6890-peilstein-main-face.webp" alt="Climber on Peilstein main face" loading="lazy" decoding="async">
             <span class="work-caption"><strong>Peilstein · main face</strong><small>6b+</small></span>
             <span class="work-number">01</span>
           </button>
@@ -157,7 +158,7 @@ const publicSiteMarkup = String.raw`
           <button class="work-item work-item-b reveal" type="button"
                   data-src="/photography/gallery/vm-6242-portrait-after-the-send.webp"
                   data-title="Portrait after the send" data-meta="Portrait · Vienna limestone">
-            <img src="/photography/gallery/vm-6242-portrait-after-the-send.webp" alt="Portrait after a climbing attempt">
+            <img src="/photography/gallery/vm-6242-portrait-after-the-send.webp" alt="Portrait after a climbing attempt" loading="lazy" decoding="async">
             <span class="work-caption"><strong>Portrait after the send</strong><small>Portrait</small></span>
             <span class="work-number">02</span>
           </button>
@@ -165,7 +166,7 @@ const publicSiteMarkup = String.raw`
           <button class="work-item work-item-c reveal" type="button"
                   data-src="/photography/gallery/vm-6965-topping-out.webp"
                   data-title="Topping out" data-meta="7a · limestone">
-            <img src="/photography/gallery/vm-6965-topping-out.webp" alt="Climber topping out">
+            <img src="/photography/gallery/vm-6965-topping-out.webp" alt="Climber topping out" loading="lazy" decoding="async">
             <span class="work-caption"><strong>Topping out</strong><small>7a</small></span>
             <span class="work-number">03</span>
           </button>
@@ -173,7 +174,7 @@ const publicSiteMarkup = String.raw`
           <button class="work-item work-item-d reveal" type="button"
                   data-src="/photography/gallery/vm-6913-traverse-morning-light.webp"
                   data-title="Traverse · morning light" data-meta="Glocknergrat">
-            <img src="/photography/gallery/vm-6913-traverse-morning-light.webp" alt="Climber traversing in morning light">
+            <img src="/photography/gallery/vm-6913-traverse-morning-light.webp" alt="Climber traversing in morning light" loading="lazy" decoding="async">
             <span class="work-caption"><strong>Traverse · morning light</strong><small>Glocknergrat</small></span>
             <span class="work-number">04</span>
           </button>
@@ -181,7 +182,7 @@ const publicSiteMarkup = String.raw`
           <button class="work-item work-item-e reveal" type="button"
                   data-src="/photography/gallery/vm-6437-the-hold-that-matters.webp"
                   data-title="The hold that matters" data-meta="Detail study">
-            <img src="/photography/gallery/vm-6437-the-hold-that-matters.webp" alt="Climbing detail on limestone">
+            <img src="/photography/gallery/vm-6437-the-hold-that-matters.webp" alt="Climbing detail on limestone" loading="lazy" decoding="async">
             <span class="work-caption"><strong>The hold that matters</strong><small>Detail</small></span>
             <span class="work-number">05</span>
           </button>
@@ -197,7 +198,7 @@ const publicSiteMarkup = String.raw`
 
     <section class="quote-section">
       <div class="quote-media parallax-layer" data-parallax="0.08">
-        <img src="/photography/gallery/vm-6242-portrait-after-the-send.webp" alt="">
+        <img src="/photography/gallery/vm-6242-portrait-after-the-send.webp" alt="" loading="lazy" decoding="async">
       </div>
       <div class="quote-overlay" aria-hidden="true"></div>
       <div class="quote-lockup reveal">
@@ -212,19 +213,19 @@ const publicSiteMarkup = String.raw`
 
         <div class="panorama-ribbon" aria-label="Wachau panorama scroll-scrub">
           <div class="panorama-layer is-active" data-panorama="0" data-name="Wachau · long ridge">
-            <img src="/photography/panoramas/wachau/wachau-09-preview.webp" alt="Wide Wachau panorama">
+            <picture style="display:block;width:100%;height:100%"><source media="(max-width: 767px)" srcset="/photography/panoramas/wachau/wachau-09-thumb.webp"><img src="/photography/panoramas/wachau/wachau-09-preview.webp" alt="Wide Wachau panorama" loading="lazy" decoding="async"></picture>
           </div>
           <div class="panorama-layer" data-panorama="1" data-name="Wachau · limestone horizon">
-            <img src="/photography/panoramas/wachau/wachau-10-preview.webp" alt="Wide Wachau limestone panorama">
+            <picture style="display:block;width:100%;height:100%"><source media="(max-width: 767px)" srcset="/photography/panoramas/wachau/wachau-10-thumb.webp"><img src="/photography/panoramas/wachau/wachau-10-preview.webp" alt="Wide Wachau limestone panorama" loading="lazy" decoding="async"></picture>
           </div>
           <div class="panorama-layer" data-panorama="2" data-name="Wachau · evening line">
-            <img src="/photography/panoramas/wachau/wachau-12-preview.webp" alt="Wide Wachau evening panorama">
+            <picture style="display:block;width:100%;height:100%"><source media="(max-width: 767px)" srcset="/photography/panoramas/wachau/wachau-12-thumb.webp"><img src="/photography/panoramas/wachau/wachau-12-preview.webp" alt="Wide Wachau evening panorama" loading="lazy" decoding="async"></picture>
           </div>
           <div class="panorama-layer" data-panorama="3" data-name="Wachau · valley study">
-            <img src="/photography/panoramas/wachau/wachau-14-preview.webp" alt="Wide Wachau valley panorama">
+            <picture style="display:block;width:100%;height:100%"><source media="(max-width: 767px)" srcset="/photography/panoramas/wachau/wachau-14-thumb.webp"><img src="/photography/panoramas/wachau/wachau-14-preview.webp" alt="Wide Wachau valley panorama" loading="lazy" decoding="async"></picture>
           </div>
           <div class="panorama-layer" data-panorama="4" data-name="Wachau · final horizon">
-            <img src="/photography/panoramas/wachau/wachau-16-preview.webp" alt="Wide Wachau horizon panorama">
+            <picture style="display:block;width:100%;height:100%"><source media="(max-width: 767px)" srcset="/photography/panoramas/wachau/wachau-16-thumb.webp"><img src="/photography/panoramas/wachau/wachau-16-preview.webp" alt="Wide Wachau horizon panorama" loading="lazy" decoding="async"></picture>
           </div>
           <div class="panorama-shade" aria-hidden="true"></div>
           <div class="panorama-caption shell">
@@ -289,19 +290,19 @@ const publicSiteMarkup = String.raw`
                   </header>
                   <div class="services-editorial">
                     <div class="service-mini">
-                      <figure><img src="/photography/gallery/vm-6965-topping-out.webp" alt="Climber topping out"></figure>
+                      <figure><img src="/photography/gallery/vm-6965-topping-out.webp" alt="Climber topping out" loading="lazy" decoding="async"></figure>
                       <span>Half day</span>
                       <h4>Project session</h4>
                       <p>Your route, your pace, ground and on-rope angles.</p>
                     </div>
                     <div class="service-mini">
-                      <figure><img src="/photography/gallery/vm-6242-portrait-after-the-send.webp" alt="Climber portrait"></figure>
+                      <figure><img src="/photography/gallery/vm-6242-portrait-after-the-send.webp" alt="Climber portrait" loading="lazy" decoding="async"></figure>
                       <span>Full day</span>
                       <h4>Crag &amp; team day</h4>
                       <p>Groups, clubs and courses with portraits and a shared gallery.</p>
                     </div>
                     <div class="service-mini">
-                      <figure><img src="/photography/gallery/vm-6437-the-hold-that-matters.webp" alt="Climbing detail"></figure>
+                      <figure><img src="/photography/gallery/vm-6437-the-hold-that-matters.webp" alt="Climbing detail" loading="lazy" decoding="async"></figure>
                       <span>Commercial</span>
                       <h4>Brand &amp; campaign</h4>
                       <p>Gear, apparel and tourism work with licensing defined before the shoot.</p>
@@ -317,7 +318,7 @@ const publicSiteMarkup = String.raw`
               <article id="about" class="story-panel story-about" data-chapter="2" aria-labelledby="chapter-about">
                 <div class="story-panel-inner shell about-editorial">
                   <figure>
-                    <img src="/photography/gallery/vm-6242-portrait-after-the-send.webp" alt="Climbing portrait">
+                    <img src="/photography/gallery/vm-6242-portrait-after-the-send.webp" alt="Climbing portrait" loading="lazy" decoding="async">
                   </figure>
                   <div>
                     <header class="chapter-heading">
@@ -355,10 +356,10 @@ const publicSiteMarkup = String.raw`
                     <article><span>September · Glocknergrat</span><h4>From photographs to a 3D wall</h4><p>Photogrammetry turns one face into a topo you can rotate — the bridge into the 3D Lab.</p></article>
                   </div>
                   <div class="archive-ribbon" aria-label="Archive frames">
-                    <img src="/photography/gallery/vm-6913-traverse-morning-light.webp" alt="Morning traverse">
-                    <img src="/photography/gallery/vm-6437-the-hold-that-matters.webp" alt="Limestone detail">
-                    <img src="/photography/gallery/vm-6965-topping-out.webp" alt="Climber topping out">
-                    <img src="/photography/gallery/vm-6890-peilstein-main-face.webp" alt="Peilstein main face">
+                    <img src="/photography/gallery/vm-6913-traverse-morning-light.webp" alt="Morning traverse" loading="lazy" decoding="async">
+                    <img src="/photography/gallery/vm-6437-the-hold-that-matters.webp" alt="Limestone detail" loading="lazy" decoding="async">
+                    <img src="/photography/gallery/vm-6965-topping-out.webp" alt="Climber topping out" loading="lazy" decoding="async">
+                    <img src="/photography/gallery/vm-6890-peilstein-main-face.webp" alt="Peilstein main face" loading="lazy" decoding="async">
                   </div>
                 </div>
               </article>
@@ -436,7 +437,7 @@ const publicSiteMarkup = String.raw`
 
     <section class="contact" id="contact">
       <div class="contact-media parallax-layer" data-parallax="0.07">
-        <img src="/photography/gallery/vm-6913-traverse-morning-light.webp" alt="">
+        <img src="/photography/gallery/vm-6913-traverse-morning-light.webp" alt="" loading="lazy" decoding="async">
       </div>
       <div class="contact-overlay" aria-hidden="true"></div>
       <div class="shell contact-copy reveal">
