@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./hero-first.css";
+import "./phone-tool-ux.css";
 
 export const metadata: Metadata = {
   title: "Climbers Lounge Lab",
