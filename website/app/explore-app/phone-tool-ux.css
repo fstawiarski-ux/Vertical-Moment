@@ -139,6 +139,10 @@ section[data-shell="phone"] article[data-box-id="wall-reveal"][data-mode="normal
     border-left: 1px solid rgb(255 255 255 / 10%) !important;
   }
 
+  section[data-shell="phone"] article[data-box-id="crag-locator"][data-mode="normal"] [role="separator"] {
+    display: none !important;
+  }
+
   section[data-shell="phone"] article[data-box-id="nasenwand-spatial"][data-mode="normal"] div:has(> section[aria-label="Nasenwand wall photograph"] + aside) {
     grid-template-columns: minmax(0, 46%) minmax(0, 54%) !important;
     grid-template-rows: 1fr !important;
