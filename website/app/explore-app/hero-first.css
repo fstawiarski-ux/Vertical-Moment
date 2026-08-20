@@ -4,7 +4,8 @@
  * The journey choreography is onboarding. Once unlocked, module geometry is
  * user-owned, while the hero media remains independently scrub-able. Replay
  * Journey is the only operation that reconnects journey choreography to the
- * modules. Normal modules start compact; maximize/fullscreen are opt-in.
+ * modules. Phone keeps one active, usable work surface; desktop keeps freeform
+ * inspectors. Fullscreen remains opt-in.
  */
 
 /* After unlock the compact timeline remains live, but the full-screen gesture
@@ -14,7 +15,7 @@ section[aria-label="Wachau approach scrub sequence"][data-unlocked="true"] > div
   cursor: default !important;
 }
 
-/* ---------- PHONE: one active tool, small by default ---------- */
+/* ---------- PHONE: one active, touch-first tool ---------- */
 section[data-shell="phone"] {
   position: fixed !important;
   inset: 0 !important;
@@ -29,10 +30,12 @@ section[data-shell="phone"] > * { pointer-events: auto; }
 section[data-shell="phone"] > header,
 section[data-shell="phone"] > p { display: none !important; }
 
+/* Navigation belongs at the thumb-reachable bottom edge on portrait phones. */
 section[data-shell="phone"] > [data-role="phone-nav"] {
   position: absolute;
-  top: max(8px, env(safe-area-inset-top));
+  top: auto;
   right: 10px;
+  bottom: max(8px, env(safe-area-inset-bottom));
   left: 10px;
   z-index: 9780;
   display: grid;
@@ -41,13 +44,13 @@ section[data-shell="phone"] > [data-role="phone-nav"] {
   padding: 4px;
   border: 1px solid rgb(224 202 128 / 18%);
   border-radius: 14px;
-  background: rgb(7 13 9 / 64%);
-  box-shadow: 0 12px 32px rgb(0 0 0 / 20%);
+  background: rgb(7 13 9 / 76%);
+  box-shadow: 0 12px 32px rgb(0 0 0 / 28%);
   backdrop-filter: blur(12px) saturate(1.08);
 }
 section[data-shell="phone"] > [data-role="phone-nav"] button {
   min-width: 0;
-  min-height: 42px;
+  min-height: 46px;
   padding: 0 5px;
   overflow: hidden;
   color: #e8e3d4;
@@ -72,14 +75,17 @@ section[data-shell="phone"] > [data-role="phone-nav"] button:focus-visible {
   outline-offset: 2px;
 }
 
+/* The default phone module is now a real work surface rather than a preview
+   card. It stays below the hero centre and above bottom navigation. */
 section[data-shell="phone"] > [data-role="phone-stage"] {
   position: absolute !important;
+  right: 12px;
+  bottom: max(78px, calc(env(safe-area-inset-bottom) + 70px));
   left: 12px;
-  bottom: max(14px, env(safe-area-inset-bottom));
   z-index: 80;
-  width: min(72vw, 286px) !important;
-  height: min(24dvh, 202px) !important;
-  min-height: 150px !important;
+  width: auto !important;
+  height: clamp(300px, 46dvh, 430px) !important;
+  min-height: 300px !important;
   overflow: visible !important;
 }
 section[data-shell="phone"] > [data-role="phone-stage"] > article[data-mode="normal"] {
@@ -90,15 +96,36 @@ section[data-shell="phone"] > [data-role="phone-stage"] > article[data-mode="nor
   min-width: 0 !important;
   min-height: 0 !important;
   transform: none !important;
-  border-radius: 12px !important;
+  border-radius: 14px !important;
 }
 
-/* Normal boxes share one contextual control contract on every viewport. The
-   controls reveal after focus/touch or movement and float above the frame. */
+/* Phone does not expose desktop window management. The only visible module
+   action is full-screen expand/collapse, kept inside the frame with a 44px hit
+   target. Shell navigation owns switching modules. */
+section[data-shell="phone"] article[data-viewport="mobile"]:not([data-mode="minimized"]) [data-module-window-controls="true"] button:first-child,
+section[data-shell="phone"] article[data-viewport="mobile"]:not([data-mode="minimized"]) [data-module-window-controls="true"] button:nth-child(3) {
+  display: none !important;
+}
+section[data-shell="phone"] article[data-viewport="mobile"]:not([data-mode="minimized"]) [data-module-window-controls="true"] button:nth-child(2) {
+  display: grid !important;
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
+}
+section[data-shell="phone"] article[data-viewport="mobile"][data-mode="normal"] [data-module-window-controls="true"] {
+  display: flex !important;
+  top: 8px !important;
+  right: 8px !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: none !important;
+}
+
 /* Expanded = deliberate large work view. Fullscreen = true takeover. */
 section[data-shell="phone"] article[data-mode="expanded"] {
   position: fixed !important;
-  inset: 66px 12px 12px !important;
+  inset: 12px 12px max(82px, calc(env(safe-area-inset-bottom) + 74px)) !important;
   z-index: 9850 !important;
   width: auto !important;
   height: auto !important;
@@ -124,14 +151,17 @@ section[data-shell="phone"] article[data-mode="fullscreen"] [data-module-window-
 
 section[data-shell="phone"] > [data-role="phone-more"] {
   position: absolute;
-  top: 62px;
+  top: auto;
   right: 10px;
+  bottom: max(70px, calc(env(safe-area-inset-bottom) + 62px));
   left: 10px;
   z-index: 9840;
   display: grid;
+  max-height: min(58dvh, 460px);
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 6px;
   padding: 8px;
+  overflow-y: auto;
   border: 1px solid rgb(224 202 128 / 22%);
   border-radius: 14px;
   background: rgb(7 13 9 / 95%);
@@ -146,7 +176,8 @@ section[data-shell="phone"] > [data-role="phone-more"] button {
   background: rgb(255 255 255 / 5%);
 }
 
-/* Short landscape: navigation becomes a thin right rail; hero stays visible. */
+/* Short landscape keeps the navigation in a right rail so it does not consume
+   scarce vertical workspace. This is still the phone product, not a tablet UI. */
 @media (min-width: 768px) and (max-height: 539px) {
   section[data-shell="phone"] > [data-role="phone-nav"] {
     top: 8px;
@@ -155,15 +186,16 @@ section[data-shell="phone"] > [data-role="phone-more"] button {
     left: auto;
     width: 66px;
     grid-template-columns: 1fr;
-    grid-auto-rows: minmax(42px, 1fr);
+    grid-auto-rows: minmax(44px, 1fr);
     align-content: center;
   }
   section[data-shell="phone"] > [data-role="phone-stage"] {
+    right: auto;
     left: 12px;
     bottom: 12px;
-    width: min(40vw, 340px) !important;
-    height: min(48dvh, 188px) !important;
-    min-height: 150px !important;
+    width: min(58vw, 460px) !important;
+    height: min(70dvh, 280px) !important;
+    min-height: 220px !important;
   }
   section[data-shell="phone"] > [data-role="phone-more"] {
     top: 8px;
@@ -171,13 +203,14 @@ section[data-shell="phone"] > [data-role="phone-more"] button {
     bottom: 8px;
     left: auto;
     width: min(300px, calc(100vw - 106px));
+    max-height: none;
     align-content: start;
     overflow-y: auto;
   }
   section[data-shell="phone"] article[data-mode="expanded"] { inset: 10px 82px 10px 10px !important; }
 }
 
-/* ---------- TABLET: compact edge tools, not page-sized cards ---------- */
+/* ---------- TABLET: inherited fallback, not a dedicated P1 product ---------- */
 [data-layout="tablet"][data-hierarchy="phone-inspired"] {
   top: 82px !important;
   right: 12px !important;
@@ -216,7 +249,7 @@ body:has(section[aria-label="Wachau approach scrub sequence"]) [role="status"] {
 
 @media (max-width: 767px), (max-height: 539px) {
   body:has(section[data-shell="phone"]) [role="status"] {
-    top: max(62px, calc(env(safe-area-inset-top) + 54px)) !important;
+    top: max(10px, env(safe-area-inset-top)) !important;
     right: max(10px, env(safe-area-inset-right)) !important;
     bottom: auto !important;
     max-width: min(46vw, 180px);
@@ -237,7 +270,7 @@ body:has(section[aria-label="Wachau approach scrub sequence"]) [role="status"] {
   section[data-shell="phone"] > [data-role="phone-nav"] { animation: none !important; transition: none !important; }
 }
 /* PHONE-EXPANDED-STATE-HOTFIX
-   Escape the compact phone-stage sizing for explicit expanded/fullscreen states.
+   Escape the phone-stage sizing for explicit expanded/fullscreen states.
    These selectors intentionally outrank the legacy phone-stage module rules. */
 
 section[data-shell="phone"] > [data-role="phone-stage"]:has(> article[data-mode="expanded"]) {
@@ -250,7 +283,7 @@ section[data-shell="phone"] > [data-role="phone-stage"]:has(> article[data-mode=
 
 section[data-shell="phone"] > [data-role="phone-stage"] > article[data-viewport="mobile"][data-mode="expanded"] {
   position: fixed !important;
-  inset: 66px 12px 12px !important;
+  inset: 12px 12px max(82px, calc(env(safe-area-inset-bottom) + 74px)) !important;
   z-index: 9850 !important;
   width: auto !important;
   height: auto !important;
