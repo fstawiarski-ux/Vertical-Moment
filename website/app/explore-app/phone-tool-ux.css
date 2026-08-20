@@ -105,6 +105,10 @@ section[data-shell="phone"] article[data-box-id="wachau-16"][data-mode="normal"]
   min-height: 44px !important;
 }
 
+section[data-shell="phone"] article[data-box-id="wachau-16"][data-mode="normal"] nav[aria-label="Panorama scale"] button {
+  min-width: 44px !important;
+}
+
 section[data-shell="phone"] article[data-box-id="wachau-16"][data-mode="normal"] div:has(> div:has(> nav[aria-label="Panorama scale"])) {
   min-height: 0 !important;
   grid-template-rows: auto minmax(0, 1fr) auto !important;
