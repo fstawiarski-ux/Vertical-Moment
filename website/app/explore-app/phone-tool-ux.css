@@ -1,0 +1,151 @@
+/* P3 phone tool UX
+ * -----------------
+ * P1 owns the phone shell. This layer only adapts module internals while they
+ * are shown in the normal phone work surface. Fullscreen/expanded modes keep
+ * each module's richer native layout.
+ */
+
+/* ---------- Atlas: keep map + inspector usable inside the normal card ---------- */
+section[data-shell="phone"] article[data-box-id="crag-locator"][data-mode="normal"] div:has(> aside[aria-label="Selected atlas content"]) {
+  height: 100% !important;
+  min-height: 0 !important;
+  grid-template-columns: 1fr !important;
+  grid-template-rows: minmax(150px, 58%) minmax(0, 42%) !important;
+  overflow: hidden !important;
+}
+
+section[data-shell="phone"] article[data-box-id="crag-locator"][data-mode="normal"] div:has(> div[aria-label="Map of climbing regions and crags"]) {
+  min-height: 0 !important;
+}
+
+section[data-shell="phone"] article[data-box-id="crag-locator"][data-mode="normal"] aside[aria-label="Selected atlas content"] {
+  min-height: 0 !important;
+  padding: 10px 10px 14px !important;
+  overscroll-behavior: contain;
+}
+
+section[data-shell="phone"] article[data-box-id="crag-locator"][data-mode="normal"] [role="separator"] {
+  min-height: 20px;
+}
+
+section[data-shell="phone"] article[data-box-id="crag-locator"][data-mode="normal"] [role="group"][aria-label="Atlas pane size"] button,
+section[data-shell="phone"] article[data-box-id="crag-locator"][data-mode="normal"] select,
+section[data-shell="phone"] article[data-box-id="crag-locator"][data-mode="normal"] input[type="search"],
+section[data-shell="phone"] article[data-box-id="crag-locator"][data-mode="normal"] nav[aria-label="Climbing regions"] button {
+  min-height: 44px !important;
+}
+
+section[data-shell="phone"] article[data-box-id="crag-locator"][data-mode="normal"] nav[aria-label="Climbing regions"] {
+  margin-bottom: 8px !important;
+}
+
+/* ---------- Routes: photo remains context; route interaction gets the space ---------- */
+section[data-shell="phone"] article[data-box-id="nasenwand-spatial"][data-mode="normal"] header:has(nav[aria-label="Nasenwand sectors"]) {
+  min-height: 44px;
+  padding: 4px 8px !important;
+}
+
+section[data-shell="phone"] article[data-box-id="nasenwand-spatial"][data-mode="normal"] header:has(nav[aria-label="Nasenwand sectors"]) > div {
+  display: none !important;
+}
+
+section[data-shell="phone"] article[data-box-id="nasenwand-spatial"][data-mode="normal"] nav[aria-label="Nasenwand sectors"] {
+  width: 100%;
+}
+
+section[data-shell="phone"] article[data-box-id="nasenwand-spatial"][data-mode="normal"] nav[aria-label="Nasenwand sectors"] button,
+section[data-shell="phone"] article[data-box-id="nasenwand-spatial"][data-mode="normal"] section[aria-label="Nasenwand wall photograph"] button,
+section[data-shell="phone"] article[data-box-id="nasenwand-spatial"][data-mode="normal"] aside[aria-label$="sector quick route list"] button {
+  min-height: 44px !important;
+}
+
+section[data-shell="phone"] article[data-box-id="nasenwand-spatial"][data-mode="normal"] div:has(> section[aria-label="Nasenwand wall photograph"] + aside) {
+  height: 100% !important;
+  min-height: 0 !important;
+  grid-template-columns: 1fr !important;
+  grid-template-rows: minmax(105px, 42%) minmax(0, 58%) !important;
+  overflow: hidden !important;
+}
+
+section[data-shell="phone"] article[data-box-id="nasenwand-spatial"][data-mode="normal"] section[aria-label="Nasenwand wall photograph"] {
+  min-height: 0 !important;
+}
+
+section[data-shell="phone"] article[data-box-id="nasenwand-spatial"][data-mode="normal"] section[aria-label="Nasenwand wall photograph"] span {
+  display: none !important;
+}
+
+section[data-shell="phone"] article[data-box-id="nasenwand-spatial"][data-mode="normal"] aside[aria-label$="sector quick route list"] {
+  min-height: 0 !important;
+  padding: 10px !important;
+  overscroll-behavior: contain;
+}
+
+/* ---------- Panorama: image + pan controls first; offline pack returns fullscreen ---------- */
+section[data-shell="phone"] article[data-box-id="wachau-16"][data-mode="normal"] div:has(> nav[aria-label="Panorama scale"]) {
+  min-height: 44px;
+  flex-direction: row !important;
+  padding: 4px 8px !important;
+}
+
+section[data-shell="phone"] article[data-box-id="wachau-16"][data-mode="normal"] div:has(> nav[aria-label="Panorama scale"]) > button {
+  display: none !important;
+}
+
+section[data-shell="phone"] article[data-box-id="wachau-16"][data-mode="normal"] nav[aria-label="Panorama scale"] {
+  width: 100%;
+}
+
+section[data-shell="phone"] article[data-box-id="wachau-16"][data-mode="normal"] nav[aria-label="Panorama scale"] button,
+section[data-shell="phone"] article[data-box-id="wachau-16"][data-mode="normal"] label:has(> span:first-child + input[type="range"]) button {
+  min-height: 44px !important;
+}
+
+section[data-shell="phone"] article[data-box-id="wachau-16"][data-mode="normal"] div:has(> div:has(> nav[aria-label="Panorama scale"])) {
+  min-height: 0 !important;
+  grid-template-rows: auto minmax(0, 1fr) auto !important;
+}
+
+section[data-shell="phone"] article[data-box-id="wachau-16"][data-mode="normal"] div[aria-label="Wachau panorama studies"] {
+  padding: 5px 7px !important;
+}
+
+section[data-shell="phone"] article[data-box-id="wachau-16"][data-mode="normal"] div[aria-label="Wachau panorama studies"] button {
+  width: 88px !important;
+  height: 52px !important;
+  min-height: 52px !important;
+  flex-basis: 88px !important;
+}
+
+section[data-shell="phone"] article[data-box-id="wachau-16"][data-mode="normal"] div:has(> div[aria-label="Wachau panorama studies"]) > footer {
+  display: none !important;
+}
+
+/* ---------- Wall story: compact controls remain finger-sized ---------- */
+section[data-shell="phone"] article[data-box-id="wall-reveal"][data-mode="normal"] nav[aria-label="Wall study views"] button,
+section[data-shell="phone"] article[data-box-id="wall-reveal"][data-mode="normal"] button {
+  min-height: 44px !important;
+}
+
+/* Landscape has even less height; favor information over decorative copy. */
+@media (min-width: 768px) and (max-height: 539px) {
+  section[data-shell="phone"] article[data-box-id="crag-locator"][data-mode="normal"] div:has(> aside[aria-label="Selected atlas content"]) {
+    grid-template-columns: minmax(0, 58%) minmax(0, 42%) !important;
+    grid-template-rows: 1fr !important;
+  }
+
+  section[data-shell="phone"] article[data-box-id="crag-locator"][data-mode="normal"] aside[aria-label="Selected atlas content"] {
+    border-top: 0 !important;
+    border-left: 1px solid rgb(255 255 255 / 10%) !important;
+  }
+
+  section[data-shell="phone"] article[data-box-id="nasenwand-spatial"][data-mode="normal"] div:has(> section[aria-label="Nasenwand wall photograph"] + aside) {
+    grid-template-columns: minmax(0, 46%) minmax(0, 54%) !important;
+    grid-template-rows: 1fr !important;
+  }
+
+  section[data-shell="phone"] article[data-box-id="nasenwand-spatial"][data-mode="normal"] aside[aria-label$="sector quick route list"] {
+    border-top: 0 !important;
+    border-left: 1px solid rgb(255 255 255 / 9%) !important;
+  }
+}
