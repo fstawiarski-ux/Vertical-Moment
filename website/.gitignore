@@ -45,3 +45,7 @@ public/sw.js.map
 .dev.vars*
 !.dev.vars.example
 tsconfig.tsbuildinfo
+
+# QA and repository-health evidence: written by the qa-* scripts and by
+# `npm run verify:all -- --json`, uploaded as a CI artifact, never committed.
+review-artifacts/

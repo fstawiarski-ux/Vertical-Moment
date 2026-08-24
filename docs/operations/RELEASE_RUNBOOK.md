@@ -21,11 +21,14 @@ For website or shared-data work:
 ```powershell
 Set-Location website
 npm ci
-npm run verify-data
-npm test
-npx tsc --noEmit -p tsconfig.json
+npm run verify:all
 npm run build:next
 ```
+
+`verify:all` runs the same commands as the `test` check, in the same order, and
+names the failing step and how to re-run it on its own. Add `-- --full` to also
+run the `validate-json` and `contract` checks locally; that needs `pwsh` and
+network. Add `-- --json` to leave a machine-readable result for the reviewer.
 
 For Explore/PWA work also run `npm run build` and `npm run build:sw`. Add browser/device evidence when interaction or responsive behavior changes.
 

@@ -73,6 +73,57 @@ Then open `http://localhost:3000/explore-app`. Use `http://localhost:3000/contri
 
 `npm run preview` is reserved for the OpenNext/Cloudflare preview workflow. Cloudflare publication remains separate from a GitHub push and requires explicit cutover approval.
 
+## Repository health
+
+One command runs every check the `test` job runs, in the same order:
+
+```bash
+npm run verify:all
+```
+
+It composes the existing scripts rather than replacing them, prints a PASS/FAIL
+line per step, and on failure prints the exact command to re-run that step on
+its own together with its captured output.
+
+| Flag | Effect |
+|---|---|
+| `--full` | also runs the `contract` and `validate-json` required checks (needs `pwsh` and network) |
+| `--bail` | stops at the first failing step |
+| `--json[=path]` | writes a machine-readable result, default `review-artifacts/repo-health.json` |
+| `--verbose` | streams each step's output instead of capturing it |
+
+`main` requires three GitHub checks. Each has a local equivalent:
+
+| Required check | Workflow | Local equivalent |
+|---|---|---|
+| `test` | `.github/workflows/test.yml` | `npm run verify:all` |
+| `validate-json` | `.github/workflows/validate-data.yml` | `npm run verify:all -- --full` |
+| `contract` | `.github/workflows/repository-contract.yml` | `npm run verify:all -- --full` |
+
+`scripts/ci-contract.test.ts` fails the build if `verify:all` and the workflow
+ever stop running the same commands in the same order, so the table above
+cannot silently go stale.
+
+Individual steps stay runnable on their own: `npm run sync-data`,
+`npm run verify-data`, `npm run verify-canonical`, `npm run verify-pwa-content`,
+`npm run verify-security`, `npm run typecheck`, `npm test`.
+
+### There is no lint script
+
+`next lint` was removed in Next 16 and this package has never carried ESLint —
+no dependency, no config. Left in place the script did not report an obsolete
+command: `next lint` parses as `next <dir>` and fails with
+`no such directory: .../website/lint`, which sends the reader looking for a
+folder that was never supposed to exist. The script is gone rather than
+misleading.
+
+Adopting ESLint is a separate, deliberate decision. A measured trial run of
+`eslint@9` with `eslint-config-next@16.2.12` reported 97 problems (49 errors,
+48 warnings) across 36 files, concentrated in `react-hooks/set-state-in-effect`
+(38), `@next/next/no-img-element` (23) and `@next/next/no-html-link-for-pages`
+(18). Turning that into a green gate means editing Explore and public-site
+components, which is a product change, not repository maintenance.
+
 ## Data layers
 
 - `../database/master/vertical-moment-canonical.json`: active route source for the API, website mirror and Explore atlas. The 2,416-row Master v1 and 2,314-row Master v4 material remain preserved review/staging inputs; see [`../docs/architecture/ADR-0002-canonical-route-source.md`](../docs/architecture/ADR-0002-canonical-route-source.md).

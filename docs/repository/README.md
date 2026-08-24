@@ -79,8 +79,7 @@ git log -1 --oneline
 Get-Content .github\CODEOWNERS
 Set-Location website
 npm ci
-npm test
-npm run verify-data
+npm run verify:all
 ```
 
 If the checkout is dirty, stop and identify its owner before running cleanup or staging commands.

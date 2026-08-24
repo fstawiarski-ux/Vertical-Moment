@@ -9,6 +9,12 @@
 *.md text
 *.yml text
 *.yaml text
+
+# Generated verbatim by website/scripts/sync-data.mjs, which always writes LF.
+# Without an explicit eol a Windows checkout gets CRLF, so every sync-data run
+# -- and therefore every dev and every build -- leaves a phantom modification
+# in git status for a file nobody edited.
+website/app/(platform)/explore/atlas-data.json text eol=lf
 # Large binary assets belong in Git LFS once added.
 *.glb filter=lfs diff=lfs merge=lfs -text
 *.gltf filter=lfs diff=lfs merge=lfs -text

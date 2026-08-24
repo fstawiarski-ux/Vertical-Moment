@@ -7,6 +7,14 @@ const repoRoot = path.resolve(here, "..", "..");
 const websiteRoot = path.resolve(repoRoot, "website");
 const errors = [];
 
+// These carry the forbidden strings on purpose: the checker itself, and the
+// test that proves the checker still rejects them. Named one by one rather
+// than matched by pattern so the exemption cannot quietly widen.
+const fixtureFiles = new Set([
+  path.join(websiteRoot, "scripts", "verify-security-boundaries.mjs"),
+  path.join(websiteRoot, "scripts", "verify-scripts.test.ts"),
+]);
+
 async function filesUnder(root) {
   const entries = await readdir(root, { withFileTypes: true });
   const files = [];
@@ -46,7 +54,7 @@ if (manifest.prefer_related_applications !== false) {
 for (const root of [path.join(websiteRoot, "app"), path.join(websiteRoot, "src"), path.join(websiteRoot, "scripts")]) {
   for (const file of await filesUnder(root)) {
     if (!/\.(?:ts|tsx|mjs|js)$/.test(file)) continue;
-    if (path.basename(file) === "verify-security-boundaries.mjs") continue;
+    if (fixtureFiles.has(file)) continue;
     const source = await readFile(file, "utf8");
     if (source.includes("/atlas-gpx/")) {
       errors.push(`public GPX URL reference found in ${path.relative(repoRoot, file)}`);
@@ -60,7 +68,10 @@ for (const root of [path.join(websiteRoot, "app"), path.join(websiteRoot, "src")
 for (const file of await filesUnder(path.join(repoRoot, ".github", "workflows"))) {
   if (!/\.ya?ml$/.test(file)) continue;
   const source = await readFile(file, "utf8");
-  for (const match of source.matchAll(/^\s*uses:\s*([^\s]+)@([^\s#]+)/gm)) {
+  // The optional list dash matters: validate-data.yml writes its steps as
+  // `- uses: actions/checkout@<sha>`, and a pattern anchored on whitespace
+  // followed by `uses:` skipped every action in that file, pinned or not.
+  for (const match of source.matchAll(/^\s*(?:-\s*)?uses:\s*([^\s]+)@([^\s#]+)/gm)) {
     if (!/^[0-9a-f]{40}$/i.test(match[2])) {
       errors.push(`unpinned GitHub Action ${match[1]}@${match[2]} in ${path.relative(repoRoot, file)}`);
     }
