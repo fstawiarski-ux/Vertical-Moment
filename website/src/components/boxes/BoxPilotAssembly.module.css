@@ -1,4 +1,15 @@
-.assembly { display: grid; width: 100%; height: 100%; min-height: 0; grid-template-rows: auto auto minmax(0, 1fr) auto; gap: 10px; overflow: hidden; padding: clamp(14px, 3vw, 24px); color: #eee8d8; background: radial-gradient(circle at 88% 4%, rgb(190 158 87 / 16%), transparent 34%), linear-gradient(145deg, #152019, #090f0c 68%); }
+.assembly { position: relative; isolation: isolate; display: grid; width: 100%; height: 100%; min-height: 0; grid-template-rows: auto auto minmax(0, 1fr) auto; gap: 10px; overflow: hidden; padding: clamp(14px, 3vw, 24px); color: #eee8d8; background: radial-gradient(circle at 88% 4%, rgb(190 158 87 / 16%), transparent 34%), linear-gradient(145deg, #152019, #090f0c 68%); }
+.assembly > :not(.moduleBackground) { position: relative; z-index: 1; }
+.assembly[data-has-background="true"] { grid-template-rows: auto auto auto minmax(0, 1fr) auto; }
+.moduleBackground { position: absolute; inset: 0; z-index: 0; overflow: hidden; background: #08100b; }
+.moduleBackground img,
+.moduleBackground video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.moduleBackground video { z-index: 1; }
+.moduleBackground > span { position: absolute; inset: 0; z-index: 2; background: linear-gradient(180deg, rgb(4 8 5 / 42%), rgb(4 8 5 / 78%)), linear-gradient(90deg, rgb(4 8 5 / 74%), transparent 72%); }
+.backgroundScrubber { display: grid; gap: 4px; padding: 6px 8px; border: 1px solid rgb(255 255 255 / 12%); border-radius: 9px; background: rgb(3 8 5 / 64%); backdrop-filter: blur(8px); touch-action: none; }
+.backgroundScrubber span { color: #d8c99f; font: 700 8px/1.2 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .06em; text-transform: uppercase; }
+.backgroundScrubber input { width: 100%; height: 28px; margin: 0; accent-color: #d3b76f; cursor: ew-resize; }
+.backgroundScrubber input:disabled { cursor: wait; opacity: .42; }
 .intro { display: flex; align-items: start; justify-content: space-between; gap: 12px; }
 .intro small { color: #cdbb8b; font: 700 8px/1.2 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .08em; text-transform: uppercase; }
 .intro h3 { margin: 4px 0 0; font: 500 clamp(20px, 3.6vw, 38px)/1 Georgia, serif; }

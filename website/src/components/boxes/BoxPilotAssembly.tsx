@@ -1,8 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
 import type { ExploreImageAsset, ExploreModelAsset } from "../../core/types";
-import type { ExplorePilotManifest, PilotAssetKey, PilotModuleKey } from "../../core/pilotTypes";
+import type { ExplorePilotManifest, PilotAssetKey, PilotModuleBackground, PilotModuleKey } from "../../core/pilotTypes";
 import { Box3DModel } from "./Box3DModel";
 import styles from "./BoxPilotAssembly.module.css";
 
@@ -54,12 +54,89 @@ function ModelSlot({ pilot, isActive }: { pilot: ExplorePilotManifest; isActive:
   return <div className={styles.model}><Box3DModel model={model} poster={poster} isActive={isActive} label={pilot.identity.crag} intentOnly /></div>;
 }
 
+function ModuleScrubBackground({ background, isActive }: { background: PilotModuleBackground; isActive: boolean }) {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [progress, setProgress] = useState(0);
+
+  const seek = useCallback((nextProgress: number) => {
+    const next = Math.max(0, Math.min(1, nextProgress));
+    setProgress(next);
+    const video = videoRef.current;
+    if (!video || video.readyState < 1) return;
+    const duration = Number.isFinite(video.duration) && video.duration > 0 ? video.duration : background.duration;
+    const target = next * Math.max(0, duration - 1 / 30);
+    if (Math.abs(video.currentTime - target) > 0.02) {
+      try { video.currentTime = target; } catch { /* metadata can still be settling */ }
+    }
+  }, [background.duration]);
+
+  useEffect(() => {
+    if (isActive) seek(progress);
+  }, [isActive, progress, seek]);
+
+  const seekFromPointer = useCallback((event: ReactPointerEvent<HTMLLabelElement>) => {
+    const bounds = event.currentTarget.getBoundingClientRect();
+    seek((event.clientX - bounds.left) / Math.max(1, bounds.width));
+  }, [seek]);
+
+  return (
+    <>
+      <div className={styles.moduleBackground} aria-hidden="true">
+        <img src={background.poster} alt="" />
+        {isActive && (
+          <video
+            ref={videoRef}
+            src={background.src}
+            poster={background.poster}
+            muted
+            playsInline
+            preload="metadata"
+            style={{ objectPosition: background.objectPosition ?? "center" }}
+            onLoadedMetadata={() => seek(progress)}
+          />
+        )}
+        <span />
+      </div>
+      <label
+        className={styles.backgroundScrubber}
+        onPointerDown={(event) => {
+          if (!isActive) return;
+          event.currentTarget.setPointerCapture(event.pointerId);
+          seekFromPointer(event);
+        }}
+        onPointerMove={(event) => {
+          if (isActive && event.currentTarget.hasPointerCapture(event.pointerId)) seekFromPointer(event);
+        }}
+        onPointerUp={(event) => {
+          if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
+        }}
+        onPointerCancel={(event) => {
+          if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
+        }}
+      >
+        <span>Slide through the Däumling formation</span>
+        <input
+          type="range"
+          min="0"
+          max="100"
+          step="0.1"
+          value={progress * 100}
+          disabled={!isActive}
+          aria-label="Scrub the Däumling routes background"
+          onChange={(event) => seek(Number(event.target.value) / 100)}
+        />
+      </label>
+    </>
+  );
+}
+
 export function BoxPilotAssembly({ pilot, moduleKey, isActive }: { pilot: ExplorePilotManifest; moduleKey: PilotModuleKey; isActive: boolean }) {
   const module = pilot.modules[moduleKey];
   const slots = useMemo(() => module.primarySlots, [module.primarySlots]);
 
   return (
-    <div className={styles.assembly}>
+    <div className={styles.assembly} data-has-background={module.background ? "true" : "false"}>
+      {module.background && <ModuleScrubBackground background={module.background} isActive={isActive} />}
       <header className={styles.intro}>
         <div>
           <small>{pilot.identity.region} / {pilot.identity.crag}</small>
@@ -82,7 +159,7 @@ export function BoxPilotAssembly({ pilot, moduleKey, isActive }: { pilot: Explor
         {slots.map((assetKey) => assetKey === "model"
           ? <ModelSlot key={assetKey} pilot={pilot} isActive={isActive} />
           : <AssetSlot key={assetKey} pilot={pilot} assetKey={assetKey} />)}
-        {slots.length === 0 && (
+        {slots.length === 0 && !module.background && (
           <div className={styles.dataReady}>
             <strong>Canonical locator stays shared</strong>
             <p>This box continues to use the common region and crag index. Pilot-specific map styling can be added without duplicating the atlas.</p>

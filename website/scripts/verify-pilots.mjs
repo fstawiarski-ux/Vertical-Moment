@@ -15,6 +15,7 @@ const statuses = new Set(["missing", "review", "ready"]);
 const kinds = new Set(["image", "video", "model", "panorama", "link"]);
 const ids = new Set();
 let previewAdapterCount = 0;
+const maxStaticAssetBytes = 25 * 1024 * 1024;
 
 function requiredString(label, value) {
   if (typeof value !== "string" || !value.trim()) failures.push(`${label}: required non-empty string`);
@@ -30,6 +31,42 @@ async function resolvedAssetSize(assetFile, details) {
   const contents = await readFile(assetFile, "utf8");
   const lfsSize = contents.match(/^version https:\/\/git-lfs\.github\.com\/spec\/v1\r?\n(?:oid sha256:[a-f0-9]{64}\r?\n)size (\d+)\r?\n?$/)?.[1];
   return lfsSize ? Number(lfsSize) : details.size;
+}
+
+async function validateVideoDerivative(label, pilotId, media) {
+  for (const key of ["src", "poster", "sha256", "alt"]) requiredString(`${label}.${key}`, media?.[key]);
+  if (!(typeof media?.duration === "number" && media.duration > 0)) failures.push(`${label}.duration: expected a positive number`);
+  if (!Number.isInteger(media?.bytes) || media.bytes <= 0) failures.push(`${label}.bytes: expected a positive integer`);
+  if (media?.bytes > maxStaticAssetBytes) failures.push(`${label}.bytes: exceeds the 25 MiB Workers static-asset limit`);
+  if (!/^[A-F0-9]{64}$/.test(media?.sha256 ?? "")) failures.push(`${label}.sha256: expected uppercase SHA-256`);
+  if (!media?.src?.startsWith(`/explore/pilots/${pilotId}/`)) failures.push(`${label}.src: must live under this pilot folder`);
+  if (!media?.poster?.startsWith(`/explore/pilots/${pilotId}/`)) failures.push(`${label}.poster: must live under this pilot folder`);
+
+  const assetFile = publicFileFor(media?.src);
+  if (assetFile) {
+    try {
+      const details = await stat(assetFile);
+      const assetSize = await resolvedAssetSize(assetFile, details);
+      if (!details.isFile() || assetSize === 0) failures.push(`${label}.src: missing or empty ${media.src}`);
+      if (media.bytes !== assetSize) failures.push(`${label}.bytes: expected ${assetSize}, found ${media.bytes}`);
+    } catch {
+      failures.push(`${label}.src: missing public asset ${media.src}`);
+    }
+  } else {
+    failures.push(`${label}.src: must use a same-origin public path`);
+  }
+
+  const posterFile = publicFileFor(media?.poster);
+  if (posterFile) {
+    try {
+      const details = await stat(posterFile);
+      if (!details.isFile() || details.size === 0) failures.push(`${label}.poster: missing or empty ${media.poster}`);
+    } catch {
+      failures.push(`${label}.poster: missing public asset ${media.poster}`);
+    }
+  } else {
+    failures.push(`${label}.poster: must use a same-origin public path`);
+  }
 }
 
 if (catalog.schemaVersion !== 1) failures.push("index.schemaVersion: expected 1");
@@ -70,6 +107,16 @@ for (const [catalogIndex, entry] of (catalog.pilots ?? []).entries()) {
     if (pilot.assets?.[chapter.asset]?.kind !== "video") failures.push(`${chapterLabel}.asset: must reference a video slot`);
     if (pilot.assets?.[chapter.asset]?.status === "ready" && !(typeof chapter.duration === "number" && chapter.duration > 0)) failures.push(`${chapterLabel}.duration: ready scrub videos require a positive duration`);
   }
+  if (pilot.journey?.master) {
+    await validateVideoDerivative(`${label}.journey.master`, pilot.id, pilot.journey.master);
+    if (!(typeof pilot.journey.master.keyframeIntervalSeconds === "number" && pilot.journey.master.keyframeIntervalSeconds > 0)) failures.push(`${label}.journey.master.keyframeIntervalSeconds: expected a positive number`);
+    const stationValues = ["region", "rock", "sector", "topo"].map((station) => pilot.journey.master.stations?.[station]);
+    if (!stationValues.every((value) => typeof value === "number" && value >= 0 && value <= 1)) {
+      failures.push(`${label}.journey.master.stations: all four stations must be between 0 and 1`);
+    } else if (!stationValues.every((value, index) => index === 0 || value > stationValues[index - 1])) {
+      failures.push(`${label}.journey.master.stations: expected strict Region to Rock to Sector to Topo order`);
+    }
+  }
 
   for (const moduleKey of moduleKeys) {
     const module = pilot.modules?.[moduleKey];
@@ -80,6 +127,10 @@ for (const [catalogIndex, entry] of (catalog.pilots ?? []).entries()) {
     for (const key of ["title", "mobileLabel", "description"]) requiredString(`${label}.modules.${moduleKey}.${key}`, module[key]);
     if (!Array.isArray(module.primarySlots)) failures.push(`${label}.modules.${moduleKey}.primarySlots: required array`);
     for (const slotKey of module.primarySlots ?? []) if (!assetKeys.includes(slotKey)) failures.push(`${label}.modules.${moduleKey}.primarySlots: unknown ${slotKey}`);
+    if (module.background) {
+      await validateVideoDerivative(`${label}.modules.${moduleKey}.background`, pilot.id, module.background);
+      if (typeof module.background.allKeyframe !== "boolean") failures.push(`${label}.modules.${moduleKey}.background.allKeyframe: expected boolean`);
+    }
   }
 
   for (const assetKey of assetKeys) {

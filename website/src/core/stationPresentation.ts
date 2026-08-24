@@ -57,10 +57,16 @@ export function stationFlightDuration(distance: number) {
 }
 
 /** Midpoints keep continuous finger/slider scrubbing from switching at a station edge. */
-export function stationForProgress(progress: number): JourneyStation {
-  if (progress < 1 / 6) return "region";
-  if (progress < 1 / 2) return "rock";
-  if (progress < 5 / 6) return "sector";
+export function stationForProgress(
+  progress: number,
+  markers: Record<JourneyStation, number> = { region: 0, rock: 1 / 3, sector: 2 / 3, topo: 1 },
+): JourneyStation {
+  const regionRockBoundary = (markers.region + markers.rock) / 2;
+  const rockSectorBoundary = (markers.rock + markers.sector) / 2;
+  const sectorTopoBoundary = (markers.sector + markers.topo) / 2;
+  if (progress < regionRockBoundary) return "region";
+  if (progress < rockSectorBoundary) return "rock";
+  if (progress < sectorTopoBoundary) return "sector";
   return "topo";
 }
 

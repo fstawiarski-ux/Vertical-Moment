@@ -10,6 +10,14 @@ describe("station presentation", () => {
     expect(Object.keys(STATION_PRESENTATIONS)).toEqual(["region", "rock", "sector", "topo"]);
   });
 
+  it("uses pilot-specific visual anchors for a single master timeline", () => {
+    const markers = { region: 0, rock: 0.3068, sector: 0.524, topo: 0.7808 };
+    expect(stationForProgress(0.1, markers)).toBe("region");
+    expect(stationForProgress(0.31, markers)).toBe("rock");
+    expect(stationForProgress(0.53, markers)).toBe("sector");
+    expect(stationForProgress(0.79, markers)).toBe("topo");
+  });
+
   it("keeps the visible journey order aligned with progress", async () => {
     const { SCRUB_STATIONS } = await import("../components/animation/IntroScrubSequence");
     expect(SCRUB_STATIONS.map((station) => station.id)).toEqual(["region", "rock", "sector", "topo"]);

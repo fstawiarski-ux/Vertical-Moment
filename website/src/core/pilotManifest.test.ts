@@ -103,4 +103,37 @@ describe("pilot registry projection", () => {
       "/proxies/sector-topo.mp4",
     ]);
   });
+
+  it("prefers one persistent master timeline with exact station anchors", () => {
+    const masterPilot = structuredClone(pilot) as ExplorePilotManifest;
+    masterPilot.journey.master = {
+      src: "/pilots/master-720.mp4",
+      poster: "/pilots/master-poster.jpg",
+      duration: 50.68,
+      bytes: 22_000_000,
+      sha256: "A".repeat(64),
+      alt: "Dürnstein master journey",
+      keyframeIntervalSeconds: 0.2,
+      stations: { region: 0, rock: 0.31, sector: 0.52, topo: 0.78 },
+    };
+    const registry = {
+      version: 9,
+      background: { src: "/background.webp", alt: "Background", width: 1, height: 1, sizes: "100vw" },
+      introScrubSequence: { poster: "/poster.webp", chapters: [] },
+      boxes: [],
+    } as unknown as ExploreContentRegistry;
+
+    expect(pilotJourneyReady(masterPilot)).toBe(true);
+    expect(pilotJourneyPreviewable(masterPilot)).toBe(true);
+    expect(pilotUsesPreviewMedia(masterPilot)).toBe(false);
+    expect(applyPilotToRegistry(registry, masterPilot).introScrubSequence).toMatchObject({
+      poster: "/pilots/master-poster.jpg",
+      chapters: [],
+      master: {
+        video: "/pilots/master-720.mp4",
+        duration: 50.68,
+        stations: { region: 0, rock: 0.31, sector: 0.52, topo: 0.78 },
+      },
+    });
+  });
 });

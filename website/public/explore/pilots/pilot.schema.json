@@ -52,6 +52,7 @@
       "required": ["posterSlot", "chapters"],
       "properties": {
         "posterSlot": { "$ref": "#/$defs/assetKey" },
+        "master": { "$ref": "#/$defs/journeyMaster" },
         "chapters": { "type": "array", "minItems": 3, "maxItems": 3, "items": { "$ref": "#/$defs/chapter" } }
       }
     },
@@ -108,8 +109,76 @@
         "title": { "type": "string", "minLength": 1 },
         "mobileLabel": { "type": "string", "minLength": 1, "maxLength": 16 },
         "description": { "type": "string", "minLength": 1 },
-        "primarySlots": { "type": "array", "items": { "$ref": "#/$defs/assetKey" }, "uniqueItems": true }
+        "primarySlots": { "type": "array", "items": { "$ref": "#/$defs/assetKey" }, "uniqueItems": true },
+        "background": { "$ref": "#/$defs/moduleBackground" }
       }
+    },
+    "videoDerivative": {
+      "type": "object",
+      "required": ["src", "poster", "duration", "bytes", "sha256", "alt"],
+      "properties": {
+        "src": { "type": "string", "pattern": "^/(?!/)" },
+        "poster": { "type": "string", "pattern": "^/(?!/)" },
+        "duration": { "type": "number", "exclusiveMinimum": 0 },
+        "bytes": { "type": "integer", "minimum": 1, "maximum": 26214400 },
+        "sha256": { "type": "string", "pattern": "^[A-F0-9]{64}$" },
+        "alt": { "type": "string", "minLength": 1 },
+        "objectPosition": { "type": "string" },
+        "note": { "type": "string" }
+      }
+    },
+    "journeyMaster": {
+      "allOf": [
+        { "$ref": "#/$defs/videoDerivative" },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["src", "poster", "duration", "bytes", "sha256", "alt", "keyframeIntervalSeconds", "stations"],
+          "properties": {
+            "src": true,
+            "poster": true,
+            "duration": true,
+            "bytes": true,
+            "sha256": true,
+            "alt": true,
+            "objectPosition": true,
+            "note": true,
+            "keyframeIntervalSeconds": { "type": "number", "exclusiveMinimum": 0 },
+            "stations": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["region", "rock", "sector", "topo"],
+              "properties": {
+                "region": { "type": "number", "minimum": 0, "maximum": 1 },
+                "rock": { "type": "number", "minimum": 0, "maximum": 1 },
+                "sector": { "type": "number", "minimum": 0, "maximum": 1 },
+                "topo": { "type": "number", "minimum": 0, "maximum": 1 }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "moduleBackground": {
+      "allOf": [
+        { "$ref": "#/$defs/videoDerivative" },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["src", "poster", "duration", "bytes", "sha256", "alt", "allKeyframe"],
+          "properties": {
+            "src": true,
+            "poster": true,
+            "duration": true,
+            "bytes": true,
+            "sha256": true,
+            "alt": true,
+            "objectPosition": true,
+            "note": true,
+            "allKeyframe": { "type": "boolean" }
+          }
+        }
+      ]
     },
     "slot": {
       "type": "object",
