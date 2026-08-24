@@ -19,14 +19,14 @@
       "relationship": "Hero rock inside the Dürnstein cluster, approximately 14 m from the cluster centre and 646 m from Nasenwand.",
       "routeCount": 32,
       "media": {
-        "state": "proxy-local",
+        "state": "owner-reported",
         "availability": "owner-reported",
-        "label": "Nasenwand responsive hero proxy for Däumling",
-        "poster": "/photography/nasenwand/media/poster-1600.webp",
-        "video": "/photography/nasenwand/media/hero-720.mp4",
-        "duration": 40.607233,
-        "sourcePilot": "nasenwand",
-        "note": "LOCAL PROXY — Dürnstein/Däumling animation is owner-reported, but its exact manifest is absent. This remains labelled Nasenwand media."
+        "label": "Owner-reviewed Dürnstein to Däumling private pilot",
+        "poster": "/explore/pilots/wachau-duernstein/media/duernstein-region-poster-720.jpg",
+        "video": "/explore/pilots/wachau-duernstein/media/duernstein-region-rock-sector-topo-720.mp4",
+        "duration": 50.683967,
+        "sourcePilot": "wachau-duernstein",
+        "note": "PRIVATE PILOT — owner-confirmed Wachau/Dürnstein/Däumling visual identity. The 720p master uses 0.5 second dissolves between separate flights and is not one continuous drone flight."
       }
     },
     {

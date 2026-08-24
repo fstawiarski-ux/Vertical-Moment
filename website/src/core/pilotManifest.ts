@@ -37,12 +37,13 @@ export function applyPilotToRegistry(
     };
   });
   const posterSlot = pilot.assets[pilot.journey.posterSlot];
-  const poster = posterSlot ? pilotAssetPreviewSource(posterSlot) ?? registry.background.src : registry.background.src;
+  const poster = pilot.journey.master?.poster
+    ?? (posterSlot ? pilotAssetPreviewSource(posterSlot) ?? registry.background.src : registry.background.src);
   const journeyPreviewable = pilotJourneyPreviewable(pilot);
   const introScrubSequence = journeyPreviewable
     ? {
         poster,
-        chapters: pilot.journey.chapters.map((chapter) => ({
+        chapters: pilot.journey.master ? [] : pilot.journey.chapters.map((chapter) => ({
           id: chapter.id,
           from: chapter.from,
           to: chapter.to,
@@ -52,12 +53,24 @@ export function applyPilotToRegistry(
           direction: chapter.direction,
           objectPosition: chapter.objectPosition,
         })),
+        master: pilot.journey.master ? {
+          video: pilot.journey.master.src,
+          duration: pilot.journey.master.duration,
+          alt: pilot.journey.master.alt,
+          objectPosition: pilot.journey.master.objectPosition,
+          stations: pilot.journey.master.stations,
+        } : undefined,
       }
     : { ...registry.introScrubSequence, poster };
   return { ...registry, boxes, introScrubSequence };
 }
 
 export function pilotJourneyReady(pilot: ExplorePilotManifest): boolean {
+  if (pilot.journey.master) {
+    return Boolean(pilot.journey.master.src)
+      && pilot.journey.master.duration > 0
+      && pilot.journey.master.bytes > 0;
+  }
   return pilot.journey.chapters.length === 3 && pilot.journey.chapters.every((chapter) => {
     const slot = pilot.assets[chapter.asset];
     return slot?.kind === "video" && slot.status === "ready" && Boolean(slot.src) && Boolean(chapter.duration && chapter.duration > 0);
@@ -70,6 +83,7 @@ export function pilotAssetPreviewSource(slot: ExplorePilotManifest["assets"][Pil
 }
 
 export function pilotJourneyPreviewable(pilot: ExplorePilotManifest): boolean {
+  if (pilot.journey.master) return pilotJourneyReady(pilot);
   return pilot.journey.chapters.length === 3 && pilot.journey.chapters.every((chapter) => {
     const slot = pilot.assets[chapter.asset];
     return slot?.kind === "video" && Boolean(pilotAssetPreviewSource(slot)) && Boolean(chapter.duration && chapter.duration > 0);
@@ -77,6 +91,7 @@ export function pilotJourneyPreviewable(pilot: ExplorePilotManifest): boolean {
 }
 
 export function pilotUsesPreviewMedia(pilot: ExplorePilotManifest): boolean {
+  if (pilot.journey.master) return false;
   return pilot.journey.chapters.some((chapter) => Boolean(pilot.assets[chapter.asset]?.preview));
 }
 

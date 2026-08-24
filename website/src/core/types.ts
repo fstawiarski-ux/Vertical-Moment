@@ -122,9 +122,20 @@ export interface ScrollScrubChapterAsset {
   objectPosition?: string;
 }
 
+export interface ScrollScrubMasterAsset {
+  video: string;
+  duration: number;
+  alt: string;
+  objectPosition?: string;
+  /** Exact visual anchors inside one persistent Region -> Rock -> Sector -> Topo timeline. */
+  stations: Record<JourneyStation, number>;
+}
+
 export interface ScrollScrubSequenceAsset {
   poster: string;
   chapters: ScrollScrubChapterAsset[];
+  /** Optional phone-first master timeline. Legacy three-chapter pilots remain supported. */
+  master?: ScrollScrubMasterAsset;
 }
 
 export interface ExploreContentRegistry {

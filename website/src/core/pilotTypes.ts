@@ -33,6 +33,26 @@ export interface PilotAssetSlot {
   };
 }
 
+export interface PilotVideoDerivative {
+  src: string;
+  poster: string;
+  duration: number;
+  bytes: number;
+  sha256: string;
+  alt: string;
+  objectPosition?: string;
+  note?: string;
+}
+
+export interface PilotJourneyMaster extends PilotVideoDerivative {
+  keyframeIntervalSeconds: number;
+  stations: Record<"region" | "rock" | "sector" | "topo", number>;
+}
+
+export interface PilotModuleBackground extends PilotVideoDerivative {
+  allKeyframe: boolean;
+}
+
 export type PilotModuleKey = "locator" | "panorama" | "routes" | "wall" | "topo";
 
 export interface PilotModuleCopy {
@@ -40,6 +60,8 @@ export interface PilotModuleCopy {
   mobileLabel: string;
   description: string;
   primarySlots: PilotAssetKey[];
+  /** Optional module-local scrub, mounted only when this module is active. */
+  background?: PilotModuleBackground;
 }
 
 export interface ExplorePilotManifest {
@@ -69,6 +91,8 @@ export interface ExplorePilotManifest {
   };
   journey: {
     posterSlot: PilotAssetKey;
+    /** One persistent phone-first timeline with exact visual station anchors. */
+    master?: PilotJourneyMaster;
     chapters: Array<{
       id: "region-rock" | "rock-sector" | "sector-topo";
       from: string;

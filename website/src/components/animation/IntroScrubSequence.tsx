@@ -68,6 +68,7 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
   notice?: string;
 }) {
   const videoRefs = useRef<Array<HTMLVideoElement | null>>([]);
+  const masterVideoRef = useRef<HTMLVideoElement | null>(null);
   const dragRef = useRef<DragState | null>(null);
   const progressRef = useRef(0);
   const flightFrameRef = useRef<number | null>(null);
@@ -82,6 +83,9 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
   const scaledProgress = Math.min(progress * chapterCount, chapterCount - 0.000001);
   const activeIndex = Math.floor(scaledProgress);
   const activeLocalProgress = scaledProgress - activeIndex;
+  const stations = useMemo<ReadonlyArray<ScrubStation>>(() => sequence.master
+    ? SCRUB_STATIONS.map((station) => ({ ...station, progress: sequence.master?.stations[station.id] ?? station.progress }))
+    : SCRUB_STATIONS, [sequence.master]);
 
   const resolved = mode !== null;
   const cinematic = mode === "cinematic";
@@ -108,6 +112,16 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
   }, [activeIndex, chapterCount]);
 
   const syncVideos = useCallback((nextProgress: number) => {
+    if (sequence.master) {
+      const video = masterVideoRef.current;
+      if (!video || video.readyState < 1) return;
+      const duration = Number.isFinite(video.duration) && video.duration > 0 ? video.duration : sequence.master.duration;
+      const target = clamp(nextProgress) * Math.max(0, duration - 1 / 30);
+      if (Math.abs(video.currentTime - target) > 0.02) {
+        try { video.currentTime = target; } catch { /* metadata can still be settling */ }
+      }
+      return;
+    }
     sequence.chapters.forEach((chapter, index) => {
       const video = videoRefs.current[index];
       if (!video || video.readyState < 1) return;
@@ -120,7 +134,7 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
         try { video.currentTime = target; } catch { /* metadata can still be settling */ }
       }
     });
-  }, [chapterCount, sequence.chapters]);
+  }, [chapterCount, sequence.chapters, sequence.master]);
 
   useEffect(() => {
     const frame = requestAnimationFrame(() => syncVideos(progress));
@@ -144,7 +158,7 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
     const next = clamp(value);
     progressRef.current = next;
     setProgress(next);
-    const station = stationForProgress(next);
+    const station = stationForProgress(next, sequence.master?.stations);
     if (station !== lastAnnouncedStationRef.current) {
       lastAnnouncedStationRef.current = station;
       if (!suppressPreviewRef.current) {
@@ -152,7 +166,7 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
       }
     }
     if (next >= 0.995) unlock("completed");
-  }, [announceFirstMove, announceStation, unlock]);
+  }, [announceFirstMove, announceStation, sequence.master?.stations, unlock]);
 
   const cancelFlight = useCallback(() => {
     if (flightFrameRef.current !== null) cancelAnimationFrame(flightFrameRef.current);
@@ -185,6 +199,7 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
     const announceArrival = () => {
       suppressPreviewRef.current = false;
       announceStation(station.id, "arrived", "button", station.progress);
+      if (station.id === "topo") unlock("completed");
     };
 
     if (distance < 0.001 || !animateFlights) {
@@ -210,7 +225,7 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
     };
 
     flightFrameRef.current = requestAnimationFrame(tick);
-  }, [animateFlights, announceStation, cancelFlight, moveTo]);
+  }, [animateFlights, announceStation, cancelFlight, moveTo, unlock]);
 
   const moveToStation = useCallback((station: ScrubStation) => {
     if (!unlockedRef.current) {
@@ -231,13 +246,13 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
       if (unlockedRef.current && !allowPostUnlockStationRequests) return;
       const detail = (event as CustomEvent<{ station?: JourneyStation }>).detail;
       const target = detail?.station
-        ? SCRUB_STATIONS.find((candidate) => candidate.id === detail.station)
+        ? stations.find((candidate) => candidate.id === detail.station)
         : null;
       if (target) flyToStation(target);
     };
     window.addEventListener("vm:preview-station-request", onStationRequest);
     return () => window.removeEventListener("vm:preview-station-request", onStationRequest);
-  }, [allowPostUnlockStationRequests, flyToStation]);
+  }, [allowPostUnlockStationRequests, flyToStation, stations]);
 
   const skip = useCallback(() => {
     cancelFlight();
@@ -309,7 +324,20 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
     >
       <div className={styles.media} aria-hidden="true">
         <img className={styles.poster} src={sequence.poster} alt="" />
-        {!posterOnly && sequence.chapters.map((chapter, index) => loaded.has(index) && (
+        {!posterOnly && sequence.master && (
+          <video
+            ref={masterVideoRef}
+            className={styles.video}
+            src={sequence.master.video}
+            muted
+            playsInline
+            preload="auto"
+            style={{ opacity: 1, objectPosition: sequence.master.objectPosition ?? "center" }}
+            onLoadedMetadata={() => syncVideos(progress)}
+            aria-label={sequence.master.alt}
+          />
+        )}
+        {!posterOnly && !sequence.master && sequence.chapters.map((chapter, index) => loaded.has(index) && (
           <video
             key={chapter.id}
             ref={(node) => { videoRefs.current[index] = node; }}
@@ -352,7 +380,7 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
         <div className={styles.timeline} data-unlocked={unlocked ? "true" : "false"}>
           <label className={styles.visuallyHidden} htmlFor="explore-intro-timeline">Move from Region on the left to Topo on the right</label>
           <span className={styles.chapterLabels} aria-label="Scrub stations, Region to Rock to Sector to Topo">
-            {SCRUB_STATIONS.map((station) => (
+            {stations.map((station) => (
               <button
                 key={station.id}
                 type="button"
