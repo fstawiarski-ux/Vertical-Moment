@@ -5,7 +5,7 @@
   "label": "Pilot 002 — Wachau / Dürnstein / Däumling — OWNER REVIEW",
   "releaseState": "review",
   "identity": { "region": "Wachau", "regionSlug": "wachau", "crag": "Dürnstein", "cragSlug": "duernstein", "sector": "Däumling", "canonicalCragId": null },
-  "provenance": { "notionUrl": "https://app.notion.com/p/3be21413535181e9a3f3c9c16c68fe91", "dataPath": null, "confidence": "owner-reviewed", "lastReviewed": "2026-08-24" },
+  "provenance": { "notionUrl": "https://app.notion.com/p/3be21413535181e9a3f3c9c16c68fe91", "dataPath": null, "confidence": "owner-reviewed", "lastReviewed": "2026-08-25" },
   "summary": { "routeCount": 32, "gradeSystem": "UIAA", "gradeRange": "3- to 9", "discipline": "sport" },
   "journey": {
     "posterSlot": "hero",
@@ -19,7 +19,7 @@
       "objectPosition": "50% center",
       "keyframeIntervalSeconds": 0.2002,
       "stations": { "region": 0, "rock": 0.306791, "sector": 0.524049, "topo": 0.780806 },
-      "note": "PRIVATE PILOT — owner-confirmed visual identity. The 0.5 second dissolves combine separate drone flights and do not represent one continuous flight. Phone-first 720p derivative; source masters remain outside the PWA."
+      "note": "DIRECT-LINK PILOT — owner-confirmed visual identity and public GitHub derivative permission on 2026-08-25. The 0.5 second dissolves combine separate drone flights and do not represent one continuous flight. Phone-first 720p derivative; source masters remain outside the PWA."
     },
     "chapters": [
       { "id": "region-rock", "from": "Region", "to": "Rock", "asset": "scrubRegionRock", "duration": 15.549367, "direction": "forward", "objectPosition": "50% center" },
@@ -44,7 +44,7 @@
         "alt": "Drone view of the Däumling formation used as a general routes-module background",
         "objectPosition": "50% center",
         "allKeyframe": true,
-        "note": "PRIVATE PILOT — owner-confirmed Däumling formation. This footage does not verify any individual route line. Phone-first 720p derivative from DJI_0141, seconds 27 to 38."
+        "note": "DIRECT-LINK PILOT — owner-confirmed Däumling formation and public GitHub derivative permission on 2026-08-25. This footage does not verify any individual route line. Phone-first 720p derivative from DJI_0141, seconds 27 to 38."
       }
     },
     "wall": { "title": "Däumling Wall Reveal", "mobileLabel": "Wall", "description": "The owner reports Dürnstein animation exists, but no exact source path or approved wall derivative is attached.", "primarySlots": ["hero", "spatial"] },
