@@ -31,3 +31,6 @@
 
 /photography/nasenwand/media/*.mp4
   Cache-Control: public,max-age=604800,stale-while-revalidate=2592000
+
+/explore/pilots/wachau-duernstein/media/*
+  Cache-Control: public,max-age=604800,stale-while-revalidate=2592000
