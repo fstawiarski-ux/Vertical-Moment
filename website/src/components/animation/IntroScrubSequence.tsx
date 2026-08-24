@@ -17,6 +17,7 @@ import type {
   ScrollScrubSequenceAsset,
 } from "../../core/types";
 import { stationFlightDuration, stationForProgress } from "../../core/stationPresentation";
+import { useScrubVideoSource } from "../../hooks/useScrubVideoSource";
 import styles from "./IntroScrubSequence.module.css";
 
 const clamp = (value: number) => Math.max(0, Math.min(1, value));
@@ -86,6 +87,8 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
   const stations = useMemo<ReadonlyArray<ScrubStation>>(() => sequence.master
     ? SCRUB_STATIONS.map((station) => ({ ...station, progress: sequence.master?.stations[station.id] ?? station.progress }))
     : SCRUB_STATIONS, [sequence.master]);
+  const masterSource = useScrubVideoSource(sequence.master?.video ?? null, !posterOnly && Boolean(sequence.master));
+  const masterMediaReady = !sequence.master || masterSource.status === "ready";
 
   const resolved = mode !== null;
   const cinematic = mode === "cinematic";
@@ -265,14 +268,14 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
   }, [announceStation, cancelFlight, unlock]);
 
   const onWheel = (event: ReactWheelEvent<HTMLDivElement>) => {
-    if (unlocked && !allowPostUnlockScrub) return;
+    if (!masterMediaReady || (unlocked && !allowPostUnlockScrub)) return;
     event.preventDefault();
     cancelFlight();
     moveTo(progressRef.current + wheelDeltaInPixels(event) * WHEEL_PROGRESS_SCALE, "wheel");
   };
 
   const onPointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
-    if ((unlocked && !allowPostUnlockScrub) || (event.target as Element).closest("input, button")) return;
+    if (!masterMediaReady || (unlocked && !allowPostUnlockScrub) || (event.target as Element).closest("input, button")) return;
     cancelFlight();
     dragRef.current = {
       pointerId: event.pointerId,
@@ -324,11 +327,11 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
     >
       <div className={styles.media} aria-hidden="true">
         <img className={styles.poster} src={sequence.poster} alt="" />
-        {!posterOnly && sequence.master && (
+        {!posterOnly && sequence.master && masterSource.src && (
           <video
             ref={masterVideoRef}
             className={styles.video}
-            src={sequence.master.video}
+            src={masterSource.src}
             muted
             playsInline
             preload="auto"
@@ -355,6 +358,12 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
       </div>
 
       {notice && <p className={styles.previewNotice} role="status">{notice}</p>}
+      {sequence.master && masterSource.status === "loading" && (
+        <p className={styles.previewNotice} role="status">Preparing the 720p phone journey…</p>
+      )}
+      {sequence.master && masterSource.status === "error" && (
+        <p className={styles.previewNotice} role="status">The journey video could not be prepared. You can still skip to the workspace.</p>
+      )}
 
       <div
         className={styles.gestureLayer}
@@ -386,6 +395,7 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
                 type="button"
                 aria-label={`Fly to ${station.label}`}
                 aria-current={Math.abs(progress - station.progress) < 0.015 ? "step" : undefined}
+                disabled={!masterMediaReady}
                 onClick={() => moveToStation(station)}
               >
                 {station.label}
@@ -401,6 +411,7 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
               max="100"
               step="0.1"
               value={progress * 100}
+              disabled={!masterMediaReady}
               onPointerDown={cancelFlight}
               onChange={(event) => {
                 cancelFlight();

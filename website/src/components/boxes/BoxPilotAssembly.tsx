@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
 import type { ExploreImageAsset, ExploreModelAsset } from "../../core/types";
 import type { ExplorePilotManifest, PilotAssetKey, PilotModuleBackground, PilotModuleKey } from "../../core/pilotTypes";
+import { useScrubVideoSource } from "../../hooks/useScrubVideoSource";
 import { Box3DModel } from "./Box3DModel";
 import styles from "./BoxPilotAssembly.module.css";
 
@@ -57,6 +58,8 @@ function ModelSlot({ pilot, isActive }: { pilot: ExplorePilotManifest; isActive:
 function ModuleScrubBackground({ background, isActive }: { background: PilotModuleBackground; isActive: boolean }) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [progress, setProgress] = useState(0);
+  const mediaSource = useScrubVideoSource(background.src, isActive);
+  const mediaReady = mediaSource.status === "ready";
 
   const seek = useCallback((nextProgress: number) => {
     const next = Math.max(0, Math.min(1, nextProgress));
@@ -71,8 +74,8 @@ function ModuleScrubBackground({ background, isActive }: { background: PilotModu
   }, [background.duration]);
 
   useEffect(() => {
-    if (isActive) seek(progress);
-  }, [isActive, progress, seek]);
+    if (isActive && mediaReady) seek(progress);
+  }, [isActive, mediaReady, progress, seek]);
 
   const seekFromPointer = useCallback((event: ReactPointerEvent<HTMLLabelElement>) => {
     const bounds = event.currentTarget.getBoundingClientRect();
@@ -83,10 +86,10 @@ function ModuleScrubBackground({ background, isActive }: { background: PilotModu
     <>
       <div className={styles.moduleBackground} aria-hidden="true">
         <img src={background.poster} alt="" />
-        {isActive && (
+        {isActive && mediaSource.src && (
           <video
             ref={videoRef}
-            src={background.src}
+            src={mediaSource.src}
             poster={background.poster}
             muted
             playsInline
@@ -100,12 +103,12 @@ function ModuleScrubBackground({ background, isActive }: { background: PilotModu
       <label
         className={styles.backgroundScrubber}
         onPointerDown={(event) => {
-          if (!isActive) return;
+          if (!isActive || !mediaReady) return;
           event.currentTarget.setPointerCapture(event.pointerId);
           seekFromPointer(event);
         }}
         onPointerMove={(event) => {
-          if (isActive && event.currentTarget.hasPointerCapture(event.pointerId)) seekFromPointer(event);
+          if (isActive && mediaReady && event.currentTarget.hasPointerCapture(event.pointerId)) seekFromPointer(event);
         }}
         onPointerUp={(event) => {
           if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
@@ -114,14 +117,14 @@ function ModuleScrubBackground({ background, isActive }: { background: PilotModu
           if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
         }}
       >
-        <span>Slide through the Däumling formation</span>
+        <span>{mediaSource.status === "loading" ? "Preparing the 720p Däumling scrub…" : "Slide through the Däumling formation"}</span>
         <input
           type="range"
           min="0"
           max="100"
           step="0.1"
           value={progress * 100}
-          disabled={!isActive}
+          disabled={!isActive || !mediaReady}
           aria-label="Scrub the Däumling routes background"
           onChange={(event) => seek(Number(event.target.value) / 100)}
         />
