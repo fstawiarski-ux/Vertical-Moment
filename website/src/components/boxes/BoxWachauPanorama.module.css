@@ -185,8 +185,10 @@
 .sphereCaption > div { display: grid; gap: 3px; }
 .sphereCaption a { display: inline-flex; flex: 0 0 auto; align-items: center; color: #f0e5c4; border-color: rgb(211 183 111 / 40%); text-decoration: none; }
 
-@media (max-width: 767px) {
-  .experience { grid-template-rows: auto minmax(310px, 1fr) auto auto; }
+@media (max-width: 767px), (max-height: 539px) {
+  .experience { grid-template-rows: auto minmax(0, 1fr) auto auto; }
+  .stage { min-height: 0; }
+  .gallery { min-height: 78px; box-sizing: border-box; }
   .toolbar { align-items: stretch; flex-direction: column; }
   .toolbar nav { width: 100%; }
   .toolbar nav button { flex: 1 0 auto; }

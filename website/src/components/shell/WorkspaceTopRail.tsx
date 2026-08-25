@@ -1,18 +1,17 @@
 "use client";
 
 import type { BoxState, ExploreContentBox, ExploreContentRegistry, JourneyStation, ViewportMode } from "../../core/types";
-import type { ResolvedWorkspaceManifest } from "../../core/workspaceManifest";
+import { JOURNEY_STATIONS } from "../../core/journey";
+import { stationPresentationsFor, type ResolvedWorkspaceManifest } from "../../core/workspaceManifest";
 import { OfficialMark } from "../../brand/OfficialMark";
 import styles from "./WorkspaceTopRail.module.css";
 
-const STAGES: ReadonlyArray<{ id: JourneyStation; boxId: string; label: string; detail: string; icon: string }> = [
-  { id: "region", boxId: "crag-locator", label: "Region", detail: "Atlas", icon: "⌖" },
-  { id: "rock", boxId: "wall-reveal", label: "Rock", detail: "Panorama", icon: "◔" },
-  { id: "sector", boxId: "nasenwand-spatial", label: "Sector", detail: "Routes", icon: "⌁" },
-  { id: "topo", boxId: "nasenwand-model", label: "Topo", detail: "Route detail", icon: "M" },
-] as const;
-
-const STATION_BY_BOX_ID: Record<string, JourneyStation> = Object.fromEntries(STAGES.map((stage) => [stage.boxId, stage.id])) as Record<string, JourneyStation>;
+const STAGE_META: Record<JourneyStation, { detail: string; icon: string }> = {
+  region: { detail: "Atlas", icon: "⌖" },
+  rock: { detail: "Panorama", icon: "◔" },
+  sector: { detail: "Routes", icon: "⌁" },
+  topo: { detail: "Route detail", icon: "M" },
+};
 
 export function WorkspaceTopRail({
   registry,
@@ -41,42 +40,52 @@ export function WorkspaceTopRail({
   onToggleJourney: () => void;
   followJourney: boolean;
 }) {
-  void registry;
   void workspace;
   void boxes;
   void onContribute;
-  void onToggleJourney;
-  void followJourney;
 
-  void activeBoxId;
   void stationContent;
-  const station = journeyStation ?? STATION_BY_BOX_ID[activeBoxId ?? ""] ?? "region";
-  const stationIndex = STAGES.findIndex((candidate) => candidate.id === station);
+  const presentations = stationPresentationsFor(registry);
+  const station = journeyStation ?? JOURNEY_STATIONS.find((candidate) => presentations[candidate].focusBoxId === activeBoxId) ?? "region";
+  const stationIndex = JOURNEY_STATIONS.indexOf(station);
 
   return (
     <header className={styles.chrome} data-viewport={viewportMode}>
-      <nav className={styles.rail} aria-label={`${viewportMode === "tablet" ? "Tablet" : "Desktop"} Explore journey`}>
+      <nav className={styles.rail} aria-label="Desktop Explore journey">
         <span className={styles.identity} aria-hidden="true">
           <OfficialMark variant="utility-vm" mode="dark" size={27} decorative priority />
         </span>
-        {STAGES.map((candidate, index) => (
+        {JOURNEY_STATIONS.map((candidate, index) => (
           <button
-            key={candidate.id}
+            key={candidate}
             type="button"
             className={styles.stage}
-            data-current={candidate.id === station ? "true" : "false"}
+            data-current={candidate === station ? "true" : "false"}
             data-passed={index < stationIndex ? "true" : "false"}
-            aria-current={candidate.id === station ? "page" : undefined}
-            onClick={() => onOpenBox(candidate.boxId)}
-            title={`Open ${candidate.detail} without replaying the journey`}
+            aria-current={candidate === station ? "page" : undefined}
+            onClick={() => onOpenBox(presentations[candidate].focusBoxId)}
+            title={`Open ${STAGE_META[candidate].detail} without replaying the journey`}
           >
-            <span className={styles.icon} aria-hidden="true">{candidate.icon}</span>
+            <span className={styles.icon} aria-hidden="true">{STAGE_META[candidate].icon}</span>
             <span className={styles.copy}>
-              <strong>{candidate.label}</strong>
-              <small>{candidate.detail}</small>
+              <strong>{presentations[candidate].label}</strong>
+              <small>{STAGE_META[candidate].detail}</small>
             </span>
           </button>
         ))}
+        <button
+          type="button"
+          className={styles.follow}
+          aria-pressed={followJourney}
+          onClick={onToggleJourney}
+          title={followJourney ? "Stop opening cards as the scrub changes stations" : "Let the scrub open the mapped card at each station"}
+        >
+          <span className={styles.followIcon} aria-hidden="true">↻</span>
+          <span className={styles.copy}>
+            <strong>{followJourney ? "Following" : "Follow"}</strong>
+            <small>{followJourney ? "Cards on" : "Cards off"}</small>
+          </span>
+        </button>
         <button
           type="button"
           className={styles.search}

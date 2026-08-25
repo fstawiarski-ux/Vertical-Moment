@@ -2,7 +2,7 @@ export type BoxMode = "normal" | "minimized" | "expanded" | "fullscreen";
 
 export type LayoutMode = "explore" | "grid" | "presentation";
 
-export type ViewportMode = "desktop" | "tablet" | "mobile";
+export type ViewportMode = "desktop" | "mobile";
 
 /** The four fixed points in the Region -> Rock -> Sector -> Topo journey. */
 export type JourneyStation = "region" | "rock" | "sector" | "topo";

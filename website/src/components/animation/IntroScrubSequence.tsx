@@ -16,20 +16,16 @@ import type {
   ScrubStationSource,
   ScrollScrubSequenceAsset,
 } from "../../core/types";
+import { journeyStationsFor, stationMarkersFor, type JourneyStationDefinition } from "../../core/journey";
 import { stationFlightDuration, stationForProgress } from "../../core/stationPresentation";
 import { useScrubVideoSource } from "../../hooks/useScrubVideoSource";
 import styles from "./IntroScrubSequence.module.css";
 
 const clamp = (value: number) => Math.max(0, Math.min(1, value));
 const CHAPTER_BLEND_START = 0.86;
-export const SCRUB_STATIONS: ReadonlyArray<{ id: JourneyStation; label: string; progress: number }> = [
-  { id: "region", label: "Region", progress: 0 },
-  { id: "rock", label: "Rock", progress: 1 / 3 },
-  { id: "sector", label: "Sector", progress: 2 / 3 },
-  { id: "topo", label: "Topo", progress: 1 },
-] as const;
+export const SCRUB_STATIONS: ReadonlyArray<JourneyStationDefinition> = journeyStationsFor();
 
-type ScrubStation = (typeof SCRUB_STATIONS)[number];
+type ScrubStation = JourneyStationDefinition;
 type DragAxis = "horizontal" | "vertical";
 
 interface DragState {
@@ -84,9 +80,8 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
   const scaledProgress = Math.min(progress * chapterCount, chapterCount - 0.000001);
   const activeIndex = Math.floor(scaledProgress);
   const activeLocalProgress = scaledProgress - activeIndex;
-  const stations = useMemo<ReadonlyArray<ScrubStation>>(() => sequence.master
-    ? SCRUB_STATIONS.map((station) => ({ ...station, progress: sequence.master?.stations[station.id] ?? station.progress }))
-    : SCRUB_STATIONS, [sequence.master]);
+  const stations = useMemo<ReadonlyArray<ScrubStation>>(() => journeyStationsFor(sequence), [sequence]);
+  const stationMarkers = useMemo(() => stationMarkersFor(sequence), [sequence]);
   const masterSource = useScrubVideoSource(sequence.master?.video ?? null, !posterOnly && Boolean(sequence.master));
   const masterMediaReady = !sequence.master || masterSource.status === "ready";
 
@@ -161,7 +156,7 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
     const next = clamp(value);
     progressRef.current = next;
     setProgress(next);
-    const station = stationForProgress(next, sequence.master?.stations);
+    const station = stationForProgress(next, stationMarkers);
     if (station !== lastAnnouncedStationRef.current) {
       lastAnnouncedStationRef.current = station;
       if (!suppressPreviewRef.current) {
@@ -169,7 +164,7 @@ export function IntroScrubSequence({ sequence, mode, onUnlock, allowPostUnlockSc
       }
     }
     if (next >= 0.995) unlock("completed");
-  }, [announceFirstMove, announceStation, sequence.master?.stations, unlock]);
+  }, [announceFirstMove, announceStation, stationMarkers, unlock]);
 
   const cancelFlight = useCallback(() => {
     if (flightFrameRef.current !== null) cancelAnimationFrame(flightFrameRef.current);

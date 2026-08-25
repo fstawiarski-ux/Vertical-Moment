@@ -72,14 +72,14 @@ for (const test of cases) {
 
     const bodyText = await page.locator("body").innerText();
     if (/âˆ|â–|â›|Ã|�/.test(bodyText)) throw new Error("Visible mojibake/corrupt glyph text remains after unlock.");
-    const visibleControls = page.locator('[data-module-window-controls="true"] button:visible');
-    if (await visibleControls.count() < 1) throw new Error("No visible module window controls found.");
-    if (!await visibleControls.evaluateAll((nodes) => nodes.every((node) => Boolean(node.querySelector("svg")) && !(node.textContent ?? "").trim()))) {
-      throw new Error("Visible module control uses text glyph content instead of SVG.");
-    }
-    notes.push("window controls render as SVG without mojibake");
 
     if (test.shell === "desktop") {
+      const visibleControls = page.locator('[data-module-window-controls="true"] button:visible');
+      if (await visibleControls.count() < 1) throw new Error("No visible desktop module window controls found.");
+      if (!await visibleControls.evaluateAll((nodes) => nodes.every((node) => Boolean(node.querySelector("svg")) && !(node.textContent ?? "").trim()))) {
+        throw new Error("Visible desktop module control uses text glyph content instead of SVG.");
+      }
+      notes.push("desktop window controls render as SVG without mojibake");
       const controlTarget = page.locator('article[data-mode="normal"]').first();
       const controlTargetId = await controlTarget.getAttribute("data-box-id");
       if (!controlTargetId) throw new Error("Could not resolve module id for window-control behavior checks.");
@@ -102,7 +102,9 @@ for (const test of cases) {
       await page.locator(`article[data-box-id="${controlTargetId}"][data-mode="normal"]`).waitFor({ state: "attached", timeout: 5000 });
       notes.push("fullscreen/exit and Hide/Restore state transitions work");
     } else {
-      notes.push("phone control rendering verified; shell owns touch mode transitions");
+      if (await page.locator('article[data-mode="normal"]').count() !== 1) throw new Error("Phone cinematic unlock must expose exactly one normal station card.");
+      if (await page.locator('[data-module-window-controls="true"]').count()) throw new Error("Phone cinematic unlock exposed desktop window controls.");
+      notes.push("phone unlock keeps one minimal station card without window controls");
     }
 
     const beforeScrubGeometry = await geometry(page);
