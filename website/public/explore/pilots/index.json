@@ -9,7 +9,7 @@
     { "id": "hel-siegenfelder-steinbruch", "cragSlug": "siegenfelder-steinbruch", "manifest": "/explore/pilots/hel-siegenfelder-steinbruch/pilot.json", "releaseState": "assembly" },
     { "id": "hel-breite-wand", "cragSlug": "breite-wand", "manifest": "/explore/pilots/hel-breite-wand/pilot.json", "releaseState": "assembly" },
     { "id": "wachau-duernstein", "cragSlug": "duernstein", "manifest": "/explore/pilots/wachau-duernstein/pilot.json", "releaseState": "review" },
-    { "id": "wachau-west-provisional", "cragSlug": "wachau-west-provisional", "manifest": "/explore/pilots/wachau-west-provisional/pilot.json", "releaseState": "assembly" },
+    { "id": "wachau-west-provisional", "cragSlug": "grabenwand-wachau", "manifest": "/explore/pilots/wachau-west-provisional/pilot.json", "releaseState": "review" },
     { "id": "arnstein", "cragSlug": "arnstein", "manifest": "/explore/pilots/arnstein/pilot.json", "releaseState": "assembly" }
   ]
 }
