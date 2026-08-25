@@ -13,25 +13,27 @@ function AssetSlot({ pilot, assetKey }: { pilot: ExplorePilotManifest; assetKey:
   const slot = pilot.assets[assetKey];
   const [requested, setRequested] = useState(false);
   const isVisual = slot.kind === "image" || slot.kind === "panorama";
+  const source = slot.status === "ready" ? slot.src : slot.preview?.src ?? null;
+  const isPreview = slot.status !== "ready" && Boolean(slot.preview);
 
   return (
-    <article className={styles.slot} data-status={slot.status}>
+    <article className={styles.slot} data-status={slot.status} data-preview={isPreview ? "true" : "false"}>
       <header>
         <span>{assetKey.replace(/([A-Z])/g, " $1")}</span>
-        <strong>{STATUS_LABEL[slot.status]}</strong>
+        <strong>{isPreview ? "Beta preview" : STATUS_LABEL[slot.status]}</strong>
       </header>
-      {slot.status === "ready" && slot.src && isVisual && (
-        <img src={slot.src} alt={slot.alt} loading="lazy" />
+      {source && isVisual && (
+        <img src={source} alt={slot.alt} loading="lazy" />
       )}
-      {slot.status === "ready" && slot.src && slot.kind === "link" && (
-        <a href={slot.src} target="_blank" rel="noreferrer">Open 360 view</a>
+      {source && slot.kind === "link" && (
+        <a href={source} target="_blank" rel="noreferrer">Open reference panorama</a>
       )}
-      {slot.status === "ready" && slot.src && slot.kind === "video" && (
+      {source && slot.kind === "video" && (
         requested
-          ? <video src={slot.src} controls muted playsInline preload="metadata" aria-label={slot.alt} />
+          ? <video src={source} controls muted playsInline preload="metadata" aria-label={slot.alt} />
           : <button type="button" onClick={() => setRequested(true)}>Load preview</button>
       )}
-      {slot.status !== "ready" && (
+      {!source && (
         <div className={styles.placeholder} aria-label={`${assetKey} asset slot ${slot.status}`}>
           <span>{slot.kind}</span>
           <code>{slot.targetPath}</code>
@@ -45,14 +47,21 @@ function AssetSlot({ pilot, assetKey }: { pilot: ExplorePilotManifest; assetKey:
 function ModelSlot({ pilot, isActive }: { pilot: ExplorePilotManifest; isActive: boolean }) {
   const modelSlot = pilot.assets.model;
   const posterSlot = pilot.assets.spatial.status === "ready" ? pilot.assets.spatial : pilot.assets.hero;
-  if (modelSlot.status !== "ready" || !modelSlot.src || !modelSlot.bytes) {
+  const modelSource = modelSlot.status === "ready" ? modelSlot.src : modelSlot.preview?.src ?? null;
+  if (!modelSource || !modelSlot.bytes) {
     return <AssetSlot pilot={pilot} assetKey="model" />;
   }
-  const model: ExploreModelAsset = { src: modelSlot.src, bytes: modelSlot.bytes };
+  const model: ExploreModelAsset = { src: modelSource, bytes: modelSlot.bytes };
   const poster: ExploreImageAsset | undefined = posterSlot.status === "ready" && posterSlot.src
     ? { src: posterSlot.src, alt: posterSlot.alt, width: 1280, height: 960, sizes: "100vw" }
     : undefined;
-  return <div className={styles.model}><Box3DModel model={model} poster={poster} isActive={isActive} label={pilot.identity.crag} intentOnly /></div>;
+  return (
+    <div className={styles.model} data-preview={modelSlot.status === "ready" ? "false" : "true"}>
+      <p className={styles.previewLabel}>{modelSlot.status === "ready" ? "Interactive 3D" : "Beta preview · replaceable"}</p>
+      <Box3DModel model={model} poster={poster} isActive={isActive} label={pilot.identity.crag} intentOnly />
+      {modelSlot.note && <p className={styles.previewNote}>{modelSlot.note}</p>}
+    </div>
+  );
 }
 
 function ModuleScrubBackground({ background, isActive }: { background: PilotModuleBackground; isActive: boolean }) {
