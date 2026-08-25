@@ -5,6 +5,9 @@ import { Box3DModel } from "./boxes/Box3DModel";
 import { IntroScrubSequence } from "./animation/IntroScrubSequence";
 import { OfficialMark } from "../brand/OfficialMark";
 import { prefersReducedMotion } from "../core/introPreferences";
+import { journeyStationsFor } from "../core/journey";
+import { stationForFocusBoxId } from "../core/stationPresentation";
+import { stationPresentationsFor } from "../core/workspaceManifest";
 import type {
   ExploreContentBox,
   ExploreContentRegistry,
@@ -28,33 +31,6 @@ const MODULES = [
 ] as const;
 
 type PreviewModuleId = (typeof MODULES)[number]["id"];
-
-const STATIONS: ReadonlyArray<{
-  id: JourneyStation;
-  index: string;
-  label: string;
-  title: string;
-  copy: string;
-}> = [
-  { id: "region", index: "01", label: "Region", title: "Start broad", copy: "Find a region and see the crags around it." },
-  { id: "rock", index: "02", label: "Rock", title: "Bring the wall forward", copy: "Move from the approach into a real wall study." },
-  { id: "sector", index: "03", label: "Sector", title: "Choose the working layer", copy: "Keep sector and route facts beside the wall." },
-  { id: "topo", index: "04", label: "Topo", title: "Inspect with intent", copy: "Open the 3D model, panorama or provisional layer only when useful." },
-];
-
-const MODULE_FOR_STATION: Record<JourneyStation, PreviewModuleId> = {
-  region: "crag-locator",
-  rock: "wall-reveal",
-  sector: "nasenwand-spatial",
-  topo: "nasenwand-model",
-};
-
-const STATION_FOR_MODULE: Partial<Record<PreviewModuleId, JourneyStation>> = {
-  "crag-locator": "region",
-  "wall-reveal": "rock",
-  "nasenwand-spatial": "sector",
-  "nasenwand-model": "topo",
-};
 
 function contentFor(registry: ExploreContentRegistry, id: string) {
   return registry.boxes.find((content) => content.id === id) ?? null;
@@ -125,6 +101,12 @@ export function UnifiedExplorePreview({ registry }: { registry: ExploreContentRe
   const [station, setStation] = useState<JourneyStation>("region");
   const [activeModule, setActiveModule] = useState<PreviewModuleId>("nasenwand-model");
   const [replayKey, setReplayKey] = useState(0);
+  const stations = useMemo(() => journeyStationsFor(registry.introScrubSequence), [registry.introScrubSequence]);
+  const stationPresentations = useMemo(() => stationPresentationsFor(registry), [registry]);
+
+  const moduleForStation = useCallback((next: JourneyStation): PreviewModuleId | null => {
+    return moduleForBoxId(stationPresentations[next].focusBoxId);
+  }, [stationPresentations]);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -136,7 +118,8 @@ export function UnifiedExplorePreview({ registry }: { registry: ExploreContentRe
       const detail = (event as CustomEvent<ScrubStationEventDetail>).detail;
       if (detail?.station) {
         setStation(detail.station);
-        setActiveModule(MODULE_FOR_STATION[detail.station]);
+        const nextModule = moduleForStation(detail.station);
+        if (nextModule) setActiveModule(nextModule);
       }
     };
     const onFocus = (event: Event) => {
@@ -144,7 +127,7 @@ export function UnifiedExplorePreview({ registry }: { registry: ExploreContentRe
       const id = detail?.id ? moduleForBoxId(detail.id) : null;
       if (id) {
         setActiveModule(id);
-        const nextStation = STATION_FOR_MODULE[id];
+        const nextStation = stationForFocusBoxId(id, stationPresentations);
         if (nextStation) setStation(nextStation);
       }
     };
@@ -154,22 +137,23 @@ export function UnifiedExplorePreview({ registry }: { registry: ExploreContentRe
       window.removeEventListener("vm:scrub-station", onStation);
       window.removeEventListener("vm:focus-box", onFocus);
     };
-  }, []);
+  }, [moduleForStation, stationPresentations]);
 
   const activeContent = useMemo(() => contentFor(registry, activeModule), [activeModule, registry]);
-  const stationInfo = STATIONS.find((candidate) => candidate.id === station) ?? STATIONS[0];
+  const stationInfo = stationPresentations[station];
 
   const chooseModule = useCallback((id: PreviewModuleId) => {
     setActiveModule(id);
-    const nextStation = STATION_FOR_MODULE[id];
+    const nextStation = stationForFocusBoxId(id, stationPresentations);
     if (nextStation) setStation(nextStation);
-  }, []);
+  }, [stationPresentations]);
 
   const chooseStation = useCallback((next: JourneyStation) => {
     setStation(next);
-    setActiveModule(MODULE_FOR_STATION[next]);
+    const nextModule = moduleForStation(next);
+    if (nextModule) setActiveModule(nextModule);
     window.dispatchEvent(new CustomEvent("vm:preview-station-request", { detail: { station: next } }));
-  }, []);
+  }, [moduleForStation]);
 
   const unlock = useCallback(() => {
     setWorkspaceUnlocked(true);
@@ -208,7 +192,7 @@ export function UnifiedExplorePreview({ registry }: { registry: ExploreContentRe
             </div>
             <div className={styles.context}>
               <span>Working reference</span>
-              <strong>Wachau <i>→</i> Nasenwand <i>→</i> Upper</strong>
+              <strong>{activeContent?.region ?? "Region"} <i>→</i> {activeContent?.crag ?? "Crag"} <i>→</i> {activeContent?.sector ?? "Sector"}</strong>
             </div>
             <div className={styles.headerActions}>
               <span className={styles.livePill}>Preview mode</span>
@@ -219,10 +203,10 @@ export function UnifiedExplorePreview({ registry }: { registry: ExploreContentRe
 
           <nav className={styles.stationRail} aria-label="Explore journey stations">
             <div className={styles.railHeading}><small>Flight path</small><strong>Navigate the same place at four scales</strong></div>
-            {STATIONS.map((candidate) => (
+            {stations.map((candidate) => (
               <button key={candidate.id} type="button" className={styles.stationButton} aria-pressed={candidate.id === station} onClick={() => chooseStation(candidate.id)}>
-                <span className={styles.stationIndex}>{candidate.index}</span>
-                <span><b>{candidate.label}</b><small>{candidate.title}</small></span>
+                <span className={styles.stationIndex}>{String(candidate.index + 1).padStart(2, "0")}</span>
+                <span><b>{stationPresentations[candidate.id].label}</b><small>{stationPresentations[candidate.id].title}</small></span>
               </button>
             ))}
           </nav>
@@ -230,7 +214,7 @@ export function UnifiedExplorePreview({ registry }: { registry: ExploreContentRe
           <section className={styles.mapStage} aria-label="Atlas map canvas">
             <div className={styles.stageHeader}>
               <div><small>Canonical atlas · region / crag / route</small><strong>Move through the map, keep the wall in sight.</strong></div>
-              <span>{stationInfo.label} <i>·</i> Nasenwand reference</span>
+              <span>{stationInfo.label} <i>·</i> {activeContent?.crag ?? "current crag"}</span>
             </div>
             <div className={styles.mapViewport}>
               <Suspense fallback={<div className={styles.mapLoading}>Preparing the live atlas…</div>}><CragLocator /></Suspense>
@@ -260,7 +244,7 @@ export function UnifiedExplorePreview({ registry }: { registry: ExploreContentRe
 
           <footer className={styles.footerNote}>
             <span><b>One focused layer at a time.</b> Heavy media opens on intent.</span>
-            <span>{stationInfo.copy}</span>
+            <span>{stationInfo.description}</span>
           </footer>
         </section>
       )}

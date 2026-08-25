@@ -112,7 +112,7 @@ export function writeDeepLinkToUrl(box: ExploreContentBox | null): void {
     url.searchParams.set("crag", slugify(box.crag));
     if (box.sector) url.searchParams.set("sector", slugify(box.sector));
     // The address bar reflects current focus, not an explicit request to make
-    // one module exclusive. This keeps restored tablet/desktop workspaces
+    // one module exclusive. This keeps restored desktop workspaces
     // intact across reloads while bare shared links still open expanded.
     url.searchParams.set("mode", "normal");
   }

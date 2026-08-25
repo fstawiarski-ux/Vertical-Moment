@@ -23,7 +23,7 @@
 
 .rail {
   display: grid;
-  grid-template-columns: auto repeat(4, minmax(0, 1fr)) auto;
+  grid-template-columns: auto repeat(4, minmax(0, 1fr)) auto auto;
   gap: 4px;
   width: 100%;
   min-height: 54px;
@@ -42,7 +42,8 @@
 }
 
 .stage,
-.search {
+.search,
+.follow {
   position: relative;
   display: grid;
   min-width: 0;
@@ -73,6 +74,17 @@
   padding-inline: 5px;
 }
 
+.follow {
+  grid-template-columns: auto minmax(0, auto);
+  padding-inline: 9px;
+}
+
+.follow[aria-pressed="true"] {
+  color: #101713;
+  border-color: #9bc9a2;
+  background: linear-gradient(180deg, #c6e3c7, #8fbd98);
+}
+
 .search .copy { display: none; }
 .search .searchIcon { width: 22px; height: 22px; font-size: 16px; }
 
@@ -97,7 +109,9 @@
 .stage:hover,
 .stage:focus-visible,
 .search:hover,
-.search:focus-visible {
+.search:focus-visible,
+.follow:hover,
+.follow:focus-visible {
   color: #f4f0e4;
   outline: none;
   border-color: rgb(224 202 128 / 28%);
@@ -112,7 +126,8 @@
 }
 
 .stage:active,
-.search:active { transform: scale(.975); }
+.search:active,
+.follow:active { transform: scale(.975); }
 
 .icon,
 .searchIcon {
@@ -168,7 +183,8 @@
   .rail { min-height: 50px; }
   .identity { width: 34px; min-width: 34px; min-height: 46px; }
   .stage,
-  .search { min-height: 46px; gap: 5px; padding-inline: 7px; }
+  .search,
+  .follow { min-height: 46px; gap: 5px; padding-inline: 7px; }
   .search { width: 48px; min-width: 48px; }
   .copy strong { font-size: 9px; }
   .copy small { font-size: 6px; letter-spacing: .07em; }

@@ -4,6 +4,7 @@ import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } fro
 import { IntroScrubSequence, type UnlockReason } from "./components/animation/IntroScrubSequence";
 import { BoxTopoWorkspace } from "./components/boxes/BoxTopoWorkspace";
 import { BoxContainer } from "./components/boxes/BoxContainer";
+import { BoxStage } from "./components/boxes/BoxStage";
 import { BoxPilotAssembly } from "./components/boxes/BoxPilotAssembly";
 import { ResponsiveImage } from "./components/media/ResponsiveImage";
 import { CommandPalette } from "./components/shell/CommandPalette";
@@ -12,7 +13,7 @@ import { LayoutToolbar } from "./components/shell/LayoutToolbar";
 import { PhoneShell } from "./components/shell/PhoneShell";
 import { StationPeek } from "./components/shell/StationPeek";
 import { WorkspaceTopRail } from "./components/shell/WorkspaceTopRail";
-import { DesktopShell, TabletShell } from "./components/shell/WorkspaceShells";
+import { DesktopShell } from "./components/shell/WorkspaceShells";
 import { RegionalFlyover } from "./components/regions/RegionalFlyover";
 import { UnifiedExplorePreview } from "./components/UnifiedExplorePreview";
 import { OfficialMark } from "./brand/OfficialMark";
@@ -341,14 +342,6 @@ function Workspace({ registry, pilot }: { registry: ExploreContentRegistry; pilo
     const previousMode = previousViewportMode.current;
     previousViewportMode.current = viewportMode;
 
-    if (viewportMode === "tablet") {
-      dispatch({ type: "SET_LAYOUT_MODE", mode: "grid" });
-      if (!unifiedHierarchy) {
-        dispatch({ type: "APPLY_AUTO_LAYOUT", viewport: { width: window.innerWidth, height: window.innerHeight } });
-      }
-      return;
-    }
-
     if (viewportMode === "desktop" && previousMode !== "desktop") {
       dispatch({ type: "SET_LAYOUT_MODE", mode: "explore" });
       // Unified/hero-first layouts preserve the user's saved desktop geometry.
@@ -464,7 +457,12 @@ function Workspace({ registry, pilot }: { registry: ExploreContentRegistry; pilo
 
   const openStationBox = useCallback((id: string) => {
     openIndependentBox(id, "normal", true);
-  }, [openIndependentBox]);
+    for (const box of boxesRef.current) {
+      if (box.id !== id && box.mode !== "minimized") {
+        dispatch({ type: "SET_BOX_MODE", id: box.id, mode: "minimized" });
+      }
+    }
+  }, [dispatch, openIndependentBox]);
 
   const openPalette = useCallback((query: string) => {
     setPaletteQuery(query);
@@ -585,22 +583,19 @@ function Workspace({ registry, pilot }: { registry: ExploreContentRegistry; pilo
   const renderBox = (box: BoxState) => {
     const content = contentById.get(box.dataRef ?? box.id);
     if (!content) return null;
-    return (
-      <BoxContainer
-        key={box.id}
-        box={box}
-        title={content.title}
-        eyebrow={`${content.crag} · ${content.type === "nasenwand" ? "routes" : content.type === "wallreveal" ? "story" : content.type}`}
-        viewportMode={viewportMode}
-      >
-        <BoxContent
-          content={content}
-          isActive={activeBoxId === box.id || (journeyActive && stationFocusId === box.id)}
-          priority={content.id === registry.boxes[0]?.id}
-          pilot={pilot}
-        />
-      </BoxContainer>
+    const eyebrow = `${content.crag} · ${content.type === "nasenwand" ? "routes" : content.type === "wallreveal" ? "story" : content.type}`;
+    const children = (
+      <BoxContent
+        content={content}
+        isActive={activeBoxId === box.id || (journeyActive && stationFocusId === box.id)}
+        priority={content.id === registry.boxes[0]?.id}
+        pilot={pilot}
+      />
     );
+    if (viewportMode === "mobile") {
+      return <BoxStage key={box.id} box={box} title={content.title} eyebrow={eyebrow}>{children}</BoxStage>;
+    }
+    return <BoxContainer key={box.id} box={box} title={content.title} eyebrow={eyebrow} viewportMode={viewportMode}>{children}</BoxContainer>;
   };
 
   const exclusiveBox = boxes.find((box) => box.mode === "fullscreen") ?? boxes.find((box) => box.mode === "expanded");
@@ -617,12 +612,12 @@ function Workspace({ registry, pilot }: { registry: ExploreContentRegistry; pilo
   const stationContent = contentById.get(stationFocusId) ?? null;
   const openPhoneBox = useCallback((id: string) => openIndependentBox(id, "normal", true), [openIndependentBox]);
   const openUnifiedBox = useCallback((id: string) => {
-    openIndependentBox(id, "normal", true);
+    openStationBox(id);
     const station = stationForFocusBoxId(id, stationPresentations);
     if (station) {
       window.dispatchEvent(new CustomEvent("vm:preview-station-request", { detail: { station } }));
     }
-  }, [openIndependentBox, stationPresentations]);
+  }, [openStationBox, stationPresentations]);
   const openContributor = useCallback(() => {
     window.location.assign("/contribute?source=explore-app");
   }, []);
@@ -681,9 +676,6 @@ function Workspace({ registry, pilot }: { registry: ExploreContentRegistry; pilo
           onToggleJourney={() => setFollowJourney((current) => !current)}
           followJourney={followJourney}
         />
-      )}
-      {workspaceUnlocked && viewportMode === "tablet" && (
-        <TabletShell visible={visible} renderBox={renderBox} exclusiveMode={exclusiveMode} unifiedHierarchy={unifiedHierarchy} journeyActive={journeyActive} />
       )}
       {workspaceUnlocked && viewportMode === "desktop" && (
         <DesktopShell visible={visible} renderBox={renderBox} exclusiveMode={exclusiveMode} unifiedHierarchy={unifiedHierarchy} journeyActive={journeyActive} />

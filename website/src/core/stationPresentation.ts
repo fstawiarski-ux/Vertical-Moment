@@ -1,4 +1,7 @@
 import type { JourneyStation } from "./types";
+import { JOURNEY_STATIONS } from "./journey";
+
+export { stationForProgress } from "./journey";
 
 export interface StationPresentation {
   label: string;
@@ -56,26 +59,12 @@ export function stationFlightDuration(distance: number) {
   return STATION_FLIGHT_MIN_MS + Math.max(0, Math.min(1, distance)) * STATION_FLIGHT_DISTANCE_MS;
 }
 
-/** Midpoints keep continuous finger/slider scrubbing from switching at a station edge. */
-export function stationForProgress(
-  progress: number,
-  markers: Record<JourneyStation, number> = { region: 0, rock: 1 / 3, sector: 2 / 3, topo: 1 },
-): JourneyStation {
-  const regionRockBoundary = (markers.region + markers.rock) / 2;
-  const rockSectorBoundary = (markers.rock + markers.sector) / 2;
-  const sectorTopoBoundary = (markers.sector + markers.topo) / 2;
-  if (progress < regionRockBoundary) return "region";
-  if (progress < rockSectorBoundary) return "rock";
-  if (progress < sectorTopoBoundary) return "sector";
-  return "topo";
-}
-
 /** Resolve a deep-linked station box back to the journey station it represents. */
 export function stationForFocusBoxId(
   boxId: string,
   presentations: Record<JourneyStation, StationPresentation> = STATION_PRESENTATIONS,
 ): JourneyStation | null {
-  for (const station of ["region", "rock", "sector", "topo"] as const) {
+  for (const station of JOURNEY_STATIONS) {
     if (presentations[station].focusBoxId === boxId) return station;
   }
   return null;

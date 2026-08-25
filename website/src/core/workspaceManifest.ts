@@ -1,4 +1,5 @@
 import type { ExploreContentRegistry, JourneyStation } from "./types";
+import { JOURNEY_STATIONS } from "./journey";
 import { STATION_PRESENTATIONS, type StationPresentation } from "./stationPresentation";
 
 const DEFAULT_MAX_BOXES = 5;
@@ -13,8 +14,6 @@ export interface ResolvedWorkspaceManifest {
   stationFocus: Record<JourneyStation, string>;
 }
 
-const STATIONS: JourneyStation[] = ["region", "rock", "sector", "topo"];
-
 function validMaxBoxes(value: unknown): number {
   if (typeof value !== "number" || !Number.isFinite(value)) return DEFAULT_MAX_BOXES;
   return Math.min(DEFAULT_MAX_BOXES, Math.max(1, Math.floor(value)));
@@ -25,7 +24,7 @@ export function resolveWorkspaceManifest(registry: ExploreContentRegistry): Reso
   const requestedPrimary = registry.workspace?.phone?.primaryModuleIds ?? DEFAULT_PHONE_PRIMARY_IDS;
   const primaryModuleIds = requestedPrimary.filter((id) => ids.has(id));
   const fallbackPrimary = registry.boxes.slice(0, 3).map((box) => box.id);
-  const stationFocus = STATIONS.reduce((resolved, station) => {
+  const stationFocus = JOURNEY_STATIONS.reduce((resolved, station) => {
     const requested = registry.workspace?.stationFocus?.[station];
     const staticFallback = STATION_PRESENTATIONS[station].focusBoxId;
     resolved[station] = requested && ids.has(requested)
@@ -50,8 +49,17 @@ export function resolveWorkspaceManifest(registry: ExploreContentRegistry): Reso
 
 export function stationPresentationsFor(registry: ExploreContentRegistry): Record<JourneyStation, StationPresentation> {
   const manifest = resolveWorkspaceManifest(registry);
-  return STATIONS.reduce((resolved, station) => {
-    resolved[station] = { ...STATION_PRESENTATIONS[station], focusBoxId: manifest.stationFocus[station] };
+  return JOURNEY_STATIONS.reduce((resolved, station) => {
+    const content = registry.boxes.find((box) => box.id === manifest.stationFocus[station]);
+    const contentLabel = content?.crag?.trim();
+    const eyebrow = contentLabel
+      ? `${contentLabel} · ${station === "region" ? "atlas" : station === "rock" ? "wall" : station === "sector" ? "routes" : "spatial"}`
+      : STATION_PRESENTATIONS[station].eyebrow;
+    resolved[station] = {
+      ...STATION_PRESENTATIONS[station],
+      focusBoxId: manifest.stationFocus[station],
+      eyebrow,
+    };
     return resolved;
   }, {} as Record<JourneyStation, StationPresentation>);
 }

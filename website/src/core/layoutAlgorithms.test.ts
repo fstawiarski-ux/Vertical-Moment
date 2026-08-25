@@ -66,15 +66,6 @@ describe("hero-first compact frames", () => {
     expect(frame.y + frame.height).toBeLessThanOrEqual(viewport.height - EXPLORE_SAFE_ZONE.bottom);
   });
 
-  it("keeps compact geometry at tablet-landscape dimensions", () => {
-    const frame = compactJourneyFrame({ width: 1024, height: 768 });
-
-    expect(frame.width).toBeLessThanOrEqual(300);
-    expect(frame.height).toBeGreaterThanOrEqual(190);
-    expect(frame.x).toBeGreaterThanOrEqual(EXPLORE_SAFE_ZONE.left);
-    expect(frame.y).toBeGreaterThanOrEqual(EXPLORE_SAFE_ZONE.top);
-  });
-
   it("restores named modules into stable outer-edge slots", () => {
     const atlas = heroFirstFrameForBox("crag-locator", viewport);
     const routes = heroFirstFrameForBox("nasenwand-spatial", viewport);
