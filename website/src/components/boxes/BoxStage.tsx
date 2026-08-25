@@ -20,6 +20,8 @@ export function BoxStage({ box, title, eyebrow, children }: {
       className={styles.stage}
       data-viewport="mobile"
       data-box-id={box.id}
+      data-mode={box.mode}
+      data-module-chrome="minimal"
       aria-label={`${title} module`}
       onPointerDown={focus}
       onFocusCapture={focus}

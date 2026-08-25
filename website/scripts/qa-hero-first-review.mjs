@@ -6,9 +6,7 @@ const baseUrl = process.env.VM_PREVIEW_URL ?? "http://127.0.0.1:3017/explore-app
 const outDir = path.resolve("review-artifacts/hero-first");
 await fs.mkdir(outDir, { recursive: true });
 
-// Phone and desktop are the canonical Explore products. Tablet remains a
-// functional inherited breakpoint, but is intentionally not a dedicated visual
-// acceptance target in this focused review suite.
+// Phone and desktop are the only canonical Explore products in this suite.
 const cases = [
   { id: "phone-portrait", width: 390, height: 844, shell: "phone", minArea: 0.34, maxArea: 0.50, nav: "bottom" },
   { id: "phone-landscape", width: 844, height: 390, shell: "phone", minArea: 0.30, maxArea: 0.46, nav: "right" },
@@ -18,7 +16,6 @@ const cases = [
 const browser = await chromium.launch({ headless: true });
 const results = [];
 
-const overlaps = (a, b, gap = 1) => !(a.x + a.width + gap <= b.x || b.x + b.width + gap <= a.x || a.y + a.height + gap <= b.y || b.y + b.height + gap <= a.y);
 const clickAtCenter = async (page, locator) => {
   const rect = await locator.boundingBox();
   if (!rect) throw new Error("Control has no measurable hit area.");
@@ -54,18 +51,10 @@ for (const test of cases) {
     if (!(await timeline.isVisible().catch(() => false))) throw new Error("Hero scrub is missing after workspace unlock.");
     notes.push("compact hero scrub remains reachable after unlock");
 
-    const controlButtons = page.locator('[data-module-window-controls="true"] button:visible');
-    const controlsUseSvg = await controlButtons.evaluateAll((nodes) => nodes.every((node) => Boolean(node.querySelector("svg")) && !(node.textContent ?? "").trim()));
-    if (!controlsUseSvg) throw new Error("A visible module window control still relies on text glyph content instead of SVG.");
-
     if (test.shell === "phone") {
-      if (await controlButtons.count() !== 1) throw new Error(`Phone must expose exactly one module action; found ${await controlButtons.count()}.`);
-      const labels = await controlButtons.evaluateAll((nodes) => nodes.map((node) => node.getAttribute("aria-label") ?? ""));
-      if (!labels.every((label) => /full screen/i.test(label)) || labels.some((label) => /^(Hide|Move) /.test(label))) {
-        throw new Error(`Phone module chrome must be fullscreen-only: ${labels.join(", ")}`);
-      }
-      const controlRect = await controlButtons.first().boundingBox();
-      if (!controlRect || controlRect.width < 44 || controlRect.height < 44) throw new Error("Phone fullscreen action is smaller than 44x44px.");
+      const phoneModule = normal.first();
+      if (await phoneModule.getAttribute("data-module-chrome") !== "minimal") throw new Error("Phone module chrome is not minimal.");
+      if (await phoneModule.locator('[data-module-window-controls="true"]').count()) throw new Error("Phone station card exposes desktop window controls.");
 
       const nav = page.locator('[data-role="phone-nav"]');
       const navBox = await nav.boundingBox();
@@ -82,17 +71,13 @@ for (const test of cases) {
 
       const activeId = await normal.first().getAttribute("data-box-id");
       if (!activeId) throw new Error("Phone active module is missing its id.");
-      await clickAtCenter(page, controlButtons.first());
-      await page.locator(`article[data-box-id="${activeId}"][data-mode="fullscreen"]`).waitFor({ state: "attached", timeout: 5000 });
-      const collapse = page.locator(`article[data-box-id="${activeId}"][data-mode="fullscreen"] [data-module-window-controls="true"] button:visible`);
-      if (await collapse.count() !== 1 || !/Exit full screen/i.test((await collapse.first().getAttribute("aria-label")) ?? "")) {
-        throw new Error("Phone fullscreen state does not expose a single collapse action.");
-      }
-      await clickAtCenter(page, collapse.first());
-      await page.locator(`article[data-box-id="${activeId}"][data-mode="normal"]`).waitFor({ state: "attached", timeout: 5000 });
-      notes.push("phone uses one 44px fullscreen expand/collapse action");
+      if (await page.locator('article[data-mode="normal"]').count() !== 1) throw new Error("Phone station stage must expose exactly one normal module.");
+      notes.push("phone uses one minimal station card with no window controls");
       notes.push(test.nav === "bottom" ? "portrait navigation is bottom anchored" : "landscape navigation uses the right rail");
     } else {
+      const controlButtons = page.locator('[data-module-window-controls="true"] button:visible');
+      const controlsUseSvg = await controlButtons.evaluateAll((nodes) => nodes.every((node) => Boolean(node.querySelector("svg")) && !(node.textContent ?? "").trim()));
+      if (!controlsUseSvg) throw new Error("A visible module window control still relies on text glyph content instead of SVG.");
       if (await controlButtons.count() < 3) throw new Error("Desktop three-action module window control contract is incomplete.");
       const controlLabels = await controlButtons.evaluateAll((nodes) => nodes.map((node) => node.getAttribute("aria-label")));
       if (!controlLabels.some((label) => label?.startsWith("Hide ")) || !controlLabels.some((label) => label?.endsWith(" full screen")) || !controlLabels.some((label) => label?.startsWith("Move "))) {
@@ -160,15 +145,9 @@ for (const test of cases) {
         const r = node.getBoundingClientRect();
         return { id: node.getAttribute("data-box-id"), x: r.x, y: r.y, width: r.width, height: r.height };
       }));
-      if (frames.length < 2) throw new Error("Desktop module navigation did not preserve multiple open inspectors.");
-      for (let i = 0; i < frames.length; i++) for (let j = i + 1; j < frames.length; j++) {
-        if (overlaps(frames[i], frames[j], 4)) throw new Error(`Desktop modules overlap: ${frames[i].id} and ${frames[j].id}.`);
-      }
-      const corridorLeft = test.width * 0.34;
-      const corridorRight = test.width * 0.66;
-      const intruders = frames.filter((frame) => frame.x < corridorRight && frame.x + frame.width > corridorLeft);
-      if (intruders.length) throw new Error(`Hero centre corridor is obscured by: ${intruders.map((item) => item.id).join(", ")}.`);
-      notes.push(`${frames.length} desktop inspectors open with clear centre corridor`);
+      if (frames.length !== 1) throw new Error(`Desktop station navigation must show exactly one inspector; found ${frames.length}.`);
+      if (frames[0].id !== "nasenwand-spatial") throw new Error(`Desktop station navigation did not select the Sector card: ${frames[0].id ?? "unknown"}.`);
+      notes.push("desktop station navigation keeps exactly one mapped inspector visible");
     }
 
     await page.screenshot({ path: path.join(outDir, `${test.id}.png`), fullPage: true });
