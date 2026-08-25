@@ -18072,9 +18072,9 @@
    "region_slug": "modling",
    "route_count": 12,
    "is_stub": false,
-   "latitude": 48.014969,
-   "longitude": 16.049373,
-   "coord_source": "routes",
+   "latitude": null,
+   "longitude": null,
+   "coord_source": null,
    "grades": [
     "2",
     "3",
@@ -18089,26 +18089,12 @@
     "sport"
    ],
    "path": "/crags/modling/matterhorndl",
-   "osm": "relation/19171461",
+   "osm": null,
    "rock": null,
    "website": null,
    "topo": null,
    "wikimedia": null,
    "links": [
-    {
-     "kind": "exact",
-     "label": "OpenStreetMap",
-     "domain": "openstreetmap.org",
-     "url": "https://www.openstreetmap.org/relation/19171461",
-     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
-    },
-    {
-     "kind": "exact",
-     "label": "Open in maps",
-     "domain": "openstreetmap.org",
-     "url": "https://www.openstreetmap.org/?mlat=48.014969&mlon=16.049373#map=16/48.014969/16.049373",
-     "note": "Approach and parking."
-    },
     {
      "kind": "search",
      "label": "bergsteigen.com",

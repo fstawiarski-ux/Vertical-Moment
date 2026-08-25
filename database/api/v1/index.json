@@ -8,7 +8,7 @@
   "routes": 2402,
   "crags": 330,
   "regions": 20,
-  "with_coords": 1504,
+  "with_coords": 1492,
   "by_provenance": {
    "master": 0,
    "notion": 0
@@ -39,7 +39,7 @@
  "endpoints": [
   {
    "file": "crags.json",
-   "bytes": 621880
+   "bytes": 621361
   },
   {
    "file": "crags/adlitzgraben/adlitzgraben-mixed.json",
@@ -1107,7 +1107,7 @@
   },
   {
    "file": "crags/modling/matterhorndl.json",
-   "bytes": 11442
+   "bytes": 10805
   },
   {
    "file": "crags/modling/obere-lausbubenwand.json",
@@ -1423,7 +1423,7 @@
   },
   {
    "file": "regions/modling.json",
-   "bytes": 182148
+   "bytes": 181497
   },
   {
    "file": "regions/neunkirchen.json",
@@ -1451,7 +1451,7 @@
   },
   {
    "file": "routes.json",
-   "bytes": 1971910
+   "bytes": 1971778
   },
   {
    "file": "search-index.json",

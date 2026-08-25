@@ -41,8 +41,8 @@
   "regions": 20,
   "crags_with_routes": 129,
   "crag_stubs_osm_only": 201,
-  "crags_geolocated": 268,
-  "routes_with_coords": 1504,
+  "crags_geolocated": 267,
+  "routes_with_coords": 1492,
   "multipitch_excluded": 14,
   "crags_with_external_topo_links": 13
  },
@@ -9038,10 +9038,10 @@
    "slug": "matterhorndl",
    "region": "Mödling",
    "region_slug": "modling",
-   "latitude": 48.014969,
-   "longitude": 16.049373,
-   "coord_source": "osm",
-   "osm": "relation/19171461",
+   "latitude": null,
+   "longitude": null,
+   "coord_source": null,
+   "osm": null,
    "rock": null,
    "website": null,
    "topo": null,
@@ -9062,20 +9062,6 @@
    ],
    "path": "/crags/modling/matterhorndl",
    "links": [
-    {
-     "kind": "exact",
-     "label": "OpenStreetMap",
-     "domain": "openstreetmap.org",
-     "url": "https://www.openstreetmap.org/relation/19171461",
-     "note": "Source of this crag's position. © OpenStreetMap contributors, ODbL."
-    },
-    {
-     "kind": "exact",
-     "label": "Open in maps",
-     "domain": "openstreetmap.org",
-     "url": "https://www.openstreetmap.org/?mlat=48.014969&mlon=16.049373#map=16/48.014969/16.049373",
-     "note": "Approach and parking."
-    },
     {
      "kind": "search",
      "label": "bergsteigen.com",
@@ -72327,8 +72313,8 @@
    "region": "Mödling",
    "crag": "Matterhörndl",
    "source": "Keltenkalk",
-   "lat": 48.014969,
-   "lon": 16.049373,
+   "lat": null,
+   "lon": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
    "row_key": "Mödling | Matterhörndl | Nordkante",
@@ -72339,7 +72325,7 @@
    "slug": "nordkante",
    "path": "/crags/modling/matterhorndl#f1ef45df-0f2c-5833-bb1a-4c5325cbf682",
    "verification_status": "imported-unverified",
-   "coord_source": "crag"
+   "coord_source": null
   },
   {
    "name": "Nordwand",
@@ -72350,8 +72336,8 @@
    "region": "Mödling",
    "crag": "Matterhörndl",
    "source": "Keltenkalk",
-   "lat": 48.014969,
-   "lon": 16.049373,
+   "lat": null,
+   "lon": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
    "row_key": "Mödling | Matterhörndl | Nordwand",
@@ -72362,7 +72348,7 @@
    "slug": "nordwand",
    "path": "/crags/modling/matterhorndl#7f1ef7fc-5c6c-57a1-8c52-724c9b10af50",
    "verification_status": "imported-unverified",
-   "coord_source": "crag"
+   "coord_source": null
   },
   {
    "name": "Nordwestwand",
@@ -72373,8 +72359,8 @@
    "region": "Mödling",
    "crag": "Matterhörndl",
    "source": "Keltenkalk",
-   "lat": 48.014969,
-   "lon": 16.049373,
+   "lat": null,
+   "lon": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
    "row_key": "Mödling | Matterhörndl | Nordwestwand",
@@ -72385,7 +72371,7 @@
    "slug": "nordwestwand",
    "path": "/crags/modling/matterhorndl#eeb3183a-c7eb-577f-a1ad-fcb20d95b597",
    "verification_status": "imported-unverified",
-   "coord_source": "crag"
+   "coord_source": null
   },
   {
    "name": "Normalweg",
@@ -72396,8 +72382,8 @@
    "region": "Mödling",
    "crag": "Matterhörndl",
    "source": "Keltenkalk",
-   "lat": 48.014969,
-   "lon": 16.049373,
+   "lat": null,
+   "lon": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
    "row_key": "Mödling | Matterhörndl | Normalweg",
@@ -72408,7 +72394,7 @@
    "slug": "normalweg",
    "path": "/crags/modling/matterhorndl#1478b49e-24c8-5151-bc57-34656d6c5957",
    "verification_status": "imported-unverified",
-   "coord_source": "crag"
+   "coord_source": null
   },
   {
    "name": "Ostkamin",
@@ -72419,8 +72405,8 @@
    "region": "Mödling",
    "crag": "Matterhörndl",
    "source": "Keltenkalk",
-   "lat": 48.014969,
-   "lon": 16.049373,
+   "lat": null,
+   "lon": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
    "row_key": "Mödling | Matterhörndl | Ostkamin",
@@ -72431,7 +72417,7 @@
    "slug": "ostkamin",
    "path": "/crags/modling/matterhorndl#acd19387-1f51-545c-b7fc-b346f160818a",
    "verification_status": "imported-unverified",
-   "coord_source": "crag"
+   "coord_source": null
   },
   {
    "name": "Ostkante",
@@ -72442,8 +72428,8 @@
    "region": "Mödling",
    "crag": "Matterhörndl",
    "source": "Keltenkalk",
-   "lat": 48.014969,
-   "lon": 16.049373,
+   "lat": null,
+   "lon": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
    "row_key": "Mödling | Matterhörndl | Ostkante",
@@ -72454,7 +72440,7 @@
    "slug": "ostkante",
    "path": "/crags/modling/matterhorndl#11c19c6a-a87a-583f-975e-b6e59bbfdf35",
    "verification_status": "imported-unverified",
-   "coord_source": "crag"
+   "coord_source": null
   },
   {
    "name": "Rampe",
@@ -72465,8 +72451,8 @@
    "region": "Mödling",
    "crag": "Matterhörndl",
    "source": "Keltenkalk",
-   "lat": 48.014969,
-   "lon": 16.049373,
+   "lat": null,
+   "lon": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
    "row_key": "Mödling | Matterhörndl | Rampe",
@@ -72477,7 +72463,7 @@
    "slug": "rampe",
    "path": "/crags/modling/matterhorndl#4a8715d2-b1d9-512e-a9b6-a8614ee1e7df",
    "verification_status": "imported-unverified",
-   "coord_source": "crag"
+   "coord_source": null
   },
   {
    "name": "Rechte Südkante",
@@ -72488,8 +72474,8 @@
    "region": "Mödling",
    "crag": "Matterhörndl",
    "source": "Keltenkalk",
-   "lat": 48.014969,
-   "lon": 16.049373,
+   "lat": null,
+   "lon": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
    "row_key": "Mödling | Matterhörndl | Rechte Südkante",
@@ -72500,7 +72486,7 @@
    "slug": "rechte-sudkante",
    "path": "/crags/modling/matterhorndl#5fb175f6-1fa2-53c5-9025-fc3034d802e5",
    "verification_status": "imported-unverified",
-   "coord_source": "crag"
+   "coord_source": null
   },
   {
    "name": "Südostriss",
@@ -72511,8 +72497,8 @@
    "region": "Mödling",
    "crag": "Matterhörndl",
    "source": "Keltenkalk",
-   "lat": 48.014969,
-   "lon": 16.049373,
+   "lat": null,
+   "lon": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
    "row_key": "Mödling | Matterhörndl | Südostriss",
@@ -72523,7 +72509,7 @@
    "slug": "sudostriss",
    "path": "/crags/modling/matterhorndl#e6788ca7-42ee-512e-81c2-974bf81fef4d",
    "verification_status": "imported-unverified",
-   "coord_source": "crag"
+   "coord_source": null
   },
   {
    "name": "Südwestriss",
@@ -72534,8 +72520,8 @@
    "region": "Mödling",
    "crag": "Matterhörndl",
    "source": "Keltenkalk",
-   "lat": 48.014969,
-   "lon": 16.049373,
+   "lat": null,
+   "lon": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
    "row_key": "Mödling | Matterhörndl | Südwestriss",
@@ -72546,7 +72532,7 @@
    "slug": "sudwestriss",
    "path": "/crags/modling/matterhorndl#eba859ca-d5c0-5824-9775-7d69fb2d61b0",
    "verification_status": "imported-unverified",
-   "coord_source": "crag"
+   "coord_source": null
   },
   {
    "name": "Westkamin",
@@ -72557,8 +72543,8 @@
    "region": "Mödling",
    "crag": "Matterhörndl",
    "source": "Keltenkalk",
-   "lat": 48.014969,
-   "lon": 16.049373,
+   "lat": null,
+   "lon": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
    "row_key": "Mödling | Matterhörndl | Westkamin",
@@ -72569,7 +72555,7 @@
    "slug": "westkamin",
    "path": "/crags/modling/matterhorndl#fe11a52c-bc23-507a-bb97-4f7783f67bd3",
    "verification_status": "imported-unverified",
-   "coord_source": "crag"
+   "coord_source": null
   },
   {
    "name": "Westriss",
@@ -72580,8 +72566,8 @@
    "region": "Mödling",
    "crag": "Matterhörndl",
    "source": "Keltenkalk",
-   "lat": 48.014969,
-   "lon": 16.049373,
+   "lat": null,
+   "lon": null,
    "notion_page_id": null,
    "workflow_status": "in Notion DB",
    "row_key": "Mödling | Matterhörndl | Westriss",
@@ -72592,7 +72578,7 @@
    "slug": "westriss",
    "path": "/crags/modling/matterhorndl#4bc08bff-02df-5cb4-b96c-b0112994a52f",
    "verification_status": "imported-unverified",
-   "coord_source": "crag"
+   "coord_source": null
   },
   {
    "name": "Boulder Me",
