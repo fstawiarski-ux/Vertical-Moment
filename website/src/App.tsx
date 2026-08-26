@@ -22,7 +22,7 @@ import { hasSeenIntro, prefersReducedMotion, rememberIntroSeen } from "./core/in
 import { LayoutProvider, useLayoutState } from "./core/layoutState";
 import { compactJourneyFrame, heroFirstFrameForBox, stationFrameForBox } from "./core/layoutAlgorithms";
 import { buildContentEntries, type SearchEntry } from "./core/searchIndex";
-import { applyPilotToRegistry, moduleKeyForContent, pilotJourneyPreviewable, pilotUsesPreviewMedia, selectedPilotId } from "./core/pilotManifest";
+import { applyPilotToRegistry, moduleKeyForContent, pilotJourneyNotice, pilotJourneyPreviewable, selectedPilotId } from "./core/pilotManifest";
 import type { ExplorePilotManifest, PilotCatalog, RegionalPreviewManifest } from "./core/pilotTypes";
 import type {
   BoxMode,
@@ -633,9 +633,7 @@ function Workspace({ registry, pilot }: { registry: ExploreContentRegistry; pilo
         allowPostUnlockStationRequests={true}
         posterOnly={Boolean(pilot && !pilotJourneyPreviewable(pilot))}
         label={pilot ? `${pilot.identity.region} to ${pilot.identity.crag} journey` : "Wachau approach scrub sequence"}
-        notice={pilot && pilotUsesPreviewMedia(pilot)
-          ? `LOCAL PROXY · ${pilot.identity.crag} footage is not verified · replace before release`
-          : undefined}
+        notice={pilot ? pilotJourneyNotice(pilot) : undefined}
       />
       {stationPeekVisible && (
         <StationPeek
@@ -823,8 +821,17 @@ export default function ExploreApp({ initialRegistry }: { initialRegistry?: Expl
   }, [loadPilot]);
 
   useEffect(() => {
-    const id = new URLSearchParams(window.location.search).get("regionPreview");
+    const params = new URLSearchParams(window.location.search);
+    const legacyHelenental = params.get("pilot") === "helenental";
+    const id = params.get("regionPreview") ?? (legacyHelenental ? "helenental" : null);
     if (!id) return;
+    if (legacyHelenental) {
+      const url = new URL(window.location.href);
+      url.searchParams.set("regionPreview", "helenental");
+      url.searchParams.set("pilot", "hel-engelstein");
+      url.searchParams.set("crag", "engelstein");
+      window.history.replaceState({}, "", url);
+    }
     let cancelled = false;
     void fetch(`/explore/regions/${id}/region.json`, { cache: "no-cache" })
       .then((response) => {

@@ -2,35 +2,47 @@
   "$schema": "../pilot.schema.json",
   "schemaVersion": 1,
   "id": "hel-jammerwandl",
-  "label": "Pilot 005 — Helenental / Jammerwandl",
+  "label": "Pilot 005 — Helenental / Jammerwandl — PRIVATE PHONE BETA",
   "releaseState": "assembly",
   "identity": { "region": "Helenental", "regionSlug": "helenental", "crag": "Jammerwandl", "cragSlug": "jammerwandl", "sector": "Jammerwandl", "canonicalCragId": "hel-jammerwandl" },
-  "provenance": { "notionUrl": "https://www.notion.so/3c12141353518160884ec0116bc6bea7", "dataPath": "database/api/v1/crags/helenental/jammerwandl.json", "confidence": "imported-unverified", "lastReviewed": "2026-08-19" },
+  "provenance": { "notionUrl": "https://app.notion.com/p/3c12141353518160884ec0116bc6bea7", "dataPath": "database/api/v1/crags/helenental/jammerwandl.json", "confidence": "imported-unverified", "lastReviewed": "2026-08-26" },
   "summary": { "routeCount": 37, "gradeSystem": "UIAA", "gradeRange": "4 to 9-", "discipline": "sport" },
   "journey": {
     "posterSlot": "hero",
+    "master": {
+      "src": "/explore/pilots/hel-jammerwandl/media/engelstein-jammerwandl-return-720.mp4",
+      "poster": "/explore/pilots/hel-jammerwandl/media/jammerwandl-journey-poster-720.jpg",
+      "duration": 83.5,
+      "bytes": 19210008,
+      "sha256": "32AAAB117EADA970B6ACC22A4D342A828DB9DB95E28DA93ABD58C23A2B5FFD0F",
+      "alt": "Owner-approved phone journey from Engelstein toward Jammerwandl and back toward Engelstein",
+      "objectPosition": "50% center",
+      "keyframeIntervalSeconds": 0.5,
+      "stations": { "region": 0, "rock": 0.333333, "sector": 0.666667, "topo": 1 },
+      "note": "PRIVATE PHONE BETA — DJI_0363 from 00:50 to end followed by the whole DJI_0364 clip in reverse, preserving the owner-approved order. Re-encoded at 720×406 with 0.5-second seek points; station anchors are interaction divisions, not route geometry or a claim of one continuous flight."
+    },
     "chapters": [
-      { "id": "region-rock", "from": "Region", "to": "Rock", "asset": "scrubRegionRock", "duration": null, "direction": "forward", "objectPosition": "50% center" },
-      { "id": "rock-sector", "from": "Rock", "to": "Sector", "asset": "scrubRockSector", "duration": null, "direction": "forward", "objectPosition": "50% center" },
-      { "id": "sector-topo", "from": "Sector", "to": "Topo", "asset": "scrubSectorTopo", "duration": null, "direction": "forward", "objectPosition": "50% center" }
+      { "id": "region-rock", "from": "Region", "to": "Rock", "asset": "scrubRegionRock", "duration": 27.833333, "direction": "forward", "objectPosition": "50% center" },
+      { "id": "rock-sector", "from": "Rock", "to": "Sector", "asset": "scrubRockSector", "duration": 27.833334, "direction": "forward", "objectPosition": "50% center" },
+      { "id": "sector-topo", "from": "Sector", "to": "Topo", "asset": "scrubSectorTopo", "duration": 27.833333, "direction": "forward", "objectPosition": "50% center" }
     ]
   },
   "modules": {
-    "locator": { "title": "Helenental Locator", "mobileLabel": "Atlas", "description": "Shared atlas context for Helenental and Jammerwandl.", "primarySlots": [] },
-    "panorama": { "title": "Helenental Panorama", "mobileLabel": "360", "description": "Reserved panorama and 360 workspace for the incoming pilot media.", "primarySlots": ["panoramaPoster", "panorama360"] },
+    "locator": { "title": "Helenental Locator", "mobileLabel": "Atlas", "description": "Jammerwandl is the owner-defined right-side branch from the Engelstein central point.", "primarySlots": [] },
+    "panorama": { "title": "Jammerwandl Context", "mobileLabel": "Context", "description": "The approved out-and-back journey supplies the phone context; a true panorama or 360 remains missing.", "primarySlots": ["panoramaPoster", "panorama360"] },
     "routes": { "title": "Jammerwandl Routes", "mobileLabel": "Routes", "description": "Canonical imported route facts stay visible while wall media and geometry await review.", "primarySlots": ["hero"] },
-    "wall": { "title": "Jammerwandl Wall Reveal", "mobileLabel": "Wall", "description": "The photo and spatial stages have stable upload destinations but no fake placeholder files.", "primarySlots": ["hero", "spatial"] },
+    "wall": { "title": "Jammerwandl Wall Reveal", "mobileLabel": "Wall", "description": "The approved journey supplies a replaceable beta poster while wall-specific spatial evidence stays separately gated.", "primarySlots": ["hero", "spatial"] },
     "topo": { "title": "Jammerwandl Topo + 3D", "mobileLabel": "Topo", "description": "The compact RealityScan derivative can be tested now; the topo remains an explicit review slot.", "primarySlots": ["topo", "model"] }
   },
   "assets": {
-    "hero": { "kind": "image", "status": "missing", "targetPath": "/explore/pilots/hel-jammerwandl/hero/hero-1280.webp", "src": null, "alt": "Jammerwandl wall photograph", "note": "Upload an optimized derivative when the visual treatment is approved." },
+    "hero": { "kind": "image", "status": "review", "targetPath": "/explore/pilots/hel-jammerwandl/hero/hero-1280.webp", "src": null, "alt": "Helenental corridor frame from the approved Engelstein-to-Jammerwandl-and-back phone journey", "note": "PRIVATE BETA POSTER — extracted from the approved DJI_0363/DJI_0364 sequence; exact wall framing and public rights remain gated.", "preview": { "adapter": "same-origin", "src": "/explore/pilots/hel-jammerwandl/media/jammerwandl-journey-poster-720.jpg", "provenance": "Owner-approved DJI_0363 00:50-to-end plus reversed DJI_0364 decision sequence; poster extracted from the locally validated phone derivative.", "verifiedForPilot": false, "replaceable": true } },
     "spatial": { "kind": "image", "status": "missing", "targetPath": "/explore/pilots/hel-jammerwandl/wall/spatial-1280.webp", "src": null, "alt": "Jammerwandl spatial wall study" },
     "topo": { "kind": "image", "status": "review", "targetPath": "/explore/pilots/hel-jammerwandl/topo/topo-1280.webp", "src": null, "alt": "Jammerwandl topo", "note": "Source work exists, but no owner-reviewed web derivative is registered yet." },
     "model": { "kind": "model", "status": "ready", "targetPath": "/explore/pilots/hel-jammerwandl/model/model.glb", "src": "/models/jammerwandl-web-v1.glb", "alt": "Provisional 3D scan of Jammerwandl", "bytes": 830224, "note": "Web-ready demo derivative; production delivery can later move to R2." },
     "panoramaPoster": { "kind": "panorama", "status": "missing", "targetPath": "/explore/pilots/hel-jammerwandl/panorama/poster-1600.webp", "src": null, "alt": "Helenental regional panorama" },
     "panorama360": { "kind": "link", "status": "missing", "targetPath": "/explore/pilots/hel-jammerwandl/panorama/360-link.txt", "src": null, "alt": "Interactive 360 view of Jammerwandl" },
-    "scrubRegionRock": { "kind": "video", "status": "missing", "targetPath": "/explore/pilots/hel-jammerwandl/scrub/region-rock.mp4", "src": null, "alt": "Journey from Helenental to Jammerwandl" },
-    "scrubRockSector": { "kind": "video", "status": "missing", "targetPath": "/explore/pilots/hel-jammerwandl/scrub/rock-sector.mp4", "src": null, "alt": "Journey from Jammerwandl to the sector" },
-    "scrubSectorTopo": { "kind": "video", "status": "missing", "targetPath": "/explore/pilots/hel-jammerwandl/scrub/sector-topo.mp4", "src": null, "alt": "Journey from the sector to the topo" }
+    "scrubRegionRock": { "kind": "video", "status": "missing", "targetPath": "/explore/pilots/hel-jammerwandl/scrub/region-rock.mp4", "src": null, "alt": "Optional standalone Jammerwandl Region-to-Rock derivative", "note": "The private phone beta uses the single approved master timeline instead of duplicate chapter files." },
+    "scrubRockSector": { "kind": "video", "status": "missing", "targetPath": "/explore/pilots/hel-jammerwandl/scrub/rock-sector.mp4", "src": null, "alt": "Optional standalone Jammerwandl Rock-to-Sector derivative", "note": "The private phone beta uses the single approved master timeline instead of duplicate chapter files." },
+    "scrubSectorTopo": { "kind": "video", "status": "missing", "targetPath": "/explore/pilots/hel-jammerwandl/scrub/sector-topo.mp4", "src": null, "alt": "Optional standalone Jammerwandl Sector-to-Topo derivative", "note": "The private phone beta uses the single approved master timeline instead of duplicate chapter files." }
   }
 }

@@ -13,6 +13,9 @@ export function selectedPilotId(search: string, catalog: PilotCatalog): string {
   const params = new URLSearchParams(search);
   const explicit = params.get("pilot");
   if (explicit && catalog.pilots.some((entry) => entry.id === explicit)) return explicit;
+  if (explicit === "helenental" && catalog.pilots.some((entry) => entry.id === "hel-engelstein")) {
+    return "hel-engelstein";
+  }
   const crag = params.get("crag");
   return catalog.pilots.find((entry) => entry.cragSlug === crag)?.id ?? catalog.defaultPilot;
 }
@@ -93,6 +96,16 @@ export function pilotJourneyPreviewable(pilot: ExplorePilotManifest): boolean {
 export function pilotUsesPreviewMedia(pilot: ExplorePilotManifest): boolean {
   if (pilot.journey.master) return false;
   return pilot.journey.chapters.some((chapter) => Boolean(pilot.assets[chapter.asset]?.preview));
+}
+
+export function pilotJourneyNotice(pilot: ExplorePilotManifest): string | undefined {
+  if (pilotUsesPreviewMedia(pilot)) {
+    return `LOCAL PROXY · ${pilot.identity.crag} footage is not verified · replace before release`;
+  }
+  if (pilot.journey.master && pilot.releaseState !== "ready") {
+    return `PRIVATE BETA · ${pilot.identity.crag} sequence is attached for owner review · release gates remain open`;
+  }
+  return undefined;
 }
 
 export function moduleKeyForContent(content: ExploreContentBox): PilotModuleKey | null {
