@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { applyPilotToRegistry, pilotJourneyPreviewable, pilotJourneyReady, pilotUsesPreviewMedia, selectedPilotId } from "./pilotManifest";
+import { applyPilotToRegistry, pilotJourneyNotice, pilotJourneyPreviewable, pilotJourneyReady, pilotUsesPreviewMedia, selectedPilotId } from "./pilotManifest";
 import type { ExplorePilotManifest, PilotCatalog } from "./pilotTypes";
 import type { ExploreContentRegistry } from "./types";
 
@@ -9,6 +9,7 @@ const catalog: PilotCatalog = {
   pilots: [
     { id: "nasenwand", cragSlug: "nasenwand", manifest: "/nasenwand.json", releaseState: "ready" },
     { id: "hel-jammerwandl", cragSlug: "jammerwandl", manifest: "/jammerwandl.json", releaseState: "assembly" },
+    { id: "hel-engelstein", cragSlug: "engelstein", manifest: "/engelstein.json", releaseState: "assembly" },
   ],
 };
 
@@ -37,6 +38,7 @@ describe("pilot selection", () => {
   it("prefers an explicit pilot and resolves crag links", () => {
     expect(selectedPilotId("?pilot=hel-jammerwandl", catalog)).toBe("hel-jammerwandl");
     expect(selectedPilotId("?crag=jammerwandl", catalog)).toBe("hel-jammerwandl");
+    expect(selectedPilotId("?pilot=helenental", catalog)).toBe("hel-engelstein");
     expect(selectedPilotId("?pilot=unknown", catalog)).toBe("nasenwand");
   });
 });
@@ -126,6 +128,7 @@ describe("pilot registry projection", () => {
     expect(pilotJourneyReady(masterPilot)).toBe(true);
     expect(pilotJourneyPreviewable(masterPilot)).toBe(true);
     expect(pilotUsesPreviewMedia(masterPilot)).toBe(false);
+    expect(pilotJourneyNotice(masterPilot)).toBe("PRIVATE BETA · Jammerwandl sequence is attached for owner review · release gates remain open");
     expect(applyPilotToRegistry(registry, masterPilot).introScrubSequence).toMatchObject({
       poster: "/pilots/master-poster.jpg",
       chapters: [],
