@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState, type CSSProperties, type WheelEvent } from "react";
 import type { RegionalPreviewManifest, RegionalPreviewNode } from "../../core/pilotTypes";
+import { useScrubVideoSource } from "../../hooks/useScrubVideoSource";
 import styles from "./RegionalFlyover.module.css";
 
 const clamp = (value: number) => Math.max(0, Math.min(1, value));
@@ -26,6 +27,8 @@ function RegionalNodeScrub({ node }: { node: RegionalPreviewNode }) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [unlocked, setUnlocked] = useState(false);
   const [progress, setProgress] = useState(0);
+  const mediaSource = useScrubVideoSource(node.media.video ?? null, unlocked);
+  const mediaReady = mediaSource.status === "ready";
 
   useEffect(() => {
     setUnlocked(false);
@@ -55,10 +58,10 @@ function RegionalNodeScrub({ node }: { node: RegionalPreviewNode }) {
     <section className={styles.mediaCard} onWheel={onWheel} aria-label={`${node.label} regional media`}>
       <div className={styles.mediaStage}>
         <img src={node.media.poster} alt={`${node.label} preview poster`} />
-        {unlocked && node.media.video && (
+        {unlocked && mediaSource.src && (
           <video
             ref={videoRef}
-            src={node.media.video}
+            src={mediaSource.src}
             muted
             playsInline
             preload="metadata"
@@ -79,7 +82,7 @@ function RegionalNodeScrub({ node }: { node: RegionalPreviewNode }) {
           </button>
         )}
       </div>
-      <div className={styles.scrubControls} data-enabled={unlocked && node.media.video ? "true" : "false"}>
+      <div className={styles.scrubControls} data-enabled={unlocked && mediaReady ? "true" : "false"}>
         <label htmlFor={`regional-scrub-${node.id}`}>Scrub selected node</label>
         <input
           id={`regional-scrub-${node.id}`}
@@ -88,7 +91,7 @@ function RegionalNodeScrub({ node }: { node: RegionalPreviewNode }) {
           max="100"
           step="0.1"
           value={progress * 100}
-          disabled={!unlocked || !node.media.video}
+          disabled={!unlocked || !mediaReady}
           onInput={(event) => moveTo(Number(event.currentTarget.value) / 100)}
         />
         <output>{Math.round(progress * 100)}%</output>
