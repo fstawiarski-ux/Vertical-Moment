@@ -5,7 +5,7 @@
   "label": "Pilot 005 — Helenental / Jammerwandl — PRIVATE PHONE BETA",
   "releaseState": "assembly",
   "identity": { "region": "Helenental", "regionSlug": "helenental", "crag": "Jammerwandl", "cragSlug": "jammerwandl", "sector": "Jammerwandl", "canonicalCragId": "hel-jammerwandl" },
-  "provenance": { "notionUrl": "https://app.notion.com/p/3c12141353518160884ec0116bc6bea7", "dataPath": "database/api/v1/crags/helenental/jammerwandl.json", "confidence": "imported-unverified", "lastReviewed": "2026-08-26" },
+  "provenance": { "notionUrl": null, "dataPath": "database/api/v1/crags/helenental/jammerwandl.json", "confidence": "imported-unverified", "lastReviewed": "2026-08-26" },
   "summary": { "routeCount": 37, "gradeSystem": "UIAA", "gradeRange": "4 to 9-", "discipline": "sport" },
   "journey": {
     "posterSlot": "hero",

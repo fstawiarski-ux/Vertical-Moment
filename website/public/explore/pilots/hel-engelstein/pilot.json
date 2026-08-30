@@ -5,7 +5,7 @@
   "label": "Pilot 007 — Helenental / Engelstein — PRIVATE PHONE BETA",
   "releaseState": "assembly",
   "identity": { "region": "Helenental", "regionSlug": "helenental", "crag": "Engelstein", "cragSlug": "engelstein", "sector": "Engelstein", "canonicalCragId": null },
-  "provenance": { "notionUrl": "https://app.notion.com/p/3c1214135351812bb249d8a8d1a99887", "dataPath": "database/api/v1/crags/helenental/engelstein.json", "confidence": "imported-unverified", "lastReviewed": "2026-08-26" },
+  "provenance": { "notionUrl": null, "dataPath": "database/api/v1/crags/helenental/engelstein.json", "confidence": "imported-unverified", "lastReviewed": "2026-08-26" },
   "summary": { "routeCount": 17, "gradeSystem": "UIAA", "gradeRange": null, "discipline": "sport" },
   "journey": {
     "posterSlot": "hero",

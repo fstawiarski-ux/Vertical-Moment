@@ -2,7 +2,7 @@
   "$schema": "https://verticalmoment.com/schemas/private-pilot-intake-v1.json",
   "schemaVersion": 1,
   "pilotKey": "hel-beethovenwand",
-  "notionUrl": "https://app.notion.com/p/3c121413535181b8a7b8c1de1d44b9fe",
+  "notionUrl": null,
   "intakeOwner": "Filip / Vertical Moment",
   "intakeRoot": null,
   "rights": "private-review",

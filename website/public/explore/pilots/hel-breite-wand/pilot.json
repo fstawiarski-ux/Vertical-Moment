@@ -5,7 +5,7 @@
   "label": "Pilot 011 — Helenental / Breite Wand — LOCAL MOTION PROXY",
   "releaseState": "assembly",
   "identity": { "region": "Helenental", "regionSlug": "helenental", "crag": "Breite Wand", "cragSlug": "breite-wand", "sector": "Badener Kletterschule", "canonicalCragId": null },
-  "provenance": { "notionUrl": "https://app.notion.com/p/3c1214135351819c942dfb63dc58a285", "dataPath": "database/api/v1/crags/helenental/breite-wand.json", "confidence": "imported-unverified", "lastReviewed": "2026-08-19" },
+  "provenance": { "notionUrl": null, "dataPath": "database/api/v1/crags/helenental/breite-wand.json", "confidence": "imported-unverified", "lastReviewed": "2026-08-19" },
   "summary": { "routeCount": 50, "gradeSystem": "UIAA", "gradeRange": null, "discipline": "sport" },
   "journey": {
     "posterSlot": "hero",

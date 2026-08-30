@@ -5,7 +5,7 @@
   "label": "Pilot 001 — Nasenwand",
   "releaseState": "ready",
   "identity": { "region": "Wachau", "regionSlug": "wachau", "crag": "Nasenwand", "cragSlug": "nasenwand", "sector": "Upper", "canonicalCragId": null },
-  "provenance": { "notionUrl": "https://www.notion.so/3be21413535181c08556e350b3a881ae", "dataPath": "website/app/data/nasenwand-routes.ts", "confidence": "owner-reviewed", "lastReviewed": "2026-08-19" },
+  "provenance": { "notionUrl": null, "dataPath": "website/app/data/nasenwand-routes.ts", "confidence": "owner-reviewed", "lastReviewed": "2026-08-19" },
   "summary": { "routeCount": 12, "gradeSystem": "UIAA", "gradeRange": "4 to 8-", "discipline": "sport" },
   "journey": {
     "posterSlot": "hero",

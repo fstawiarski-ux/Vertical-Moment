@@ -13,7 +13,7 @@
     "canonicalCragId": "577112b7-72ce-5e44-b6f2-1f4507d1bbf7"
   },
   "provenance": {
-    "notionUrl": "https://app.notion.com/p/3c121413535181b8a7b8c1de1d44b9fe",
+    "notionUrl": null,
     "dataPath": "database/api/v1/crags/helenental/beethovenwand.json",
     "confidence": "imported-unverified",
     "lastReviewed": "2026-08-19"

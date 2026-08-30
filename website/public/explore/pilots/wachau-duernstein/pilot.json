@@ -5,7 +5,7 @@
   "label": "Pilot 002 — Wachau / Dürnstein / Däumling — OWNER REVIEW",
   "releaseState": "review",
   "identity": { "region": "Wachau", "regionSlug": "wachau", "crag": "Dürnstein", "cragSlug": "duernstein", "sector": "Däumling", "canonicalCragId": null },
-  "provenance": { "notionUrl": "https://app.notion.com/p/3be21413535181e9a3f3c9c16c68fe91", "dataPath": null, "confidence": "owner-reviewed", "lastReviewed": "2026-08-25" },
+  "provenance": { "notionUrl": null, "dataPath": null, "confidence": "owner-reviewed", "lastReviewed": "2026-08-25" },
   "summary": { "routeCount": 32, "gradeSystem": "UIAA", "gradeRange": "3- to 9", "discipline": "sport" },
   "journey": {
     "posterSlot": "hero",
