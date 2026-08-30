@@ -5,7 +5,7 @@
   "label": "Pilot 008 — Helenental / Siegenfelder Steinbruch — PRIVATE PHONE BETA",
   "releaseState": "assembly",
   "identity": { "region": "Helenental", "regionSlug": "helenental", "crag": "Siegenfelder Steinbruch", "cragSlug": "siegenfelder-steinbruch", "sector": "Siegenfelder Steinbruch", "canonicalCragId": null },
-  "provenance": { "notionUrl": "https://app.notion.com/p/3c121413535181faa0b1eadd3e787020", "dataPath": "database/api/v1/crags/helenental/siegenfelder-steinbruch.json", "confidence": "imported-unverified", "lastReviewed": "2026-08-26" },
+  "provenance": { "notionUrl": null, "dataPath": "database/api/v1/crags/helenental/siegenfelder-steinbruch.json", "confidence": "imported-unverified", "lastReviewed": "2026-08-26" },
   "summary": { "routeCount": 12, "gradeSystem": "UIAA", "gradeRange": null, "discipline": "sport" },
   "journey": {
     "posterSlot": "hero",

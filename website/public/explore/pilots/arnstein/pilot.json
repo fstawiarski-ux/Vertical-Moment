@@ -13,7 +13,7 @@
     "canonicalCragId": null
   },
   "provenance": {
-    "notionUrl": "https://app.notion.com/p/3be214135351816082a5c132119bc215",
+    "notionUrl": null,
     "dataPath": "database/api/v1/regions/arnstein.json",
     "confidence": "imported-unverified",
     "lastReviewed": "2026-08-20"
