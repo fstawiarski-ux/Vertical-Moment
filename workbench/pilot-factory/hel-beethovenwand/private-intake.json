@@ -4,7 +4,7 @@
   "pilotKey": "hel-beethovenwand",
   "notionUrl": "https://app.notion.com/p/3c121413535181b8a7b8c1de1d44b9fe",
   "intakeOwner": "Filip / Vertical Moment",
-  "intakeRoot": "D:\\VERTICALMOMENT\\3D AI WORKBENCH\\READYCONTENT\\3D FILES\\",
+  "intakeRoot": null,
   "rights": "private-review",
   "assets": {
     "hero": {
@@ -16,10 +16,10 @@
     },
     "spatial": {
       "sourceType": "local",
-      "sourceLocator": "D:\\VERTICALMOMENT\\3D AI WORKBENCH\\READYCONTENT\\3D FILES\\goodbetoven_Model_15GLB_u0_v0_diffuse.png",
+      "sourceLocator": null,
       "sha256": "9233e3652dc8b7bbf70577764c4092b53f034367dcab935d055fac41c50f329a",
-      "state": "verified",
-      "note": "86,346,775-byte external GLB texture, not a hero/spatial derivative. Ownership and derivative permission remain unresolved; inventory evidence only."
+      "state": "missing",
+      "note": "The 86,346,775-byte external GLB texture is archived outside the repository under the owner's private local storage. Filip / Vertical Moment confirmed private/local ownership on 2026-08-30; no public-release approval or PWA derivative has been created."
     },
     "topo": {
       "sourceType": "local",
@@ -30,10 +30,10 @@
     },
     "model": {
       "sourceType": "local",
-      "sourceLocator": "D:\\VERTICALMOMENT\\3D AI WORKBENCH\\READYCONTENT\\3D FILES\\goodbetoven_Model_15GLB.glb",
+      "sourceLocator": null,
       "sha256": "931ed19e91f8f9bf88fd38d1b2305c7468ee934e69626db6f8ee57b4930e1b2c",
-      "state": "verified",
-      "note": "566,824,908-byte RealityScan glTF 2.0 source. Header and declared length pass; it references goodbetoven_Model_15GLB_u0_v0_diffuse.png externally. Do not copy, optimize, convert, or publish until ownership and derivative permission are explicit. Related OBJ/PLY/project evidence is recorded in the readiness report."
+      "state": "missing",
+      "note": "The 566,824,908-byte RealityScan glTF 2.0 source is archived outside the repository under the owner's private local storage. Filip / Vertical Moment confirmed private/local ownership on 2026-08-30. Keep the PWA slot blank until a later deliberate derivative decision. Related OBJ/PLY/project evidence remains in that local archive."
     },
     "panoramaPoster": {
       "sourceType": "local",

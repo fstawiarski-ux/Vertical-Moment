@@ -1,11 +1,11 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-14T18:25:11+00:00",
+ "generated": "2026-08-30T17:51:04+00:00",
  "name": "Vertical Moment climbing data",
  "license": "route data CC-BY-SA; crag geometry © OpenStreetMap contributors (ODbL)",
  "id_recipe": "uuid5(NAMESPACE_URL, \"vertical-moment:\" + row_key)",
  "stats": {
-  "routes": 2402,
+  "routes": 2390,
   "crags": 330,
   "regions": 20,
   "with_coords": 1492,
@@ -27,7 +27,7 @@
    "Höllental-Rax": 0,
    "Kaltenleutgebner Tal": 261,
    "Lindkogel": 83,
-   "Mödling": 188,
+   "Mödling": 176,
    "Neunkirchen": 0,
    "Peilstein": 0,
    "Pernitz": 179,
@@ -39,7 +39,7 @@
  "endpoints": [
   {
    "file": "crags.json",
-   "bytes": 621361
+   "bytes": 621264
   },
   {
    "file": "crags/adlitzgraben/adlitzgraben-mixed.json",
@@ -1107,7 +1107,7 @@
   },
   {
    "file": "crags/modling/matterhorndl.json",
-   "bytes": 10805
+   "bytes": 1441
   },
   {
    "file": "crags/modling/obere-lausbubenwand.json",
@@ -1423,7 +1423,7 @@
   },
   {
    "file": "regions/modling.json",
-   "bytes": 181497
+   "bytes": 172123
   },
   {
    "file": "regions/neunkirchen.json",
@@ -1451,11 +1451,11 @@
   },
   {
    "file": "routes.json",
-   "bytes": 1971778
+   "bytes": 1962501
   },
   {
    "file": "search-index.json",
-   "bytes": 746317
+   "bytes": 742811
   },
   {
    "file": "stats.json",

@@ -1,0 +1,85 @@
+﻿"area_id","area_name","group","sector_id","sector_name","wac_id","lat","lon","elevation_m","aspect","aspect_deg","slope_deg","sun","routes","max_height_m","style","grade_range","notes"
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_01","Hahnenkamm","WAC-1-01","48.39943","15.52423","399","WSW","237.5","35.1","10:50-18:00","8","9","Sport + Trad",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_02","Dreifingerspitze","WAC-1-02","48.39961","15.52423","396","WSW","248.4","40.1","11:20-18:00","5","8","Trad + Sport",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_03","Gotifelsen (Gotifels)","WAC-1-03","48.39987","15.52406","393","WSW","248.4","40.1","11:20-18:00","13","20","Sport + Trad",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_04","Turm der Schmächtigen","WAC-1-04","48.39988","15.52348","363","WSW","248.4","40.1","11:20-18:00","10","17","Sport",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_05","Hörnliturm und Plattenwandl","WAC-1-05","48.39832","15.52524","363","SSW","208.9","18.2","09:00-18:00","3","9","Sport",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_06","Ruachlafelsen (Ruachlafels)","WAC-1-06","48.39883","15.52401","362","S","171.7","30.3","06:10-16:50","8","10","TR + Sport + Trad",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_07","WZ-Kind","WAC-1-07","48.39871","15.52408","352","S","170.9","32.1","06:10-16:50","3","10","Sport",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_08","Plattenspitz","WAC-1-08","48.39843","15.52300","347","SSE","161.6","27.9","06:10-16:00",,,"",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_09","Rawazzerfels","WAC-1-09","48.39806","15.52502","345","SW","217.4","22.3","09:30-18:00","5","9","Sport",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_10","Steinbruch","WAC-1-10","48.39868","15.52444","344","SSW","211.7","27.5","09:10-18:00","10","19","Sport (mostly)",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_11","Donauturm","WAC-1-11","48.39854","15.52323","343","S","171.0","33.6","06:10-16:50","8","16","Sport",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_12","Geisterschiff","WAC-1-12","48.39818","15.52564","340","SSW","208.9","18.2","09:00-18:00",,,"",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_13","Dickkopf","WAC-1-13","48.39839","15.52368","338","S","171.0","33.6","06:10-16:50","11","13","Sport",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_14","Splitterturm","WAC-1-14","48.39844","15.52397","337","S","168.8","33.7","06:10-16:40","5","12","Sport",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_15","Turm der Mächtigen","WAC-1-15","48.39964","15.52310","334","W","260.3","33.5","12:00-18:00","12","17","Sport",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_16","Mittlerer Sägezahn","WAC-1-16","48.39832","15.52331","327","S","171.0","33.6","06:10-16:50",,,"",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_17","Pentagonfels","WAC-1-17","48.39786","15.52474","326","SW","226.2","22.5","10:10-18:00","4","14","Sport + Trad + TR",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_18","Reibeisen","WAC-1-18","48.39768","15.52252","323","SSE","148.5","27.5","06:10-15:00",,,"",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_19","Häuptling (N-Häutpling)","WAC-1-19","48.39775","15.52274","311","SSE","148.5","27.5","06:10-15:00","14","14","Sport",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_20","Däumling","WAC-1-20","48.39812","15.52384","310","S","171.0","33.6","06:10-16:50","32","18","Sport (mostly)","3- to 9 (bergsteigen)","Most prominent tower, hardest routes in Dürnstein. Classics: Däumling Nordostkante 6★★, Däumling Südost Riss 6+★★."
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_21","Fratzofels","WAC-1-21","48.39708","15.52474","306","WSW","241.1","30.8","11:00-18:00",,,"part of Omas Kegel und Fratzofels (theCrag)",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_22","Omas Kegel und Fratzofels","WAC-1-22","48.39695","15.52473","300","WSW","241.1","30.8","11:00-18:00","3","7","Sport + Top Rope",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_23","Vergessener Turm","WAC-1-23","48.39680","15.52468","294","WSW","241.1","30.8","11:00-18:00","1","9","Sport",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_24","Sitting Bull","WAC-1-24","48.39730","15.52425","290","WSW","241.1","30.8","11:00-18:00",,,"",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_25","Bettinaturm","WAC-1-25","48.39671","15.52457","283","WSW","241.1","30.8","11:00-18:00","10","9","Trad",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_26","Schwarzer Turm","WAC-1-26","48.39669","15.52432","274","WSW","241.1","30.8","11:00-18:00","7","9","Trad",,"First rocks reached on approach from the station."
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_27","Namenloser Turm","WAC-1-27","48.39676","15.52399","268","WSW","241.1","30.8","11:00-18:00","6","8","Sport + Trad",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_28","Edelweissturm (Edelweißturm)","","48.399207","15.523801",,"",,,"","11","16","Sport",,"Most prominent tower next to Däumling. Elevation ~390 m estimated (between Dreifingerspitze 396 and Turm der Schmächtigen 363)."
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_29","Teufelsturm","","48.399060","15.523701",,"",,,"","7","12","Sport",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_30","Teufelszacken","","48.399085","15.523571",,"",,,"","6","11","Sport + Trad",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_31","Narrenstuhl","","48.399073","15.523949",,"",,,"","4","7","Sport",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_32","WZ-Turm","","48.398727","15.523969",,"",,,"","7","12","Sport + Trad",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_33","Denstaudenfelsen (Denstaudenfels)","","48.399292","15.524102",,"",,,"","11","9","Sport (mostly)",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_34","Nilpferdrücken","","48.398595","15.525443",,"",,,"","4","18","Sport",,"Routes: 18m/5, 12m/3, 25m/7 (theCrag)."
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_35","Dürnsteiner Klötze","","48.398319","15.522812",,"",,,"",,,"",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_36","Südlicher Sägezahn","","48.398136","15.523124",,"",,,"",,,"",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_37","Flammenplatte","","48.397205","15.524581",,"",,,"",,,"",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_38","Abendlichtplatte (Platte des späten Abendlichts)","","48.397226","15.524350",,"",,,"","1",,"Sport",,"Route: Platte des Späten Abendlichts 4★★ (theCrag Spiegel area)."
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_39","Sinowatzfels","","48.397353","15.524428",,"",,,"",,,"",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_40","Vorgelagerte Felsgruppe","","48.396276","15.524680",,"",,,"","3","22","Sport + Trad",,
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_41","Spiegel / Spiegel und umliegende Felsen","","48.397432","15.524703",,"",,,"","13","12","Sport (mostly)",,"Smooth ~15 m slab, plate climbing. Surrounding rocks: Flammenplatte, Platte des Späten Abendlichts, Sitting Bull, Sinowatzfels, Hexer. Routes: Kleiner Spiegel 2+★★ (7m), Direkter Spiegel 5+★★ (15m), Seitenspiegel/Känguruh 3+★★ (10m), Spiegel 4★★, Die Wange des Hexers 4★★."
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_42","Radiererfels","",,,,"",,,"","7","10","Sport",,"theCrag sector, no GPX waypoint - coordinates to be added."
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_43","Großer Adlerfelsen","",,,,"",,,"","7","9","Sport + Trad",,"theCrag sector, no GPX waypoint - coordinates to be added."
+"WACHAU_001","Masyw główny Dürnstein (Dürnstein main massif)","1","SEC_001_44","Narrenturm (Dürnstein)","",,,,"",,,"","14","18","Sport",,"theCrag sector within Dürnstein massif (sector #27). Classic: Narrenturmkante 4+★★★. Distinct from Narrenturm near Weißenkirchen (GPX)."
+"WACHAU_002","Sektory północne / od strony doliny (North sectors, valley side)","2","SEC_002_01","Nasenwand","WAC-2-28","48.40271","15.51847","372","SW",,,"06:10-18:00","80","60","Sport","4+ to 10- (bergsteigen); theCrag: 107 routes, 235-342 m, sub-sectors Upper 12 / Central 39 / Lower 33 / Deeper 23","One of the best crags in the Wachau, perfect view of Dürnstein/Danube, some road noise. Approach 15 min, entry 250 m. Spring/autumn ideal, summer hot (climb before 13:00). Not child friendly. Caution: hollow blocks marked on topo. 70 m rope, 15 quickdraws. Classics: Der Weg ist das Ziel 6★★, Nick Neck 6+/7-★★★, Atacama 2SL 7+★★★."
+"WACHAU_002","Sektory północne / od strony doliny (North sectors, valley side)","2","SEC_002_02","Civetta","WAC-2-29","48.40262","15.52163","367","ESE","121.9","49.0","06:10-13:20","44","60","Sport","4 to 8+/9-","Tower-like formation, routes up to 3 pitches, mostly steep/overhanging. Gföhler Gneis. Sun 9-15 h, in shade after 15:00. Rain-sensitive but dries fast. Approach 10 min, entry 250 m. 70 m rope, 15 quickdraws. Not child friendly."
+"WACHAU_002","Sektory północne / od strony doliny (North sectors, valley side)","2","SEC_002_03","Turm jenseits des Tales (Wand jenseits des Tales)","WAC-2-30","48.40332","15.52210","353","ESE","121.9","49.0","06:10-13:20","6","85","Sport","5+ to 7-","Plaisir routes, 10 pitches developed in this area (3 short). Up to 4 pitches. Entry 300 m, approach 15 min. 50 m rope, 10 quickdraws, slings. Routes: Just married 4SL (6/5+/6/6-), Mariakante 2SL (6+/6), Dreimäderlhaus 3SL (5+/6-/4+), Via Anna-Sophie 2SL (6-/7-), Wachau plaisir 2SL (5/6+), Plaisir light 1SL (5+), Fiameskante 3SL (trad, no bolts). Shade from 15:00."
+"WACHAU_002","Sektory północne / od strony doliny (North sectors, valley side)","2","SEC_002_04","Piratalwand","WAC-2-31","48.40223","15.51821","340","",,,"06:10-18:00",,,"",,
+"WACHAU_002","Sektory północne / od strony doliny (North sectors, valley side)","2","SEC_002_05","Upper Sector (Nasenwand)","WAC-2-32","48.40231","15.52139","330","ESE","121.9","49.0","06:10-13:20","12","54","Sport",,
+"WACHAU_002","Sektory północne / od strony doliny (North sectors, valley side)","2","SEC_002_06","Lower Sector (Nasenwand)","WAC-2-33","48.40230","15.52180","311","ESE","121.9","49.0","06:10-13:20","33","32","Sport",,
+"WACHAU_002","Sektory północne / od strony doliny (North sectors, valley side)","2","SEC_002_07","Wächterwand","","48.400356","15.518930",,"",,,"",,,"",,"GPX only - no additional data yet."
+"WACHAU_002","Sektory północne / od strony doliny (North sectors, valley side)","2","SEC_002_08","Kummerstalturm","",,,,"NE, W, NW",,,"","18","25","Sport","4 to 9-","Small crag hidden in forest at the foot of Don Bosco Grat (near parking 48.4036, 15.5154, entry 230 m). In shade most of the day - good for hot days. Child friendly. Approach 15 min. 20 named routes (see routes section)."
+"WACHAU_003","Grupa Wachauergrat (grzbiet północny, north ridge)","3","SEC_003_01","Wachauergrat (Wachauer Grat)","WAC-3-34","48.40695","15.52088","456","S","188.5","28.8","07:20-18:00","17","350","Trad/Sport ridge","6 (5+ obl.), sport variants to 7+","One of the best routes in Eastern Austria. 350 m climbing, 17 pitches, exits possible anytime (towers). FA P. Dunst & J. Brandl 11.3.2001. Approach 15 min, entry 300 m, descent 30 min (Dürnsteiner Kanzel 512 m). 50 m rope, 12 quickdraws, sling, helmet. Restriction: Kummerstal climbing 09:00-17:00, no climbing 15.07.-14.08."
+"WACHAU_003","Grupa Wachauergrat (grzbiet północny, north ridge)","3","SEC_003_02","Don-Bosco-Grat (oberer Punkt)","WAC-3-35","48.40665","15.52217","445","S","188.5","28.8","07:20-18:00","8","290","Trad/Sport ridge","5 (4+ obl.)","Younger, renovated classic. Steep chimney start, two Elbsandstein overhangs. Follows blue dots, Bühler haken; copper plaques mark Donna Rossa. FA Erich Weiermayer 11.4.2001. 290 m/300 Hm, 3:00-3:45 h. 50 m rope, 7 quickdraws, slings, mid-size cams, KK set. Entry 300 m. Descent via Dürnsteiner Kanzel."
+"WACHAU_003","Grupa Wachauergrat (grzbiet północny, north ridge)","3","SEC_003_03","Don-Bosco-Grat (niższy punkt)","WAC-3-36","48.40618","15.52200","422","S","188.5","28.8","07:20-18:00",,,"",,"Second GPX waypoint of the same ridge at 422 m."
+"WACHAU_003","Grupa Wachauergrat (grzbiet północny, north ridge)","3","SEC_003_04","Donna Rossa","WAC-3-37","48.40631","15.52183","413","S","188.5","28.8","07:20-18:00","6","300","Sport multi-pitch","6 (5 obl.)","New plaisir route parallel to Don Bosco Grat, very well bolted, marked with copper plaques. 300 m/300 Hm, 3:00-3:45 h. 50 m rope, 11 quickdraws, slings, helmet. Entry 300 m (start via Don Bosco Grat pitches). FA info 2020."
+"WACHAU_003","Grupa Wachauergrat (grzbiet północny, north ridge)","3","SEC_003_05","Ruck-Zuck Wandl","WAC-3-38","48.40561","15.51994","338","",,,"06:10-18:00",,,"",,
+"WACHAU_003","Grupa Wachauergrat (grzbiet północny, north ridge)","3","SEC_003_06","Smaragdlerweg","",,,,"",,,"","19","450","Trad (mostly)","6 (bergsteigen)","Longest route in Dürnstein: 19 pitches, 450 m/300 Hm. theCrag sector with 19 routes. Classic: 9. SL - Smaragdlerweg 2+★★★. Coordinates to be added."
+"WACHAU_004","Spitz an der Donau",,"SEC_004_01","Kügerlwand","","48.402806","15.472892",,"",,,"",,,"",,
+"WACHAU_004","Spitz an der Donau",,"SEC_004_02","Achleitenwand","","48.404876","15.477953",,"",,,"",,,"",,
+"WACHAU_004","Spitz an der Donau",,"SEC_004_03","Hinkelstein & Schlaraffenland","","48.405185","15.477753",,"",,,"",,,"",,
+"WACHAU_005","Weißenkirchen Süd",,"SEC_005_01","Indianerland","","48.390038","15.478322",,"",,,"",,,"",,
+"WACHAU_005","Weißenkirchen Süd",,"SEC_005_02","Little Yosemite","","48.390919","15.476170",,"",,,"",,,"",,
+"WACHAU_005","Weißenkirchen Süd",,"SEC_005_03","Fahnenwand","","48.390775","15.478930",,"",,,"",,,"",,
+"WACHAU_006","Schönbühel / Unterloiben",,"SEC_006_01","Narrenturm","","48.378012","15.465381",,"",,,"",,,"",,
+"WACHAU_006","Schönbühel / Unterloiben",,"SEC_006_02","Ziegenstein","","48.384134","15.467113",,"",,,"",,,"",,
+"WACHAU_006","Schönbühel / Unterloiben",,"SEC_006_03","Grabenwand","","48.383884","15.467939",,"",,,"",,,"",,
+"WACHAU_006","Schönbühel / Unterloiben",,"SEC_006_04","Tafonitürme","","48.385694","15.469692",,"",,,"",,,"",,
+"WACHAU_006","Schönbühel / Unterloiben",,"SEC_006_05","Untere Grabentürme","","48.384532","15.469985",,"",,,"",,,"",,
+"WACHAU_006","Schönbühel / Unterloiben",,"SEC_006_06","Wabenwand","","48.385662","15.471585",,"",,,"",,,"",,
+"WACHAU_006","Schönbühel / Unterloiben",,"SEC_006_07","Erotisches Hinterzimmer","","48.384694","15.476854",,"",,,"",,,"",,
+"WACHAU_006","Schönbühel / Unterloiben",,"SEC_006_08","Kupferwandl","","48.387772","15.474256",,"",,,"",,,"",,
+"WACHAU_007","Willendorf / Hoher Stein",,"SEC_007_01","Schatzinsel (Trabant & Schatzinsel)","","48.347919","15.438291",,"",,,"","21","18","Sport",,"theCrag sector Trabant & Schatzinsel (21 routes, 885 ascents)."
+"WACHAU_007","Willendorf / Hoher Stein",,"SEC_007_02","Südwand","","48.348300","15.438638",,"",,,"","16","23","Sport",,
+"WACHAU_007","Willendorf / Hoher Stein",,"SEC_007_03","Flugdrachenfelsen","","48.348452","15.438579",,"",,,"","13","20","Sport",,
+"WACHAU_007","Willendorf / Hoher Stein",,"SEC_007_04","Sector Schachecke","","48.348755","15.439003",,"",,,"",,,"",,
+"WACHAU_007","Willendorf / Hoher Stein",,"SEC_007_05","Nordwand","",,,,"",,,"","11","20","Sport",,
+"WACHAU_007","Willendorf / Hoher Stein",,"SEC_007_06","Ostwand","",,,,"",,,"","5","12","Sport",,
+"WACHAU_007","Willendorf / Hoher Stein",,"SEC_007_07","Westwand","",,,,"",,,"","22","48","Sport",,
+"WACHAU_007","Willendorf / Hoher Stein",,"SEC_007_08","Wildtöter","",,,,"",,,"","14","28","Sport",,
+"WACHAU_007","Willendorf / Hoher Stein",,"SEC_007_09","Düsterer Winkel","",,,,"",,,"","9","28","Sport",,
+"WACHAU_007","Willendorf / Hoher Stein",,"SEC_007_10","Schiefer Turm","",,,,"",,,"","16","17","Sport",,
+"WACHAU_007","Willendorf / Hoher Stein",,"SEC_007_11","Unterland","",,,,"",,,"","1","15","Sport",,
+"WACHAU_007","Willendorf / Hoher Stein",,"SEC_007_12","Turm im Wald","",,,,"",,,"","3","15","Sport",,

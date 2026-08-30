@@ -6,14 +6,22 @@
 
 **Decider:** Vertical Moment owner
 
+> **Working-copy note (2026-08-30):** This accepted decision selected the
+> pre-quarantine 2,402-route canonical baseline. The approved local working
+> copy now exposes 2,390 active routes because 12 Matterhörndl records were
+> reversibly quarantined for review; the decision to use the canonical source
+> path remains unchanged.
+
 ## Context
 
 Vertical Moment contains several route-shaped datasets with similar fields but
 different histories and coverage:
 
-- `database/master/vertical-moment-canonical.json` contains 2,402 routes,
-  330 crags and 20 regions.
-- `database/generated/routes_v1.json` and the preserved Wachau import contain
+- At decision time, `database/master/vertical-moment-canonical.json` contained
+  2,402 routes, 330 crags and 20 regions. The approved working copy now has
+  2,390 active routes after reversible quarantine of 12 Matterhörndl records.
+- `database/archive/phase1-legacy-route-sources-20260830/generated/routes_v1.json`
+  and the preserved Wachau import contain
   the older 2,416-row Master v1 baseline.
 - The 2026-08-09 alignment report describes a separate 2,314-row `Master_v4`
   workbook. It has useful review fields, but it is not a safe replacement:
