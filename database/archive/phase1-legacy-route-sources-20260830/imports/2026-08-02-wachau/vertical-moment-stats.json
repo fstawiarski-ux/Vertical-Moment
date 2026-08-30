@@ -1,0 +1,35 @@
+{
+ "total_routes": 2416,
+ "total_areas": 12,
+ "total_walls": 128,
+ "with_coordinates": 2416,
+ "by_status": {
+  "in Notion DB": 632,
+  "to create": 1425,
+  "review (Helenental) — in DB": 209,
+  "review (Helenental) — new": 150
+ },
+ "by_discipline": {
+  "boulder": 151,
+  "sport": 2251,
+  "multipitch": 14
+ },
+ "by_grade_system": {
+  "Font": 151,
+  "UIAA": 2265
+ },
+ "per_area": {
+  "Arnstein": 143,
+  "Bucklige Welt": 100,
+  "Fischauer Vorberge": 145,
+  "Helenental": 359,
+  "Hirschwände": 120,
+  "Hocheck": 384,
+  "Hohe Wand": 401,
+  "Kaltenleutgebner Tal": 261,
+  "Lindkogel": 83,
+  "Mödling": 188,
+  "Pernitz": 179,
+  "Wöllersdorf Hart": 53
+ }
+}

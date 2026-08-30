@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-14T18:25:11+00:00",
+ "generated": "2026-08-30T17:51:04+00:00",
  "count": 330,
  "crags": [
   {
@@ -18070,24 +18070,13 @@
    "slug": "matterhorndl",
    "region": "Mödling",
    "region_slug": "modling",
-   "route_count": 12,
-   "is_stub": false,
+   "route_count": 0,
+   "is_stub": true,
    "latitude": null,
    "longitude": null,
    "coord_source": null,
-   "grades": [
-    "2",
-    "3",
-    "4",
-    "4+",
-    "5",
-    "5+",
-    "5-",
-    "6-"
-   ],
-   "disciplines": [
-    "sport"
-   ],
+   "grades": [],
+   "disciplines": [],
    "path": "/crags/modling/matterhorndl",
    "osm": null,
    "rock": null,

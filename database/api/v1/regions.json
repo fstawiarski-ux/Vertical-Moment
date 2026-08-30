@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-14T18:25:11+00:00",
+ "generated": "2026-08-30T17:51:04+00:00",
  "count": 20,
  "regions": [
   {
@@ -809,7 +809,7 @@
    "name": "Mödling",
    "slug": "modling",
    "crag_count": 17,
-   "route_count": 188,
+   "route_count": 176,
    "path": "/crags/modling",
    "links": [
     {

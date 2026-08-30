@@ -1,7 +1,7 @@
 {
  "schema_version": "1.0.0",
- "generated": "2026-08-14T18:25:11+00:00",
- "count": 2402,
+ "generated": "2026-08-30T17:51:04+00:00",
+ "count": 2390,
  "routes": [
   {
    "id": "7f6b763d-3c57-51d1-a113-7f5cb3ab8488",
@@ -21322,126 +21322,6 @@
    "crag": "Lausbubenwand",
    "crag_slug": "lausbubenwand",
    "path": "/crags/modling/lausbubenwand#850f4fd8-6c56-5872-888e-638f891f279a"
-  },
-  {
-   "id": "f1ef45df-0f2c-5833-bb1a-4c5325cbf682",
-   "name": "Nordkante",
-   "grade": "5-",
-   "region": "Mödling",
-   "region_slug": "modling",
-   "crag": "Matterhörndl",
-   "crag_slug": "matterhorndl",
-   "path": "/crags/modling/matterhorndl#f1ef45df-0f2c-5833-bb1a-4c5325cbf682"
-  },
-  {
-   "id": "7f1ef7fc-5c6c-57a1-8c52-724c9b10af50",
-   "name": "Nordwand",
-   "grade": "4+",
-   "region": "Mödling",
-   "region_slug": "modling",
-   "crag": "Matterhörndl",
-   "crag_slug": "matterhorndl",
-   "path": "/crags/modling/matterhorndl#7f1ef7fc-5c6c-57a1-8c52-724c9b10af50"
-  },
-  {
-   "id": "eeb3183a-c7eb-577f-a1ad-fcb20d95b597",
-   "name": "Nordwestwand",
-   "grade": "5",
-   "region": "Mödling",
-   "region_slug": "modling",
-   "crag": "Matterhörndl",
-   "crag_slug": "matterhorndl",
-   "path": "/crags/modling/matterhorndl#eeb3183a-c7eb-577f-a1ad-fcb20d95b597"
-  },
-  {
-   "id": "1478b49e-24c8-5151-bc57-34656d6c5957",
-   "name": "Normalweg",
-   "grade": "2",
-   "region": "Mödling",
-   "region_slug": "modling",
-   "crag": "Matterhörndl",
-   "crag_slug": "matterhorndl",
-   "path": "/crags/modling/matterhorndl#1478b49e-24c8-5151-bc57-34656d6c5957"
-  },
-  {
-   "id": "acd19387-1f51-545c-b7fc-b346f160818a",
-   "name": "Ostkamin",
-   "grade": "5-",
-   "region": "Mödling",
-   "region_slug": "modling",
-   "crag": "Matterhörndl",
-   "crag_slug": "matterhorndl",
-   "path": "/crags/modling/matterhorndl#acd19387-1f51-545c-b7fc-b346f160818a"
-  },
-  {
-   "id": "11c19c6a-a87a-583f-975e-b6e59bbfdf35",
-   "name": "Ostkante",
-   "grade": "5+",
-   "region": "Mödling",
-   "region_slug": "modling",
-   "crag": "Matterhörndl",
-   "crag_slug": "matterhorndl",
-   "path": "/crags/modling/matterhorndl#11c19c6a-a87a-583f-975e-b6e59bbfdf35"
-  },
-  {
-   "id": "4a8715d2-b1d9-512e-a9b6-a8614ee1e7df",
-   "name": "Rampe",
-   "grade": "3",
-   "region": "Mödling",
-   "region_slug": "modling",
-   "crag": "Matterhörndl",
-   "crag_slug": "matterhorndl",
-   "path": "/crags/modling/matterhorndl#4a8715d2-b1d9-512e-a9b6-a8614ee1e7df"
-  },
-  {
-   "id": "5fb175f6-1fa2-53c5-9025-fc3034d802e5",
-   "name": "Rechte Südkante",
-   "grade": "3",
-   "region": "Mödling",
-   "region_slug": "modling",
-   "crag": "Matterhörndl",
-   "crag_slug": "matterhorndl",
-   "path": "/crags/modling/matterhorndl#5fb175f6-1fa2-53c5-9025-fc3034d802e5"
-  },
-  {
-   "id": "e6788ca7-42ee-512e-81c2-974bf81fef4d",
-   "name": "Südostriss",
-   "grade": "4+",
-   "region": "Mödling",
-   "region_slug": "modling",
-   "crag": "Matterhörndl",
-   "crag_slug": "matterhorndl",
-   "path": "/crags/modling/matterhorndl#e6788ca7-42ee-512e-81c2-974bf81fef4d"
-  },
-  {
-   "id": "eba859ca-d5c0-5824-9775-7d69fb2d61b0",
-   "name": "Südwestriss",
-   "grade": "4+",
-   "region": "Mödling",
-   "region_slug": "modling",
-   "crag": "Matterhörndl",
-   "crag_slug": "matterhorndl",
-   "path": "/crags/modling/matterhorndl#eba859ca-d5c0-5824-9775-7d69fb2d61b0"
-  },
-  {
-   "id": "fe11a52c-bc23-507a-bb97-4f7783f67bd3",
-   "name": "Westkamin",
-   "grade": "4",
-   "region": "Mödling",
-   "region_slug": "modling",
-   "crag": "Matterhörndl",
-   "crag_slug": "matterhorndl",
-   "path": "/crags/modling/matterhorndl#fe11a52c-bc23-507a-bb97-4f7783f67bd3"
-  },
-  {
-   "id": "4bc08bff-02df-5cb4-b96c-b0112994a52f",
-   "name": "Westriss",
-   "grade": "6-",
-   "region": "Mödling",
-   "region_slug": "modling",
-   "crag": "Matterhörndl",
-   "crag_slug": "matterhorndl",
-   "path": "/crags/modling/matterhorndl#4bc08bff-02df-5cb4-b96c-b0112994a52f"
   },
   {
    "id": "6c1674b5-c2be-5330-8ee5-86cc1ea9709d",
