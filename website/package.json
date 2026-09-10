@@ -51,7 +51,7 @@
     "serwist": "9.5.12",
     "sharp": "^0.35.3",
     "typescript": "^5.5.4",
-    "vitest": "^3.2.7",
+    "vitest": "^5.0.0",
     "wrangler": "4.120.1"
   },
   "overrides": {
