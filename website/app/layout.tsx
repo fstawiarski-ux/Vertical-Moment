@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false, nocache: true },
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://verticalmoment.com"),
   openGraph: {
-    title: "Work in progress — Vertical Moment"
-    description: "This website is temporarily offline while its content is being reviewed."
+    title: "Work in progress — Vertical Moment",
+    description: "This website is temporarily offline while its content is being reviewed.",
     type: "website",
     siteName: "Vertical Moment",
     url: "/",
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Work in progress — Vertical Moment"
-    description: "This website is temporarily offline while its content is being reviewed."
+    title: "Work in progress — Vertical Moment",
+    description: "This website is temporarily offline while its content is being reviewed.",
     images: ["/brand/official-v2/social/forest-og-1200x630.png"],
   },
   icons: {
