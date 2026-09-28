@@ -44,7 +44,6 @@ export default await serwist({
   // manifest.webmanifest changes, or returning installs keep the old build.
   additionalPrecacheEntries: [
     { url: "/explore-app", revision: "explore-app-v14-brand-v2" },
-    { url: "/explore-app/field", revision: "field-ops-shell-v1" },
     { url: "/offline", revision: "offline-v1" },
     { url: "/explore-content.json", revision: `registry-v${registryRevision}` },
     ...pilotPrecacheEntries,

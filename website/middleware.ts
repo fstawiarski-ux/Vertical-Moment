@@ -1,4 +1,5 @@
-import { NextResponse } from "next/server";
+import { NextResponse, type NextRequest } from "next/server";
+import { isPwaPreviewRequest } from "./src/core/pwaPreviewAccess";
 
 const maintenanceHtml = `<!doctype html>
 <html lang="en">
@@ -26,7 +27,13 @@ const maintenanceHtml = `<!doctype html>
   </body>
 </html>`;
 
-export function middleware() {
+export function middleware(request: NextRequest) {
+  if (isPwaPreviewRequest(request.nextUrl.pathname, request.nextUrl.search)) {
+    const response = NextResponse.next();
+    response.headers.set("x-robots-tag", "noindex, nofollow");
+    return response;
+  }
+
   return new NextResponse(maintenanceHtml, {
     status: 503,
     headers: {
