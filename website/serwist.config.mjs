@@ -32,7 +32,7 @@ const regionPrecacheEntries = await Promise.all(regionFiles.map(async (file) => 
 
 const plannerRevision = createHash("sha256")
   .update(await readFile(new URL("./app/explore-app/planner/page.tsx", import.meta.url)))
-  .update(await readFile(new URL("./public/explore-app/planner.html", import.meta.url)))
+  .update(await readFile(new URL("./public/explore-app/planner-content.html", import.meta.url)))
   .update(await readFile(new URL("./app/explore-app/planner/PlannerFrame.tsx", import.meta.url)))
   .update(await readFile(new URL("./app/explore-app/planner/planner.module.css", import.meta.url)))
   .digest("hex")
@@ -51,9 +51,9 @@ export default await serwist({
   // explore-content.json version bump, and the manifest revision whenever
   // manifest.webmanifest changes, or returning installs keep the old build.
   additionalPrecacheEntries: [
-    { url: "/explore-app", revision: "explore-app-v15-planner" },
+    { url: "/explore-app", revision: "explore-app-v16-planner-route" },
     { url: "/explore-app/planner", revision: plannerRevision },
-    { url: "/explore-app/planner.html", revision: plannerRevision },
+    { url: "/explore-app/planner-content", revision: plannerRevision },
     { url: "/offline", revision: "offline-v1" },
     { url: "/explore-content.json", revision: `registry-v${registryRevision}` },
     ...pilotPrecacheEntries,
