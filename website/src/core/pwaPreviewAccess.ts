@@ -1,5 +1,7 @@
 const PREVIEW_PAGE_PATHS = new Set([
   "/explore-app",
+  "/explore-app/planner",
+  "/explore-app/planner.html",
   "/contribute",
   "/report",
   "/offline",

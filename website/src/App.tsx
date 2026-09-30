@@ -493,6 +493,14 @@ function Workspace({ registry, pilot }: { registry: ExploreContentRegistry; pilo
   const searchEntries = useMemo<SearchEntry[]>(() => {
     const actions: SearchEntry[] = [
       {
+        id: "action:climbing-planner",
+        kind: "action",
+        label: "Open climbing planner",
+        detail: "Calendar, photography & climber outreach",
+        terms: "planner calendar events photography outreach climbers cooperation contacts pitches",
+        run: () => window.location.assign("/explore-app/planner"),
+      },
+      {
         id: "action:auto-align",
         kind: "action",
         label: "Auto-align workspace",

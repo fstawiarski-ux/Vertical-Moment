@@ -150,6 +150,9 @@ export function LayoutToolbar({ viewportMode, offlinePack, onSearch, onReplayInt
 
       {openPanel && (
         <Panel title="Tools" onClose={() => setOpenPanel(false)}>
+          <ActionGroup label="Planning">
+            <HudButton icon="field" label="Planner" title="Open climbing calendar and climber outreach planner" href="/explore-app/planner" />
+          </ActionGroup>
           <ActionGroup label="Workspace">
             <HudButton icon="search" label="Search" title="Search the Lounge" onClick={() => { setOpenPanel(false); onSearch(); }} />
             <HudButton icon="minus" label="Collapse" title="Minimize all modules" onClick={() => { setOpenPanel(false); dispatch({ type: "MINIMIZE_ALL" }); }} />
