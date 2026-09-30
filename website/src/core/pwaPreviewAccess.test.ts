@@ -5,6 +5,9 @@ describe("PWA preview maintenance gate", () => {
   it("allows the Explorer app and its route surfaces", () => {
     for (const path of [
       "/explore-app",
+      "/explore-app/planner",
+      "/explore-app/planner/",
+      "/explore-app/planner.html",
       "/explore",
       "/explore/hohe-wand",
       "/explore/hohe-wand/nasenwand",
@@ -61,6 +64,8 @@ describe("PWA preview maintenance gate", () => {
       "/climbers-lounge",
       "/review-preview",
       "/explore-app/unlisted-other-surface",
+      "/explore-app/planner/private",
+      "/explore-app/planner.html/extra",
       "/explore-app/field",
       "/api/unknown",
       "/photography/services/session-commercial.webp",
