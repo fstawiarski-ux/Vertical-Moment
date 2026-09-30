@@ -53,7 +53,7 @@ export default await serwist({
   additionalPrecacheEntries: [
     { url: "/explore-app", revision: "explore-app-v16-planner-route" },
     { url: "/explore-app/planner", revision: plannerRevision },
-    { url: "/explore-app/planner-content", revision: plannerRevision },
+    { url: "/explore-app/planner-content.html", revision: plannerRevision },
     { url: "/offline", revision: "offline-v1" },
     { url: "/explore-content.json", revision: `registry-v${registryRevision}` },
     ...pilotPrecacheEntries,
