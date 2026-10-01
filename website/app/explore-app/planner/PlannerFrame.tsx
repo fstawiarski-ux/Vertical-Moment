@@ -5,12 +5,12 @@ import styles from "./planner.module.css";
 
 export default function PlannerFrame() {
   const [shareUrl, setShareUrl] = useState("https://verticalmoment.com/explore-app/planner");
-  const [src, setSrc] = useState("/explore-app/planner.html");
+  const [src, setSrc] = useState("/explore-app/planner-content.html");
   const [message, setMessage] = useState("");
 
   useEffect(() => {
     setShareUrl(new URL("/explore-app/planner", window.location.origin).href);
-    if (window.location.hash) setSrc("/explore-app/planner.html" + window.location.hash);
+    if (window.location.hash) setSrc("/explore-app/planner-content.html" + window.location.hash);
   }, []);
 
   const copyLink = async () => {
