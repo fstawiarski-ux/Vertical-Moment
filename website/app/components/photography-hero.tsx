@@ -33,8 +33,8 @@ export default function PhotographyHero() {
             </a>
             <div className={styles.heroMeta}>
               <span>Est. 2020</span>
-              <span>Crag · Expedition · Commercial</span>
-              <span>Booking 2026</span>
+              <span>Crag · Wall · Landscape</span>
+              <span>Portfolio preview</span>
             </div>
           </div>
         </div>

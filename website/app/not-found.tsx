@@ -37,9 +37,6 @@ export default function NotFound() {
             <Link href="/climbers-lounge" className={styles.link}>
               Climbers Lounge
             </Link>
-            <Link href="/#contact" className={styles.link}>
-              Book a session
-            </Link>
           </div>
         </div>
 

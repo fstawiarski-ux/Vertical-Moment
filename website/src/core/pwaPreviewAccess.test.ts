@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { isPwaPreviewRequest } from "./pwaPreviewAccess";
+import { isBlockedDevelopmentRequest, isPwaPreviewRequest } from "./pwaPreviewAccess";
 
-describe("PWA preview maintenance gate", () => {
+describe("PWA preview request classification", () => {
   it("allows the Explorer app and its route surfaces", () => {
     for (const path of [
       "/explore-app",
@@ -57,7 +57,7 @@ describe("PWA preview maintenance gate", () => {
     )).toBe(false);
   });
 
-  it("keeps the main website and unrelated APIs behind maintenance", () => {
+  it("does not classify public and private routes as PWA previews", () => {
     for (const path of [
       "/",
       "/about",
@@ -77,8 +77,39 @@ describe("PWA preview maintenance gate", () => {
     }
   });
 
-  it("keeps the separate private Field Ops page and API behind maintenance", () => {
+  it("keeps private Field Ops pages and APIs outside the PWA preview allowlist", () => {
     expect(isPwaPreviewRequest("/explore-app/field")).toBe(false);
     expect(isPwaPreviewRequest("/api/field-ops/session")).toBe(false);
+  });
+});
+
+
+describe("private development route blocking", () => {
+  it("blocks known private and review-only surfaces", () => {
+    for (const path of [
+      "/api/field-ops/session",
+      "/explore-app/field",
+      "/explore-app/field/",
+      "/explore-app/marcin-job-os",
+      "/nasenwand-concepts",
+      "/private/marcin-job-os.html",
+      "/review-preview",
+      "/vision/wall-reveal",
+    ]) {
+      expect(isBlockedDevelopmentRequest(path), path).toBe(true);
+    }
+  });
+
+  it("keeps public pages and the unlisted PWA allowlist outside the blocklist", () => {
+    for (const path of [
+      "/",
+      "/climbers-lounge",
+      "/prints/panoramas",
+      "/explore-app",
+      "/explore",
+      "/panoramas/wachau",
+    ]) {
+      expect(isBlockedDevelopmentRequest(path), path).toBe(false);
+    }
   });
 });
