@@ -206,219 +206,80 @@ const publicSiteMarkup = String.raw`
     </section>
 
     <section class="story-section" id="story" aria-labelledby="story-title">
-      <div class="story-sticky">
+      <div class="story-body shell">
+        <header class="story-heading">
+          <p class="eyebrow">Behind the photographs</p>
+          <h2 id="story-title">Field notes</h2>
+          <p class="story-intro">A few notes on how I read the wall, follow movement and keep each frame in context.</p>
+        </header>
 
-        <div class="panorama-ribbon" aria-label="Wachau panorama scroll-scrub">
-          <div class="panorama-layer is-active" data-panorama="0" data-name="Wachau · long ridge">
-            <picture style="display:block;width:100%;height:100%"><source media="(max-width: 767px)" srcset="/photography/panoramas/wachau/wachau-09-thumb.webp"><img src="/photography/panoramas/wachau/wachau-09-preview.webp" alt="Wide Wachau panorama" loading="lazy" decoding="async"></picture>
-          </div>
-          <div class="panorama-layer" data-panorama="1" data-name="Wachau · limestone horizon">
-            <picture style="display:block;width:100%;height:100%"><source media="(max-width: 767px)" srcset="/photography/panoramas/wachau/wachau-10-thumb.webp"><img src="/photography/panoramas/wachau/wachau-10-preview.webp" alt="Wide Wachau limestone panorama" loading="lazy" decoding="async"></picture>
-          </div>
-          <div class="panorama-layer" data-panorama="2" data-name="Wachau · evening line">
-            <picture style="display:block;width:100%;height:100%"><source media="(max-width: 767px)" srcset="/photography/panoramas/wachau/wachau-12-thumb.webp"><img src="/photography/panoramas/wachau/wachau-12-preview.webp" alt="Wide Wachau evening panorama" loading="lazy" decoding="async"></picture>
-          </div>
-          <div class="panorama-layer" data-panorama="3" data-name="Wachau · valley study">
-            <picture style="display:block;width:100%;height:100%"><source media="(max-width: 767px)" srcset="/photography/panoramas/wachau/wachau-14-thumb.webp"><img src="/photography/panoramas/wachau/wachau-14-preview.webp" alt="Wide Wachau valley panorama" loading="lazy" decoding="async"></picture>
-          </div>
-          <div class="panorama-layer" data-panorama="4" data-name="Wachau · final horizon">
-            <picture style="display:block;width:100%;height:100%"><source media="(max-width: 767px)" srcset="/photography/panoramas/wachau/wachau-16-thumb.webp"><img src="/photography/panoramas/wachau/wachau-16-preview.webp" alt="Wide Wachau horizon panorama" loading="lazy" decoding="async"></picture>
-          </div>
-          <div class="panorama-shade" aria-hidden="true"></div>
-          <div class="panorama-caption shell">
+        <figure class="story-panorama" id="photo-studies">
+          <picture>
+            <source media="(max-width: 767px)" srcset="/photography/panoramas/wachau/wachau-09-thumb.webp">
+            <img src="/photography/panoramas/wachau/wachau-09-preview.webp"
+                 alt="Wide view across the Wachau valley and long ridge"
+                 loading="lazy" decoding="async">
+          </picture>
+          <figcaption>
             <div>
-              <span class="panorama-kicker">Vertical Moment · Panorama studies</span>
-              <strong id="panorama-name">Wachau · long ridge</strong>
+              <p class="eyebrow">Panorama study</p>
+              <strong>Wachau · long ridge</strong>
             </div>
-            <a href="/prints/panoramas">Explore panorama studies ↗</a>
+            <a href="/prints/panoramas">Explore Panorama Studies ↗</a>
+          </figcaption>
+        </figure>
+
+        <section class="story-subsection" aria-labelledby="how-i-work-title">
+          <h3 id="how-i-work-title">How I work</h3>
+          <div class="story-principles">
+            <article>
+              <span class="principle-number">01</span>
+              <h4>Read the wall</h4>
+              <p>Route line, aspect and changing light shape how each face is photographed.</p>
+            </article>
+            <article>
+              <span class="principle-number">02</span>
+              <h4>Follow the movement</h4>
+              <p>The photographs focus on attempts, rest, detail and the moments between moves.</p>
+            </article>
+            <article>
+              <span class="principle-number">03</span>
+              <h4>Keep the context</h4>
+              <p>Each image is presented with its place and enough context to situate the climb.</p>
+            </article>
           </div>
-          <div class="panorama-progress" aria-hidden="true"><span id="panorama-progress"></span></div>
-        </div>
+        </section>
 
-        <div class="story-body">
-          <div class="story-bar shell">
-            <div>
-              <p class="eyebrow">Behind the photographs</p>
-              <h2 id="story-title">Field notes behind the photographs.</h2>
-            </div>
+        <section class="story-subsection story-notes-section" aria-labelledby="field-notes-title">
+          <h3 id="field-notes-title">From the field</h3>
+          <div class="notes-editorial">
+            <article>
+              <span>June · Peilstein</span>
+              <h4>Shooting a face that never gets sun</h4>
+              <p>Holding detail in cold north-facing limestone without lifting the shadows into mush.</p>
+            </article>
+            <article>
+              <span>July · Helenental</span>
+              <h4>Why the hands tell the story</h4>
+              <p>The face shows effort, but the hands show the grade. More detail frames, fewer generic summit shots.</p>
+            </article>
           </div>
+        </section>
 
-          <div class="story-viewport" id="story-viewport" tabindex="0" aria-label="Photography information chapters. Use left and right arrow keys to navigate.">
-            <div class="story-track" id="story-track">
-
-              <article class="story-panel story-process" data-chapter="0" aria-labelledby="chapter-process">
-                <div class="story-panel-inner shell">
-                  <header class="chapter-heading">
-                    <span class="chapter-number">01</span>
-                    <div>
-                      <p class="eyebrow">In the field</p>
-                      <h3 id="chapter-process">What shapes a frame.</h3>
-                    </div>
-                  </header>
-                  <div class="process-editorial">
-                    <div>
-                      <span>01</span>
-                      <h4>Read the wall</h4>
-                      <p>Route line, aspect and changing light shape how each face is photographed.</p>
-                    </div>
-                    <div>
-                      <span>02</span>
-                      <h4>Follow the movement</h4>
-                      <p>The photographs focus on attempts, rest, detail and the moments between moves.</p>
-                    </div>
-                    <div>
-                      <span>03</span>
-                      <h4>Keep the context</h4>
-                      <p>Each image is presented with its place and enough context to situate the climb.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article id="photo-studies" class="story-panel story-services" data-chapter="1" aria-labelledby="chapter-services">
-                <div class="story-panel-inner shell">
-                  <header class="chapter-heading">
-                    <span class="chapter-number">02</span>
-                    <div>
-                      <p class="eyebrow">From the archive</p>
-                      <h3 id="chapter-services">Photo studies</h3>
-                    </div>
-                  </header>
-                  <div class="services-editorial">
-                    <div class="service-mini">
-                      <figure><img src="/photography/gallery/vm-6965-topping-out.webp" alt="Climber topping out" loading="lazy" decoding="async"></figure>
-                      <span>Movement</span>
-                      <h4>On the wall</h4>
-                      <p>Attempts, holds and concentration on limestone.</p>
-                    </div>
-                    <div class="service-mini">
-                      <figure><img src="/photography/gallery/vm-6683-green-corner.webp" alt="Helenental limestone wall" loading="lazy" decoding="async"></figure>
-                      <span>Place</span>
-                      <h4>Crag atmosphere</h4>
-                      <p>Walls in the changing light of the surrounding landscape.</p>
-                    </div>
-                    <div class="service-mini">
-                      <figure><img src="/photography/gallery/vm-7202-chalk-and-water.webp" alt="Chalk and water detail" loading="lazy" decoding="async"></figure>
-                      <span>Detail</span>
-                      <h4>Rock &amp; texture</h4>
-                      <p>Chalk, water and the marks left by a day on the rock.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article id="about" class="story-panel story-about" data-chapter="2" aria-labelledby="chapter-about">
-                <div class="story-panel-inner shell about-editorial">
-                  <figure>
-                    <img src="/photography/gallery/vm-6683-green-corner.webp" alt="Helenental limestone wall" loading="lazy" decoding="async">
-                  </figure>
-                  <div>
-                    <header class="chapter-heading">
-                      <span class="chapter-number">03</span>
-                      <div>
-                        <p class="eyebrow">About</p>
-                        <h3 id="chapter-about">I climb the routes I photograph.</h3>
-                      </div>
-                    </header>
-                    <p class="about-lead">That is the whole method.</p>
-                    <p>Vertical Moment is the photography side of a longer project: mapping, documenting and photographing the climbing around Vienna. Being on the rock means I know where the light lands, where the crux is, and where to hang so the camera sees what the climber feels.</p>
-                    <p>Nothing is staged for the camera — if a move looks hard in a frame, it was hard.</p>
-                    <div class="about-inline-tags"><span>Available light</span><span>On-rope</span><span>Fixed lines</span><span>Photogrammetry</span></div>
-                    <div class="founder-inline">
-                      <span>Founder · Vienna</span>
-                      <strong>Filip Stawiarski</strong>
-                      <a href="mailto:f.stawiarski@gmail.com">Email ↗</a>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="story-panel story-notes" data-chapter="3" aria-labelledby="chapter-notes">
-                <div class="story-panel-inner shell">
-                  <header class="chapter-heading">
-                    <span class="chapter-number">04</span>
-                    <div>
-                      <p class="eyebrow">Archive + field notes</p>
-                      <h3 id="chapter-notes">Six years, one limestone belt.</h3>
-                    </div>
-                  </header>
-                  <div class="notes-editorial">
-                    <article><span>June · Peilstein</span><h4>Shooting a face that never gets sun</h4><p>Holding detail in cold north-facing limestone without lifting the shadows into mush.</p></article>
-                    <article><span>July · Helenental</span><h4>Why the hands tell the story</h4><p>The face shows effort, but the hands show the grade. More detail frames, fewer generic summit shots.</p></article>
-                    <article><span>September · Glocknergrat</span><h4>From photographs to a 3D wall</h4><p>Photogrammetry turns one face into a topo you can rotate — the bridge into the 3D Lab.</p></article>
-                  </div>
-                  <div class="archive-ribbon" aria-label="Archive frames">
-                    <img src="/photography/gallery/vm-6913-traverse-morning-light.webp" alt="Morning traverse" loading="lazy" decoding="async">
-                    <img src="/photography/gallery/vm-7202-chalk-and-water.webp" alt="Chalk and water" loading="lazy" decoding="async">
-                    <img src="/photography/gallery/vm-6965-topping-out.webp" alt="Climber topping out" loading="lazy" decoding="async">
-                    <img src="/photography/gallery/vm-6890-peilstein-main-face.webp" alt="Peilstein main face" loading="lazy" decoding="async">
-                  </div>
-                </div>
-              </article>
-
-              <article class="story-panel story-faq" data-chapter="4" aria-labelledby="chapter-faq">
-                <div class="story-panel-inner shell faq-editorial">
-                  <div>
-                    <header class="chapter-heading">
-                      <span class="chapter-number">05</span>
-                      <div>
-                        <p class="eyebrow">Context</p>
-                        <h3 id="chapter-faq">Photo notes</h3>
-                      </div>
-                    </header>
-                    <p class="faq-sidecopy">A little context for reading the images and the climbing landscape.</p>
-                  </div>
-                  <div class="story-faq-list">
-                    <details>
-                      <summary>Are these photographs staged?</summary>
-                      <p>The selected frames document real climbing attempts and the moments around them.</p>
-                    </details>
-                    <details>
-                      <summary>Why does the light vary between frames?</summary>
-                      <p>Each location and day brings different conditions; the photographs retain that variation.</p>
-                    </details>
-                    <details>
-                      <summary>Are these route topos?</summary>
-                      <p>No. These are photographs, not route or access records. Check current local guidebooks and official sources for climbing information.</p>
-                    </details>
-                    <details>
-                      <summary>Where was this work made?</summary>
-                      <p>The portfolio includes crags around Vienna, the Wachau and the Eastern Alps.</p>
-                    </details>
-                  </div>
-                </div>
-              </article>
-
+        <section class="story-about" id="about" aria-labelledby="about-title">
+          <header>
+            <p class="eyebrow">About</p>
+            <h3 id="about-title">I climb the routes I photograph.</h3>
+          </header>
+          <div class="story-about-copy">
+            <p>Vertical Moment is the photography side of a longer project documenting climbing around Vienna. The selected frames show real attempts and moments around them; nothing is staged, and the light varies with each place and day. The portfolio includes crags around Vienna, the Wachau and the Eastern Alps. These are photographs, not route or access records; check current local guidebooks and official sources for climbing information.</p>
+            <div class="founder-inline">
+              <span>Founder · Vienna</span>
+              <strong>Filip Stawiarski</strong>
+              <a href="mailto:f.stawiarski@gmail.com">Email ↗</a>
             </div>
           </div>
-
-
-          <div class="story-controls shell" aria-label="Story navigation">
-            <button class="story-arrow" id="story-prev" type="button" aria-label="Previous chapter">←</button>
-            <div class="story-nav-cluster">
-              <div class="story-tabs" role="tablist" aria-label="Information chapters">
-                <button class="is-active" type="button" data-story-tab="0"><span>01</span>Field</button>
-                <button type="button" data-story-tab="1"><span>02</span>Photo studies</button>
-                <button type="button" data-story-tab="2"><span>03</span>About</button>
-                <button type="button" data-story-tab="3"><span>04</span>Notes</button>
-                <button type="button" data-story-tab="4"><span>05</span>Photo notes</button>
-              </div>
-              <div class="story-progress-readout">
-                <span class="story-progress-track" id="story-progress-track" role="progressbar" aria-label="Story progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="story-progress-fill"></i></span>
-                <span id="story-progress-label">01 / 05 · Field approach · 0%</span>
-              </div>
-            </div>
-            <button class="story-arrow" id="story-next" type="button" aria-label="Next chapter">→</button>
-            <a class="story-exit story-exit-down" href="#contact" aria-label="Continue to contact">Contact ↓</a>
-          </div>
-
-          <div class="story-side-scroll" id="story-side-scroll" aria-hidden="true">
-            <span id="story-side-thumb"></span>
-            <small>Scroll</small>
-          </div>
-          <div class="story-mobile-hint" aria-hidden="true">Swipe chapters ↔ · keep scrolling ↓</div>
-          <div class="sr-only" id="story-live" aria-live="polite">Chapter 1 of 5: Field approach</div>
-        </div>
+        </section>
       </div>
     </section>
 
