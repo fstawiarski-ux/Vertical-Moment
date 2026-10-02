@@ -2,7 +2,7 @@
 
 import { panoramas } from './panoramas';
 
-export type PhotographTag = 'wall' | 'people' | 'detail' | 'bw' | 'location' | 'panorama';
+export type PhotographTag = 'wall' | 'people' | 'detail' | 'location' | 'panorama';
 
 export interface Photograph {
   id: string;
@@ -45,17 +45,6 @@ const standardPhotographs: Photograph[] = [
     crag: 'Peilstein',
   },
   {
-    id: 'vm-6242',
-    src: '/photography/gallery/vm-6242-portrait-after-the-send.webp',
-    width: 900,
-    height: 1218,
-    title: 'Portrait · after the send',
-    meta: 'Helenental',
-    alt: 'Portrait · after the send — Helenental, Vertical Moment climbing photography',
-    tags: ['people', 'bw'],
-    crag: 'Helenental',
-  },
-  {
     id: 'vm-6965',
     src: '/photography/gallery/vm-6965-topping-out.webp',
     width: 532,
@@ -76,17 +65,6 @@ const standardPhotographs: Photograph[] = [
     alt: 'Traverse · morning light — Glocknergrat, Vertical Moment climbing photography',
     tags: ['wall'],
     crag: 'Glocknergrat',
-  },
-  {
-    id: 'vm-6437',
-    src: '/photography/gallery/vm-6437-the-hold-that-matters.webp',
-    width: 1000,
-    height: 667,
-    title: 'The hold that matters',
-    meta: 'Detail',
-    alt: 'The hold that matters — Detail, Vertical Moment climbing photography',
-    tags: ['detail', 'bw'],
-    crag: 'Helenental',
   },
   {
     id: 'vm-7202',
@@ -133,17 +111,6 @@ const standardPhotographs: Photograph[] = [
     crag: 'Hohe Wand',
   },
   {
-    id: 'vm-6578',
-    src: '/photography/gallery/vm-6578-ost-face.webp',
-    width: 800,
-    height: 1200,
-    title: 'Ost face · rain the day before',
-    meta: 'Helenental',
-    alt: 'Ost face · rain the day before — Helenental, Vertical Moment climbing photography',
-    tags: ['wall', 'bw'],
-    crag: 'Helenental',
-  },
-  {
     id: 'vm-6867',
     src: '/photography/gallery/vm-6867-slab-sequence.webp',
     width: 1100,
@@ -177,17 +144,6 @@ const standardPhotographs: Photograph[] = [
     crag: 'Peilstein',
   },
   {
-    id: 'vm-6522',
-    src: '/photography/gallery/vm-6522-the-crack.webp',
-    width: 800,
-    height: 1200,
-    title: 'The crack',
-    meta: 'B&W',
-    alt: 'The crack — B&W, Vertical Moment climbing photography',
-    tags: ['wall', 'bw', 'detail'],
-    crag: 'Glocknergrat',
-  },
-  {
     id: 'vm-7201',
     src: '/photography/gallery/vm-7201-hands-water-limestone.webp',
     width: 1100,
@@ -208,17 +164,6 @@ const standardPhotographs: Photograph[] = [
     alt: 'Waiting for the light — Portrait, Vertical Moment climbing photography',
     tags: ['people'],
     crag: 'Wachau',
-  },
-  {
-    id: 'vm-6424',
-    src: '/photography/gallery/vm-6424-face-from-the-approach.webp',
-    width: 1500,
-    height: 643,
-    title: 'The face from the approach',
-    meta: 'Glocknergrat',
-    alt: 'The face from the approach — Glocknergrat, Vertical Moment climbing photography',
-    tags: ['wall', 'bw', 'location'],
-    crag: 'Glocknergrat',
   },
   {
     id: 'vm-6888',
@@ -252,17 +197,6 @@ const standardPhotographs: Photograph[] = [
     alt: 'Late light on the arête — 6b, Vertical Moment climbing photography',
     tags: ['wall', 'location'],
     crag: 'Hohe Wand',
-  },
-  {
-    id: 'vm-6537',
-    src: '/photography/gallery/vm-6537-two-on-the-wall.webp',
-    width: 1100,
-    height: 733,
-    title: 'Two on the wall',
-    meta: 'B&W',
-    alt: 'Two on the wall — B&W, Vertical Moment climbing photography',
-    tags: ['wall', 'bw', 'location'],
-    crag: 'Helenental',
   },
   {
     id: 'vm-6958',
@@ -423,5 +357,4 @@ export const photographFilters: { id: 'all' | PhotographTag; label: string }[] =
   { id: 'detail', label: 'Details' },
   { id: 'location', label: 'Locations' },
   { id: 'panorama', label: 'Panoramas' },
-  { id: 'bw', label: 'Black & white' },
 ];

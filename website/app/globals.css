@@ -83,8 +83,8 @@ section.view{padding:24px 0 90px}
 .home-bar p{display:none}
 .home-bar .statline{margin:5px 0 0}
 .home-report{padding:.52rem .85rem;font-size:12px;white-space:nowrap}
-.mvp-grid{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.06fr);grid-template-rows:340px 370px auto;gap:14px;align-items:stretch}.mvp-grid::before{content:"";position:absolute;inset:-18px;border-radius:28px;background:linear-gradient(rgba(239,231,216,.86),rgba(239,231,216,.9)),url('/retusz/bw-portrait.jpg') center/cover;opacity:.5;z-index:0;pointer-events:none}.mvp-grid>*{position:relative;z-index:1}
-[data-theme="dark"] .mvp-grid::before{background:linear-gradient(rgba(20,26,18,.86),rgba(20,26,18,.92)),url('/retusz/bw-portrait.jpg') center/cover}
+.mvp-grid{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.06fr);grid-template-rows:340px 370px auto;gap:14px;align-items:stretch}.mvp-grid::before{content:"";position:absolute;inset:-18px;border-radius:28px;background:linear-gradient(rgba(239,231,216,.86),rgba(239,231,216,.9));opacity:.5;z-index:0;pointer-events:none}.mvp-grid>*{position:relative;z-index:1}
+[data-theme="dark"] .mvp-grid::before{background:linear-gradient(rgba(20,26,18,.86),rgba(20,26,18,.92))}
 .mvp-model{grid-column:1;grid-row:1;padding:14px;min-height:0;overflow:hidden;background-image:linear-gradient(rgba(7,15,10,.62),rgba(7,15,10,.72)),url('/gallery/jammerwandl/guidebook-page.jpg');background-size:cover;background-position:center;color:#fff}.mvp-model > p.muted{display:none}
 .wall-fact-icon{display:block;font-size:18px;line-height:1;margin-bottom:3px;color:#FFD36A;text-shadow:0 1px 3px #000}.wall-fact b{font-size:12px;color:#fff;text-shadow:0 1px 3px #000}.wall-fact small{font-size:9px;color:#F5F7EF;text-shadow:0 1px 3px #000}.flagship-head h2{color:#fff;text-shadow:0 2px 5px #000}
 .mvp-model .gallery-strip{display:none}

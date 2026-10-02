@@ -65,10 +65,10 @@ const stages: Stage[] = [
 ];
 
 const photographs = [
-  ['/photography/gallery/vm-6578-ost-face.webp', 'Ost face · rain the day before', 'Helenental'],
-  ['/photography/gallery/vm-6537-two-on-the-wall.webp', 'Two on the wall', 'Archive'],
+  ['/photography/gallery/vm-6683-green-corner.webp', 'Green corner', 'Helenental'],
+  ['/photography/gallery/vm-7303-belay-talk.webp', 'Belay talk', 'Peilstein'],
   ['/photography/gallery/vm-6918-full-extension.webp', 'Full extension', '6c'],
-  ['/photography/gallery/vm-6242-portrait-after-the-send.webp', 'After the send', 'Portrait'],
+  ['/photography/gallery/vm-6706-before-the-start.webp', 'Before the start', 'Portrait'],
   ['/photography/gallery/vm-6693-high-on-the-pillar.webp', 'High on the pillar', 'Peilstein'],
   ['/photography/gallery/vm-7303-belay-talk.webp', 'Belay talk', 'Peilstein'],
 ] as const;

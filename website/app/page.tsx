@@ -156,10 +156,10 @@ const publicSiteMarkup = String.raw`
           </button>
 
           <button class="work-item work-item-b reveal" type="button"
-                  data-src="/photography/gallery/vm-6242-portrait-after-the-send.webp"
-                  data-title="Portrait after the send" data-meta="Portrait · Vienna limestone">
-            <img src="/photography/gallery/vm-6242-portrait-after-the-send.webp" alt="Portrait after a climbing attempt" loading="lazy" decoding="async">
-            <span class="work-caption"><strong>Portrait after the send</strong><small>Portrait</small></span>
+                  data-src="/photography/gallery/vm-6706-before-the-start.webp"
+                  data-title="Before the start" data-meta="Wachau · portrait">
+            <img src="/photography/gallery/vm-6706-before-the-start.webp" alt="Climber preparing to start" loading="lazy" decoding="async">
+            <span class="work-caption"><strong>Before the start</strong><small>Portrait</small></span>
             <span class="work-number">02</span>
           </button>
 
@@ -180,10 +180,10 @@ const publicSiteMarkup = String.raw`
           </button>
 
           <button class="work-item work-item-e reveal" type="button"
-                  data-src="/photography/gallery/vm-6437-the-hold-that-matters.webp"
-                  data-title="The hold that matters" data-meta="Detail study">
-            <img src="/photography/gallery/vm-6437-the-hold-that-matters.webp" alt="Climbing detail on limestone" loading="lazy" decoding="async">
-            <span class="work-caption"><strong>The hold that matters</strong><small>Detail</small></span>
+                  data-src="/photography/gallery/vm-7202-chalk-and-water.webp"
+                  data-title="Chalk and water" data-meta="Chalk and water">
+            <img src="/photography/gallery/vm-7202-chalk-and-water.webp" alt="Chalk and water on limestone" loading="lazy" decoding="async">
+            <span class="work-caption"><strong>Chalk and water</strong><small>Detail</small></span>
             <span class="work-number">05</span>
           </button>
         </div>
@@ -198,7 +198,7 @@ const publicSiteMarkup = String.raw`
 
     <section class="quote-section">
       <div class="quote-media parallax-layer" data-parallax="0.08">
-        <img src="/photography/gallery/vm-6242-portrait-after-the-send.webp" alt="" loading="lazy" decoding="async">
+        <img src="/photography/gallery/vm-6706-before-the-start.webp" alt="" loading="lazy" decoding="async">
       </div>
       <div class="quote-overlay" aria-hidden="true"></div>
       <div class="quote-lockup reveal">
@@ -296,13 +296,13 @@ const publicSiteMarkup = String.raw`
                       <p>Your route, your pace, ground and on-rope angles.</p>
                     </div>
                     <div class="service-mini">
-                      <figure><img src="/photography/gallery/vm-6242-portrait-after-the-send.webp" alt="Climber portrait" loading="lazy" decoding="async"></figure>
+                      <figure><img src="/photography/gallery/vm-6706-before-the-start.webp" alt="Climber portrait" loading="lazy" decoding="async"></figure>
                       <span>Full day</span>
                       <h4>Crag &amp; team day</h4>
                       <p>Groups, clubs and courses with portraits and a shared gallery.</p>
                     </div>
                     <div class="service-mini">
-                      <figure><img src="/photography/gallery/vm-6437-the-hold-that-matters.webp" alt="Climbing detail" loading="lazy" decoding="async"></figure>
+                      <figure><img src="/photography/gallery/vm-7202-chalk-and-water.webp" alt="Chalk and water detail" loading="lazy" decoding="async"></figure>
                       <span>Commercial</span>
                       <h4>Brand &amp; campaign</h4>
                       <p>Gear, apparel and tourism work with licensing defined before the shoot.</p>
@@ -318,7 +318,7 @@ const publicSiteMarkup = String.raw`
               <article id="about" class="story-panel story-about" data-chapter="2" aria-labelledby="chapter-about">
                 <div class="story-panel-inner shell about-editorial">
                   <figure>
-                    <img src="/photography/gallery/vm-6242-portrait-after-the-send.webp" alt="Climbing portrait" loading="lazy" decoding="async">
+                    <img src="/photography/gallery/vm-6706-before-the-start.webp" alt="Climbing portrait" loading="lazy" decoding="async">
                   </figure>
                   <div>
                     <header class="chapter-heading">
@@ -357,7 +357,7 @@ const publicSiteMarkup = String.raw`
                   </div>
                   <div class="archive-ribbon" aria-label="Archive frames">
                     <img src="/photography/gallery/vm-6913-traverse-morning-light.webp" alt="Morning traverse" loading="lazy" decoding="async">
-                    <img src="/photography/gallery/vm-6437-the-hold-that-matters.webp" alt="Limestone detail" loading="lazy" decoding="async">
+                    <img src="/photography/gallery/vm-7202-chalk-and-water.webp" alt="Chalk and water" loading="lazy" decoding="async">
                     <img src="/photography/gallery/vm-6965-topping-out.webp" alt="Climber topping out" loading="lazy" decoding="async">
                     <img src="/photography/gallery/vm-6890-peilstein-main-face.webp" alt="Peilstein main face" loading="lazy" decoding="async">
                   </div>
