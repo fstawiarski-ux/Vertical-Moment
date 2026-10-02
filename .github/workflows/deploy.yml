@@ -43,3 +43,23 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      - name: Smoke-test production pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          for path in / /climbers-lounge /prints/panoramas; do
+            url="https://verticalmoment.com${path}"
+            echo "Checking ${url}"
+            curl \
+              --fail \
+              --show-error \
+              --silent \
+              --location \
+              --retry 10 \
+              --retry-all-errors \
+              --retry-delay 5 \
+              --retry-max-time 90 \
+              --max-time 20 \
+              "${url}" \
+              --output /dev/null
+          done
