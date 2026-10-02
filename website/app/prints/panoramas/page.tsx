@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import PanoramaEditions from './panorama-editions';
 
 export const metadata: Metadata = {
-  title: 'Wachau Panorama Editions — Vertical Moment',
+  title: 'Wachau Panorama Studies — Vertical Moment',
   description:
-    'High-resolution Wachau landscape and limestone panoramas for print, regional reference and future climbing-wall registration.',
+    'A collection of Wachau landscape and limestone panoramas presented as visual studies and provisional regional references.',
   alternates: { canonical: '/prints/panoramas' },
 };
 

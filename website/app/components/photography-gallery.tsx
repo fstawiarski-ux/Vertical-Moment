@@ -95,12 +95,6 @@ export default function PhotographyGallery() {
             </button>
           ))}
         </div>
-
-        <div className={styles.more}>
-          <a className={styles.cta} href="#contact">
-            Book a session <span aria-hidden="true">&rarr;</span>
-          </a>
-        </div>
       </div>
 
       {active && (

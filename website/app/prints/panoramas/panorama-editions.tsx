@@ -54,11 +54,6 @@ export default function PanoramaEditions() {
     select(panoramas[next].id);
   };
 
-  const printSubject = encodeURIComponent(`Panorama print inquiry — ${active.title} (${active.id})`);
-  const printBody = encodeURIComponent(
-    `Hello Filip,\n\nI would like to ask about a print of “${active.title}” (${active.id}).\n\nPreferred width / room:\nPaper or finish preference:\nDelivery country:\n\nThank you.`,
-  );
-
   return (
     <main className={styles.page}>
       <header className={styles.header}>
@@ -69,10 +64,7 @@ export default function PanoramaEditions() {
         <nav aria-label="Panorama navigation">
           <a href="#collection">Collection</a>
           <a href="#reference">Reference use</a>
-          <a href="/vision/wall-reveal">Wall Reveal</a>
-          <a className={styles.headerCta} href={`mailto:f.stawiarski@gmail.com?subject=${printSubject}&body=${printBody}`}>
-            Ask about a print
-          </a>
+          <a href="/climbers-lounge">Climbers Lounge</a>
         </nav>
       </header>
 
@@ -81,13 +73,12 @@ export default function PanoramaEditions() {
           <p className={styles.eyebrow}>Wachau · high-resolution panorama studies</p>
           <h1 id="panorama-title">The whole wall, kept in the frame.</h1>
           <p>
-            Nine aerial landscapes prepared as lightweight web previews, provisional regional references and made-to-order
-            print studies. The high-resolution masters remain offline.
+            Nine aerial landscapes prepared as lightweight web previews and provisional regional references. Full-resolution masters remain offline; print orders are not open.
           </p>
           <div className={styles.heroFacts}>
             <span><b>9</b> panorama studies</span>
-            <span><b>92%</b> smaller web delivery</span>
-            <span><b>64 cm</b> widest display proof</span>
+            <span><b>Web</b> optimized previews</span>
+            <span><b>Field</b> reference status shown</span>
           </div>
         </div>
       </section>
@@ -128,14 +119,10 @@ export default function PanoramaEditions() {
             <p>{active.referenceNote}</p>
           </div>
           <dl>
-            <div><dt>Master</dt><dd>{pixelFormat.format(active.sourceWidth)} × {pixelFormat.format(active.sourceHeight)} px</dd></div>
-            <div><dt>Recommended print</dt><dd>up to about {active.recommendedPrintWidthCm} cm wide at 300 ppi</dd></div>
-            <div><dt>Display proof</dt><dd>up to about {active.maximumDisplayWidthCm} cm wide at 240 ppi</dd></div>
-            <div><dt>Print status</dt><dd>{active.printStatus === 'proofing-required' ? 'Final crop and proof required' : 'Inquiry open; proof before production'}</dd></div>
+            <div><dt>Source</dt><dd>{pixelFormat.format(active.sourceWidth)} × {pixelFormat.format(active.sourceHeight)} px</dd></div>
+            <div><dt>Region</dt><dd>{active.location}</dd></div>
+            <div><dt>Category</dt><dd>{active.category.replace('-', ' ')}</dd></div>
           </dl>
-          <a className={styles.printCta} href={`mailto:f.stawiarski@gmail.com?subject=${printSubject}&body=${printBody}`}>
-            Request this panorama
-          </a>
         </div>
       </section>
 
@@ -143,9 +130,9 @@ export default function PanoramaEditions() {
         <div className={styles.sectionHead}>
           <div>
             <p className={styles.eyebrow}>The collection</p>
-            <h2>One source, three useful outputs.</h2>
+            <h2>A collection of panorama studies.</h2>
           </div>
-          <p>Choose a frame for the viewer. Each record carries its print limits and its reference-verification status.</p>
+          <p>Choose a frame to inspect. Each record carries a note on its current regional reference status.</p>
         </div>
 
         <div className={styles.filters} role="group" aria-label="Filter panorama collection">
@@ -170,7 +157,7 @@ export default function PanoramaEditions() {
             select(panorama.id);
             document.querySelector(`.${styles.viewerSection}`)?.scrollIntoView({ behavior: 'smooth' });
           }}
-          ariaLabel="Panorama print collection"
+          ariaLabel="Panorama study collection"
           renderMeta={(panorama) => (
             <span><b>{panorama.title}</b><small>{panorama.category.replace('-', ' ')} · {panorama.location}</small></span>
           )}
@@ -180,19 +167,18 @@ export default function PanoramaEditions() {
       <section className={styles.reference} id="reference">
         <div>
           <p className={styles.eyebrow}>Prepared for the platform</p>
-          <h2>The panorama is a product and a data layer—but never the route record itself.</h2>
+          <h2>A panorama can guide orientation without replacing the route record.</h2>
         </div>
         <div className={styles.referenceGrid}>
           <article><span>01</span><h3>Crag page</h3><p>A regional panorama sits above sectors as orientation photography, with a clear provisional label until anchors and access points are checked.</p></article>
-          <article><span>02</span><h3>Wall Reveal</h3><p>The same record opens beside the topo and 3D model without forcing the full-resolution master into the page.</p></article>
-          <article><span>03</span><h3>Print edition</h3><p>Visitors request a size and finish. The chosen master receives a final crop, colour proof and production check before sale.</p></article>
+          <article><span>02</span><h3>Reference notes</h3><p>Each record keeps its current context and regional verification note alongside the image.</p></article>
+          <article><span>03</span><h3>Photo archive</h3><p>Each frame keeps its place and reference status alongside the visual study.</p></article>
         </div>
       </section>
 
       <footer className={styles.footer}>
         <a href="/">Photography home</a>
-        <a href="/vision/wall-reveal">Wall Reveal</a>
-        <a href="mailto:f.stawiarski@gmail.com">f.stawiarski@gmail.com</a>
+        <a href="/climbers-lounge">Climbers Lounge</a>
         <span>© 2026 Vertical Moment · Vienna</span>
       </footer>
 

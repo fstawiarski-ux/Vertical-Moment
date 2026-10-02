@@ -4,11 +4,11 @@ import './public-site-v5.css';
 export const metadata: Metadata = {
   title: 'Vertical Moment — Climbing photography, Vienna',
   description:
-    'Climbing and outdoor photography from Vienna: documentary crag sessions, team days and commercial work.',
+    'A documentary climbing photography portfolio from Vienna, the Wachau and the Eastern Alps.',
   alternates: { canonical: '/' },
   openGraph: {
     title: 'Vertical Moment — Climbing photography, Vienna',
-    description: 'Climbing and outdoor photography from Vienna.',
+    description: 'A documentary climbing photography portfolio from Vienna and the Eastern Alps.',
     url: '/',
     type: 'website',
     siteName: 'Vertical Moment',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Vertical Moment — Climbing photography, Vienna',
-    description: 'Climbing and outdoor photography from Vienna.',
+    description: 'A documentary climbing photography portfolio from Vienna and the Eastern Alps.',
     images: ['/brand/official-v2/social/forest-og-1200x630.png'],
   },
 };
@@ -37,7 +37,7 @@ const publicSiteMarkup = String.raw`
     <nav class="desktop-nav" aria-label="Primary">
       <a href="#work">Work</a>
       <a href="#approach">Approach</a>
-      <a href="#services">Services</a>
+      <a href="#photo-studies">Photo studies</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
       <a class="nav-collective" href="/climbers-lounge">Climbers Lounge</a>
@@ -60,7 +60,7 @@ const publicSiteMarkup = String.raw`
     <nav aria-label="Mobile primary">
       <a href="#work"><span>01</span>Work</a>
       <a href="#approach"><span>02</span>Approach</a>
-      <a href="#services"><span>03</span>Services</a>
+      <a href="#photo-studies"><span>03</span>Photo studies</a>
       <a href="#about"><span>04</span>About</a>
       <a href="#contact"><span>05</span>Contact</a>
       <a href="/climbers-lounge"><span>→</span>Climbers Lounge</a>
@@ -83,7 +83,6 @@ const publicSiteMarkup = String.raw`
           <p class="hero-lead">Limestone, low light, and the people who read it. Shot on the crags around Vienna, in the Wachau and across the Eastern Alps.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#work">See selected work <span aria-hidden="true">↘</span></a>
-            <a class="text-link" href="#contact">Book a session <span aria-hidden="true">→</span></a>
           </div>
         </div>
 
@@ -91,7 +90,6 @@ const publicSiteMarkup = String.raw`
           <div><span>Est.</span><strong>2020</strong></div>
           <div><span>Mode</span><strong>Documentary</strong></div>
           <div><span>Access</span><strong>On rope</strong></div>
-          <div><span>Booking</span><strong>2026</strong></div>
         </aside>
       </div>
 
@@ -116,7 +114,7 @@ const publicSiteMarkup = String.raw`
 
         <div class="manifesto-copy reveal">
           <p>Most climbing images arrive after the fact: the grin on the ledge, the rope coiled, the story already told. I work in the minutes before that — the reading of a sequence, the breath held on a bad foot, the hand that finds chalk in the dark.</p>
-          <p>Documentary on the wall, editorial in the edit. Sessions run at your pace, on your project, with no staging and no re-climbs unless you want them. Everything here was shot on real attempts, at real grades, in the light the day gave us.</p>
+          <p>Documentary on the wall, editorial in the edit. The photographs here follow real attempts, movement and detail in the changing light of the crags.</p>
         </div>
 
         <figure class="manifesto-image reveal">
@@ -127,12 +125,12 @@ const publicSiteMarkup = String.raw`
       </div>
     </section>
 
-    <section class="stats-strip" aria-label="Vertical Moment statistics">
+    <section class="stats-strip" aria-label="Photography archive details">
       <div class="shell stats-grid">
         <div class="stat reveal"><strong data-count="40" data-suffix="+">40+</strong><span>Crags photographed</span></div>
         <div class="stat reveal"><strong data-count="6">6</strong><span>Years on rope</span></div>
-        <div class="stat reveal"><strong data-count="48" data-suffix="h">48h</strong><span>First edit turnaround</span></div>
-        <div class="stat reveal"><strong data-count="2026">2026</strong><span>Booking open</span></div>
+        <div class="stat reveal"><strong>Field</strong><span>Documentary archive</span></div>
+        <div class="stat reveal"><strong>Light</strong><span>Natural conditions</span></div>
       </div>
     </section>
 
@@ -190,7 +188,6 @@ const publicSiteMarkup = String.raw`
 
         <div class="portfolio-footer reveal">
           <p>Documentary climbing photography · portraits · crag atmosphere · technical detail</p>
-          <a class="button button-outline" href="#contact">Book a session <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
@@ -204,7 +201,7 @@ const publicSiteMarkup = String.raw`
       <div class="quote-lockup reveal">
         <p class="eyebrow">The hour matters</p>
         <blockquote>“Every crag has one hour when the rock gives the light back. I plan the day around it.”</blockquote>
-        <p class="quote-handoff">Keep scrolling — the page now moves sideways through the practical details.</p>
+        <p class="quote-handoff">Keep scrolling for notes from the field.</p>
       </div>
     </section>
 
@@ -230,10 +227,10 @@ const publicSiteMarkup = String.raw`
           <div class="panorama-shade" aria-hidden="true"></div>
           <div class="panorama-caption shell">
             <div>
-              <span class="panorama-kicker">Vertical Moment · Panorama Editions</span>
+              <span class="panorama-kicker">Vertical Moment · Panorama studies</span>
               <strong id="panorama-name">Wachau · long ridge</strong>
             </div>
-            <a href="/prints/panoramas">View panorama editions ↗</a>
+            <a href="/prints/panoramas">Explore panorama studies ↗</a>
           </div>
           <div class="panorama-progress" aria-hidden="true"><span id="panorama-progress"></span></div>
         </div>
@@ -242,7 +239,7 @@ const publicSiteMarkup = String.raw`
           <div class="story-bar shell">
             <div>
               <p class="eyebrow">Behind the photographs</p>
-              <h2 id="story-title">Everything useful, without another five screens down.</h2>
+              <h2 id="story-title">Field notes behind the photographs.</h2>
             </div>
           </div>
 
@@ -254,63 +251,58 @@ const publicSiteMarkup = String.raw`
                   <header class="chapter-heading">
                     <span class="chapter-number">01</span>
                     <div>
-                      <p class="eyebrow">How a session runs</p>
-                      <h3 id="chapter-process">Three steps, no production circus.</h3>
+                      <p class="eyebrow">In the field</p>
+                      <h3 id="chapter-process">What shapes a frame.</h3>
                     </div>
                   </header>
                   <div class="process-editorial">
                     <div>
                       <span>01</span>
-                      <h4>Pick the route and the hour</h4>
-                      <p>You tell me the project; I check the aspect, the season and where the sun leaves the face. Light decides the call time.</p>
+                      <h4>Read the wall</h4>
+                      <p>Route line, aspect and changing light shape how each face is photographed.</p>
                     </div>
                     <div>
                       <span>02</span>
-                      <h4>You climb, I move</h4>
-                      <p>Ground frames, a second line and detail work between burns. I stay out of your sequence — you never wait for the camera.</p>
+                      <h4>Follow the movement</h4>
+                      <p>The photographs focus on attempts, rest, detail and the moments between moves.</p>
                     </div>
                     <div>
                       <span>03</span>
-                      <h4>Edit and deliver</h4>
-                      <p>A first selection within 48 hours, then web-ready, print-ready and social crops sized for actual use.</p>
+                      <h4>Keep the context</h4>
+                      <p>Each image is presented with its place and enough context to situate the climb.</p>
                     </div>
                   </div>
-                  <p class="chapter-footnote">Half day · Full day · Multi-day</p>
                 </div>
               </article>
 
-              <article id="services" class="story-panel story-services" data-chapter="1" aria-labelledby="chapter-services">
+              <article id="photo-studies" class="story-panel story-services" data-chapter="1" aria-labelledby="chapter-services">
                 <div class="story-panel-inner shell">
                   <header class="chapter-heading">
                     <span class="chapter-number">02</span>
                     <div>
-                      <p class="eyebrow">Work with me</p>
-                      <h3 id="chapter-services">Services</h3>
+                      <p class="eyebrow">From the archive</p>
+                      <h3 id="chapter-services">Photo studies</h3>
                     </div>
                   </header>
                   <div class="services-editorial">
                     <div class="service-mini">
                       <figure><img src="/photography/gallery/vm-6965-topping-out.webp" alt="Climber topping out" loading="lazy" decoding="async"></figure>
-                      <span>Half day</span>
-                      <h4>Project session</h4>
-                      <p>Your route, your pace, ground and on-rope angles.</p>
+                      <span>Movement</span>
+                      <h4>On the wall</h4>
+                      <p>Attempts, holds and concentration on limestone.</p>
                     </div>
                     <div class="service-mini">
                       <figure><img src="/photography/gallery/vm-6683-green-corner.webp" alt="Helenental limestone wall" loading="lazy" decoding="async"></figure>
-                      <span>Full day</span>
-                      <h4>Crag &amp; team day</h4>
-                      <p>Groups, clubs and courses with portraits and a shared gallery.</p>
+                      <span>Place</span>
+                      <h4>Crag atmosphere</h4>
+                      <p>Walls in the changing light of the surrounding landscape.</p>
                     </div>
                     <div class="service-mini">
                       <figure><img src="/photography/gallery/vm-7202-chalk-and-water.webp" alt="Chalk and water detail" loading="lazy" decoding="async"></figure>
-                      <span>Commercial</span>
-                      <h4>Brand &amp; campaign</h4>
-                      <p>Gear, apparel and tourism work with licensing defined before the shoot.</p>
+                      <span>Detail</span>
+                      <h4>Rock &amp; texture</h4>
+                      <p>Chalk, water and the marks left by a day on the rock.</p>
                     </div>
-                  </div>
-                  <div class="chapter-cta-row">
-                    <span>Package details remain provisional in this design preview.</span>
-                    <a href="#contact">Ask for a quote →</a>
                   </div>
                 </div>
               </article>
@@ -370,33 +362,28 @@ const publicSiteMarkup = String.raw`
                     <header class="chapter-heading">
                       <span class="chapter-number">05</span>
                       <div>
-                        <p class="eyebrow">Practical</p>
-                        <h3 id="chapter-faq">Before you book</h3>
+                        <p class="eyebrow">Context</p>
+                        <h3 id="chapter-faq">Photo notes</h3>
                       </div>
                     </header>
-                    <p class="faq-sidecopy">The useful questions live here instead of stretching the homepage downward.</p>
-                    <a class="button button-outline" href="#contact">Tell me about your route →</a>
+                    <p class="faq-sidecopy">A little context for reading the images and the climbing landscape.</p>
                   </div>
                   <div class="story-faq-list">
                     <details>
-                      <summary>Do I need to climb hard to be worth photographing?</summary>
-                      <p>No. Grade is not the subject — commitment is. A 4+ climbed with full attention can photograph better than a 7a climbed casually.</p>
+                      <summary>Are these photographs staged?</summary>
+                      <p>The selected frames document real climbing attempts and the moments around them.</p>
                     </details>
                     <details>
-                      <summary>What happens if the weather turns?</summary>
-                      <p>We move the date, no fee. I watch the forecast from 72 hours out and we decide together the evening before.</p>
+                      <summary>Why does the light vary between frames?</summary>
+                      <p>Each location and day brings different conditions; the photographs retain that variation.</p>
                     </details>
                     <details>
-                      <summary>How do I get the files?</summary>
-                      <p>A private gallery with full-resolution downloads plus web-sized and social crops. Commercial licensing is agreed separately.</p>
+                      <summary>Are these route topos?</summary>
+                      <p>No. These are photographs, not route or access records. Check current local guidebooks and official sources for climbing information.</p>
                     </details>
                     <details>
-                      <summary>Can you shoot indoors or at a competition?</summary>
-                      <p>Yes. Gyms and competitions need a different setup and permission from the organiser, so ask early.</p>
-                    </details>
-                    <details>
-                      <summary>First ascents and rebolting work?</summary>
-                      <p>Gladly, especially where the resulting frames can contribute to the open topo record.</p>
+                      <summary>Where was this work made?</summary>
+                      <p>The portfolio includes crags around Vienna, the Wachau and the Eastern Alps.</p>
                     </details>
                   </div>
                 </div>
@@ -410,15 +397,15 @@ const publicSiteMarkup = String.raw`
             <button class="story-arrow" id="story-prev" type="button" aria-label="Previous chapter">←</button>
             <div class="story-nav-cluster">
               <div class="story-tabs" role="tablist" aria-label="Information chapters">
-                <button class="is-active" type="button" data-story-tab="0"><span>01</span>Process</button>
-                <button type="button" data-story-tab="1"><span>02</span>Services</button>
+                <button class="is-active" type="button" data-story-tab="0"><span>01</span>Field</button>
+                <button type="button" data-story-tab="1"><span>02</span>Photo studies</button>
                 <button type="button" data-story-tab="2"><span>03</span>About</button>
                 <button type="button" data-story-tab="3"><span>04</span>Notes</button>
-                <button type="button" data-story-tab="4"><span>05</span>FAQ</button>
+                <button type="button" data-story-tab="4"><span>05</span>Photo notes</button>
               </div>
               <div class="story-progress-readout">
                 <span class="story-progress-track" id="story-progress-track" role="progressbar" aria-label="Story progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="story-progress-fill"></i></span>
-                <span id="story-progress-label">01 / 05 · Process · 0%</span>
+                <span id="story-progress-label">01 / 05 · Field approach · 0%</span>
               </div>
             </div>
             <button class="story-arrow" id="story-next" type="button" aria-label="Next chapter">→</button>
@@ -430,7 +417,7 @@ const publicSiteMarkup = String.raw`
             <small>Scroll</small>
           </div>
           <div class="story-mobile-hint" aria-hidden="true">Swipe chapters ↔ · keep scrolling ↓</div>
-          <div class="sr-only" id="story-live" aria-live="polite">Chapter 1 of 5: Process</div>
+          <div class="sr-only" id="story-live" aria-live="polite">Chapter 1 of 5: Field approach</div>
         </div>
       </div>
     </section>
@@ -441,8 +428,9 @@ const publicSiteMarkup = String.raw`
       </div>
       <div class="contact-overlay" aria-hidden="true"></div>
       <div class="shell contact-copy reveal">
-        <p class="eyebrow">Contact</p>
-        <h2>Tell me about the route.</h2>
+        <p class="eyebrow">Portfolio preview</p>
+        <h2>Documentary climbing photography from Vienna.</h2>
+        <p class="eyebrow">Bookings and print orders are not open.</p>
         <a class="contact-email" href="mailto:f.stawiarski@gmail.com">f.stawiarski@gmail.com</a>
         <div class="contact-links">
           <a href="https://www.youtube.com/@RoadToSomewhereWithYou">YouTube</a>
@@ -460,7 +448,7 @@ const publicSiteMarkup = String.raw`
           </div>
           <div>
             <p class="footer-label">Site</p>
-            <a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="/prints/panoramas">Panorama editions</a><a href="#contact">Contact</a>
+            <a href="#work">Work</a><a href="#photo-studies">Photo studies</a><a href="#about">About</a><a href="/prints/panoramas">Panorama studies</a><a href="#contact">Contact</a>
           </div>
           <div>
             <p class="footer-label">Elsewhere</p>

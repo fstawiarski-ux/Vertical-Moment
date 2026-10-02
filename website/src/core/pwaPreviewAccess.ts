@@ -76,8 +76,8 @@ function isPreviewImageSource(source: string): boolean {
 
 /**
  * The PWA is an unlisted, noindex preview, not an authentication boundary.
- * Its application routes and only the resources they use pass the maintenance
- * gate; all public-site pages continue to receive the 503 response.
+ * Its established route and resource allowlist remains noindex. Private
+ * development surfaces stay unavailable when the public site is live.
  */
 export function isPwaPreviewRequest(pathname: string, search = ""): boolean {
   const normalizedPath = normalizePathname(pathname);
@@ -95,4 +95,19 @@ export function isPwaPreviewRequest(pathname: string, search = ""): boolean {
   }
 
   return false;
+}
+
+const BLOCKED_DEVELOPMENT_ROOTS = [
+  "/api/field-ops",
+  "/explore-app/field",
+  "/explore-app/marcin-job-os",
+  "/nasenwand-concepts",
+  "/private",
+  "/review-preview",
+  "/vision",
+];
+
+export function isBlockedDevelopmentRequest(pathname: string): boolean {
+  const normalizedPath = normalizePathname(pathname);
+  return BLOCKED_DEVELOPMENT_ROOTS.some((root) => isWithinPath(normalizedPath, root));
 }

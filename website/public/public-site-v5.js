@@ -122,7 +122,7 @@
   const storySideScroll = document.getElementById('story-side-scroll');
   const storySideThumb = document.getElementById('story-side-thumb');
   const desktopStory = window.matchMedia('(min-width: 901px) and (prefers-reduced-motion: no-preference)');
-  const chapterNames = ['Process', 'Services', 'About', 'Notes', 'FAQ'];
+  const chapterNames = ['Field approach', 'Photo studies', 'About', 'Notes', 'Photo notes'];
   let storyIndex = 0;
   let storyRaf = 0;
   let mobileScrollTimer = 0;
