@@ -156,10 +156,10 @@ const publicSiteMarkup = String.raw`
           </button>
 
           <button class="work-item work-item-b reveal" type="button"
-                  data-src="/photography/gallery/vm-6706-before-the-start.webp"
-                  data-title="Before the start" data-meta="Wachau · portrait">
-            <img src="/photography/gallery/vm-6706-before-the-start.webp" alt="Climber preparing to start" loading="lazy" decoding="async">
-            <span class="work-caption"><strong>Before the start</strong><small>Portrait</small></span>
+                  data-src="/photography/gallery/vm-6683-green-corner.webp"
+                  data-title="Green corner" data-meta="Helenental · limestone">
+            <img src="/photography/gallery/vm-6683-green-corner.webp" alt="Helenental limestone wall" loading="lazy" decoding="async">
+            <span class="work-caption"><strong>Green corner</strong><small>Helenental</small></span>
             <span class="work-number">02</span>
           </button>
 
@@ -181,7 +181,7 @@ const publicSiteMarkup = String.raw`
 
           <button class="work-item work-item-e reveal" type="button"
                   data-src="/photography/gallery/vm-7202-chalk-and-water.webp"
-                  data-title="Chalk and water" data-meta="Chalk and water">
+                  data-title="Chalk and water" data-meta="Detail">
             <img src="/photography/gallery/vm-7202-chalk-and-water.webp" alt="Chalk and water on limestone" loading="lazy" decoding="async">
             <span class="work-caption"><strong>Chalk and water</strong><small>Detail</small></span>
             <span class="work-number">05</span>
@@ -198,7 +198,7 @@ const publicSiteMarkup = String.raw`
 
     <section class="quote-section">
       <div class="quote-media parallax-layer" data-parallax="0.08">
-        <img src="/photography/gallery/vm-6706-before-the-start.webp" alt="" loading="lazy" decoding="async">
+        <img src="/photography/gallery/vm-6683-green-corner.webp" alt="" loading="lazy" decoding="async">
       </div>
       <div class="quote-overlay" aria-hidden="true"></div>
       <div class="quote-lockup reveal">
@@ -296,7 +296,7 @@ const publicSiteMarkup = String.raw`
                       <p>Your route, your pace, ground and on-rope angles.</p>
                     </div>
                     <div class="service-mini">
-                      <figure><img src="/photography/gallery/vm-6706-before-the-start.webp" alt="Climber portrait" loading="lazy" decoding="async"></figure>
+                      <figure><img src="/photography/gallery/vm-6683-green-corner.webp" alt="Helenental limestone wall" loading="lazy" decoding="async"></figure>
                       <span>Full day</span>
                       <h4>Crag &amp; team day</h4>
                       <p>Groups, clubs and courses with portraits and a shared gallery.</p>
@@ -318,7 +318,7 @@ const publicSiteMarkup = String.raw`
               <article id="about" class="story-panel story-about" data-chapter="2" aria-labelledby="chapter-about">
                 <div class="story-panel-inner shell about-editorial">
                   <figure>
-                    <img src="/photography/gallery/vm-6706-before-the-start.webp" alt="Climbing portrait" loading="lazy" decoding="async">
+                    <img src="/photography/gallery/vm-6683-green-corner.webp" alt="Helenental limestone wall" loading="lazy" decoding="async">
                   </figure>
                   <div>
                     <header class="chapter-heading">

@@ -135,7 +135,7 @@ const ARCHIVE_IMAGE_POOL = [
   "/photography/gallery/vm-7029-the-cave-sector.webp",
   "/photography/gallery/vm-6918-full-extension.webp",
   "/photography/gallery/vm-6683-green-corner.webp",
-  "/photography/gallery/vm-6683-green-corner.webp",
+  "/photography/gallery/vm-7010-the-pit-afternoon.webp",
   "/photography/gallery/vm-7303-belay-talk.webp",
 ];
 
@@ -725,7 +725,7 @@ export default function ExploreAtlasExperience() {
           <span><strong>3D Lab — the Nasenwand study</strong><small>A working space for turning scans, wall photographs and route records into one spatial study. Follow how geometry, access context and future overlays come together before they enter the field guide.</small><em>Open study</em></span>
         </Link>
         <Link href="/vision/wall-reveal" className={styles.experimentRow}>
-          <img src="/photography/gallery/vm-6890-peilstein-main-face.webp" alt="Climber on limestone in the Wall Reveal study" />
+          <img src="/photography/gallery/vm-6683-green-corner.webp" alt="Helenental limestone wall in the Wall Reveal study" />
           <span><strong>Vision — Wall Reveal</strong><small>Computer-vision experiments testing how route lines can be read from real limestone photographs. The aim is a clear field aid that preserves the original image and keeps every suggested line reviewable.</small><em>Open experiment</em></span>
         </Link>
         <Link href="/panoramas/wachau" className={styles.experimentRow}>
