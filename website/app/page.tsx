@@ -193,6 +193,30 @@ const publicSiteMarkup = String.raw`
     </section>
 
 
+    <section class="story-formats" id="story-formats" aria-labelledby="story-formats-title">
+      <div class="shell">
+        <header class="story-formats-heading reveal">
+          <div><p class="eyebrow">Three story formats</p><h2 id="story-formats-title">Stories with a point of view.</h2></div>
+          <p>Climbing, product and event stories, each shaped around one clear sequence. These pages are live as format previews while final photographs and copy are being curated.</p>
+        </header>
+        <div class="story-format-grid">
+          <a class="story-format-card reveal" href="/stories/climbing">
+            <figure><img src="/photography/gallery/vm-6890-peilstein-main-face.webp" alt="Climber on a limestone wall at Peilstein" loading="lazy" decoding="async"><figcaption>01 / Climbing</figcaption></figure>
+            <div class="story-format-copy"><p class="eyebrow">CLIMBING STORY</p><h3>The Ascent</h3><p>Approach, movement and the moments between.</p><span>Explore the format <b aria-hidden="true">-&gt;</b></span></div>
+          </a>
+          <a class="story-format-card reveal" href="/stories/product">
+            <figure><img src="/photography/gallery/vm-6768-gear-on-the-ledge.webp" alt="Climbing gear resting on limestone beside a small wildflower" loading="lazy" decoding="async"><figcaption>02 / Product</figcaption></figure>
+            <div class="story-format-copy"><p class="eyebrow">PRODUCT STORY</p><h3>The Kit</h3><p>Form, detail and an object in use.</p><span>Explore the format <b aria-hidden="true">-&gt;</b></span></div>
+          </a>
+          <a class="story-format-card reveal" href="/stories/events">
+            <figure><img src="/photography/gallery/vm-6913-traverse-morning-light.webp" alt="Climber traversing in morning light" loading="lazy" decoding="async"><figcaption>03 / Events</figcaption></figure>
+            <div class="story-format-copy"><p class="eyebrow">EVENT STORY</p><h3>The Session</h3><p>Place, preparation and a day shared outdoors.</p><span>Explore the format <b aria-hidden="true">-&gt;</b></span></div>
+          </a>
+        </div>
+        <p class="story-formats-note">Format previews use photographs already on the site. Final story images and copy will replace these samples after curation.</p>
+      </div>
+    </section>
+
     <section class="quote-section">
       <div class="quote-media parallax-layer" data-parallax="0.08">
         <img src="/photography/gallery/vm-6683-green-corner.webp" alt="" loading="lazy" decoding="async">
@@ -355,3 +379,4 @@ export default function Page() {
     </>
   );
 }
+
