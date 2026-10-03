@@ -42,9 +42,9 @@ export const storyContent: Record<StoryFormat, StoryContent> = {
     detailNote: "Product-specific photographs and verified details will replace these sample frames later.",
     selectedFrames: [0, 2, 3], checklistTitle: "Let the real product lead.",
     checklist: ["Confirm the object and intended audience", "Verify descriptions and specifications", "Select product photographs and confirm permissions"],
-    coverImage: gallery + "vm-7202-chalk-and-water.webp",
+    coverImage: gallery + "vm-6768-gear-on-the-ledge.webp",
     chapters: [
-      { id: "first-look", title: "First look", mediaLabel: "Sample frame / first impression", imageSrc: gallery + "vm-7202-chalk-and-water.webp", imageAlt: "Chalk and water on limestone.", pill: "Form", note: "Give the object a moment before the details.", direction: "Introduce the selected product without leading with unverified claims." },
+      { id: "first-look", title: "First look", mediaLabel: "Sample frame / first impression", imageSrc: gallery + "vm-6768-gear-on-the-ledge.webp", imageAlt: "Climbing gear resting on limestone beside a small wildflower.", pill: "Form", note: "Give the object a moment before the details.", direction: "Introduce the selected product without leading with unverified claims." },
       { id: "shape", title: "Shape", mediaLabel: "Sample frame / form", imageSrc: gallery + "vm-6683-green-corner.webp", imageAlt: "Helenental limestone wall.", pill: "Form", note: "Let shape and material make a first impression.", direction: "A considered composition gives the product a clear, uncluttered introduction." },
       { id: "detail", title: "The detail", mediaLabel: "Sample frame / detail", imageSrc: gallery + "vm-6913-traverse-morning-light.webp", imageAlt: "Climber traversing in morning light.", pill: "Detail", note: "Small choices can be worth a closer look.", direction: "A close frame can show one verified detail at a time." },
       { id: "use", title: "In use", mediaLabel: "Sample frame / use", imageSrc: gallery + "vm-6965-topping-out.webp", imageAlt: "Climber topping out on limestone.", pill: "Use", note: "End where the object meets an ordinary day outside.", direction: "Show the product in context without making performance claims." },
