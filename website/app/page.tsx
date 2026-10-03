@@ -205,7 +205,7 @@ const publicSiteMarkup = String.raw`
             <div class="story-format-copy"><p class="eyebrow">CLIMBING STORY</p><h3>The Ascent</h3><p>Approach, movement and the moments between.</p><span>Explore the format <b aria-hidden="true">-&gt;</b></span></div>
           </a>
           <a class="story-format-card reveal" href="/stories/product">
-            <figure><img src="/photography/gallery/vm-7202-chalk-and-water.webp" alt="Chalk and water on limestone" loading="lazy" decoding="async"><figcaption>02 / Product</figcaption></figure>
+            <figure><img src="/photography/gallery/vm-6768-gear-on-the-ledge.webp" alt="Climbing gear resting on limestone beside a small wildflower" loading="lazy" decoding="async"><figcaption>02 / Product</figcaption></figure>
             <div class="story-format-copy"><p class="eyebrow">PRODUCT STORY</p><h3>The Kit</h3><p>Form, detail and an object in use.</p><span>Explore the format <b aria-hidden="true">-&gt;</b></span></div>
           </a>
           <a class="story-format-card reveal" href="/stories/events">
