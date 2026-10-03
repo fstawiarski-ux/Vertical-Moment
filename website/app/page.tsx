@@ -178,10 +178,10 @@ const publicSiteMarkup = String.raw`
           </button>
 
           <button class="work-item work-item-e reveal" type="button"
-                  data-src="/photography/gallery/vm-7202-chalk-and-water.webp"
-                  data-title="Chalk and water" data-meta="Detail">
-            <img src="/photography/gallery/vm-7202-chalk-and-water.webp" alt="Chalk and water on limestone" loading="lazy" decoding="async">
-            <span class="work-caption"><strong>Chalk and water</strong><small>Detail</small></span>
+                  data-src="/photography/stories/curated/9b3b7594-climber-portrait.webp"
+                  data-title="Looking up" data-meta="Climbing portrait">
+            <img src="/photography/stories/curated/9b3b7594-climber-portrait.webp" alt="Climber in a helmet looks upward, framed by trees." loading="lazy" decoding="async">
+            <span class="work-caption"><strong>Looking up</strong><small>Portrait</small></span>
             <span class="work-number">05</span>
           </button>
         </div>
@@ -201,19 +201,19 @@ const publicSiteMarkup = String.raw`
         </header>
         <div class="story-format-grid">
           <a class="story-format-card reveal" href="/stories/climbing">
-            <figure><img src="/photography/gallery/vm-6890-peilstein-main-face.webp" alt="Climber on a limestone wall at Peilstein" loading="lazy" decoding="async"><figcaption>01 / Climbing</figcaption></figure>
+            <figure><img src="/photography/stories/curated/9b3b7824-action-lead.webp" alt="Climber in a red helmet reaches for a hold on limestone." loading="lazy" decoding="async"><figcaption>01 / Climbing</figcaption></figure>
             <div class="story-format-copy"><p class="eyebrow">CLIMBING STORY</p><h3>The Ascent</h3><p>Approach, movement and the moments between.</p><span>Explore the format <b aria-hidden="true">-&gt;</b></span></div>
           </a>
           <a class="story-format-card reveal" href="/stories/product">
-            <figure><img src="/photography/gallery/vm-6768-gear-on-the-ledge.webp" alt="Climbing gear resting on limestone beside a small wildflower" loading="lazy" decoding="async"><figcaption>02 / Product</figcaption></figure>
+            <figure><img src="/photography/stories/curated/9b3b6471-quickdraw-detail.webp" alt="Quickdraw clipped into a bolt on limestone." loading="lazy" decoding="async"><figcaption>02 / Product</figcaption></figure>
             <div class="story-format-copy"><p class="eyebrow">PRODUCT STORY</p><h3>The Kit</h3><p>Form, detail and an object in use.</p><span>Explore the format <b aria-hidden="true">-&gt;</b></span></div>
           </a>
           <a class="story-format-card reveal" href="/stories/events">
-            <figure><img src="/photography/gallery/vm-6913-traverse-morning-light.webp" alt="Climber traversing in morning light" loading="lazy" decoding="async"><figcaption>03 / Events</figcaption></figure>
+            <figure><img src="/photography/stories/curated/9b3b7872-place-scale.webp" alt="Two climbers stand on a high rock above a river valley." loading="lazy" decoding="async"><figcaption>03 / Events</figcaption></figure>
             <div class="story-format-copy"><p class="eyebrow">EVENT STORY</p><h3>The Session</h3><p>Place, preparation and a day shared outdoors.</p><span>Explore the format <b aria-hidden="true">-&gt;</b></span></div>
           </a>
         </div>
-        <p class="story-formats-note">Format previews use photographs already on the site. Final story images and copy will replace these samples after curation.</p>
+        <p class="story-formats-note">Format previews use selected photo proofs. Final photo exports and story copy will follow after curation.</p>
       </div>
     </section>
 
