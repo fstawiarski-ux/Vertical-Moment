@@ -38,6 +38,8 @@ const plannerRevision = createHash("sha256")
   .digest("hex")
   .slice(0, 16);
 
+const hutRevision = createHash("sha256").update(await readFile(new URL("./public/huts-data/v1/manifest.json",import.meta.url))).update(await readFile(new URL("./components/huts/TripWorkspace.tsx",import.meta.url))).update(await readFile(new URL("./components/huts/HutLibrary.tsx",import.meta.url))).digest("hex").slice(0,16);
+
 export default await serwist({
   swSrc: "src/pwa/service-worker.ts",
   swDest: "public/sw.js",
@@ -54,6 +56,13 @@ export default await serwist({
     { url: "/explore-app", revision: "explore-app-v16-planner-route" },
     { url: "/explore-app/planner", revision: plannerRevision },
     { url: "/explore-app/planner-content.html", revision: plannerRevision },
+    {url:"/huts",revision:hutRevision},
+    {url:"/explore-app/planner/trips",revision:hutRevision},
+    {url:"/explore-app/planner/today",revision:hutRevision},
+    {url:"/explore-app/planner/list",revision:hutRevision},
+    {url:"/huts-data/v1/index.json",revision:hutRevision},
+    {url:"/huts-data/v1/manifest.json",revision:hutRevision},
+    {url:"/huts/manifest.webmanifest",revision:hutRevision},
     { url: "/offline", revision: "offline-v1" },
     { url: "/explore-content.json", revision: `registry-v${registryRevision}` },
     ...pilotPrecacheEntries,

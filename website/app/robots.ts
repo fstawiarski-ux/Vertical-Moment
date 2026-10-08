@@ -5,7 +5,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://verticalmoment.com
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      { userAgent: "*", allow: "/" },
+      { userAgent: "*", allow: "/", disallow:["/huts","/huts-data/","/explore-app/planner"] },
       {
         userAgent: [
           "Amazonbot",

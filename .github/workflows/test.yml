@@ -27,7 +27,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
         with:
-          node-version: "22"
+          node-version: "24"
           cache: "npm"
           cache-dependency-path: website/package-lock.json
 
@@ -37,7 +37,10 @@ jobs:
       # public/data/v1/*.json is generated, not committed. The build gets it via
       # the prebuild hook; a typecheck that never builds has to ask for it.
       - name: Sync data
-        run: npm run sync-data
+        run: npm run sync-data && npm run sync-huts
+
+      - name: Verify hut research and identities
+        run: npm run verify-huts
 
       - name: Verify data mirror
         run: npm run verify-data
@@ -47,6 +50,9 @@ jobs:
 
       - name: Verify PWA content registry
         run: npm run verify-pwa-content
+
+      - name: Verify personal hut planner configuration
+        run: npm run verify-personal-huts
 
       - name: Verify public security boundaries
         run: npm run verify-security

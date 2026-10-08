@@ -1,0 +1,12 @@
+import {describe,it,expect} from 'vitest';
+import {emptyWorkspace,validDate,type Trip} from './types';
+import {validateWorkspace,importGuide} from './workspace';
+import approaches from './generated/approaches.json';
+const trip=():Trip=>({id:'trip-test-2026',name:'Rax weekend',date:'2026-10-17',destinations:[{hut_id:'167',approach_id:''}],notes:'Private itinerary',checklist:{weather:true},shoot_status:'Planned',day_notes:'Private day log'});
+describe('Private hut workspace boundaries',()=>{
+ it('retains string IDs and rejects unknown or numeric identities',()=>{const w=emptyWorkspace();w.bookmarks=['167','167'];expect(validateWorkspace(w).bookmarks).toEqual(['167']);expect(()=>validateWorkspace({...w,bookmarks:[167]})).toThrow();expect(()=>validateWorkspace({...w,bookmarks:['invalid-hut']})).toThrow();});
+ it('checks real dates, select values and bounded focal lengths',()=>{expect(validDate('2026-02-30')).toBe(false);expect(validDate('2028-02-29')).toBe(true);const w=emptyWorkspace();w.plans['167']={shoot_date:'2026-02-30'};expect(()=>validateWorkspace(w)).toThrow();w.plans['167']={drone_permission:'Assumed allowed'};expect(()=>validateWorkspace(w)).toThrow();w.plans['167']={focal_length:'2001'};expect(()=>validateWorkspace(w)).toThrow();});
+ it('allows only an approach belonging to the selected hut',()=>{const w=emptyWorkspace();const t=trip();t.destinations[0].approach_id=(approaches as Record<string,string[]>)['167'][0];w.trips=[t];expect(validateWorkspace(w).trips).toHaveLength(1);t.destinations[0].approach_id=(approaches as Record<string,string[]>)['679'][0];expect(()=>validateWorkspace(w)).toThrow();});
+ it('imports original guide bookmarks by union without replacing local entries',()=>{const w=emptyWorkspace();w.bookmarks=['167'];const r=importGuide(w,{format:'alpenverein-hut-bookmarks',version:1,hut_ids:['679','167','unknown',167]});expect(r.workspace.bookmarks).toEqual(['167','679']);expect(r.skipped).toHaveLength(2);});
+ it('retains existing personal values and reports import conflicts',()=>{const w=emptyWorkspace();w.plans['167']={viewpoint:'My checked spot'};const r=importGuide(w,{format:'alpenverein-documentary-plans',version:1,plans:{'167':{viewpoint:'Other spot',morning_spot:'East ridge',made_up:'untrusted'}}});expect(r.workspace.plans['167']).toMatchObject({viewpoint:'My checked spot',morning_spot:'East ridge'});expect(r.conflicts).toEqual(['167.viewpoint']);expect(r.skipped).toEqual(['167.made_up']);});
+});

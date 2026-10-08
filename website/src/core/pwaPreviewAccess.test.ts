@@ -6,6 +6,12 @@ describe("PWA preview request classification", () => {
     for (const path of [
       "/explore-app",
       "/explore-app/planner",
+      "/explore-app/planner/list",
+      "/explore-app/planner/trips",
+      "/explore-app/planner/today",
+      "/huts",
+      "/huts/167",
+      "/huts/sources",
       "/explore-app/planner/",
       "/explore-app/planner-content",
       "/explore-app/planner-content.html",

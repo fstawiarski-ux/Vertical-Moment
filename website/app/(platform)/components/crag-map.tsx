@@ -386,7 +386,7 @@ export function CragMap({ initialRegionSlug, initialCragSlug, showPanel = true }
     let overviewOnly = false;
     try {
       const response = await fetch(`https://router.project-osrm.org/route/v1/driving/${STEPHANSPLATZ[1]},${STEPHANSPLATZ[0]};${JAMMERWANDL[1]},${JAMMERWANDL[0]}?overview=full&geometries=geojson`);
-      const payload = await response.json();
+      const payload = await response.json() as {code?:string;routes?:{geometry?:{coordinates?:[number,number][]}}[]};
       if (payload.code === "Ok" && payload.routes?.[0]?.geometry?.coordinates?.length) {
         points = payload.routes[0].geometry.coordinates.map(([lon, lat]: [number, number]) => [lat, lon] as [number, number]);
       } else {

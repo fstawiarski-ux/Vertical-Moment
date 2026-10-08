@@ -5,6 +5,7 @@ import {
   CacheableResponsePlugin,
   ExpirationPlugin,
   NetworkFirst,
+  NetworkOnly,
   RangeRequestsPlugin,
   Serwist,
   StaleWhileRevalidate,
@@ -14,12 +15,28 @@ import {
 declare const self: ServiceWorkerGlobalScope & { __SW_MANIFEST: Array<PrecacheEntry | string> };
 
 const isSameOrigin = (url: URL) => url.origin === self.location.origin;
+import hutManifest from "../../public/huts-data/v1/manifest.json";
+import hutIdentities from "../../lib/huts/generated/identities.json";
+const hutCacheName = "vm-hut-research-v1-" + hutManifest.expanded_sha256.slice(0,16);
+const hutIds = new Set(hutIdentities.map(h => h.id));
 const isExploreAppNavigation = (pathname: string) => (
   pathname === "/explore-app" || pathname.startsWith("/explore-app/")
 );
 
 self.addEventListener("message", (event) => {
   if (event.data?.type === "SKIP_WAITING") void self.skipWaiting();
+  if (event.data?.type === "SAVE_HUT" && hutIds.has(event.data.id)) {
+    event.waitUntil((async () => {
+      try {
+        const id = event.data.id;
+        const [page, data] = await Promise.all([fetch("/huts/" + id, {cache:"reload"}), fetch("/huts-data/v1/" + id + ".json", {cache:"reload"})]);
+        if (!page.ok || !data.ok) throw Error("Download failed");
+        await (await caches.open("vm-hut-pages-v1")).put("/huts/" + id, page);
+        await (await caches.open(hutCacheName)).put("/huts-data/v1/" + id + ".json", data);
+        event.ports[0]?.postMessage({ok:true});
+      } catch { event.ports[0]?.postMessage({ok:false}); }
+    })());
+  }
 });
 
 const serwist = new Serwist({
@@ -49,9 +66,35 @@ const serwist = new Serwist({
       /^mode$/,
       /^pilot$/,
       /^regionPreview$/,
+      /^trip$/,
+      /^q$/,
+      /^region$/,
+      /^range$/,
+      /^service$/,
+      /^min$/,
+      /^max$/,
+      /^notice$/,
+      /^history$/,
+      /^prices$/,
+      /^diet$/,
+      /^anniversary$/,
+      /^saved$/,
+      /^ids$/,
     ],
   },
   runtimeCaching: [
+    {
+      matcher: ({url}) => isSameOrigin(url) && url.pathname.startsWith("/api/"),
+      handler: new NetworkOnly(),
+    },
+    {
+      matcher: ({url,request}) => isSameOrigin(url) && request.method === "GET" && url.pathname.startsWith("/huts-data/v1/") && url.pathname.endsWith(".json"),
+      handler: new CacheFirst({cacheName:hutCacheName,plugins:[new CacheableResponsePlugin({statuses:[200]}),new ExpirationPlugin({maxEntries:635,purgeOnQuotaError:true})]}),
+    },
+    {
+      matcher: ({url,request}) => isSameOrigin(url) && request.mode === "navigate" && (url.pathname === "/huts" || url.pathname.startsWith("/huts/")),
+      handler: new NetworkFirst({cacheName:"vm-hut-pages-v1",networkTimeoutSeconds:3,plugins:[new CacheableResponsePlugin({statuses:[200]})]}),
+    },
     {
       matcher: ({ url, request }) => isSameOrigin(url)
         && request.method === "GET"

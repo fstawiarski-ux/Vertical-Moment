@@ -42,11 +42,12 @@ const nextConfig = {
           { key: "Content-Security-Policy", value: pwaContentSecurityPolicy },
         ],
       },
+      ...["/huts/:path*"].map(source => ({source, headers: [{key: "Content-Security-Policy", value: pwaContentSecurityPolicy}]})),
       {
         source: "/sw.js",
         headers: [
           { key: "Cache-Control", value: "no-cache, no-store, must-revalidate" },
-          { key: "Service-Worker-Allowed", value: "/explore-app" },
+          { key: "Service-Worker-Allowed", value: "/" },
           { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "Strict-Transport-Security", value: "max-age=31536000; includeSubDomains" },
         ],

@@ -1,6 +1,6 @@
 .page {
-  position: fixed;
-  inset: 0;
+  position: relative;
+  min-height: 80dvh;
   display: flex;
   flex-direction: column;
   background: #0d1510;
@@ -37,7 +37,7 @@
 }
 .header :focus-visible { outline: 2px solid #b7e4c7; outline-offset: 3px; }
 .status { margin: 0; font-size: 12px; color: #c2d1c7; }
-.frame { display: block; width: 100%; flex: 1; min-height: 0; border: 0; background: #f1f4f3; }
+.frame { display: block; width: 100%; flex: 1; min-height: 75dvh; border: 0; background: #f1f4f3; }
 @media (max-width: 700px) {
   .header { gap: 6px 10px; }
   .share { order: 3; flex-basis: 100%; }

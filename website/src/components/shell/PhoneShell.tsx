@@ -134,6 +134,8 @@ export function PhoneShell({
             </button>
           ))}
           <button type="button" aria-label="Replay the Region to Topo journey" onClick={() => { setMoreOpen(false); onReplayJourney(); }}>Replay Journey</button>
+          <button type="button" onClick={() => window.location.assign("/huts")}>630-hut library · stories & access</button>
+          <button type="button" onClick={() => window.location.assign("/explore-app/planner/trips")}>My hut trips · private planning</button>
           <button type="button" onClick={() => window.location.assign("/explore-app/planner")}>Climbing planner · calendar & outreach</button>
           <button type="button" onClick={() => { setMoreOpen(false); onContribute(); }}>Add contribution</button>
           {fieldOpsAvailable && (

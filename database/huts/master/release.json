@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "release": "2026-10-08-r3",
+  "checked": "2026-10-08",
+  "entries": 630,
+  "identity_sha256": "6795e831b265fc53a7c80c41024e88c338cefe468f212d2dc1764aa8fa904876",
+  "expanded_sha256": "78af8ae506a9c1101ce0da6373782e7b6868f0935005e48f7e4c8c1fc5f59a0a",
+  "active_routes_sha256": "545d177b56a5a155adad5b59f47d535d595da1bdeb8ba7e67f8e288583fa3c8c",
+  "route_count": 5158,
+  "workbook_sha256": "fab95204d705439137a3aad81fe1d22aba4b9f55e34da71c69bd36026e5ab17c",
+  "offline_guide_sha256": "2821b47e830a4e8c1a0e327e1a9c23115efcef5b759d3c2a942915c913c30dfb",
+  "research_origin": "Reviewed master; changing claims retain their field/source check dates. Routes use only master-data.json.routes.",
+  "personal_data": "No personal bookmarks, visits, expenses or permission records included.",
+  "expanded_sha256_format": "utf8-lf"
+}

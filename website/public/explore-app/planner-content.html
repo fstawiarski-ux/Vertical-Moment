@@ -287,11 +287,9 @@ const today0=()=>{const n=new Date();return new Date(n.getFullYear(),n.getMonth(
 function today(){const o=S['today'];return o?pd(o):today0()}
 const dd=(a,b)=>Math.round((a-b)/864e5);
 /* ---------- state + persistence ---------- */
-let S={};let dbDoc=null,writing=false,dirty=false,saveT=null,where='browser';
-const syncKey='climbplanner.sync.enabled.v1',syncClearPendingKey='climbplanner.sync.clearPending.v1';
-let syncEnabled=false;
+let S={};
 try{S=JSON.parse(localStorage.getItem('climbplanner.v1')||'{}')||{}}catch(e){S={}}
-try{syncEnabled=localStorage.getItem(syncKey)==='1'}catch(e){}/* ---------- domain ---------- */
+/* ---------- domain ---------- */
 const CAL=D.cal;const byN={};CAL.forEach(c=>byN[c.n]=c);
 function drive(c){const v=S['cal:'+c.n+':drive'];return v!==undefined&&v!==''?Number(v):c.dr}
 function trip(c){const x=drive(c);if(x==null||x===''||isNaN(x))return 'Check';return x<=0.75?'Local':x<=2.5?'Day trip':'Overnight'}
@@ -951,7 +949,6 @@ V['Trip planner']=function(){
  function draw(){
   detail.textContent='';
   const id=sel.value;
-  checklist.forEach(function(item){const suffix=String(item.key).split(':').pop(),active=getActiveTripPlan(),scope=active&&active.crag===id?active.id:'area-'+(id||'none');item.key='trip:check:'+scope+':'+suffix});
   put('trip:crag',id);
   if(!id){
    detail.append(
@@ -1059,6 +1056,7 @@ V['Trip planner']=function(){
    {key:'hub:check:emergency',title:'Set up the party and emergency plan',text:'Skills match objective; communication and what to do if separated.',url:'https://www.oesterreich.gv.at/en/themen/notfaelle_unfaelle_und_kriminalitaet/notrufnummern',link:'Emergency numbers'},
    {key:'hub:check:hut',title:'Confirm overnight beds if needed',text:'Opening dates and reservation on Hut Reservation or with the warden.',url:'https://www.hut-reservation.org/login',link:'Open Hut Reservation'}
   ];
+  checklist.forEach(function(item){const suffix=String(item.key).split(':').pop(),active=getActiveTripPlan(),scope=active&&active.crag===id?active.id:'area-'+(id||'none');item.key='trip:check:'+scope+':'+suffix});
   const checklistBox=h('section',{class:'hub-block','aria-labelledby':'trip-check-title'});
   const progress=h('progress',{max:checklist.length,value:0,'aria-label':'Checklist completion'});
   const status=h('span',{class:'check-status','aria-live':'polite'});
@@ -1112,10 +1110,12 @@ const DE={
  'Plan an outdoor climb':'Klettertour planen','Choose an area, review current sources and prepare your checklist.':'Gebiet wählen, aktuelle Quellen prüfen und Checkliste vorbereiten.','Plan a photo outing':'Foto-Tour planen','Browse events, pitches and portfolio opportunities.':'Termine, Kletterziele und Portfolio-Möglichkeiten ansehen.','Browse crags':'Gebiete ansehen','Open calendar':'Kalender öffnen','Open portfolio leads':'Portfolio-Möglichkeiten öffnen',
  'Saved trip plans':'Gespeicherte Touren','Save named trips with an area, date, objective and notes. Checklist ticks are stored per trip.':'Touren mit Gebiet, Datum, Ziel und Notizen speichern. Checklisten gelten je Tour.','Saved plan':'Gespeicherte Tour','Current area only':'Nur aktuelles Gebiet','Plan name':'Tourenname','Date':'Datum','Objective / route':'Ziel / Route','Notes':'Notizen','Save as named trip':'Als Tour speichern','Save changes':'Änderungen speichern','Delete trip':'Tour löschen','Print plan':'Tour drucken','Choose a saved plan':'Gespeicherte Tour wählen','Enter a plan name and choose an area first.':'Tourenname eingeben und Gebiet wählen.','Save changes to this trip?':'Änderungen an dieser Tour speichern?','Delete this saved trip and its checklist?':'Diese Tour und ihre Checkliste löschen?','Trip summary':'Tourenübersicht','Plan name: ':'Tour: ','Area: ':'Gebiet: ','Objective / route: ':'Ziel / Route: ','Checklist ticks are saved for this area or named trip. The Climbing Resources checklist stays separate.':'Häkchen werden für dieses Gebiet oder diese Tour gesichert. Die Checkliste in Kletterressourcen bleibt separat.',
  'Some legacy detail text and source records remain in English or their original language.':'Einige ältere Detailtexte und Quelldaten bleiben auf Englisch oder in der Originalsprache.',
- 'Your planner data stays in this browser unless you enable account sync. If enabled, event statuses, dates, notes, saved trips, checklists and Field Day logs are synced to your account. Turning sync off leaves the account copy in place.':'Deine Planungsdaten bleiben in diesem Browser, solange du die Kontosynchronisierung nicht aktivierst. Bei Aktivierung werden Status, Daten, Notizen, Touren, Checklisten und Praxistag-Protokolle mit deinem Konto synchronisiert. Beim Ausschalten bleibt die Kontokopie bestehen.',
+
  'The app shell and data are self-contained; external source links require an internet connection.':'App und Daten sind in dieser Datei enthalten; externe Quellenlinks benötigen eine Internetverbindung.',
- 'Saved only in this browser.':'Nur in diesem Browser gespeichert.','Saved to your account with your consent.':'Mit deiner Zustimmung im Konto gespeichert.','Account sync is enabled, but unavailable here. Entries remain in this browser.':'Kontosynchronisierung ist aktiviert, hier aber nicht verfügbar. Einträge bleiben in diesem Browser.','Enable account sync':'Kontosynchronisierung aktivieren','Disable account sync':'Kontosynchronisierung ausschalten','Light / dark':'Hell / dunkel','Clear my entries':'Meine Einträge löschen','Entries cleared':'Einträge gelöscht','Language: English':'Sprache: Englisch','Language: German':'Sprache: Deutsch',
- 'Enable account sync? Planner statuses, dates, notes, saved trips, checklists and Field Day logs will be merged with your account and saved there. Browser entries take precedence when the same field exists in both places.':'Kontosynchronisierung aktivieren? Status, Daten, Notizen, Touren, Checklisten und Praxistag-Protokolle werden mit deinem Konto zusammengeführt und dort gespeichert. Bei doppelten Angaben haben Browserdaten Vorrang.','Turn off account sync? New changes will stay in this browser. Data already synced to the account will remain there.':'Kontosynchronisierung ausschalten? Neue Änderungen bleiben in diesem Browser. Bereits synchronisierte Daten bleiben im Konto.','Clear your planner entries from this browser and the connected account? This cannot be undone.':'Planungsdaten in diesem Browser und im verbundenen Konto löschen? Das kann nicht rückgängig gemacht werden.','Clear your browser entries? Account sync is unavailable now; a pending clear will be sent before older account data can be restored.':'Browserdaten löschen? Der Löschauftrag wird gesendet, bevor ältere Kontodaten wiederhergestellt werden.','Clear all statuses, dates and notes you entered? This cannot be undone.':'Alle Statusangaben, Daten und Notizen löschen? Das kann nicht rückgängig gemacht werden.'
+ 'Saved only in this browser.':'Nur in diesem Browser gespeichert.',
+ 'Your planner data stays in this browser. Export a backup to move a copy to another device. Copying the tool address does not share your personal entries.':'Deine Planungsdaten bleiben in diesem Browser. Ein Export sichert eine Kopie fuer ein anderes Geraet. Die Werkzeugadresse teilt keine persoenlichen Eintraege.',
+ 'Changes are only in memory. Export a backup before leaving.':'Aenderungen sind nur im Arbeitsspeicher. Vor dem Verlassen eine Sicherung exportieren.','Light / dark':'Hell / dunkel','Clear my entries':'Meine Einträge löschen','Entries cleared':'Einträge gelöscht','Language: English':'Sprache: Englisch','Language: German':'Sprache: Deutsch',
+ 'Clear all statuses, dates and notes you entered? This cannot be undone.':'Alle Statusangaben, Daten und Notizen löschen? Das kann nicht rückgängig gemacht werden.'
 };
 function tr(v){return locale==='de'&&typeof v==='string'?(DE[v]||v):v}
 const hBase=h;h=function(tag,a,...kids){let x=a;if(a){x={...a};['text','placeholder','aria-label','title'].forEach(k=>{if(typeof x[k]==='string')x[k]=tr(x[k])})}const tx=v=>Array.isArray(v)?v.map(tx):typeof v==='string'?tr(v):v;return hBase(tag,x,...kids.map(tx))};
@@ -1123,14 +1123,14 @@ const langKey='climbplanner.lang.v1';
 function updateChrome(){
  document.documentElement.lang=locale;
  const l=document.getElementById('language-toggle');if(l){l.textContent=locale==='de'?'EN':'DE';l.setAttribute('aria-label',tr(locale==='de'?'Language: English':'Language: German'))}
- const s=document.getElementById('sync-toggle');if(s){s.textContent=tr(syncEnabled?'Disable account sync':'Enable account sync');s.setAttribute('aria-pressed',syncEnabled?'true':'false')}
  const t=document.getElementById('theme');if(t)t.textContent=tr('Light / dark');
  const r=document.getElementById('reset');if(r)r.textContent=tr('Clear my entries');
  const b=document.querySelector('.brand');if(b&&b.firstChild)b.firstChild.nodeValue=tr('Climbing planner');
  const sm=b&&b.querySelector('small');if(sm)sm.textContent=tr('Vienna + Austria · 2026–27');
 }
-function setSaveText(){const e=document.getElementById('savestate');if(e)e.textContent=tr(!syncEnabled?'Saved only in this browser.':dbDoc?'Saved to your account with your consent.':'Account sync is enabled, but unavailable here. Entries remain in this browser.');updateChrome()}
-function persist(){clearTimeout(saveT);saveT=setTimeout(async function(){try{localStorage.setItem('climbplanner.v1',JSON.stringify(S))}catch(e){};if(!dbDoc)return;dirty=true;if(writing)return;writing=true;while(dirty){dirty=false;try{await dbDoc.set({v:1,s:S});try{localStorage.removeItem(syncClearPendingKey)}catch(e){}}catch(e){dbDoc=null;where='browser';setSaveText()}}writing=false},400)}
+let saveProblem='';
+function setSaveText(){const e=document.getElementById('savestate');if(e)e.textContent=tr(saveProblem||'Saved only in this browser.');updateChrome()}
+function persist(){try{localStorage.setItem('climbplanner.v1',JSON.stringify(S));saveProblem=''}catch(e){saveProblem='Changes are only in memory. Export a backup before leaving.'}setSaveText()}
 function put(k,v){
  if(cur==='Trip planner'&&k.indexOf('hub:check:')===0){const suf=k.slice(10),p=getActiveTripPlan(),area=S['trip:crag']||'none',scope=p&&p.crag===area?p.id:'area-'+area,key='trip:check:'+scope+':'+suf;if(v===''||v==null)delete S[key];else S[key]=v;persist();return}
  if(cur==='Trip planner'&&k==='trip:crag'&&S[k]!==v){const p=getActiveTripPlan();if(p&&p.crag!==v)delete S['trip:active']}
@@ -1152,7 +1152,7 @@ const startOld=V['Start Here'];V['Start Here']=function(){
  startOld();const m=document.getElementById('main'),sub=m.querySelector('.sub');
  const links=h('section',{class:'entry-paths'},h('article',{class:'card task-card'},h('h2',{text:'Plan an outdoor climb'}),h('p',{text:'Choose an area, review current sources and prepare your checklist.'}),h('button',{class:'exp',type:'button',onclick:()=>go('Trip planner')},'Plan trip'),h('button',{class:'exp',type:'button',onclick:()=>go('Crag index')},'Browse crags')),h('article',{class:'card task-card'},h('h2',{text:'Plan a photo outing'}),h('p',{text:'Browse events, pitches and portfolio opportunities.'}),h('button',{class:'exp',type:'button',onclick:()=>go('Calendar')},'Open calendar'),h('button',{class:'exp',type:'button',onclick:()=>go('Portfolio Leads')},'Open portfolio leads')));
  if(sub)sub.after(links);else m.prepend(links);
- const ss=m.querySelectorAll('.sub');if(ss.length)ss[ss.length-1].textContent=tr('Your planner data stays in this browser unless you enable account sync. If enabled, event statuses, dates, notes, saved trips, checklists and Field Day logs are synced to your account. Turning sync off leaves the account copy in place.');
+ const ss=m.querySelectorAll('.sub');if(ss.length)ss[ss.length-1].textContent=tr('Your planner data stays in this browser. Export a backup to move a copy to another device. Copying the tool address does not share your personal entries.');
  m.append(h('p',{class:'offline-note mini',text:'The app shell and data are self-contained; external source links require an internet connection.'}));
 };
 function getTripPlans(){return Array.isArray(S['trip:plans:v1'])?S['trip:plans:v1']:[]}
@@ -1175,35 +1175,16 @@ const tripOld=V['Trip planner'];V['Trip planner']=function(){
  choice.addEventListener('change',function(){if(!choice.value)delete S['trip:active'];else{const p=getTripPlans().find(x=>x.id===choice.value);if(p){S['trip:active']=p.id;S['trip:crag']=p.crag}}persist();render()});
  if(area)area.addEventListener('change',()=>setTimeout(render,0));
 };
-function connectAccountSync(){
- if(!syncEnabled)return;
- Promise.resolve().then(async function(){
-  if(typeof claude==='undefined'||!claude||typeof claude.use!=='function')throw new Error();
-  const pair=await Promise.all([claude.use('db'),claude.use('user')]);if(!syncEnabled)return;
-  const db=pair[0],user=pair[1];if(!db||!user)throw new Error();const id=await user.id();if(!id)return;
-  dbDoc=db.doc('data/users/'+id+'/planner');const snap=await dbDoc.get();if(!syncEnabled){dbDoc=null;return}
-  const remote=snap.exists&&snap.data()&&snap.data().s?snap.data().s:{};
-  let pending=false;try{pending=localStorage.getItem(syncClearPendingKey)==='1'}catch(e){}
-  if(pending){await dbDoc.set({v:1,s:S});try{localStorage.setItem('climbplanner.v1',JSON.stringify(S));localStorage.removeItem(syncClearPendingKey)}catch(e){}}
-  else{S=Object.assign({},remote,S);try{localStorage.setItem('climbplanner.v1',JSON.stringify(S))}catch(e){};await dbDoc.set({v:1,s:S})}
-  where='account';setSaveText();render();
- }).catch(function(){dbDoc=null;where='browser';setSaveText()});
-}
-async function toggleSync(){
- if(!syncEnabled){if(!confirm(tr('Enable account sync? Planner statuses, dates, notes, saved trips, checklists and Field Day logs will be merged with your account and saved there. Browser entries take precedence when the same field exists in both places.')))return;syncEnabled=true;try{localStorage.setItem(syncKey,'1')}catch(e){};setSaveText();connectAccountSync()}
- else{if(!confirm(tr('Turn off account sync? New changes will stay in this browser. Data already synced to the account will remain there.')))return;syncEnabled=false;try{localStorage.setItem(syncKey,'0')}catch(e){};dbDoc=null;where='browser';setSaveText()}
-}
 function initializeV3(){
  const foot=document.querySelector('.railfoot'),theme=document.getElementById('theme');
  const lang=document.createElement('button');lang.id='language-toggle';lang.type='button';lang.addEventListener('click',function(){locale=locale==='de'?'en':'de';try{localStorage.setItem(langKey,locale)}catch(e){};buildTabs();render()});
- const sync=document.createElement('button');sync.id='sync-toggle';sync.type='button';sync.addEventListener('click',toggleSync);
- if(foot){if(theme)foot.insertBefore(lang,theme);else foot.append(lang);if(theme)foot.insertBefore(sync,theme);else foot.append(sync)}
- updateChrome();if(syncEnabled)connectAccountSync();
+ if(foot){if(theme)foot.insertBefore(lang,theme);else foot.append(lang)}
+ updateChrome();
 }
 /* ---------- render ---------- */
 function render(){const main=document.getElementById('main');main.textContent='';(V[cur]||V['Start Here'])();document.title=cur+' · Climbing Photo Field Calendar'}
 document.getElementById('theme').addEventListener('click',()=>{const r=document.documentElement;const dark=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;r.dataset.theme=dark?'light':'dark'});
-document.getElementById('reset').addEventListener('click',()=>{const msg=syncEnabled&&dbDoc?'Clear your planner entries from this browser and the connected account? This cannot be undone.':syncEnabled?'Clear your browser entries? Account sync is unavailable now; a pending clear will be sent before older account data can be restored.':'Clear all statuses, dates and notes you entered? This cannot be undone.';if(confirm(tr(msg))){if(syncEnabled&&!dbDoc){try{localStorage.setItem(syncClearPendingKey,'1')}catch(e){}}S={};persist();render();toast(tr('Entries cleared'))}});
+document.getElementById('reset').addEventListener('click',()=>{if(confirm(tr('Clear all statuses, dates and notes you entered? This cannot be undone.'))){S={};persist();render();toast(tr('Entries cleared'))}});
 /* ---------- Field Day merge: React flow adapted to this one-file hub ---------- */
 const FIELD_DAY_DE={
  'Field day':'Praxistag','Plan a field day':'Praxistag planen','Studio':'Studio','Field':'Draußen','Library':'Bibliothek','Field day mode switch':'Moduswahl',

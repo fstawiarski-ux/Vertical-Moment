@@ -1,0 +1,1 @@
+export function solarTimes(value:string,lat:number,lon:number):null|{date:string;zone:string;sunrise:string;sunset:string;goldenMorning:string;goldenEvening:string;blueMorning:string;blueEvening:string;sunriseAzimuth:number|null;sunsetAzimuth:number|null;qualification:string};
