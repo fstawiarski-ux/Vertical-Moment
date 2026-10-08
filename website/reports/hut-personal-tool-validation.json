@@ -1,0 +1,268 @@
+{
+  "checked": "2026-10-08T16:35:10.745177+00:00",
+  "result": "PASS",
+  "status": "Prepared locally; owner approval required before commit/push/PR",
+  "repository": "https://github.com/fstawiarski-ux/Vertical-Moment",
+  "scope": "shared-data",
+  "base_commit": "db4e56fee38253e7a4d2ff082fb6ef6977524e58",
+  "supplied_integration_commit": "2b5db3f135fff4727d74f1a90788f4ef46a91668",
+  "publication_actions_performed": [],
+  "dependency_install": {
+    "command": "rtk proxy npm ci --offline --no-audit --no-fund",
+    "exit_code": 0,
+    "packages": 517,
+    "remaining_versions_unchanged": true,
+    "removed_lock_entries": 23,
+    "shared_drizzle_retained": "0.45.2",
+    "comparison_base": "supplied integration commit 2b5db3f135fff4727d74f1a90788f4ef46a91668"
+  },
+  "runtime_types": {
+    "command": "rtk proxy npm run hut-types",
+    "exit_code": 0,
+    "hut_db_or_account_vars": false
+  },
+  "unit_and_foundation_checks": [
+    {
+      "command": [
+        "rtk",
+        "proxy",
+        "<node>",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "--cache=false"
+      ],
+      "exit_code": 0,
+      "observed_stdout": "\n RUN  v4.1.11 C:/Users/ineedbooze/Documents/Codex/2026-10-08/files-mentioned-by-the-user-alpenverein-2/work/fresh-integration/website\n\n\n Test Files  18 passed (18)\n      Tests  137 passed (137)\n   Start at  18:23:39\n   Duration  1.21s (transform 2.36s, setup 0ms, import 3.39s, tests 344ms, environment 3ms)\n\n"
+    },
+    {
+      "command": [
+        "rtk",
+        "proxy",
+        "npm.cmd",
+        "run",
+        "verify-data"
+      ],
+      "exit_code": 0,
+      "observed_stdout": "\n> vertical-moment-website@0.6.0-beta verify-data\n> node scripts/verify-data-sync.mjs\n\nverify-data: source 357 files; mirror 357 files\nverify-data: canonical API and website mirror are byte-identical\n"
+    },
+    {
+      "command": [
+        "rtk",
+        "proxy",
+        "npm.cmd",
+        "run",
+        "verify-canonical"
+      ],
+      "exit_code": 0,
+      "observed_stdout": "\n> vertical-moment-website@0.6.0-beta verify-canonical\n> node scripts/verify-canonical-source.mjs\n\nverify-canonical: 2390 routes, 330 crags, 20 regions; API, mirror and atlas counts checked\nverify-canonical: active source and generated consumers agree\n"
+    },
+    {
+      "command": [
+        "rtk",
+        "proxy",
+        "npm.cmd",
+        "run",
+        "verify-pwa-content"
+      ],
+      "exit_code": 0,
+      "observed_stdout": "\n> vertical-moment-website@0.6.0-beta verify-pwa-content\n> node scripts/verify-pwa-content.mjs && node scripts/verify-pilots.mjs\n\nverify-pwa-content: 5 boxes and 29 referenced assets inspected\nverify-pwa-content: registry fields and referenced assets are valid\nverify-pilots: 9 pilot manifests, 81 asset slots, 16 private preview adapters, 2 regional manifests, and 7 regional nodes inspected\nverify-pilots: catalog, manifests, and ready asset paths are valid\n"
+    },
+    {
+      "command": [
+        "rtk",
+        "proxy",
+        "npm.cmd",
+        "run",
+        "verify-security"
+      ],
+      "exit_code": 0,
+      "observed_stdout": "\n> vertical-moment-website@0.6.0-beta verify-security\n> node scripts/verify-security-boundaries.mjs\n\nverify-security: no public GPX files, no runtime GPX URLs, and all repository actions are pinned\n"
+    },
+    {
+      "command": [
+        "rtk",
+        "proxy",
+        "npm.cmd",
+        "run",
+        "verify-personal-huts"
+      ],
+      "exit_code": 0,
+      "observed_stdout": "\n> vertical-moment-website@0.6.0-beta verify-personal-huts\n> node scripts/verify-personal-huts.mjs\n\nPersonal hut planner: browser-only storage; account routes, email/auth dependencies and HUT_DB binding absent.\n"
+    }
+  ],
+  "build": {
+    "command": "rtk proxy npm run build:cloudflare",
+    "exit_code": 0,
+    "elapsed_seconds": 197.7,
+    "static_pages": 1009,
+    "service_worker_precache_urls": 105,
+    "opennext_worker_built": true
+  },
+  "release_checks": [
+    {
+      "command": "rtk proxy <node> node_modules/typescript/bin/tsc --noEmit --incremental false",
+      "exit_code": 0,
+      "elapsed_seconds": 14.8
+    },
+    {
+      "command": "rtk proxy npm.cmd run predeploy",
+      "exit_code": 0,
+      "elapsed_seconds": 3.9
+    },
+    {
+      "command": "rtk proxy npm.cmd run preupload",
+      "exit_code": 0,
+      "elapsed_seconds": 3.9
+    },
+    {
+      "command": "rtk proxy npm.cmd run verify-huts",
+      "exit_code": 0,
+      "elapsed_seconds": 0.9
+    }
+  ],
+  "typecheck_condition": "Worker temporarily held outside isolated checkout to simulate no prebuilt Worker; restored afterwards",
+  "release_prep_condition": "Generated public/huts-data/v1 held outside isolated checkout independently before each prehook; no deploy/upload executed",
+  "browser": {
+    "checked": "2026-10-08T16:31:15.517Z",
+    "runtime": "Built local Cloudflare Worker without hut account configuration",
+    "checks": [
+      {
+        "name": "Unlisted hut library opens without an account",
+        "result": "PASS",
+        "detail": "No login/email/password controls; noindex metadata and response header"
+      },
+      {
+        "name": "Hut trip saves and reopens locally",
+        "result": "PASS",
+        "detail": "Itinerary, day notes, selected approach and checklist survive reload without an HTTP save"
+      },
+      {
+        "name": "Documentary plan and offline guide remain usable",
+        "result": "PASS",
+        "detail": "Browser-only permission record; explicit hut offline download; normal guide print excludes private documentary notes"
+      },
+      {
+        "name": "Local workspace export includes the actual saved plans",
+        "result": "PASS",
+        "detail": "Trip, bookmarks, photography status and documentary notes exported as an explicit backup"
+      },
+      {
+        "name": "A friend opening the address gets a separate workspace",
+        "result": "PASS",
+        "detail": "Fresh phone browser receives research and an empty local workspace; owner notes are absent"
+      },
+      {
+        "name": "Phone import restores a reviewed backup without registration",
+        "result": "PASS",
+        "detail": "Manual transfer to a separate device copy; values survive reload"
+      },
+      {
+        "name": "Import review retains later local edits",
+        "result": "PASS",
+        "detail": "Re-importing an older trip backup does not replace new day notes"
+      },
+      {
+        "name": "Offline save and cold reopening work without account sync",
+        "result": "PASS",
+        "detail": "Trip notes and saved reviewed hut details remain available offline"
+      },
+      {
+        "name": "Climbing planner remains local and its trip rendering works",
+        "result": "PASS",
+        "detail": "Named trip survives reload; sync controls absent; copied address contains no personal entries"
+      },
+      {
+        "name": "Retired account and sharing endpoints are absent",
+        "result": "PASS",
+        "detail": "Old account, authentication, workspace and server-sharing URLs return 404"
+      },
+      {
+        "name": "Research remains unlisted and personal data makes no API requests",
+        "result": "PASS",
+        "detail": "No hut entries in sitemap; no account/workspace/sharing requests or browser errors"
+      }
+    ],
+    "page_errors": [],
+    "personal_api_requests": [],
+    "result": "PASS"
+  },
+  "browser_command": {
+    "command": "rtk proxy <bundled-node> work/personal-tool-browser.mjs",
+    "exit_code": 0,
+    "viewport_desktop": [
+      1280,
+      900
+    ],
+    "viewport_phone": [
+      390,
+      844
+    ],
+    "phone_horizontal_overflow": false,
+    "synthetic_data_only": true
+  },
+  "research_fidelity": {
+    "checked": "2026-10-08T16:29:12.953Z",
+    "release": "2026-10-08-r3",
+    "identities": 630,
+    "route_count": 5158,
+    "source_references": 21672,
+    "dates": 947,
+    "tariffs": 1903,
+    "events": 22,
+    "expanded_sha256": "78af8ae506a9c1101ce0da6373782e7b6868f0935005e48f7e4c8c1fc5f59a0a",
+    "expanded_sha256_format": "utf8-lf",
+    "active_routes_sha256": "545d177b56a5a155adad5b59f47d535d595da1bdeb8ba7e67f8e288583fa3c8c",
+    "workbook_sha256": "fab95204d705439137a3aad81fe1d22aba4b9f55e34da71c69bd36026e5ab17c",
+    "offline_guide_sha256": "2821b47e830a4e8c1a0e327e1a9c23115efcef5b759d3c2a942915c913c30dfb",
+    "result": "PASS — every exported reviewed record, route, tariff, event, history date and context relationship matches canonical inputs."
+  },
+  "original_deliverable_hashes_unchanged": {
+    "Alpenverein_Huetten_Master.xlsx": "fab95204d705439137a3aad81fe1d22aba4b9f55e34da71c69bd36026e5ab17c",
+    "Alpenverein_Huetten_Explorer.html": "2821b47e830a4e8c1a0e327e1a9c23115efcef5b759d3c2a942915c913c30dfb"
+  },
+  "exporter_line_ending_checks": [
+    {
+      "line_endings": "CRLF",
+      "export_exit": 0,
+      "verify_exit": 0,
+      "expanded_sha256": "78af8ae506a9c1101ce0da6373782e7b6868f0935005e48f7e4c8c1fc5f59a0a"
+    },
+    {
+      "line_endings": "LF",
+      "export_exit": 0,
+      "verify_exit": 0,
+      "expanded_sha256": "78af8ae506a9c1101ce0da6373782e7b6868f0935005e48f7e4c8c1fc5f59a0a"
+    }
+  ],
+  "configuration": "No .dev.vars, HUT_DB, migration or mail/auth secret used for hut validation",
+  "runtime_semantics": {
+    "personal_storage": "browser localStorage; old local copy recovery",
+    "friend_tool_link": "independent empty browser workspace",
+    "backups": "intentional export/import",
+    "cross_device_auto_sync": false,
+    "access": "unlisted direct link; no identity gate",
+    "repository_visibility": "public",
+    "existing_main_workflow_can_deploy_after_merge": true
+  },
+  "limitations": [
+    "Local built-Worker validation only; production deployment and existing account/resources were not changed.",
+    "Clearing browser/site data requires an external backup to restore.",
+    "Existing dependency deprecation/tool-platform notices were retained; no further dependency upgrades beyond the improved supplied batch."
+  ],
+  "implementation_files": [
+    "website/lib/huts/device-workspace.ts",
+    "website/components/huts/WorkspaceProvider.tsx",
+    "website/components/huts/DataTools.tsx",
+    "website/public/explore-app/planner-content.html",
+    "website/scripts/verify-personal-huts.mjs",
+    "website/wrangler.jsonc"
+  ],
+  "shared_runtime_in_full_pr": {
+    "node": "24",
+    "next": "16.3.8",
+    "opennext_cloudflare": "1.20.9",
+    "compatibility_date": "2026-10-08",
+    "origin": "improved supplied batch",
+    "production_domain_and_deploy_trigger_preserved": true
+  }
+}

@@ -42,7 +42,7 @@ const nextConfig = {
           { key: "Content-Security-Policy", value: pwaContentSecurityPolicy },
         ],
       },
-      ...["/huts/:path*", "/account", "/share/:path*"].map(source => ({source, headers: [{key: "Content-Security-Policy", value: pwaContentSecurityPolicy}]})),
+      ...["/huts/:path*"].map(source => ({source, headers: [{key: "Content-Security-Policy", value: pwaContentSecurityPolicy}]})),
       {
         source: "/sw.js",
         headers: [

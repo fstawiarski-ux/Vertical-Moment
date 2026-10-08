@@ -5,8 +5,6 @@ export type ShootField={key:string;label:string;type:string;default:string;optio
 export type TripDestination={hut_id:string;approach_id:string};
 export type Trip={id:string;name:string;date:string;destinations:TripDestination[];notes:string;checklist:Record<string,boolean>;shoot_status:string;day_notes:string};
 export type Workspace={bookmarks:string[];plans:Record<string,Record<string,string>>;trips:Trip[];legacy:Record<string,unknown>};
-export type WorkspaceEnvelope={workspace:Workspace;revision:number;user:{id:string;name:string;email:string};updated_at:string|null};
-export type SharedTrip={name:string;date:string;destinations:TripDestination[];notes?:string;shoot_status?:string;day_notes?:string;release:string;created_at:string};
 export const emptyWorkspace=():Workspace=>({bookmarks:[],plans:{},trips:[],legacy:{}});
 export const text=(v:unknown):string=>v===null||v===undefined||v===''?'Not established in checked sources':typeof v==='object'?JSON.stringify(v):String(v);
 export function safeUrl(value:unknown){if(typeof value!=='string')return null;try{const u=new URL(value);return ['https:','http:'].includes(u.protocol)?u.href:null;}catch{return null;}}

@@ -84,7 +84,7 @@ const serwist = new Serwist({
   },
   runtimeCaching: [
     {
-      matcher: ({url}) => isSameOrigin(url) && (url.pathname.startsWith("/api/") || url.pathname.startsWith("/share/") || url.pathname === "/account"),
+      matcher: ({url}) => isSameOrigin(url) && url.pathname.startsWith("/api/"),
       handler: new NetworkOnly(),
     },
     {

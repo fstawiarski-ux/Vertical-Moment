@@ -1,6 +1,9 @@
 const PREVIEW_PAGE_PATHS = new Set([
   "/explore-app",
   "/explore-app/planner",
+  "/explore-app/planner/list",
+  "/explore-app/planner/trips",
+  "/explore-app/planner/today",
   "/explore-app/planner-content",
   "/explore-app/planner-content.html",
   "/contribute",
@@ -8,7 +11,7 @@ const PREVIEW_PAGE_PATHS = new Set([
   "/offline",
 ]);
 
-const PREVIEW_PAGE_ROOTS = ["/explore", "/panoramas"];
+const PREVIEW_PAGE_ROOTS = ["/explore", "/panoramas", "/huts"];
 
 const PREVIEW_RESOURCE_PATHS = new Set([
   "/sw.js",
@@ -22,6 +25,7 @@ const PREVIEW_RESOURCE_PATHS = new Set([
 const PREVIEW_RESOURCE_ROOTS = [
   "/_next/static",
   "/data/v1",
+  "/huts-data/v1",
   "/explore",
   "/photography/explore-app",
   "/photography/nasenwand/media",

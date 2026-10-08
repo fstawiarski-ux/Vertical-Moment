@@ -1,7 +1,7 @@
 import identities from './generated/identities.json';
 import approaches from './generated/approaches.json';
 import fields from './generated/shoot-fields.json';
-import {emptyWorkspace,validDate,type Workspace,type Trip,type SharedTrip} from './types';
+import {emptyWorkspace,validDate,type Workspace,type Trip} from './types';
 const ids=new Set(identities.map(h=>h.id));
 const fieldMap=new Map(fields.map(f=>[f.key,f]));
 const own=(o:object,k:string)=>Object.prototype.hasOwnProperty.call(o,k);
@@ -53,24 +53,6 @@ export function validateWorkspace(v:unknown):Workspace{
  }return out;
 }
 const equal=(a:unknown,b:unknown)=>JSON.stringify(a)===JSON.stringify(b);
-export function mergeWorkspace(base:Workspace,local:Workspace,remote:Workspace){
- const conflicts:string[]=[];
- function merge(b:unknown,l:unknown,r:unknown,path:string):unknown{
-  if(equal(l,b))return r;if(equal(r,b)||equal(l,r))return l;
-  if((b===undefined||record(b))&&record(l)&&record(r)){
-   b=b||{};
-   const out:Record<string,unknown>={};
-   for(const k of new Set([...Object.keys(b as Record<string,unknown>),...Object.keys(l),...Object.keys(r)])){
-    const v=merge((b as Record<string,unknown>)[k],l[k],r[k],path+'.'+k);if(v!==undefined)out[k]=v;
-   }return out;
-  }conflicts.push(path);return l;
- }
- const baseTrip=Object.fromEntries(base.trips.map(t=>[t.id,t])),localTrip=Object.fromEntries(local.trips.map(t=>[t.id,t])),remoteTrip=Object.fromEntries(remote.trips.map(t=>[t.id,t]));
- const removed=new Set(base.bookmarks.filter(id=>!local.bookmarks.includes(id)||!remote.bookmarks.includes(id)));
- const bookmarks=[...new Set([...local.bookmarks,...remote.bookmarks])].filter(id=>!removed.has(id));
- const merged=merge({plans:base.plans,trips:baseTrip,legacy:base.legacy},{plans:local.plans,trips:localTrip,legacy:local.legacy},{plans:remote.plans,trips:remoteTrip,legacy:remote.legacy},'workspace') as {plans:Workspace['plans'];trips:Record<string,Trip>;legacy:Workspace['legacy']};
- return {workspace:{bookmarks,plans:merged.plans,trips:Object.values(merged.trips),legacy:merged.legacy},conflicts};
-}
 export function importGuide(current:Workspace,input:unknown){
  if(!record(input))throw Error('Choose a guide export JSON file.');
  const next=structuredClone(current),conflicts:string[]=[],skipped:string[]=[];let added=0;
@@ -100,9 +82,4 @@ export function importGuide(current:Workspace,input:unknown){
   for(const [key,value]of Object.entries(imported.legacy)){if(own(next.legacy,key)&&!equal(next.legacy[key],value)){conflicts.push('calendar.'+key);continue;}next.legacy[key]=value;}
  }else throw Error('Unsupported export format or version.');
  return {workspace:validateWorkspace(next),conflicts,skipped,added};
-}
-export function shareProjection(trip:Trip,options:{notes?:boolean;day_log?:boolean},release:string):SharedTrip{
- return {name:trip.name,date:trip.date,destinations:trip.destinations.map(d=>({...d})),
- ...(options.notes?{notes:trip.notes}:{}),...(options.day_log?{shoot_status:trip.shoot_status,day_notes:trip.day_notes}:{}),
- release,created_at:new Date().toISOString()};
 }

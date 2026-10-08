@@ -1,4 +1,3 @@
-// HUT_DB ID is a local preview placeholder. Replace with the provisioned D1 ID before deployment.
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "main": ".open-next/worker.js",
@@ -27,16 +26,5 @@
   ],
   "images": {
     "binding": "IMAGES"
-  },
-  "vars": {
-    "BETTER_AUTH_URL": "https://verticalmoment.com"
-  },
-  "d1_databases": [
-    {
-      "binding": "HUT_DB",
-      "database_name": "vertical-moment-hut-planner",
-      "database_id": "00000000-0000-0000-0000-000000000001",
-      "migrations_dir": "migrations/huts"
-    }
-  ]
+  }
 }

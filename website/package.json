@@ -29,18 +29,16 @@
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
     "sync-huts": "node scripts/sync-huts.mjs",
     "verify-huts": "node scripts/verify-huts.mjs",
-    "hut-db:local": "wrangler d1 migrations apply HUT_DB --local",
     "hut-types": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
-    "preview:huts:local": "opennextjs-cloudflare preview --port 3026 --ip localhost --local-upstream localhost:3026 --upstream-protocol http --local",
-    "verify-hut-deploy-config": "node scripts/verify-hut-deploy-config.mjs",
-    "predeploy": "npm run verify-huts && npm run verify-security && npm run verify-hut-deploy-config",
-    "preupload": "npm run verify-huts && npm run verify-security && npm run verify-hut-deploy-config"
+    "predeploy": "npm run prepare:huts:release",
+    "preupload": "npm run prepare:huts:release",
+    "prepare:huts:release": "npm run sync-huts && npm run verify-huts && npm run verify-security && npm run verify-personal-huts",
+    "verify-personal-huts": "node scripts/verify-personal-huts.mjs",
+    "preview:huts:local": "opennextjs-cloudflare preview --port 3036 --ip localhost --local-upstream localhost:3036 --upstream-protocol http --local"
   },
   "dependencies": {
-    "@better-auth/drizzle-adapter": "^1.7.7",
     "@google/model-viewer": "4.3.1",
     "@phosphor-icons/react": "^2.1.10",
-    "better-auth": "^1.7.7",
     "drizzle-orm": "^0.45.2",
     "fflate": "^0.8.3",
     "idb-keyval": "6.3.0",

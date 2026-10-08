@@ -1,79 +1,62 @@
-# Hut build, update and release
-8 October 2026. Reviewed research release 2026-10-08-r3. Manual merge handoff; see MANUAL_MERGE_2026-10-08.md. No push, merge or deployment performed.
+# Personal hut planner: build and release
+
+8 October 2026. Reviewed research release 2026-10-08-r3.
+
+The hut library and planners are unlisted tools for the owner and close friends who receive the address. They require no registration, sign-in, email provider, account database or hut-specific runtime secret. Personal planning data stays in each browser.
 
 ## Canonical inputs
-database/huts/master/expanded-master-data.json contains reviewed research.
-database/huts/master/active-routes.json contains only the active routes from the extracted project's work/research/master-data.json.
-database/huts/master/release.json contains the research version and source/workbook/offline-guide checksums.
 
-Never repopulate the live library from the older non-route arrays in master-data.json. Keep the original list number and string directory ID unchanged. Preserve evidence IDs, contexts, qualifiers and dates. Public data must contain no personal notes or test accounts.
+- database/huts/master/expanded-master-data.json: reviewed research.
+- database/huts/master/active-routes.json: only the active routes from the master's work/research/master-data.json.
+- database/huts/master/release.json: release, identities and source checksums.
 
-## Refresh from the master
-The extracted master's work/refresh_all.py uses the active host spreadsheet skill and supported ArtifactTool authoring/export to refresh all fifteen tabs, HTML, coverage and validation. It also calls work/export_hut_web.py to produce a reviewed web-source bundle. The seven-tab legacy builder must never overwrite the expanded workbook.
+The expanded research checksum uses UTF-8 text normalized to LF (expanded_sha256_format: utf8-lf). Windows CRLF and Git/Linux LF copies therefore verify the same reviewed content. Original workbook and offline-guide hashes continue to identify their exact original bytes.
 
-To transfer an approved reviewed release into this repository:
-```powershell
-rtk proxy <supported-python> <master-project>/work/export_hut_web.py --repository <website-repository>
-```
+Preserve original list numbers, string hut IDs, evidence references, source check dates, qualifiers and route identities. Personal plans must never become part of the public research JSON.
 
-This copies the current reviewed research, extracts only active routes and records checksums, then runs sync-huts. Keep personal account data and Excel/guide personal copies separate. Review changes before replacing an already published release.
+## Refresh from the research master
 
-Approach reference IDs currently depend on the reviewed route content. If route content is changed, compare existing personal approach references and plan a migration/reconfirmation before publication; do not silently drop saved trips. Current route input is unchanged. No GPS track is inferred from these route references.
+The master's work/export_hut_web.py copies reviewed research, extracts active routes, records checksums and runs sync-huts:
 
-## Build and local verification
-Use the pinned lockfile and Node 24. Run from website/. This host requires rtk-prefixed shell commands. Project .npmrc records the lockfile's legacy-peer-deps setting, so plain npm ci is supported.
-```powershell
-rtk proxy npm ci
-rtk proxy npm run sync-huts
-rtk proxy npm run verify-huts
-rtk proxy npm test
-rtk proxy npm run verify-data
-rtk proxy npm run verify-canonical
-rtk proxy npm run verify-pwa-content
-rtk proxy npm run verify-security
-rtk proxy npm audit
-rtk proxy npm run build:cloudflare
-```
+    rtk proxy <supported-python> <master-project>/work/export_hut_web.py --repository <repository> --node <supported-node>
 
-The supported local combination is Next 16.3.8, OpenNext Cloudflare 1.20.9 and Serwist 9.5.13. All predev/prebuild variants synchronize both existing climbing data and huts. Generated public/huts-data/v1 JSON and public/sw.js are ignored and must be regenerated, not manually edited or included in source patches. Generated lib/huts metadata is derived from the same canonical inputs.
+The exporter is supplied separately under master-tools/ in the handoff. It belongs in the master project. Do not overwrite the expanded canonical workbook with a legacy builder.
 
-verify-huts compares all exported records, visitors, surroundings, tariffs, events, dates, routes and context rows and checks each evidence reference. The manifest binds the Excel/HTML hashes to the web release. verify-data/verify-canonical check the existing climbing data mirror.
+## Build and verify
 
-## Local account preview
-Copy .dev.vars.example to an ignored .dev.vars. Generate a fresh random account secret of at least 32 characters; never commit it or place it in a report. Set BETTER_AUTH_URL=http://localhost:3026.
-```powershell
-rtk proxy npm run hut-db:local
-rtk proxy npm run hut-types
-rtk proxy npm run build:cloudflare
-rtk proxy npm run preview:huts:local -- --log-level warn
-```
+Run from website/ using Node 24 and the pinned lockfile:
 
-preview:huts:local explicitly uses the localhost upstream so production custom-domain rewriting does not corrupt Origin-sensitive auth. It is local-only, with local D1 persistence. Do not use a tunnel or remote bindings. Stop the preview before rebuilding on Windows because the runtime locks .open-next files.
+    rtk proxy npm ci
+    rtk proxy npm run sync-data
+    rtk proxy npm run sync-huts
+    rtk proxy npm run verify-huts
+    rtk proxy npm run verify-personal-huts
+    rtk proxy npm run verify-data
+    rtk proxy npm run verify-canonical
+    rtk proxy npm run verify-pwa-content
+    rtk proxy npm run verify-security
+    rtk proxy npm test
+    rtk proxy npx tsc --noEmit --incremental false
+    rtk proxy npm run build:cloudflare
 
-The review package's tests/hut-web-journeys.mjs creates a fresh synthetic localhost account and a ignored fixture file under work/. The offline and legacy-sync journeys use that fixture. Keep the fixture, .dev.vars, .wrangler, browser storage and local databases out of Git and all archives. The bundle excludes actual test credentials.
+predeploy and preupload run prepare:huts:release: generate hut assets, verify research, check security boundaries and confirm that account routes/dependencies/database configuration remain absent. No D1 placeholder, account origin, mail setup or migrations are required.
 
-Local URLs:
-- http://localhost:3026/huts
-- http://localhost:3026/explore-app/planner/list
-- http://localhost:3026/explore-app/planner/trips
-- http://localhost:3026/explore-app/planner/today
-- http://localhost:3026/explore-app/planner
+public/huts-data/v1 JSON and public/sw.js are generated and ignored. Never edit them by hand or ship them in source patches. Existing climbing data and the photography website share this runtime, so a full build and their verification checks are required.
 
-A localhost preview is accessible on this computer only. It is not live on the public domain or available on the phone's separate network address.
+## Local preview
 
-## Owner-managed publication after review
-The root AGENTS.md requires: “Prepare a focused local diff and validate it. Stop for user review before commit/push/PR unless the user separately authorizes publication. Production and Cloudflare verification are distinct from repository review.”
+    rtk proxy npm run preview:huts:local -- --log-level warn
 
-The original user also prohibited publication/deployment without an explicit request. No push, pull request, merge, deployment, external message or scheduled monitor has been performed. A local commit/bundle is prepared for the owner's manual merge. Two empty remote D1 databases were created during setup before the owner stopped it; their exact state is recorded in MANUAL_MERGE_2026-10-08.md. The temporary Wrangler sign-in was then disconnected.
+The built Worker runs at http://localhost:3036. No .dev.vars file or local database is needed for hut planning. Keep the preview local and stop it before rebuilding on Windows.
 
-The owner now performs the pull, review, merge and deployment manually. The following are future owner setup steps:
-1. Review/apply the focused source change against the recorded base HEAD; keep the existing production rollback version.
-2. Provision the intended production D1 database and replace the HUT_DB placeholder. Review the storage/account region, backup and retention choices with the owner.
-3. Store BETTER_AUTH_SECRET using Cloudflare's secret mechanism; keep BETTER_AUTH_URL at the production HTTPS origin. Do not copy the local preview secret.
-4. Apply the hut migrations to the approved remote database, not to the climbing database. Record the database ID and migration results without secrets.
-5. Configure/test email verification and password recovery before general account registration. The delivered source disables public/HTTPS sign-up and requires email verification there; synthetic sign-up works only in an HTTP loopback preview. Review the privacy notice and account-data/export/recovery process.
-6. Run the configuration guard, build and repository checks; review all diff files. deploy/upload run the guard automatically and currently fail on the placeholder ID.
-7. Verify the HTTPS preview: secure cookies, account isolation, CSRF, shares/revocation, mobile install/update/offline, source notices and the existing climbing planner. Local success does not stand in for this test.
-8. Publish only the approved release, then record its public URL/version and HTTPS verification. Roll back the website if a material runtime issue appears; do not delete private account records as part of rollback.
+Useful routes: /huts, /huts/167, /huts/sources, /explore-app/planner/list, /explore-app/planner/trips, /explore-app/planner/today and /explore-app/planner.
 
-The deprecated Next middleware filename and Windows OpenNext compatibility warning remain nonblocking in the tested local build. A separate maintenance change can address them; they do not justify a homepage or product migration here.
+## Review and publication
+
+Prepare the local PR diff and description, then obtain the owner's explicit approval before committing, pushing or creating the PR. The owner reviews and merges manually. Opening a PR does not deploy this change.
+
+The repository's existing deploy.yml workflow deploys on qualifying pushes to main. Merging an approved PR can trigger that workflow. No deployment workflow or existing Cloudflare credential is changed by this personal-tool conversion.
+
+Unlisted/noindex is direct-link access, not an access gate. Research pages can be opened by someone with the address. Browser notes are never sent to a server or embedded in shared tool URLs. The GitHub repository is currently public; never commit personal workspace exports, notes, browser profiles, local secrets or test fixtures.
+
+See PRIVATE_PLANS_AND_SHARING.md for saving, backup and close-friend use.

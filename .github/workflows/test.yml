@@ -51,6 +51,9 @@ jobs:
       - name: Verify PWA content registry
         run: npm run verify-pwa-content
 
+      - name: Verify personal hut planner configuration
+        run: npm run verify-personal-huts
+
       - name: Verify public security boundaries
         run: npm run verify-security
 
