@@ -951,7 +951,6 @@ V['Trip planner']=function(){
  function draw(){
   detail.textContent='';
   const id=sel.value;
-  checklist.forEach(function(item){const suffix=String(item.key).split(':').pop(),active=getActiveTripPlan(),scope=active&&active.crag===id?active.id:'area-'+(id||'none');item.key='trip:check:'+scope+':'+suffix});
   put('trip:crag',id);
   if(!id){
    detail.append(
@@ -1059,6 +1058,7 @@ V['Trip planner']=function(){
    {key:'hub:check:emergency',title:'Set up the party and emergency plan',text:'Skills match objective; communication and what to do if separated.',url:'https://www.oesterreich.gv.at/en/themen/notfaelle_unfaelle_und_kriminalitaet/notrufnummern',link:'Emergency numbers'},
    {key:'hub:check:hut',title:'Confirm overnight beds if needed',text:'Opening dates and reservation on Hut Reservation or with the warden.',url:'https://www.hut-reservation.org/login',link:'Open Hut Reservation'}
   ];
+  checklist.forEach(function(item){const suffix=String(item.key).split(':').pop(),active=getActiveTripPlan(),scope=active&&active.crag===id?active.id:'area-'+(id||'none');item.key='trip:check:'+scope+':'+suffix});
   const checklistBox=h('section',{class:'hub-block','aria-labelledby':'trip-check-title'});
   const progress=h('progress',{max:checklist.length,value:0,'aria-label':'Checklist completion'});
   const status=h('span',{class:'check-status','aria-live':'polite'});
@@ -1129,7 +1129,7 @@ function updateChrome(){
  const b=document.querySelector('.brand');if(b&&b.firstChild)b.firstChild.nodeValue=tr('Climbing planner');
  const sm=b&&b.querySelector('small');if(sm)sm.textContent=tr('Vienna + Austria · 2026–27');
 }
-function setSaveText(){const e=document.getElementById('savestate');if(e)e.textContent=tr(!syncEnabled?'Saved only in this browser.':dbDoc?'Saved to your account with your consent.':'Account sync is enabled, but unavailable here. Entries remain in this browser.');updateChrome()}
+function setSaveText(){const e=document.getElementById('savestate');if(e)e.textContent=tr(!syncEnabled?'Saved only in this browser.':syncProblem||(!navigator.onLine?'Changes queued offline on this device.':dbDoc?'Account sync enabled. Device edits are queued before saving.':'Account sync is enabled, but unavailable here. Entries remain in this browser.'));updateChrome()}
 function persist(){clearTimeout(saveT);saveT=setTimeout(async function(){try{localStorage.setItem('climbplanner.v1',JSON.stringify(S))}catch(e){};if(!dbDoc)return;dirty=true;if(writing)return;writing=true;while(dirty){dirty=false;try{await dbDoc.set({v:1,s:S});try{localStorage.removeItem(syncClearPendingKey)}catch(e){}}catch(e){dbDoc=null;where='browser';setSaveText()}}writing=false},400)}
 function put(k,v){
  if(cur==='Trip planner'&&k.indexOf('hub:check:')===0){const suf=k.slice(10),p=getActiveTripPlan(),area=S['trip:crag']||'none',scope=p&&p.crag===area?p.id:'area-'+area,key='trip:check:'+scope+':'+suf;if(v===''||v==null)delete S[key];else S[key]=v;persist();return}
@@ -1175,24 +1175,71 @@ const tripOld=V['Trip planner'];V['Trip planner']=function(){
  choice.addEventListener('change',function(){if(!choice.value)delete S['trip:active'];else{const p=getTripPlans().find(x=>x.id===choice.value);if(p){S['trip:active']=p.id;S['trip:crag']=p.crag}}persist();render()});
  if(area)area.addEventListener('change',()=>setTimeout(render,0));
 };
+let legacyBase={},legacyUser='',syncProblem='',legacyBusy=false;
+function legacyEqual(a,b){return JSON.stringify(a)===JSON.stringify(b)}
+function legacyReview(key,local,remote){
+ return new Promise(function(resolve,reject){
+  const main=document.getElementById('main'),box=h('section',{class:'registry-audit',role:'alert'},h('h2',{text:'Review a planner change'}),h('p',{text:'This field differs from the account copy: '+key}),h('p',{text:'This device: '+String(JSON.stringify(local)).slice(0,1200)}),h('p',{text:'Account: '+String(JSON.stringify(remote)).slice(0,1200)}));
+  box.append(h('button',{class:'exp',type:'button',onclick:function(){box.remove();resolve(local)}},'Keep this device’s value'),h('button',{class:'exp',type:'button',onclick:function(){box.remove();resolve(remote)}},'Keep the account value'),h('button',{class:'exp',type:'button',onclick:function(){box.remove();reject(Error('Review paused; device entries retained.'))}},'Cancel review'));
+  main.prepend(box);box.scrollIntoView({block:'start'});
+ });
+}
+async function legacyMerge(base,local,remote,path){
+ if(legacyEqual(local,base))return remote;
+ if(legacyEqual(remote,base)||legacyEqual(local,remote))return local;
+ const object=v=>v&&typeof v==='object'&&!Array.isArray(v);
+ if(object(base)&&object(local)&&object(remote)){
+  const result={};for(const key of new Set([...Object.keys(base),...Object.keys(local),...Object.keys(remote)])){const v=await legacyMerge(base[key],local[key],remote[key],path+'.'+key);if(v!==undefined)result[key]=v;}return result;
+ }
+ return legacyReview(path,local,remote);
+}
+async function saveAccountPlanner(){
+ if(legacyBusy)return;
+ if(!navigator.onLine){syncProblem='Changes queued offline on this device.';setSaveText();return;}
+ legacyBusy=true;
+ try{
+  for(let attempt=0;attempt<3;attempt++){
+   const r=await fetch('/api/hut-workspace',{cache:'no-store'});
+   if(r.status===401){if(legacyUser){S={};try{localStorage.removeItem('climbplanner.v1');localStorage.removeItem('climbplanner.account.user.v1');localStorage.removeItem('climbplanner.account.base.v1')}catch(e){};render();}throw Error('Sign in to resume account sync.');}
+   if(!r.ok)throw Error('Account sync paused; device changes retained.');
+   const remote=await r.json();if(!syncEnabled)return;
+   if(legacyUser&&legacyUser!==remote.user.id){S={};legacyBase={};try{localStorage.removeItem('climbplanner.v1')}catch(e){};}
+   legacyUser=remote.user.id;
+   const snapshot=JSON.parse(JSON.stringify(S)),merged=await legacyMerge(legacyBase,snapshot,remote.workspace.legacy,'planner');
+   const workspace=Object.assign({},remote.workspace,{legacy:merged});
+   const put=await fetch('/api/hut-workspace',{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({workspace:workspace,revision:remote.revision})});
+   if(!syncEnabled)return;
+   if(put.status===409)continue;
+   if(!put.ok)throw Error('Account save paused; device changes retained.');
+   S=await legacyMerge(snapshot,S,merged,'planner');legacyBase=merged;
+   try{localStorage.setItem('climbplanner.v1',JSON.stringify(S));localStorage.setItem('climbplanner.account.user.v1',legacyUser);localStorage.setItem('climbplanner.account.base.v1',JSON.stringify({id:legacyUser,legacy:legacyBase}));localStorage.removeItem(syncClearPendingKey)}catch(e){}
+   syncProblem='';where='account';setSaveText();return;
+  }throw Error('Another device is saving. Retry account sync.');
+ }catch(e){syncProblem=e.message||'Account sync paused; device changes retained.';setSaveText();throw e;}
+ finally{legacyBusy=false;}
+}
 function connectAccountSync(){
  if(!syncEnabled)return;
  Promise.resolve().then(async function(){
-  if(typeof claude==='undefined'||!claude||typeof claude.use!=='function')throw new Error();
-  const pair=await Promise.all([claude.use('db'),claude.use('user')]);if(!syncEnabled)return;
-  const db=pair[0],user=pair[1];if(!db||!user)throw new Error();const id=await user.id();if(!id)return;
-  dbDoc=db.doc('data/users/'+id+'/planner');const snap=await dbDoc.get();if(!syncEnabled){dbDoc=null;return}
-  const remote=snap.exists&&snap.data()&&snap.data().s?snap.data().s:{};
-  let pending=false;try{pending=localStorage.getItem(syncClearPendingKey)==='1'}catch(e){}
-  if(pending){await dbDoc.set({v:1,s:S});try{localStorage.setItem('climbplanner.v1',JSON.stringify(S));localStorage.removeItem(syncClearPendingKey)}catch(e){}}
-  else{S=Object.assign({},remote,S);try{localStorage.setItem('climbplanner.v1',JSON.stringify(S))}catch(e){};await dbDoc.set({v:1,s:S})}
-  where='account';setSaveText();render();
- }).catch(function(){dbDoc=null;where='browser';setSaveText()});
+  const r=await fetch('/api/hut-workspace',{cache:'no-store'});
+  if(r.status===401){syncProblem='Sign in to enable account sync.';setSaveText();toast(syncProblem);window.top.location.href='/account?return=/explore-app/planner';return;}
+  if(!r.ok)throw Error('Account service is unavailable. Browser entries retained.');
+  const remote=await r.json();if(!syncEnabled)return;
+  let bound='',cached=null;try{bound=localStorage.getItem('climbplanner.account.user.v1')||'';cached=JSON.parse(localStorage.getItem('climbplanner.account.base.v1')||'null')}catch(e){}
+  if(bound&&bound!==remote.user.id){S={};try{localStorage.removeItem('climbplanner.v1');localStorage.removeItem('climbplanner.account.base.v1')}catch(e){}}
+  if(!bound){try{localStorage.setItem('climbplanner.guest.v1',JSON.stringify(S))}catch(e){}}
+  legacyUser=remote.user.id;legacyBase=cached&&cached.id===legacyUser?cached.legacy:{};
+  if(!bound&&Object.keys(S).length===0){S=structuredClone(remote.workspace.legacy);legacyBase=remote.workspace.legacy;}
+  dbDoc={set:saveAccountPlanner};await saveAccountPlanner();render();
+ }).catch(function(e){syncProblem=e.message||'Account sync unavailable; device entries retained.';dbDoc=null;where='browser';setSaveText()});
 }
 async function toggleSync(){
- if(!syncEnabled){if(!confirm(tr('Enable account sync? Planner statuses, dates, notes, saved trips, checklists and Field Day logs will be merged with your account and saved there. Browser entries take precedence when the same field exists in both places.')))return;syncEnabled=true;try{localStorage.setItem(syncKey,'1')}catch(e){};setSaveText();connectAccountSync()}
- else{if(!confirm(tr('Turn off account sync? New changes will stay in this browser. Data already synced to the account will remain there.')))return;syncEnabled=false;try{localStorage.setItem(syncKey,'0')}catch(e){};dbDoc=null;where='browser';setSaveText()}
+ if(!syncEnabled){if(!confirm(tr('Enable account sync? Planner statuses, dates, notes, saved trips, checklists and Field Day logs will be combined with your account. Conflicting values will be shown for review before saving. A copy of guest browser entries is retained.')))return;syncEnabled=true;try{localStorage.setItem(syncKey,'1')}catch(e){};syncProblem='';setSaveText();connectAccountSync()}
+ else{if(!confirm(tr('Turn off account sync? New changes will stay in this browser. Data already synced to the account will remain there.')))return;syncEnabled=false;try{localStorage.setItem(syncKey,'0')}catch(e){};dbDoc=null;where='browser';syncProblem='';setSaveText()}
 }
+window.addEventListener('online',function(){if(syncEnabled)connectAccountSync()});
+window.addEventListener('storage',function(event){if(event.key==='climbplanner.account.user.v1'&&!event.newValue&&legacyUser){S={};legacyUser='';dbDoc=null;syncEnabled=false;where='browser';render();setSaveText();}});
+setInterval(function(){if(syncEnabled&&dbDoc&&!writing&&!legacyBusy&&!document.activeElement.matches('input,textarea,select'))saveAccountPlanner().catch(function(){});},20000);
 function initializeV3(){
  const foot=document.querySelector('.railfoot'),theme=document.getElementById('theme');
  const lang=document.createElement('button');lang.id='language-toggle';lang.type='button';lang.addEventListener('click',function(){locale=locale==='de'?'en':'de';try{localStorage.setItem(langKey,locale)}catch(e){};buildTabs();render()});

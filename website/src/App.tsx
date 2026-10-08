@@ -492,6 +492,8 @@ function Workspace({ registry, pilot }: { registry: ExploreContentRegistry; pilo
 
   const searchEntries = useMemo<SearchEntry[]>(() => {
     const actions: SearchEntry[] = [
+      {id:"action:hut-library",kind:"action",label:"Browse the 630-hut library",detail:"Reviewed stories, access and visitor information",terms:"huts alpenverein history photography mountains tariffs source library",run:()=>window.location.assign("/huts")},
+      {id:"action:hut-trips",kind:"action",label:"Open my hut trips",detail:"Private trip and documentary planning",terms:"hut trips field day private saved plans shoot",run:()=>window.location.assign("/explore-app/planner/trips")},
       {
         id: "action:climbing-planner",
         kind: "action",

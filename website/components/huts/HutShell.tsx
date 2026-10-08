@@ -1,0 +1,10 @@
+"use client";
+import {useState,type ReactNode} from 'react';
+import {ServiceWorkerRegistration} from '@/src/pwa/sw-registration';
+import {WorkspaceProvider,useWorkspace,ConflictReview} from './WorkspaceProvider';
+import './huts.css';
+function Frame({children}:{children:ReactNode}){
+ const {user,status,online,pending,sync,signOut}=useWorkspace(),[error,setError]=useState('');
+ return <div className="hut-app"><a className="hut-skip" href="#hut-main">Skip to content</a><header className="hut-header"><a href="/" className="hut-brand">VERTICAL MOMENT<span>Hut library & field planner</span></a><nav aria-label="Hut and trip navigation"><a href="/huts">630 huts</a><a href="/huts/sources">Sources</a><a href="/explore-app/planner/list">My life list</a><a href="/explore-app/planner/trips">My hut trips</a><a href="/explore-app/planner">Climbing planner</a><a href="/account">{user?'My account':'Sign in'}</a></nav></header><div className="hut-sync" aria-live="polite"><span>{user?user.name+' · ':''}{status}</span>{user&&<button className="hut-small" onClick={()=>void sync()} disabled={!online}>Sync now</button>}{user&&<button className="hut-small" onClick={()=>void signOut().catch(e=>setError(e.message))}>Sign out</button>}{pending&&user&&<span>Device changes pending</span>}</div>{error&&<p className="hut-alert" role="alert">{error}</p>}<main id="hut-main" className="hut-main"><ConflictReview/>{children}</main><footer className="hut-footer"><p>Reviewed hut research: 8 October 2026 · Original list numbers and directory IDs retained.</p><p>Check current opening, route and weather conditions with the official operator before travelling. Private plans are kept in your account or this browser.</p><a href="/huts">Hut library</a> · <a href="/explore-app">Climbers Lounge</a> · <a href="/account">Account and data</a></footer><ServiceWorkerRegistration/></div>;
+}
+export default function HutShell({children}:{children:ReactNode}){return <WorkspaceProvider><Frame>{children}</Frame></WorkspaceProvider>;}

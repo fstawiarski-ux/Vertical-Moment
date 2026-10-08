@@ -1,0 +1,189 @@
+{
+  "checked": "2026-10-08T11:45:35.446333+00:00",
+  "result": "PASS — local manual-merge handoff; no production deployment performed",
+  "scope": "shared-data",
+  "branch": "shared/hut-planner-2026-10-08",
+  "base_head": "db4e56fee38253e7a4d2ff082fb6ef6977524e58",
+  "research_release": "2026-10-08-r3",
+  "data": {
+    "checked": "2026-10-08T11:35:06.882Z",
+    "release": "2026-10-08-r3",
+    "identities": 630,
+    "route_count": 5158,
+    "source_references": 21672,
+    "dates": 947,
+    "tariffs": 1903,
+    "events": 22,
+    "expanded_sha256": "da44f156456e173edbb47ef89e42286ba7eadceb19ef578a48141daecffa6786",
+    "active_routes_sha256": "545d177b56a5a155adad5b59f47d535d595da1bdeb8ba7e67f8e288583fa3c8c",
+    "workbook_sha256": "fab95204d705439137a3aad81fe1d22aba4b9f55e34da71c69bd36026e5ab17c",
+    "offline_guide_sha256": "2821b47e830a4e8c1a0e327e1a9c23115efcef5b759d3c2a942915c913c30dfb",
+    "result": "PASS — every exported reviewed record, route, tariff, event, history date and context relationship matches canonical inputs."
+  },
+  "commands": [
+    {
+      "command": "rtk proxy npm test",
+      "exit_code": 0,
+      "observed": "17 files, 133 tests passed."
+    },
+    {
+      "command": "rtk proxy npm ci --dry-run --ignore-scripts",
+      "exit_code": 0,
+      "observed": "Plain npm ci resolves the reviewed lockfile using project .npmrc; this was a dry run."
+    },
+    {
+      "command": "rtk proxy npm run verify-huts",
+      "exit_code": 0,
+      "observed": "\n> vertical-moment-website@0.6.0-beta verify-huts\n> node scripts/verify-huts.mjs\n\n{\"checked\":\"2026-10-08T11:35:06.882Z\",\"release\":\"2026-10-08-r3\",\"identities\":630,\"route_count\":5158,\"source_references\":21672,\"dates\":947,\"tariffs\":1903,\"events\":22,\"expanded_sha256\":\"da44f156456e173edbb47ef89e42286ba7eadceb19ef578a48141daecffa6786\",\"active_routes_sha256\":\"545d177b56a5a155adad5b59f47d535d595da1bdeb8ba7e67f8e288583fa3c8c\",\"workbook_sha256\":\"fab95204d705439137a3aad81fe1d22aba4b9f55e34da71c69bd36026e5ab17c\",\"offline_guide_sha256\":\"2821b47e830a4e8c1a0e327e1a9c23115efcef5b759d3c2a942915c913c30dfb\",\"result\":\"PASS — every exported reviewed record, route, tariff, event, history date and context relationship matches canonical inputs.\"}\n"
+    },
+    {
+      "command": "rtk proxy npm run verify-security",
+      "exit_code": 0,
+      "observed": "\n> vertical-moment-website@0.6.0-beta verify-security\n> node scripts/verify-security-boundaries.mjs\n\nverify-security: no public GPX files, no runtime GPX URLs, and all repository actions are pinned\n"
+    },
+    {
+      "command": "rtk proxy npm audit",
+      "exit_code": 0,
+      "observed": "found 0 vulnerabilities\n"
+    },
+    {
+      "command": "rtk proxy powershell -NoProfile -File scripts/verify-repository-contract.ps1",
+      "exit_code": 0,
+      "observed": "Repository contract PASS: 17 required files and both product markers are present.\nBranch: shared/hut-planner-2026-10-08\nHEAD: db4e56fee38253e7a4d2ff082fb6ef6977524e58\n M .github/workflows/deploy.yml\n M .github/workflows/explore-responsive-qa.yml\n M .github/workflows/test.yml\n M website/.gitignore\n M website/AGENTS.md\n M website/app/(platform)/components/crag-map.tsx\n M website/app/(platform)/explore/atlas-data.json\n M website/app/explore-app/planner/PlannerFrame.tsx\n M website/app/explore-app/planner/page.tsx\n M website/app/explore-app/planner/planner.module.css\n M website/app/robots.ts\n M website/app/sitemap.ts\n M website/next-env.d.ts\n M website/next.config.mjs\n M website/package-lock.json\n M website/package.json\n M website/public/explore-app/planner-content.html\n M website/serwist.config.mjs\n M website/src/App.tsx\n M website/src/components/shell/LayoutToolbar.tsx\n M website/src/components/shell/PhoneShell.tsx\n M website/src/pwa/service-worker.ts\n M website/src/pwa/sw-registration.tsx\n M website/vitest.config.ts\n M website/wrangler.jsonc\n?? database/huts/\n?? docs/huts/\n?? website/.dev.vars.example\n?? website/.npmrc\n?? website/app/account/\n?? website/app/api/auth/\n?? website/app/api/hut-shares/\n?? website/app/api/hut-workspace/\n?? website/app/explore-app/planner/list/\n?? website/app/explore-app/planner/today/\n?? website/app/explore-app/planner/trips/\n?? website/app/huts/\n?? website/app/share/\n?? website/cloudflare-env.d.ts\n?? website/components/\n?? website/lib/huts/\n?? website/migrations/\n?? website/public/huts/\n?? website/reports/\n?? website/scripts/sync-huts.mjs\n?? website/scripts/verify-hut-deploy-config.mjs\n?? website/scripts/verify-huts.mjs\n"
+    },
+    {
+      "command": "rtk proxy npm run verify-data",
+      "exit_code": 0,
+      "observed": "\n> vertical-moment-website@0.6.0-beta verify-data\n> node scripts/verify-data-sync.mjs\n\nverify-data: source 357 files; mirror 357 files\nverify-data: canonical API and website mirror are byte-identical\n"
+    },
+    {
+      "command": "rtk proxy npm run verify-canonical",
+      "exit_code": 0,
+      "observed": "\n> vertical-moment-website@0.6.0-beta verify-canonical\n> node scripts/verify-canonical-source.mjs\n\nverify-canonical: 2390 routes, 330 crags, 20 regions; API, mirror and atlas counts checked\nverify-canonical: active source and generated consumers agree\n"
+    },
+    {
+      "command": "rtk proxy npm run verify-pwa-content",
+      "exit_code": 0,
+      "observed": "\n> vertical-moment-website@0.6.0-beta verify-pwa-content\n> node scripts/verify-pwa-content.mjs && node scripts/verify-pilots.mjs\n\nverify-pwa-content: 5 boxes and 29 referenced assets inspected\nverify-pwa-content: registry fields and referenced assets are valid\nverify-pilots: 9 pilot manifests, 81 asset slots, 16 private preview adapters, 2 regional manifests, and 7 regional nodes inspected\nverify-pilots: catalog, manifests, and ready asset paths are valid\n"
+    },
+    {
+      "command": "rtk proxy npm run verify-hut-deploy-config",
+      "exit_code": 1,
+      "observed": "\n> vertical-moment-website@0.6.0-beta verify-hut-deploy-config\n> node scripts/verify-hut-deploy-config.mjs\n\nHut publication configuration is incomplete:\n - Replace the local HUT_DB placeholder with the provisioned production D1 ID.\n",
+      "expected_block": true
+    },
+    {
+      "command": "rtk proxy npm run build:cloudflare",
+      "exit_code": 0,
+      "observed": "Next 16.3.8 compiled and TypeScript passed; 1,009 static pages plus dynamic /account; Serwist 107 URLs / 4.05 MB; OpenNext 1.20.9 Worker and copied generated service worker."
+    }
+  ],
+  "browser": {
+    "hut-web-journeys": {
+      "checked": "2026-10-08T11:38:22.858Z",
+      "checks": 18,
+      "result": "PASS",
+      "runtime": "Built local Cloudflare Worker"
+    },
+    "hut-offline-and-conflicts": {
+      "checked": "2026-10-08T11:39:50.895Z",
+      "checks": 14,
+      "result": "PASS",
+      "runtime": "Built local Cloudflare Worker"
+    },
+    "hut-legacy-sync": {
+      "checked": "2026-10-08T11:40:50.288Z",
+      "checks": 3,
+      "result": "PASS",
+      "runtime": "Built local Cloudflare Worker"
+    },
+    "hut-qualifier-and-worker-journeys": {
+      "checked": "2026-10-08T11:41:32.944Z",
+      "checks": 8,
+      "result": "PASS",
+      "runtime": "Built local Cloudflare Worker"
+    },
+    "hut-api-smoke": {
+      "checked": "2026-10-08T11:42:39.418Z",
+      "checks": 0,
+      "result": "PASS",
+      "runtime": "Built local Cloudflare Worker"
+    },
+    "hut-private-print": {
+      "checked": "2026-10-08T11:42:37.655Z",
+      "checks": 0,
+      "result": "PASS",
+      "runtime": "Built local Cloudflare Worker"
+    },
+    "hut-registration-boundary": {
+      "checked": "2026-10-08T11:42:32.941Z",
+      "checks": 4,
+      "result": "PASS",
+      "runtime": "Built local Cloudflare Worker with public-origin configuration; not a remote or HTTPS deployment"
+    }
+  },
+  "unit_tests": {
+    "files": 17,
+    "passed": 133
+  },
+  "build": {
+    "exit_code": 0,
+    "static_pages": 1009,
+    "account_route": "dynamic",
+    "next": "16.3.8",
+    "opennext": "1.20.9",
+    "serwist_precache": {
+      "urls": 107,
+      "bytes_approx": "4.05 MB"
+    },
+    "warnings": [
+      "OpenNext Windows compatibility warning",
+      "Deprecated Next middleware filename"
+    ]
+  },
+  "publication": {
+    "owner_will_pull_merge_deploy_manually": true,
+    "local_bundle_prepared": true,
+    "pushed": false,
+    "pull_request_created": false,
+    "merged": false,
+    "deployed": false,
+    "https_production_checks": "Not performed",
+    "github_ci_checks": "Not run remotely"
+  },
+  "mail": {
+    "gmail_credentials_received": false,
+    "provider_configured": false,
+    "outbound_email_sent": false,
+    "smtp_packages_removed": true,
+    "public_signup_disabled": true,
+    "public_signin_requires_verified_email": true,
+    "password_recovery_implemented": false
+  },
+  "cloudflare_state": {
+    "wrangler_logged_out": true,
+    "live_worker_unchanged": true,
+    "last_inspected_version": "7dd49f9f-8602-4405-acbd-c0e81eb6e8dc",
+    "empty_databases_created": [
+      {
+        "name": "vertical-moment-hut-planner",
+        "id": "a151bbcb-5251-4932-891c-5eabf52429c1"
+      },
+      {
+        "name": "vertical-moment-hut-planner-preview",
+        "id": "7f13f624-4805-457a-a430-418186a35dfb"
+      }
+    ],
+    "jurisdiction": "EU",
+    "primary_region": "EEUR",
+    "remote_migrations_applied": false,
+    "remote_account_data_written": false,
+    "production_secret_changed": false,
+    "mail_or_dns_configured": false
+  },
+  "privacy": {
+    "real_user_bookmarks_untouched": true,
+    "synthetic_tests_local_only": true,
+    "no_auth_secrets_test_credentials_or_databases_in_source_package": true
+  }
+}

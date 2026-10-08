@@ -21,12 +21,12 @@ out/
 # 3D crag models.
 #
 # Temporarily bundled: at four walls and ~2.7 MB, LFS handles them fine and it
-# gets the 3D Lab live. The R2 move stays the plan — do it as one clean change
+# gets the 3D Lab live. The R2 move stays the plan â€” do it as one clean change
 # once the library grows past a handful of models, then restore this ignore.
 # public/models/
 
 # Synced verbatim from database/api/v1 by scripts/sync-data.mjs at
-# predev/prebuild — the generated tree, not a second copy of the dataset.
+# predev/prebuild â€” the generated tree, not a second copy of the dataset.
 public/data/v1/
 
 # Generated from the pinned Three.js dependency by scripts/sync-data.mjs so
@@ -45,3 +45,6 @@ public/sw.js.map
 .dev.vars*
 !.dev.vars.example
 tsconfig.tsbuildinfo
+
+# Generated from reviewed canonical hut data.
+public/huts-data/v1/

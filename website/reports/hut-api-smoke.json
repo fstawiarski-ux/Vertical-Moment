@@ -1,0 +1,36 @@
+{
+  "checked": "2026-10-08T11:42:39.418Z",
+  "url": "http://localhost:3026",
+  "runtime": "Built local Cloudflare Worker",
+  "local_only": true,
+  "anonymous": {
+    "status": 401,
+    "cache": "private, no-store, max-age=0"
+  },
+  "signup": {
+    "status": 200,
+    "cookies": [
+      {
+        "name": "vm_huts.session_token",
+        "httpOnly": true,
+        "secure": false,
+        "sameSite": "Lax"
+      }
+    ],
+    "qualification": "Secure-cookie flag must be checked again on the production HTTPS origin."
+  },
+  "workspace": {
+    "status": 200,
+    "empty": true
+  },
+  "hut": {
+    "heading": "Otto-Haus",
+    "width": {
+      "doc": 1440,
+      "view": 1440
+    },
+    "shootFields": 21
+  },
+  "errors": [],
+  "result": "PASS"
+}

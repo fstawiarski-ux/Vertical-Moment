@@ -1,0 +1,2 @@
+BETTER_AUTH_SECRET=replace-with-a-random-secret-of-at-least-32-characters
+BETTER_AUTH_URL=http://localhost:3026

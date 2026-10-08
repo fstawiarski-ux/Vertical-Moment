@@ -151,6 +151,8 @@ export function LayoutToolbar({ viewportMode, offlinePack, onSearch, onReplayInt
       {openPanel && (
         <Panel title="Tools" onClose={() => setOpenPanel(false)}>
           <ActionGroup label="Planning">
+            <HudButton icon="field" label="630 huts" title="Browse reviewed hut stories and visitor information" href="/huts" />
+            <HudButton icon="field" label="My hut trips" title="Open private hut trip and documentary plans" href="/explore-app/planner/trips" />
             <HudButton icon="field" label="Planner" title="Open climbing calendar and climber outreach planner" href="/explore-app/planner" />
           </ActionGroup>
           <ActionGroup label="Workspace">

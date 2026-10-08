@@ -10,10 +10,10 @@
     "verify-pilots": "node scripts/verify-pilots.mjs",
     "pilot:new": "node scripts/create-pilot.mjs",
     "verify-security": "node scripts/verify-security-boundaries.mjs",
-    "predev": "npm run sync-data",
-    "prebuild": "npm run sync-data",
-    "prebuild:next": "npm run sync-data",
-    "prebuild:cloudflare": "npm run sync-data",
+    "predev": "npm run sync-data && npm run sync-huts",
+    "prebuild": "npm run sync-data && npm run sync-huts",
+    "prebuild:next": "npm run sync-data && npm run sync-huts",
+    "prebuild:cloudflare": "npm run sync-data && npm run sync-huts",
     "build": "next build && serwist build serwist.config.mjs",
     "build:cloudflare": "opennextjs-cloudflare build && node scripts/copy-service-worker.mjs",
     "build:next": "next build",
@@ -26,37 +26,48 @@
     "preview": "npm run build:cloudflare && opennextjs-cloudflare preview",
     "deploy": "npm run build:cloudflare && opennextjs-cloudflare deploy",
     "upload": "npm run build:cloudflare && opennextjs-cloudflare upload",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "sync-huts": "node scripts/sync-huts.mjs",
+    "verify-huts": "node scripts/verify-huts.mjs",
+    "hut-db:local": "wrangler d1 migrations apply HUT_DB --local",
+    "hut-types": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "preview:huts:local": "opennextjs-cloudflare preview --port 3026 --ip localhost --local-upstream localhost:3026 --upstream-protocol http --local",
+    "verify-hut-deploy-config": "node scripts/verify-hut-deploy-config.mjs",
+    "predeploy": "npm run verify-huts && npm run verify-security && npm run verify-hut-deploy-config",
+    "preupload": "npm run verify-huts && npm run verify-security && npm run verify-hut-deploy-config"
   },
   "dependencies": {
+    "@better-auth/drizzle-adapter": "^1.7.7",
     "@google/model-viewer": "4.3.1",
     "@phosphor-icons/react": "^2.1.10",
+    "better-auth": "^1.7.7",
     "drizzle-orm": "^0.45.2",
     "fflate": "^0.8.3",
     "idb-keyval": "6.3.0",
-    "next": "^16.2.0",
+    "next": "16.3.8",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "three": "0.183.2",
     "zustand": "5.0.14"
   },
   "devDependencies": {
-    "@opennextjs/cloudflare": "^1.20.2",
-    "@serwist/cli": "9.5.12",
-    "@serwist/next": "9.5.12",
+    "@cloudflare/workers-types": "^5.20261008.1",
+    "@opennextjs/cloudflare": "1.20.9",
+    "@serwist/cli": "^9.5.13",
+    "@serwist/next": "^9.5.13",
     "@types/node": "^20.14.15",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "esbuild": "0.28.2",
-    "serwist": "9.5.12",
-    "sharp": "^0.35.3",
+    "serwist": "^9.5.13",
+    "sharp": "^0.35.5",
     "typescript": "^5.5.4",
-    "vitest": "^3.2.7",
-    "wrangler": "4.120.1"
+    "vitest": "^4.1.11",
+    "wrangler": "^4.148.0"
   },
   "overrides": {
     "nanoid": "^3.3.18",
     "postcss": "^8.5.25",
-    "sharp": "^0.35.3"
+    "sharp": "^0.35.5"
   }
 }

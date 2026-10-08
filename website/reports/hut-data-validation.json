@@ -1,0 +1,15 @@
+{
+  "checked": "2026-10-08T11:35:06.882Z",
+  "release": "2026-10-08-r3",
+  "identities": 630,
+  "route_count": 5158,
+  "source_references": 21672,
+  "dates": 947,
+  "tariffs": 1903,
+  "events": 22,
+  "expanded_sha256": "da44f156456e173edbb47ef89e42286ba7eadceb19ef578a48141daecffa6786",
+  "active_routes_sha256": "545d177b56a5a155adad5b59f47d535d595da1bdeb8ba7e67f8e288583fa3c8c",
+  "workbook_sha256": "fab95204d705439137a3aad81fe1d22aba4b9f55e34da71c69bd36026e5ab17c",
+  "offline_guide_sha256": "2821b47e830a4e8c1a0e327e1a9c23115efcef5b759d3c2a942915c913c30dfb",
+  "result": "PASS — every exported reviewed record, route, tariff, event, history date and context relationship matches canonical inputs."
+}

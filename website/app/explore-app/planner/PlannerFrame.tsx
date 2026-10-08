@@ -1,39 +1,11 @@
 "use client";
-
-import { useEffect, useState } from "react";
-import styles from "./planner.module.css";
-
-export default function PlannerFrame() {
-  const [shareUrl, setShareUrl] = useState("https://verticalmoment.com/explore-app/planner");
-  const [src, setSrc] = useState("/explore-app/planner-content.html");
-  const [message, setMessage] = useState("");
-
-  useEffect(() => {
-    setShareUrl(new URL("/explore-app/planner", window.location.origin).href);
-    if (window.location.hash) setSrc("/explore-app/planner-content.html" + window.location.hash);
-  }, []);
-
-  const copyLink = async () => {
-    try {
-      await navigator.clipboard.writeText(shareUrl);
-      setMessage("Link copied. Your saved notes stay on this device.");
-    } catch {
-      setMessage("Select the address above to copy it.");
-    }
-  };
-
-  return (
-    <main className={styles.page}>
-      <header className={styles.header}>
-        <a href="/explore-app" className={styles.back}>← Climbers Lounge</a>
-        <label className={styles.share}>
-          <span>Share with friends</span>
-          <input aria-label="Planner share link" value={shareUrl} readOnly onFocus={(event) => event.currentTarget.select()} />
-        </label>
-        <button type="button" onClick={copyLink}>Copy link</button>
-        <p role="status" className={styles.status}>{message || "Personal entries are saved only in your browser."}</p>
-      </header>
-      <iframe className={styles.frame} src={src} title="Climbing calendar, photography and climber outreach planner" />
-    </main>
-  );
+import {useEffect,useState} from 'react';
+import HutShell from '@/components/huts/HutShell';
+import styles from './planner.module.css';
+function Frame(){
+ const [shareUrl,setShareUrl]=useState('https://verticalmoment.com/explore-app/planner'),[src,setSrc]=useState('/explore-app/planner-content.html'),[message,setMessage]=useState('');
+ useEffect(()=>{setShareUrl(new URL('/explore-app/planner',location.origin).href);if(location.hash)setSrc('/explore-app/planner-content.html'+location.hash);},[]);
+ async function copyLink(){try{await navigator.clipboard.writeText(shareUrl);setMessage('Planner address copied. Personal entries are excluded.');}catch{setMessage('Select the address above to copy it.');}}
+ return <section className={styles.page}><header className={styles.header}><label className={styles.share}><span>Planner address</span><input aria-label="Planner share link" value={shareUrl} readOnly onFocus={e=>e.currentTarget.select()}/></label><button onClick={()=>void copyLink()}>Copy address</button><p className={styles.status}>{message||'Climbing entries stay in this browser until you enable account sync inside the planner. Hut trips are available from My hut trips above.'}</p></header><iframe className={styles.frame} src={src} title="Climbing calendar, photography and climber outreach planner"/></section>;
 }
+export default function PlannerFrame(){return <HutShell><Frame/></HutShell>;}

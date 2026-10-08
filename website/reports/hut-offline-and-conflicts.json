@@ -1,0 +1,79 @@
+{
+  "checked": "2026-10-08T11:39:50.895Z",
+  "runtime": "Built local Cloudflare Worker",
+  "fixtures": "Existing synthetic local account; fresh browser context",
+  "checks": [
+    {
+      "name": "Root service worker installed",
+      "result": "PASS",
+      "detail": "Existing climbing app and new hut routes share a bounded worker"
+    },
+    {
+      "name": "Selected hut offline download confirmed",
+      "result": "PASS",
+      "detail": "Public HTML and the hut’s reviewed JSON cached"
+    },
+    {
+      "name": "Private photography life list",
+      "result": "PASS",
+      "detail": "Explicit photo status saved without changing researched facts"
+    },
+    {
+      "name": "Offline private edits retained",
+      "result": "PASS",
+      "detail": "Account copy stays scoped to its user; changes remain in the device queue"
+    },
+    {
+      "name": "Cold hut reopening offline",
+      "result": "PASS",
+      "detail": "Hut details and dated tariffs render from the saved research"
+    },
+    {
+      "name": "Cold Field day reopening offline",
+      "result": "PASS",
+      "detail": "Trip destination and cached timing source remain usable"
+    },
+    {
+      "name": "Same-field cross-device conflict review",
+      "result": "PASS",
+      "detail": "Both values shown; explicit device choice saved; no silent overwrite"
+    },
+    {
+      "name": "Public guide print excludes private documentary notes",
+      "result": "PASS",
+      "detail": "Explicit private print action is separate"
+    },
+    {
+      "name": "Exact share-preview binding",
+      "result": "PASS",
+      "detail": "A changed title or projection is rejected with 409"
+    },
+    {
+      "name": "Private and revocable responses excluded from worker caches",
+      "result": "PASS",
+      "detail": "No auth, workspace, share API or share document cache entries"
+    },
+    {
+      "name": "Expired-session queue isolated from another account",
+      "result": "PASS",
+      "detail": "Unsynced changes retained under the original account ID; another account sees no trip"
+    },
+    {
+      "name": "Queued edit restored after original account signs in",
+      "result": "PASS",
+      "detail": "Recovered change saved and recovery copy removed after confirmation"
+    },
+    {
+      "name": "Sign-out clears the account’s device cache",
+      "result": "PASS",
+      "detail": "Queued changes saved first; cookie session ended; private cache removed"
+    },
+    {
+      "name": "Runtime browser errors",
+      "result": "PASS",
+      "detail": "No page errors in offline, conflict, life-list and share journeys"
+    }
+  ],
+  "errors": [],
+  "result": "PASS"
+}
