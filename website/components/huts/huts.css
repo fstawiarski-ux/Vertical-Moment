@@ -14,45 +14,48 @@
 
 @media print{.hut-app .hut-screen-only{display:none!important}}
 
-/* Local readability pilot: Otto-Haus (167). Other hut layouts retain their rules. */
-.hut-pilot .hut-identity{max-width:75ch;color:var(--hut-muted);margin-bottom:.65rem}
-.hut-pilot .hut-lead,.hut-pilot .hut-prose{max-width:72ch}
-.hut-pilot .hut-guide-tools{margin:0;padding:0 .75rem}
-.hut-pilot summary,.hut-pilot .hut-subnav a{min-height:44px}
-.hut-pilot .hut-guide-tools>summary{padding:.5rem 0}
-.hut-pilot .hut-subnav{gap:.35rem 1.5rem;font-size:1rem}
-.hut-pilot .hut-section{margin:1.1rem 0;scroll-margin-top:95px}
-.hut-pilot .hut-contact-links{display:flex;flex-wrap:wrap;gap:.5rem 1.4rem}
-.hut-pilot .hut-contact-links a,.hut-pilot .hut-back-link{display:inline-flex;align-items:center;min-height:44px}
-.hut-pilot .hut-research-heading{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;border-top:1px solid var(--hut-line);padding-top:1.5rem;margin-top:1.5rem;scroll-margin-top:95px}
-.hut-pilot .hut-research-heading h2{margin-bottom:.35rem}
-.hut-pilot .hut-research-heading p{max-width:65ch;color:var(--hut-muted);margin-bottom:0}
-.hut-pilot .hut-research-heading .hut-actions{margin:.25rem 0}
-.hut-pilot .hut-research-section{background:#fff;padding:.75rem 1rem}
-.hut-pilot .hut-research-section>summary{padding:.3rem 0}
-.hut-pilot .hut-research-section>summary h2{display:inline;font:600 1.3rem/1.4 Georgia,serif}
-.hut-pilot .hut-disclosure-preview{display:block;font-size:.94rem;line-height:1.55;color:var(--hut-muted);font-weight:400;margin:.25rem 0 0 1rem}
-.hut-pilot .hut-disclosure-body{border-top:1px solid var(--hut-line);margin-top:.8rem;padding-top:1rem}
-.hut-pilot .hut-shoot-summary{padding:1.3rem;background:#edf3ef;border:1px solid #75988b;border-radius:10px;margin:1.8rem 0}
-.hut-pilot .hut-shoot-summary .hut-button{margin-top:.5rem}
-.hut-pilot [id^="source-"]{scroll-margin-top:95px}
-.hut-pilot #documentary{max-width:900px}
-.hut-pilot #documentary .hut-form label{display:grid;margin:0}
+/* Readable guides for every hut, with focused planning and retained research. */
+.hut-header .hut-brand{white-space:normal;overflow-wrap:anywhere}
+.hut-readable{overflow-wrap:anywhere}
+.hut-readable .hut-identity{max-width:75ch;color:var(--hut-muted);margin-bottom:.65rem}
+.hut-readable .hut-lead,.hut-readable .hut-prose{max-width:72ch}
+.hut-readable .hut-guide-tools{margin:0;padding:0 .75rem}
+.hut-readable summary,.hut-readable .hut-subnav a{min-height:44px}
+.hut-readable .hut-guide-tools>summary{padding:.5rem 0}
+.hut-readable .hut-subnav{gap:.35rem 1.5rem;font-size:1rem}
+.hut-readable .hut-section{margin:1.1rem 0;scroll-margin-top:95px}
+.hut-readable .hut-contact-links{display:flex;flex-wrap:wrap;gap:.5rem 1.4rem}
+.hut-readable .hut-contact-links a,.hut-readable .hut-back-link{display:inline-flex;align-items:center;min-height:44px}
+.hut-readable .hut-research-heading{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;border-top:1px solid var(--hut-line);padding-top:1.5rem;margin-top:1.5rem;scroll-margin-top:95px}
+.hut-readable .hut-research-heading h2{margin-bottom:.35rem}
+.hut-readable .hut-research-heading p{max-width:65ch;color:var(--hut-muted);margin-bottom:0}
+.hut-readable .hut-research-heading .hut-actions{margin:.25rem 0}
+.hut-readable .hut-research-section{background:#fff;padding:.75rem 1rem}
+.hut-readable .hut-research-section>summary{padding:.3rem 0}
+.hut-readable .hut-research-section>summary h2{display:inline;font:600 1.3rem/1.4 Georgia,serif}
+.hut-readable .hut-disclosure-preview{display:block;font-size:.94rem;line-height:1.55;color:var(--hut-muted);font-weight:400;margin:.25rem 0 0 1rem}
+.hut-readable .hut-disclosure-body{border-top:1px solid var(--hut-line);margin-top:.8rem;padding-top:1rem}
+.hut-readable .hut-shoot-summary{padding:1.3rem;background:#edf3ef;border:1px solid #75988b;border-radius:10px;margin:1.8rem 0}
+.hut-readable .hut-shoot-summary .hut-button{margin-top:.5rem}
+.hut-readable [id^="source-"]{scroll-margin-top:95px}
+.hut-readable #documentary{max-width:900px}
+.hut-readable #documentary .hut-form label{display:grid;margin:0}
+.hut-readable input:not([type=checkbox]):not([type=radio]),.hut-readable select,.hut-readable textarea{border-color:#5e796b}
 @media(max-width:560px){
- .hut-pilot .hut-subnav{gap:0 .9rem;font-size:.94rem}
- .hut-pilot .hut-section,.hut-pilot [id^="source-"],.hut-pilot .hut-research-heading{scroll-margin-top:1rem}
- .hut-pilot .hut-research-heading{gap:.75rem}
- .hut-pilot .hut-research-section>summary h2{font-size:1.2rem}
- .hut-pilot .hut-shoot-summary{padding:1rem}
+ .hut-readable .hut-subnav{gap:0 .9rem;font-size:.94rem}
+ .hut-readable .hut-section,.hut-readable [id^="source-"],.hut-readable .hut-research-heading{scroll-margin-top:1rem}
+ .hut-readable .hut-research-heading{gap:.75rem}
+ .hut-readable .hut-research-section>summary h2{font-size:1.2rem}
+ .hut-readable .hut-shoot-summary{padding:1rem}
 }
 @media print{
- .hut-pilot .hut-guide-content[hidden]{display:block!important}
- .hut-print-private .hut-pilot .hut-guide-content{display:none!important}
- .hut-print-private .hut-pilot>#documentary{display:block!important}
- .hut-pilot .hut-research-heading,.hut-pilot .hut-section{display:block;margin:.6cm 0}
- .hut-pilot .hut-research-heading p,.hut-pilot .hut-disclosure-preview{display:none}
- .hut-pilot .hut-research-section{border:0;padding:0;background:#fff}
- .hut-pilot .hut-disclosure-body{border:0;padding:0}
- .hut-pilot .hut-research-section>summary{list-style:none}
- .hut-pilot .hut-research-section>summary h2{font-size:17pt}
+ .hut-readable .hut-guide-content[hidden]{display:block!important}
+ .hut-print-private .hut-readable .hut-guide-content{display:none!important}
+ .hut-print-private .hut-readable>#documentary{display:block!important}
+ .hut-readable .hut-research-heading,.hut-readable .hut-section{display:block;margin:.6cm 0}
+ .hut-readable .hut-research-heading p,.hut-readable .hut-disclosure-preview{display:none}
+ .hut-readable .hut-research-section{border:0;padding:0;background:#fff}
+ .hut-readable .hut-disclosure-body{border:0;padding:0}
+ .hut-readable .hut-research-section>summary{list-style:none}
+ .hut-readable .hut-research-section>summary h2{font-size:17pt}
 }

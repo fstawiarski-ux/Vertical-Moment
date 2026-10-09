@@ -1,46 +1,47 @@
 "use client";
 import {useEffect, useState, type ReactNode} from 'react';
 import {text, type HutDetail} from '@/lib/huts/types';
+import {guideApproach, guideBooking, guideContacts, guideElevation, guideIntroduction} from '@/lib/huts/readable-guide';
 import {Facts, OutLink, RefLinks} from './research';
 import {useWorkspace} from './WorkspaceProvider';
 import fields from '@/lib/huts/generated/shoot-fields.json';
 
-export function GuideSection({pilot, id, title, preview, children}: {
- pilot: boolean; id: string; title: string; preview: string; children: ReactNode;
+export function GuideSection({id, title, preview, children}: {
+ id: string; title: string; preview: string; children: ReactNode;
 }) {
- return <section id={id} className="hut-section" tabIndex={pilot ? -1 : undefined}>
-  {pilot ? <details data-hut-disclosure className="hut-research-section">
+ return <section id={id} className="hut-section" tabIndex={-1}>
+  <details data-hut-disclosure className="hut-research-section">
    <summary><h2>{title}</h2><span className="hut-disclosure-preview">{preview}</span></summary>
    <div className="hut-disclosure-body">{children}</div>
-  </details> : <><h2>{title}</h2>{children}</>}
+  </details>
  </section>;
 }
 
 export function GuideIntro({detail}: {detail: HutDetail}) {
- const h = detail.record, story = text(h.hut_story);
- const introduction = story.includes('. ') ? story.slice(0, story.indexOf('. ') + 1) : story;
+ const h = detail.record;
  return <>
   <p className="hut-kicker"><a href="/huts">All 630 huts</a> · Original list No. {h.number} · Directory ID {h.id}</p>
   <h1>{h.name}</h1>
-  <p className="hut-identity">{text(h.base?.region || h.region)} · {text(h.base?.mountain_group || h.mountain_group)} · {text(h.base?.elevation_m ?? h.elevation_m)} m · {text(h.status)}</p>
-  <p className="hut-lead">{introduction} <a href="#section=history">Story &amp; evidence</a></p>
+  <p className="hut-identity">{text(h.base?.region || h.region)} · {text(h.base?.mountain_group || h.mountain_group)} · {guideElevation(h.base?.elevation_m ?? h.elevation_m)} · {text(h.status)}</p>
+  <p className="hut-lead">{guideIntroduction(h.hut_story)} <a href="#section=history">Story &amp; evidence</a></p>
  </>;
 }
 
 export function GuideEssentials({detail}: {detail: HutDetail}) {
- const h = detail.record;
+ const h = detail.record, booking = guideBooking(detail), contacts = guideContacts(detail);
+ const approaches = detail.routes.some(r => r.kind === 'Approach');
  return <>
   <Facts items={[
    ['Summer operation', h.summer],
    ['Winter operation', h.winter],
-   ['Published approach', h.approach_details || h.approach_summary]
+   ['Published approach', guideApproach(detail)]
   ]}/>
   <p className="hut-meta">Visitor sources checked {text(h.checked)} · <RefLinks value={h.visitor_source_refs || h.sources} sources={detail.sources}/></p>
-  <p><strong>Parking:</strong> {text(h.parking)} <a href="#section=access">All approaches &amp; travel details</a></p>
-  <p><strong>Booking:</strong> {text(h.booking || 'Booking portal not established; contact operator')}</p>
+  <p><strong>Parking:</strong> {text(h.parking)} <a href="#section=access">{approaches ? 'All approaches & travel details' : 'Access research & travel details'}</a></p>
+  <p><strong>{booking.label}:</strong> {booking.url ? <OutLink url={booking.url}>Published reservation page</OutLink> : text(booking.value)}</p>
   <div className="hut-contact-links">
-   <OutLink url={h.website}>Official visit &amp; booking information</OutLink>
-   <a href="#section=sources">Phone, email &amp; checked sources</a>
+   {contacts.map(link => <OutLink key={link.url} url={link.url}>{link.label}</OutLink>)}
+   <a href="#section=sources">Contacts &amp; checked sources</a>
   </div>
  </>;
 }
@@ -63,7 +64,7 @@ export function ShootSummary({detail}: {detail: HutDetail}) {
 
 // Keep the existing section and source links usable when research is folded.
 // View changes stay on the already downloadable hut route.
-export function useReadableGuideView(pilot: boolean, ready: boolean) {
+export function useReadableGuideView(ready: boolean) {
  const [shootView, setShootView] = useState(false);
  useEffect(() => {
   if (!ready) return;
@@ -74,7 +75,7 @@ export function useReadableGuideView(pilot: boolean, ready: boolean) {
    if (!targetId) {
     try { targetId = decodeURIComponent(hash); } catch { return; }
    }
-   setShootView(pilot && targetId === 'documentary');
+   setShootView(targetId === 'documentary');
    requestAnimationFrame(() => requestAnimationFrame(() => {
     const target = document.getElementById(targetId);
     if (!target) return;
@@ -83,7 +84,7 @@ export function useReadableGuideView(pilot: boolean, ready: boolean) {
      if (ancestor instanceof HTMLDetailsElement) ancestor.open = true;
      ancestor = ancestor.parentElement;
     }
-    target.querySelector<HTMLDetailsElement>('details[data-hut-disclosure]')?.setAttribute('open', '');
+    if (target.classList.contains('hut-section')) target.querySelector<HTMLDetailsElement>('details[data-hut-disclosure]')?.setAttribute('open', '');
     target.scrollIntoView({block: 'start'});
     if (focus) {
      target.setAttribute('tabindex', '-1');
@@ -95,13 +96,13 @@ export function useReadableGuideView(pilot: boolean, ready: boolean) {
   const navigate = () => reveal(true);
   window.addEventListener('hashchange', navigate);
   return () => window.removeEventListener('hashchange', navigate);
- }, [pilot, ready]);
+ }, [ready]);
 
  useEffect(() => {
-  if (!pilot || !ready) return;
+  if (!ready) return;
   let closed: HTMLDetailsElement[] = [];
   const before = () => {
-   closed = Array.from(document.querySelectorAll<HTMLDetailsElement>('.hut-pilot details[data-hut-disclosure], .hut-pilot details[data-shoot-group]')).filter(d => !d.open);
+   closed = Array.from(document.querySelectorAll<HTMLDetailsElement>('.hut-readable details[data-hut-disclosure], .hut-readable details[data-shoot-group]')).filter(d => !d.open);
    closed.forEach(d => { d.open = true; });
   };
   const after = () => { closed.forEach(d => { d.open = false; }); closed = []; };
@@ -111,13 +112,13 @@ export function useReadableGuideView(pilot: boolean, ready: boolean) {
    window.removeEventListener('beforeprint', before);
    window.removeEventListener('afterprint', after);
   };
- }, [pilot, ready]);
+ }, [ready]);
  return shootView;
 }
 
 export function ResearchControls() {
  function expand(open: boolean) {
-  document.querySelectorAll<HTMLDetailsElement>('.hut-pilot .hut-guide-content .hut-section details').forEach(d => { d.open = open; });
+  document.querySelectorAll<HTMLDetailsElement>('.hut-readable .hut-guide-content .hut-section details').forEach(d => { d.open = open; });
  }
  return <div id="research" className="hut-research-heading" tabIndex={-1}>
   <div><h2>Visit details &amp; research</h2><p>Open a section when you need it. All reviewed records remain available.</p></div>
