@@ -59,3 +59,59 @@
  .hut-readable .hut-research-section>summary{list-style:none}
  .hut-readable .hut-research-section>summary h2{font-size:17pt}
 }
+
+/* Library pilot: compact browsing and disclosed secondary filters. */
+.hut-library{overflow-wrap:anywhere}
+.hut-library>.hut-kicker{margin:.2rem 0 .4rem}
+.hut-library>h1{margin-bottom:.6rem}
+.hut-library .hut-lead{margin-bottom:.4rem}
+.hut-library .hut-library-tools{margin:.4rem 0;padding:0 .8rem;background:#fff}
+.hut-library .hut-library-tools>summary{min-height:44px;padding:.45rem 0}
+.hut-library .hut-library-message{overflow-wrap:anywhere}
+.hut-library .hut-filters{margin:.6rem 0;gap:.6rem 1rem;padding:.9rem 1.1rem}
+.hut-library input:not([type=checkbox]):not([type=radio]),.hut-library select{border-color:#5e796b}
+.hut-library .hut-saved-filter{grid-column:span 2;display:flex;align-items:center;min-height:44px;font-size:1rem}
+.hut-library .hut-more-filters{grid-column:span 2;margin:0;padding:0;border:0}
+.hut-library .hut-more-filters[open]{grid-column:1/-1}
+.hut-library .hut-more-filters>summary{min-height:44px;padding:.45rem 0}
+.hut-library .hut-more-filters>summary span{font-weight:400}
+.hut-library .hut-secondary-filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:.3rem;padding-top:.8rem;border-top:1px solid var(--hut-line)}
+.hut-library .hut-checks label{display:flex;align-items:flex-start;min-height:44px;max-width:100%;padding:.45rem 0;font-size:.94rem}
+.hut-library .hut-checks input{flex-shrink:0;margin-top:.15rem}
+.hut-library .hut-active-filters{margin:.5rem 0 .9rem}
+.hut-library .hut-active-filters>p{margin-bottom:.35rem}
+.hut-library .hut-filter-chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.hut-library .hut-filter-chip{justify-content:flex-start;gap:.3rem;text-align:left;white-space:normal;overflow-wrap:anywhere;min-width:0}
+.hut-library .hut-filter-chip span{flex-shrink:0}
+.hut-library .hut-filter-chips button,.hut-library .hut-view-toggle button{border-color:#5e796b}
+.hut-library .hut-library-results-heading{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem 1rem;margin:.6rem 0}
+.hut-library .hut-library-results-heading>p{margin:0}
+.hut-library .hut-view-toggle{display:flex;gap:.5rem;flex-wrap:wrap}
+.hut-library .hut-view-toggle button[aria-pressed=true]{background:var(--hut-accent);color:#fff!important;border-color:var(--hut-accent)}
+.hut-library .hut-result-summary{min-width:0}
+.hut-library .hut-result-summary>p:last-child{margin-bottom:0}
+.hut-library .hut-compact-list{display:grid;gap:.8rem}
+.hut-library .hut-compact-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1.2rem;background:#fff;border:1px solid var(--hut-line);border-radius:12px;padding:1.1rem 1.4rem;min-width:0}
+.hut-library .hut-compact-row p{font-size:.93rem}
+.hut-library .hut-compact-row .hut-actions{flex-direction:column;align-items:stretch;justify-content:center;margin:0}
+.hut-library .hut-actions a{display:inline-flex;align-items:center;min-height:44px}
+.hut-library .hut-actions .hut-small{min-height:44px;font-size:1rem;padding:.45rem .75rem;border-color:#5e796b}
+@media(max-width:850px){
+ .hut-library .hut-secondary-filters{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .hut-library .hut-secondary-filters>label:first-child{grid-column:1/-1}
+}
+@media(max-width:560px){
+ .hut-library .hut-filters{padding:.85rem;gap:.6rem .7rem}
+ .hut-library .hut-saved-filter,.hut-library .hut-more-filters{grid-column:auto}
+ .hut-library .hut-more-filters[open]{grid-column:1/-1}
+ .hut-library .hut-library-results-heading{gap:.4rem}
+ .hut-library .hut-view-toggle{width:100%}
+ .hut-library .hut-view-toggle button{flex:1 1 auto}
+ .hut-library .hut-compact-row{grid-template-columns:minmax(0,1fr);gap:.5rem;padding:1.1rem}
+ .hut-library .hut-compact-row .hut-actions{flex-direction:row;align-items:center;justify-content:space-between}
+}
+@media print{
+ .hut-library .hut-library-tools,.hut-library .hut-view-toggle,.hut-library .hut-active-filters{display:none!important}
+ .hut-library .hut-compact-list{display:block}
+ .hut-library .hut-compact-row{display:block;break-inside:avoid;margin:0 0 .5cm;border-color:#bbb}
+}
