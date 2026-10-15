@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import PlannerFrame from "./PlannerFrame";
 
 export const metadata: Metadata = {
-  title: "Climbing Calendar & Outreach",
-  description: "Plan climbing events, photography sessions and climber outreach with Vertical Moment. Keep guest notes in this browser or explicitly sync them to your private account.",
+  title: "Mountain Calendar & Outreach",
+  description: "Find climbing, hiking, alpine training and mountain events in Austria and nearby countries. Plan photography and organiser outreach with notes and backups saved in this browser.",
   robots: { index: false, follow: false },
 };
 
