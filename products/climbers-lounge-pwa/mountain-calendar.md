@@ -1,6 +1,6 @@
 # Austria mountain calendar
 
-Product scope: `climbers-lounge-pwa`. Research snapshot: 14–15 October 2026.
+Product scope: `climbers-lounge-pwa`. Catalogue baseline: 14–15 October 2026. Competition details: 18 October, with selected official-source checks on 21 October 2026.
 
 ## Runtime and editing
 
@@ -25,7 +25,7 @@ different published appointment times remain separate.
 
 ## Coverage and display
 
-- 3,185 listings: 2,611 Austria, 128 foreign or spanning countries, 446 whose
+- 3,186 runtime listings: 2,612 Austria, 128 foreign or spanning countries, 446 whose
   destination still requires confirmation.
 - Counts include separate bookable course cohorts and explicitly dated recurring
   appointments. A long course is not expanded into an assumed daily recurrence.
@@ -97,3 +97,62 @@ Rollback is a reviewed revert of this PR. The existing iframe path and browser
 storage key remain stable, so reverting the presentation does not delete
 personal planning state. Publishing remains controlled by the existing release
 workflow after the owner reviews and merges the PR.
+
+
+## Competition photography focus — 21 October 2026
+
+The planner opens with a focused photography view: Recommended, All competitions,
+and My shortlist. Recommended combines the next dated opportunity with upcoming
+Vienna options. Optional search, location, period, discipline, audience and date
+filters remain combinable. Junior filters include verified mixed age events.
+
+The original 3,185-record JSON block remains intact. A documented PF_RESEARCH
+overlay immediately enriches the shared D.cal catalogue before either view
+renders. It preserves original numeric IDs, combines the two Innsbruck sessions
+for reading without changing their underlying dates, corrects the two community
+competition classifications, and adds Royal Flash 4.0 as ID 9000 with a stable
+source identity. The full calendar uses this same resulting 3,186-record catalogue.
+Only the 15 curated entries receive the newer checks; other research retains
+its original source dates and qualifications.
+
+Personal shortlist and access fields use additive photo:<event ID>:... keys
+inside the existing climbplanner.v1 state. Shooting notes and delivery retain
+the existing event keys. The full calendar and backup format remain available.
+Backup restore adds missing entries and retains current differing values.
+Shortlist print preview includes only the selected public event details, excluding
+private shooting notes. Calendar export retains source sessions as all-day entries
+and excludes unsettled dates through the existing export function.
+
+The route wrapper uses one viewport frame, with sharing/device tools in the
+focused document. Hut library/trip links remain under Tools. This avoids the
+previous stacked navigation and always-visible copy-address panel.
+
+Verification on Node 24 after `npm ci --no-audit --no-fund`:
+
+- `npm test`: 172 tests passed in 21 files, including 26 calendar/focus tests.
+- `npx tsc --noEmit -p tsconfig.json`: passed.
+- `npm run sync-data`, `npm run sync-huts`, `npm run verify-huts`,
+  `npm run verify-data`, `npm run verify-canonical`, `npm run verify-pwa-content`,
+  `npm run verify-personal-huts` and `npm run verify-security`: passed.
+- `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify-repository-contract.ps1`
+  from the repository root: passed.
+- The two JSON schema commands in `.github/workflows/validate-data.yml`, using
+  `ajv-cli@5.0.0`: passed.
+- `npm run build`: the full Next/Serwist build passed (1,009 static pages).
+- `npm run build:cloudflare`: the complete local OpenNext worker build passed.
+- Generated `public/sw.js` contains both planner precache URLs with the same
+  content-derived revision. The worker and generated reports stay out of the PR.
+
+Browser checks covered combined Vienna/bouldering filters, save/reload/access
+notes, backup restore with synthetic data, selected printing excluding private
+notes, full-calendar Royal Flash lookup, keyboard focus and 320 px narrow reflow.
+The built Cloudflare worker was also checked locally: the focused default,
+All competitions, full-calendar/return navigation and the single viewport frame
+worked, with no captured browser errors. The HTML is byte-identical to the
+accepted local preview (SHA-256
+`d59cfa6029fdcfedc0385b5908d7019875619cde7cb3637a80c71af858da27c9`).
+
+Physical-device, screen-reader and an installed-app update from the deployed
+version remain owner release checks. This is targeted accessibility testing.
+The PR is for review only; the owner tests and merges manually. No deployment
+is requested as part of preparing the PR.
