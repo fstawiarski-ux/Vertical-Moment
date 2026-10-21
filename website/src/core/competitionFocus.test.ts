@@ -1,0 +1,27 @@
+import {readFileSync} from 'node:fs';
+import {resolve} from 'node:path';
+import {runInNewContext,Script} from 'node:vm';
+import {describe,it,expect} from 'vitest';
+const html=readFileSync(resolve(process.cwd(),'public/explore-app/planner-content.html'),'utf8');
+const scripts=[...html.matchAll(/<script([^>]*)>([\s\S]*?)<\/script>/g)];
+const raw=JSON.parse(scripts.find(s=>s[1].includes('application/json'))![2]);
+const original=structuredClone(raw.cal);
+const code=scripts.find(s=>!s[1].includes('application/json'))![2];
+const part=(a:string,b:string)=>code.split(a)[1].split(b)[0];
+const domain=runInNewContext(part('/* PF_RESEARCH_START */','/* PF_RESEARCH_END */')+'\n'+part('/* PF_DOMAIN_START */','/* PF_DOMAIN_END */')+'\n;({pfMatch,pfRecommend,pfClimbing,pfCleanFilters,pfBounds,pfNorm})',{D:raw,Date,Intl,Map,Set}) as any;
+const now='2026-10-21',base={...domain.pfCleanFilters(null),view:'all'};
+const rows=(f:Record<string,string>={})=>raw.cal.filter((c:any)=>domain.pfMatch(c,{...base,...f},now));
+const by=(n:number)=>raw.cal.find((c:any)=>c.n===n);
+describe('competition photography focus',()=>{
+ it('keeps a single self-contained data block and valid application code',()=>{expect(scripts).toHaveLength(2);expect(()=>new Script(code)).not.toThrow();expect(html).not.toContain('<script src=');});
+ it('retains every original record ID and adds just Royal Flash',()=>{expect(original).toHaveLength(3185);expect(raw.cal).toHaveLength(3186);expect(new Set(raw.cal.map((c:any)=>c.n)).size).toBe(3186);for(const c of original)expect(by(c.n)).toBeDefined();expect(by(9000).ev).toBe('Royal Flash 4.0');expect(raw.coverage.totalListings).toBe(3186);});
+ it('leaves unrelated research records intact',()=>{const changed=new Set([38,43,49,50,53,65,68,80,83,85,88,91,92,111,112]);for(const c of original)if(!changed.has(c.n))expect(by(c.n)).toEqual(c);});
+ it('includes hobby and team competitions without including photo awards',()=>{expect(rows().some((c:any)=>c.n===43)).toBe(true);expect(rows().some((c:any)=>c.n===85)).toBe(true);expect(rows().some((c:any)=>c.n===9000)).toBe(true);expect(rows().every((c:any)=>c.disciplines.some((d:string)=>['rope','boulder'].includes(d)))).toBe(true);expect(rows()).toHaveLength(15);});
+ it('combines location, discipline and dates',()=>{const found=rows({place:'vienna',discipline:'boulder'});expect(found).toHaveLength(5);expect(found.every((c:any)=>c.states.includes('Wien')&&c.disciplines.includes('boulder'))).toBe(true);expect(rows({place:'vienna',discipline:'boulder',to:'2026-11-10'}).map((c:any)=>c.n).sort()).toEqual([43,53]);});
+ it('includes mixed age championships in the junior filter',()=>{const found=rows({audience:'junior'}).map((c:any)=>c.n);for(const id of [38,65,83,49,50,91])expect(found).toContain(id);expect(found).toHaveLength(6);});
+ it('groups Innsbruck for reading while preserving both source sessions',()=>{expect(domain.pfClimbing(by(80))).toBe(false);expect(by(83).s).toBe('2026-11-22');expect(by(83).photo.related).toEqual([80]);expect(rows({from:'2026-11-21',to:'2026-11-21',audience:'junior'}).map((c:any)=>c.n)).toContain(83);});
+ it('finds accented venues and multiple search words',()=>{expect(rows({q:'burs'}).map((c:any)=>c.n)).toEqual([50]);expect(rows({q:'vienna halloween'}).map((c:any)=>c.n)).toEqual([43]);});
+ it('does not retain past events in upcoming recommendations',()=>{const eligible=raw.cal.filter((c:any)=>domain.pfMatch(c,base,'2026-11-01'));expect(eligible.some((c:any)=>c.n===38||c.n===43)).toBe(false);expect(Array.from(domain.pfRecommend(rows()),(c:any)=>c.n)).toEqual([38,43,53]);});
+ it('rejects reversed date intervals and cleans invalid filter values',()=>{expect(rows({from:'2026-11-30',to:'2026-11-01'})).toHaveLength(0);const clean=domain.pfCleanFilters({place:'not-a-place',view:'x',when:'y',discipline:'x',from:'wrong',audience:'x'});expect({...clean}).toEqual({...domain.pfCleanFilters(null)});});
+ it('updates shared catalogue counts after applying sourced corrections',()=>{expect(raw.coverage.byCountry.AT).toBe(2612);expect(by(9000).sourceKey).toBe('boulderbar:royal-flash-2026-11-14');expect(by(9000).time).toContain('19:00');expect(by(43).u).toContain('team-spirit-halloween-edition-2026');});
+});
