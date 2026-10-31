@@ -61,7 +61,7 @@
     "sharp": "^0.35.5",
     "typescript": "^5.5.4",
     "vitest": "^4.1.11",
-    "wrangler": "^4.148.0"
+    "wrangler": "^4.156.0"
   },
   "overrides": {
     "nanoid": "^3.3.18",
