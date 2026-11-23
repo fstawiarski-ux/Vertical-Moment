@@ -14,7 +14,12 @@ type Event = {
   sources: { url: string }[];
 };
 type Filter = Record<string, string | boolean>;
+type Organiser = { id: string; name: string };
 type Domain = {
+  vmOrganiserRecords: (state: Record<string, unknown>, builtIns: Organiser[]) => Organiser[];
+  vmOrganiserLinkKey: (n: number, id: string) => string;
+  vmLinkedOrganiserIds: (n: number, state: Record<string, unknown>, records: Organiser[]) => string[];
+  vmOrganiserEventNumbers: (id: string, state: Record<string, unknown>) => number[];
   vmMatches: (event: Event, filter: Filter, now: string) => boolean;
   vmOnDay: (event: Event, day: string) => boolean;
   vmInMonth: (event: Event, first: string, last: string) => boolean;
@@ -39,7 +44,9 @@ function section(start: string, end: string) {
 const domain = runInNewContext(
   section("/* VM_DOMAIN_START */", "/* VM_DOMAIN_END */") + "\n" +
   section("/* VM_EXPANDED_DOMAIN_START */", "/* VM_EXPANDED_DOMAIN_END */") +
-  ";({vmMatches,vmOnDay,vmInMonth,vmICS,vmUncertain,vmValidDate,vmSafeURL,vmCSVCell,vmCleanState})",
+  "\n" + section("/* VM_ORGANISER_DOMAIN_START */", "/* VM_ORGANISER_DOMAIN_END */") +
+  ";({vmMatches,vmOnDay,vmInMonth,vmICS,vmUncertain,vmValidDate,vmSafeURL,vmCSVCell,vmCleanState," +
+  "vmOrganiserRecords,vmOrganiserLinkKey,vmLinkedOrganiserIds,vmOrganiserEventNumbers})",
   { Date, URL, TextEncoder },
 ) as Domain;
 const now = "2026-10-15";
@@ -129,6 +136,58 @@ describe("embedded mountain calendar", () => {
     expect(domain.vmOnDay(festival, "2027-01-24")).toBe(true);
     expect(domain.vmOnDay(festival, "2027-01-25")).toBe(false);
     expect(domain.vmMatches(festival, { from: "2027-01-24", to: "2027-01-24", setting: "outdoor" }, now)).toBe(true);
+  });
+
+  it("matches a continuous event when the chosen date window includes a weekend", () => {
+    const event = { ...byNumber(9107), scheduleType: "continuous", s: "2027-01-22", e: "2027-01-25" };
+    const filter = { scope: "AT", period: "upcoming", weekends: true };
+    expect(domain.vmMatches(event, { ...filter, to: "2027-01-22" }, now)).toBe(false);
+    expect(domain.vmMatches(event, { ...filter, from: "2027-01-23", to: "2027-01-23" }, now)).toBe(true);
+    expect(domain.vmMatches(event, { ...filter, from: "2027-01-24", to: "2027-01-24" }, now)).toBe(true);
+    expect(domain.vmMatches(event, filter, "2027-01-25")).toBe(false);
+  });
+
+  it("uses only published series dates for the weekend filter", () => {
+    const series = { ...byNumber(9107), scheduleType: "series", s: "2027-01-22", e: "2027-01-31" };
+    const filter = { scope: "AT", period: "upcoming", weekends: true };
+    expect(domain.vmMatches(series, filter, now)).toBe(false);
+    const sessions = { ...series, sessionDates: ["2027-01-22", "2027-01-24", "2027-01-26"] };
+    expect(domain.vmMatches(sessions, filter, now)).toBe(true);
+    expect(domain.vmMatches(sessions, { ...filter, from: "2027-01-25" }, now)).toBe(false);
+    expect(domain.vmMatches(sessions, filter, "2027-01-25")).toBe(false);
+    expect(domain.vmMatches({ ...series, s: "2027-01-23" }, filter, now)).toBe(true);
+  });
+
+  it("loads personal organiser bookmarks from backup without allowing unsafe links", () => {
+    const id = "personal-" + "a".repeat(32);
+    const backup = domain.vmCleanState({
+      ["photo:organiser:" + id]: {
+        name: "  Print studio  ", group: "unknown", url: "javascript:void(0)", email: "studio@example.org",
+      },
+      "photo:organiser:invalid": { name: "Ignore" },
+    });
+    const records = domain.vmOrganiserRecords(backup, []);
+    expect(records).toHaveLength(1);
+    expect(records[0]).toMatchObject({ id, name: "Print studio", group: "other", url: null, email: "studio@example.org" });
+    expect(domain.vmOrganiserRecords({}, [])).toEqual([]);
+  });
+
+  it("uses stable event and organiser IDs for distinct links across backup and edits", () => {
+    const id = "personal-" + "a".repeat(32);
+    const second = "personal-" + "b".repeat(32);
+    const booking = {
+      ["photo:organiser:" + id]: { name: "Edited studio" },
+      ["photo:organiser:" + second]: { name: "Climbing club" },
+      [domain.vmOrganiserLinkKey(9107, id)]: true,
+      [domain.vmOrganiserLinkKey(9140, id)]: true,
+      [domain.vmOrganiserLinkKey(9107, second)]: true,
+      ["photo:organiser-link:bad:" + id]: true,
+    };
+    const state = domain.vmCleanState(JSON.parse(JSON.stringify(booking)));
+    const records = domain.vmOrganiserRecords(state, []);
+    expect(domain.vmLinkedOrganiserIds(9107, state, records)).toEqual([second, id]);
+    expect(domain.vmLinkedOrganiserIds(9140, state, records)).toEqual([id]);
+    expect(domain.vmOrganiserEventNumbers(id, state)).toEqual([9107, 9140]);
   });
 
   it("excludes unsettled dates from checked-date filters and ICS", () => {

@@ -480,6 +480,47 @@ table{font-size:14px}th{font-size:13px}td,th{padding:13px;vertical-align:top}
  .vm-export[open]>div{position:static;min-width:0;margin-top:4px}
 }
 @media print{.vm-bookmark-filters,.vm-bookmark-actions{display:none!important}}
+.vm-bookmark-tools,.vm-link-organiser-actions{display:flex;align-items:end;flex-wrap:wrap;gap:8px}
+.vm-link-organiser-actions>.vm-field{flex:1 1 220px}
+.vm-link-organiser-actions select{min-height:44px}
+.vm-link-organiser-actions button:disabled{opacity:.55;cursor:default}
+.vm-shoot-organisers{border-top:1px solid var(--line);padding-top:12px}
+.vm-shoot-organisers h3,.vm-shoot-organisers h4{margin-top:0}
+.vm-linked-organisers{list-style:none;padding:0!important;margin:6px 0 10px!important}
+.vm-linked-organisers li{display:flex;justify-content:space-between;align-items:start;gap:10px;padding:7px 0}
+.vm-linked-contact{min-width:0;overflow-wrap:anywhere}
+.vm-linked-contact>a{display:block}
+.vm-organiser-note{white-space:pre-wrap}
+.vm-bookmark-shoots ul{padding-left:20px;font-size:14px;overflow-wrap:anywhere}
+@media print{.vm-shoot-organisers,.vm-bookmark-shoots{display:none!important}}
+
+/* Desktop Planner uses the full frame and keeps event rows easy to scan. */
+.vm-overview{display:grid;gap:24px}
+.vm-overview-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.vm-overview-link{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:12px;min-width:0}
+.vm-overview-link button{width:100%;justify-content:flex-start;text-align:left}
+.vm-overview-link p,.vm-overview-status{margin:8px 0 0;font-size:14px;color:var(--muted)}
+.vm-overview-status{margin-top:16px}
+.vm-section-header{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:12px}
+.vm-section-header h2{margin:0}
+.vm-overview-actions>h2{margin:0 0 12px}
+@media(max-width:520px){.vm-overview-links{grid-template-columns:1fr}}
+@media screen and (min-width:1201px){
+ body.pf-legacy #pf-legacy-return{height:60px;display:flex;align-items:center;padding:7px 22px}
+ body.pf-legacy .app{min-height:calc(100dvh - 60px)}
+ body.pf-legacy nav.rail{top:60px;height:calc(100dvh - 60px);overscroll-behavior:contain}
+ body.pf-legacy #main{max-width:none;padding:28px clamp(22px,2vw,48px) 52px}
+ .vm-event-grid,.vm-contact-grid{grid-template-columns:repeat(auto-fill,minmax(340px,1fr))}
+ .vm-overview{grid-template-columns:minmax(330px,5fr) minmax(0,7fr);gap:clamp(22px,2.2vw,52px)}
+ #vm-results .vm-list .vm-event-compact{position:relative;padding-bottom:14px}
+ #vm-results .vm-list .vm-event-body{padding-inline-end:220px}
+ #vm-results .vm-list .vm-details{margin:0;border:0}
+ #vm-results .vm-list .vm-details>summary{position:absolute;inset-block-start:12px;inset-inline-end:16px;max-width:200px}
+ #vm-results .vm-list .vm-detail-content{padding-top:12px;margin:12px 0 0;border-top:1px solid var(--line)}
+ #vm-results .vm-detail-content{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,2.5vw,48px)}
+ #vm-results .vm-event-information,#vm-results .vm-event-planning{min-width:0;max-width:85ch}
+ #vm-results .vm-event-grid>.vm-event-compact:has(.vm-details[open]){grid-column:1/-1}
+}
 
 </style>
 <style id="competition-focus-style">
@@ -556,6 +597,7 @@ body:not(.pf-legacy)>.app,body:not(.pf-legacy)>.skip-calendar{display:none!impor
 #photo-focus .pf-details>summary:after{content:"+";font-size:18px}
 #photo-focus .pf-details[open]>summary:after{content:"−"}
 #photo-focus .pf-detail-body{border-top:1px solid #e1e7e2;padding:13px 0 10px;display:grid;gap:12px;font-size:15px;line-height:1.55}
+#photo-focus .pf-detail-info,#photo-focus .pf-detail-plan{display:grid;align-content:start;gap:12px;min-width:0}
 #photo-focus .pf-detail-body h4{font-size:13px;margin:0 0 6px;color:#173d34}
 #photo-focus .pf-detail-body p{margin:0 0 6px}
 #photo-focus .pf-detail-body ul{padding-left:18px;margin:0}
@@ -588,6 +630,16 @@ body:not(.pf-legacy)>.app,body:not(.pf-legacy)>.skip-calendar{display:none!impor
 #photo-focus .pf-grid,#photo-focus[data-view=all] .pf-grid,#photo-focus[data-view=saved] .pf-grid{grid-template-columns:1fr}
 #photo-focus .pf-card{padding:14px 15px 6px}#photo-focus .pf-card h3{font-size:20px}#photo-focus .pf-footer{display:block}
 #photo-focus .pf-footer p{margin:0 0 8px}#pf-legacy-return span{display:none}
+}
+@media screen and (min-width:1201px){
+ #photo-focus{padding-inline:clamp(24px,2.25vw,58px)}
+ #photo-focus .pf-wrap{max-width:none}
+ #photo-focus[data-view=all] .pf-grid,#photo-focus[data-view=saved] .pf-grid{
+  grid-template-columns:repeat(auto-fill,minmax(330px,1fr))
+ }
+ #photo-focus .pf-card:has(.pf-details[open]){grid-column:1/-1}
+ #photo-focus .pf-detail-body{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,3vw,60px)}
+ #photo-focus .pf-detail-info,#photo-focus .pf-detail-plan{max-width:85ch}
 }
 @media(max-width:460px){#photo-focus .pf-top,#photo-focus .pf-top-actions{flex-wrap:wrap}#photo-focus .pf-top-actions{margin-left:auto}}
 @media(prefers-reduced-motion:reduce){#photo-focus *{scroll-behavior:auto!important;transition:none!important}}
@@ -917,7 +969,7 @@ const chip=t=>h('span',{class:'chip '+(t==='A'||t==='B'||t==='C'?t:'x')},t);
 function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove('on'),1800)}
 /* ---------- tabs ---------- */
 const TABS=[
- ['Plan',[['Start Here','#DCE4EA'],['Overview','#DCE4EA'],['Weekend Picks','#F9A66C'],['Calendar','#F9A66C'],['Pitch Tracker','#F9A66C']]],
+ ['Plan',[['Overview','#DCE4EA'],['Calendar','#F9A66C'],['Pitch Tracker','#F9A66C']]],
  ['Vienna area',[['Gym Directory','#A5D8FF'],['Courses & Workshops','#A5D8FF'],['Portfolio Leads','#A5D8FF']]],
  ['Alpine Austria',[['Alpine Regions','#8FBF8F'],['Alpine Halls','#8FBF8F'],['Association & Courses','#8FBF8F'],['2027 Season Map','#8FBF8F']]],
  ['Climbing hub',[['Climbing Resources','#74C9B5'],['Crag index','#74C9B5'],['Trip planner','#74C9B5']]],
@@ -1001,10 +1053,6 @@ V['Overview']=()=>{const main=document.getElementById('main');
     h('li',{text:'Pitch Tracker: who to contact, what to ask for, and when. Rows turn amber when a pitch is due within 14 days.'}),
     h('li',{text:'Sources & Contacts lists every link and email used.'})));
   main.append(h('h2',{text:'Assumptions and changes vs. the original PDF'}),h('ul',{class:'notes'},D.ov.assump.map(a=>h('li',{text:a}))))};
-V['Weekend Picks']=()=>{const main=document.getElementById('main');
-  main.append(h('h1',{text:'Weekend picks'}),h('p',{class:'sub',text:'One suggested plan per weekend, with alternatives and travel notes. Confirm dates, travel and access before booking.'}));
-  const rows=D.wk.map(r=>h('tr',null,h('td',{'data-l':'Date(s)'},h('b',{text:r[0]})),h('td',{'data-l':'Pick'},h('b',{text:r[1]})),h('td',{'data-l':'Why'},r[2]),h('td',{'data-l':'Alternatives'},r[3]),h('td',{'data-l':'Travel'},r[4])));
-  main.append(table(['Date(s)','Suggested pick','Why','Alternatives','Travel note'],rows),h('p',{class:'mini',style:'margin-top:12px',text:D.wknote}))};
 V['Calendar']=()=>{const main=document.getElementById('main');
   main.append(h('h1',{text:'Calendar'}),h('p',{class:'sub',text:'110 events. Use List to sort and open details, or Month to see the events laid out on a calendar.'}));
   const f={q:'',tier:'',co:'',trip:'',type:'',yp:false,hide:false,sort:'s',dir:1,view:'list',month:null,sel:null};
@@ -1788,7 +1836,7 @@ function initializeV3(){
  updateChrome();
 }
 /* ---------- render ---------- */
-function render(){const main=document.getElementById('main');main.textContent='';(V[cur]||V['Start Here'])();document.title=cur+' · Climbing Photo Field Calendar'}
+function render(){const main=document.getElementById('main');main.textContent='';(V[cur]||V['Overview'])();document.title=cur+' · Climbing Photo Field Calendar'}
 document.getElementById('theme').addEventListener('click',()=>{const r=document.documentElement;const dark=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;r.dataset.theme=dark?'light':'dark'});
 document.getElementById('reset').addEventListener('click',()=>{if(confirm(tr('Clear all statuses, dates and notes you entered? This cannot be undone.'))){S={};persist();render();toast(tr('Entries cleared'))}});
 /* ---------- Field Day merge: React flow adapted to this one-file hub ---------- */
@@ -2094,7 +2142,7 @@ function vmSelect(label,options,value,onChange){const el=h('select',{'aria-label
 function vmPitchName(c){const old=D.pt.find(p=>Number(p.cal)===Number(c.n));return old?old.name:c.ev}
 function vmContacts(c){const arr=[...(c.contacts||[])],manual=vmEmail(S['cal:'+c.n+':email']);if(manual)arr.unshift({name:'Your contact email',email:manual,scope:'Saved by you'});return arr}
 function vmSorted(rows,sort){return rows.slice().sort((a,b)=>{if(sort==='priority'&&a.tier!==b.tier)return a.tier.localeCompare(b.tier);if(sort==='name')return a.ev.localeCompare(b.ev);return (a.s||'9999-12-31').localeCompare(b.s||'9999-12-31')||a.ev.localeCompare(b.ev)})}
-let vmDefaults=()=>({scope:'AT',country:'',discipline:'',kind:'',setting:'',audience:'',tier:'',period:'upcoming',from:'',to:'',verified:false,q:'',sort:'date',view:'list',month:vmToday().slice(0,7),day:''});
+let vmDefaults=()=>({scope:'AT',country:'',discipline:'',kind:'',setting:'',audience:'',tier:'',period:'upcoming',from:'',to:'',verified:false,weekends:false,q:'',sort:'date',view:'list',month:vmToday().slice(0,7),day:''});
 let vmFilter={...vmDefaults(),...(S['planner:filters:v4']||{})};
 if(!['cards','list','month'].includes(vmFilter.view))vmFilter.view=vmDefaults().view;
 function vmRows(f){return vmSorted(CAL.filter(c=>vmMatches(c,f,vmToday())),f.sort)}
@@ -2121,49 +2169,49 @@ function vmEvent(c){
  return root;
 }
 function vmEventDetails(c,series,uncertain){
- const contacts=vmContacts(c),pname=vmPitchName(c),content=h('div',{class:'vm-detail-content'});
+ const contacts=vmContacts(c),pname=vmPitchName(c),information=h('div',{class:'vm-event-information'});
  const sourceLabel=c.custom?'Source website':c.checked?'Official website':'Original source';
  const evidence=[...(c.sources||[])];
  if(c.u&&!evidence.some(x=>x.url===c.u))evidence.unshift({label:sourceLabel,url:c.u});
  const actions=h('div',{class:'vm-event-actions'},c.u?vmLink(c.u,sourceLabel,'vm-button'):null);
  if(c.address||c.venue)actions.append(vmLink('https://www.google.com/maps/search/?api=1&query='+encodeURIComponent([c.address||c.venue,c.city,VM_COUNTRY[c.co]||c.co].filter(Boolean).join(', ')),'Map','vm-button'));
- if(actions.childElementCount)content.append(actions);
- content.append(h('h3',null,'Venue & timetable'),h('p',null,c.address||c.venue||'Exact venue to confirm'));
- for(const value of [c.time,c.programme,c.cav,c.notes])if(value)content.append(h('p',null,value));
- if(series&&c.e)content.append(h('p',null,tr('Published end')+' '+range(c.e)));
- if(c.sessionDates?.length)content.append(h('p',null,tr('Published sessions')+' '+c.sessionDates.map(d=>range(d)).join(' · ')));
- else if(series)content.append(h('p',null,'Check individual session dates on the source.'));
- if(c.previousDate)content.append(h('p',null,'Previous date: '+range(c.previousDate)+'. New date pending.'));
- if(c.dr!=null)content.append(h('p',{class:'mini'},'Travel estimate from the original planner: '+c.dr+' h each way'+(c.km!=null?' · '+c.km+' km straight-line distance':'')+'. Check the route before travelling.'));
- content.append(h('div',{class:'vm-tags'},vmTag(tr('Priority')+' '+c.tier),
+ if(actions.childElementCount)information.append(actions);
+ information.append(h('h3',null,'Venue & timetable'),h('p',null,c.address||c.venue||'Exact venue to confirm'));
+ for(const value of [c.time,c.programme,c.cav,c.notes])if(value)information.append(h('p',null,value));
+ if(series&&c.e)information.append(h('p',null,tr('Published end')+' '+range(c.e)));
+ if(c.sessionDates?.length)information.append(h('p',null,tr('Published sessions')+' '+c.sessionDates.map(d=>range(d)).join(' · ')));
+ else if(series)information.append(h('p',null,'Check individual session dates on the source.'));
+ if(c.previousDate)information.append(h('p',null,'Previous date: '+range(c.previousDate)+'. New date pending.'));
+ if(c.dr!=null)information.append(h('p',{class:'mini'},'Travel estimate from the original planner: '+c.dr+' h each way'+(c.km!=null?' · '+c.km+' km straight-line distance':'')+'. Check the route before travelling.'));
+ information.append(h('div',{class:'vm-tags'},vmTag(tr('Priority')+' '+c.tier),
   (c.disciplines||['unknown']).map(x=>vmTag(VM_DISC[x]||x,x)),
   vmTag(VM_SETTING[c.setting]||'Setting to confirm'),
   ...(c.topics||[]).filter(t=>VM_TOPICS[t]).map(t=>vmTag(VM_TOPICS[t]))));
  const meta=[c.bookingCode?tr('Group / code')+' '+c.bookingCode:null,c.state,c.locationConfidence].filter(Boolean).join(' · ');
- if(meta)content.append(h('p',{class:'mini'},meta));
- if(c.sourceStatus)content.append(h('p',{class:'vm-availability'},'Organiser status at research: '+c.sourceStatus+'. Recheck current availability.'));
- if(c.co==='UNKNOWN')content.append(h('p',{class:'vm-date-warning'},'Country / destination not established. This listing is not counted as an Austrian event.'));
- content.append(h('h3',null,'Photography access'),h('p',null,c.mediaNote||'Ask the organiser about photography and portfolio use. No independent media access has been confirmed.'));
- content.append(h('h3',null,'Contacts'));
- if(contacts.length)content.append(h('ul',null,contacts.map(x=>h('li',null,h('strong',null,x.name||'Contact'),
+ if(meta)information.append(h('p',{class:'mini'},meta));
+ if(c.sourceStatus)information.append(h('p',{class:'vm-availability'},'Organiser status at research: '+c.sourceStatus+'. Recheck current availability.'));
+ if(c.co==='UNKNOWN')information.append(h('p',{class:'vm-date-warning'},'Country / destination not established. This listing is not counted as an Austrian event.'));
+ information.append(h('h3',null,'Photography access'),h('p',null,c.mediaNote||'Ask the organiser about photography and portfolio use. No independent media access has been confirmed.'));
+ information.append(h('h3',null,'Contacts'));
+ if(contacts.length)information.append(h('ul',null,contacts.map(x=>h('li',null,h('strong',null,x.name||'Contact'),
   vmEmail(x.email)?h('div',null,h('a',{href:'mailto:'+x.email},x.email)):null,
   x.phone?h('div',null,h('a',{href:'tel:'+x.phone.replace(/[^+\d]/g,'')},x.phone)):null,
   h('small',null,x.scope||''),x.source?vmLink(x.source,'Contact source'):null,x.checked?h('small',null,'Contact checked '+x.checked):null))));
- else content.append(h('p',null,c.contact||'Contact details on the source page'));
- content.append(h('h3',null,'Source evidence'));
+ else information.append(h('p',null,c.contact||'Contact details on the source page'));
+ information.append(h('h3',null,'Source evidence'));
  const checked=c.custom?'Personal event':c.checked?tr(uncertain?'Source checked':'Date source checked')+' '+c.checked:'Original listing · recheck date';
- content.append(h('p',{class:'vm-source-state'+(c.checked&&!uncertain?' vm-verified':'')},checked));
- if(evidence.length)content.append(h('ul',null,evidence.map(x=>h('li',null,vmLink(x.url,x.label||'Source')))));
- if(c.classificationNote)content.append(h('p',{class:'mini'},c.classificationNote));
+ information.append(h('p',{class:'vm-source-state'+(c.checked&&!uncertain?' vm-verified':'')},checked));
+ if(evidence.length)information.append(h('ul',null,evidence.map(x=>h('li',null,vmLink(x.url,x.label||'Source')))));
+ if(c.classificationNote)information.append(h('p',{class:'mini'},c.classificationNote));
  const conflicts=c.s?CAL.filter(x=>x.n!==c.n&&x.checked&&!vmUncertain(x)&&x.co===c.co&&vmOnDay(x,c.s)).slice(0,4):[];
- if(conflicts.length)content.append(h('h3',null,'Other verified events on these dates'),h('ul',null,conflicts.map(x=>h('li',null,vmLink(x.u,x.ev+' · '+x.city)))));
- content.append(h('h3',null,'Your planning notes'),
+ if(conflicts.length)information.append(h('h3',null,'Other verified events on these dates'),h('ul',null,conflicts.map(x=>h('li',null,vmLink(x.u,x.ev+' · '+x.city)))));
+ const plan=h('div',{class:'vm-event-planning'},vmShootOrganisers(c),h('h3',null,'Your planning notes'),
   h('div',{class:'vm-tracking'},vmField('My event status',sel('cal:'+c.n+':status',STAT,'Not started','Event status: '+c.ev)),vmField('Photos / delivery',sel('cal:'+c.n+':deliv',DELIV,'Not shot','Photo delivery: '+c.ev))),
   h('div',{class:'vm-personal-fields'},vmField('Pitch status',sel('pt:'+pname+':status',PSTAT,'Not started','Pitch status: '+c.ev)),
    vmLocalField('pt:'+pname+':sent','Date sent','date'),vmLocalField('pt:'+pname+':reply','Reply / outcome','text'),
    vmLocalField('cal:'+c.n+':email','Your contact email','email','Optional email you have confirmed yourself'),
    vmLocalField('cal:'+c.n+':notes','Your planning notes','textarea','Light, equipment, story idea or follow-up…')));
- return content;
+ return h('div',{class:'vm-detail-content'},information,plan);
 }
 function vmOpenCalendar(patch){vmFilter={...vmDefaults(),...patch};vmStoreFilters();go('Calendar')}
 function vmStats(){const now=vmToday(),at=CAL.filter(c=>c.co==='AT'&&c.s&&(c.e||c.s)>=now);const choices=[['Upcoming in Austria',at.length,{}],['Rope climbing',at.filter(c=>c.disciplines.includes('rope')).length,{discipline:'rope'}],['Outdoor opportunities',at.filter(c=>/^outdoor-/.test(c.setting)).length,{setting:'outdoor'}],['Verified dates',at.filter(c=>c.checked).length,{verified:true}]];return h('div',{class:'vm-dashboard'},choices.map(([label,n,f])=>h('button',{type:'button',class:'vm-stat',onclick:()=>vmOpenCalendar(f),'aria-label':tr(label)+': '+n},h('strong',null,String(n)),h('span',null,label))))}
@@ -2245,15 +2293,31 @@ function vmAddEvent(){
  });dialog.addEventListener('close',()=>dialog.remove(),{once:true});dialog.showModal();
 }
 V['Overview']=function(){
- vmHeader('Overview','Your climbing year, photo opportunities and outreach progress.');const main=document.getElementById('main');main.append(vmStats());const active=CAL.filter(c=>['Pitched','Confirmed'].includes(S['cal:'+c.n+':status'])||['Pitched','Replied','Confirmed'].includes(S['pt:'+vmPitchName(c)+':status']));
- main.append(h('div',{class:'vm-source-summary'},h('p',null,active.length+' events with active outreach · '+CAL.filter(c=>['Delivered','Published'].includes(S['cal:'+c.n+':deliv'])).length+' galleries delivered or published.')));
- main.append(h('h2',null,'Upcoming photo opportunities'),h('div',{class:'vm-event-grid'},vmRows(vmDefaults()).slice(0,6).map(c=>vmEvent(c))),vmButton('Open calendar',()=>go('Calendar')));
- main.append(h('h2',null,'Outdoor climbing'),h('div',{class:'vm-event-grid'},vmRows({...vmDefaults(),setting:'outdoor'}).slice(0,4).map(c=>vmEvent(c))));
-};
-V['Start Here']=function(){
- vmHeader('Your next climbing photo day','Choose an event, contact the organiser and keep your plans on this device.');const main=document.getElementById('main');main.append(vmStats(),h('div',{class:'vm-event-grid'},[
-  ['Calendar','Competitions, festivals, courses and community opportunities.'],['Pitch Tracker','Verified contacts, your request date and the reply.'],['Trip planner','Outdoor areas, routes, travel links and saved trip plans.'],['Sources & Contacts','Official websites, contact routes and source freshness.']
- ].map(([title,desc])=>h('article',{class:'vm-event'},h('h2',null,title),h('p',null,desc),vmButton('Open '+title,()=>go(title))))),h('div',{class:'vm-source-summary'},h('p',null,'Your personal notes stay in this browser. Export a backup to keep a copy or import it on another device. Source checks in this edition are marked 14–15 October 2026; original listings remain available for rechecking.')))
+ vmHeader('Planner overview','Find a shoot, organise outreach or plan a day in the mountains.');
+ const main=document.getElementById('main');
+ const active=CAL.filter(c=>['Pitched','Confirmed'].includes(S['cal:'+c.n+':status'])
+  ||['Pitched','Replied','Confirmed'].includes(S['pt:'+vmPitchName(c)+':status'])).length;
+ const delivered=CAL.filter(c=>['Delivered','Published'].includes(S['cal:'+c.n+':deliv'])).length;
+ const photoFilter={topic:'photography'};
+ const upcoming=vmRows({...vmDefaults(),...photoFilter}).slice(0,3);
+ const shortcuts=[
+  ['Competition photography',()=>pfShowFocus(),'Review recommended shoots and your shortlist.'],
+  ['Mountain calendar',()=>go('Calendar'),'Find events, courses and gear demos.'],
+  ['Weekend events',()=>vmOpenCalendar({weekends:true}),'Find published Saturday and Sunday dates.'],
+  ['Organisers & contacts',()=>go('Sources & Contacts'),'Manage bookmarks and event contacts.'],
+  ['Pitch tracker',()=>go('Pitch Tracker'),'Review enquiries and replies.'],
+  ['Trip planner',()=>go('Trip planner'),'Review outdoor areas and saved trips.']
+ ];
+ main.append(h('div',{class:'vm-overview'},
+  h('section',{class:'vm-overview-actions','aria-label':'Planning tools'},h('h2',null,'Planning tools'),
+   h('div',{class:'vm-overview-links'},shortcuts.map(([label,open,description])=>
+    h('div',{class:'vm-overview-link'},vmButton(label,open),h('p',null,description)))),
+   h('p',{class:'vm-overview-status'},active+' '+tr('active enquiries')+' · '+delivered+' '+tr('galleries delivered or published')),
+   h('p',{class:'mini'},'Plans and bookmarks stay in this browser. Export a backup to keep a copy.')),
+  h('section',{class:'vm-overview-upcoming','aria-label':'Upcoming photo opportunities'},
+   h('div',{class:'vm-section-header'},h('h2',null,'Upcoming photo opportunities'),
+    vmButton('Browse photography events',()=>vmOpenCalendar(photoFilter))),
+   upcoming.length?h('div',{class:'vm-list'},upcoming.map(vmEvent)):h('p',null,'No upcoming photography events are listed.'))));
 };
 V['Pitch Tracker']=function(){
  vmHeader('Pitch tracker','Track any event, including local community opportunities.');const main=document.getElementById('main');let q='',active=true;const search=h('input',{type:'search',placeholder:'Event, city, venue or contact','aria-label':'Search pitches'}),check=h('input',{type:'checkbox',checked:true}),results=h('div');
@@ -2262,10 +2326,6 @@ V['Pitch Tracker']=function(){
  function draw(){results.textContent='';const rows=vmSorted(CAL.filter(c=>{const p=vmPitchName(c),st=S['pt:'+p+':status']||'Not started';return (!active||st!=='Not started'||['Researching','Pitched','Confirmed'].includes(S['cal:'+c.n+':status']))&&(!q||[c.ev,c.city,...vmContacts(c).map(x=>x.email)].join(' ').toLowerCase().includes(q))}),'date');if(!rows.length){results.append(h('div',{class:'vm-empty'},h('h2',null,'No active pitches yet.'),h('p',null,'Set a pitch status in any event’s details, or browse all event opportunities.'),vmButton('Show all event opportunities',()=>{active=false;check.checked=false;draw()})));return}
   results.append(h('div',{class:'vm-event-grid'},rows.map(c=>{const p=vmPitchName(c),contacts=vmContacts(c),legacy=D.pt.find(x=>Number(x.cal)===Number(c.n)),card=h('article',{class:'vm-pitch-card'},h('h2',null,c.ev),h('p',{class:'mini'},c.s?range(c.s,c.e):'New date pending'),h('p',null,[c.city,c.venue].filter(Boolean).join(' · ')));if(contacts.length)card.append(h('ul',null,contacts.map(x=>h('li',null,x.name,vmEmail(x.email)?h('div',null,h('a',{href:'mailto:'+x.email},x.email)):null,h('small',null,x.scope)))));else card.append(h('p',null,c.contact||legacy?.who||'Contact details on the source page'));if(c.u)card.append(vmLink(c.u,'Official website','vm-button'));card.append(h('div',{class:'vm-personal-fields'},vmField('Pitch status',sel('pt:'+p+':status',PSTAT,'Not started','Pitch status: '+c.ev)),vmLocalField('pt:'+p+':sent','Date sent','date'),vmLocalField('pt:'+p+':reply','Reply / outcome','text'),vmLocalField('pt:'+p+':notes','Notes','textarea')));return card})))
  }draw();
-};
-V['Weekend Picks']=function(){
- vmHeader('Weekend photo opportunities','Upcoming Austrian events grouped by weekend. Choose the story and travel that suit you.');const main=document.getElementById('main'),groups=new Map();for(const c of vmRows(vmDefaults())){if(!c.s)continue;const d=pd(c.s);if(d.getDay()!==0&&d.getDay()!==6)continue;const sat=new Date(d.getFullYear(),d.getMonth(),d.getDate()-(d.getDay()===0?1:0)),key=vmDateKey(sat);if(!groups.has(key))groups.set(key,[]);groups.get(key).push(c)}
- for(const [key,events]of [...groups].slice(0,8)){main.append(h('h2',null,range(key,vmNextISO(key))),h('div',{class:'vm-event-grid'},events.map(c=>vmEvent(c))))}
 };
 const vmLegacySources=V['Sources & Contacts'];
 V['Sources & Contacts']=function(){
@@ -2279,7 +2339,14 @@ V['Sources & Contacts']=function(){
  const sourceDetails=h('details',{class:'vm-details'},h('summary',null,'All source websites ('+allSources.size+')'),h('div',{class:'vm-detail-content'},h('ul',null,[...allSources.values()].map(r=>h('li',null,vmLink(r.url,r.name),h('small',null,r.checked?'Checked '+r.checked:'Original source; not rechecked in this edition'))))));main.append(sourceDetails);
 };
 const vmOldChrome=updateChrome;updateChrome=function(){vmOldChrome();const brand=document.querySelector('.brand');if(brand&&brand.firstChild)brand.firstChild.nodeValue='VERTICAL MOMENT';const small=brand?.querySelector('small');if(small)small.textContent=tr('Climbing calendar')+' · 2026–27';const reset=document.getElementById('reset');if(reset)reset.textContent=tr('Clear tracking')};
-const vmBaseGo=go;go=function(n){vmBaseGo(n);document.getElementById('main').focus({preventScroll:true});document.querySelector('nav.rail')?.classList.remove('vm-nav-open');document.getElementById('vm-nav-toggle')?.setAttribute('aria-expanded','false')};
+function vmPlannerView(name){
+ if(name==='Weekend Picks'){
+  vmFilter={...vmDefaults(),view:vmFilter.view,weekends:true};
+  return 'Calendar';
+ }
+ return name==='Start Here'?'Overview':name;
+}
+const vmBaseGo=go;go=function(n){vmBaseGo(vmPlannerView(n));document.getElementById('main').focus({preventScroll:true});document.querySelector('nav.rail')?.classList.remove('vm-nav-open');document.getElementById('vm-nav-toggle')?.setAttribute('aria-expanded','false')};
 const vmBaseSaveText=setSaveText;setSaveText=function(){vmBaseSaveText();let warning=document.getElementById('vm-save-warning');if(saveProblem){if(!warning){warning=h('aside',{id:'vm-save-warning',class:'vm-source-summary',role:'alert'});document.getElementById('main')?.prepend(warning)}warning.textContent=tr(saveProblem)}else warning?.remove()};
 const vmBaseRender=render;render=function(){vmBaseRender();if(saveProblem)setSaveText()};
 function vmInitialize(){
@@ -2289,9 +2356,13 @@ function vmInitialize(){
  foot.append(vmButton('Export backup',vmBackup),vmButton('Import backup',()=>upload.click()),vmButton('Undo import / clear',vmUndo,{id:'vm-undo',disabled:!recovery}),upload,h('div',{class:'vm-backup-note'},'Save a backup before switching devices.'));
  const oldReset=document.getElementById('reset'),reset=vmButton('Clear tracking',()=>{if(!confirm('Clear event statuses, pitch replies and event notes? Trip plans and personal events will be kept. Export a backup first if you want a separate copy.'))return;vmRemember();for(const k of Object.keys(S))if(/^(cal:|pt:)/.test(k))delete S[k];persist();render();toast('Event tracking cleared')},{id:'reset'});oldReset.replaceWith(reset);
  const rail=document.querySelector('nav.rail'),menu=vmButton('Navigation',()=>{const open=rail.classList.toggle('vm-nav-open');menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',tr(open?'Close navigation':'Open navigation'))},{id:'vm-nav-toggle',class:'vm-nav-toggle','aria-expanded':'false','aria-controls':'tabs','aria-label':'Open navigation'});rail.prepend(menu);
- const photo=[['Calendar','#F9A66C'],['Sources & Contacts','#A5D8FF','Organisers & contacts'],['Pitch Tracker','#F9A66C'],['Weekend Picks','#F9A66C'],['Overview','#DCE4EA']];
- TABS.splice(0,TABS.length,['Photo planning',photo],['Outdoor climbing',[['Trip planner','#74C9B5'],['Crag index','#74C9B5'],['Field day','#C4A574'],['Climbing Resources','#74C9B5']]],['Directories',[['Gym Directory','#A5D8FF'],['Courses & Workshops','#A5D8FF'],['Portfolio Leads','#A5D8FF']]],['Austria through the year',[['2027 Season Map','#8FBF8F'],['Alpine Regions','#8FBF8F'],['Alpine Halls','#8FBF8F'],['Association & Courses','#8FBF8F']]],['Reference',[['Annual Cycle','#999999'],['Start Here','#DCE4EA']]]);
- const incoming=location.hash.slice(1),known=ALL.find(n=>slug(n)===incoming);cur=known||'Calendar';
+ const photo=[['Overview','#DCE4EA'],['Calendar','#F9A66C'],['Sources & Contacts','#A5D8FF','Organisers & contacts'],['Pitch Tracker','#F9A66C']];
+ TABS.splice(0,TABS.length,['Photo planning',photo],['Outdoor climbing',[['Trip planner','#74C9B5'],['Crag index','#74C9B5'],['Field day','#C4A574'],['Climbing Resources','#74C9B5']]],['Directories',[['Gym Directory','#A5D8FF'],['Courses & Workshops','#A5D8FF'],['Portfolio Leads','#A5D8FF']]],['Austria through the year',[['2027 Season Map','#8FBF8F'],['Alpine Regions','#8FBF8F'],['Alpine Halls','#8FBF8F'],['Association & Courses','#8FBF8F']]],['Reference',[['Annual Cycle','#999999']]]);
+ const incoming=location.hash.slice(1);
+ const legacy=new Map([['start-here','Start Here'],['weekend-picks','Weekend Picks']]);
+ const known=ALL.find(n=>slug(n)===incoming)||legacy.get(incoming);
+ cur=vmPlannerView(known||'Calendar');
+ if(known&&known!==cur)history.replaceState(null,'','#'+slug(cur));
  // Avoid duplicate stale fields captured by the browser's Save Page command.
  try{document.documentElement.dataset.theme=localStorage.getItem('climbplanner.theme.v4')||'light'}catch(e){document.documentElement.dataset.theme='light'}document.getElementById('theme').addEventListener('click',()=>{try{localStorage.setItem('climbplanner.theme.v4',document.documentElement.dataset.theme)}catch(e){}});
 }
@@ -2313,6 +2384,26 @@ function vmSearchMatches(query,fields){
  const text=normalize(fields.join(' '));
  return terms.every(term=>text.includes(term));
 }
+function vmWeekendDay(key){
+ const weekday=new Date(key+'T00:00:00Z').getUTCDay();
+ return weekday===0||weekday===6;
+}
+function vmWeekendBounds(f,now,first='',last='9999-12-31'){
+ return [[first,f.from||'',f.period==='upcoming'?now:''].sort().at(-1),[last,f.to||'9999-12-31'].sort()[0]];
+}
+function vmSeriesDates(c){return c.sessionDates?.length?c.sessionDates:[c.s]}
+function vmFirstWeekend(c,first,last){
+ if(!c.s)return '';
+ const start=c.s>first?c.s:first,end=c.e||c.s,limit=end<last?end:last;
+ if(start>limit)return '';
+ if(c.scheduleType==='series')return vmSeriesDates(c).filter(date=>date>=start&&date<=limit&&vmWeekendDay(date)).sort()[0]||'';
+ if(vmWeekendDay(start))return start;
+ const date=new Date(start+'T00:00:00Z');
+ if(!Number.isFinite(date.getTime()))return '';
+ date.setUTCDate(date.getUTCDate()+6-date.getUTCDay());
+ const saturday=date.toISOString().slice(0,10);
+ return saturday<=limit?saturday:'';
+}
 function vmUncertain(c){return /conflict|cancel|postpon|provisional|reconfirmation|unconfirmed/i.test(c.dateStatus||'')||/abgesagt|cancelled/i.test(c.sourceStatus||'')}
 function vmMatches(c,f,now){
  if(f.scope==='AT'&&c.co!=='AT'||f.scope==='other'&&['AT','UNKNOWN'].includes(c.co)||f.scope==='unknown'&&c.co!=='UNKNOWN')return false;
@@ -2325,11 +2416,12 @@ function vmMatches(c,f,now){
  const end=c.e||c.s;
  if(f.period==='upcoming'&&(!c.s||end<now||/cancelled/i.test(c.dateStatus||''))||f.period==='finished'&&(!c.s||end>=now)||f.period==='pending'&&c.s&&!vmUncertain(c))return false;
  if(f.from&&(!c.s||end<f.from)||f.to&&(!c.s||c.s>f.to))return false;
+ if(f.weekends===true&&!vmFirstWeekend(c,...vmWeekendBounds(f,now)))return false;
  if(f.q&&!vmSearchMatches(f.q,[c.ev,c.city,c.venue,c.address,c.region,c.state,c.organiser,c.bookingCode,c.notes,c.programme,c.cav,c.type,c.co,VM_COUNTRY[c.co],...(c.disciplines||[]).map(d=>VM_DISC[d]),...(c.topics||[]).map(t=>VM_TOPICS[t]),...(c.contacts||[]).flatMap(a=>[a.name,a.email,a.scope])]))return false;
  return true;
 }
-function vmOnDay(c,key){if(!c.s||/cancelled/i.test(c.dateStatus||''))return false;if(c.scheduleType==='series')return (c.sessionDates||[c.s]).includes(key);return c.s<=key&&(c.e||c.s)>=key}
-function vmInMonth(c,start,end){if(!c.s)return false;if(c.scheduleType==='series')return(c.sessionDates||[c.s]).some(d=>d>=start&&d<=end);return c.s<=end&&(c.e||c.s)>=start}
+function vmOnDay(c,key){if(!c.s||/cancelled/i.test(c.dateStatus||''))return false;if(c.scheduleType==='series')return vmSeriesDates(c).includes(key);return c.s<=key&&(c.e||c.s)>=key}
+function vmInMonth(c,start,end){if(!c.s)return false;if(c.scheduleType==='series')return vmSeriesDates(c).some(d=>d>=start&&d<=end);return c.s<=end&&(c.e||c.s)>=start}
 function vmICS(rows,stamp){
  const lines=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Vertical Moment//Mountain Calendar 5//EN','CALSCALE:GREGORIAN','METHOD:PUBLISH'];
  for(const c of rows.filter(x=>vmValidDate(x.s)&&!vmUncertain(x))){
@@ -2348,7 +2440,9 @@ Object.assign(VM_DE,{
 });
 Object.assign(VM_DE,{
  'Find climbing, hiking and photography opportunities by date and place.':'Finde Kletter-, Wander- und Fototermine nach Datum und Ort.',
- 'Country scope':'Länder','Quick filters':'Schnellfilter','Gear & brands':'Ausrüstung & Marken',
+ 'Country scope':'Länder','Quick filters':'Schnellfilter','Gear & brands':'Ausrüstung & Marken','Weekends':'Wochenenden',
+ 'Planner overview':'Planer-Übersicht','Planning tools':'Planungswerkzeuge','Weekend events':'Wochenendtermine',
+ 'Browse photography events':'Fototermine ansehen','active enquiries':'aktive Anfragen','galleries delivered or published':'Galerien geliefert oder veröffentlicht',
  'Event, city, venue or organiser':'Termin, Ort, Halle oder Veranstalter','listings':'Einträge','of':'von',
  'Each listing shows when its source was checked. Contact the organiser for current availability.':'Beim Termin steht, wann die Quelle geprüft wurde. Die aktuelle Verfügbarkeit erfährst du beim Veranstalter.',
  'Series starts':'Kursbeginn','Series began':'Kursbeginn war','Date pending':'Datum offen','Cancelled':'Abgesagt','Published end':'Veröffentlichtes Ende','Published sessions':'Veröffentlichte Termine',
@@ -2360,6 +2454,16 @@ Object.assign(VM_DE,{
  'Saved only':'Nur gespeicherte','Bookmark':'Merken','Bookmarked':'Gemerkt','organisations':'Organisationen','saved':'gespeichert','Austria-wide':'Österreichweit',
  'No bookmarks yet. Save an organisation to find it here.':'Noch keine Merkliste. Merke eine Organisation, um sie hier wiederzufinden.',
  'No organisations match these filters.':'Keine Organisationen passen zu diesen Filtern.','Official source':'Offizielle Quelle',
+ 'Save your own organisers and bookmark Austrian clubs, gyms, brands and production contacts.':'Speichere eigene Veranstalter und markiere österreichische Vereine, Hallen, Marken und Produktionskontakte.',
+ 'Add organiser':'Veranstalter hinzufügen','Add organiser bookmark':'Veranstalter merken','Edit organiser bookmark':'Veranstalter bearbeiten','Save organiser':'Veranstalter speichern',
+ 'Organisation name':'Name der Organisation','Enter an organisation name.':'Gib einen Namen für die Organisation ein.','Enter a valid contact email.':'Gib eine gültige Kontaktadresse ein.','Organiser notes':'Notizen zum Veranstalter',
+ 'Linked organisers':'Verknüpfte Veranstalter','No organisers linked to this shoot.':'Für diesen Fototermin sind keine Veranstalter verknüpft.',
+ 'Saved organiser':'Gemerkter Veranstalter','Choose a bookmark':'Merkliste auswählen','No available bookmarks':'Keine verfügbaren Einträge',
+ 'Link organiser':'Veranstalter verknüpfen','Unlink':'Verknüpfung lösen','Linked shoots':'Verknüpfte Fototermine','Personal bookmark':'Eigener Eintrag',
+ 'Organiser saved':'Veranstalter gespeichert','Organiser saved and linked':'Veranstalter gespeichert und verknüpft',
+ 'Organiser linked to shoot':'Veranstalter verknüpft','Organiser unlinked':'Verknüpfung gelöst',
+ 'Delete this organiser bookmark and remove its links from your shoots?':'Diesen Veranstalter samt Verknüpfungen zu deinen Fototerminen löschen?',
+ 'Organiser deleted':'Veranstalter gelöscht','Edit':'Bearbeiten','Delete':'Löschen','Website':'Website',
  'Event contacts':'Terminkontakte','Published contact routes and your own saved event contacts.':'Veröffentlichte Kontaktstellen und deine selbst gespeicherten Terminkontakte.',
  'Name, email, event or club':'Name, E-Mail, Termin oder Verein','No contact routes match this search.':'Keine Kontaktstellen passen zu dieser Suche.'
 });
@@ -2406,8 +2510,12 @@ V['Calendar']=function(){
   choice('state','Province',[['','All provinces'],...VM_PROVINCES.map(v=>[v,v]),['unknown','Province to confirm']]));
  const presets=h('div',{class:'vm-presets',role:'group','aria-label':'Quick filters'});
  const presetButtons=[];
- for(const [label,key,value] of [['Photography','topic','photography'],['Competitions','kind','competition'],['Gear & brands','topic','gear']]){
-  const button=vmButton(label,()=>{vmFilter[key]=vmFilter[key]===value?'':value;draw()});
+ for(const [label,key,value] of [['Photography','topic','photography'],['Competitions','kind','competition'],['Gear & brands','topic','gear'],['Weekends','weekends',true]]){
+  const button=vmButton(label,()=>{
+   vmFilter[key]=vmFilter[key]===value?defaults[key]:value;
+   if(key==='weekends'&&vmFilter.weekends&&vmFilter.day&&!vmWeekendDay(vmFilter.day))vmFilter.day='';
+   draw();
+  });
   presets.append(button);presetButtons.push([button,key,value]);
  }
  const summary=h('summary',null,'More filters'),advanced=h('details',{class:'vm-advanced'},summary);
@@ -2441,8 +2549,11 @@ V['Calendar']=function(){
  for(const [view,label] of [['list','List'],['cards','Cards'],['month','Month']]){
   const button=vmButton(label,()=>{
    vmFilter.view=view;
-   if(view==='month'&&!visible.some(c=>vmInMonth(c,vmFilter.month+'-01',vmFilter.month+'-31'))){
-    const next=visible.find(c=>c.s);if(next){vmFilter.month=next.s.slice(0,7);vmFilter.day=''}
+   if(view==='month'&&!visible.some(c=>vmCalendarMonthMatches(c,vmFilter.month+'-01',vmFilter.month+'-31'))){
+    const next=vmFilter.weekends===true
+     ?visible.map(c=>vmFirstWeekend(c,...vmWeekendBounds(vmFilter,vmToday()))).filter(Boolean).sort()[0]
+     :visible.find(c=>c.s)?.s;
+    if(next){vmFilter.month=next.slice(0,7);vmFilter.day=''}
    }
    draw();
   });
@@ -2482,6 +2593,11 @@ V['Calendar']=function(){
  }
  draw();
 };
+function vmCalendarMonthMatches(c,first,last){
+ return vmFilter.weekends===true
+  ?Boolean(vmFirstWeekend(c,...vmWeekendBounds(vmFilter,vmToday(),first,last)))
+  :vmInMonth(c,first,last);
+}
 vmMonth=function(body,rows){
  const [year,month]=vmFilter.month.split('-').map(Number),first=new Date(year,month-1,1);if(!Number.isFinite(first.getTime())){vmFilter.month=vmToday().slice(0,7);return vmMonth(body,rows)}
  const title=first.toLocaleDateString(locale==='de'?'de-AT':'en-GB',{month:'long',year:'numeric'}),grid=h('div',{class:'vm-month-grid',role:'group','aria-label':title});
@@ -2490,13 +2606,15 @@ vmMonth=function(body,rows){
  body.append(h('div',{class:'vm-month-header'},h('h2',null,title),h('div',{class:'vm-month-controls'},vmButton('←',()=>move(-1),{'aria-label':'Previous month',id:'vm-prev-month'}),picker,vmButton('→',()=>move(1),{'aria-label':'Next month',id:'vm-next-month'}),vmButton('Today',()=>{vmFilter.month=vmToday().slice(0,7);vmFilter.day=vmToday();redraw()}))));
  ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].forEach(x=>grid.append(h('div',{class:'vm-weekday','aria-hidden':'true'},locale==='de'?({Mon:'Mo',Tue:'Di',Wed:'Mi',Thu:'Do',Fri:'Fr',Sat:'Sa',Sun:'So'}[x]):x)));
  const offset=(first.getDay()+6)%7,last=new Date(year,month,0),cells=Math.ceil((offset+last.getDate())/7)*7,buttons=[];
+ const [from,to]=vmWeekendBounds(vmFilter,vmToday());
+ const dayMatches=key=>vmFilter.weekends!==true||(key>=from&&key<=to&&vmWeekendDay(key));
  for(let i=0;i<cells;i++){
-  const d=new Date(year,month-1,i-offset+1),key=vmDateKey(d),events=rows.filter(c=>vmOnDay(c,key)),label=d.toLocaleDateString(locale==='de'?'de-AT':'en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+  const d=new Date(year,month-1,i-offset+1),key=vmDateKey(d),events=dayMatches(key)?rows.filter(c=>vmOnDay(c,key)):[],label=d.toLocaleDateString(locale==='de'?'de-AT':'en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
   const btn=h('button',{type:'button',id:'vm-day-'+key,class:'vm-day'+(d.getMonth()!==first.getMonth()?' outside':'')+(key===vmToday()?' today':''),'aria-label':label+', '+events.length+' listings','aria-pressed':String(vmFilter.day===key),onclick:()=>{vmFilter.day=key;redraw('vm-day-'+key)}},h('span',{class:'vm-day-number'},String(d.getDate())),events.slice(0,2).map(c=>h('span',{class:'vm-day-event'},c.ev)),events.length?h('span',{class:'vm-day-count'},events.length+' listings'):null);buttons.push(btn);grid.append(btn);
  }
  buttons.forEach((b,index)=>b.addEventListener('keydown',e=>{const shifts={ArrowRight:1,ArrowLeft:-1,ArrowDown:7,ArrowUp:-7};let next=index;if(e.key in shifts)next+=shifts[e.key];else if(e.key==='Home')next-=index%7;else if(e.key==='End')next+=6-index%7;else return;e.preventDefault();buttons[next]?.focus()}));
  body.append(grid,h('p',{class:'vm-month-help'},'Use arrow keys to move between days. Press Enter to see the day’s events.'),h('p',{class:'vm-month-help'},'Course series appear on their start date, or on individually published session dates. Their date range does not imply a class every day.'));
- const start=vmFilter.month+'-01',end=vmDateKey(last),selected=vmFilter.day,shown=rows.filter(c=>selected?vmOnDay(c,selected):vmInMonth(c,start,end)),agenda=h('section',{class:'vm-month-agenda','aria-label':'Month events'});
+ const start=vmFilter.month+'-01',end=vmDateKey(last),selected=vmFilter.day,shown=rows.filter(c=>selected?dayMatches(selected)&&vmOnDay(c,selected):vmCalendarMonthMatches(c,start,end)),agenda=h('section',{class:'vm-month-agenda','aria-label':'Month events'});
  agenda.append(h('h2',null,(selected?range(selected):title)+' · '+shown.length+' listings'));
  if(shown.length){agenda.append(h('div',{class:'vm-event-grid'},shown.slice(0,VM_PAGE_SIZE).map(c=>vmEvent(c))));if(shown.length>VM_PAGE_SIZE)agenda.append(vmButton('See all '+shown.length+' in List',()=>{vmFilter.view='list';vmFilter.from=selected||start;vmFilter.to=selected||end;vmStoreFilters();go('Calendar')}))}else agenda.append(h('p',{class:'vm-empty'},'No dated events in this month.'));body.append(agenda);
  function redraw(focusId){const old=focusId||document.activeElement?.id;vmStoreFilters();body.textContent='';vmMonth(body,rows);if(old)document.getElementById(old)?.focus({preventScroll:true})}
@@ -2513,9 +2631,46 @@ V['Annual programmes']=function(){
  function draw(){cards.textContent='';const q=search.value.toLowerCase(),rows=(D.programmes||[]).filter(p=>(!q||[p.title,p.description,p.state,...(p.topics||[]).map(t=>VM_TOPICS[t])].join(' ').toLowerCase().includes(q))&&(!group.value||p.group===group.value)&&(!state.value||p.state===state.value||p.state==='Multiple provinces'));count.textContent=rows.length+' programme sources';for(const p of rows){const card=h('article',{class:'vm-contact-card'},h('h2',null,p.title),h('p',{class:'vm-programme-status'},p.status),h('p',null,p.description),h('p',{class:'mini'},p.state+' · checked '+p.checked),h('div',{class:'vm-tags'},(p.topics||[]).map(t=>vmTag(VM_TOPICS[t]))));for(const c of p.contacts||[]){if(vmEmail(c.email))card.append(h('p',null,h('a',{href:'mailto:'+c.email},c.email)));if(c.phone)card.append(h('p',null,h('a',{href:'tel:'+c.phone.replace(/[^+\d]/g,'')},c.phone)))}card.append(vmLink(p.u,'Official programme','vm-button'));cards.append(card)}if(!rows.length)cards.append(h('p',null,'No programmes match these filters.'))}draw();
  main.append(h('div',{class:'vm-source-summary'},h('p',null,'Research scope: published appointments from 14 October 2026 through December 2027, plus the original calendar. This is a broad researched catalogue, not a complete register of every Austrian club or hut. Smaller local events and later announcements will need further updates.')));
 };
+/* VM_ORGANISER_DOMAIN_START */
 const VM_BOOKMARK_GROUPS={
- clubs:'Clubs & federations',media:'Photography & media',venues:'Gyms & venues',brands:'Outdoor brands',print:'Print & stamps'
+ clubs:'Clubs & federations',media:'Photography & media',venues:'Gyms & venues',brands:'Outdoor brands',print:'Print & stamps',other:'Other'
 };
+const VM_PERSONAL_ORGANISER_PREFIX='photo:organiser:';
+const VM_ORGANISER_LINK_PREFIX='photo:organiser-link:';
+const vmOrganiserKey=id=>VM_PERSONAL_ORGANISER_PREFIX+id;
+const vmBookmarkKey=id=>'photo:bookmark:'+id;
+const vmOrganiserLinkKey=(n,id)=>VM_ORGANISER_LINK_PREFIX+n+':'+id;
+function vmPersonalOrganiser(id,value){
+ if(!/^personal-[a-f0-9]{32}$/.test(id)||!value||typeof value!=='object'||Array.isArray(value))return null;
+ const text=(key,max)=>typeof value[key]==='string'?value[key].trim().slice(0,max):'';
+ const name=text('name',140),group=text('group',24);
+ if(!name)return null;
+ return {id,personal:true,name,group:Object.hasOwn(VM_BOOKMARK_GROUPS,group)?group:'other',
+  place:text('place',140),url:vmSafeURL(text('url',1000)),email:vmEmail(text('email',254)),note:text('note',2000)};
+}
+function vmBookmarked(record,state){return record.personal===true||state[vmBookmarkKey(record.id)]===true}
+function vmOrganiserRecords(state,builtIns){
+ const personal=[];
+ for(const [key,value] of Object.entries(state)){
+  if(!key.startsWith(VM_PERSONAL_ORGANISER_PREFIX))continue;
+  const record=vmPersonalOrganiser(key.slice(VM_PERSONAL_ORGANISER_PREFIX.length),value);
+  if(record)personal.push(record);
+ }
+ return [...personal.sort((a,b)=>a.name.localeCompare(b.name)),...builtIns];
+}
+function vmLinkedOrganiserIds(n,state,records){
+ return records.filter(record=>state[vmOrganiserLinkKey(n,record.id)]===true).map(record=>record.id);
+}
+function vmOrganiserEventNumbers(id,state){
+ const suffix=':'+id,events=[];
+ for(const [key,value] of Object.entries(state)){
+  if(value!==true||!key.startsWith(VM_ORGANISER_LINK_PREFIX)||!key.endsWith(suffix))continue;
+  const n=Number(key.slice(VM_ORGANISER_LINK_PREFIX.length,-suffix.length));
+  if(Number.isSafeInteger(n)&&n>0&&key===vmOrganiserLinkKey(n,id))events.push(n);
+ }
+ return events;
+}
+/* VM_ORGANISER_DOMAIN_END */
 const VM_BOOKMARKS=[
  {id:'austria-climbing',group:'clubs',name:'Austria Climbing',place:'Austria-wide',note:'Federation press portal, image credits and media enquiries.',url:'https://www.austriaclimbing.com/media.html'},
  {id:'alpenverein-fotopool',group:'clubs',name:'Österreichischer Alpenverein',place:'Austria-wide',note:'FotoPool submission information and press resources.',url:'https://www.alpenverein.at/portal/fotopool/index.php'},
@@ -2528,6 +2683,72 @@ const VM_BOOKMARKS=[
  {id:'colop',group:'print',name:'COLOP Austria',place:'Wels, Oberösterreich',note:'Stamp manufacturer and enquiries about products and dealers.',url:'https://www.colop.com/de_eur/kontakt'},
  {id:'trodat',group:'print',name:'Trodat Österreich',place:'Wels, Oberösterreich',note:'Stamp manufacturer, product information and dealer enquiries.',url:'https://www.trodat.net/at/de/kontakt'}
 ];
+function vmEditOrganiser(record,afterSave,shoot){
+ const title=record?'Edit organiser bookmark':'Add organiser bookmark';
+ const dialog=h('dialog',{class:'vm-dialog','aria-labelledby':'vm-organiser-title'});
+ const form=h('form',null,h('h2',{id:'vm-organiser-title'},title));
+ const name=h('input',{type:'text',required:true,autofocus:true,maxlength:140,value:record?.name||''});
+ const group=vmSelect('Category',Object.entries(VM_BOOKMARK_GROUPS),record?.group||'other');
+ const place=h('input',{type:'text',maxlength:140,value:record?.place||''});
+ const url=h('input',{type:'url',maxlength:1000,placeholder:'https://',value:record?.url||''});
+ const email=h('input',{type:'email',maxlength:254,value:record?.email||''});
+ const note=h('textarea',{rows:3,maxlength:2000},record?.note||'');
+ const notes=vmField('Organiser notes',note);notes.classList.add('full');
+ const error=h('p',{class:'vm-error',role:'alert'});
+ form.append(h('div',{class:'vm-dialog-grid'},vmField('Organisation name',name),vmField('Category',group),
+  vmField('City / region',place),vmField('Website URL',url),vmField('Contact email',email),notes),error,
+  h('div',{class:'vm-dialog-actions'},vmButton('Cancel',()=>dialog.close()),
+   h('button',{type:'submit',class:'vm-button primary'},'Save organiser')));
+ dialog.append(form);document.body.append(dialog);
+ form.addEventListener('submit',event=>{
+  event.preventDefault();
+  if(url.value&&!vmSafeURL(url.value)){error.textContent=tr('Use an http or https website address.');return}
+  if(email.value&&!vmEmail(email.value)){error.textContent=tr('Enter a valid contact email.');return}
+  const id=record?.id||'personal-'+Array.from(crypto.getRandomValues(new Uint8Array(16)),b=>b.toString(16).padStart(2,'0')).join('');
+  const saved=vmPersonalOrganiser(id,{name:name.value,group:group.value,place:place.value,url:url.value,email:email.value,note:note.value});
+  if(!saved){error.textContent=tr('Enter an organisation name.');return}
+  S[vmOrganiserKey(saved.id)]=saved;
+  if(shoot)S[vmOrganiserLinkKey(shoot.n,saved.id)]=true;
+  persist();dialog.close();afterSave(saved);
+  toast(tr(shoot?'Organiser saved and linked':'Organiser saved'));
+ });
+ dialog.addEventListener('close',()=>dialog.remove(),{once:true});
+ dialog.showModal();
+}
+function vmShootOrganisers(shoot,heading='h3'){
+ const list=h('ul',{class:'vm-linked-organisers'});
+ const empty=h('p',{class:'mini'},'No organisers linked to this shoot.');
+ const select=h('select',{'aria-label':'Saved organiser'});
+ const link=vmButton('Link organiser',()=>{
+  if(!select.value)return;
+  put(vmOrganiserLinkKey(shoot.n,select.value),true);draw();
+  add.focus();toast(tr('Organiser linked to shoot'));
+ });
+ const add=vmButton('Add organiser',()=>vmEditOrganiser(null,()=>{draw();add.focus()},shoot));
+ select.addEventListener('change',()=>{link.disabled=!select.value});
+ const actions=h('div',{class:'vm-link-organiser-actions'},vmField('Saved organiser',select),link,add);
+ const section=h('section',{class:'vm-shoot-organisers','aria-label':'Linked organisers'},
+  h(heading,null,'Linked organisers'),empty,list,actions);
+ function draw(){
+  const records=vmOrganiserRecords(S,VM_BOOKMARKS),ids=new Set(vmLinkedOrganiserIds(shoot.n,S,records));
+  const available=records.filter(record=>vmBookmarked(record,S)&&!ids.has(record.id));
+  const linked=records.filter(record=>ids.has(record.id));
+  select.replaceChildren(h('option',{value:''},available.length?'Choose a bookmark':'No available bookmarks'),
+   ...available.map(record=>h('option',{value:record.id},[record.name,record.place].filter(Boolean).join(' · '))));
+  select.disabled=!available.length;link.disabled=true;
+  empty.hidden=linked.length>0;list.hidden=linked.length===0;
+  list.replaceChildren(...linked.map(record=>{
+   const remove=vmButton('Unlink',()=>{
+    put(vmOrganiserLinkKey(shoot.n,record.id),'');draw();select.focus();
+    toast(tr('Organiser unlinked'));
+   },{'aria-label':tr('Unlink')+' '+record.name});
+   return h('li',null,h('div',{class:'vm-linked-contact'},record.url?vmLink(record.url,record.name):h('strong',null,record.name),
+    record.email?h('a',{href:'mailto:'+encodeURIComponent(record.email)},record.email):null,
+    record.note?h('p',{class:'vm-organiser-note'},record.note):null),remove);
+  }));
+ }
+ draw();return section;
+}
 function vmEventContactDirectory(){
  const disclosure=h('details',{class:'vm-contact-directory'},h('summary',null,'Event contacts'));
  disclosure.addEventListener('toggle',()=>{
@@ -2571,7 +2792,7 @@ function vmEventContactDirectory(){
  return disclosure;
 }
 V['Sources & Contacts']=function(){
- vmHeader('Organisers & contacts','Bookmark Austrian clubs, gyms, brands and production contacts for your photography.');
+ vmHeader('Organisers & contacts','Save your own organisers and bookmark Austrian clubs, gyms, brands and production contacts.');
  const main=document.getElementById('main');
  const search=h('input',{type:'search',placeholder:'Name, city or service','aria-label':'Search organisations'});
  const category=vmSelect('Category',[['','All categories'],...Object.entries(VM_BOOKMARK_GROUPS)],'',draw);
@@ -2581,38 +2802,63 @@ V['Sources & Contacts']=function(){
  const savedToggle=vmButton('Saved only',()=>{
   savedOnly=!savedOnly;savedToggle.setAttribute('aria-pressed',String(savedOnly));draw();
  },{'aria-pressed':'false'});
- main.append(h('div',{class:'vm-bookmark-filters'},vmField('Search organisations',search),vmField('Category',category),savedToggle),
-  count,cards,vmEventContactDirectory());
+ const add=vmButton('Add organiser',()=>vmEditOrganiser(null,saved=>{
+  search.value='';category.value='';refresh(saved.id);
+ }),{class:'vm-button primary'});
+ main.append(h('div',{class:'vm-bookmark-filters'},vmField('Search organisations',search),vmField('Category',category),
+  h('div',{class:'vm-bookmark-tools'},savedToggle,add)),count,cards,vmEventContactDirectory());
  search.addEventListener('input',draw);
- const keyFor=record=>'photo:bookmark:'+record.id;
- const isSaved=record=>S[keyFor(record)]===true;
- function updateCount(visible){
-  count.textContent=visible+' '+tr('organisations')+' · '+VM_BOOKMARKS.filter(isSaved).length+' '+tr('saved');
+ function refresh(id){
+  draw();(cards.querySelector('[data-organiser="'+id+'"] .vm-organiser-edit')||add).focus();
+ }
+ function updateCount(visible,records){
+  count.textContent=visible+' '+tr('organisations')+' · '+records.filter(record=>vmBookmarked(record,S)).length+' '+tr('saved');
  }
  function draw(){
-  const rows=VM_BOOKMARKS.filter(record=>(!savedOnly||isSaved(record))&&(!category.value||record.group===category.value)
-   &&vmSearchMatches(search.value,[record.name,record.place,tr(record.place),record.note,VM_BOOKMARK_GROUPS[record.group],tr(VM_BOOKMARK_GROUPS[record.group])]));
-  updateCount(rows.length);
+  const records=vmOrganiserRecords(S,VM_BOOKMARKS);
+  const rows=records.filter(record=>(!savedOnly||vmBookmarked(record,S))&&(!category.value||record.group===category.value)
+   &&vmSearchMatches(search.value,[record.name,record.place,tr(record.place),record.email,record.note,VM_BOOKMARK_GROUPS[record.group],tr(VM_BOOKMARK_GROUPS[record.group])]));
+  updateCount(rows.length,records);
   cards.replaceChildren(...rows.map((record,index)=>{
-   const saved=isSaved(record);
-   const button=vmButton(saved?'Bookmarked':'Bookmark',()=>{
-    const next=!isSaved(record);
-    put(keyFor(record),next?true:'');
-    if(savedOnly&&!next){
-     draw();
-     const nextButton=cards.querySelectorAll('button')[Math.min(index,cards.childElementCount-1)];
-     (nextButton||savedToggle).focus();
-    }else{
-     button.setAttribute('aria-pressed',String(next));
-     button.textContent=tr(next?'Bookmarked':'Bookmark');
-     updateCount(rows.length);
-    }
-   },{'aria-pressed':String(saved),'aria-label':tr('Bookmark')+' '+record.name});
-   return h('article',{class:'vm-contact-card','aria-label':record.name},
-    h('h2',null,record.name),h('p',{class:'vm-event-meta'},tr(VM_BOOKMARK_GROUPS[record.group])+' · '+tr(record.place)),
-    h('p',null,record.note),h('div',{class:'vm-bookmark-actions'},vmLink(record.url,'Official source','vm-button'),button));
+   const saved=vmBookmarked(record,S),links=vmOrganiserEventNumbers(record.id,S).map(n=>byN[n]).filter(Boolean);
+   const meta=[tr(VM_BOOKMARK_GROUPS[record.group]),tr(record.place),record.personal?tr('Personal bookmark'):null].filter(Boolean).join(' · ');
+   const card=h('article',{class:'vm-contact-card','aria-label':record.name,'data-organiser':record.id},
+    h('h2',null,record.name),h('p',{class:'vm-event-meta'},meta),
+    record.email?h('p',null,h('a',{href:'mailto:'+encodeURIComponent(record.email)},record.email)):null,
+    record.note?h('p',{class:'vm-organiser-note'},record.note):null);
+   const actions=h('div',{class:'vm-bookmark-actions'},
+    record.url?vmLink(record.url,record.personal?'Website':'Official source','vm-button'):null);
+   if(record.personal){
+    actions.append(vmButton('Edit',()=>vmEditOrganiser(record,saved=>refresh(saved.id)),
+     {class:'vm-button vm-organiser-edit','aria-label':tr('Edit')+' '+record.name}),
+     vmButton('Delete',()=>{
+      if(!confirm(tr('Delete this organiser bookmark and remove its links from your shoots?')))return;
+      vmRemember();
+      delete S[vmOrganiserKey(record.id)];
+      for(const n of vmOrganiserEventNumbers(record.id,S))delete S[vmOrganiserLinkKey(n,record.id)];
+      persist();refresh(record.id);toast(tr('Organiser deleted'));
+     },{'aria-label':tr('Delete')+' '+record.name}));
+   }else{
+    const button=vmButton(saved?'Bookmarked':'Bookmark',()=>{
+     const next=!vmBookmarked(record,S);
+     put(vmBookmarkKey(record.id),next?true:'');
+     if(savedOnly&&!next){
+      draw();
+      const nextCard=cards.querySelectorAll('article')[Math.min(index,cards.childElementCount-1)];
+      (nextCard?.querySelector('button')||savedToggle).focus();
+     }else{
+      button.setAttribute('aria-pressed',String(next));button.textContent=tr(next?'Bookmarked':'Bookmark');
+      updateCount(rows.length,records);
+     }
+    },{'aria-pressed':String(saved),'aria-label':tr('Bookmark')+' '+record.name});
+    actions.append(button);
+   }
+   card.append(actions);
+   if(links.length)card.append(h('details',{class:'vm-bookmark-shoots'},h('summary',null,tr('Linked shoots')+' ('+links.length+')'),
+    h('ul',null,vmSorted(links,'date').map(event=>h('li',null,event.ev+(event.s?' · '+range(event.s,event.e):''))))));
+   return card;
   }));
-  if(!rows.length)cards.append(h('p',{class:'vm-empty'},savedOnly&&!VM_BOOKMARKS.some(isSaved)?
+  if(!rows.length)cards.append(h('p',{class:'vm-empty'},savedOnly&&!records.some(record=>vmBookmarked(record,S))?
    'No bookmarks yet. Save an organisation to find it here.':'No organisations match these filters.'));
  }
  draw();
@@ -2622,11 +2868,8 @@ V['Pitch Tracker']=function(){
  main.append(h('div',{class:'vm-filter-panel'},vmField('Search events',search),h('label',{class:'vm-toggle'},active,'Only active pitches')),results);search.addEventListener('input',()=>{page=1;draw()});active.addEventListener('change',()=>{page=1;draw()});
  function draw(){results.textContent='';const q=search.value.toLowerCase(),rows=vmSorted(CAL.filter(c=>(!active.checked||(S['pt:'+vmPitchName(c)+':status']||'Not started')!=='Not started'||['Researching','Pitched','Confirmed'].includes(S['cal:'+c.n+':status']))&&(!q||[c.ev,c.city,c.organiser].join(' ').toLowerCase().includes(q))),'date');if(!rows.length){results.append(h('div',{class:'vm-empty'},h('h2',null,'No active pitches yet.'),h('p',null,'Set a pitch status in an event’s details, or browse all opportunities.'),vmButton('Show all event opportunities',()=>{active.checked=false;draw()})));return}results.append(vmPagination(rows,page,n=>{page=n;draw();results.scrollIntoView({block:'start',behavior:'instant'})}),h('div',{class:'vm-event-grid'},rows.slice((page-1)*VM_PAGE_SIZE,page*VM_PAGE_SIZE).map(c=>vmEvent(c))));}draw();
 };
-V['Weekend Picks']=function(){
- vmHeader('Weekend photo opportunities','Browse the next eight weekends of published Austrian activities.');const main=document.getElementById('main'),groups=new Map();for(const c of vmRows(vmDefaults())){if(!c.s)continue;const d=pd(c.s);if(![0,6].includes(d.getDay()))continue;const key=vmDateKey(new Date(d.getFullYear(),d.getMonth(),d.getDate()-(d.getDay()===0?1:0)));if(!groups.has(key))groups.set(key,[]);groups.get(key).push(c)}for(const [key,events]of [...groups].slice(0,8))main.append(h('h2',null,range(key,vmNextISO(key))+' · '+events.length+' listings'),h('div',{class:'vm-event-grid'},events.slice(0,4).map(c=>vmEvent(c))),vmButton('Show this weekend',()=>vmOpenCalendar({from:key,to:vmNextISO(key)})));
-};
 if(!ALL.includes('Annual programmes'))ALL.push('Annual programmes');
-TABS[0][0]='Mountain planning';TABS[0][1].splice(3,0,['Annual programmes','#DCE4EA']);
+TABS[0][0]='Mountain planning';TABS[0][1].push(['Annual programmes','#DCE4EA']);
 const vmExpandedChrome=updateChrome;updateChrome=function(){vmExpandedChrome();const small=document.querySelector('.brand small');if(small)small.textContent=tr('Mountain calendar')+' · 2026–27';document.title=(cur==='Calendar'?tr('Mountain calendar'):cur)+' · Vertical Moment'};
 if(location.hash==='#annual-programmes')cur='Annual programmes';
 
@@ -2693,7 +2936,7 @@ function pfMount(){
  h('p',null,'Your shortlist and notes stay in this browser. Use a backup to move them to another device.')));
  wrap.append(h('a',{class:'pf-skip',href:'#pf-results'},'Skip to competitions'),
  h('header',{class:'pf-top'},h('div',{class:'pf-brand'},'VERTICAL MOMENT',h('small',null,'Competition photography')),
- h('div',{class:'pf-top-actions'},pfButton('Full calendar ↗',()=>pfOpenCatalogue(),{class:'pf-text-button'}),pfButton('Organisers',()=>pfOpenCatalogue('Sources & Contacts'),{class:'pf-text-button'}),pfTools)),
+ h('div',{class:'pf-top-actions'},pfButton('Overview',()=>pfOpenCatalogue('Overview'),{class:'pf-text-button'}),pfButton('Full calendar ↗',()=>pfOpenCatalogue(),{class:'pf-text-button'}),pfButton('Organisers',()=>pfOpenCatalogue('Sources & Contacts'),{class:'pf-text-button'}),pfTools)),
  h('section',{class:'pf-hero','aria-labelledby':'pf-title'},h('div',null,h('p',{class:'pf-kicker'},'Austria · Vienna first'),h('h1',{id:'pf-title'},'Your next competition shoots.'),h('p',{class:'pf-intro'},'Find competitions and plan photography access.'))));
  const tabs=h('div',{class:'pf-tabs',role:'group','aria-label':'Photography views'});
  for(const [value,label]of[['recommended','Recommended'],['all','All competitions'],['saved','My shortlist']]){
@@ -2753,23 +2996,30 @@ function pfCard(c){
  const save=pfButton(saved?'✓ Saved':'＋ Save',()=>{const now=!pfIsSaved(c);put('photo:'+c.n+':saved',now?true:'');save.textContent=now?'✓ Saved':'＋ Save';save.setAttribute('aria-pressed',String(now));save.setAttribute('aria-label',(now?'Remove from shortlist: ':'Save to shortlist: ')+c.ev);pfSay((now?'Saved: ':'Removed: ')+c.ev+(saveProblem?'. '+saveProblem:'.'));if(pfFilter.view==='saved'){const index=pfVisible.findIndex(x=>x.n===c.n);pfDraw();const next=pfGrid.querySelectorAll('.pf-save')[Math.min(index,pfVisible.length-1)];(next||pfTabButtons[2][1]).focus();}},{class:'pf-save','aria-pressed':String(saved),'aria-label':(saved?'Remove from shortlist: ':'Save to shortlist: ')+c.ev});
  article.append(h('div',{class:'pf-actions'},save,accessText));
  const details=h('details',{class:'pf-details'},h('summary',null,'Details, contacts & my plan')),body=h('div',{class:'pf-detail-body'});
- body.append(h('div',null,h('h4',null,'Timetable'),h('p',null,c.time||'Confirm with the organiser')),
+ const information=h('div',{class:'pf-detail-info'}),plan=h('div',{class:'pf-detail-plan'});
+ information.append(h('div',null,h('h4',null,'Timetable'),h('p',null,c.time||'Confirm with the organiser')),
   h('div',null,h('h4',null,'Photo idea'),h('p',null,p.focus||'Check the programme for final rounds and possible shooting positions.')));
- if(p.format)body.append(h('p',null,p.format));
- if(p.notes?.length)body.append(h('div',null,h('h4',null,'Programme & planning'),h('ul',null,p.notes.map(n=>h('li',null,n)))));
- if(c.programme)body.append(h('p',null,c.programme));
- body.append(h('p',null,'Categories: '+(p.categoryLabel||c.audience||'Confirm with the organiser')));
+ if(p.format)information.append(h('p',null,p.format));
+ if(p.notes?.length)information.append(h('div',null,h('h4',null,'Programme & planning'),h('ul',null,p.notes.map(n=>h('li',null,n)))));
+ if(c.programme)information.append(h('p',null,c.programme));
+ information.append(h('p',null,'Categories: '+(p.categoryLabel||c.audience||'Confirm with the organiser')));
  const contacts=vmContacts(c),primary=p.contact?contacts.find(x=>x.email===p.contact)||contacts[0]:contacts[0];
- if(primary){const contactBox=h('div',null,h('h4',null,primary.name||'Organiser contact'));if(primary.email&&vmEmail(primary.email))contactBox.append(h('p',null,h('a',{href:'mailto:'+primary.email},primary.email)));if(primary.phone)contactBox.append(h('p',null,h('a',{href:'tel:'+primary.phone.replace(/[^+\d]/g,'')},primary.phone)));if(primary.scope)contactBox.append(h('p',null,primary.scope));body.append(contactBox)}
+ if(primary){const contactBox=h('div',null,h('h4',null,primary.name||'Organiser contact'));if(primary.email&&vmEmail(primary.email))contactBox.append(h('p',null,h('a',{href:'mailto:'+primary.email},primary.email)));if(primary.phone)contactBox.append(h('p',null,h('a',{href:'tel:'+primary.phone.replace(/[^+\d]/g,'')},primary.phone)));if(primary.scope)contactBox.append(h('p',null,primary.scope));information.append(contactBox)}
  const links=h('div',{class:'pf-source-links'});const sources=p.links?.length?p.links:[['Official event',c.u]];
  for(const [label,url]of sources)if(url)links.append(pfLink(url,label));
- if(p.map)links.append(pfLink(p.map,'Map'));body.append(links);
+ if(p.map)links.append(pfLink(p.map,'Map'));information.append(links);
  const accessSelect=h('select',{'aria-label':'Photography access: '+c.ev},['Not arranged','Contacted','Approved','Declined'].map(x=>h('option',{value:x,selected:x===access},x)));
  accessSelect.addEventListener('change',()=>{put(statusKey,accessSelect.value);accessText.dataset.status=accessSelect.value;accessText.textContent=accessLabels[accessSelect.value];pfSay('Access arrangement saved for '+c.ev+(saveProblem?'. '+saveProblem:'.'))});
- body.append(pfField('Photography access',accessSelect));
+ const accessField=pfField('Photography access',accessSelect);
+ plan.append(accessField);
+ details.addEventListener('toggle',()=>{
+  if(details.open&&!plan.querySelector('.vm-shoot-organisers'))plan.prepend(vmShootOrganisers(c,'h4'));
+ });
  const notes=h('textarea',{rows:3,'aria-label':'My shooting notes: '+c.ev,placeholder:'Shots, people, positions or questions to ask…'},S['cal:'+c.n+':notes']||'');
- notes.addEventListener('input',()=>put('cal:'+c.n+':notes',notes.value));body.append(pfField('My shooting notes',notes));
- body.append(pfField('Photos / delivery',sel('cal:'+c.n+':deliv',DELIV,'Not shot','Photo delivery: '+c.ev)),h('p',{class:'pf-checked'},'Event details checked '+(p.checked||c.checked||'on the original source')+'. Recheck programme changes with the organiser.'));
+ notes.addEventListener('input',()=>put('cal:'+c.n+':notes',notes.value));plan.append(pfField('My shooting notes',notes));
+ plan.append(pfField('Photos / delivery',sel('cal:'+c.n+':deliv',DELIV,'Not shot','Photo delivery: '+c.ev)));
+ information.append(h('p',{class:'pf-checked'},'Event details checked '+(p.checked||c.checked||'on the original source')+'. Recheck programme changes with the organiser.'));
+ body.append(information,plan);
  details.append(body);article.append(details);return article;
 }
 function pfExportRows(rows){const map=new Map();for(const c of rows){map.set(c.n,c);for(const n of c.photo?.related||[]){const related=byN[n];if(related)map.set(n,related)}}return[...map.values()]}
