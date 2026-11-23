@@ -492,7 +492,16 @@ table{font-size:14px}th{font-size:13px}td,th{padding:13px;vertical-align:top}
 .vm-linked-contact>a{display:block}
 .vm-organiser-note{white-space:pre-wrap}
 .vm-bookmark-shoots ul{padding-left:20px;font-size:14px;overflow-wrap:anywhere}
-@media print{.vm-shoot-organisers,.vm-bookmark-shoots{display:none!important}}
+.vm-shoot-requirements{min-width:0;margin:14px 0 0;padding:8px 0 0;border:0;border-top:1px solid var(--line)}
+.vm-shoot-requirements legend{padding:0 8px 0 0;font-size:14px;font-weight:750}
+.vm-shoot-fields{display:grid;gap:10px 14px}
+.vm-shoot-fields .vm-field textarea{min-height:84px;line-height:1.45}
+#photo-focus .vm-shoot-requirements{margin:0;border-color:var(--pf-line)}
+#photo-focus .vm-shoot-fields :is(input,textarea){font-size:15px;font-weight:400}
+@media screen and (min-width:1201px){
+ .vm-shoot-fields{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media print{.vm-shoot-organisers,.vm-bookmark-shoots,.vm-shoot-requirements{display:none!important}}
 
 /* Desktop Planner uses the full frame and keeps event rows easy to scan. */
 .vm-overview{display:grid;gap:24px}
@@ -2137,7 +2146,25 @@ function vmDownload(name,text,type){const blob=new Blob([text],{type:type||'text
 function vmLink(url,label,cls){const safe=vmSafeURL(url);return safe?h('a',{href:safe,target:'_blank',rel:'noopener noreferrer',class:cls||''},label):h('span',{class:'mini'},label)}
 function vmButton(text,fn,attrs){return h('button',{type:'button',class:'vm-button',onclick:fn,...(attrs||{})},text)}
 function vmField(label,input){return h('label',{class:'vm-field'},h('span',null,label),input)}
-function vmLocalField(key,label,kind,placeholder){const input=kind==='textarea'?h('textarea',{rows:3,placeholder:placeholder||''},S[key]||''):h('input',{type:kind||'text',value:S[key]||'',placeholder:placeholder||''});const save=()=>put(key,kind==='textarea'?input.value:input.value.trim());input.addEventListener('input',save);input.addEventListener('change',save);return vmField(label,input)}
+function vmLocalField(key,label,kind,placeholder){
+ const input=kind==='textarea'
+  ?h('textarea',{rows:3,placeholder:placeholder||''})
+  :h('input',{type:kind||'text',placeholder:placeholder||''});
+ input.value=S[key]||'';
+ const save=()=>put(key,kind==='textarea'?input.value:input.value.trim());
+ input.addEventListener('input',save);
+ input.addEventListener('change',save);
+ return vmField(label,input);
+}
+function vmShootRequirements(eventId){
+ const prefix='photo:'+eventId+':';
+ return h('fieldset',{class:'vm-shoot-requirements'},h('legend',null,'Shoot requirements'),
+  h('div',{class:'vm-shoot-fields'},
+   vmLocalField(prefix+'accreditation-deadline','Accreditation deadline','date'),
+   vmLocalField(prefix+'usage-permissions','Photo usage permissions','textarea','Allowed uses, channels or restrictions'),
+   vmLocalField(prefix+'credit-requirements','Credit requirements','textarea','Required credit line and placement'),
+   vmLocalField(prefix+'delivery-commitments','Delivery commitments','textarea','Deliverables, recipient and due date')));
+}
 function vmSelect(label,options,value,onChange){const el=h('select',{'aria-label':label},options.map(([v,t])=>h('option',{value:v,selected:String(value||'')===String(v)},t)));if(onChange)el.addEventListener('change',()=>onChange(el.value));return el}
 function vmPitchName(c){const old=D.pt.find(p=>Number(p.cal)===Number(c.n));return old?old.name:c.ev}
 function vmContacts(c){const arr=[...(c.contacts||[])],manual=vmEmail(S['cal:'+c.n+':email']);if(manual)arr.unshift({name:'Your contact email',email:manual,scope:'Saved by you'});return arr}
@@ -2205,7 +2232,7 @@ function vmEventDetails(c,series,uncertain){
  if(c.classificationNote)information.append(h('p',{class:'mini'},c.classificationNote));
  const conflicts=c.s?CAL.filter(x=>x.n!==c.n&&x.checked&&!vmUncertain(x)&&x.co===c.co&&vmOnDay(x,c.s)).slice(0,4):[];
  if(conflicts.length)information.append(h('h3',null,'Other verified events on these dates'),h('ul',null,conflicts.map(x=>h('li',null,vmLink(x.u,x.ev+' · '+x.city)))));
- const plan=h('div',{class:'vm-event-planning'},vmShootOrganisers(c),h('h3',null,'Your planning notes'),
+ const plan=h('div',{class:'vm-event-planning'},vmShootOrganisers(c),vmShootRequirements(c.n),h('h3',null,'Your planning notes'),
   h('div',{class:'vm-tracking'},vmField('My event status',sel('cal:'+c.n+':status',STAT,'Not started','Event status: '+c.ev)),vmField('Photos / delivery',sel('cal:'+c.n+':deliv',DELIV,'Not shot','Photo delivery: '+c.ev))),
   h('div',{class:'vm-personal-fields'},vmField('Pitch status',sel('pt:'+pname+':status',PSTAT,'Not started','Pitch status: '+c.ev)),
    vmLocalField('pt:'+pname+':sent','Date sent','date'),vmLocalField('pt:'+pname+':reply','Reply / outcome','text'),
@@ -2464,6 +2491,10 @@ Object.assign(VM_DE,{
  'Organiser linked to shoot':'Veranstalter verknüpft','Organiser unlinked':'Verknüpfung gelöst',
  'Delete this organiser bookmark and remove its links from your shoots?':'Diesen Veranstalter samt Verknüpfungen zu deinen Fototerminen löschen?',
  'Organiser deleted':'Veranstalter gelöscht','Edit':'Bearbeiten','Delete':'Löschen','Website':'Website',
+ 'Shoot requirements':'Vorgaben für den Fototermin','Accreditation deadline':'Akkreditierungsfrist',
+ 'Photo usage permissions':'Nutzungsrechte für Fotos','Allowed uses, channels or restrictions':'Erlaubte Nutzungen, Kanäle oder Einschränkungen',
+ 'Credit requirements':'Vorgaben zur Namensnennung','Required credit line and placement':'Erforderlicher Bildnachweis und Platzierung',
+ 'Delivery commitments':'Liefervereinbarungen','Deliverables, recipient and due date':'Lieferumfang, Empfänger und Frist',
  'Event contacts':'Terminkontakte','Published contact routes and your own saved event contacts.':'Veröffentlichte Kontaktstellen und deine selbst gespeicherten Terminkontakte.',
  'Name, email, event or club':'Name, E-Mail, Termin oder Verein','No contact routes match this search.':'Keine Kontaktstellen passen zu dieser Suche.'
 });
@@ -3013,7 +3044,10 @@ function pfCard(c){
  const accessField=pfField('Photography access',accessSelect);
  plan.append(accessField);
  details.addEventListener('toggle',()=>{
-  if(details.open&&!plan.querySelector('.vm-shoot-organisers'))plan.prepend(vmShootOrganisers(c,'h4'));
+  if(details.open&&!plan.querySelector('.vm-shoot-organisers')){
+   plan.prepend(vmShootOrganisers(c,'h4'));
+   accessField.after(vmShootRequirements(c.n));
+  }
  });
  const notes=h('textarea',{rows:3,'aria-label':'My shooting notes: '+c.ev,placeholder:'Shots, people, positions or questions to ask…'},S['cal:'+c.n+':notes']||'');
  notes.addEventListener('input',()=>put('cal:'+c.n+':notes',notes.value));plan.append(pfField('My shooting notes',notes));
