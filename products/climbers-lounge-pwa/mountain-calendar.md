@@ -238,13 +238,27 @@ legacy links, weekend filtering, and creating, editing and linking organisers.
 An exported backup restored a personal organiser and its shoot link in a clean
 browser context.
 
+## Shoot requirements — 23 November 2026
+
+Open a shoot in Competition photography or the full calendar to set its
+accreditation deadline and record the agreed photo usage permissions, credit
+requirements and delivery commitments. The deadline uses a date picker. The
+other fields accept the organiser's wording, including multiple lines.
+
+The same entries appear in both views, where they follow the existing event ID.
+They save in the browser as you edit and are included in the Planner backup.
+The requirements sit in two columns inside an expanded shoot on a wide desktop.
+
+The 33 Planner tests, all 179 website tests and the local production build
+passed. Chrome at 1,440, 1,920 and 2,560 pixels checked cross-view editing,
+reloads and the desktop layout. A backup restored all four fields in a clean
+browser context.
+
 ### Further Planner improvements
 
-1. Add fields for accreditation deadlines, permitted uses, photo credit and
-   delivery commitments to the existing shoot plans.
-2. Review Gym Directory and Portfolio Leads for overlap with dated calendar
+1. Review Gym Directory and Portfolio Leads for overlap with dated calendar
    listings and the organiser directory. Keep unique coverage and remove
    duplicate rows or views after their replacements are checked.
-3. Consolidate the older calendar and month renderers so there is one place
+2. Consolidate the older calendar and month renderers so there is one place
    to maintain each view. Keep event identities, planning state and import and
    export behaviour covered by the Planner tests.

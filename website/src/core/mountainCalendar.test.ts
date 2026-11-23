@@ -190,6 +190,43 @@ describe("embedded mountain calendar", () => {
     expect(domain.vmOrganiserEventNumbers(id, state)).toEqual([9107, 9140]);
   });
 
+  it("binds each shoot's four requirements to separate Planner backup keys", () => {
+    const fields: { key: string; label: string; kind: string }[] = [];
+    const render = runInNewContext(
+      "function vmShootRequirements" + section("function vmShootRequirements", "function vmSelect") + "\nvmShootRequirements",
+      {
+        h: () => null,
+        vmLocalField: (key: string, label: string, kind: string) => fields.push({ key, label, kind }),
+      },
+    ) as (id: number) => void;
+    render(9107);
+    render(9140);
+    expect(fields).toEqual([9107, 9140].flatMap(id => [
+      { key: "photo:" + id + ":accreditation-deadline", label: "Accreditation deadline", kind: "date" },
+      { key: "photo:" + id + ":usage-permissions", label: "Photo usage permissions", kind: "textarea" },
+      { key: "photo:" + id + ":credit-requirements", label: "Credit requirements", kind: "textarea" },
+      { key: "photo:" + id + ":delivery-commitments", label: "Delivery commitments", kind: "textarea" },
+    ]));
+    const state = Object.fromEntries(fields.map(({ key }, i) => [key, "requirement " + i]));
+    expect(domain.vmCleanState(JSON.parse(JSON.stringify(state)))).toEqual(state);
+  });
+
+  it("loads saved shoot notes as the field value without adding them to the label", () => {
+    const key = "photo:9107:usage-permissions";
+    const note = "Organiser recap only.\nAsk before paid use.";
+    const createField = runInNewContext(
+      "function vmLocalField" + section("function vmLocalField", "function vmShootRequirements") + "\nvmLocalField",
+      {
+        S: { [key]: note },
+        h: (_tag: string, _attributes: unknown, ...children: unknown[]) =>
+          ({ children, value: "", addEventListener: () => {} }),
+        vmField: (label: string, input: unknown) => ({ label, input }),
+      },
+    ) as (key: string, label: string, kind: string) => unknown;
+    expect(createField(key, "Photo usage permissions", "textarea"))
+      .toMatchObject({ label: "Photo usage permissions", input: { value: note, children: [] } });
+  });
+
   it("excludes unsettled dates from checked-date filters and ICS", () => {
     const unsettled = events.filter(c => domain.vmUncertain(c));
     expect(unsettled.length).toBeGreaterThan(5);
