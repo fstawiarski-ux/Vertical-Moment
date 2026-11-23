@@ -300,9 +300,6 @@ main h2{font-size:23px;line-height:1.3}
 .vm-field{display:flex;flex-direction:column;gap:6px;min-width:0;font-size:13px;font-weight:650}
 .vm-field input,.vm-field select,.vm-field textarea{width:100%;padding:9px 12px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:7px;font-size:15px;font-weight:400}
 .vm-field textarea{min-height:90px;resize:vertical}
-.vm-advanced{margin-top:14px;border-top:1px solid var(--line);padding-top:6px}
-.vm-advanced summary{padding:10px 0;cursor:pointer;min-height:44px;font-weight:600;font-size:14px}
-.vm-advanced-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:8px 0}
 .vm-toggle{font-size:14px;font-weight:400;display:flex;align-items:center;gap:10px;min-height:44px}
 .vm-toggle input{width:20px;height:20px;accent-color:var(--accent)}
 .vm-result-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:20px 0 14px}
@@ -348,9 +345,25 @@ main h2{font-size:23px;line-height:1.3}
 .vm-detail-content small{display:block;color:var(--muted)}
 .vm-personal-fields{display:grid;gap:12px;margin-top:14px}
 .vm-personal-fields select,.vm-personal-fields input{min-width:0;width:100%}
-.vm-list{display:grid;gap:10px}
-.vm-list .vm-event{padding:18px 22px}
-.vm-list .vm-event-header{margin-bottom:8px}
+.vm-list{display:block;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+.vm-list-heading{display:none}
+.vm-event.vm-list-row{padding:0;border:0;border-radius:0;background:transparent}
+.vm-event.vm-list-row+.vm-list-row,.vm-list-heading+.vm-list-row{border-top:1px solid var(--line)}
+.vm-list-row>.vm-list-details{margin:0;border:0}
+.vm-list-details>summary{box-sizing:border-box;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 14px;align-items:center;padding:10px 14px;list-style:none;font-weight:400}
+.vm-list-details>summary::-webkit-details-marker{display:none}
+.vm-list-details>summary:hover,.vm-list-details[open]>summary{background:var(--soft)}
+.vm-list-details>summary:focus-visible{outline-offset:-3px!important}
+.vm-list-when,.vm-list-name,.vm-list-location{min-width:0;overflow-wrap:anywhere;grid-column:1}
+.vm-list-when{font-size:13px;font-weight:650;font-variant-numeric:tabular-nums}
+.vm-list-title{display:block;font-size:16px;font-weight:700;line-height:1.3}
+.vm-list-location{font-size:14px;font-weight:400;line-height:1.4}
+.vm-list-meta{display:block;margin-top:2px;color:var(--muted);font-size:12px;font-weight:400;line-height:1.4}
+.vm-list-when .vm-date-warning{display:block;margin-top:3px;padding:2px 5px;font-size:12px}
+.vm-list-action{grid-column:2;grid-row:1;justify-self:end;display:inline-flex;align-items:center;gap:6px;color:var(--ink);font-size:13px;font-weight:650}
+.vm-list-action::before{content:'+';font-size:18px;line-height:1}
+.vm-list-details[open] .vm-list-action::before{content:'−'}
+.vm-list-details>.vm-detail-content{padding:12px 16px 20px;border-top:1px solid var(--line)}
 .vm-list .vm-tracking{max-width:520px}
 .vm-empty{border:1px dashed var(--line);border-radius:14px;padding:36px;text-align:center;background:var(--card)}
 .vm-empty h2{font-size:20px}
@@ -394,10 +407,10 @@ table{font-size:14px}th{font-size:13px}td,th{padding:13px;vertical-align:top}
 .past{opacity:1!important}
 .mini,.sub,.where{color:var(--muted)}
 .toast{max-width:calc(100vw - 24px);background:var(--nav);color:var(--navink);line-height:1.5;padding:13px 18px}
-@media (max-width:1200px){.vm-filters{grid-template-columns:repeat(2,minmax(0,1fr))}.vm-advanced-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.vm-event-grid{grid-template-columns:1fr}}
+@media (max-width:1200px){.vm-filters{grid-template-columns:repeat(2,minmax(0,1fr))}.vm-event-grid{grid-template-columns:1fr}}
 @media (max-width:760px){
  .app{display:block}nav.rail{position:relative;height:auto;overflow:visible;padding:18px 0 12px}.brand{padding:0 18px;font-size:18px}.brand small{font-size:12px}.vm-nav-toggle{display:block;position:absolute;right:16px;top:17px;min-height:44px;border:1px solid #83a992;background:#254f3c;color:#fff;border-radius:7px;padding:8px 14px}nav.rail #tabs{display:none}nav.rail.vm-nav-open #tabs{display:block;max-height:55vh;overflow:auto;margin-top:15px}.railfoot{display:flex;flex-wrap:wrap;margin-top:16px;padding:12px 18px 0;gap:8px}.railfoot #savestate{flex-basis:100%;font-size:12px}.railfoot button{font-size:12px;padding:8px 10px}.railfoot .vm-backup-note{display:none}.grp{margin-top:12px}.tab{font-size:14px}.tab i{display:none}
- main{padding:26px 16px 44px}.vm-intro{margin-bottom:16px}.vm-intro p{font-size:14px}.vm-dashboard{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:18px 0}.vm-stat{padding:12px}.vm-stat strong{font-size:25px}.vm-stat span{font-size:12px}.vm-scope{gap:6px}.vm-scope button{flex:1;padding:8px;font-size:13px}.vm-filter-panel{padding:14px}.vm-filters{grid-template-columns:1fr}.vm-advanced-grid{grid-template-columns:1fr 1fr}.vm-presets button{font-size:12px;padding:8px 10px}.vm-event{padding:18px}.vm-event h2{font-size:20px}.vm-contact-grid{grid-template-columns:1fr}.vm-tracking{gap:8px}.vm-month-grid{gap:3px}.vm-day{padding:5px;min-height:70px;gap:5px;border-radius:5px}.vm-day-event{display:none}.vm-day-count{font-size:10px}.vm-month-help{font-size:12px}.vm-dialog{padding:20px}.vm-dialog-grid{grid-template-columns:1fr}.vm-dialog-grid .full{grid-column:auto}.vm-result-actions{width:100%}.vm-view-switch button{font-size:13px;padding:8px 12px}.vm-export summary{font-size:13px}.vm-list .vm-event{padding:16px}.vm-event-grid{gap:12px}
+ main{padding:26px 16px 44px}.vm-intro{margin-bottom:16px}.vm-intro p{font-size:14px}.vm-dashboard{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:18px 0}.vm-stat{padding:12px}.vm-stat strong{font-size:25px}.vm-stat span{font-size:12px}.vm-scope{gap:6px}.vm-scope button{flex:1;padding:8px;font-size:13px}.vm-filter-panel{padding:14px}.vm-filters{grid-template-columns:1fr}.vm-presets button{font-size:12px;padding:8px 10px}.vm-event{padding:18px}.vm-event h2{font-size:20px}.vm-contact-grid{grid-template-columns:1fr}.vm-tracking{gap:8px}.vm-month-grid{gap:3px}.vm-day{padding:5px;min-height:70px;gap:5px;border-radius:5px}.vm-day-event{display:none}.vm-day-count{font-size:10px}.vm-month-help{font-size:12px}.vm-dialog{padding:20px}.vm-dialog-grid{grid-template-columns:1fr}.vm-dialog-grid .full{grid-column:auto}.vm-result-actions{width:100%}.vm-view-switch button{font-size:13px;padding:8px 12px}.vm-export summary{font-size:13px}.vm-event-grid{gap:12px}
 }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 @media (max-width:760px){.brand{display:block!important;padding-right:150px!important;min-height:42px}.railfoot{display:none!important}nav.rail.vm-nav-open .railfoot{display:flex!important}.vm-filters{grid-template-columns:1fr 1fr}.vm-filters>.vm-field:first-child{grid-column:1/-1}.vm-filter-panel{margin-bottom:14px}.vm-dashboard{margin:14px 0}.vm-stat{padding:10px 12px}.vm-presets{gap:6px;margin-bottom:12px}.vm-source-state{font-size:12px}}
@@ -421,22 +434,32 @@ table{font-size:14px}th{font-size:13px}td,th{padding:13px;vertical-align:top}
 .vm-filters>.vm-field:last-child{grid-column:auto}
 .vm-result-count{font-variant-numeric:tabular-nums}
 @media(max-width:1200px){.vm-filters{grid-template-columns:repeat(2,minmax(0,1fr))}.vm-filters>.vm-field:last-child{grid-column:auto}.vm-programme-filters{grid-template-columns:1fr 1fr}.vm-programme-filters>.vm-field:first-child{grid-column:1/-1}}
-@media(max-width:760px){.vm-pagination{gap:8px}.vm-pagination .vm-page-position{order:-1;flex-basis:100%}.vm-pagination button{flex:1}.vm-filters{gap:10px}.vm-filters>.vm-field:first-child{grid-column:1/-1}.vm-filters>.vm-field:last-child{grid-column:auto}.vm-programme-filters{grid-template-columns:1fr}.vm-programme-filters>.vm-field:first-child{grid-column:auto}.vm-advanced-grid{grid-template-columns:1fr}.vm-scope button{flex-basis:calc(50% - 8px)}.vm-event-meta{font-size:12px}.vm-filters .vm-field select{padding-left:8px;padding-right:2px;font-size:14px}.vm-source-summary{margin-top:20px}}
+@media(max-width:760px){.vm-pagination{gap:8px}.vm-pagination .vm-page-position{order:-1;flex-basis:100%}.vm-pagination button{flex:1}.vm-filters{gap:10px}.vm-filters>.vm-field:first-child{grid-column:1/-1}.vm-filters>.vm-field:last-child{grid-column:auto}.vm-programme-filters{grid-template-columns:1fr}.vm-programme-filters>.vm-field:first-child{grid-column:auto}.vm-scope button{flex-basis:calc(50% - 8px)}.vm-event-meta{font-size:12px}.vm-filters .vm-field select{padding-left:8px;padding-right:2px;font-size:14px}.vm-source-summary{margin-top:20px}}
 @media print{.vm-pagination{display:none!important}}
 
 /* Compact calendar and organiser directory */
 .vm-calendar-filters{padding:14px;margin-bottom:14px}
 .vm-calendar-filters .vm-filters{grid-template-columns:minmax(0,2fr) repeat(2,minmax(0,1fr))}
 .vm-calendar-filters .vm-filters>.vm-field:first-child{grid-column:auto}
-.vm-calendar-filters .vm-field input,.vm-calendar-filters .vm-field select,.vm-bookmark-filters .vm-field input,.vm-bookmark-filters .vm-field select{min-height:44px}
-.vm-calendar-filters .vm-presets{margin:10px 0 0}
-.vm-calendar-filters .vm-presets button,.vm-calendar-filters .vm-reset{font-size:13px}
-.vm-filter-tail{position:relative;border-top:1px solid var(--line);padding-top:6px;margin-top:10px}
-.vm-filter-tail .vm-advanced{margin:0;padding:0;border:0}
-.vm-filter-tail .vm-advanced>summary{padding:10px 114px 10px 0}
-.vm-calendar-filters .vm-reset{position:absolute;top:6px;right:0}
+.vm-calendar-filters .vm-field input,.vm-calendar-filters .vm-field select,.vm-bookmark-filters .vm-field input,.vm-bookmark-filters .vm-field select{min-width:0;min-height:44px}
+.vm-filter-tail{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:12px}
+.vm-calendar-filters .vm-presets{margin:0}
+.vm-calendar-filters .vm-presets button,.vm-calendar-filter-actions .vm-button{font-size:13px}
+.vm-calendar-filter-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.vm-calendar-more[aria-expanded="true"]{background:var(--soft)}
+.vm-calendar-more::after{content:'';width:6px;height:6px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:translateY(-2px) rotate(45deg)}
+.vm-calendar-more[aria-expanded="true"]::after{transform:translateY(1px) rotate(225deg)}
+.vm-calendar-filter-actions .vm-reset{color:var(--muted);background:transparent}
+.vm-calendar-advanced{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.9fr) minmax(0,1.2fr);gap:12px;margin-top:14px;border-top:1px solid var(--line);padding-top:12px}
+.vm-calendar-advanced[hidden]{display:none}
+.vm-calendar-filter-group{min-width:0;margin:0;padding:8px 10px 10px;border:1px solid var(--line);border-radius:8px}
+.vm-calendar-filter-group legend{padding:0 4px;font-size:13px;font-weight:700}
+.vm-calendar-group-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.vm-calendar-filter-group.vm-organiser-filters .vm-calendar-group-fields{grid-template-columns:1fr}
+.vm-calendar-group-fields .vm-toggle{grid-column:1/-1;min-height:28px}
+.vm-calendar-group-fields .vm-toggle input{flex:none}
 .vm-event-grid{gap:12px}
-.vm-event.vm-event-compact,.vm-list .vm-event.vm-event-compact{padding:14px 16px 4px}
+.vm-event.vm-event-compact{padding:14px 16px 4px}
 .vm-event-compact .vm-event-header{margin:0 0 8px}
 .vm-event-compact .vm-event-header .vm-date{font-size:14px;line-height:1.5}
 .vm-event-compact h2{font-size:clamp(17px,2vw,20px);line-height:1.32;margin:0 0 4px}
@@ -449,7 +472,7 @@ table{font-size:14px}th{font-size:13px}td,th{padding:13px;vertical-align:top}
 .vm-event-compact .vm-tracking{padding-top:0;border-top:0}
 .vm-event-compact .vm-detail-content{font-size:15px;line-height:1.55;margin-bottom:14px}
 .vm-event-compact .vm-detail-content h3{margin-top:15px}
-.vm-export>summary{display:flex;align-items:center}
+.vm-export>summary{box-sizing:border-box;display:flex;align-items:center}
 .vm-bookmark-filters{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) auto;gap:12px;align-items:end;margin:0 0 12px}
 .vm-bookmark-grid{margin-top:12px}
 .vm-bookmark-grid .vm-contact-card{padding:14px 16px}
@@ -460,14 +483,12 @@ table{font-size:14px}th{font-size:13px}td,th{padding:13px;vertical-align:top}
 .vm-contact-directory>summary{min-height:44px;padding:10px 0;cursor:pointer;font-weight:650}
 .vm-contact-directory .vm-field{max-width:520px;margin:8px 0 12px}
 .vm-contact-directory .vm-contact-grid{margin-top:12px}
-@media(min-width:761px){
- .vm-list .vm-event-compact{display:grid;grid-template-columns:minmax(120px,155px) minmax(0,1fr);column-gap:16px}
- .vm-list .vm-event-compact>.vm-details{grid-column:1/-1}
-}
+@media(max-width:1200px){.vm-calendar-advanced{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){
  .vm-calendar-filters .vm-filters{grid-template-columns:repeat(2,minmax(0,1fr))}
  .vm-calendar-filters .vm-filters>.vm-field:first-child{grid-column:1/-1}
- .vm-calendar-filters .vm-presets{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+ .vm-calendar-advanced{grid-template-columns:1fr}
+ .vm-calendar-filters .vm-presets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
  .vm-calendar-filters .vm-presets button{padding:7px 4px;line-height:1.2}
  .vm-result-actions .vm-button,.vm-result-actions .vm-export summary{padding:8px 9px;font-size:13px}
  .vm-bookmark-filters{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -541,14 +562,19 @@ table{font-size:14px}th{font-size:13px}td,th{padding:13px;vertical-align:top}
  body.pf-legacy #main{max-width:none;padding:28px clamp(22px,2vw,48px) 52px}
  .vm-event-grid,.vm-contact-grid{grid-template-columns:repeat(auto-fill,minmax(340px,1fr))}
  .vm-overview{grid-template-columns:minmax(330px,5fr) minmax(0,7fr);gap:clamp(22px,2.2vw,52px)}
- #vm-results .vm-list .vm-event-compact{position:relative;padding-bottom:14px}
- #vm-results .vm-list .vm-event-body{padding-inline-end:220px}
- #vm-results .vm-list .vm-details{margin:0;border:0}
- #vm-results .vm-list .vm-details>summary{position:absolute;inset-block-start:12px;inset-inline-end:16px;max-width:200px}
- #vm-results .vm-list .vm-detail-content{padding-top:12px;margin:12px 0 0;border-top:1px solid var(--line)}
+ .vm-calendar-filters .vm-presets button,.vm-calendar-filter-actions .vm-button{min-height:36px;padding:5px 12px}
+ .vm-list{--vm-list-columns:clamp(132px,10vw,178px) minmax(0,1.25fr) minmax(0,1.1fr) 82px}
+ .vm-list-heading,.vm-list-details>summary{display:grid;grid-template-columns:var(--vm-list-columns);column-gap:20px;padding-inline:16px}
+ .vm-list-heading{position:sticky;top:0;z-index:1;padding-block:8px;background:var(--soft);border-radius:11px 11px 0 0;color:var(--muted);font-size:13px;font-weight:700}
+ .vm-list-details>summary{padding-block:9px}
+ .vm-list-details>summary>*{grid-column:auto;grid-row:auto}
  #vm-results .vm-detail-content{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,2.5vw,48px)}
  #vm-results .vm-event-information,#vm-results .vm-event-planning{min-width:0;max-width:85ch}
  #vm-results .vm-event-grid>.vm-event-compact:has(.vm-details[open]){grid-column:1/-1}
+}
+@media print{
+ .vm-list-details>summary{display:block!important}
+ .vm-list-action{display:none}
 }
 
 </style>
@@ -2193,24 +2219,38 @@ if(!['cards','list','month'].includes(vmFilter.view))vmFilter.view=vmDefaults().
 function vmRows(f){return vmSorted(CAL.filter(c=>vmMatches(c,f,vmToday())),f.sort)}
 function vmStoreFilters(){S['planner:filters:v4']={...vmFilter};persist()}
 function vmTag(label,cls){return h('span',{class:'vm-tag '+(cls||'')},label)}
-function vmHeader(title,description){const main=document.getElementById('main');main.append(h('div',{class:'vm-intro'},h('h1',null,title),h('p',null,description)))}
-function vmEvent(c){
- const root=h('article',{class:'vm-event vm-event-compact','aria-label':c.ev,'data-event':c.n});
- const series=c.scheduleType==='series',uncertain=vmUncertain(c);
- const dateText=c.s?(series?tr(c.s<vmToday()?'Series began':'Series starts')+' '+range(c.s):range(c.s,c.e)):tr('Date pending');
+function vmHeader(title,description){const main=document.getElementById('main');main.append(h('div',{class:'vm-intro'},h('h1',null,title),description?h('p',null,description):null))}
+function vmEvent(c,view='cards'){
+ const list=view==='list',series=c.scheduleType==='series',uncertain=vmUncertain(c);
+ const root=h('article',{class:'vm-event '+(list?'vm-list-row':'vm-event-compact'),'aria-label':c.ev,'data-event':c.n});
+ const seriesLabel=series&&c.s?tr(c.s<vmToday()?'Series began':'Series starts'):'';
+ const dates=c.s?range(c.s,series?null:c.e):tr('Date pending');
  const cancelled=/abgesagt|cancelled/i.test((c.dateStatus||'')+' '+(c.sourceStatus||''));
  const warning=cancelled?'Cancelled':uncertain?c.dateStatus:c.co==='UNKNOWN'?'Location to confirm':'';
- root.append(h('div',{class:'vm-event-header'},h('div',{class:'vm-date'},dateText,warning?h('small',{class:'vm-date-warning'},warning):null)));
- const location=[...new Set([c.city,c.venue,c.co!=='AT'&&c.co!=='UNKNOWN'?(VM_COUNTRY[c.co]||c.co):null].filter(Boolean))].join(' · ');
- const heading=h('div',{class:'vm-event-body'},h('h2',null,c.ev),
-  h('p',{class:'vm-location'},location||'Location to confirm'),
-  c.organiser&&c.organiser!==c.venue?h('p',{class:'vm-event-meta'},c.organiser):null,
-  h('div',{class:'vm-tags'},vmTag(VM_KIND[c.kind]||c.type),...(c.topics||[]).filter(t=>t==='photography').map(t=>vmTag(VM_TOPICS[t]))));
- const details=h('details',{class:'vm-details'},h('summary',null,'Details, contacts & notes'));
+ const dateWarning=warning?h('small',{class:'vm-date-warning'},warning):null;
+ const location=[...new Set([c.city,c.venue,c.co!=='AT'&&c.co!=='UNKNOWN'?(VM_COUNTRY[c.co]||c.co):null].filter(Boolean))].join(' · ')||tr('Location to confirm');
+ const organiser=c.organiser!==c.venue?c.organiser:'';
+ const categories=[VM_KIND[c.kind]||c.type,...(c.topics||[]).filter(t=>t==='photography').map(t=>VM_TOPICS[t])].filter(Boolean);
+ const summary=list?h('summary',null,
+  h('span',{class:'vm-list-when'},dates,seriesLabel?h('span',{class:'vm-list-meta'},seriesLabel):null,dateWarning),
+  h('span',{class:'vm-list-name'},h('span',{class:'vm-list-title'},c.ev),
+   categories.length?h('span',{class:'vm-list-meta'},categories.map(tr).join(' · ')):null),
+  h('span',{class:'vm-list-location'},location,organiser?h('span',{class:'vm-list-meta'},organiser):null),
+  h('span',{class:'vm-list-action','aria-hidden':'true'},'Details')):
+  h('summary',null,'Details, contacts & notes');
+ if(!list){
+  root.append(h('div',{class:'vm-event-header'},h('div',{class:'vm-date'},
+   seriesLabel?seriesLabel+' '+dates:dates,dateWarning)),
+  h('div',{class:'vm-event-body'},h('h2',null,c.ev),
+   h('p',{class:'vm-location'},location),
+   organiser?h('p',{class:'vm-event-meta'},organiser):null,
+   h('div',{class:'vm-tags'},categories.map(label=>vmTag(label)))));
+ }
+ const details=h('details',{class:'vm-details'+(list?' vm-list-details':'')},summary);
  details.addEventListener('toggle',()=>{
   if(details.open&&!details.querySelector('.vm-detail-content'))details.append(vmEventDetails(c,series,uncertain));
  });
- root.append(heading,details);
+ root.append(details);
  return root;
 }
 function vmPortfolioGuide(guide,heading='h3',source='',focus=''){
@@ -2411,6 +2451,19 @@ function vmFirstWeekend(c,first,last){
  return saturday<=limit?saturday:'';
 }
 function vmUncertain(c){return /conflict|cancel|postpon|provisional|reconfirmation|unconfirmed/i.test(c.dateStatus||'')||/abgesagt|cancelled/i.test(c.sourceStatus||'')}
+function vmLocationPatch(value){
+ const [type,name]=value.split(':',2);
+ if(type==='province')return {scope:'AT',state:name,country:''};
+ if(type==='country')return {scope:'other',state:'',country:name};
+ return {scope:type,state:'',country:''};
+}
+function vmLocationChoice(f){
+ if(f.state)return ['AT','all'].includes(f.scope)&&(!f.country||f.country==='AT')?'province:'+f.state:'';
+ if(!f.country)return f.scope;
+ const scope=f.country==='AT'?'AT':f.country==='UNKNOWN'?'unknown':'other';
+ if(f.scope!=='all'&&f.scope!==scope)return '';
+ return scope==='other'?'country:'+f.country:scope;
+}
 function vmMatches(c,f,now){
  if(f.scope==='AT'&&c.co!=='AT'||f.scope==='other'&&['AT','UNKNOWN'].includes(c.co)||f.scope==='unknown'&&c.co!=='UNKNOWN')return false;
  if(f.country&&c.co!==f.country||f.discipline&&!(c.disciplines||[]).includes(f.discipline)||f.kind&&c.kind!==f.kind)return false;
@@ -2446,8 +2499,9 @@ Object.assign(VM_DE,{
  'Province':'Bundesland','All provinces':'Alle Bundesländer','Province to confirm':'Bundesland offen','Organiser group':'Veranstaltergruppe','All organisers':'Alle Veranstalter','Topic':'Thema','All topics':'Alle Themen','Schedule':'Terminart','Any schedule':'Alle Terminarten','Course series':'Kursreihe','Single day / continuous event':'Einzeltag / zusammenhängender Termin','Location to confirm':'Ort offen','Safety & rescue':'Sicherheit & Rettung','Huts & anniversaries':'Hütten & Jubiläen','Mountain films':'Bergfilme','Annual programmes':'Jahresprogramme','Checked, settled dates only':'Nur geprüfte Termine ohne Datumswiderspruch','Dates / status to confirm':'Datum / Status klären','Individual organiser':'Einzelner Veranstalter','All event types':'Alle Terminarten','Previous page':'Vorherige Seite','Next page':'Nächste Seite','Hiking / snowshoeing':'Wandern / Schneeschuh','Ski touring / winter sports':'Skitouren / Wintersport','Mountain safety':'Alpine Sicherheit','Outdoor mountains':'Draußen in den Bergen','Hike / walking outing':'Wanderung','Guided mountain tour':'Geführte Bergtour','Hut celebration':'Hüttenfest','Talk / mountain culture':'Vortrag / Bergkultur','Public rescue training':'Öffentliches Rettungstraining','Trade fair / brand showcase':'Messe / Markenpräsentation','Avalanche / LVS':'Lawinen / LVS','Glacier / crevasse rescue':'Gletscher / Spaltenbergung','Mountain / companion rescue':'Berg- / Kameradenrettung','First aid':'Erste Hilfe','Navigation / tour planning':'Orientierung / Tourenplanung','Huts & paths':'Hütten & Wege','Anniversaries':'Jubiläen','Conservation':'Naturschutz','Equipment & brands':'Ausrüstung & Marken','Instructor / coach training':'Übungsleiter / Trainerausbildung','Photography':'Fotografie','Alpenverein / Gebirgsverein':'Alpenverein / Gebirgsverein','Safety / mountain rescue':'Sicherheit / Bergrettung','Brands / equipment providers':'Marken / Ausrüster','Film organisers':'Filmveranstalter','National parks':'Nationalparks','Hut teams':'Hüttenteams','Climbing competitions':'Kletterwettkämpfe','Other organisers':'Andere Veranstalter'
 });
 Object.assign(VM_DE,{
- 'Find climbing, hiking and photography opportunities by date and place.':'Finde Kletter-, Wander- und Fototermine nach Datum und Ort.',
- 'Country scope':'Länder','Quick filters':'Schnellfilter','Gear & brands':'Ausrüstung & Marken','Weekends':'Wochenenden',
+ 'Quick filters':'Schnellfilter','Gear & brands':'Ausrüstung & Marken','Weekends':'Wochenenden',
+ 'Location':'Ort','Austrian provinces':'Österreichische Bundesländer','Countries':'Länder','Saved location':'Gespeicherter Ort',
+ 'Date':'Datum','Event':'Veranstaltung','Organiser':'Veranstalter','Planning':'Planung',
  'Planner overview':'Planer-Übersicht','Planning tools':'Planungswerkzeuge','Weekend events':'Wochenendtermine',
  'Browse photography events':'Fototermine ansehen','active enquiries':'aktive Anfragen','galleries delivered or published':'Galerien geliefert oder veröffentlicht',
  'Event, city, venue or organiser':'Termin, Ort, Halle oder Veranstalter','listings':'Einträge','of':'von',
@@ -2495,16 +2549,10 @@ function vmPagination(rows,page,onChange){
  return h('nav',{class:'vm-pagination','aria-label':'Results pages'},vmButton('Previous page',()=>onChange(page-1),{disabled:page<=1}),h('span',{class:'vm-page-position'},'Page '+page+' of '+pages+' · '+Math.min((page-1)*VM_PAGE_SIZE+1,rows.length)+'–'+Math.min(page*VM_PAGE_SIZE,rows.length)+' of '+rows.length),vmButton('Next page',()=>onChange(page+1),{disabled:page>=pages}));
 }
 V['Calendar']=function(){
- vmHeader('Mountain calendar','Find climbing, hiking and photography opportunities by date and place.');
+ vmHeader('Mountain calendar');
  const main=document.getElementById('main'),fields={};
  function choice(key,label,options){
-  const input=vmSelect(label,options,vmFilter[key],value=>{
-   vmFilter[key]=value;
-   if(key==='scope'){vmFilter.country='';if(value!=='AT')vmFilter.state=''}
-   if(key==='country'&&value){vmFilter.scope=value==='AT'?'AT':value==='UNKNOWN'?'unknown':'other';if(value!=='AT')vmFilter.state=''}
-   if(key==='state'&&value){vmFilter.scope='AT';vmFilter.country=''}
-   draw();
-  });
+  const input=vmSelect(label,options,vmFilter[key],value=>{vmFilter[key]=value;draw()});
   fields[key]=input;return vmField(label,input);
  }
  const search=h('input',{type:'search',value:vmFilter.q,placeholder:'Event, city, venue or organiser','aria-label':'Search events'});
@@ -2515,9 +2563,17 @@ V['Calendar']=function(){
   timer=setTimeout(()=>{if(search.isConnected)draw()},100);
  });
  const scopes=[['AT','Austria'],['other','Other countries'],['all','All countries'],['unknown','Location to confirm']];
- const filters=h('div',{class:'vm-filters'},vmField('Search events',search),
-  choice('period','Dates',[['upcoming','Upcoming'],['all','All dates'],['finished','Finished'],['pending','Dates / status to confirm']]),
-  choice('state','Province',[['','All provinces'],...VM_PROVINCES.map(v=>[v,v]),['unknown','Province to confirm']]));
+ const location=vmSelect('Location',scopes,'',value=>{Object.assign(vmFilter,vmLocationPatch(value));draw()});
+ const provinces=[...VM_PROVINCES.map(name=>['province:'+name,name]),['province:unknown','Province to confirm']];
+ const countries=[...new Set(CAL.map(c=>c.co))].filter(co=>co!=='AT'&&co!=='UNKNOWN')
+  .map(co=>['country:'+co,VM_COUNTRY[co]||co]).sort((a,b)=>tr(a[1]).localeCompare(tr(b[1]),locale));
+ for(const [label,options] of [['Austrian provinces',provinces],['Countries',countries]]){
+  location.append(h('optgroup',{label:tr(label)},options.map(([value,name])=>h('option',{value},name))));
+ }
+ const savedLocation=h('option',{value:'saved',disabled:true,hidden:true});
+ location.append(savedLocation);
+ const filters=h('div',{class:'vm-filters'},vmField('Search events',search),vmField('Location',location),
+  choice('period','Dates',[['upcoming','Upcoming'],['all','All dates'],['finished','Finished'],['pending','Dates / status to confirm']]));
  const presets=h('div',{class:'vm-presets',role:'group','aria-label':'Quick filters'});
  const presetButtons=[];
  for(const [label,key,value] of [['Photography','topic','photography'],['Competitions','kind','competition'],['Gear & brands','topic','gear'],['Weekends','weekends',true]]){
@@ -2528,34 +2584,41 @@ V['Calendar']=function(){
   });
   presets.append(button);presetButtons.push([button,key,value]);
  }
- const summary=h('summary',null,'More filters'),advanced=h('details',{class:'vm-advanced'},summary);
- const extra=h('div',{class:'vm-advanced-grid'},choice('scope','Country scope',scopes),
-  choice('discipline','Discipline',[['','All disciplines'],...Object.entries(VM_DISC)]),
+ function filterGroup(label,classes,...controls){
+  return h('fieldset',{class:'vm-calendar-filter-group'+classes},h('legend',null,label),
+   h('div',{class:'vm-calendar-group-fields'},controls));
+ }
+ const eventFilters=filterGroup('Event','',
   choice('kind','Event type',[['','All event types'],...Object.entries(VM_KIND)]),
   choice('topic','Topic',[['','All topics'],...Object.entries(VM_TOPICS)]),
+  choice('discipline','Discipline',[['','All disciplines'],...Object.entries(VM_DISC)]),
   choice('setting','Setting',[['','Any setting'],['outdoor','Outdoor'],...Object.entries(VM_SETTING)]),
-  choice('group','Organiser group',[['','All organisers'],...Object.entries(VM_GROUPS)]),
-  choice('organiser','Individual organiser',[['','All organisers'],...[...new Set(CAL.map(c=>c.organiser).filter(Boolean))].sort().map(o=>[o,o])]),
-  choice('country','Specific country',[['','Any country in this view'],...[...new Set(CAL.map(c=>c.co))].sort().map(x=>[x,VM_COUNTRY[x]||x])]),
-  choice('tier','Priority',[['','All priorities'],['A','A — flagship'],['B','B — dedicated outing'],['C','C — local / community']]),
   choice('schedule','Schedule',[['','Any schedule'],['series','Course series'],['continuous','Single day / continuous event']]),
   choice('audience','Audience',[['','All audiences'],...[...new Set(CAL.map(c=>c.audience).filter(Boolean))].sort().map(a=>[a,a])]));
- for(const [key,label] of [['from','From date'],['to','To date']]){
+ const organiserFilters=filterGroup('Organiser',' vm-organiser-filters',
+  choice('group','Organiser group',[['','All organisers'],...Object.entries(VM_GROUPS)]),
+  choice('organiser','Individual organiser',[['','All organisers'],...[...new Set(CAL.map(c=>c.organiser).filter(Boolean))].sort().map(o=>[o,o])]));
+ const dateFields=[['from','From date'],['to','To date']].map(([key,label])=>{
   const input=h('input',{type:'date',value:vmFilter[key]});fields[key]=input;
   input.addEventListener('change',()=>{vmFilter[key]=input.value;draw()});
-  extra.append(vmField(label,input));
- }
+  return vmField(label,input);
+ });
  const verified=h('input',{type:'checkbox',checked:vmFilter.verified});
  fields.verified=verified;verified.addEventListener('change',()=>{vmFilter.verified=verified.checked;draw()});
  const portfolio=h('input',{type:'checkbox',checked:vmFilter.portfolio===true});
  fields.portfolio=portfolio;portfolio.addEventListener('change',()=>{vmFilter.portfolio=portfolio.checked;draw()});
- extra.append(h('label',{class:'vm-toggle'},verified,'Checked, settled dates only'),
-  h('label',{class:'vm-toggle'},portfolio,'Events with portfolio ideas'),
-  choice('sort','Sort by',[['date','Soonest first'],['priority','Priority first'],['name','Event name']]));
- advanced.append(extra);
+ const planningFilters=filterGroup('Planning','',...dateFields,
+  choice('tier','Priority',[['','All priorities'],['A','A — flagship'],['B','B — dedicated outing'],['C','C — local / community']]),
+  choice('sort','Sort by',[['date','Soonest first'],['priority','Priority first'],['name','Event name']]),
+  h('label',{class:'vm-toggle'},verified,'Checked, settled dates only'),
+  h('label',{class:'vm-toggle'},portfolio,'Events with portfolio ideas'));
+ const extra=h('div',{class:'vm-calendar-advanced',id:'vm-calendar-advanced',hidden:true},eventFilters,organiserFilters,planningFilters);
+ const more=vmButton('More filters',()=>{
+  extra.hidden=!extra.hidden;more.setAttribute('aria-expanded',String(!extra.hidden));
+ },{class:'vm-button vm-calendar-more','aria-expanded':'false','aria-controls':extra.id});
  const defaults=vmDefaults(),reset=vmButton('Reset filters',()=>{vmFilter={...vmDefaults(),view:vmFilter.view};draw()},{class:'vm-button vm-reset'});
- main.append(h('section',{class:'vm-filter-panel vm-calendar-filters','aria-label':'Event filters'},filters,presets,
-  h('div',{class:'vm-filter-tail'},advanced,reset)));
+ main.append(h('section',{class:'vm-filter-panel vm-calendar-filters','aria-label':'Event filters'},filters,
+  h('div',{class:'vm-filter-tail'},presets,h('div',{class:'vm-calendar-filter-actions'},more,reset)),extra));
  const result=h('p',{class:'vm-result-count',role:'status','aria-live':'polite','aria-atomic':'true'});
  const switcher=h('div',{class:'vm-view-switch',role:'group','aria-label':'Calendar view'}),viewButtons=[];
  let visible=[];
@@ -2582,8 +2645,18 @@ V['Calendar']=function(){
   }
   for(const [button,key,value] of presetButtons)button.setAttribute('aria-pressed',String(vmFilter[key]===value));
   for(const [button,view] of viewButtons)button.setAttribute('aria-pressed',String(vmFilter.view===view));
-  const active=Object.keys(fields).filter(k=>!['q','period','state'].includes(k)&&vmFilter[k]!==defaults[k]).length;
-  summary.textContent=tr('More filters')+(active?' ('+active+')':'');
+  location.value=vmLocationChoice(vmFilter);
+  savedLocation.hidden=Boolean(location.value);
+  if(!location.value){
+   const scope=scopes.find(([value])=>value===vmFilter.scope)?.[1];
+   const country=VM_COUNTRY[vmFilter.country]||vmFilter.country;
+   const province=vmFilter.state==='unknown'?'Province to confirm':vmFilter.state;
+   savedLocation.textContent=[...new Set([scope,country,province].filter(Boolean))].map(tr).join(' · ')||tr('Saved location');
+   location.value=savedLocation.value;
+  }
+  const active=Object.keys(fields).filter(key=>key!=='q'&&key!=='period'&&vmFilter[key]!==defaults[key]
+   &&!presetButtons.some(([,preset,value])=>preset===key&&vmFilter[key]===value)).length;
+  more.textContent=tr('More filters')+(active?' ('+active+')':'');
  }
  function pageChange(page){
   vmPage=page;draw(false);body.querySelector('.vm-pagination button:not(:disabled)')?.focus({preventScroll:true});
@@ -2592,7 +2665,7 @@ V['Calendar']=function(){
  function draw(resetPage=true){
   if(resetPage)vmPage=1;
   sync();visible=vmRows(vmFilter);vmStoreFilters();
-  result.textContent=visible.length.toLocaleString()+' '+tr('of')+' '+CAL.length.toLocaleString()+' '+tr('listings')+' · '+tr(scopes.find(([scope])=>scope===vmFilter.scope)?.[1]||'All countries');
+  result.textContent=visible.length.toLocaleString()+' '+tr('of')+' '+CAL.length.toLocaleString()+' '+tr('listings')+' · '+location.selectedOptions[0].textContent;
   body.replaceChildren();
   if(vmFilter.from&&vmFilter.to&&vmFilter.from>vmFilter.to){body.append(h('p',{class:'vm-error',role:'alert'},'The end of your date range is before its start.'));return}
   if(vmFilter.view==='month'){vmMonth(body,visible);return}
@@ -2600,7 +2673,9 @@ V['Calendar']=function(){
    body.append(h('div',{class:'vm-empty'},h('h2',null,'No events match these filters.'),h('p',null,'Try another discipline, date range or country.')));return;
   }
   vmPage=Math.min(vmPage,Math.ceil(visible.length/VM_PAGE_SIZE));
-  const grid=h('div',{class:vmFilter.view==='cards'?'vm-event-grid':'vm-list'},visible.slice((vmPage-1)*VM_PAGE_SIZE,vmPage*VM_PAGE_SIZE).map(vmEvent));
+  const list=vmFilter.view==='list',grid=h('div',{class:list?'vm-list':'vm-event-grid'});
+  if(list)grid.append(h('div',{class:'vm-list-heading','aria-hidden':'true'},['Date','Event','Location'].map(label=>h('span',null,label))));
+  grid.append(...visible.slice((vmPage-1)*VM_PAGE_SIZE,vmPage*VM_PAGE_SIZE).map(c=>vmEvent(c,vmFilter.view)));
   body.append(grid);
   if(visible.length>VM_PAGE_SIZE)body.append(vmPagination(visible,vmPage,pageChange));
  }

@@ -23,6 +23,8 @@ type Domain = {
   vmOrganiserLinkKey: (n: number, id: string) => string;
   vmLinkedOrganiserIds: (n: number, state: Record<string, unknown>, records: Organiser[]) => string[];
   vmOrganiserEventNumbers: (id: string, state: Record<string, unknown>) => number[];
+  vmLocationPatch: (choice: string) => Filter;
+  vmLocationChoice: (filter: Filter) => string;
   vmMatches: (event: Event, filter: Filter, now: string) => boolean;
   vmOnDay: (event: Event, day: string) => boolean;
   vmInMonth: (event: Event, first: string, last: string) => boolean;
@@ -51,7 +53,7 @@ const domain = runInNewContext(
   section("/* VM_DOMAIN_START */", "/* VM_DOMAIN_END */") + "\n" +
   section("/* VM_EXPANDED_DOMAIN_START */", "/* VM_EXPANDED_DOMAIN_END */") +
   "\n" + section("/* VM_ORGANISER_DOMAIN_START */", "/* VM_ORGANISER_DOMAIN_END */") +
-  ";({vmMatches,vmOnDay,vmInMonth,vmICS,vmUncertain,vmValidDate,vmSafeURL,vmCSVCell,vmCleanState," +
+  ";({vmLocationPatch,vmLocationChoice,vmMatches,vmOnDay,vmInMonth,vmICS,vmUncertain,vmValidDate,vmSafeURL,vmCSVCell,vmCleanState," +
   "vmOrganiserRecords,vmOrganiserLinkKey,vmLinkedOrganiserIds,vmOrganiserEventNumbers})",
   { Date, URL, TextEncoder },
 ) as Domain;
@@ -108,6 +110,26 @@ describe("embedded mountain calendar", () => {
     expect(linked.filter(event => domain.vmMatches(event, {
       portfolio: true, q: "gear-use independent", from: "2026-10-27", to: "2026-11-06",
     }, now)).map(event => event.n)).toEqual([42]);
+  });
+
+  it("maps the location picker to saved Calendar filters", () => {
+    const choices: [string, Filter][] = [
+      ["AT", { scope: "AT", state: "", country: "" }],
+      ["other", { scope: "other", state: "", country: "" }],
+      ["all", { scope: "all", state: "", country: "" }],
+      ["unknown", { scope: "unknown", state: "", country: "" }],
+      ["province:Wien", { scope: "AT", state: "Wien", country: "" }],
+      ["province:unknown", { scope: "AT", state: "unknown", country: "" }],
+      ["country:CH", { scope: "other", state: "", country: "CH" }],
+    ];
+    for (const [choice, filter] of choices) {
+      expect(domain.vmLocationPatch(choice)).toEqual(filter);
+      expect(domain.vmLocationChoice(filter)).toBe(choice);
+    }
+    expect(domain.vmLocationChoice({ scope: "all", country: "CH" })).toBe("country:CH");
+    expect(domain.vmLocationChoice({ scope: "all", country: "AT", state: "Wien" })).toBe("province:Wien");
+    expect(domain.vmLocationChoice({ scope: "unknown", country: "UNKNOWN" })).toBe("unknown");
+    expect(domain.vmLocationChoice({ scope: "AT", country: "CH" })).toBe("");
   });
 
   it("keeps country scopes disjoint and excludes unknown destinations from Austria", () => {
