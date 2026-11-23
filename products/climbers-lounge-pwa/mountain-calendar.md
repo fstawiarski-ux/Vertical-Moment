@@ -203,18 +203,48 @@ passed with 173. The Next/Serwist build and its Planner cache entries passed.
 Chrome checks at 1,440, 390 and 320 pixels covered navigation, keyboard use,
 bookmark backup and restore, saved plans, filters, and CSV and ICS downloads.
 
+## Desktop planning workflow — 23 November 2026
+
+Overview combines the old Overview and Start Here entry points. It brings
+together the main planning tools, outreach and delivery totals, and upcoming
+photography events. Existing Start Here links open this view.
+
+The calendar has a Weekends toggle that works with date, location, search and
+topic filters. It matches a continuous event that overlaps a Saturday or Sunday.
+A series matches on an explicitly published session date, or on its stated start
+when individual dates are unavailable. Month view shows the matching weekend
+dates. Calendar exports carry the original published schedules of the selected
+events. Existing Weekend Picks links open the calendar with Weekends selected.
+
+In Organisers & contacts, Add organiser saves a personal bookmark with a name
+and optional category, location, website, email and notes. In a shoot's details,
+Linked organisers lets you attach a saved bookmark or create and link one in
+the same step. A link created through Competition photography is also
+available in the full calendar. The organiser card lists linked shoots.
+
+Personal organiser records and links are saved in the browser and included in
+Planner backups. Edits preserve the bookmark identity. Deleting a personal
+bookmark removes its links from all shoots.
+
+The desktop view uses the whole Planner frame. Overview places the planning
+tools and upcoming shoots side by side. Wide screens fit more event cards or
+organiser cards per row, and calendar list rows put their Details action on the
+right. Open shoots place event information and planning controls side by side.
+Desktop navigation stays in view while the calendar scrolls.
+
+The 31 Planner tests, all 177 website tests and the local Next/Serwist build
+passed. Chrome checks at 1,440, 1,920 and 2,560 pixels covered the overview and
+legacy links, weekend filtering, and creating, editing and linking organisers.
+An exported backup restored a personal organiser and its shoot link in a clean
+browser context.
+
 ### Further Planner improvements
 
-1. Use the calendar and the photography shortlist as the two main entry
-   points. Combine Overview and Start Here after checking that their useful
-   links are reachable from the main views. Replace Weekend Picks with a
-   weekend date shortcut and keep its existing link working.
-2. Add personal organisation bookmarks and link them to events. Let users
-   record an accreditation deadline, the venue contact for shooting access,
-   permitted uses, credit requirements and delivery commitments with each shoot.
-3. Review Gym Directory and Portfolio Leads for overlap with dated calendar
+1. Add fields for accreditation deadlines, permitted uses, photo credit and
+   delivery commitments to the existing shoot plans.
+2. Review Gym Directory and Portfolio Leads for overlap with dated calendar
    listings and the organiser directory. Keep unique coverage and remove
    duplicate rows or views after their replacements are checked.
-4. Consolidate the older calendar and month renderers so there is one place
+3. Consolidate the older calendar and month renderers so there is one place
    to maintain each view. Keep event identities, planning state and import and
    export behaviour covered by the Planner tests.
