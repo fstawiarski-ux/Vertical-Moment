@@ -1073,7 +1073,6 @@ const CAL=D.cal;const byN={};CAL.forEach(c=>byN[c.n]=c);
 for(const guide of D.portfolioGuides||[])for(const id of guide.events)if(byN[id])byN[id].portfolioGuide=guide;
 function drive(c){const v=S['cal:'+c.n+':drive'];return v!==undefined&&v!==''?Number(v):c.dr}
 function trip(c){const x=drive(c);if(x==null||x===''||isNaN(x))return 'Check';return x<=0.75?'Local':x<=2.5?'Day trip':'Overnight'}
-function altCount(c){return CAL.filter(o=>o.s===c.s&&o.tier!=='C').length-(c.tier!=='C'?1:0)}
 function ended(c){const e=pd(c.e||c.s);return e<today()}
 const daysTo=c=>dd(pd(c.s),today());
 const STAT=['Not started','Researching','Pitched','Confirmed','Attended','Pass'];
@@ -1190,101 +1189,6 @@ V['Overview']=()=>{const main=document.getElementById('main');
     h('li',{text:'Pitch Tracker: who to contact, what to ask for, and when. Rows turn amber when a pitch is due within 14 days.'}),
     h('li',{text:'Sources & Contacts lists every link and email used.'})));
   main.append(h('h2',{text:'Assumptions and changes vs. the original PDF'}),h('ul',{class:'notes'},D.ov.assump.map(a=>h('li',{text:a}))))};
-V['Calendar']=()=>{const main=document.getElementById('main');
-  main.append(h('h1',{text:'Calendar'}),h('p',{class:'sub',text:'110 events. Use List to sort and open details, or Month to see the events laid out on a calendar.'}));
-  const f={q:'',tier:'',co:'',trip:'',type:'',yp:false,hide:false,sort:'s',dir:1,view:'list',month:null,sel:null};
-  const uniq=k=>[...new Set(CAL.map(c=>c[k]).filter(Boolean))].sort();
-  const mk=(label,vals,key)=>{const s=h('select',{'aria-label':label},h('option',{value:''},label),vals.map(v=>h('option',{value:v},v)));s.addEventListener('change',()=>{f[key]=s.value;draw()});return s};
-  const search=h('input',{type:'search',placeholder:'Search events, cities, notes','aria-label':'Search'});search.addEventListener('input',()=>{f.q=search.value.trim().toLowerCase();draw()});
-  const yp=h('input',{type:'checkbox'});yp.addEventListener('change',()=>{f.yp=yp.checked;draw()});
-  const hide=h('input',{type:'checkbox'});hide.addEventListener('change',()=>{f.hide=hide.checked;draw()});
-  const count=h('span',{class:'count'});
-  const bList=h('button',{type:'button','aria-pressed':'true'},'List'),bMonth=h('button',{type:'button','aria-pressed':'false'},'Month');
-  const setView=v=>{f.view=v;bList.setAttribute('aria-pressed',v==='list');bMonth.setAttribute('aria-pressed',v==='month');draw()};
-  bList.addEventListener('click',()=>setView('list'));bMonth.addEventListener('click',()=>setView('month'));
-  main.append(h('div',{class:'bar'},h('div',{class:'seg',role:'group','aria-label':'Calendar view'},bList,bMonth),search,mk('All tiers',['A','B','C'],'tier'),mk('All countries',uniq('co'),'co'),mk('All trip types',['Local','Day trip','Overnight','Check'],'trip'),mk('All event types',uniq('type'),'type'),
-    h('label',{class:'chk'},yp,'Youth / para only'),h('label',{class:'chk'},hide,'Hide finished'),count));
-  const body=h('div');main.append(body);
-
-  const kd=d=>d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();
-  const addD=(d,n)=>new Date(d.getFullYear(),d.getMonth(),d.getDate()+n);
-  const first0=pd(CAL[0].s),last0=pd(CAL[CAL.length-1].e||CAL[CAL.length-1].s);
-  const minM=new Date(first0.getFullYear(),first0.getMonth(),1),maxM=new Date(last0.getFullYear(),last0.getMonth(),1);
-  const clampM=d=>{const m=new Date(d.getFullYear(),d.getMonth(),1);return m<minM?minM:m>maxM?maxM:m};
-  const MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
-  function eventCard(c){return h('div',{class:'ev2'},chip(c.tier),
-      h('div',null,h('b',null,h('a',{href:c.u,target:'_blank',rel:'noopener noreferrer'},c.ev)),
-        h('div',{class:'mini',text:[range(c.s,c.e),[c.type,c.city,c.co!=='AT'?c.co:null].filter(Boolean).join(', '),trip(c)+(drive(c)!=null?' ('+c.km+' km)':'')].join(' · ')}),
-        c.notes?h('div',{class:'mini',text:c.notes}):null),
-      h('div',{class:'sels'},sel('cal:'+c.n+':status',STAT,'Not started','Status for '+c.ev),sel('cal:'+c.n+':deliv',DELIV,'Not shot','Delivery stage for '+c.ev)))}
-  function drawMonth(rows){
-    const t=today();if(!f.month)f.month=clampM(t);
-    const by={};
-    rows.forEach(c=>{for(let d=pd(c.s),e=pd(c.e||c.s);d<=e;d=addD(d,1)){(by[kd(d)]=by[kd(d)]||[]).push(c)}});
-    Object.values(by).forEach(a=>a.sort((x,y)=>x.tier<y.tier?-1:x.tier>y.tier?1:x.n-y.n));
-    const m=f.month;
-    const prev=h('button',{type:'button','aria-label':'Previous month',onclick:()=>{f.month=new Date(m.getFullYear(),m.getMonth()-1,1);f.sel=null;draw()}},'‹'),
-          next=h('button',{type:'button','aria-label':'Next month',onclick:()=>{f.month=new Date(m.getFullYear(),m.getMonth()+1,1);f.sel=null;draw()}},'›'),
-          tod=h('button',{type:'button',onclick:()=>{f.month=clampM(t);f.sel=null;draw()}},'Today');
-    if(m<=minM)prev.disabled=true;if(m>=maxM)next.disabled=true;
-    body.append(h('div',{class:'mhead'},h('h2',{text:MONTHS[m.getMonth()]+' '+m.getFullYear()}),prev,next,tod));
-    const grid=h('div',{class:'mg',role:'grid','aria-label':MONTHS[m.getMonth()]+' '+m.getFullYear()});
-    ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].forEach(x=>grid.append(h('div',{class:'dow',role:'columnheader'},x)));
-    const off=(m.getDay()+6)%7;let d=addD(m,-off);
-    const end=new Date(m.getFullYear(),m.getMonth()+1,0);const weeks=Math.ceil((off+end.getDate())/7);
-    for(let i=0;i<weeks*7;i++,d=addD(d,1)){
-      const ev=by[kd(d)]||[],out=d.getMonth()!==m.getMonth(),k=kd(d);
-      const cell=h('button',{type:'button',class:'day'+(out?' out':'')+(+d===+t?' today':'')+(f.sel===k?' sel':''),role:'gridcell','aria-label':fmt(d,true)+': '+(ev.length?ev.length+' event'+(ev.length>1?'s':''):'no events'),
-        onclick:()=>{f.sel=k;drawMonth(rows)}},
-        h('span',{class:'num',text:String(d.getDate())}),
-        ev.slice(0,3).map(c=>h('span',{class:'mchip '+c.tier+(ended(c)?' fin':''),title:c.ev},c.ev)),
-        ev.length>3?h('span',{class:'more',text:'+'+(ev.length-3)+' more'}):null);
-      grid.append(cell)}
-    body.append(grid);
-    body.append(h('div',{class:'legend'},h('span',{style:'--c:var(--tierA)',text:'Tier A'}),h('span',{style:'--c:var(--tierB)',text:'Tier B'}),h('span',{style:'--c:var(--tierC)',text:'Tier C'}),h('span',{style:'--c:var(--nav)',text:'Today'})));
-    const p=h('div',{class:'dayp'});
-    if(f.sel){const [y,mo,da]=f.sel.split('-').map(Number);const sd=new Date(y,mo-1,da);const ev=by[f.sel]||[];
-      p.append(h('h2',{text:fmt(sd,true)}));
-      if(ev.length)ev.forEach(c=>p.append(eventCard(c)));else p.append(h('div',{class:'empty',text:'No events on this day with the current filters.'}));
-    }else p.append(h('p',{class:'mini',text:'Select a day to see its events, with links and status boxes.'}));
-    body.append(p)}
-  const expanded=new Set();
-  function draw(){body.textContent='';
-    let rows=CAL.filter(c=>(!f.tier||c.tier===f.tier)&&(!f.co||c.co===f.co)&&(!f.trip||trip(c)===f.trip)&&(!f.type||c.type===f.type)&&(!f.yp||c.yp==='Y')&&(!f.hide||!ended(c))&&
-      (!f.q||[c.ev,c.city,c.venue,c.notes,c.cav,c.type,c.co].join(' ').toLowerCase().includes(f.q)));
-    const key={s:c=>c.s+String(c.n).padStart(4,'0'),ev:c=>c.ev.toLowerCase(),tier:c=>c.tier+c.s,days:c=>drive(c)==null?999:drive(c),city:c=>c.city}[f.sort]||(c=>c.s);
-    rows=rows.slice().sort((a,b)=>key(a)<key(b)?-f.dir:key(a)>key(b)?f.dir:0);
-    count.textContent=rows.length+' of '+CAL.length;
-    if(f.view==='month'){drawMonth(rows);return}
-    if(!rows.length){body.append(h('div',{class:'empty',text:'No events match these filters. Clear a filter to see more.'}));return}
-    const th=(label,k,cls)=>{const x=h('th',{class:(k?'sort ':'')+(cls||''),tabindex:k?0:null,role:k?'button':null,'aria-label':k?'Sort by '+label:null},label+(f.sort===k?(f.dir>0?' ▲':' ▼'):''));
-      if(k){const go=()=>{if(f.sort===k)f.dir*=-1;else{f.sort=k;f.dir=1}draw()};x.addEventListener('click',go);x.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}})}return x};
-    const trs=[];
-    rows.forEach(c=>{const d=daysTo(c),fin=ended(c);
-      const isX=expanded.has(c.n);
-      const tr=h('tr',{class:fin?'past':''},
-        h('td',{'data-l':'Date'},range(c.s,c.e),h('div',{class:'mini',text:fin?'finished':(d===0?'today':d>0?`in ${d} day${d===1?'':'s'}`:'under way')})),
-        h('td',{'data-l':'Event',class:'ev'},h('b',null,h('a',{href:c.u,target:'_blank',rel:'noopener noreferrer'},c.ev)),
-          c.yp==='Y'?h('span',{class:'tag',text:'youth / para'}):null,
-          h('div',{class:'where',text:[c.type,[c.city,c.co!=='AT'?c.co:null].filter(Boolean).join(', ')].filter(Boolean).join(' · ')})),
-        h('td',{'data-l':'Tier',class:'num'},chip(c.tier)),
-        h('td',{'data-l':'Trip'},trip(c),h('div',{class:'mini',text:drive(c)!=null?`${c.km??'?'} km · ${drive(c)} h`:'distance unknown'})),
-        h('td',{'data-l':'Photo notes'},c.notes||'',c.cav?h('div',{class:'mini',text:c.cav}):null),
-        h('td',{'data-l':'My status'},sel('cal:'+c.n+':status',STAT,'Not started','Status for '+c.ev)),
-        h('td',{'data-l':'Shot / delivered'},sel('cal:'+c.n+':deliv',DELIV,'Not shot','Delivery stage for '+c.ev)),
-        h('td',{'data-l':'More',class:'nolabel'},h('button',{class:'exp',type:'button','aria-expanded':isX,onclick:()=>{isX?expanded.delete(c.n):expanded.add(c.n);draw()}},isX?'Less':'Details')));
-      trs.push(tr);
-      if(isX){const alt=altCount(c);
-        trs.push(h('tr',{class:'det'},h('td',{colspan:8},h('dl',null,
-          h('dt',{text:'Venue'}),h('dd',{text:c.venue||'Not listed in source'}),
-          h('dt',{text:'Contact'}),h('dd',{text:c.contact||''}),
-          h('dt',{text:'Other A/B same day'}),h('dd',{text:String(alt)}),
-          h('dt',{text:'Intl field tag'}),h('dd',{text:c.intl||'—'}),
-          h('dt',{text:'Checked drive (h)'}),h('dd',null,txt('cal:'+c.n+':drive','e.g. 2.5','number','narrow'),h('span',{class:'mini',text:'  Overrides the estimate of '+(c.dr??'?')+' h when filled in.'})))))) }
-    });
-    body.append(table([th('Date','s'),th('Event','ev'),th('Tier','tier','num'),th('Trip','days'),'Photo angle / notes','My status','Shot / delivered',''],trs));
-  }
-  draw()};
 V['Pitch Tracker']=()=>{const main=document.getElementById('main');
   main.append(h('h1',{text:'Pitch tracker'}),h('p',{class:'sub',text:'Every tier A/B event and three tier C leads, with who to contact and what to ask for. Rows turn amber when a pitch is due within 14 days and is still not started.'}));
   const rows=D.pt.map(p=>{const c=p.cal?byN[p.cal]:null;const d=c?daysTo(c):null;
@@ -2232,21 +2136,9 @@ const VM_COUNTRY={AT:'Austria',CZ:'Czechia',HU:'Hungary',SI:'Slovenia',SK:'Slova
 function vmValidDate(s){return typeof s==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(s)&&!isNaN(Date.parse(s+'T12:00:00Z'))&&new Date(s+'T12:00:00Z').toISOString().slice(0,10)===s}
 function vmSafeURL(s){try{const u=new URL(s);return ['https:','http:'].includes(u.protocol)?u.href:null}catch(e){return null}}
 function vmEmail(s){return typeof s==='string'&&/^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(s)?s:null}
-function vmMatches(c,f,now){
- if(f.scope==='AT'&&c.co!=='AT'||f.scope==='other'&&c.co==='AT')return false;
- if(f.country&&c.co!==f.country||f.discipline&&!(c.disciplines||[]).includes(f.discipline)||f.kind&&c.kind!==f.kind)return false;
- if(f.setting==='outdoor'&&!/^outdoor-/.test(c.setting)||f.setting&&f.setting!=='outdoor'&&c.setting!==f.setting)return false;
- if(f.tier&&c.tier!==f.tier||f.verified&&(!c.checked||!c.s)||f.audience&&c.audience!==f.audience)return false;
- const end=c.e||c.s;
- if(f.period==='upcoming'&&(!c.s||end<now)||f.period==='finished'&&(!c.s||end>=now)||f.period==='pending'&&c.s)return false;
- if(f.from&&(!c.s||end<f.from)||f.to&&(!c.s||c.s>f.to))return false;
- if(f.q){const hay=[c.ev,c.city,c.venue,c.address,c.region,c.notes,c.programme,c.cav,c.type,c.co,VM_COUNTRY[c.co],...(c.disciplines||[]).map(d=>VM_DISC[d]),...(c.contacts||[]).map(a=>[a.name,a.email,a.scope].join(' '))].join(' ').toLowerCase();if(!hay.includes(f.q.toLowerCase()))return false}
- return true;
-}
 function vmNextISO(s){const d=new Date(s+'T12:00:00Z');d.setUTCDate(d.getUTCDate()+1);return d.toISOString().slice(0,10)}
 function vmICSEscape(s){return String(s||'').replace(/\\/g,'\\\\').replace(/\r?\n/g,'\\n').replace(/,/g,'\\,').replace(/;/g,'\\;')}
 function vmICSLines(line){const result=[];let part='',bytes=0;for(const ch of line){const size=new TextEncoder().encode(ch).length;if(bytes+size>73){result.push(part);part=' '+ch;bytes=1+size}else{part+=ch;bytes+=size}}result.push(part);return result.join('\r\n')}
-function vmICS(rows,stamp){const lines=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Vertical Moment//Climbing Planner 4//EN','CALSCALE:GREGORIAN','METHOD:PUBLISH'];for(const c of rows.filter(x=>vmValidDate(x.s))){lines.push('BEGIN:VEVENT','UID:vm-event-'+c.n+'@verticalmoment.com','DTSTAMP:'+stamp,'DTSTART;VALUE=DATE:'+c.s.replace(/-/g,''),'DTEND;VALUE=DATE:'+vmNextISO(c.e||c.s).replace(/-/g,''),'SUMMARY:'+vmICSEscape(c.ev),'LOCATION:'+vmICSEscape([c.venue,c.address||c.city,VM_COUNTRY[c.co]||c.co].filter(Boolean).join(', ')),'DESCRIPTION:'+vmICSEscape([c.time,c.notes,c.cav,'Source: '+(c.u||'')].filter(Boolean).join('\n')));if(vmSafeURL(c.u))lines.push('URL:'+vmSafeURL(c.u));lines.push('END:VEVENT')}lines.push('END:VCALENDAR');return lines.map(vmICSLines).join('\r\n')+'\r\n'}
 function vmCSVCell(v){let s=String(v??'');if(/^[=+\-@\t\r]/.test(s))s="'"+s;return '"'+s.replace(/"/g,'""')+'"'}
 function vmCleanState(input){if(!input||Array.isArray(input)||typeof input!=='object')throw new Error('This file does not contain a valid planner backup.');const result={};for(const [k,v] of Object.entries(input)){if(['__proto__','constructor','prototype'].includes(k))continue;if(k.length>300)continue;result[k]=v}return result}
 /* VM_DOMAIN_END */
@@ -2375,53 +2267,6 @@ function vmEventDetails(c,series,uncertain){
  return h('div',{class:'vm-detail-content'},information,plan);
 }
 function vmOpenCalendar(patch){vmFilter={...vmDefaults(),...patch};vmStoreFilters();go('Calendar')}
-function vmStats(){const now=vmToday(),at=CAL.filter(c=>c.co==='AT'&&c.s&&(c.e||c.s)>=now);const choices=[['Upcoming in Austria',at.length,{}],['Rope climbing',at.filter(c=>c.disciplines.includes('rope')).length,{discipline:'rope'}],['Outdoor opportunities',at.filter(c=>/^outdoor-/.test(c.setting)).length,{setting:'outdoor'}],['Verified dates',at.filter(c=>c.checked).length,{verified:true}]];return h('div',{class:'vm-dashboard'},choices.map(([label,n,f])=>h('button',{type:'button',class:'vm-stat',onclick:()=>vmOpenCalendar(f),'aria-label':tr(label)+': '+n},h('strong',null,String(n)),h('span',null,label))))}
-V['Calendar']=function(){
- vmHeader('Climbing calendar','Find events, plan a photo day and keep your outreach in one place.');const main=document.getElementById('main');main.append(vmStats());
- const scope=h('div',{class:'vm-scope',role:'group','aria-label':'Country scope'});const scopeButtons=[];
- [['AT','Austria'],['other','Other countries'],['all','All countries']].forEach(([value,label])=>{const b=vmButton(label,()=>{vmFilter.scope=value;vmFilter.country='';sync();draw()},{'aria-pressed':String(vmFilter.scope===value)});b.dataset.scope=value;scopeButtons.push(b);scope.append(b)});
- main.append(scope);
- const presets=h('div',{class:'vm-presets',role:'group','aria-label':'Event shortcuts'}),presetButtons=[];
- const specs=[['All events',{}],['Rope climbing',{discipline:'rope'}],['Outdoor',{setting:'outdoor'}],['Competitions',{kind:'competition'}],['Courses',{kind:'course'}]];
- specs.forEach(([label,patch])=>{const b=vmButton(label,()=>{vmFilter.discipline='';vmFilter.kind='';vmFilter.setting='';Object.assign(vmFilter,patch);sync();draw()});presetButtons.push([b,patch]);presets.append(b)});main.append(presets);
- const fields={};function choice(key,label,options){const x=vmSelect(label,options,vmFilter[key],value=>{vmFilter[key]=value;if(key==='country'&&value){if(value==='AT'&&vmFilter.scope==='other')vmFilter.scope='AT';if(value!=='AT'&&vmFilter.scope==='AT')vmFilter.scope='other';sync()}draw()});fields[key]=x;return vmField(label,x)}
- const search=h('input',{type:'search',value:vmFilter.q,placeholder:'Event, city, venue or contact','aria-label':'Search events'});fields.q=search;search.addEventListener('input',()=>{vmFilter.q=search.value;draw()});
- const filters=h('div',{class:'vm-filters'},vmField('Search events',search),choice('discipline','Discipline',[['','All disciplines'],...Object.entries(VM_DISC)]),choice('kind','Event type',[['','All event types'],...Object.entries(VM_KIND)]),choice('period','Dates',[['upcoming','Upcoming'],['all','All dates'],['finished','Finished'],['pending','Dates pending']]));
- const advanced=h('details',{class:'vm-advanced'},h('summary',null,'More filters'));
- const extra=h('div',{class:'vm-advanced-grid'},choice('country','Specific country',[['','Any country in this view'],...[...new Set(CAL.map(c=>c.co))].sort().map(x=>[x,VM_COUNTRY[x]||x])]),choice('setting','Setting',[['','Any setting'],['outdoor','Outdoor'],...Object.entries(VM_SETTING)]),choice('tier','Priority',[['','All priorities'],['A','A — flagship'],['B','B — dedicated outing'],['C','C — local / community']]),choice('audience','Audience',[['','All audiences'],...[...new Set(CAL.map(c=>c.audience).filter(Boolean))].sort().map(x=>[x,x])]));
- ['from','to'].forEach(key=>{const x=h('input',{type:'date',value:vmFilter[key]});fields[key]=x;x.addEventListener('change',()=>{vmFilter[key]=x.value;draw()});extra.append(vmField(key==='from'?'From date':'To date',x))});
- const verified=h('input',{type:'checkbox',checked:vmFilter.verified});fields.verified=verified;verified.addEventListener('change',()=>{vmFilter.verified=verified.checked;draw()});extra.append(h('label',{class:'vm-toggle'},verified,'Only verified dates'),choice('sort','Sort by',[['date','Soonest first'],['priority','Priority first'],['name','Event name']]));advanced.append(extra);
- main.append(h('section',{class:'vm-filter-panel','aria-label':'Event filters'},filters,advanced,vmButton('Reset filters',()=>{const view=vmFilter.view;vmFilter={...vmDefaults(),view};sync();draw()})));
- const result=h('p',{class:'vm-result-count',role:'status','aria-live':'polite','aria-atomic':'true'}),switcher=h('div',{class:'vm-view-switch',role:'group','aria-label':'Calendar view'}),viewButtons=[];
- [['cards','Cards'],['list','List'],['month','Month']].forEach(([v,label])=>{const b=vmButton(label,()=>{vmFilter.view=v;if(v==='month'&&visible.length&&!visible.some(c=>c.s&&c.s.slice(0,7)<=vmFilter.month&&(c.e||c.s).slice(0,7)>=vmFilter.month)){const next=visible.find(c=>c.s);if(next)vmFilter.month=next.s.slice(0,7)}sync();draw()},{'aria-pressed':String(vmFilter.view===v)});viewButtons.push([b,v]);switcher.append(b)});
- let visible=[];const exp=h('details',{class:'vm-export'},h('summary',null,'Export'),h('div',null,vmButton('Export filtered CSV',()=>vmExportCSV(visible)),vmButton('Export calendar ICS',()=>vmExportICS(visible))));
- main.append(h('div',{class:'vm-result-bar'},result,h('div',{class:'vm-result-actions'},switcher,exp,vmButton('Add event',vmAddEvent))));
- const body=h('div',{id:'vm-results'});main.append(body,h('p',{class:'vm-footer-note'},'Dates and contacts researched 14 October 2026. Original listings are preserved and labelled separately. Planning priorities are suggestions; exact media access is agreed with the organiser.'));
- function sync(){scopeButtons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.scope===vmFilter.scope)));for(const [key,input]of Object.entries(fields)){if(input.type==='checkbox')input.checked=!!vmFilter[key];else input.value=vmFilter[key]||''}viewButtons.forEach(([b,v])=>b.setAttribute('aria-pressed',String(vmFilter.view===v)));presetButtons.forEach(([b,p])=>b.setAttribute('aria-pressed',String(['discipline','kind','setting'].every(k=>(vmFilter[k]||'')===(p[k]||'')))))}
- function draw(){visible=vmRows(vmFilter);vmStoreFilters();result.textContent=visible.length+' '+(locale==='de'?'von':'of')+' '+CAL.length+' '+(locale==='de'?'Terminen':'events')+' · '+(vmFilter.scope==='AT'?tr('Austria'):vmFilter.scope==='other'?tr('Other countries'):tr('All countries'));body.textContent='';if(vmFilter.from&&vmFilter.to&&vmFilter.from>vmFilter.to){body.append(h('p',{class:'vm-error',role:'alert'},'The end of your date range is before its start.'));return}if(vmFilter.view==='month'){vmMonth(body,visible);return}if(!visible.length){body.append(h('div',{class:'vm-empty'},h('h2',null,'No events match these filters.'),h('p',null,'Try another discipline, date range or country.')));return}body.append(h('div',{class:vmFilter.view==='cards'?'vm-event-grid':'vm-list'},visible.map(c=>vmEvent(c,vmFilter.view==='list'))))}
- sync();draw();
-};
-function vmMonth(body,rows){
- const [year,month]=vmFilter.month.split('-').map(Number),first=new Date(year,month-1,1);if(!Number.isFinite(first.getTime())){vmFilter.month=vmToday().slice(0,7);return vmMonth(body,rows)}
- const title=first.toLocaleDateString(locale==='de'?'de-AT':'en-GB',{month:'long',year:'numeric'}),grid=h('div',{class:'vm-month-grid',role:'group','aria-label':title});
- const picker=h('input',{type:'month',value:vmFilter.month,'aria-label':'Choose month'});picker.addEventListener('change',()=>{if(/^\d{4}-\d{2}$/.test(picker.value)){vmFilter.month=picker.value;vmFilter.day='';redraw()}});
- const move=delta=>{const date=new Date(year,month-1+delta,1);vmFilter.month=vmDateKey(date).slice(0,7);vmFilter.day='';redraw()};
- const before=vmButton('←',()=>move(-1),{'aria-label':'Previous month',id:'vm-prev-month'}),after=vmButton('→',()=>move(1),{'aria-label':'Next month',id:'vm-next-month'});
- body.append(h('div',{class:'vm-month-header'},h('h2',null,title),h('div',{class:'vm-month-controls'},before,picker,after,vmButton('Today',()=>{vmFilter.month=vmToday().slice(0,7);vmFilter.day=vmToday();redraw()}))));
- ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].forEach(x=>grid.append(h('div',{class:'vm-weekday','aria-hidden':'true'},locale==='de'?({Mon:'Mo',Tue:'Di',Wed:'Mi',Thu:'Do',Fri:'Fr',Sat:'Sa',Sun:'So'}[x]):x)));
- const offset=(first.getDay()+6)%7,last=new Date(year,month,0),cells=Math.ceil((offset+last.getDate())/7)*7,buttons=[];
- for(let i=0;i<cells;i++){const d=new Date(year,month-1,i-offset+1),key=vmDateKey(d),events=rows.filter(c=>c.s&&c.s<=key&&(c.e||c.s)>=key),label=d.toLocaleDateString(locale==='de'?'de-AT':'en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
-  const btn=h('button',{type:'button',id:'vm-day-'+key,class:'vm-day'+(d.getMonth()!==first.getMonth()?' outside':'')+(key===vmToday()?' today':''),'aria-label':label+', '+events.length+' '+(locale==='de'?'Termine':'events'),'aria-pressed':String(vmFilter.day===key),onclick:()=>{vmFilter.day=key;redraw('vm-day-'+key)}},h('span',{class:'vm-day-number'},String(d.getDate())),events.slice(0,2).map(c=>h('span',{class:'vm-day-event'},c.ev)),events.length?h('span',{class:'vm-day-count'},events.length+' '+(locale==='de'?'Termine':'events')):null);buttons.push(btn);grid.append(btn)
- }
- buttons.forEach((b,index)=>b.addEventListener('keydown',e=>{const shifts={ArrowRight:1,ArrowLeft:-1,ArrowDown:7,ArrowUp:-7};let next=index;if(e.key in shifts)next=index+shifts[e.key];else if(e.key==='Home')next=index-index%7;else if(e.key==='End')next=index+(6-index%7);else return;e.preventDefault();if(buttons[next])buttons[next].focus()}));
- body.append(grid,h('p',{class:'vm-month-help'},'Use arrow keys to move between days. Press Enter to see the day’s events.'));
- const agenda=h('section',{class:'vm-month-agenda','aria-label':'Month events'}),monthStart=vmFilter.month+'-01',monthEnd=vmDateKey(last),selected=vmFilter.day;
- const shown=rows.filter(c=>c.s&&c.s<=(selected||monthEnd)&&(c.e||c.s)>=(selected||monthStart));agenda.append(h('h2',null,selected?range(selected):tr('Upcoming photo opportunities')));
- if(shown.length)agenda.append(h('div',{class:'vm-event-grid'},shown.map(c=>vmEvent(c))));else agenda.append(h('p',{class:'vm-empty'},selected?'No events on this day with these filters.':'No dated events in this month.'));body.append(agenda);
- function redraw(focusId){const old=focusId||document.activeElement?.id;vmStoreFilters();body.textContent='';vmMonth(body,rows);if(old)document.getElementById(old)?.focus({preventScroll:true})}
-}
-function vmExportCSV(rows){const heads=['Event','Start date','End date','Country','City','Venue','Discipline','Event type','Setting','Timetable','Contact email','Contact phone','Contact scope','Website','Date checked','Event status','Photo delivery','Notes'];const values=rows.map(c=>{const contact=vmContacts(c)[0]||{};return [c.ev,c.s,c.e||c.s,VM_COUNTRY[c.co]||c.co,c.city,c.venue,(c.disciplines||[]).map(d=>VM_DISC[d]).join('; '),VM_KIND[c.kind],VM_SETTING[c.setting],c.time,contact.email,contact.phone,contact.scope,c.u,c.checked,S['cal:'+c.n+':status']||'Not started',S['cal:'+c.n+':deliv']||'Not shot',S['cal:'+c.n+':notes']||c.notes]});vmDownload('Vertical-Moment-events-'+vmToday()+'.csv','\uFEFF'+[heads,...values].map(row=>row.map(vmCSVCell).join(',')).join('\r\n'),'text/csv;charset=utf-8');toast('Filtered event list exported')}
-function vmExportICS(rows){const stamp=new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d+Z$/,'Z');vmDownload('Vertical-Moment-calendar-'+vmToday()+'.ics',vmICS(rows,stamp),'text/calendar;charset=utf-8');toast('Dated events exported to calendar')}
 function vmBackup(){vmDownload('Vertical-Moment-planner-backup-'+vmToday()+'.json',JSON.stringify({schema:'vertical-moment-climbing-planner',version:4,exportedAt:new Date().toISOString(),researchDate:VM_CHECKED,state:S},null,2),'application/json');toast(tr('Backup exported'))}
 function vmRemember(){try{localStorage.setItem('climbplanner.recovery.v4',JSON.stringify(S));const b=document.getElementById('vm-undo');if(b)b.disabled=false}catch(e){}}
 function vmUndo(){try{const raw=localStorage.getItem('climbplanner.recovery.v4');if(!raw){toast('No previous import or clear to restore.');return}const previous=vmCleanState(JSON.parse(raw));vmRemember();S=previous;vmSyncCustom();persist();vmFilter={...vmDefaults(),...(S['planner:filters:v4']||{})};render();toast('Previous entries restored')}catch(e){toast('Recovery copy could not be restored.')}}
@@ -2649,11 +2494,6 @@ function vmPagination(rows,page,onChange){
  const pages=Math.max(1,Math.ceil(rows.length/VM_PAGE_SIZE));
  return h('nav',{class:'vm-pagination','aria-label':'Results pages'},vmButton('Previous page',()=>onChange(page-1),{disabled:page<=1}),h('span',{class:'vm-page-position'},'Page '+page+' of '+pages+' · '+Math.min((page-1)*VM_PAGE_SIZE+1,rows.length)+'–'+Math.min(page*VM_PAGE_SIZE,rows.length)+' of '+rows.length),vmButton('Next page',()=>onChange(page+1),{disabled:page>=pages}));
 }
-vmStats=function(){
- const at=CAL.filter(c=>vmMatches(c,{scope:'AT',period:'upcoming'},vmToday()));
- const items=[['Upcoming in Austria',at.length,{}],['Outdoor opportunities',at.filter(c=>/^outdoor-/.test(c.setting)).length,{setting:'outdoor'}],['Safety & rescue',at.filter(c=>(c.topics||[]).some(t=>['avalanche','crevasse','rescue','firstaid'].includes(t))).length,{discipline:'safety'}],['Annual programmes',(D.programmes||[]).length,null]];
- return h('div',{class:'vm-dashboard'},items.map(([label,n,patch])=>h('button',{type:'button',class:'vm-stat',onclick:()=>patch?vmOpenCalendar(patch):go('Annual programmes'),'aria-label':tr(label)+': '+n},h('strong',null,String(n)),h('span',null,label))));
-};
 V['Calendar']=function(){
  vmHeader('Mountain calendar','Find climbing, hiking and photography opportunities by date and place.');
  const main=document.getElementById('main'),fields={};
@@ -2771,7 +2611,7 @@ function vmCalendarMonthMatches(c,first,last){
   ?Boolean(vmFirstWeekend(c,...vmWeekendBounds(vmFilter,vmToday(),first,last)))
   :vmInMonth(c,first,last);
 }
-vmMonth=function(body,rows){
+function vmMonth(body,rows){
  const [year,month]=vmFilter.month.split('-').map(Number),first=new Date(year,month-1,1);if(!Number.isFinite(first.getTime())){vmFilter.month=vmToday().slice(0,7);return vmMonth(body,rows)}
  const title=first.toLocaleDateString(locale==='de'?'de-AT':'en-GB',{month:'long',year:'numeric'}),grid=h('div',{class:'vm-month-grid',role:'group','aria-label':title});
  const picker=h('input',{type:'month',value:vmFilter.month,'aria-label':'Choose month'});picker.addEventListener('change',()=>{if(/^\d{4}-\d{2}$/.test(picker.value)){vmFilter.month=picker.value;vmFilter.day='';redraw()}});
@@ -2791,13 +2631,13 @@ vmMonth=function(body,rows){
  agenda.append(h('h2',null,(selected?range(selected):title)+' · '+shown.length+' listings'));
  if(shown.length){agenda.append(h('div',{class:'vm-event-grid'},shown.slice(0,VM_PAGE_SIZE).map(c=>vmEvent(c))));if(shown.length>VM_PAGE_SIZE)agenda.append(vmButton('See all '+shown.length+' in List',()=>{vmFilter.view='list';vmFilter.from=selected||start;vmFilter.to=selected||end;vmStoreFilters();go('Calendar')}))}else agenda.append(h('p',{class:'vm-empty'},'No dated events in this month.'));body.append(agenda);
  function redraw(focusId){const old=focusId||document.activeElement?.id;vmStoreFilters();body.textContent='';vmMonth(body,rows);if(old)document.getElementById(old)?.focus({preventScroll:true})}
-};
-vmExportCSV=function(rows){
+}
+function vmExportCSV(rows){
  const heads=['ID','Event','Start date','End date','Schedule','Published session dates','Country','Province','City / destination','Venue','Organiser','Booking code','Discipline','Event type','Topics','Setting','Timetable','Source status at research','Date status','Contact email','Contact phone','Contact scope','Website','Date checked','Event status','Photo delivery','Notes'];
  const values=rows.map(c=>{const contacts=vmContacts(c);return[c.n,c.ev,c.s,c.e||c.s,c.scheduleType,(c.sessionDates||[]).join('; '),VM_COUNTRY[c.co]||c.co,c.state,c.city,c.venue,c.organiser,c.bookingCode,(c.disciplines||[]).map(d=>VM_DISC[d]).join('; '),VM_KIND[c.kind],(c.topics||[]).map(t=>VM_TOPICS[t]).join('; '),VM_SETTING[c.setting],c.time,c.sourceStatus,c.dateStatus,contacts.map(x=>x.email).filter(Boolean).join('; '),contacts.map(x=>x.phone).filter(Boolean).join('; '),contacts.map(x=>x.scope).join('; '),c.u,c.checked,S['cal:'+c.n+':status']||'Not started',S['cal:'+c.n+':deliv']||'Not shot',S['cal:'+c.n+':notes']||c.notes]});
  vmDownload('Vertical-Moment-events-'+vmToday()+'.csv','\uFEFF'+[heads,...values].map(row=>row.map(vmCSVCell).join(',')).join('\r\n'),'text/csv;charset=utf-8');toast('All '+rows.length+' filtered listings exported');
-};
-vmExportICS=function(rows){const eligible=rows.filter(c=>c.s&&!vmUncertain(c)),stamp=new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d+Z$/,'Z');vmDownload('Vertical-Moment-calendar-'+vmToday()+'.ics',vmICS(rows,stamp),'text/calendar;charset=utf-8');toast(eligible.length+' dated listings exported. Unsettled dates excluded. Series use start / published sessions only.')};
+}
+function vmExportICS(rows){const eligible=rows.filter(c=>c.s&&!vmUncertain(c)),stamp=new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d+Z$/,'Z');vmDownload('Vertical-Moment-calendar-'+vmToday()+'.ics',vmICS(rows,stamp),'text/calendar;charset=utf-8');toast(eligible.length+' dated listings exported. Unsettled dates excluded. Series use start / published sessions only.')}
 V['Annual programmes']=function(){
  vmHeader('Annual programmes','Published programmes, hut anniversaries and useful organiser sources. Announcements without a date stay here until a date is published.');const main=document.getElementById('main'),search=h('input',{type:'search','aria-label':'Search programmes',placeholder:'Huts, mountain rescue, anniversary, organiser…'}),group=vmSelect('Programme organiser group',[['','All organisers'],...Object.entries(VM_GROUPS)],'',draw),state=vmSelect('Programme province',[['','All provinces'],...VM_PROVINCES.map(v=>[v,v])],'',draw),cards=h('div',{class:'vm-contact-grid'}),count=h('p',{class:'vm-result-count',role:'status'});
  main.append(h('div',{class:'vm-filter-panel'},h('div',{class:'vm-programme-filters'},vmField('Search programmes',search),vmField('Organiser group',group),vmField('Province',state))),count,cards);search.addEventListener('input',draw);

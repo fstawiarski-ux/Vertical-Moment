@@ -296,8 +296,14 @@ The 35 Planner tests, all 181 website tests and the local production build
 passed. Chrome at 1,440, 1,920 and 2,560 pixels checked the desktop tables,
 search, the calendar shortcut, the das flash bookmark and original pitch keys.
 
-### Further Planner improvements
+## Calendar renderer consolidation
 
-1. Consolidate the older calendar and month renderers so there is one place
-   to maintain each view. Keep event identities, planning state and import and
-   export behaviour covered by the Planner tests.
+The Planner uses one Calendar renderer for List, Cards and Month, with one
+Month grid and shared date filtering, CSV export and ICS export. Desktop
+layout, event IDs, source keys and the backup format are preserved.
+
+The 36 Planner tests, all 182 website tests, the production build and the
+PWA content check passed. Desktop Chrome at 1,440, 1,920 and 2,560 pixels
+matched the existing layout and navigation. A version 4 backup restored
+shoot requirements, organiser links, notes and a personal event. The JSON
+backup, filtered CSV and ICS downloads matched byte for byte.

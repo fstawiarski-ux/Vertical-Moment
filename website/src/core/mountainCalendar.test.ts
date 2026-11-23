@@ -60,6 +60,14 @@ const events = data.cal;
 function byNumber(n: number) { return events.find(c => c.n === n)!; }
 
 describe("embedded mountain calendar", () => {
+  it("keeps one renderer and export path for the calendar", () => {
+    expect(code.match(/^V\['Calendar'\]\s*=/gm)).toHaveLength(1);
+    for (const name of ["vmMonth", "vmMatches", "vmICS", "vmExportCSV", "vmExportICS"]) {
+      const definition = new RegExp("^(?:function " + name + "\\s*\\(|" + name + "\\s*=\\s*function\\b)", "gm");
+      expect(code.match(definition), name).toHaveLength(1);
+    }
+  });
+
   it("preserves previous event IDs and distinct new source identities", () => {
     expect(events.length).toBeGreaterThan(3000);
     expect(new Set(events.map(c => c.n)).size).toBe(events.length);
