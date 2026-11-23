@@ -84,6 +84,14 @@ describe("embedded mountain calendar", () => {
     expect(domain.vmMatches(c, { scope: "AT", q: "office@blockfabrik.at" }, now)).toBe(true);
   });
 
+  it("finds accented photography listings by multiple words in any order", () => {
+    const workshop = byNumber(9107);
+    const filters = { scope: "AT", state: "Steiermark", topic: "photography", q: "gesause fotowanderung" };
+    expect(domain.vmMatches(workshop, filters, now)).toBe(true);
+    expect(domain.vmMatches(workshop, { ...filters, q: "gesause festival" }, now)).toBe(false);
+    expect(domain.vmMatches(workshop, { ...filters, state: "Wien" }, now)).toBe(false);
+  });
+
   it("distinguishes course cohorts with different official booking codes", () => {
     const groups = events.filter(c => c.organiserGroup === "alpenverein" && c.ev === "Ferienkurs Herbst" && c.s === "2026-10-26");
     expect(groups.length).toBeGreaterThanOrEqual(2);
