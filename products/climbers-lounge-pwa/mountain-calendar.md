@@ -307,3 +307,23 @@ PWA content check passed. Desktop Chrome at 1,440, 1,920 and 2,560 pixels
 matched the existing layout and navigation. A version 4 backup restored
 shoot requirements, organiser links, notes and a personal event. The JSON
 backup, filtered CSV and ICS downloads matched byte for byte.
+
+## Desktop Calendar filters and event list
+
+Search, Location and Dates are the main filters. Location groups areas,
+Austrian provinces and individual countries in one picker. Photography,
+Competitions, Gear & brands and Weekends share a row with **More filters**.
+The expanded controls are grouped by event, organiser and planning, and
+the button shows how many extra filters are active.
+
+Desktop List view aligns dates, event names and locations under column
+headings that stay visible while scrolling. Click an event row or press
+Enter or Space to open its details and saved planning fields.
+
+The 37 Planner and competition tests and all 183 website tests passed.
+Chrome checks at 1,440, 1,920 and 2,560 pixels covered keyboard expansion,
+location choices, filtering, pagination, Cards, Month and Weekend Picks.
+The default view at 1,440 × 900 displays six complete rows before scrolling,
+compared with two previously. A version 4 backup restored saved filters,
+a named trip, shoot details, an organiser link and a personal event. The
+JSON backup, filtered CSV and ICS downloads matched byte for byte.
