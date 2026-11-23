@@ -254,11 +254,50 @@ passed. Chrome at 1,440, 1,920 and 2,560 pixels checked cross-view editing,
 reloads and the desktop layout. A backup restored all four fields in a clean
 browser context.
 
+## Directory reconciliation — 23 November 2026
+
+Gym Directory still lists 48 distinct places around Vienna and Bratislava.
+The das flash row uses the same venue record as its existing organiser
+bookmark. Open **Organiser & events** from the row to find the address,
+venue links and the community-night photography lead. Separate facilities stay
+searchable even where the operator uses one website for several branches.
+[das flash venue](https://www.dasflash.at/),
+[Alpenverein facility directory](https://www.alpenverein.at/portal/wGlobal/content/finder/kletteranlagenListe.php)
+
+Portfolio Leads now contains 27 standalone ideas. Sixteen entries linked to
+existing records were consolidated. The calendar carries the photography
+guidance beside each dated shoot. The das flash bookmark carries the
+community-night story.
+
+| Original leads | Where the guidance appears |
+| --- | --- |
+| Kletterkombi, Halloween Team Spirit and autumn Bärenrallye | Calendar IDs 15, 43 and 41 |
+| Two St. Pölten Monthly Challenge leads | Calendar IDs 35 and 105. The original 16 November mention appears as an organiser-archive check. |
+| Three La Sportiva test-station leads | Calendar ID 42 |
+| Two FLINTA* leads | Calendar ID 108 |
+| Four Young Alpinists course leads | Calendar IDs 2882, 2889, 2890 and 2891 |
+| Peilstein youth climbing week | Calendar ID 1844 |
+| das flash community nights | Organisers & contacts, das flash |
+
+The organiser’s Plombergstein dates, 14–18 August 2027, are shown by the
+existing calendar event. The FLINTA* and La Sportiva entries use their
+published session or tour pages.
+[Young Alpinists programme](https://www.alpenverein.at/jungealpinisten/youngsters/index.php),
+[Monthly Challenge](https://boulderbar.net/events/monthly-challenge-2026/),
+[FLINTA* Session](https://boulderbar.net/events/flinta-session-2026/),
+[La Sportiva test stations](https://boulderbar.net/events/la-sportiva-climb-world-tour-teststationen/)
+
+On desktop, both directories use a full-width table with a fixed header.
+Search handles accents and matches multiple words in any order. **See
+calendar shoots** opens the calendar with the portfolio-ideas filter active.
+Event dates, event IDs, source keys and saved pitch identities remain the same.
+
+The 35 Planner tests, all 181 website tests and the local production build
+passed. Chrome at 1,440, 1,920 and 2,560 pixels checked the desktop tables,
+search, the calendar shortcut, the das flash bookmark and original pitch keys.
+
 ### Further Planner improvements
 
-1. Review Gym Directory and Portfolio Leads for overlap with dated calendar
-   listings and the organiser directory. Keep unique coverage and remove
-   duplicate rows or views after their replacements are checked.
-2. Consolidate the older calendar and month renderers so there is one place
+1. Consolidate the older calendar and month renderers so there is one place
    to maintain each view. Keep event identities, planning state and import and
    export behaviour covered by the Planner tests.

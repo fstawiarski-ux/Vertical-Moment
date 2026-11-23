@@ -3,7 +3,10 @@ import { resolve } from "node:path";
 import { runInNewContext, Script } from "node:vm";
 import { describe, expect, it } from "vitest";
 
+type PortfolioGuide = { events: number[]; title: string; format: string };
+type DirectoryCell = { v: string; u?: string | null; pitch?: string | null };
 type Event = {
+  portfolioGuide?: PortfolioGuide;
   n: number; ev: string; s: string | null; e?: string | null;
   co: string; state?: string; states: string[]; city: string;
   venue?: string; u: string; tier: string; audience: string;
@@ -34,6 +37,9 @@ const html = readFileSync(resolve(process.cwd(), "public/explore-app/planner-con
 const scripts = [...html.matchAll(/<script([^>]*)>([\s\S]*?)<\/script>/g)];
 const data = JSON.parse(scripts.find(s => s[1].includes("application/json"))![2]) as {
   cal: Event[];
+  g: Record<string, { rows: DirectoryCell[][] }>;
+  portfolioGuides: PortfolioGuide[];
+  bookmarkVenues: Record<string, { address: string; guide: { title: string } }>;
   programmes: { id: string; s?: string; u: string }[];
   coverage: { totalListings: number; byCountry: Record<string, number> };
 };
@@ -61,6 +67,39 @@ describe("embedded mountain calendar", () => {
     const keys = events.flatMap(c => c.sourceKey ? [c.sourceKey] : []);
     expect(new Set(keys).size).toBe(keys.length);
     expect(data.coverage.totalListings).toBe(events.length);
+  });
+
+  it("keeps each venue searchable while sharing the das flash record", () => {
+    const venues = data.g["Gym Directory"].rows;
+    expect(venues.filter(row => row[0].v === "das flash")).toHaveLength(0);
+    expect(data.bookmarkVenues["das-flash"]).toMatchObject({
+      address: "Adolf-Schmidl-Gasse 4, 1200 Wien",
+      guide: { title: "das flash community nights" },
+    });
+    expect(venues.length + Object.keys(data.bookmarkVenues).length).toBe(48);
+    const branchNames = ["Boulderbar Hannovergasse", "Boulderbar Wienerberg", "Boulderbar Hauptbahnhof", "Boulderbar Seestadt"];
+    const branches = venues.filter(row => branchNames.includes(row[0].v));
+    expect(branches).toHaveLength(4);
+    expect(new Set(branches.map(row => row[3].v)).size).toBe(4);
+    expect(new Set(branches.map(row => row[7].u)).size).toBe(1);
+  });
+
+  it("keeps one portfolio guide per matched event and preserves standalone leads", () => {
+    const standalone = data.g["Portfolio Leads"].rows;
+    expect(standalone).toHaveLength(27);
+    expect(standalone.filter(row => row[0].v === "Route setters at work").map(row => row[1].v))
+      .toEqual(["Kletterhalle Wien or Blockfabrik", "K1 Dornbirn"]);
+    expect(standalone.some(row => row[8]?.pitch)).toBe(false);
+
+    const ids = data.portfolioGuides.flatMap(guide => guide.events).sort((a, b) => a - b);
+    expect(ids).toEqual([15, 35, 41, 42, 43, 105, 108, 1844, 2882, 2889, 2890, 2891]);
+    const guides = new Map(data.portfolioGuides.flatMap(guide => guide.events.map(id => [id, guide] as const)));
+    const linked = events.map(event => ({ ...event, portfolioGuide: guides.get(event.n) }));
+    const matches = linked.filter(event => domain.vmMatches(event, { portfolio: true, scope: "all", period: "all" }, now));
+    expect(matches.map(event => event.n).sort((a, b) => a - b)).toEqual(ids);
+    expect(linked.filter(event => domain.vmMatches(event, {
+      portfolio: true, q: "gear-use independent", from: "2026-10-27", to: "2026-11-06",
+    }, now)).map(event => event.n)).toEqual([42]);
   });
 
   it("keeps country scopes disjoint and excludes unknown destinations from Austria", () => {
