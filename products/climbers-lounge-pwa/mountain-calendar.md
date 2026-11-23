@@ -2,6 +2,9 @@
 
 Product scope: `climbers-lounge-pwa`. Catalogue baseline: 14–15 October 2026. Competition details: 18 October, with selected official-source checks on 21 October 2026.
 
+The [November update](#calendar-and-photography-outreach--23-november-2026)
+records the current catalogue totals and outreach changes.
+
 ## Runtime and editing
 
 `website/app/explore-app/planner/PlannerFrame.tsx` embeds the self-contained
@@ -156,3 +159,62 @@ Physical-device, screen-reader and an installed-app update from the deployed
 version remain owner release checks. This is targeted accessibility testing.
 The PR is for review only; the owner tests and merges manually. No deployment
 is requested as part of preparing the PR.
+
+## Calendar and photography outreach — 23 November 2026
+
+The November review added 230 listings and refreshed 12 existing records from
+official sources. The full calendar now has 3,416 runtime listings, including
+2,818 in Austria and 446 with an unresolved destination. New and refreshed
+listings carry their individual check dates. New event IDs are 9001–9230.
+Existing event IDs and source keys still identify the same events.
+
+The calendar defaults to List for first-time visitors. Cards and Month remain
+available, and returning visitors retain their chosen view. Search matches
+multiple words across title, place, organiser and contact in any order and
+ignores accents. Date and province controls sit above shortcuts for Photography,
+Competitions and Gear & brands. Event details hold the timetable, photo access,
+source evidence, contacts and planning fields. Expanding a card loads those
+details. Listings with a date warning show it on the collapsed card.
+
+Organisers & contacts lists ten official Austrian sources with bookmark buttons,
+category filtering and a Saved only view. Bookmark selections are local and
+included in the Planner backup. Event contacts, including personal event contact
+entries, are available in a separate expandable directory.
+
+- Club and media routes include the climbing federation, Alpenverein FotoPool
+  and the Austrian photography association.
+  [Austria Climbing](https://www.austriaclimbing.com/media.html),
+  [Alpenverein FotoPool](https://www.alpenverein.at/portal/fotopool/index.php),
+  [ÖVF](https://www.oevf.at/kontakt/)
+- Workshops, exhibitions and local shoots can be researched through the
+  Gesäuse photo school, the Photo+Adventure organiser and das flash.
+  [Gesäuse Fotoschule](https://nationalpark-gesaeuse.at/nationalpark-erleben/nationalpark_gesaeuse_fotoschule/veranstaltungen/),
+  [Photo+Adventure](https://www.photoadventure.at/team/),
+  [das flash](https://www.dasflash.at/events.html)
+- Product coverage and production contacts include a Tyrolean climbing
+  equipment company, a Vienna photo lab and two Wels stamp manufacturers.
+  [AUSTRIALPIN](https://www.austrialpin.at/unternehmen/),
+  [cyberlab](https://www.cyberlab.at/kontakt/index.html),
+  [COLOP Austria](https://www.colop.com/de_eur/kontakt),
+  [Trodat Österreich](https://www.trodat.net/at/de/kontakt)
+
+The two Planner suites passed with 27 tests, and the full website suite
+passed with 173. The Next/Serwist build and its Planner cache entries passed.
+Chrome checks at 1,440, 390 and 320 pixels covered navigation, keyboard use,
+bookmark backup and restore, saved plans, filters, and CSV and ICS downloads.
+
+### Further Planner improvements
+
+1. Use the calendar and the photography shortlist as the two main entry
+   points. Combine Overview and Start Here after checking that their useful
+   links are reachable from the main views. Replace Weekend Picks with a
+   weekend date shortcut and keep its existing link working.
+2. Add personal organisation bookmarks and link them to events. Let users
+   record an accreditation deadline, the venue contact for shooting access,
+   permitted uses, credit requirements and delivery commitments with each shoot.
+3. Review Gym Directory and Portfolio Leads for overlap with dated calendar
+   listings and the organiser directory. Keep unique coverage and remove
+   duplicate rows or views after their replacements are checked.
+4. Consolidate the older calendar and month renderers so there is one place
+   to maintain each view. Keep event identities, planning state and import and
+   export behaviour covered by the Planner tests.
