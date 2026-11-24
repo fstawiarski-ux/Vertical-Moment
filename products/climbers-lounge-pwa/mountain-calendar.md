@@ -372,11 +372,18 @@ Cards put the date, event type, name and venue in a compact preview.
 Click the card or press Enter or Space to open its details, notes and
 shoot requirements.
 
-On desktop, Month places the calendar grid beside the agenda. Day counts
-include ongoing events, while the previews highlight event starts and
-published course sessions. Select a day to see its agenda. A published
-session shows its date and ongoing events carry a label. **Show whole
-month** returns to the month agenda. The arrow keys move between days.
+The Planner opens on the Month grid across the desktop workspace. The
+toolbar has month navigation, search and **Filters & view**, which also
+opens List, Cards and export. A date shows the event count and up to two
+full titles. Select a title to open its details and saved plan, or select
+the day count to see every event on that date. The arrow keys move between
+dates.
+
+A multi-day event gets one date marker. Series get markers on published
+session dates or on their stated start. Continuous events carried over
+from an earlier month appear under **Already underway** in the menu.
+Ongoing programmes with unpublished session dates are available in List
+and Cards.
 
 The 37 Planner and competition tests, all 183 website tests, the
 production build and the offline content check passed. Chrome checks at
@@ -398,8 +405,13 @@ dated gear and media events. The full calendar now has 3,432 runtime
 listings, including 2,830 in Austria. The Alpinmesse programme and the
 Riva del Garda trade show keep their existing records.
 
-In **Dates**, Next 7, 30 and 90 days count today as day one. The selected
-window combines with the other filters. List and Cards put listings that have
-already started in an expandable **Ongoing** group. Month shows dates
-inside the window and places course series on their published sessions or
-stated start. CSV and ICS use the matching listings and their published dates.
+In List and Cards, **Dates** offers 7, 30 and 90 days and counts today as
+day one. New filters start at 30 days and saved date preferences are loaded.
+Listings already underway appear under **Ongoing**. In Month, the month
+picker sets the date range. The toolbar count is for that month, and each
+day shows its own count.
+
+Select **Photography events**, **Competitions** or **Gear demos & expos** to
+show events that match any selected category. **Weekends only** narrows those
+results to weekend dates. A multi-day event appears on its first weekend day
+in Month. CSV and ICS use the matching events, their IDs and published dates.
