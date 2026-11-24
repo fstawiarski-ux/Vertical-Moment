@@ -272,6 +272,24 @@ at 1,440, 1,920 and 2,560 pixels. A version 4 backup restored saved trip and
 shoot data. Edits survived switching Calendar views, reloading and importing
 again, and the JSON backup, CSV and ICS downloads matched byte for byte.
 
+## Desktop Pitch Tracker
+
+Pitch Tracker lines up the event and organiser, pitch status, date sent,
+and reply or outcome in columns. Edit the pitch fields directly in the row.
+Column headings stay visible while scrolling on desktop. Hover over a reply
+to read the full text, and open **Event details** for contacts, shoot
+requirements and planning notes.
+
+Search and **Only active pitches** use the existing filters, and the tracker
+continues to use the saved pitch keys shared with the Calendar.
+
+The 37 Planner and competition tests, all 183 website tests, the production
+build and the offline content check passed. Chrome checks at 1,440, 1,920 and
+2,560 pixels covered column alignment, keyboard expansion, search, active
+filtering and pagination. An older backup restored title-based and numbered
+pitches. Edits in Pitch Tracker and Calendar survived reload and re-import,
+and the exported backup matched the previous Planner byte for byte.
+
 ## Directory reconciliation — 23 November 2026
 
 Gym Directory still lists 48 distinct places around Vienna and Bratislava.
