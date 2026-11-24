@@ -12,11 +12,12 @@ type Event = {
   venue?: string; u: string; tier: string; audience: string;
   organiserGroup: string; bookingCode?: string; sourceKey?: string;
   scheduleType: string; sessionDates?: string[]; time?: string;
+  kind?: string; duplicateOf?: number; address?: string;
   dateStatus: string; checked?: string; disciplines: string[]; topics: string[];
   contacts: { email?: string; source?: string }[];
   sources: { url: string }[];
 };
-type Filter = Record<string, string | boolean>;
+type Filter = Record<string, string | boolean | string[]>;
 type Organiser = { id: string; name: string };
 type Domain = {
   vmOrganiserRecords: (state: Record<string, unknown>, builtIns: Organiser[]) => Organiser[];
@@ -26,6 +27,14 @@ type Domain = {
   vmLocationPatch: (choice: string) => Filter;
   vmLocationChoice: (filter: Filter) => string;
   vmMatches: (event: Event, filter: Filter, now: string) => boolean;
+  vmCalendarFilters: (defaults: Filter, saved: Filter) => Filter;
+  vmDistinctCalendarRows: (events: Event[], hasPlan: (event: Event) => boolean) => Event[];
+  vmMonthEntries: (events: Event[], first: string, last: string, weekends: boolean) => {
+    byDay: Map<string, Event[]>;
+    scheduled: Array<{ event: Event; day: string }>;
+    ongoing: Event[];
+  };
+  vmVenue: (event: Event) => string;
   vmUpcomingGroups: (events: Event[], now: string) => { upcoming: Event[]; ongoing: Event[] };
   vmOnDay: (event: Event, day: string) => boolean;
   vmInMonth: (event: Event, first: string, last: string) => boolean;
@@ -55,6 +64,7 @@ const domain = runInNewContext(
   section("/* VM_EXPANDED_DOMAIN_START */", "/* VM_EXPANDED_DOMAIN_END */") +
   "\n" + section("/* VM_ORGANISER_DOMAIN_START */", "/* VM_ORGANISER_DOMAIN_END */") +
   ";({vmLocationPatch,vmLocationChoice,vmMatches,vmUpcomingGroups,vmOnDay,vmInMonth,vmICS,vmUncertain,vmValidDate,vmSafeURL,vmCSVCell,vmCleanState," +
+  "vmCalendarFilters,vmDistinctCalendarRows,vmMonthEntries,vmVenue," +
   "vmOrganiserRecords,vmOrganiserLinkKey,vmLinkedOrganiserIds,vmOrganiserEventNumbers})",
   { Date, URL, TextEncoder },
 ) as Domain;
@@ -218,6 +228,83 @@ describe("embedded mountain calendar", () => {
     expect(domain.vmOnDay(festival, "2027-01-24")).toBe(true);
     expect(domain.vmOnDay(festival, "2027-01-25")).toBe(false);
     expect(domain.vmMatches(festival, { from: "2027-01-24", to: "2027-01-24", setting: "outdoor" }, now)).toBe(true);
+  });
+
+  it("finds the December photography meeting with its confirmed venue and time", () => {
+    const rows = events.filter(event => domain.vmMatches(event, {
+      scope: "AT", categories: ["photography"],
+    }, "2026-11-24"));
+    const month = domain.vmMonthEntries(rows, "2026-12-01", "2026-12-31", false);
+    const walk = month.byDay.get("2026-12-15")?.find(event => event.n === 3673);
+    expect(walk).toMatchObject({
+      sourceKey: "nf-occurrence:156515", city: "Bregenz",
+      venue: "Naturfreunde Vorarlberg entrance", time: "18:30",
+      address: "Anton-Schneider-Straße 19, 6900 Bregenz",
+    });
+    expect(month.scheduled.every(({ event }) => event.topics.includes("photography"))).toBe(true);
+  });
+
+  it("unions quick categories and keeps the weekend preference separate", () => {
+    const defaults = { scope: "AT", period: "upcoming", view: "list", kind: "", topic: "" };
+    const filter = domain.vmCalendarFilters(defaults, {
+      kind: "competition", topic: "gear", weekends: true, view: "month",
+    });
+    expect(filter).toMatchObject({
+      kind: "", topic: "", categories: ["competition", "gear"], weekends: true, view: "month",
+    });
+    const gear = events.filter(event => domain.vmMatches(event, {
+      scope: "AT", categories: ["gear"],
+    }, "2026-11-24"));
+    expect(gear.map(event => event.n)).toContain(9234);
+    expect(gear.every(event => ["demo", "expo"].includes(event.kind!))).toBe(true);
+
+    const rows = events.filter(event => domain.vmMatches(event, filter, "2026-11-24"));
+    const month = domain.vmMonthEntries(rows, "2026-12-01", "2026-12-31", true);
+    expect(month.byDay.get("2026-12-12")?.map(event => event.n)).toContain(3047);
+    expect(month.byDay.has("2026-12-02")).toBe(false);
+    expect(rows.every(event => ["competition", "demo", "expo"].includes(event.kind!))).toBe(true);
+    expect(domain.vmCalendarFilters(defaults, {
+      kind: "course", topic: "gear", categories: [], view: "list",
+    })).toMatchObject({ kind: "course", topic: "gear", categories: [] });
+  });
+
+  it("shows programme periods once and counts published starts and sessions on their own dates", () => {
+    const rally = byNumber(9043);
+    const cohort = { ...byNumber(1021), s: "2026-11-23", e: "2026-12-21",
+      sessionDates: ["2026-11-23", "2026-12-07", "2026-12-21"] };
+    const month = domain.vmMonthEntries(
+      [byNumber(2953), byNumber(2957), rally, cohort], "2026-12-01", "2026-12-31", false,
+    );
+    expect(month.ongoing).toHaveLength(0);
+    expect(domain.vmUpcomingGroups([byNumber(2953), byNumber(2957)], "2026-12-01")
+      .ongoing.map(event => event.n)).toEqual([2953, 2957]);
+    expect(month.scheduled.map(({ event, day }) => [event.n, day]))
+      .toEqual([[cohort.n, "2026-12-07"], [rally.n, "2026-12-24"]]);
+    expect([...month.byDay.keys()].sort()).toEqual(["2026-12-07", "2026-12-21", "2026-12-24"]);
+    expect(month.byDay.get("2026-12-21")?.map(event => event.n)).toEqual([cohort.n]);
+
+    const weekends = domain.vmMonthEntries([rally], "2026-12-01", "2026-12-31", true);
+    expect([...weekends.byDay.keys()]).toEqual(["2026-12-26"]);
+    const january = domain.vmMonthEntries([rally], "2027-01-01", "2027-01-31", true);
+    expect(january.scheduled).toHaveLength(0);
+    expect(january.ongoing.map(event => event.n)).toEqual([rally.n]);
+  });
+
+  it("keeps the saved original of the duplicate Bärenrallye reachable", () => {
+    const old = byNumber(106), official = byNumber(9043);
+    expect(old.duplicateOf).toBe(official.n);
+    const ids = (rows: Event[], ...saved: number[]) =>
+      domain.vmDistinctCalendarRows(rows, event => saved.includes(event.n)).map(event => event.n);
+    expect(ids([old, official])).toEqual([official.n]);
+    expect(ids([old, official], old.n)).toEqual([old.n]);
+    expect(ids([old, official], old.n, official.n)).toEqual([old.n, official.n]);
+    expect(ids([old])).toEqual([old.n]);
+  });
+
+  it("strips imported programme text from the visible venue field", () => {
+    const event = byNumber(3047);
+    expect(domain.vmVenue(event)).toBe("Kletterhalle Bad Ischl");
+    expect(domain.vmVenue({ ...event, venue: "wird zeitgerecht bekanntgegeben" })).toBe("");
   });
 
   it("counts today as the first day of the rolling date presets", () => {
