@@ -26,6 +26,7 @@ type Domain = {
   vmLocationPatch: (choice: string) => Filter;
   vmLocationChoice: (filter: Filter) => string;
   vmMatches: (event: Event, filter: Filter, now: string) => boolean;
+  vmUpcomingGroups: (events: Event[], now: string) => { upcoming: Event[]; ongoing: Event[] };
   vmOnDay: (event: Event, day: string) => boolean;
   vmInMonth: (event: Event, first: string, last: string) => boolean;
   vmICS: (events: Event[], timestamp: string) => string;
@@ -53,7 +54,7 @@ const domain = runInNewContext(
   section("/* VM_DOMAIN_START */", "/* VM_DOMAIN_END */") + "\n" +
   section("/* VM_EXPANDED_DOMAIN_START */", "/* VM_EXPANDED_DOMAIN_END */") +
   "\n" + section("/* VM_ORGANISER_DOMAIN_START */", "/* VM_ORGANISER_DOMAIN_END */") +
-  ";({vmLocationPatch,vmLocationChoice,vmMatches,vmOnDay,vmInMonth,vmICS,vmUncertain,vmValidDate,vmSafeURL,vmCSVCell,vmCleanState," +
+  ";({vmLocationPatch,vmLocationChoice,vmMatches,vmUpcomingGroups,vmOnDay,vmInMonth,vmICS,vmUncertain,vmValidDate,vmSafeURL,vmCSVCell,vmCleanState," +
   "vmOrganiserRecords,vmOrganiserLinkKey,vmLinkedOrganiserIds,vmOrganiserEventNumbers})",
   { Date, URL, TextEncoder },
 ) as Domain;
@@ -77,6 +78,18 @@ describe("embedded mountain calendar", () => {
     const keys = events.flatMap(c => c.sourceKey ? [c.sourceKey] : []);
     expect(new Set(keys).size).toBe(keys.length);
     expect(data.coverage.totalListings).toBe(events.length);
+  });
+
+  it("keeps the published OHMEGA tour stops as separate appointments", () => {
+    const stops = events.filter(event => event.sourceKey?.startsWith("manual:edelrid-ohmega-") &&
+      event.sourceKey.endsWith("-2026"));
+    expect(stops.map(event => [event.n, event.s, event.venue])).toEqual([
+      [9232, "2026-11-30", "Kletterhalle Marswiese"],
+      [9233, "2026-12-01", "Edelweiss Südstadt"],
+      [9234, "2026-12-02", "Kletterhalle Wien"],
+      [9235, "2026-12-09", "Kletterzentrum Innsbruck (KI)"],
+    ]);
+    expect(new Set(stops.map(event => event.u)).size).toBe(1);
   });
 
   it("keeps each venue searchable while sharing the das flash record", () => {
@@ -205,6 +218,51 @@ describe("embedded mountain calendar", () => {
     expect(domain.vmOnDay(festival, "2027-01-24")).toBe(true);
     expect(domain.vmOnDay(festival, "2027-01-25")).toBe(false);
     expect(domain.vmMatches(festival, { from: "2027-01-24", to: "2027-01-24", setting: "outdoor" }, now)).toBe(true);
+  });
+
+  it("counts today as the first day of the rolling date presets", () => {
+    const today = "2027-01-01";
+    const event = { ...byNumber(9107), s: today, e: null };
+    const windows = [
+      ["next-7", "2027-01-07", "2027-01-08"],
+      ["next-30", "2027-01-30", "2027-01-31"],
+      ["next-90", "2027-03-31", "2027-04-01"],
+    ];
+    for (const [period, last, after] of windows) {
+      expect(domain.vmMatches(event, { period }, today)).toBe(true);
+      expect(domain.vmMatches({ ...event, s: last }, { period }, today)).toBe(true);
+      expect(domain.vmMatches({ ...event, s: after }, { period }, today)).toBe(false);
+      expect(domain.vmMatches({ ...event, s: "2026-12-31" }, { period }, today)).toBe(false);
+    }
+    expect(domain.vmMatches(event, { period: "next-7", from: "2027-01-08" }, today)).toBe(false);
+    expect(domain.vmMatches({ ...event, s: "2027-01-07" }, { period: "next-7", to: "2027-01-06" }, today)).toBe(false);
+    expect(domain.vmMatches({ ...event, s: null }, { period: "next-7" }, today)).toBe(false);
+  });
+
+  it("groups active date ranges separately and keeps their original export dates", () => {
+    const today = "2027-01-01";
+    const ongoing = { ...byNumber(9107), scheduleType: "continuous", s: "2026-12-29", e: "2027-01-09" };
+    const starting = { ...byNumber(9108), s: today, e: null };
+    const ended = { ...ongoing, e: "2026-12-31" };
+    const cancelled = { ...ongoing, dateStatus: "Cancelled" };
+    const rows = [ended, ongoing, starting, cancelled].filter(event =>
+      domain.vmMatches(event, { period: "next-7" }, today));
+    expect(domain.vmUpcomingGroups(rows, today)).toEqual({ upcoming: [starting], ongoing: [ongoing] });
+    const exportText = domain.vmICS(rows, "20270101T120000Z");
+    expect(exportText).toContain("DTSTART;VALUE=DATE:20261229");
+    expect(exportText).toContain("DTEND;VALUE=DATE:20270110");
+    expect(domain.vmMatches(ongoing, { period: "next-7", from: "2027-01-04", weekends: true }, today)).toBe(false);
+  });
+
+  it("uses published sessions in rolling windows without inventing course appointments", () => {
+    const today = "2027-01-01";
+    const series = { ...byNumber(9107), scheduleType: "series", s: "2026-12-20", e: "2027-02-01" };
+    const sessions = { ...series, sessionDates: ["2026-12-20", "2027-01-09"] };
+    expect(domain.vmMatches(series, { period: "next-7" }, today)).toBe(true);
+    expect(domain.vmOnDay(series, "2027-01-04")).toBe(false);
+    expect(domain.vmMatches(sessions, { period: "next-7" }, today)).toBe(false);
+    expect(domain.vmMatches(sessions, { period: "next-30", weekends: true }, today)).toBe(true);
+    expect(domain.vmOnDay(sessions, "2027-01-09")).toBe(true);
   });
 
   it("matches a continuous event when the chosen date window includes a weekend", () => {
