@@ -344,7 +344,7 @@ main h2{font-size:23px;line-height:1.3}
 .vm-detail-content li{margin-bottom:10px;overflow-wrap:anywhere}
 .vm-detail-content small{display:block;color:var(--muted)}
 
-#vm-results .vm-detail-content.vm-calendar-detail{display:block;container-type:inline-size}
+:is(#vm-results,#vm-pitch-results) .vm-detail-content.vm-calendar-detail{display:block;container-type:inline-size}
 .vm-calendar-detail-venue{display:flex;align-items:start;justify-content:space-between;flex-wrap:wrap;gap:8px 16px;margin-bottom:12px}
 .vm-calendar-detail-venue h3,.vm-calendar-detail-panel h3{font-size:17px;margin:0 0 8px}
 .vm-calendar-detail-venue p{margin:0}
@@ -432,6 +432,41 @@ main h2{font-size:23px;line-height:1.3}
 
 .vm-pitch-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;min-width:0}
 .vm-pitch-card h2{font-size:19px;margin:0 0 6px}
+
+.vm-pitch-toolbar{display:flex;align-items:end;flex-wrap:wrap;gap:10px 18px;padding:12px 14px;margin-bottom:14px}
+.vm-pitch-toolbar>.vm-field{flex:1 1 300px}
+.vm-pitch-toolbar input[type="search"]{box-sizing:border-box;min-height:42px}
+.vm-pitch-count{margin:0 0 10px;color:var(--muted);font-size:13px;font-variant-numeric:tabular-nums}
+.vm-pitch-list{border:1px solid var(--line);border-radius:12px;background:var(--card)}
+.vm-pitch-list-head{display:none}
+.vm-pitch-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:center;gap:8px 14px;padding:9px 14px}
+.vm-pitch-row+.vm-pitch-row,.vm-pitch-list-head+.vm-pitch-row{border-top:1px solid var(--line)}
+.vm-pitch-summary,.vm-pitch-row>.vm-pitch-reply,.vm-pitch-more{grid-column:1/-1;min-width:0}
+.vm-pitch-summary h2{font-size:16px;line-height:1.3;margin:0 0 2px;overflow-wrap:anywhere}
+.vm-pitch-meta{color:var(--muted);font-size:12px;line-height:1.35;margin:0;overflow-wrap:anywhere}
+.vm-pitch-meta-line{display:flex;align-items:center;column-gap:10px;flex-wrap:wrap}
+.vm-pitch-summary .vm-date-warning{display:block;padding:2px 5px;margin-top:3px;font-size:12px}
+.vm-pitch-details-toggle{min-height:24px;border:0;padding:0;background:transparent;color:var(--accent);font-size:12px;font-weight:650;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.vm-pitch-more{padding:10px 0 2px;border-top:1px solid var(--line)}
+.vm-pitch-row>.vm-field :is(input,select){box-sizing:border-box;min-width:0;min-height:40px;padding:6px 8px;font-size:14px}
+.vm-pitch-row input[type="date"]{font-variant-numeric:tabular-nums}
+.vm-pitch-row select{font-weight:650}
+.vm-pitch-row select:has(option:is([value="Pitched"],[value="Replied"]):checked){background:var(--soft)}
+.vm-pitch-row select:has(option[value="Confirmed"]:checked){background:var(--accent);color:var(--accentink)}
+.vm-pitch-row select:has(option[value="Declined"]:checked){background:var(--warnbg);color:var(--warnink)}
+.vm-pitch-row select option{background:var(--card);color:var(--ink)}
+@media screen and (min-width:1201px){
+ .vm-pitch-list{--vm-pitch-columns:minmax(0,1.15fr) clamp(128px,11vw,168px) clamp(140px,11vw,162px) minmax(0,1.55fr)}
+ .vm-pitch-list-head,.vm-pitch-row{display:grid;grid-template-columns:var(--vm-pitch-columns);column-gap:14px;padding-inline:14px}
+ .vm-pitch-list-head{position:sticky;top:0;z-index:1;padding-block:8px;border-radius:11px 11px 0 0;background:var(--soft);font-size:13px;font-weight:700;color:var(--muted)}
+ .vm-pitch-summary,.vm-pitch-row>.vm-pitch-reply{grid-column:auto}
+ .vm-pitch-row>.vm-field>span{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+}
+@media print{
+ .vm-pitch-toolbar,.vm-pitch-list-head,.vm-pitch-row>.vm-field,.vm-pitch-details-toggle{display:none!important}
+ .vm-pitch-row{break-inside:avoid}
+}
+
 .vm-contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .vm-contact-card{padding:20px;background:var(--card);border:1px solid var(--line);border-radius:12px;min-width:0}
 .vm-contact-card h2{font-size:18px;margin:0 0 8px}
@@ -2288,7 +2323,6 @@ function vmTag(label,cls){return h('span',{class:'vm-tag '+(cls||'')},label)}
 function vmHeader(title,description){const main=document.getElementById('main');main.append(h('div',{class:'vm-intro'},h('h1',null,title),description?h('p',null,description):null))}
 function vmEvent(c,view='cards',agendaDay=''){
  const list=view==='list',series=c.scheduleType==='series',uncertain=vmUncertain(c);
- const root=h('article',{class:'vm-event '+(list?'vm-list-row':'vm-event-compact'),'aria-label':c.ev,'data-event':c.n});
  const seriesLabel=series&&c.s?tr(c.s<vmToday()?'Series began':'Series starts'):'';
  const dates=c.s?range(c.s,series?null:c.e):tr('Date pending');
  const cancelled=/abgesagt|cancelled/i.test((c.dateStatus||'')+' '+(c.sourceStatus||''));
@@ -2298,6 +2332,8 @@ function vmEvent(c,view='cards',agendaDay=''){
  const organiser=c.organiser!==c.venue?c.organiser:'';
  const categories=[VM_KIND[c.kind]||c.type,...(c.topics||[]).filter(t=>t==='photography').map(t=>VM_TOPICS[t])].filter(Boolean);
  const meta=categories.map(tr).join(' · ');
+ if(view==='pitch')return vmPitchRow(c,{series,uncertain,dates,seriesLabel,dateWarning,location,organiser,meta});
+ const root=h('article',{class:'vm-event '+(list?'vm-list-row':'vm-event-compact'),'aria-label':c.ev,'data-event':c.n});
  const publishedSession=agendaDay&&series&&c.sessionDates?.includes(agendaDay);
  const cardDate=publishedSession?range(agendaDay):dates;
  const cardDateLabel=publishedSession?tr('Published session'):
@@ -2331,8 +2367,17 @@ function vmPortfolioGuide(guide,heading='h3',source='',focus=''){
   guide.note?h('p',{class:'mini'},guide.note):null,
   guide.source&&guide.source!==source?vmLink(guide.source,'Organiser reference'):null);
 }
-function vmCalendarContactPanel(c){
- const contacts=c.contacts||[],pitch='pt:'+vmPitchName(c)+':';
+function vmPitchFields(c){
+ const pitch='pt:'+vmPitchName(c)+':';
+ return {
+  status:vmField('Pitch status',sel(pitch+'status',PSTAT,'Not started','Pitch status: '+c.ev)),
+  sent:vmLocalField(pitch+'sent','Date sent','date'),
+  reply:vmLocalField(pitch+'reply','Reply / outcome','text')
+ };
+}
+function vmCalendarContactPanel(c,showPitch){
+ const contacts=c.contacts||[];
+ const pitch=showPitch?vmPitchFields(c):null;
  const panel=h('section',{class:'vm-calendar-detail-panel','aria-label':tr('Contacts & outreach')},
   h('h3',null,tr('Contacts & outreach')),h('h4',null,tr('Event contacts')));
  if(contacts.length)panel.append(h('ul',{class:'vm-calendar-contact-list'},contacts.map(x=>h('li',null,h('strong',null,x.name||'Contact'),
@@ -2352,13 +2397,10 @@ function vmCalendarContactPanel(c){
  syncEmailLink();
  panel.append(vmShootOrganisers(c,'h4'),
   h('div',{class:'vm-personal-fields vm-calendar-outreach'},h('h4',null,tr('Outreach')),email,link,
-   h('div',{class:'vm-calendar-pitch-fields'},
-    vmField('Pitch status',sel(pitch+'status',PSTAT,'Not started','Pitch status: '+c.ev)),
-    vmLocalField(pitch+'sent','Date sent','date')),
-   vmLocalField(pitch+'reply','Reply / outcome','text')));
+   pitch?h('div',{class:'vm-calendar-pitch-fields'},pitch.status,pitch.sent):null,pitch?.reply));
  return panel;
 }
-function vmEventDetails(c,series,uncertain){
+function vmEventDetails(c,series,uncertain,showPitch=true){
  const eventKey='cal:'+c.n+':';
  const sourceLabel=c.custom?'Source website':c.checked?'Official website':'Original source';
  const evidence=[...(c.sources||[])];
@@ -2402,7 +2444,7 @@ function vmEventDetails(c,series,uncertain){
  if(evidence.length)sources.append(h('ul',null,evidence.map(x=>h('li',null,vmLink(x.url,x.label||'Source')))));
  if(c.classificationNote)sources.append(h('p',{class:'mini'},c.classificationNote));
  return h('div',{class:'vm-detail-content vm-calendar-detail'},venue,
-  h('div',{class:'vm-calendar-detail-panels'},vmCalendarContactPanel(c),requirements,notes),
+  h('div',{class:'vm-calendar-detail-panels'},vmCalendarContactPanel(c,showPitch),requirements,notes),
   h('div',{class:'vm-calendar-detail-reference'},information,sources));
 }
 function vmOpenCalendar(patch){vmFilter={...vmDefaults(),...patch};vmStoreFilters();go('Calendar')}
@@ -2623,6 +2665,10 @@ Object.assign(VM_DE,{
  'Organisation name':'Name der Organisation','Enter an organisation name.':'Gib einen Namen für die Organisation ein.','Enter a valid contact email.':'Gib eine gültige Kontaktadresse ein.','Organiser notes':'Notizen zum Veranstalter',
  'Linked organisers':'Verknüpfte Veranstalter','No organisers linked to this shoot.':'Für diesen Fototermin sind keine Veranstalter verknüpft.',
  'Contacts & outreach':'Kontakte & Anfragen','Event contacts':'Kontakte zum Termin','Outreach':'Anfragen',
+ 'Event & organiser':'Termin & Veranstalter','Event details':'Termindetails','Search pitches':'Anfragen suchen',
+ 'Add a reply or outcome':'Antwort oder Ergebnis eintragen','pitch':'Anfrage','pitches':'Anfragen',
+ 'No pitches match your search.':'Keine Anfragen passen zur Suche.','Try a different event, city or organiser.':'Versuche einen anderen Termin, Ort oder Veranstalter.',
+ 'Show all event opportunities to start a pitch here.':'Zeige alle Termine an, um hier eine Anfrage zu beginnen.',
  'Plan & notes':'Planung & Notizen','Event information':'Terminübersicht','Email saved contact':'Gespeicherten Kontakt anschreiben',
  'Saved organiser':'Gemerkter Veranstalter','Choose a bookmark':'Merkliste auswählen','No available bookmarks':'Keine verfügbaren Einträge',
  'Link organiser':'Veranstalter verknüpfen','Unlink':'Verknüpfung lösen','Linked shoots':'Verknüpfte Fototermine','Personal bookmark':'Eigener Eintrag',
@@ -3139,10 +3185,60 @@ V['Portfolio Leads']=function(){
    vmButton('Organisers & contacts',()=>go('Sources & Contacts'))]
  });
 };
+function vmPitchRow(c,{series,uncertain,dates,seriesLabel,dateWarning,location,organiser,meta}){
+ const {status,sent,reply}=vmPitchFields(c);
+ reply.classList.add('vm-pitch-reply');
+ const replyInput=reply.querySelector('input');
+ replyInput.placeholder=tr('Add a reply or outcome');
+ const showFullReply=()=>{replyInput.title=replyInput.value};
+ replyInput.addEventListener('input',showFullReply);showFullReply();
+ const more=h('div',{class:'vm-pitch-more',id:'vm-pitch-details-'+c.n,hidden:true});
+ const toggle=vmButton(tr('Event details'),()=>{
+  if(!more.firstElementChild)more.append(vmEventDetails(c,series,uncertain,false));
+  more.hidden=!more.hidden;toggle.setAttribute('aria-expanded',String(!more.hidden));
+ },{class:'vm-pitch-details-toggle','aria-controls':more.id,'aria-expanded':'false'});
+ const when=seriesLabel?seriesLabel+' '+dates:dates;
+ const summary=h('div',{class:'vm-pitch-summary'},h('h2',null,c.ev),
+  h('p',{class:'vm-pitch-meta'},[location,organiser].filter(Boolean).join(' · ')),dateWarning,
+  h('div',{class:'vm-pitch-meta-line'},h('p',{class:'vm-pitch-meta'},[when,meta].filter(Boolean).join(' · ')),toggle));
+ return h('article',{class:'vm-pitch-row','aria-label':c.ev,'data-event':c.n},summary,status,sent,reply,more);
+}
 V['Pitch Tracker']=function(){
- vmHeader('Pitch tracker','Track any event or course group, with its own enquiry history.');const main=document.getElementById('main'),search=h('input',{type:'search','aria-label':'Search pitches',placeholder:'Event, organiser, city…'}),active=h('input',{type:'checkbox',checked:true}),results=h('div');let page=1;
- main.append(h('div',{class:'vm-filter-panel'},vmField('Search events',search),h('label',{class:'vm-toggle'},active,'Only active pitches')),results);search.addEventListener('input',()=>{page=1;draw()});active.addEventListener('change',()=>{page=1;draw()});
- function draw(){results.textContent='';const q=search.value.toLowerCase(),rows=vmSorted(CAL.filter(c=>(!active.checked||(S['pt:'+vmPitchName(c)+':status']||'Not started')!=='Not started'||['Researching','Pitched','Confirmed'].includes(S['cal:'+c.n+':status']))&&(!q||[c.ev,c.city,c.organiser].join(' ').toLowerCase().includes(q))),'date');if(!rows.length){results.append(h('div',{class:'vm-empty'},h('h2',null,'No active pitches yet.'),h('p',null,'Set a pitch status in an event’s details, or browse all opportunities.'),vmButton('Show all event opportunities',()=>{active.checked=false;draw()})));return}results.append(vmPagination(rows,page,n=>{page=n;draw();results.scrollIntoView({block:'start',behavior:'instant'})}),h('div',{class:'vm-event-grid'},rows.slice((page-1)*VM_PAGE_SIZE,page*VM_PAGE_SIZE).map(c=>vmEvent(c))));}draw();
+ vmHeader('Pitch tracker');
+ const main=document.getElementById('main'),results=h('div',{id:'vm-pitch-results'});
+ const search=h('input',{type:'search','aria-label':tr('Search pitches'),placeholder:'Event, organiser, city…'});
+ const active=h('input',{type:'checkbox',checked:true});
+ const count=h('p',{class:'vm-pitch-count',role:'status','aria-live':'polite','aria-atomic':'true'});
+ let page=1;
+ main.append(h('div',{class:'vm-filter-panel vm-pitch-toolbar'},vmField(tr('Search pitches'),search),
+  h('label',{class:'vm-toggle'},active,tr('Only active pitches')),count),results);
+ const resetPage=()=>{page=1;draw()};
+ search.addEventListener('input',resetPage);active.addEventListener('change',resetPage);
+ function draw(){
+  const q=search.value.toLowerCase();
+  const rows=vmSorted(CAL.filter(c=>(!active.checked||
+   (S['pt:'+vmPitchName(c)+':status']||'Not started')!=='Not started'||
+   ['Researching','Pitched','Confirmed'].includes(S['cal:'+c.n+':status']))&&
+   (!q||[c.ev,c.city,c.organiser].join(' ').toLowerCase().includes(q))),'date');
+  count.textContent=rows.length.toLocaleString()+' '+tr(rows.length===1?'pitch':'pitches');
+  results.replaceChildren();
+  if(!rows.length){
+   results.append(h('div',{class:'vm-empty'},
+    h('h2',null,tr(q?'No pitches match your search.':'No active pitches yet.')),
+    h('p',null,tr(q?'Try a different event, city or organiser.':'Show all event opportunities to start a pitch here.')),
+    active.checked?vmButton('Show all event opportunities',()=>{active.checked=false;resetPage()}):null));
+   return;
+  }
+  if(rows.length>VM_PAGE_SIZE)results.append(vmPagination(rows,page,next=>{
+   page=next;draw();results.querySelector('.vm-pagination button:not(:disabled)')?.focus({preventScroll:true});
+   results.scrollIntoView({block:'start',behavior:'instant'});
+  }));
+  const labels=['Event & organiser','Pitch status','Date sent','Reply / outcome'];
+  const head=h('div',{class:'vm-pitch-list-head','aria-hidden':'true'},labels.map(label=>h('span',null,tr(label))));
+  results.append(h('div',{class:'vm-pitch-list'},head,
+   rows.slice((page-1)*VM_PAGE_SIZE,page*VM_PAGE_SIZE).map(c=>vmEvent(c,'pitch'))));
+ }
+ draw();
 };
 if(!ALL.includes('Annual programmes'))ALL.push('Annual programmes');
 TABS[0][0]='Mountain planning';TABS[0][1].push(['Annual programmes','#DCE4EA']);
