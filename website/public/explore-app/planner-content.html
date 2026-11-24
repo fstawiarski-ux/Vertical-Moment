@@ -406,21 +406,30 @@ main h2{font-size:23px;line-height:1.3}
 .vm-empty{border:1px dashed var(--line);border-radius:14px;padding:36px;text-align:center;background:var(--card)}
 .vm-empty h2{font-size:20px}
 .vm-empty p{color:var(--muted)}
-.vm-month-header{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:space-between;margin:20px 0}
-.vm-month-header h2{margin:0}
-.vm-month-controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.vm-month-controls input{max-width:190px;padding:8px;border:1px solid var(--line);border-radius:7px;background:var(--card)}
-.vm-month-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
-.vm-weekday{text-align:center;font-size:12px;font-weight:650;padding:8px}
-.vm-day{min-width:0;min-height:108px;text-align:left;padding:10px;border:1px solid var(--line);border-radius:9px;background:var(--card);display:flex;flex-direction:column;gap:7px;cursor:pointer;color:var(--ink)}
-.vm-day[aria-pressed="true"]{outline:2px solid var(--accent);outline-offset:1px;background:var(--soft)}
-.vm-day.today{border:2px solid var(--accent)}
+.vm-month-header,.vm-month-agenda-heading{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:space-between;margin:0 0 10px}
+.vm-month-header h2,.vm-month-agenda-heading h2{margin:0;font-size:20px}
+.vm-month-agenda-heading p{margin:2px 0 0;color:var(--muted);font-size:13px}
+.vm-month-controls{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.vm-month-controls input{min-height:44px;box-sizing:border-box;max-width:175px;padding:7px 9px;border:1px solid var(--line);border-radius:7px;background:var(--card);color:var(--ink)}
+.vm-month-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px}
+.vm-weekday{text-align:center;font-size:12px;font-weight:650;padding:5px 0}
+.vm-day{box-sizing:border-box;min-width:0;min-height:76px;text-align:left;padding:6px 7px;border:1px solid var(--line);border-radius:8px;background:var(--card);display:flex;flex-direction:column;gap:3px;cursor:pointer;color:var(--ink)}
+.vm-day:hover,.vm-day[aria-pressed="true"]{background:var(--soft)}
+.vm-day[aria-pressed="true"]{outline:2px solid var(--accent);outline-offset:-2px}
+.vm-day.today .vm-day-number{text-decoration:underline 2px var(--accent);text-underline-offset:3px}
 .vm-day.outside{background:transparent;color:var(--muted)}
+.vm-day.outside[aria-pressed="true"]{background:var(--soft)}
+.vm-day-head{display:flex;justify-content:space-between;align-items:center;gap:2px;width:100%;line-height:1.3}
 .vm-day-number{font-size:14px;font-weight:750}
-.vm-day-event{font-size:11px;line-height:1.3;background:var(--soft);padding:4px;border-radius:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:100%}
-.vm-day-count{font-size:11px;color:var(--muted)}
-.vm-month-help{font-size:12px;color:var(--muted);margin:14px 0 20px}
+.vm-day-count{font-size:11px;font-weight:650;color:var(--muted);font-variant-numeric:tabular-nums}
+.vm-day-event{box-sizing:border-box;font-size:11px;line-height:1.3;background:var(--soft);padding:2px 4px;border-radius:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:100%}
+.vm-day[aria-pressed="true"] .vm-day-event{background:var(--card)}
+.vm-month-help{font-size:12px;color:var(--muted);margin:8px 0 0}
 .vm-month-agenda{margin-top:20px}
+.vm-month-agenda .vm-event-grid{gap:8px}
+.vm-month-agenda .vm-empty{padding:16px;text-align:left}
+.vm-month-to-list{margin-top:10px}
+
 .vm-pitch-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;min-width:0}
 .vm-pitch-card h2{font-size:19px;margin:0 0 6px}
 .vm-contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
@@ -448,7 +457,7 @@ table{font-size:14px}th{font-size:13px}td,th{padding:13px;vertical-align:top}
 @media (max-width:1200px){.vm-filters{grid-template-columns:repeat(2,minmax(0,1fr))}.vm-event-grid{grid-template-columns:1fr}}
 @media (max-width:760px){
  .app{display:block}nav.rail{position:relative;height:auto;overflow:visible;padding:18px 0 12px}.brand{padding:0 18px;font-size:18px}.brand small{font-size:12px}.vm-nav-toggle{display:block;position:absolute;right:16px;top:17px;min-height:44px;border:1px solid #83a992;background:#254f3c;color:#fff;border-radius:7px;padding:8px 14px}nav.rail #tabs{display:none}nav.rail.vm-nav-open #tabs{display:block;max-height:55vh;overflow:auto;margin-top:15px}.railfoot{display:flex;flex-wrap:wrap;margin-top:16px;padding:12px 18px 0;gap:8px}.railfoot #savestate{flex-basis:100%;font-size:12px}.railfoot button{font-size:12px;padding:8px 10px}.railfoot .vm-backup-note{display:none}.grp{margin-top:12px}.tab{font-size:14px}.tab i{display:none}
- main{padding:26px 16px 44px}.vm-intro{margin-bottom:16px}.vm-intro p{font-size:14px}.vm-dashboard{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:18px 0}.vm-stat{padding:12px}.vm-stat strong{font-size:25px}.vm-stat span{font-size:12px}.vm-scope{gap:6px}.vm-scope button{flex:1;padding:8px;font-size:13px}.vm-filter-panel{padding:14px}.vm-filters{grid-template-columns:1fr}.vm-presets button{font-size:12px;padding:8px 10px}.vm-event{padding:18px}.vm-event h2{font-size:20px}.vm-contact-grid{grid-template-columns:1fr}.vm-tracking{gap:8px}.vm-month-grid{gap:3px}.vm-day{padding:5px;min-height:70px;gap:5px;border-radius:5px}.vm-day-event{display:none}.vm-day-count{font-size:10px}.vm-month-help{font-size:12px}.vm-dialog{padding:20px}.vm-dialog-grid{grid-template-columns:1fr}.vm-dialog-grid .full{grid-column:auto}.vm-result-actions{width:100%}.vm-view-switch button{font-size:13px;padding:8px 12px}.vm-export summary{font-size:13px}.vm-event-grid{gap:12px}
+ main{padding:26px 16px 44px}.vm-intro{margin-bottom:16px}.vm-intro p{font-size:14px}.vm-dashboard{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:18px 0}.vm-stat{padding:12px}.vm-stat strong{font-size:25px}.vm-stat span{font-size:12px}.vm-scope{gap:6px}.vm-scope button{flex:1;padding:8px;font-size:13px}.vm-filter-panel{padding:14px}.vm-filters{grid-template-columns:1fr}.vm-presets button{font-size:12px;padding:8px 10px}.vm-event{padding:18px}.vm-event h2{font-size:20px}.vm-contact-grid{grid-template-columns:1fr}.vm-tracking{gap:8px}.vm-month-grid{gap:3px}.vm-day{padding:5px;min-height:70px;gap:5px;border-radius:5px}.vm-day-event{display:none}.vm-day-count{font-size:10px}.vm-dialog{padding:20px}.vm-dialog-grid{grid-template-columns:1fr}.vm-dialog-grid .full{grid-column:auto}.vm-result-actions{width:100%}.vm-view-switch button{font-size:13px;padding:8px 12px}.vm-export summary{font-size:13px}.vm-event-grid{gap:12px}
 }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 @media (max-width:760px){.brand{display:block!important;padding-right:150px!important;min-height:42px}.railfoot{display:none!important}nav.rail.vm-nav-open .railfoot{display:flex!important}.vm-filters{grid-template-columns:1fr 1fr}.vm-filters>.vm-field:first-child{grid-column:1/-1}.vm-filter-panel{margin-bottom:14px}.vm-dashboard{margin:14px 0}.vm-stat{padding:10px 12px}.vm-presets{gap:6px;margin-bottom:12px}.vm-source-state{font-size:12px}}
@@ -497,20 +506,31 @@ table{font-size:14px}th{font-size:13px}td,th{padding:13px;vertical-align:top}
 .vm-calendar-group-fields .vm-toggle{grid-column:1/-1;min-height:28px}
 .vm-calendar-group-fields .vm-toggle input{flex:none}
 .vm-event-grid{gap:12px}
-.vm-event.vm-event-compact{padding:14px 16px 4px}
-.vm-event-compact .vm-event-header{margin:0 0 8px}
-.vm-event-compact .vm-event-header .vm-date{font-size:14px;line-height:1.5}
-.vm-event-compact h2{font-size:clamp(17px,2vw,20px);line-height:1.32;margin:0 0 4px}
-.vm-event-compact .vm-location,.vm-event-compact .vm-event-meta{font-size:14px;line-height:1.45;margin:0 0 4px}
-.vm-event-compact .vm-event-meta{font-weight:400}
-.vm-event-compact .vm-details{margin-top:9px}
-.vm-event-compact .vm-details>summary{padding:10px 0;min-height:44px}
-.vm-event-compact .vm-tags{margin:8px 0 0}
-.vm-event-compact .vm-date-warning{padding:3px 8px;align-self:center;overflow-wrap:anywhere}
-.vm-event-compact .vm-tracking{padding-top:0;border-top:0}
-.vm-event-compact .vm-detail-content{font-size:15px;line-height:1.55;margin-bottom:14px}
-.vm-event-compact .vm-detail-content h3{margin-top:15px}
+.vm-event.vm-event-compact{padding:0}
+#vm-results>.vm-event-grid{align-items:stretch}
+.vm-card-details{margin:0;border:0}
+.vm-card-details:not([open]),.vm-card-details:not([open])>summary{height:100%}
+.vm-card-details>summary{box-sizing:border-box;display:flex;flex-direction:column;gap:5px;padding:12px 14px;list-style:none;border-radius:13px;font-weight:400}
+.vm-card-details>summary::-webkit-details-marker{display:none}
+.vm-card-details>summary:hover,.vm-card-details[open]>summary{background:var(--soft)}
+.vm-card-details[open]>summary{border-radius:13px 13px 0 0}
+.vm-card-details>summary:focus-visible{outline-offset:-3px!important}
+.vm-card-top,.vm-card-footer{display:flex;justify-content:space-between;align-items:start;gap:8px}
+.vm-card-when{font-size:13px;font-weight:650;line-height:1.35;font-variant-numeric:tabular-nums}
+.vm-card-title{font-size:17px;line-height:1.3;font-weight:700;overflow-wrap:anywhere}
+.vm-card-location{color:var(--muted);font-size:13px;line-height:1.4;overflow-wrap:anywhere}
+.vm-card-meta{display:block;color:var(--muted);font-size:12px;line-height:1.35;font-weight:400;overflow-wrap:anywhere}
+.vm-card-type{max-width:50%;text-align:right}
+.vm-card-footer{align-items:center;margin-top:auto}
+.vm-card-action{display:inline-flex;align-items:center;gap:5px;margin-inline-start:auto;font-size:13px;font-weight:650;white-space:nowrap}
+.vm-card-action::before{content:'+';font-size:17px;line-height:1}
+.vm-card-details[open] .vm-card-action::before{content:'−'}
+.vm-card-details .vm-date-warning{align-self:start;padding:2px 6px;font-size:12px;overflow-wrap:anywhere}
+.vm-card-details>.vm-detail-content{padding:12px 14px 18px;border-top:1px solid var(--line)}
+.vm-card-details .vm-tracking{padding-top:0;border-top:0}
+.vm-card-details .vm-detail-content h3{margin-top:15px}
 .vm-export>summary{box-sizing:border-box;display:flex;align-items:center}
+
 .vm-bookmark-filters{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) auto;gap:12px;align-items:end;margin:0 0 12px}
 .vm-bookmark-grid{margin-top:12px}
 .vm-bookmark-grid .vm-contact-card{padding:14px 16px}
@@ -609,10 +629,18 @@ table{font-size:14px}th{font-size:13px}td,th{padding:13px;vertical-align:top}
  #vm-results .vm-detail-content{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,2.5vw,48px)}
  #vm-results .vm-event-information,#vm-results .vm-event-planning{min-width:0;max-width:85ch}
  #vm-results .vm-event-grid>.vm-event-compact:has(.vm-details[open]){grid-column:1/-1}
+ .vm-month-layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(310px,1fr);gap:20px;align-items:start}
+ .vm-month-agenda{min-width:0;margin:0}
+ .vm-month-agenda .vm-event-grid{grid-template-columns:minmax(0,1fr)}
+ #vm-results .vm-month-agenda .vm-detail-content{grid-template-columns:minmax(0,1fr);gap:12px}
+ .vm-month-agenda .vm-shoot-fields,.vm-month-agenda .vm-tracking{grid-template-columns:minmax(0,1fr)}
+}
+@media screen and (min-width:1201px) and (min-height:780px){
+ .vm-month-calendar{position:sticky;top:10px;align-self:start}
 }
 @media print{
- .vm-list-details>summary{display:block!important}
- .vm-list-action{display:none}
+ .vm-list-details>summary,.vm-card-details>summary{display:block!important}
+ .vm-list-action,.vm-card-action,.vm-month-reset,.vm-month-to-list{display:none!important}
 }
 
 </style>
@@ -2258,7 +2286,7 @@ function vmRows(f){return vmSorted(CAL.filter(c=>vmMatches(c,f,vmToday())),f.sor
 function vmStoreFilters(){S['planner:filters:v4']={...vmFilter};persist()}
 function vmTag(label,cls){return h('span',{class:'vm-tag '+(cls||'')},label)}
 function vmHeader(title,description){const main=document.getElementById('main');main.append(h('div',{class:'vm-intro'},h('h1',null,title),description?h('p',null,description):null))}
-function vmEvent(c,view='cards'){
+function vmEvent(c,view='cards',agendaDay=''){
  const list=view==='list',series=c.scheduleType==='series',uncertain=vmUncertain(c);
  const root=h('article',{class:'vm-event '+(list?'vm-list-row':'vm-event-compact'),'aria-label':c.ev,'data-event':c.n});
  const seriesLabel=series&&c.s?tr(c.s<vmToday()?'Series began':'Series starts'):'';
@@ -2269,22 +2297,27 @@ function vmEvent(c,view='cards'){
  const location=[...new Set([c.city,c.venue,c.co!=='AT'&&c.co!=='UNKNOWN'?(VM_COUNTRY[c.co]||c.co):null].filter(Boolean))].join(' · ')||tr('Location to confirm');
  const organiser=c.organiser!==c.venue?c.organiser:'';
  const categories=[VM_KIND[c.kind]||c.type,...(c.topics||[]).filter(t=>t==='photography').map(t=>VM_TOPICS[t])].filter(Boolean);
+ const meta=categories.map(tr).join(' · ');
+ const publishedSession=agendaDay&&series&&c.sessionDates?.includes(agendaDay);
+ const cardDate=publishedSession?range(agendaDay):dates;
+ const cardDateLabel=publishedSession?tr('Published session'):
+  agendaDay&&!series&&c.s<agendaDay?tr('Ongoing'):seriesLabel;
  const summary=list?h('summary',null,
   h('span',{class:'vm-list-when'},dates,seriesLabel?h('span',{class:'vm-list-meta'},seriesLabel):null,dateWarning),
   h('span',{class:'vm-list-name'},h('span',{class:'vm-list-title'},c.ev),
-   categories.length?h('span',{class:'vm-list-meta'},categories.map(tr).join(' · ')):null),
+   meta?h('span',{class:'vm-list-meta'},meta):null),
   h('span',{class:'vm-list-location'},location,organiser?h('span',{class:'vm-list-meta'},organiser):null),
   h('span',{class:'vm-list-action','aria-hidden':'true'},'Details')):
-  h('summary',null,'Details, contacts & notes');
- if(!list){
-  root.append(h('div',{class:'vm-event-header'},h('div',{class:'vm-date'},
-   seriesLabel?seriesLabel+' '+dates:dates,dateWarning)),
-  h('div',{class:'vm-event-body'},h('h2',null,c.ev),
-   h('p',{class:'vm-location'},location),
-   organiser?h('p',{class:'vm-event-meta'},organiser):null,
-   h('div',{class:'vm-tags'},categories.map(label=>vmTag(label)))));
- }
- const details=h('details',{class:'vm-details'+(list?' vm-list-details':'')},summary);
+  h('summary',null,
+   h('span',{class:'vm-card-top'},
+    h('span',{class:'vm-card-when'},cardDate,cardDateLabel?h('span',{class:'vm-card-meta'},cardDateLabel):null),
+    meta?h('span',{class:'vm-card-meta vm-card-type'},meta):null),
+   dateWarning,
+   h('span',{class:'vm-card-title'},c.ev),
+   h('span',{class:'vm-card-location'},location),
+   h('span',{class:'vm-card-footer'},organiser?h('span',{class:'vm-card-meta'},organiser):null,
+    h('span',{class:'vm-card-action','aria-hidden':'true'},'Details')));
+ const details=h('details',{class:'vm-details '+(list?'vm-list-details':'vm-card-details')},summary);
  details.addEventListener('toggle',()=>{
   if(details.open&&!details.querySelector('.vm-detail-content'))details.append(vmEventDetails(c,series,uncertain));
  });
@@ -2568,6 +2601,10 @@ Object.assign(VM_DE,{
  'Quick filters':'Schnellfilter','Gear & brands':'Ausrüstung & Marken','Weekends':'Wochenenden',
  'Location':'Ort','Austrian provinces':'Österreichische Bundesländer','Countries':'Länder','Saved location':'Gespeicherter Ort',
  'Date':'Datum','Event':'Veranstaltung','Organiser':'Veranstalter','Planning':'Planung',
+ 'Month agenda':'Monatsübersicht','Show whole month':'Ganzen Monat anzeigen','listing':'Eintrag',
+ 'Published session':'Veröffentlichte Kurseinheit','Ongoing':'Laufend',
+ 'No events on this date.':'Keine Termine an diesem Tag.',
+ 'Day previews show event starts and published course sessions. Counts also include ongoing events.':'Die Tagesvorschau zeigt neue Termine und veröffentlichte Kurseinheiten. Laufende Veranstaltungen zählen mit.',
  'Planner overview':'Planer-Übersicht','Planning tools':'Planungswerkzeuge','Weekend events':'Wochenendtermine',
  'Browse photography events':'Fototermine ansehen','active enquiries':'aktive Anfragen','galleries delivered or published':'Galerien geliefert oder veröffentlicht',
  'Event, city, venue or organiser':'Termin, Ort, Halle oder Veranstalter','listings':'Einträge','of':'von',
@@ -2755,25 +2792,81 @@ function vmCalendarMonthMatches(c,first,last){
   :vmInMonth(c,first,last);
 }
 function vmMonth(body,rows){
- const [year,month]=vmFilter.month.split('-').map(Number),first=new Date(year,month-1,1);if(!Number.isFinite(first.getTime())){vmFilter.month=vmToday().slice(0,7);return vmMonth(body,rows)}
- const title=first.toLocaleDateString(locale==='de'?'de-AT':'en-GB',{month:'long',year:'numeric'}),grid=h('div',{class:'vm-month-grid',role:'group','aria-label':title});
- const picker=h('input',{type:'month',value:vmFilter.month,'aria-label':'Choose month'});picker.addEventListener('change',()=>{if(/^\d{4}-\d{2}$/.test(picker.value)){vmFilter.month=picker.value;vmFilter.day='';redraw()}});
- const move=delta=>{vmFilter.month=vmDateKey(new Date(year,month-1+delta,1)).slice(0,7);vmFilter.day='';redraw()};
- body.append(h('div',{class:'vm-month-header'},h('h2',null,title),h('div',{class:'vm-month-controls'},vmButton('←',()=>move(-1),{'aria-label':'Previous month',id:'vm-prev-month'}),picker,vmButton('→',()=>move(1),{'aria-label':'Next month',id:'vm-next-month'}),vmButton('Today',()=>{vmFilter.month=vmToday().slice(0,7);vmFilter.day=vmToday();redraw()}))));
- ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].forEach(x=>grid.append(h('div',{class:'vm-weekday','aria-hidden':'true'},locale==='de'?({Mon:'Mo',Tue:'Di',Wed:'Mi',Thu:'Do',Fri:'Fr',Sat:'Sa',Sun:'So'}[x]):x)));
- const offset=(first.getDay()+6)%7,last=new Date(year,month,0),cells=Math.ceil((offset+last.getDate())/7)*7,buttons=[];
- const [from,to]=vmWeekendBounds(vmFilter,vmToday());
+ const [year,month]=vmFilter.month.split('-').map(Number),first=new Date(year,month-1,1);
+ if(!Number.isFinite(first.getTime())){vmFilter.month=vmToday().slice(0,7);return vmMonth(body,rows)}
+ const today=vmToday(),selected=vmFilter.day,start=vmDateKey(first),last=new Date(year,month,0),end=vmDateKey(last);
+ const dateLocale=locale==='de'?'de-AT':'en-GB',title=first.toLocaleDateString(dateLocale,{month:'long',year:'numeric'});
+ const grid=h('div',{class:'vm-month-grid',role:'group','aria-label':title});
+ const picker=h('input',{type:'month',id:'vm-month-picker',value:vmFilter.month,'aria-label':'Choose month'});
+ picker.addEventListener('change',()=>{
+  if(/^\d{4}-\d{2}$/.test(picker.value)){vmFilter.month=picker.value;vmFilter.day='';redraw()}
+ });
+ const move=delta=>{
+  vmFilter.month=vmDateKey(new Date(year,month-1+delta,1)).slice(0,7);
+  vmFilter.day='';redraw();
+ };
+ const controls=h('div',{class:'vm-month-controls'},
+  vmButton('←',()=>move(-1),{'aria-label':'Previous month',id:'vm-prev-month'}),
+  picker,vmButton('→',()=>move(1),{'aria-label':'Next month',id:'vm-next-month'}),
+  vmButton('Today',()=>{vmFilter.month=today.slice(0,7);vmFilter.day=today;redraw()},{id:'vm-month-today'}));
+ const header=h('div',{class:'vm-month-header'},h('h2',null,title),controls);
+ const weekdays=locale==='de'?['Mo','Di','Mi','Do','Fr','Sa','So']:['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+ for(const weekday of weekdays)grid.append(h('div',{class:'vm-weekday','aria-hidden':'true'},weekday));
+ const offset=(first.getDay()+6)%7,cells=Math.ceil((offset+last.getDate())/7)*7,buttons=[];
+ const [from,to]=vmWeekendBounds(vmFilter,today);
  const dayMatches=key=>vmFilter.weekends!==true||(key>=from&&key<=to&&vmWeekendDay(key));
+ const listingCount=count=>count.toLocaleString()+' '+tr(count===1?'listing':'listings');
  for(let i=0;i<cells;i++){
-  const d=new Date(year,month-1,i-offset+1),key=vmDateKey(d),events=dayMatches(key)?rows.filter(c=>vmOnDay(c,key)):[],label=d.toLocaleDateString(locale==='de'?'de-AT':'en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
-  const btn=h('button',{type:'button',id:'vm-day-'+key,class:'vm-day'+(d.getMonth()!==first.getMonth()?' outside':'')+(key===vmToday()?' today':''),'aria-label':label+', '+events.length+' listings','aria-pressed':String(vmFilter.day===key),onclick:()=>{vmFilter.day=key;redraw('vm-day-'+key)}},h('span',{class:'vm-day-number'},String(d.getDate())),events.slice(0,2).map(c=>h('span',{class:'vm-day-event'},c.ev)),events.length?h('span',{class:'vm-day-count'},events.length+' listings'):null);buttons.push(btn);grid.append(btn);
+  const date=new Date(year,month-1,i-offset+1),key=vmDateKey(date);
+  const events=dayMatches(key)?rows.filter(c=>vmOnDay(c,key)):[];
+  const previews=events.filter(c=>c.s===key||c.scheduleType==='series').slice(0,2);
+  const label=date.toLocaleDateString(dateLocale,{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+  const button=h('button',{
+   type:'button',id:'vm-day-'+key,tabindex:-1,
+   class:'vm-day'+(date.getMonth()!==first.getMonth()?' outside':'')+(key===today?' today':''),
+   'aria-label':label+', '+listingCount(events.length),'aria-pressed':String(selected===key),
+   'aria-current':key===today?'date':null,'aria-controls':'vm-month-agenda',
+   onclick:()=>{vmFilter.day=key;redraw('vm-day-'+key)}
+  },h('span',{class:'vm-day-head'},h('span',{class:'vm-day-number'},String(date.getDate())),
+    events.length?h('span',{class:'vm-day-count'},String(events.length)):null),
+   previews.map(c=>h('span',{class:'vm-day-event',title:c.ev},c.ev)));
+  buttons.push(button);grid.append(button);
  }
- buttons.forEach((b,index)=>b.addEventListener('keydown',e=>{const shifts={ArrowRight:1,ArrowLeft:-1,ArrowDown:7,ArrowUp:-7};let next=index;if(e.key in shifts)next+=shifts[e.key];else if(e.key==='Home')next-=index%7;else if(e.key==='End')next+=6-index%7;else return;e.preventDefault();buttons[next]?.focus()}));
- body.append(grid,h('p',{class:'vm-month-help'},'Use arrow keys to move between days. Press Enter to see the day’s events.'),h('p',{class:'vm-month-help'},'Course series appear on their start date, or on individually published session dates. Their date range does not imply a class every day.'));
- const start=vmFilter.month+'-01',end=vmDateKey(last),selected=vmFilter.day,shown=rows.filter(c=>selected?dayMatches(selected)&&vmOnDay(c,selected):vmCalendarMonthMatches(c,start,end)),agenda=h('section',{class:'vm-month-agenda','aria-label':'Month events'});
- agenda.append(h('h2',null,(selected?range(selected):title)+' · '+shown.length+' listings'));
- if(shown.length){agenda.append(h('div',{class:'vm-event-grid'},shown.slice(0,VM_PAGE_SIZE).map(c=>vmEvent(c))));if(shown.length>VM_PAGE_SIZE)agenda.append(vmButton('See all '+shown.length+' in List',()=>{vmFilter.view='list';vmFilter.from=selected||start;vmFilter.to=selected||end;vmStoreFilters();go('Calendar')}))}else agenda.append(h('p',{class:'vm-empty'},'No dated events in this month.'));body.append(agenda);
- function redraw(focusId){const old=focusId||document.activeElement?.id;vmStoreFilters();body.textContent='';vmMonth(body,rows);if(old)document.getElementById(old)?.focus({preventScroll:true})}
+ const initialDay=selected||(today>=start&&today<=end?today:start);
+ let tabDay=buttons.find(button=>button.id==='vm-day-'+initialDay)||buttons[offset];
+ tabDay.tabIndex=0;
+ const shifts={ArrowRight:1,ArrowLeft:-1,ArrowDown:7,ArrowUp:-7};
+ buttons.forEach((button,index)=>{
+  button.addEventListener('focus',()=>{tabDay.tabIndex=-1;button.tabIndex=0;tabDay=button});
+  button.addEventListener('keydown',event=>{
+   let target=index;
+   if(event.key in shifts)target+=shifts[event.key];
+   else if(event.key==='Home')target-=index%7;
+   else if(event.key==='End')target+=6-index%7;
+   else return;
+   event.preventDefault();buttons[target]?.focus();
+  });
+ });
+ const calendar=h('div',{class:'vm-month-calendar'},header,grid,
+  h('p',{class:'vm-month-help'},'Use arrow keys to move between days. Press Enter to see the day’s events.'),
+  h('p',{class:'vm-month-help'},tr('Day previews show event starts and published course sessions. Counts also include ongoing events.')));
+ const shown=rows.filter(c=>selected?dayMatches(selected)&&vmOnDay(c,selected):vmCalendarMonthMatches(c,start,end));
+ const agenda=h('section',{id:'vm-month-agenda',class:'vm-month-agenda','aria-label':'Month events'});
+ agenda.append(h('div',{class:'vm-month-agenda-heading'},
+  h('div',null,h('h2',null,selected?range(selected):tr('Month agenda')),h('p',null,listingCount(shown.length))),
+  selected?vmButton(tr('Show whole month'),()=>{vmFilter.day='';redraw('vm-day-'+selected)},{class:'vm-button vm-month-reset'}):null));
+ if(shown.length){
+  agenda.append(h('div',{class:'vm-event-grid'},shown.slice(0,VM_PAGE_SIZE).map(c=>vmEvent(c,'cards',selected))));
+  if(shown.length>VM_PAGE_SIZE)agenda.append(vmButton('See all '+shown.length+' in List',()=>{
+   vmFilter.view='list';vmFilter.from=selected||start;vmFilter.to=selected||end;vmStoreFilters();go('Calendar');
+  },{class:'vm-button vm-month-to-list'}));
+ }else agenda.append(h('p',{class:'vm-empty'},tr(selected?'No events on this date.':'No dated events in this month.')));
+ body.append(h('div',{class:'vm-month-layout'},calendar,agenda));
+ function redraw(focusId){
+  const old=focusId||document.activeElement?.id;
+  vmStoreFilters();body.replaceChildren();vmMonth(body,rows);
+  if(old)document.getElementById(old)?.focus({preventScroll:true});
+ }
 }
 function vmExportCSV(rows){
  const heads=['ID','Event','Start date','End date','Schedule','Published session dates','Country','Province','City / destination','Venue','Organiser','Booking code','Discipline','Event type','Topics','Setting','Timetable','Source status at research','Date status','Contact email','Contact phone','Contact scope','Website','Date checked','Event status','Photo delivery','Notes'];

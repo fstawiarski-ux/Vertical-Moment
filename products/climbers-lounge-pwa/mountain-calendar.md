@@ -345,3 +345,26 @@ The default view at 1,440 × 900 displays six complete rows before scrolling,
 compared with two previously. A version 4 backup restored saved filters,
 a named trip, shoot details, an organiser link and a personal event. The
 JSON backup, filtered CSV and ICS downloads matched byte for byte.
+
+## Desktop Cards and Month views
+
+Cards put the date, event type, name and venue in a compact preview.
+Click the card or press Enter or Space to open its details, notes and
+shoot requirements.
+
+On desktop, Month places the calendar grid beside the agenda. Day counts
+include ongoing events, while the previews highlight event starts and
+published course sessions. Select a day to see its agenda. A published
+session shows its date and ongoing events carry a label. **Show whole
+month** returns to the month agenda. The arrow keys move between days.
+
+The 37 Planner and competition tests, all 183 website tests, the
+production build and the offline content check passed. Chrome checks at
+1,440, 1,920 and 2,560 pixels matched the previous date counts and event
+IDs and exercised keyboard expansion and Month navigation. At 1,440 × 900,
+nine full cards and all five December calendar weeks fit before scrolling.
+
+A version 4 backup restored a trip, a personal event, the selected Month
+date, shoot requirements and an organiser link. A note edited in Month
+appeared in Cards and List and survived reload and re-import. JSON, CSV
+and ICS downloads matched the previous Planner byte for byte.
