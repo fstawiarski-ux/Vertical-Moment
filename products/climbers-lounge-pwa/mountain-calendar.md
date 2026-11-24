@@ -2,8 +2,10 @@
 
 Product scope: `climbers-lounge-pwa`. Catalogue baseline: 14–15 October 2026. Competition details: 18 October, with selected official-source checks on 21 October 2026.
 
-The [November update](#calendar-and-photography-outreach--23-november-2026)
-records the current catalogue totals and outreach changes.
+The [24 November update](#upcoming-date-filters-and-events--24-november-2026)
+records the current catalogue totals and date controls. The
+[23 November update](#calendar-and-photography-outreach--23-november-2026)
+records the preceding outreach changes.
 
 ## Runtime and editing
 
@@ -386,3 +388,18 @@ A version 4 backup restored a trip, a personal event, the selected Month
 date, shoot requirements and an organiser link. A note edited in Month
 appeared in Cards and List and survived reload and re-import. JSON, CSV
 and ICS downloads matched the previous Planner byte for byte.
+
+## Upcoming date filters and events — 24 November 2026
+
+The 16 organiser-verified additions use IDs 9231–9246. They include four
+separately dated Austrian OHMEGA demos, regional competitions and hiking,
+photography courses and festivals, an online photo submission deadline, and
+dated gear and media events. The full calendar now has 3,432 runtime
+listings, including 2,830 in Austria. The Alpinmesse programme and the
+Riva del Garda trade show keep their existing records.
+
+In **Dates**, Next 7, 30 and 90 days count today as day one. The selected
+window combines with the other filters. List and Cards put listings that have
+already started in an expandable **Ongoing** group. Month shows dates
+inside the window and places course series on their published sessions or
+stated start. CSV and ICS use the matching listings and their published dates.
