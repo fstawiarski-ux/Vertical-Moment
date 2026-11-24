@@ -343,6 +343,44 @@ main h2{font-size:23px;line-height:1.3}
 .vm-detail-content ul{margin:8px 0 16px;padding-left:22px}
 .vm-detail-content li{margin-bottom:10px;overflow-wrap:anywhere}
 .vm-detail-content small{display:block;color:var(--muted)}
+
+#vm-results .vm-detail-content.vm-calendar-detail{display:block;container-type:inline-size}
+.vm-calendar-detail-venue{display:flex;align-items:start;justify-content:space-between;flex-wrap:wrap;gap:8px 16px;margin-bottom:12px}
+.vm-calendar-detail-venue h3,.vm-calendar-detail-panel h3{font-size:17px;margin:0 0 8px}
+.vm-calendar-detail-venue p{margin:0}
+.vm-calendar-detail-venue .vm-event-actions{margin:0}
+.vm-calendar-detail-venue .vm-button{box-sizing:border-box;min-height:36px;padding:6px 12px}
+.vm-calendar-detail-panels,.vm-calendar-detail-reference{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;align-items:start}
+.vm-calendar-detail-reference{margin-top:12px}
+.vm-calendar-detail-panel{min-width:0;border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.vm-calendar-detail-panel h4{font-size:13px;margin:0 0 6px}
+.vm-calendar-detail-panel p:last-child,.vm-calendar-detail-panel ul:last-child{margin-bottom:0}
+.vm-calendar-contact-list{list-style:none}
+.vm-calendar-detail .vm-calendar-contact-list{margin:0 0 12px;padding:0}
+.vm-calendar-contact-list li:last-child{margin-bottom:0}
+.vm-calendar-detail .vm-shoot-organisers{padding-top:10px}
+.vm-calendar-detail .vm-link-organiser-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+.vm-calendar-detail .vm-link-organiser-actions>.vm-field{grid-column:1/-1}
+.vm-calendar-detail .vm-link-organiser-actions button{min-height:36px;padding:6px 8px;font-size:13px}
+.vm-calendar-detail .vm-field :is(input,select,textarea){box-sizing:border-box;min-width:0}
+.vm-calendar-detail .vm-shoot-requirements{margin:0;padding:0;border:0}
+.vm-calendar-detail .vm-shoot-requirements legend{padding:0;margin:0 0 8px;font-size:17px}
+.vm-calendar-detail .vm-shoot-fields{grid-template-columns:minmax(0,1fr)}
+.vm-calendar-photo-access,.vm-calendar-outreach{border-top:1px solid var(--line);padding-top:10px;margin-top:12px}
+.vm-calendar-outreach h4{margin-bottom:0}
+.vm-calendar-pitch-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.vm-calendar-email-link{font-size:13px}
+.vm-calendar-detail .vm-tracking{padding:0;border:0}
+.vm-calendar-detail-notes .vm-personal-fields{margin-top:10px}
+.vm-calendar-detail-notes textarea{min-height:126px}
+@container (min-width:570px){
+ .vm-calendar-detail .vm-shoot-fields{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@container (min-width:900px){
+ .vm-calendar-detail-panels{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr) minmax(0,1fr)}
+ .vm-calendar-detail-reference{grid-template-columns:minmax(0,1.55fr) minmax(0,1fr)}
+}
+
 .vm-personal-fields{display:grid;gap:12px;margin-top:14px}
 .vm-personal-fields select,.vm-personal-fields input{min-width:0;width:100%}
 .vm-list{display:block;border:1px solid var(--line);border-radius:12px;background:var(--card)}
@@ -2293,16 +2331,56 @@ function vmPortfolioGuide(guide,heading='h3',source='',focus=''){
   guide.note?h('p',{class:'mini'},guide.note):null,
   guide.source&&guide.source!==source?vmLink(guide.source,'Organiser reference'):null);
 }
+function vmCalendarContactPanel(c){
+ const contacts=c.contacts||[],pitch='pt:'+vmPitchName(c)+':';
+ const panel=h('section',{class:'vm-calendar-detail-panel','aria-label':tr('Contacts & outreach')},
+  h('h3',null,tr('Contacts & outreach')),h('h4',null,tr('Event contacts')));
+ if(contacts.length)panel.append(h('ul',{class:'vm-calendar-contact-list'},contacts.map(x=>h('li',null,h('strong',null,x.name||'Contact'),
+  vmEmail(x.email)?h('div',null,h('a',{href:'mailto:'+x.email},x.email)):null,
+  x.phone?h('div',null,h('a',{href:'tel:'+x.phone.replace(/[^+\d]/g,'')},x.phone)):null,
+  h('small',null,x.scope||''),x.source?vmLink(x.source,'Contact source'):null,x.checked?h('small',null,'Contact checked '+x.checked):null))));
+ else panel.append(h('p',null,c.contact||'Contact details on the source page'));
+ const email=vmLocalField('cal:'+c.n+':email','Your contact email','email','Optional email you have confirmed yourself');
+ const input=email.querySelector('input'),link=h('a',{class:'vm-calendar-email-link'},tr('Email saved contact'));
+ function syncEmailLink(){
+  const address=vmEmail(input.value.trim());
+  link.hidden=!address;
+  if(address)link.href='mailto:'+encodeURIComponent(address);
+  else link.removeAttribute('href');
+ }
+ input.addEventListener('input',syncEmailLink);
+ syncEmailLink();
+ panel.append(vmShootOrganisers(c,'h4'),
+  h('div',{class:'vm-personal-fields vm-calendar-outreach'},h('h4',null,tr('Outreach')),email,link,
+   h('div',{class:'vm-calendar-pitch-fields'},
+    vmField('Pitch status',sel(pitch+'status',PSTAT,'Not started','Pitch status: '+c.ev)),
+    vmLocalField(pitch+'sent','Date sent','date')),
+   vmLocalField(pitch+'reply','Reply / outcome','text')));
+ return panel;
+}
 function vmEventDetails(c,series,uncertain){
- const contacts=vmContacts(c),pname=vmPitchName(c),information=h('div',{class:'vm-event-information'});
+ const eventKey='cal:'+c.n+':';
  const sourceLabel=c.custom?'Source website':c.checked?'Official website':'Original source';
  const evidence=[...(c.sources||[])];
  if(c.u&&!evidence.some(x=>x.url===c.u))evidence.unshift({label:sourceLabel,url:c.u});
  const actions=h('div',{class:'vm-event-actions'},c.u?vmLink(c.u,sourceLabel,'vm-button'):null);
  if(c.address||c.venue)actions.append(vmLink('https://www.google.com/maps/search/?api=1&query='+encodeURIComponent([c.address||c.venue,c.city,VM_COUNTRY[c.co]||c.co].filter(Boolean).join(', ')),'Map','vm-button'));
- if(actions.childElementCount)information.append(actions);
- information.append(h('h3',null,'Venue & timetable'),h('p',null,c.address||c.venue||'Exact venue to confirm'));
- for(const value of [c.time,c.programme,c.cav,c.notes])if(value)information.append(h('p',null,value));
+ const venue=h('div',{class:'vm-calendar-detail-venue'},
+  h('div',null,h('h3',null,'Venue & timetable'),h('p',null,c.address||c.venue||'Exact venue to confirm'),
+   c.time?h('p',null,c.time):null),actions.childElementCount?actions:null);
+ const requirements=h('div',{class:'vm-calendar-detail-panel'},vmShootRequirements(c.n),
+  h('div',{class:'vm-calendar-photo-access'},h('h4',null,'Photography access'),
+   h('p',null,c.mediaNote||'Ask the organiser about photography and portfolio use. No independent media access has been confirmed.')));
+ const notes=h('section',{class:'vm-calendar-detail-panel vm-calendar-detail-notes','aria-label':tr('Plan & notes')},
+  h('h3',null,tr('Plan & notes')),
+  h('div',{class:'vm-tracking'},
+   vmField('My event status',sel(eventKey+'status',STAT,'Not started','Event status: '+c.ev)),
+   vmField('Photos / delivery',sel(eventKey+'deliv',DELIV,'Not shot','Photo delivery: '+c.ev))),
+  h('div',{class:'vm-personal-fields'},
+   vmLocalField(eventKey+'notes','Your planning notes','textarea','Light, equipment, story idea or follow-up…')));
+ if(c.portfolioGuide)notes.append(vmPortfolioGuide(c.portfolioGuide,'h4',c.u));
+ const information=h('section',{class:'vm-calendar-detail-panel','aria-label':tr('Event information')},h('h3',null,tr('Event information')));
+ for(const value of [c.programme,c.cav,c.notes])if(value)information.append(h('p',null,value));
  if(series&&c.e)information.append(h('p',null,tr('Published end')+' '+range(c.e)));
  if(c.sessionDates?.length)information.append(h('p',null,tr('Published sessions')+' '+c.sessionDates.map(d=>range(d)).join(' · ')));
  else if(series)information.append(h('p',null,'Check individual session dates on the source.'));
@@ -2316,28 +2394,16 @@ function vmEventDetails(c,series,uncertain){
  if(meta)information.append(h('p',{class:'mini'},meta));
  if(c.sourceStatus)information.append(h('p',{class:'vm-availability'},'Organiser status at research: '+c.sourceStatus+'. Recheck current availability.'));
  if(c.co==='UNKNOWN')information.append(h('p',{class:'vm-date-warning'},'Country / destination not established. This listing is not counted as an Austrian event.'));
- information.append(h('h3',null,'Photography access'),h('p',null,c.mediaNote||'Ask the organiser about photography and portfolio use. No independent media access has been confirmed.'));
- if(c.portfolioGuide)information.append(vmPortfolioGuide(c.portfolioGuide,'h3',c.u));
- information.append(h('h3',null,'Contacts'));
- if(contacts.length)information.append(h('ul',null,contacts.map(x=>h('li',null,h('strong',null,x.name||'Contact'),
-  vmEmail(x.email)?h('div',null,h('a',{href:'mailto:'+x.email},x.email)):null,
-  x.phone?h('div',null,h('a',{href:'tel:'+x.phone.replace(/[^+\d]/g,'')},x.phone)):null,
-  h('small',null,x.scope||''),x.source?vmLink(x.source,'Contact source'):null,x.checked?h('small',null,'Contact checked '+x.checked):null))));
- else information.append(h('p',null,c.contact||'Contact details on the source page'));
- information.append(h('h3',null,'Source evidence'));
- const checked=c.custom?'Personal event':c.checked?tr(uncertain?'Source checked':'Date source checked')+' '+c.checked:'Original listing · recheck date';
- information.append(h('p',{class:'vm-source-state'+(c.checked&&!uncertain?' vm-verified':'')},checked));
- if(evidence.length)information.append(h('ul',null,evidence.map(x=>h('li',null,vmLink(x.url,x.label||'Source')))));
- if(c.classificationNote)information.append(h('p',{class:'mini'},c.classificationNote));
  const conflicts=c.s?CAL.filter(x=>x.n!==c.n&&x.checked&&!vmUncertain(x)&&x.co===c.co&&vmOnDay(x,c.s)).slice(0,4):[];
- if(conflicts.length)information.append(h('h3',null,'Other verified events on these dates'),h('ul',null,conflicts.map(x=>h('li',null,vmLink(x.u,x.ev+' · '+x.city)))));
- const plan=h('div',{class:'vm-event-planning'},vmShootOrganisers(c),vmShootRequirements(c.n),h('h3',null,'Your planning notes'),
-  h('div',{class:'vm-tracking'},vmField('My event status',sel('cal:'+c.n+':status',STAT,'Not started','Event status: '+c.ev)),vmField('Photos / delivery',sel('cal:'+c.n+':deliv',DELIV,'Not shot','Photo delivery: '+c.ev))),
-  h('div',{class:'vm-personal-fields'},vmField('Pitch status',sel('pt:'+pname+':status',PSTAT,'Not started','Pitch status: '+c.ev)),
-   vmLocalField('pt:'+pname+':sent','Date sent','date'),vmLocalField('pt:'+pname+':reply','Reply / outcome','text'),
-   vmLocalField('cal:'+c.n+':email','Your contact email','email','Optional email you have confirmed yourself'),
-   vmLocalField('cal:'+c.n+':notes','Your planning notes','textarea','Light, equipment, story idea or follow-up…')));
- return h('div',{class:'vm-detail-content'},information,plan);
+ if(conflicts.length)information.append(h('h4',null,'Other verified events on these dates'),h('ul',null,conflicts.map(x=>h('li',null,vmLink(x.u,x.ev+' · '+x.city)))));
+ const checked=c.custom?'Personal event':c.checked?tr(uncertain?'Source checked':'Date source checked')+' '+c.checked:'Original listing · recheck date';
+ const sources=h('section',{class:'vm-calendar-detail-panel','aria-label':tr('Source evidence')},h('h3',null,'Source evidence'),
+  h('p',{class:'vm-source-state'+(c.checked&&!uncertain?' vm-verified':'')},checked));
+ if(evidence.length)sources.append(h('ul',null,evidence.map(x=>h('li',null,vmLink(x.url,x.label||'Source')))));
+ if(c.classificationNote)sources.append(h('p',{class:'mini'},c.classificationNote));
+ return h('div',{class:'vm-detail-content vm-calendar-detail'},venue,
+  h('div',{class:'vm-calendar-detail-panels'},vmCalendarContactPanel(c),requirements,notes),
+  h('div',{class:'vm-calendar-detail-reference'},information,sources));
 }
 function vmOpenCalendar(patch){vmFilter={...vmDefaults(),...patch};vmStoreFilters();go('Calendar')}
 function vmBackup(){vmDownload('Vertical-Moment-planner-backup-'+vmToday()+'.json',JSON.stringify({schema:'vertical-moment-climbing-planner',version:4,exportedAt:new Date().toISOString(),researchDate:VM_CHECKED,state:S},null,2),'application/json');toast(tr('Backup exported'))}
@@ -2556,6 +2622,8 @@ Object.assign(VM_DE,{
  'Add organiser':'Veranstalter hinzufügen','Add organiser bookmark':'Veranstalter merken','Edit organiser bookmark':'Veranstalter bearbeiten','Save organiser':'Veranstalter speichern',
  'Organisation name':'Name der Organisation','Enter an organisation name.':'Gib einen Namen für die Organisation ein.','Enter a valid contact email.':'Gib eine gültige Kontaktadresse ein.','Organiser notes':'Notizen zum Veranstalter',
  'Linked organisers':'Verknüpfte Veranstalter','No organisers linked to this shoot.':'Für diesen Fototermin sind keine Veranstalter verknüpft.',
+ 'Contacts & outreach':'Kontakte & Anfragen','Event contacts':'Kontakte zum Termin','Outreach':'Anfragen',
+ 'Plan & notes':'Planung & Notizen','Event information':'Terminübersicht','Email saved contact':'Gespeicherten Kontakt anschreiben',
  'Saved organiser':'Gemerkter Veranstalter','Choose a bookmark':'Merkliste auswählen','No available bookmarks':'Keine verfügbaren Einträge',
  'Link organiser':'Veranstalter verknüpfen','Unlink':'Verknüpfung lösen','Linked shoots':'Verknüpfte Fototermine','Personal bookmark':'Eigener Eintrag',
  'Organiser saved':'Veranstalter gespeichert','Organiser saved and linked':'Veranstalter gespeichert und verknüpft',

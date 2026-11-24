@@ -254,6 +254,24 @@ passed. Chrome at 1,440, 1,920 and 2,560 pixels checked cross-view editing,
 reloads and the desktop layout. A backup restored all four fields in a clean
 browser context.
 
+## Expanded Calendar event details
+
+Open a Calendar event to find **Contacts & outreach**, **Shoot requirements**
+and **Plan & notes** side by side on desktop. Contacts brings together event
+contacts, linked organisers, your saved email and pitch follow-up. Shoot
+requirements keeps the four photography fields with the access guidance.
+Plan & notes holds event status, photo delivery, notes and any portfolio idea.
+
+The venue and official links sit above the panels. Event information and
+source evidence are grouped below. The panels stack where the expanded event
+has less room.
+
+The 37 Planner and competition tests, all 183 website tests, the production
+build and the offline check passed. Desktop Chrome verified the three panels
+at 1,440, 1,920 and 2,560 pixels. A version 4 backup restored saved trip and
+shoot data. Edits survived switching Calendar views, reloading and importing
+again, and the JSON backup, CSV and ICS downloads matched byte for byte.
+
 ## Directory reconciliation — 23 November 2026
 
 Gym Directory still lists 48 distinct places around Vienna and Bratislava.
