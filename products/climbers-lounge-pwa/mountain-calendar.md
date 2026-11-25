@@ -449,3 +449,23 @@ Validation: 46 focused Planner tests and all 192 website tests passed;
 the Next/Serwist production build and verify-pwa-content passed. This is
 local review only. Installed-app updates and deployment are not part of
 this patch; publication awaits owner approval.
+
+
+### Short desktop screens — PR #134 review follow-up
+
+At desktop widths of 901 px or more and viewport heights of 760 px or less,
+the entire sidebar scrolls as one column. Navigation groups, primary
+shortcuts and device controls remain reachable even when their combined
+height exceeds the window. Taller desktop screens retain fixed primary
+shortcuts and device controls with independently scrolling tool groups.
+The calendar layout, saved plans and backup behavior are unchanged.
+
+The clipping was reproduced at 1440 × 480 before the fix. Browser checks
+then verified mouse scrolling at 1440 × 480 and keyboard access through
+every primary shortcut, group heading and enabled device control at
+1440 × 320. The footer remained reachable at 1024 × 600 and 1440 × 760.
+At 1440 × 761, 1440 × 900 and 1920 × 1080, the primary shortcuts and footer
+remained fixed while the supporting tools scrolled. Theme and language
+controls worked on the short screen. Mobile Navigation still opened and
+closed at 390 × 844. A synthetic saved shoot note survived reload, and
+December 12 retained its 27 events. All 192 website tests passed.

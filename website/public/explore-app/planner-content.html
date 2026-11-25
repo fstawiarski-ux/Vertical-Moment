@@ -698,6 +698,12 @@ table{font-size:14px}th{font-size:13px}td,th{padding:13px;vertical-align:top}
  nav.rail .railfoot button{margin:0}
  nav.rail .railfoot #vm-undo,nav.rail .railfoot #reset{grid-column:1/-1}
 }
+/* Short desktop windows need one scrollable rail so no navigation is clipped. */
+@media screen and (min-width:901px) and (max-height:760px){
+ nav.rail{display:block;overflow-x:hidden;overflow-y:auto}
+ nav.rail #tabs{display:block;overflow:visible}
+ nav.rail .vm-nav-secondary{overflow:visible}
+}
 @media screen and (min-width:761px) and (max-width:900px){
  nav.rail #tabs{display:block;overflow:visible}
  .vm-nav-primary,.vm-nav-secondary{display:flex;flex-wrap:wrap}
