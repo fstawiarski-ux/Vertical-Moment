@@ -675,6 +675,42 @@ table{font-size:14px}th{font-size:13px}td,th{padding:13px;vertical-align:top}
  .vm-list-action,.vm-card-action,.vm-agenda-source,.vm-calendar-toolbar{display:none!important}
 }
 
+
+/* Keep frequent Planner destinations visible and supporting tools grouped. */
+.vm-nav-group{margin:4px 10px;border-top:1px solid #557c64}
+.vm-nav-group>summary{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:44px;padding:10px;color:var(--navink);font-size:14px;font-weight:600;cursor:pointer;list-style:none}
+.vm-nav-group>summary::-webkit-details-marker{display:none}
+.vm-nav-group>summary::after{content:'';width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);flex:none;margin-right:3px}
+.vm-nav-group[open]>summary::after{transform:rotate(45deg)}
+.vm-nav-group>summary:hover{background:rgba(255,255,255,.07)}
+.vm-nav-links .tab{padding-left:16px;padding-right:10px;white-space:normal}
+.vm-photography-link{white-space:normal}
+@media screen and (min-width:901px){
+ nav.rail{display:flex;flex-direction:column;overflow:hidden;height:100dvh}
+ nav.rail .brand{flex:none}
+ nav.rail #tabs{display:flex;flex-direction:column;padding:0;overflow:hidden;flex:1;min-height:0}
+ nav.rail .vm-nav-primary{flex:none;padding-bottom:12px}
+ nav.rail .vm-nav-secondary{flex:1;min-height:0;overflow-x:hidden;overflow-y:auto;scrollbar-width:thin;overscroll-behavior:contain;padding-bottom:12px}
+ nav.rail .grp{margin:0 0 6px;padding:0 20px}
+ nav.rail .tab{min-height:46px}
+ nav.rail .vm-nav-group:first-of-type{margin-top:8px}
+ nav.rail .railfoot{flex:none;margin-top:0;padding-top:14px;gap:6px}
+ nav.rail .railfoot button{margin:0}
+ nav.rail .railfoot #vm-undo,nav.rail .railfoot #reset{grid-column:1/-1}
+}
+/* Short desktop windows need one scrollable rail so no navigation is clipped. */
+@media screen and (min-width:901px) and (max-height:760px){
+ nav.rail{display:block;overflow-x:hidden;overflow-y:auto}
+ nav.rail #tabs{display:block;overflow:visible}
+ nav.rail .vm-nav-secondary{overflow:visible}
+}
+@media screen and (min-width:761px) and (max-width:900px){
+ nav.rail #tabs{display:block;overflow:visible}
+ .vm-nav-primary,.vm-nav-secondary{display:flex;flex-wrap:wrap}
+ .vm-nav-group{flex:1 1 200px}
+ .vm-nav-group .tab{width:100%;text-align:left;white-space:normal}
+}
+
 </style>
 <style id="competition-focus-style">
 
@@ -1236,9 +1272,17 @@ const TABS=[
 const slug=s=>s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const ALL=TABS.flatMap(g=>g[1].map(t=>t[0]));
 let cur='Start Here';
-function buildTabs(){const box=document.getElementById('tabs');box.textContent='';
-  TABS.forEach(([g,items])=>{box.append(h('div',{class:'grp',text:g}));
-    items.forEach(([n,c,label=n])=>box.append(h('button',{class:'tab',type:'button',style:'--c:'+c,'aria-current':n===cur?'page':null,onclick:()=>go(n)},h('i',{style:'background:'+c}),label)))})}
+const vmNavOpen=new Map();
+function buildTabs(){const box=document.getElementById('tabs');box.textContent='';const tools=h('div',{class:'vm-nav-secondary'});
+  TABS.forEach(([g,items],index)=>{
+    const links=items.map(([n,c,label=n])=>h('button',{class:'tab',type:'button',style:'--c:'+c,'aria-current':n===cur?'page':null,onclick:()=>go(n)},h('i',{'aria-hidden':'true',style:'background:'+c}),label));
+    if(index===0){box.append(h('div',{class:'vm-nav-primary'},h('div',{class:'grp',text:g}),...links,
+      h('button',{class:'tab vm-photography-link',type:'button',onclick:()=>pfShowFocus()},h('i',{'aria-hidden':'true',style:'background:#F9A66C'}),'Competition photography')));return}
+    const active=items.some(([n])=>n===cur),group=h('details',{class:'vm-nav-group',open:active||vmNavOpen.get(g)},
+      h('summary',null,g),h('div',{class:'vm-nav-links'},links));
+    group.addEventListener('toggle',()=>vmNavOpen.set(g,group.open));tools.append(group);
+  });box.append(tools);
+}
 function go(n){cur=n;history.replaceState(null,'','#'+slug(n));buildTabs();render();window.scrollTo(0,0);
   const a=document.querySelector('.tab[aria-current]');if(a&&a.scrollIntoView)a.scrollIntoView({block:'nearest',inline:'center'})}
 /* ---------- generic table ---------- */
@@ -1948,6 +1992,7 @@ const DE={
  'Changes are only in memory. Export a backup before leaving.':'Aenderungen sind nur im Arbeitsspeicher. Vor dem Verlassen eine Sicherung exportieren.','Light / dark':'Hell / dunkel','Clear my entries':'Meine Einträge löschen','Entries cleared':'Einträge gelöscht','Language: English':'Sprache: Englisch','Language: German':'Sprache: Deutsch',
  'Clear all statuses, dates and notes you entered? This cannot be undone.':'Alle Statusangaben, Daten und Notizen löschen? Das kann nicht rückgängig gemacht werden.'
 };
+Object.assign(DE,{'Workspace':'Arbeitsbereich','Planning & outreach':'Planung & Kontakt','Directories & reference':'Verzeichnisse & Wissen','Competition photography':'Wettkampffotografie'});
 function tr(v){return locale==='de'&&typeof v==='string'?(DE[v]||v):v}
 const hBase=h;h=function(tag,a,...kids){let x=a;if(a){x={...a};['text','placeholder','aria-label','title'].forEach(k=>{if(typeof x[k]==='string')x[k]=tr(x[k])})}const tx=v=>Array.isArray(v)?v.map(tx):typeof v==='string'?tr(v):v;return hBase(tag,x,...kids.map(tx))};
 const langKey='climbplanner.lang.v1';
@@ -2567,10 +2612,10 @@ function vmInitialize(){
  const upload=h('input',{type:'file',accept:'.json,application/json',hidden:true,'aria-label':'Choose planner backup'});upload.addEventListener('change',()=>{if(upload.files?.[0])vmImportFile(upload.files[0]);upload.value=''});
  let recovery=false;try{recovery=!!localStorage.getItem('climbplanner.recovery.v4')}catch(e){}
  foot.append(vmButton('Export backup',vmBackup),vmButton('Import backup',()=>upload.click()),vmButton('Undo import / clear',vmUndo,{id:'vm-undo',disabled:!recovery}),upload,h('div',{class:'vm-backup-note'},'Save a backup before switching devices.'));
- const oldReset=document.getElementById('reset'),reset=vmButton('Clear tracking',()=>{if(!confirm('Clear event statuses, pitch replies and event notes? Trip plans and personal events will be kept. Export a backup first if you want a separate copy.'))return;vmRemember();for(const k of Object.keys(S))if(/^(cal:|pt:)/.test(k))delete S[k];persist();render();toast('Event tracking cleared')},{id:'reset'});oldReset.replaceWith(reset);
+ const oldReset=document.getElementById('reset'),reset=vmButton('Clear tracking',()=>{if(!confirm('Clear event statuses, pitch replies and event notes? Trip plans and personal events will be kept. Export a backup first if you want a separate copy.'))return;vmRemember();for(const k of Object.keys(S))if(/^(cal:|pt:)/.test(k))delete S[k];persist();render();toast('Event tracking cleared')},{id:'reset'});oldReset.replaceWith(reset);foot.insertBefore(reset,upload);
  const rail=document.querySelector('nav.rail'),menu=vmButton('Navigation',()=>{const open=rail.classList.toggle('vm-nav-open');menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',tr(open?'Close navigation':'Open navigation'))},{id:'vm-nav-toggle',class:'vm-nav-toggle','aria-expanded':'false','aria-controls':'tabs','aria-label':'Open navigation'});rail.prepend(menu);
- const photo=[['Calendar','#F9A66C'],['Overview','#DCE4EA'],['Sources & Contacts','#A5D8FF','Organisers & contacts'],['Pitch Tracker','#F9A66C']];
- TABS.splice(0,TABS.length,['Photo planning',photo],['Outdoor climbing',[['Trip planner','#74C9B5'],['Crag index','#74C9B5'],['Field day','#C4A574'],['Climbing Resources','#74C9B5']]],['Directories',[['Gym Directory','#A5D8FF'],['Courses & Workshops','#A5D8FF'],['Portfolio Leads','#A5D8FF']]],['Austria through the year',[['2027 Season Map','#8FBF8F'],['Alpine Regions','#8FBF8F'],['Alpine Halls','#8FBF8F'],['Association & Courses','#8FBF8F']]],['Reference',[['Annual Cycle','#999999']]]);
+ const photo=[['Calendar','#F9A66C'],['Sources & Contacts','#A5D8FF','Organisers & contacts'],['Pitch Tracker','#F9A66C']];
+ TABS.splice(0,TABS.length,['Workspace',photo],['Planning & outreach',[['Overview','#DCE4EA'],['Portfolio Leads','#A5D8FF']]],['Outdoor climbing',[['Trip planner','#74C9B5'],['Crag index','#74C9B5'],['Field day','#C4A574'],['Climbing Resources','#74C9B5']]],['Directories & reference',[['Gym Directory','#A5D8FF'],['Courses & Workshops','#A5D8FF'],['2027 Season Map','#8FBF8F'],['Alpine Regions','#8FBF8F'],['Alpine Halls','#8FBF8F'],['Association & Courses','#8FBF8F'],['Annual Cycle','#999999']]]);
  const incoming=location.hash.slice(1);
  if(!incoming)vmFilter.view='month';
  const legacy=new Map([['start-here','Start Here'],['weekend-picks','Weekend Picks']]);
@@ -3383,7 +3428,7 @@ V['Pitch Tracker']=function(){
  draw();
 };
 if(!ALL.includes('Annual programmes'))ALL.push('Annual programmes');
-TABS[0][0]='Mountain planning';TABS[0][1].push(['Annual programmes','#DCE4EA']);
+TABS[1][1].push(['Annual programmes','#DCE4EA']);
 const vmExpandedChrome=updateChrome;updateChrome=function(){vmExpandedChrome();const small=document.querySelector('.brand small');if(small)small.textContent=tr('Mountain calendar')+' · 2026–27';document.title=(cur==='Calendar'?tr('Mountain calendar'):cur)+' · Vertical Moment'};
 if(location.hash==='#annual-programmes')cur='Annual programmes';
 
@@ -3419,7 +3464,6 @@ function pfCleanFilters(input){const base={view:'recommended',q:'',place:'all',w
 /* PF_APPLICATION_START */
 const pfRoot=h('div',{id:'photo-focus','data-view':'recommended'});
 document.body.prepend(pfRoot);
-document.querySelector('nav.rail .brand').after(h('button',{class:'tab vm-photography-link',type:'button',onclick:()=>pfShowFocus()},'Competition photography'));
 let pfFilter=pfCleanFilters(S['photo:filters:v1']),pfVisible=[],pfAllMatches=[];
 const pfToday=()=>{const parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Vienna',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());return ['year','month','day'].map(k=>parts.find(p=>p.type===k).value).join('-')};
 const pfSay=message=>{document.getElementById('pf-status').textContent=message};
