@@ -415,3 +415,37 @@ Select **Photography events**, **Competitions** or **Gear demos & expos** to
 show events that match any selected category. **Weekends only** narrows those
 results to weekend dates. A multi-day event appears on its first weekend day
 in Month. CSV and ICS use the matching events, their IDs and published dates.
+
+
+## Desktop sidebar navigation — 25 November 2026
+
+Calendar, Organisers & contacts, Pitch Tracker and Competition photography
+are the four primary destinations. They stay visible while supporting tools
+scroll in three expandable groups: Planning & outreach, Outdoor climbing,
+and Directories & reference. A direct link opens its containing group.
+The sidebar keeps its existing 236 px width; Month remains the opening view
+and retains the full calendar workspace and compact toolbar.
+
+The device controls stay visible below the navigation: language, theme,
+Export backup, Import backup, Undo import / clear, and Clear tracking.
+Existing view names, hashes, event data, browser storage and backup formats
+are preserved. Group expansion is temporary UI state in memory.
+
+Browser verification covered the actual /explore-app/planner route at
+1440 × 900 and 1920 × 1080, all 14 supporting destinations, all four primary
+shortcuts, scrolling a long group with primary shortcuts and backups fixed,
+and returning from Competition photography. All 31 December dates fit at
+both desktop sizes; 12 December retained 27 events. Legacy Trip planner,
+Start Here and Weekend Picks links worked on a fresh load. The mobile
+Navigation menu opened and closed correctly at 390 × 844.
+
+A synthetic EDELRID shoot plan retained its notes, event status, pitch status,
+reply, accreditation date, usage permissions, credit and delivery fields
+after section changes and reload. A saved organiser bookmark and its shoot
+link also persisted. No user planning data was used. The catalogue JSON
+was compared with main and is unchanged.
+
+Validation: 46 focused Planner tests and all 192 website tests passed;
+the Next/Serwist production build and verify-pwa-content passed. This is
+local review only. Installed-app updates and deployment are not part of
+this patch; publication awaits owner approval.
